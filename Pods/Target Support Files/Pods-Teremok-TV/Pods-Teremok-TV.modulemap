@@ -1,0 +1,6 @@
+framework module Pods_Teremok_TV {
+  umbrella header "Pods-Teremok-TV-umbrella.h"
+
+  export *
+  module * { export * }
+}

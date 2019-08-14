@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="FavTableViewHeader" id="iN0-l3-epB" customClass="FavTableViewHeader" customModule="Teremok_TV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bih-j7-kLe">
+                    <rect key="frame" x="93" y="16" width="327" height="63"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nCq-ib-dfq">
+                    <rect key="frame" x="20" y="16" width="63" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="nCq-ib-dfq" secondAttribute="height" multiplier="1:1" id="3o2-aN-dLB"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bih-j7-kLe" secondAttribute="bottom" constant="16" id="AcC-ZE-sfO"/>
+                <constraint firstItem="bih-j7-kLe" firstAttribute="bottom" secondItem="nCq-ib-dfq" secondAttribute="bottom" id="Ahr-th-Qws"/>
+                <constraint firstItem="bih-j7-kLe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="D7v-et-2Kb"/>
+                <constraint firstItem="nCq-ib-dfq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="FKM-rD-NGT"/>
+                <constraint firstItem="bih-j7-kLe" firstAttribute="top" secondItem="nCq-ib-dfq" secondAttribute="top" id="YMf-Rk-QaX"/>
+                <constraint firstItem="bih-j7-kLe" firstAttribute="leading" secondItem="nCq-ib-dfq" secondAttribute="trailing" constant="10" id="iMv-rV-BBP"/>
+                <constraint firstAttribute="trailing" secondItem="bih-j7-kLe" secondAttribute="trailing" constant="20" id="zF1-sr-Uhe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="nCq-ib-dfq" id="HGz-DK-24e"/>
+                <outlet property="labelBottomConstraint" destination="AcC-ZE-sfO" id="wuc-Ak-S9k"/>
+                <outlet property="labelLeadingConstraint" destination="FKM-rD-NGT" id="LNt-aD-ceS"/>
+                <outlet property="labelTopConstraint" destination="D7v-et-2Kb" id="F9Z-7m-YSK"/>
+                <outlet property="labelTrailingConstraint" destination="zF1-sr-Uhe" id="Vyo-CV-xVA"/>
+                <outlet property="titleLabel" destination="bih-j7-kLe" id="F2O-xP-Ere"/>
+            </connections>
+            <point key="canvasLocation" x="-17.600000000000001" y="-248.72563718140933"/>
+        </view>
+    </objects>
+</document>

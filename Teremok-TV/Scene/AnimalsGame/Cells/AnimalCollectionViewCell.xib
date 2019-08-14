@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AnimalCollectionViewCell" customModule="Teremok_TV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="190" height="126"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="190" height="126"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icAnimalCloud" translatesAutoresizingMaskIntoConstraints="NO" id="4YX-Wn-neL">
+                        <rect key="frame" x="0.0" y="44" width="190.5" height="82"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal_31" translatesAutoresizingMaskIntoConstraints="NO" id="Twn-yg-QUE">
+                        <rect key="frame" x="0.0" y="0.0" width="190" height="118"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4YX-Wn-neL" secondAttribute="bottom" id="1ln-Rr-gb8"/>
+                <constraint firstItem="Twn-yg-QUE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="21z-sB-0YD"/>
+                <constraint firstAttribute="trailing" secondItem="4YX-Wn-neL" secondAttribute="trailing" constant="-0.33000000000000002" id="8gh-S2-RNH"/>
+                <constraint firstAttribute="bottom" secondItem="Twn-yg-QUE" secondAttribute="bottom" constant="8" id="Hax-3l-MRH"/>
+                <constraint firstAttribute="trailing" secondItem="Twn-yg-QUE" secondAttribute="trailing" id="Ib5-BV-sdP"/>
+                <constraint firstItem="4YX-Wn-neL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sEv-o8-hdC"/>
+                <constraint firstItem="Twn-yg-QUE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zVo-b2-aVe"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="190" height="126"/>
+            <connections>
+                <outlet property="animalImageView" destination="Twn-yg-QUE" id="di8-Cj-mex"/>
+                <outlet property="cloudImageView" destination="4YX-Wn-neL" id="m6C-To-uYK"/>
+            </connections>
+            <point key="canvasLocation" x="-66.666666666666671" y="178.125"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="animal_31" width="142" height="142"/>
+        <image name="icAnimalCloud" width="189" height="82"/>
+    </resources>
+</document>

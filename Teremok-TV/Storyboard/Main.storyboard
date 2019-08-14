@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFi-IU-E9L">
+    <device id="retina5_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="TTd-Qr-hMX">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="jFi-IU-E9L" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tZf-oh-SZM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Wgh-R5-Tjp" kind="relationship" relationship="rootViewController" id="i1I-8K-Wbp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wp-7u-Txn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-998" y="-2591"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="42B-vD-mSA">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="DQQ-ga-UFN" customClass="SettingsViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A0c-q6-EGH">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vyV-SJ-OTe">
+                                <rect key="frame" x="108" y="117" width="200" height="179"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Электронная почта аккаунта" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1C-Uj-xBL">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="195" id="NB4-oi-10f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-Fw-lFu">
+                                        <rect key="frame" x="0.0" y="25" width="200" height="58"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавленые дети:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="f6J-sl-zUu">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="65O-NY-MDB" customClass="ChildsStackView" customModule="Teremok_TV" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="4" width="200" height="54"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scG-Ta-izF" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="54" id="eB9-47-KjY"/>
+                                                            <constraint firstAttribute="width" secondItem="scG-Ta-izF" secondAttribute="height" multiplier="1:1" id="mXz-uQ-Vgs"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="firstClick:" destination="65O-NY-MDB" eventType="touchUpInside" id="FVm-7V-KeX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deH-iZ-INK" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                                        <rect key="frame" x="56.666666666666657" y="0.0" width="54" height="54"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="54" id="gpd-8w-veJ"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="secondClick:" destination="65O-NY-MDB" eventType="touchUpInside" id="q8D-Hq-2JF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvu-qh-n41" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                                        <rect key="frame" x="56.666666666666657" y="0.0" width="54" height="54"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="54" id="dlV-i7-azt"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="icUtka"/>
+                                                        <connections>
+                                                            <action selector="thirdClick:" destination="65O-NY-MDB" eventType="touchUpInside" id="i5r-zb-jTz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhW-Lp-oNd" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                                        <rect key="frame" x="146" y="0.0" width="54" height="54"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="54" id="O45-gQ-K0v"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="icPlus"/>
+                                                        <connections>
+                                                            <action selector="kidsPlusClick:" destination="65O-NY-MDB" eventType="touchUpInside" id="up1-N1-5ub"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="gvu-qh-n41" firstAttribute="width" secondItem="gvu-qh-n41" secondAttribute="height" multiplier="1:1" id="3x2-MS-b2B"/>
+                                                    <constraint firstAttribute="height" constant="54" id="FCl-Vj-0dG"/>
+                                                    <constraint firstAttribute="width" constant="200" id="Hdg-yP-DC3"/>
+                                                    <constraint firstItem="lhW-Lp-oNd" firstAttribute="width" secondItem="lhW-Lp-oNd" secondAttribute="height" multiplier="1:1" id="jdA-KK-gLi"/>
+                                                    <constraint firstItem="deH-iZ-INK" firstAttribute="width" secondItem="deH-iZ-INK" secondAttribute="height" multiplier="1:1" id="qs5-lS-7zq"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="firstChild" destination="scG-Ta-izF" id="NVy-jB-c1o"/>
+                                                    <outlet property="plusChild" destination="lhW-Lp-oNd" id="Ktw-sn-4mx"/>
+                                                    <outlet property="secondChild" destination="deH-iZ-INK" id="tQt-EG-p7U"/>
+                                                    <outlet property="thirdChild" destination="gvu-qh-n41" id="VFf-FJ-MZ7"/>
+                                                </connections>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f6J-sl-zUu" secondAttribute="trailing" constant="18" id="280-W8-xaU"/>
+                                            <constraint firstAttribute="bottom" secondItem="65O-NY-MDB" secondAttribute="bottom" id="KJ1-WI-v2O"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="65O-NY-MDB" secondAttribute="trailing" id="PuS-FB-A1J"/>
+                                            <constraint firstItem="f6J-sl-zUu" firstAttribute="leading" secondItem="o7j-Fw-lFu" secondAttribute="leading" id="S3J-lp-ghV"/>
+                                            <constraint firstItem="f6J-sl-zUu" firstAttribute="top" secondItem="o7j-Fw-lFu" secondAttribute="top" id="f6x-OC-voX"/>
+                                            <constraint firstItem="65O-NY-MDB" firstAttribute="top" secondItem="f6J-sl-zUu" secondAttribute="bottom" constant="4" id="urs-kr-69f"/>
+                                            <constraint firstItem="65O-NY-MDB" firstAttribute="leading" secondItem="o7j-Fw-lFu" secondAttribute="leading" id="xPM-e2-a6A"/>
+                                        </constraints>
+                                    </view>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErP-kp-bCR" customClass="OrangeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="25" width="140" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="lgH-Zw-H14"/>
+                                            <constraint firstAttribute="height" constant="35" id="ykF-PM-Shq"/>
+                                        </constraints>
+                                        <state key="normal" title="Выйти">
+                                            <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logoutClick:" destination="DQQ-ga-UFN" eventType="touchUpInside" id="oMq-rZ-hdd"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fso-Bt-gMB">
+                                        <rect key="frame" x="0.0" y="33" width="200" height="146"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-lH-dBj" customClass="UIRoundedButtonWithGradientAndShadow" customModule="Teremok_TV" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="ejz-oH-oNJ"/>
+                                                    <constraint firstAttribute="height" constant="35" id="mjx-K4-jec"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Зарегестрироваться">
+                                                    <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="regClick:" destination="DQQ-ga-UFN" eventType="touchUpInside" id="WT2-ap-D3I"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="или, если у вас уже есть аккаунт" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2w-um-WTA">
+                                                <rect key="frame" x="0.0" y="51" width="200" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnv-65-UwP" customClass="UIRoundedButtonWithGradientAndShadow" customModule="Teremok_TV" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="111" width="83" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="IqM-mP-3bZ"/>
+                                                    <constraint firstAttribute="height" constant="35" id="tie-81-rGf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Войти">
+                                                    <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="logInClick:" destination="DQQ-ga-UFN" eventType="touchUpInside" id="bZQ-XQ-XSe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="sK9-lH-dBj" firstAttribute="leading" secondItem="fso-Bt-gMB" secondAttribute="leading" id="2jE-6N-Lmh"/>
+                                            <constraint firstItem="rnv-65-UwP" firstAttribute="leading" secondItem="fso-Bt-gMB" secondAttribute="leading" id="2w4-hg-Vsy"/>
+                                            <constraint firstItem="T2w-um-WTA" firstAttribute="leading" secondItem="fso-Bt-gMB" secondAttribute="leading" id="4lM-v5-EP4"/>
+                                            <constraint firstItem="T2w-um-WTA" firstAttribute="top" secondItem="sK9-lH-dBj" secondAttribute="bottom" constant="16" id="CDr-yg-RW2"/>
+                                            <constraint firstAttribute="bottom" secondItem="rnv-65-UwP" secondAttribute="bottom" id="D8e-Mk-j7q"/>
+                                            <constraint firstAttribute="trailing" secondItem="sK9-lH-dBj" secondAttribute="trailing" id="FiO-E7-ufN"/>
+                                            <constraint firstItem="rnv-65-UwP" firstAttribute="top" secondItem="T2w-um-WTA" secondAttribute="bottom" constant="16" id="PrK-t0-lVJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="T2w-um-WTA" secondAttribute="trailing" id="Xhw-lT-nT4"/>
+                                            <constraint firstItem="sK9-lH-dBj" firstAttribute="top" secondItem="fso-Bt-gMB" secondAttribute="top" id="la4-yh-Iag"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="CQh-7s-ztg"/>
+                                    <constraint firstItem="fso-Bt-gMB" firstAttribute="trailing" secondItem="o7j-Fw-lFu" secondAttribute="trailing" id="OXo-Jf-DsI"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qAX-OL-SMI">
+                                <rect key="frame" x="406" y="112" width="358" height="136"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVu-xg-3sA">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Возможность скачивать и смотреть мультфильмы без интернета" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="HvA-xm-TVc">
+                                                <rect key="frame" x="29" y="-0.3333333333333286" width="329" height="28.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icDown" translatesAutoresizingMaskIntoConstraints="NO" id="lHC-O4-NNa">
+                                                <rect key="frame" x="0.0" y="2" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Ezb-Ya-oy6"/>
+                                                    <constraint firstAttribute="width" constant="24" id="x6S-xQ-Cot"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="HvA-xm-TVc" firstAttribute="centerY" secondItem="jVu-xg-3sA" secondAttribute="centerY" id="JuZ-wl-175"/>
+                                            <constraint firstAttribute="trailing" secondItem="HvA-xm-TVc" secondAttribute="trailing" id="MFD-TG-qJa"/>
+                                            <constraint firstAttribute="height" constant="28" id="Ruk-CO-jF7"/>
+                                            <constraint firstItem="lHC-O4-NNa" firstAttribute="centerY" secondItem="jVu-xg-3sA" secondAttribute="centerY" id="mVJ-RM-HrU"/>
+                                            <constraint firstItem="HvA-xm-TVc" firstAttribute="leading" secondItem="lHC-O4-NNa" secondAttribute="trailing" constant="5" id="tMA-2n-ETW"/>
+                                            <constraint firstItem="lHC-O4-NNa" firstAttribute="leading" secondItem="jVu-xg-3sA" secondAttribute="leading" id="tue-W1-ht4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zou-ph-Yj9">
+                                        <rect key="frame" x="0.0" y="36" width="358" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Возможность составлять каталог любимых мультфильмов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="GWh-9b-Okd">
+                                                <rect key="frame" x="29" y="-0.33333333333334281" width="329" height="28.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icHeart" translatesAutoresizingMaskIntoConstraints="NO" id="xf1-zr-C2O">
+                                                <rect key="frame" x="0.0" y="2" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="MgS-9m-l3w"/>
+                                                    <constraint firstAttribute="height" constant="24" id="ejC-ic-dT5"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="L7c-7u-QvV"/>
+                                            <constraint firstItem="xf1-zr-C2O" firstAttribute="leading" secondItem="Zou-ph-Yj9" secondAttribute="leading" id="Sfg-IJ-e5T"/>
+                                            <constraint firstItem="xf1-zr-C2O" firstAttribute="centerY" secondItem="Zou-ph-Yj9" secondAttribute="centerY" id="YAG-ju-HDJ"/>
+                                            <constraint firstItem="GWh-9b-Okd" firstAttribute="centerY" secondItem="Zou-ph-Yj9" secondAttribute="centerY" id="lmP-Sv-7zl"/>
+                                            <constraint firstItem="GWh-9b-Okd" firstAttribute="leading" secondItem="xf1-zr-C2O" secondAttribute="trailing" constant="5" id="oSP-lH-DeF"/>
+                                            <constraint firstAttribute="trailing" secondItem="GWh-9b-Okd" secondAttribute="trailing" id="xJp-8G-xgh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-jV-Udc">
+                                        <rect key="frame" x="0.0" y="72" width="358" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Возможность пользоваться музыкальным сервисом - скачивать и слушать детские  песенки без интернета" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="nEe-p8-G2j">
+                                                <rect key="frame" x="29" y="-0.33333333333334281" width="329" height="28.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icHeadphone" translatesAutoresizingMaskIntoConstraints="NO" id="2p6-Im-29c">
+                                                <rect key="frame" x="0.0" y="2" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="SIO-bl-eiq"/>
+                                                    <constraint firstAttribute="height" constant="24" id="beB-nF-zgO"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="nEe-p8-G2j" firstAttribute="centerY" secondItem="3dj-jV-Udc" secondAttribute="centerY" id="BhP-wN-ZaZ"/>
+                                            <constraint firstItem="nEe-p8-G2j" firstAttribute="leading" secondItem="2p6-Im-29c" secondAttribute="trailing" constant="5" id="C0k-OM-EDp"/>
+                                            <constraint firstAttribute="trailing" secondItem="nEe-p8-G2j" secondAttribute="trailing" id="CYX-eO-QRn"/>
+                                            <constraint firstItem="2p6-Im-29c" firstAttribute="leading" secondItem="3dj-jV-Udc" secondAttribute="leading" id="f8q-ZT-R7M"/>
+                                            <constraint firstItem="2p6-Im-29c" firstAttribute="centerY" secondItem="3dj-jV-Udc" secondAttribute="centerY" id="fVc-L2-98s"/>
+                                            <constraint firstAttribute="height" constant="28" id="ptx-9Q-0Hs"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwO-qu-YPP">
+                                        <rect key="frame" x="0.0" y="108" width="358" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Доступ к развивающим играм" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="S94-of-9p7">
+                                                <rect key="frame" x="29" y="7.0000000000000009" width="329" height="14.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icGame" translatesAutoresizingMaskIntoConstraints="NO" id="uNM-xb-Xh6">
+                                                <rect key="frame" x="0.0" y="2" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="Wyi-mX-7CU"/>
+                                                    <constraint firstAttribute="width" constant="24" id="rTN-2H-y6m"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="uNM-xb-Xh6" firstAttribute="centerY" secondItem="ZwO-qu-YPP" secondAttribute="centerY" id="ABu-H0-rbb"/>
+                                            <constraint firstItem="S94-of-9p7" firstAttribute="leading" secondItem="uNM-xb-Xh6" secondAttribute="trailing" constant="5" id="Ggh-Pq-Eus"/>
+                                            <constraint firstItem="S94-of-9p7" firstAttribute="centerY" secondItem="ZwO-qu-YPP" secondAttribute="centerY" id="LsJ-fO-Hgg"/>
+                                            <constraint firstItem="uNM-xb-Xh6" firstAttribute="leading" secondItem="ZwO-qu-YPP" secondAttribute="leading" id="YWN-3z-gEh"/>
+                                            <constraint firstAttribute="trailing" secondItem="S94-of-9p7" secondAttribute="trailing" id="gxc-ss-wFs"/>
+                                            <constraint firstAttribute="height" constant="28" id="w4y-ZJ-LqL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Возможности подписки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxw-B1-8cS">
+                                <rect key="frame" x="406" y="80" width="238" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="nh7-Z8-isO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.1803921568627451" green="0.20000000000000001" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isShadowOnText" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2h1-4q-sUC">
+                                <rect key="frame" x="233" y="77" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4kU-av-iTS"/>
+                                    <constraint firstAttribute="width" constant="30" id="p1y-c1-xlp"/>
+                                </constraints>
+                                <state key="normal" image="icPancil"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g84-8P-JLS">
+                                <rect key="frame" x="108" y="80" width="108.33333333333331" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="VlL-zZ-sIY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WiX-Ye-IeR">
+                                <rect key="frame" x="406" y="295" width="200" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtk-oC-CM9" customClass="OrangeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="vRm-P6-ds2"/>
+                                            <constraint firstAttribute="height" constant="35" id="vw3-Ln-LJ8"/>
+                                        </constraints>
+                                        <state key="normal" title="Оформить подписку">
+                                            <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buyClick:" destination="DQQ-ga-UFN" eventType="touchUpInside" id="QHm-zD-Nnb"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOi-Oy-tL1" customClass="OrangeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="mGi-B0-09L"/>
+                                        </constraints>
+                                        <state key="normal" title="Ввести Промокод">
+                                            <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="promoClick:" destination="DQQ-ga-UFN" eventType="touchUpInside" id="Nd1-pi-pm1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WiX-Ye-IeR" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vyV-SJ-OTe" secondAttribute="bottom" id="2k9-Rq-WIe"/>
+                            <constraint firstAttribute="trailing" secondItem="qAX-OL-SMI" secondAttribute="trailing" constant="48" id="2u7-k1-hDn"/>
+                            <constraint firstItem="2h1-4q-sUC" firstAttribute="centerY" secondItem="g84-8P-JLS" secondAttribute="centerY" id="2v3-HY-1BI"/>
+                            <constraint firstItem="2h1-4q-sUC" firstAttribute="leading" secondItem="g84-8P-JLS" secondAttribute="trailing" constant="16.5" id="5uH-AK-d8h"/>
+                            <constraint firstItem="Jxw-B1-8cS" firstAttribute="leading" secondItem="A0c-q6-EGH" secondAttribute="centerX" id="I6Y-uj-dxG"/>
+                            <constraint firstItem="fW3-01-7ZS" firstAttribute="bottom" secondItem="WiX-Ye-IeR" secondAttribute="bottom" constant="24" id="JdO-k3-3MC"/>
+                            <constraint firstItem="g84-8P-JLS" firstAttribute="leading" secondItem="fW3-01-7ZS" secondAttribute="leading" constant="64" id="Ofz-fn-zEh"/>
+                            <constraint firstItem="Jxw-B1-8cS" firstAttribute="leading" secondItem="qAX-OL-SMI" secondAttribute="leading" id="bAY-DC-4KZ"/>
+                            <constraint firstItem="qAX-OL-SMI" firstAttribute="top" secondItem="Jxw-B1-8cS" secondAttribute="bottom" constant="8" id="cXn-Sh-39o"/>
+                            <constraint firstItem="vyV-SJ-OTe" firstAttribute="top" secondItem="2h1-4q-sUC" secondAttribute="bottom" constant="10" id="fvT-J6-GfF"/>
+                            <constraint firstItem="vyV-SJ-OTe" firstAttribute="leading" secondItem="fW3-01-7ZS" secondAttribute="leading" constant="64" id="iJG-EG-Y6n"/>
+                            <constraint firstItem="Jxw-B1-8cS" firstAttribute="top" secondItem="fW3-01-7ZS" secondAttribute="top" constant="80" id="iVU-vB-hwd"/>
+                            <constraint firstItem="WiX-Ye-IeR" firstAttribute="leading" secondItem="Jxw-B1-8cS" secondAttribute="leading" id="j2P-t8-gEt"/>
+                            <constraint firstItem="g84-8P-JLS" firstAttribute="top" secondItem="fW3-01-7ZS" secondAttribute="top" priority="900" constant="80" id="vP9-Bq-lxD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fW3-01-7ZS"/>
+                    </view>
+                    <connections>
+                        <outlet property="authView" destination="fso-Bt-gMB" id="9UY-8u-v1s"/>
+                        <outlet property="childStack" destination="65O-NY-MDB" id="wAS-w5-z03"/>
+                        <outlet property="childsView" destination="o7j-Fw-lFu" id="zjQ-YC-vT2"/>
+                        <outlet property="logInBtn" destination="rnv-65-UwP" id="yZd-Kj-QBj"/>
+                        <outlet property="logoutBtn" destination="ErP-kp-bCR" id="J7J-Pq-3bk"/>
+                        <outlet property="profileTitle" destination="q1C-Uj-xBL" id="km4-yQ-56U"/>
+                        <outlet property="promoCode" destination="YOi-Oy-tL1" id="2gQ-oh-vBK"/>
+                        <outlet property="redProfileBtn" destination="2h1-4q-sUC" id="lmc-cc-Ojm"/>
+                        <outlet property="registrationBtn" destination="sK9-lH-dBj" id="tsf-dq-WeQ"/>
+                        <outlet property="subscribeTitle" destination="Jxw-B1-8cS" id="uqH-Zv-Tam"/>
+                        <outlet property="subscrideSubtitle" destination="HvA-xm-TVc" id="LX6-t0-tbj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8f-qn-Ga0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-251.23152709359607" y="-1671.2"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Qkw-PB-b15">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" modalTransitionStyle="crossDissolve" id="skH-zM-2VZ" customClass="MainViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="prU-I2-KoJ">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-ha-28h">
+                                <rect key="frame" x="44" y="20" width="724" height="314"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="UKJ-dO-2kY" customClass="CarouselLayout" customModule="Teremok_TV" customModuleProvider="target"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="skH-zM-2VZ" id="dQ2-Pd-U0a"/>
+                                    <outlet property="delegate" destination="skH-zM-2VZ" id="Y5x-Oh-1j8"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MeA-ha-28h" firstAttribute="top" secondItem="MdH-rV-e46" secondAttribute="top" constant="20" id="8pA-jW-6kw"/>
+                            <constraint firstItem="MdH-rV-e46" firstAttribute="bottom" secondItem="MeA-ha-28h" secondAttribute="bottom" constant="20" id="CdW-Rb-2aA"/>
+                            <constraint firstItem="MeA-ha-28h" firstAttribute="leading" secondItem="MdH-rV-e46" secondAttribute="leading" id="Cvh-UQ-nij"/>
+                            <constraint firstItem="MdH-rV-e46" firstAttribute="trailing" secondItem="MeA-ha-28h" secondAttribute="trailing" id="KRc-xE-Tfe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MdH-rV-e46"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="MeA-ha-28h" id="vNj-AT-jR7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2f0-Ur-Lq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429.53523238380814" y="-1671.2"/>
+        </scene>
+        <!--Master View Controller-->
+        <scene sceneID="43E-jT-7ID">
+            <objects>
+                <viewController storyboardIdentifier="MasterViewController" id="Wgh-R5-Tjp" customClass="MasterViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1CP-Fn-cIu">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-hillBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Mdf-zU-wD7">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="354"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-rightCurtain" translatesAutoresizingMaskIntoConstraints="NO" id="8nD-Pj-X3U">
+                                <rect key="frame" x="792" y="40" width="20" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="2TH-bW-9zX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-leftCurtain" translatesAutoresizingMaskIntoConstraints="NO" id="jpI-y1-YEg">
+                                <rect key="frame" x="0.0" y="40" width="20" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="PKU-Ku-Uwu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-navBar" translatesAutoresizingMaskIntoConstraints="NO" id="oUb-4A-L4a">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="aqh-Lt-ZTf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTI-UW-NQM" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="49" y="5" width="54" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CTI-UW-NQM" secondAttribute="height" multiplier="1:1" id="AfO-Au-ENk"/>
+                                    <constraint firstAttribute="width" constant="54" id="NZr-MD-E7g"/>
+                                    <constraint firstAttribute="height" constant="54" id="oQU-3c-urG"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="11" minY="9" maxX="11" maxY="11"/>
+                                <state key="normal" image="icHome" backgroundImage="icCircle"/>
+                                <connections>
+                                    <action selector="logoClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="aF5-Xj-dSG"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eBd-tF-Ihc">
+                                <rect key="frame" x="105" y="13" width="142" height="46"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eB-Tb-I1C" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="-46" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3eB-Tb-I1C" secondAttribute="height" multiplier="1:1" id="6jD-YX-E1i"/>
+                                            <constraint firstAttribute="height" constant="46" id="oyn-Js-Fka"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="1" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="icTreasure" backgroundImage="icCircle"/>
+                                        <connections>
+                                            <action selector="treasureClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="jio-ZM-1EH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAH-8J-gH9" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="2oN-C4-mfg"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="1" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="icHeart" backgroundImage="icCircle"/>
+                                        <connections>
+                                            <action selector="heartClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="qfP-ut-iAd"/>
+                                            <action selector="touchDown:" destination="Wgh-R5-Tjp" eventType="touchDown" id="8qV-p3-lRt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jq1-I8-9ZH" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="48" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Jq1-I8-9ZH" secondAttribute="height" multiplier="1:1" id="GGg-Zl-aFc"/>
+                                            <constraint firstAttribute="height" constant="46" id="Hqm-bB-SXJ"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="icHeadphone" backgroundImage="icCircle"/>
+                                        <connections>
+                                            <action selector="musicClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="yqz-2R-OCX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVM-2a-9oI" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="96" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fVM-2a-9oI" secondAttribute="height" multiplier="1:1" id="9SP-51-gv1"/>
+                                            <constraint firstAttribute="height" constant="46" id="x7f-dK-PTq"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="icGame" backgroundImage="icCircle"/>
+                                        <connections>
+                                            <action selector="animalsClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="lbR-ir-mMp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fAH-8J-gH9" firstAttribute="width" secondItem="fAH-8J-gH9" secondAttribute="height" multiplier="1:1" id="dbm-zu-Qgm"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vuw-S0-e4u">
+                                <rect key="frame" x="668" y="308" width="90" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="9LL-gb-NVS"/>
+                                    <constraint firstAttribute="height" constant="36" id="nCp-3H-epZ"/>
+                                </constraints>
+                                <state key="normal" image="icChildPlus"/>
+                                <connections>
+                                    <action selector="kidsPlusClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="D3X-kV-WLp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-Bn-aZg" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="49" y="298" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wfC-Bn-aZg" secondAttribute="height" multiplier="1:1" id="6dC-bk-bMa"/>
+                                    <constraint firstAttribute="width" constant="46" id="Jjz-QH-k1C"/>
+                                </constraints>
+                                <state key="normal" image="icSettings" backgroundImage="icCircle"/>
+                                <connections>
+                                    <action selector="settingsClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="WDU-QN-haD"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="ZCj-br-U4m" customClass="ChildsStackView" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="761" y="12" width="0.0" height="54"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTC-rA-kap" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="Sfe-sx-pZ3"/>
+                                            <constraint firstAttribute="width" secondItem="dTC-rA-kap" secondAttribute="height" multiplier="1:1" id="yiG-mx-uGt"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="icPlus"/>
+                                        <connections>
+                                            <action selector="kidsPlusClick:" destination="ZCj-br-U4m" eventType="touchUpInside" id="6xj-tf-Cdc"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25o-hW-0oc" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="68j-v4-7xk"/>
+                                            <constraint firstAttribute="width" secondItem="25o-hW-0oc" secondAttribute="height" multiplier="1:1" id="HXa-Kd-ifT"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="icUtka"/>
+                                        <connections>
+                                            <action selector="thirdClick:" destination="ZCj-br-U4m" eventType="touchUpInside" id="28O-UR-awd"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8n-DF-arp" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="6ee-ye-Yd8"/>
+                                            <constraint firstAttribute="width" secondItem="o8n-DF-arp" secondAttribute="height" multiplier="1:1" id="UIh-cO-uc9"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="icUtka"/>
+                                        <connections>
+                                            <action selector="secondClick:" destination="ZCj-br-U4m" eventType="touchUpInside" id="Bi9-cz-795"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAM-0v-VSn" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-4" width="54" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="SAM-0v-VSn" secondAttribute="height" multiplier="1:1" id="5E0-hU-SPe"/>
+                                            <constraint firstAttribute="width" constant="54" id="myv-Ae-TFH"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="icUtka"/>
+                                        <connections>
+                                            <action selector="firstClick:" destination="ZCj-br-U4m" eventType="touchUpInside" id="DIm-NU-eLW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="NDa-ur-nap"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="firstChild" destination="SAM-0v-VSn" id="MNb-zP-Uzk"/>
+                                    <outlet property="plusChild" destination="dTC-rA-kap" id="Zpw-yj-8z9"/>
+                                    <outlet property="secondChild" destination="o8n-DF-arp" id="h4c-V7-m7q"/>
+                                    <outlet property="thirdChild" destination="25o-hW-0oc" id="2eG-P5-Mge"/>
+                                </connections>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-Mk-z4c">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="2.666666666666667"/>
+                                <color key="progressTintColor" red="0.96096950769424438" green="0.77273076772689819" blue="0.28989380598068237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="trackTintColor" red="0.99138075113296509" green="0.95762544870376587" blue="0.89802205562591553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </progressView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44F-DI-cmG" customClass="DesignableButton" customModule="Spring">
+                                <rect key="frame" x="334" y="16.666666666666671" width="144" height="37"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-logo" translatesAutoresizingMaskIntoConstraints="NO" id="KwL-bz-NyR">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="37"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="KwL-bz-NyR" secondAttribute="bottom" id="6cl-ba-SWa"/>
+                                    <constraint firstItem="KwL-bz-NyR" firstAttribute="top" secondItem="44F-DI-cmG" secondAttribute="top" id="Pdj-bn-EQf"/>
+                                    <constraint firstAttribute="trailing" secondItem="KwL-bz-NyR" secondAttribute="trailing" id="UHr-6F-UH9"/>
+                                    <constraint firstItem="KwL-bz-NyR" firstAttribute="leading" secondItem="44F-DI-cmG" secondAttribute="leading" id="lWB-u8-bu0"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="logoClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="Wb4-ae-uoU"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bm-y4-kHR" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="488" y="12" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="NIb-wG-AYl"/>
+                                    <constraint firstAttribute="width" secondItem="5Bm-y4-kHR" secondAttribute="height" multiplier="1:1" id="eyf-nb-c89"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-4" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icFav" backgroundImage="icCircle"/>
+                                <connections>
+                                    <action selector="achieveClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="7WT-18-1mz"/>
+                                    <action selector="touchDown:" destination="Wgh-R5-Tjp" eventType="touchDown" id="Lck-9o-ZXq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A46-8C-pxL" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="536" y="12" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Ku9-kt-wT4"/>
+                                    <constraint firstAttribute="width" secondItem="A46-8C-pxL" secondAttribute="height" multiplier="1:1" id="dVp-pR-Rzg"/>
+                                </constraints>
+                                <state key="normal" image="icSearch" backgroundImage="icCircle"/>
+                                <connections>
+                                    <action selector="searchClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="0mZ-9w-7hD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Mdf-zU-wD7" secondAttribute="trailing" id="17C-GM-QLy"/>
+                            <constraint firstItem="pYk-Mk-z4c" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="1h5-T4-J6m"/>
+                            <constraint firstItem="wfC-Bn-aZg" firstAttribute="leading" secondItem="Chn-OP-K9t" secondAttribute="leading" constant="5" id="3WQ-gm-yV7"/>
+                            <constraint firstItem="A46-8C-pxL" firstAttribute="leading" secondItem="5Bm-y4-kHR" secondAttribute="trailing" constant="2" id="4FP-25-Rno"/>
+                            <constraint firstAttribute="trailing" secondItem="8nD-Pj-X3U" secondAttribute="trailing" id="5Zx-4i-LYt"/>
+                            <constraint firstItem="jpI-y1-YEg" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="40" id="API-sF-1qh"/>
+                            <constraint firstItem="Mdf-zU-wD7" firstAttribute="top" secondItem="1CP-Fn-cIu" secondAttribute="top" id="C1P-7M-gdR"/>
+                            <constraint firstItem="44F-DI-cmG" firstAttribute="top" secondItem="pYk-Mk-z4c" secondAttribute="bottom" constant="15" id="Cb3-zg-6ku"/>
+                            <constraint firstItem="Mdf-zU-wD7" firstAttribute="bottom" secondItem="Chn-OP-K9t" secondAttribute="bottom" id="Dlq-I0-LnB"/>
+                            <constraint firstItem="Chn-OP-K9t" firstAttribute="bottom" secondItem="wfC-Bn-aZg" secondAttribute="bottom" constant="10" id="EBG-fM-Pn5"/>
+                            <constraint firstItem="jpI-y1-YEg" firstAttribute="bottom" secondItem="Chn-OP-K9t" secondAttribute="bottom" id="Hyr-yU-HNV"/>
+                            <constraint firstItem="eBd-tF-Ihc" firstAttribute="bottom" secondItem="CTI-UW-NQM" secondAttribute="bottom" id="IyH-KK-QId"/>
+                            <constraint firstAttribute="trailing" secondItem="pYk-Mk-z4c" secondAttribute="trailing" id="KeA-0R-Dxz"/>
+                            <constraint firstItem="oUb-4A-L4a" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" id="SGv-vv-UJV"/>
+                            <constraint firstItem="A46-8C-pxL" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="12" id="ThC-My-OA3"/>
+                            <constraint firstItem="8nD-Pj-X3U" firstAttribute="bottom" secondItem="Chn-OP-K9t" secondAttribute="bottom" id="Ts2-8k-Lwo"/>
+                            <constraint firstItem="8nD-Pj-X3U" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="40" id="Uxf-Ag-gn8"/>
+                            <constraint firstItem="eBd-tF-Ihc" firstAttribute="leading" secondItem="CTI-UW-NQM" secondAttribute="trailing" constant="2" id="XuF-g8-HZH"/>
+                            <constraint firstItem="Chn-OP-K9t" firstAttribute="trailing" secondItem="Vuw-S0-e4u" secondAttribute="trailing" constant="10" id="Zc1-DP-ff5"/>
+                            <constraint firstItem="44F-DI-cmG" firstAttribute="centerX" secondItem="1CP-Fn-cIu" secondAttribute="centerX" id="clj-sa-stv"/>
+                            <constraint firstItem="CTI-UW-NQM" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="5" id="fes-r7-kfR"/>
+                            <constraint firstItem="oUb-4A-L4a" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="iCx-DS-V6i"/>
+                            <constraint firstItem="CTI-UW-NQM" firstAttribute="leading" secondItem="Chn-OP-K9t" secondAttribute="leading" constant="5" id="itd-8X-T6S"/>
+                            <constraint firstItem="5Bm-y4-kHR" firstAttribute="leading" secondItem="44F-DI-cmG" secondAttribute="trailing" priority="990" constant="10" id="mQO-q2-2Fb"/>
+                            <constraint firstItem="Chn-OP-K9t" firstAttribute="trailing" secondItem="ZCj-br-U4m" secondAttribute="trailing" constant="7" id="mwN-QN-rgq"/>
+                            <constraint firstItem="5Bm-y4-kHR" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="12" id="owC-lV-bcK"/>
+                            <constraint firstItem="ZCj-br-U4m" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="12" id="pLZ-QO-fef"/>
+                            <constraint firstItem="jpI-y1-YEg" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="qxJ-LX-itD"/>
+                            <constraint firstItem="pYk-Mk-z4c" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" id="w41-Jl-B8x"/>
+                            <constraint firstItem="Mdf-zU-wD7" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="xiG-iy-gDo"/>
+                            <constraint firstItem="Vuw-S0-e4u" firstAttribute="bottom" secondItem="wfC-Bn-aZg" secondAttribute="bottom" id="xyX-XN-dEf"/>
+                            <constraint firstAttribute="trailing" secondItem="oUb-4A-L4a" secondAttribute="trailing" id="yKJ-Ha-lQI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Chn-OP-K9t"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XkZ-9i-dZo"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="achievmentBtn" destination="5Bm-y4-kHR" id="WsJ-mj-QF6"/>
+                        <outlet property="animalsBtn" destination="fVM-2a-9oI" id="9pk-Hl-3Hx"/>
+                        <outlet property="backgroundView" destination="Mdf-zU-wD7" id="aXz-Yg-FDO"/>
+                        <outlet property="childStack" destination="ZCj-br-U4m" id="6YE-0h-oFf"/>
+                        <outlet property="downloadProgress" destination="pYk-Mk-z4c" id="F8N-H5-S33"/>
+                        <outlet property="heartBtn" destination="fAH-8J-gH9" id="TBd-td-iBW"/>
+                        <outlet property="homeBtn" destination="CTI-UW-NQM" id="nlT-xf-5fs"/>
+                        <outlet property="kidsPlusBtn" destination="Vuw-S0-e4u" id="afI-2J-rXb"/>
+                        <outlet property="musicBtn" destination="Jq1-I8-9ZH" id="Mod-mj-OH6"/>
+                        <outletCollection property="allButtons" destination="CTI-UW-NQM" collectionClass="NSMutableArray" id="NiC-G0-TjQ"/>
+                        <outletCollection property="allButtons" destination="A46-8C-pxL" collectionClass="NSMutableArray" id="hBE-Oj-JFc"/>
+                        <outletCollection property="allButtons" destination="5Bm-y4-kHR" collectionClass="NSMutableArray" id="UcO-4y-CIi"/>
+                        <outletCollection property="allButtons" destination="wfC-Bn-aZg" collectionClass="NSMutableArray" id="Uj1-RD-xbh"/>
+                        <outletCollection property="allButtons" destination="3eB-Tb-I1C" collectionClass="NSMutableArray" id="eA5-jK-e9D"/>
+                        <outletCollection property="allButtons" destination="fAH-8J-gH9" collectionClass="NSMutableArray" id="g5x-Zb-L5z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iy3-l6-bIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258.62068965517244" y="-2575.1999999999998"/>
+        </scene>
+        <!--Razdel View Controller-->
+        <scene sceneID="e9j-qo-Zqj">
+            <objects>
+                <viewController storyboardIdentifier="RazdelViewController" modalTransitionStyle="crossDissolve" id="WzM-g5-bZt" customClass="RazdelViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iO6-Yj-s6b">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZTZ-Wr-oV0">
+                                <rect key="frame" x="44" y="20" width="724" height="334"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="okP-Ak-nsQ" customClass="CarouselLayout" customModule="Teremok_TV" customModuleProvider="target"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WzM-g5-bZt" id="ikl-Hq-CVR"/>
+                                    <outlet property="delegate" destination="WzM-g5-bZt" id="K8Q-9N-ehG"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="bottom" secondItem="AmA-Ej-tXs" secondAttribute="bottom" id="5Sj-UM-8pu"/>
+                            <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="top" secondItem="AmA-Ej-tXs" secondAttribute="top" constant="20" id="9En-gc-GKj"/>
+                            <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="leading" secondItem="AmA-Ej-tXs" secondAttribute="leading" id="Ina-8V-Mx4"/>
+                            <constraint firstItem="AmA-Ej-tXs" firstAttribute="trailing" secondItem="ZTZ-Wr-oV0" secondAttribute="trailing" id="k8C-K4-VOp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AmA-Ej-tXs"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ZTZ-Wr-oV0" id="g8U-aV-vsh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRL-LJ-xgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="430" y="-927"/>
+        </scene>
+        <!--Serial View Controller-->
+        <scene sceneID="b8v-0s-ogP">
+            <objects>
+                <viewController storyboardIdentifier="SerialViewController" modalTransitionStyle="crossDissolve" id="0Ik-qC-5fe" customClass="SerialViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4oG-I5-nID">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EED-H9-foi">
+                                <rect key="frame" x="44" y="20" width="724" height="334"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Rjo-2t-Vhh" customClass="CarouselLayout" customModule="Teremok_TV" customModuleProvider="target"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0Ik-qC-5fe" id="Z6g-jP-RKS"/>
+                                    <outlet property="delegate" destination="0Ik-qC-5fe" id="mTm-eW-12S"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EED-H9-foi" firstAttribute="bottom" secondItem="TTT-AP-Tkb" secondAttribute="bottom" id="3eV-xJ-GPo"/>
+                            <constraint firstItem="TTT-AP-Tkb" firstAttribute="trailing" secondItem="EED-H9-foi" secondAttribute="trailing" id="AK4-O5-d5Z"/>
+                            <constraint firstItem="EED-H9-foi" firstAttribute="top" secondItem="TTT-AP-Tkb" secondAttribute="top" constant="20" id="CfS-5Z-JNr"/>
+                            <constraint firstItem="EED-H9-foi" firstAttribute="leading" secondItem="TTT-AP-Tkb" secondAttribute="leading" id="Vmw-Oe-5dI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TTT-AP-Tkb"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="EED-H9-foi" id="tZg-Lb-Q2W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9c1-WE-BLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="430" y="-174"/>
+        </scene>
+        <!--Fav View Controller-->
+        <scene sceneID="8fz-HK-31J">
+            <objects>
+                <viewController storyboardIdentifier="FavViewController" modalTransitionStyle="crossDissolve" id="rxP-yt-UAU" customClass="FavViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0bK-mn-dib">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="0Ky-OI-C3h">
+                                <rect key="frame" x="84" y="47" width="644" height="307"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rxP-yt-UAU" id="Ygn-al-9Ax"/>
+                                    <outlet property="delegate" destination="rxP-yt-UAU" id="kBc-on-9g6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Ky-OI-C3h" firstAttribute="leading" secondItem="9kG-YV-I2d" secondAttribute="leading" constant="40" id="TOq-CG-JD2"/>
+                            <constraint firstItem="0Ky-OI-C3h" firstAttribute="top" secondItem="9kG-YV-I2d" secondAttribute="top" constant="47" id="kLj-KT-1is"/>
+                            <constraint firstItem="9kG-YV-I2d" firstAttribute="bottom" secondItem="0Ky-OI-C3h" secondAttribute="bottom" id="kVL-UE-thv"/>
+                            <constraint firstItem="9kG-YV-I2d" firstAttribute="trailing" secondItem="0Ky-OI-C3h" secondAttribute="trailing" constant="40" id="lb4-Ei-w6T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9kG-YV-I2d"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="0Ky-OI-C3h" id="Qkn-bF-dOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypW-If-IZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258.62068965517244" y="-175.19999999999999"/>
+        </scene>
+        <!--Achieves View Controller-->
+        <scene sceneID="yIC-KE-YYt">
+            <objects>
+                <viewController storyboardIdentifier="AchievesViewController" modalTransitionStyle="crossDissolve" id="iY0-xr-YRw" customClass="AchievesViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tsz-kd-Tpr">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JTD-nC-ltu">
+                                <rect key="frame" x="44" y="104" width="724" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Bew-fN-9Na" customClass="CarouselCollectionViewLayout" customModule="Teremok_TV" customModuleProvider="target"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iY0-xr-YRw" id="nGn-sv-MTM"/>
+                                    <outlet property="delegate" destination="iY0-xr-YRw" id="pqP-OI-tVg"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Награды" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zA-nt-4St">
+                                <rect key="frame" x="104" y="72" width="88" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JTD-nC-ltu" firstAttribute="leading" secondItem="r8A-6c-if0" secondAttribute="leading" id="3Sh-J3-KM6"/>
+                            <constraint firstItem="2zA-nt-4St" firstAttribute="leading" secondItem="r8A-6c-if0" secondAttribute="leading" constant="60" id="BlG-Xr-0Xx"/>
+                            <constraint firstItem="r8A-6c-if0" firstAttribute="trailing" secondItem="JTD-nC-ltu" secondAttribute="trailing" id="Lxo-qv-VFs"/>
+                            <constraint firstItem="2zA-nt-4St" firstAttribute="top" secondItem="r8A-6c-if0" secondAttribute="top" constant="72" id="QTz-aU-fQx"/>
+                            <constraint firstItem="r8A-6c-if0" firstAttribute="bottom" secondItem="JTD-nC-ltu" secondAttribute="bottom" constant="10" id="Xq5-B9-z1d"/>
+                            <constraint firstItem="JTD-nC-ltu" firstAttribute="top" secondItem="2zA-nt-4St" secondAttribute="bottom" constant="8" id="gjf-QF-CGc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r8A-6c-if0"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="JTD-nC-ltu" id="3vF-9b-xP1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yvP-wk-mMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-259" y="-927"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="Mi6-F6-eAw">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" modalTransitionStyle="crossDissolve" id="DKB-t2-ZUu" customClass="SearchViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="anz-HT-g0k">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bLa-l0-H7T">
+                                <rect key="frame" x="54" y="114" width="704" height="230"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KDc-6I-y2c">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="DKB-t2-ZUu" id="whP-a9-Sla"/>
+                                    <outlet property="delegate" destination="DKB-t2-ZUu" id="sGK-rh-ZrM"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск по героям" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2B-mb-Wph">
+                                <rect key="frame" x="54" y="74" width="170" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="UrP-MG-sXP"/>
+                                    <constraint firstAttribute="width" constant="170" id="hBF-mY-9dT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6s-9C-43w" customClass="DesignableView" customModule="Spring">
+                                <rect key="frame" x="234" y="68" width="524" height="36"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Поиск" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ve5-Zv-tym">
+                                        <rect key="frame" x="10" y="0.0" width="478" height="36"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="DKB-t2-ZUu" id="JBe-8j-4g4"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DW-O2-6wT">
+                                        <rect key="frame" x="490" y="5" width="24" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="evj-Rg-D4B"/>
+                                            <constraint firstAttribute="height" constant="26" id="zKx-LN-7Be"/>
+                                        </constraints>
+                                        <state key="normal" image="icSearch"/>
+                                        <connections>
+                                            <action selector="searchClick:" destination="DKB-t2-ZUu" eventType="touchUpInside" id="KXJ-v2-XJ9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8DW-O2-6wT" firstAttribute="leading" secondItem="ve5-Zv-tym" secondAttribute="trailing" constant="2" id="DaU-Cz-zgP"/>
+                                    <constraint firstItem="ve5-Zv-tym" firstAttribute="top" secondItem="a6s-9C-43w" secondAttribute="top" id="FXt-wr-BF3"/>
+                                    <constraint firstItem="ve5-Zv-tym" firstAttribute="leading" secondItem="a6s-9C-43w" secondAttribute="leading" constant="10" id="KVe-TZ-EVd"/>
+                                    <constraint firstAttribute="width" priority="998" constant="160" id="SlW-Eb-S8f"/>
+                                    <constraint firstAttribute="height" constant="36" id="dgo-cd-UQD"/>
+                                    <constraint firstAttribute="bottom" secondItem="ve5-Zv-tym" secondAttribute="bottom" id="eIe-Pd-fmI"/>
+                                    <constraint firstItem="8DW-O2-6wT" firstAttribute="centerY" secondItem="a6s-9C-43w" secondAttribute="centerY" id="hCS-qW-LL3"/>
+                                    <constraint firstAttribute="trailing" secondItem="8DW-O2-6wT" secondAttribute="trailing" constant="10" id="kiI-bG-PRe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.84705883260000003" blue="0.4196078479" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dWd-CF-38r" firstAttribute="bottom" secondItem="bLa-l0-H7T" secondAttribute="bottom" constant="10" id="7aR-ts-bn4"/>
+                            <constraint firstItem="bLa-l0-H7T" firstAttribute="leading" secondItem="Y2B-mb-Wph" secondAttribute="leading" id="8Zg-ns-lDh"/>
+                            <constraint firstItem="Y2B-mb-Wph" firstAttribute="leading" secondItem="anz-HT-g0k" secondAttribute="leading" constant="54" id="A2Q-Ip-5ER"/>
+                            <constraint firstItem="bLa-l0-H7T" firstAttribute="top" secondItem="Y2B-mb-Wph" secondAttribute="bottom" constant="16" id="RTj-Yc-H3T"/>
+                            <constraint firstItem="Y2B-mb-Wph" firstAttribute="top" secondItem="dWd-CF-38r" secondAttribute="top" constant="74" id="SLc-BR-dm6"/>
+                            <constraint firstItem="a6s-9C-43w" firstAttribute="leading" secondItem="Y2B-mb-Wph" secondAttribute="trailing" constant="10" id="YIg-Td-MtX"/>
+                            <constraint firstAttribute="trailing" secondItem="a6s-9C-43w" secondAttribute="trailing" constant="54" id="jcR-0h-lgr"/>
+                            <constraint firstItem="a6s-9C-43w" firstAttribute="trailing" secondItem="bLa-l0-H7T" secondAttribute="trailing" id="les-7g-VYL"/>
+                            <constraint firstItem="a6s-9C-43w" firstAttribute="centerY" secondItem="Y2B-mb-Wph" secondAttribute="centerY" id="xTh-xF-qdV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dWd-CF-38r"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="bLa-l0-H7T" id="GYH-l3-UHm"/>
+                        <outlet property="searchFldConstraint" destination="YIg-Td-MtX" id="Liu-58-LDa"/>
+                        <outlet property="seartchFld" destination="ve5-Zv-tym" id="byg-Ot-JVM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBH-gy-CTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258.62068965517244" y="568.79999999999995"/>
+        </scene>
+        <!--Store View Controller-->
+        <scene sceneID="Y8G-za-L0j">
+            <objects>
+                <viewController storyboardIdentifier="StoreViewController" id="3rR-TA-5Md" customClass="StoreViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2WL-Ix-GBs">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tTY-i6-ZnR">
+                                <rect key="frame" x="84" y="80" width="644" height="264"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="R0d-Wp-0fX">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iY0-xr-YRw" id="7dQ-1A-roe"/>
+                                    <outlet property="delegate" destination="iY0-xr-YRw" id="jBZ-Nt-8xi"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mhb-gH-pjX" firstAttribute="bottom" secondItem="tTY-i6-ZnR" secondAttribute="bottom" constant="10" id="ABH-Vs-iEz"/>
+                            <constraint firstItem="tTY-i6-ZnR" firstAttribute="trailing" secondItem="mhb-gH-pjX" secondAttribute="trailing" constant="-40" id="HsP-1e-bgd"/>
+                            <constraint firstItem="tTY-i6-ZnR" firstAttribute="leading" secondItem="mhb-gH-pjX" secondAttribute="leading" constant="40" id="WKY-oS-ePe"/>
+                            <constraint firstItem="tTY-i6-ZnR" firstAttribute="top" secondItem="mhb-gH-pjX" secondAttribute="top" constant="80" id="xhI-MX-bff"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mhb-gH-pjX"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="tTY-i6-ZnR" id="aCl-AR-QmI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CxL-bP-3oF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-917.99100449775119" y="-1692"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-hillBackground" width="667" height="375"/>
+        <image name="ic-leftCurtain" width="55" height="333"/>
+        <image name="ic-logo" width="144" height="37"/>
+        <image name="ic-navBar" width="667" height="70"/>
+        <image name="ic-rightCurtain" width="55" height="333"/>
+        <image name="icChildPlus" width="89" height="34"/>
+        <image name="icCircle" width="47" height="47"/>
+        <image name="icDown" width="20" height="25"/>
+        <image name="icFav" width="21" height="30"/>
+        <image name="icGame" width="22" height="24"/>
+        <image name="icHeadphone" width="32" height="32"/>
+        <image name="icHeart" width="26" height="21"/>
+        <image name="icHome" width="24" height="22"/>
+        <image name="icPancil" width="30" height="30"/>
+        <image name="icPlus" width="24" height="24"/>
+        <image name="icSearch" width="24" height="26"/>
+        <image name="icSettings" width="26" height="26"/>
+        <image name="icTreasure" width="25" height="28"/>
+        <image name="icUtka" width="29" height="35"/>
+    </resources>
+</document>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kVR-gb-acQ">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gSV-64-X82">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="kVR-gb-acQ" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cH8-jh-oMQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mww-fR-E5o" kind="relationship" relationship="rootViewController" id="A9G-4V-jeN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D04-m8-s0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-998" y="-2591"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NtE-Vz-qD5">
+            <objects>
+                <viewController id="pzs-kz-XiT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4o2-DI-kca">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6aC-v7-mva"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXL-S5-pS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-937" y="-1518"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="QLE-6i-PME">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="wE3-71-ku2" customClass="SettingsViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="723-sZ-tcr">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Lod-Uo-ahq">
+                                <rect key="frame" x="64" y="95" width="185" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22T-1e-kbW">
+                                        <rect key="frame" x="0.0" y="0.0" width="108.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="чтобы добавить профили детей нужно" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cT-Ip-paJ">
+                                        <rect key="frame" x="0.0" y="50.5" width="175" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nj-WY-iPk" customClass="UIRoundedButtonWithGradientAndShadow" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="105" width="185" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="HYP-wO-lRz"/>
+                                            <constraint firstAttribute="width" constant="185" id="kDB-AD-p0E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Зарегестрироваться">
+                                            <color key="titleColor" red="0.24109957322076631" green="0.26391830515346143" blue="0.36654174327850342" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="или, если у вас уже есть аккаунт" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nt-mN-9wF">
+                                        <rect key="frame" x="0.0" y="160.5" width="136.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeZ-4J-ShD" customClass="UIRoundedButtonWithGradientAndShadow" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="215" width="83" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="G6Y-8A-V77"/>
+                                            <constraint firstAttribute="width" constant="83" id="hbc-UM-tqA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Войти">
+                                            <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="4Zk-LR-BIe"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-nK-i6a">
+                                <rect key="frame" x="447" y="99" width="91" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="E7k-SV-Zls"/>
+                                    <constraint firstAttribute="height" constant="35" id="ybR-YI-ZUG"/>
+                                </constraints>
+                                <state key="normal" image="ic-childePlus"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQi-2G-6jH" customClass="UIRoundedButtonWithGradientAndShadow" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="429" y="163" width="160" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="l2N-Tx-00e"/>
+                                    <constraint firstAttribute="height" constant="33" id="tuo-p6-RQY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Ввести промокод">
+                                    <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.84705883260000003" blue="0.4196078479" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lod-Uo-ahq" firstAttribute="leading" secondItem="uhW-VB-xpW" secondAttribute="leading" constant="64" id="7Mu-BG-MnB"/>
+                            <constraint firstItem="dQi-2G-6jH" firstAttribute="top" secondItem="n2g-nK-i6a" secondAttribute="bottom" constant="29" id="Gup-cL-nEL"/>
+                            <constraint firstItem="uhW-VB-xpW" firstAttribute="trailing" secondItem="n2g-nK-i6a" secondAttribute="trailing" constant="129" id="MSm-Xp-hYX"/>
+                            <constraint firstItem="uhW-VB-xpW" firstAttribute="bottom" secondItem="Lod-Uo-ahq" secondAttribute="bottom" constant="30" id="faV-kt-fPN"/>
+                            <constraint firstItem="Lod-Uo-ahq" firstAttribute="top" secondItem="uhW-VB-xpW" secondAttribute="top" constant="95" id="kwg-7K-v1Z"/>
+                            <constraint firstItem="uhW-VB-xpW" firstAttribute="trailing" secondItem="dQi-2G-6jH" secondAttribute="trailing" constant="78" id="nSw-HU-ZVd"/>
+                            <constraint firstItem="n2g-nK-i6a" firstAttribute="top" secondItem="uhW-VB-xpW" secondAttribute="top" constant="99" id="sSY-dy-hMP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uhW-VB-xpW"/>
+                    </view>
+                    <connections>
+                        <outlet property="logInBtn" destination="aeZ-4J-ShD" id="sZX-1b-7Ae"/>
+                        <outlet property="registrationBtn" destination="0nj-WY-iPk" id="jQe-1R-lGi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sn4-hO-gtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250.52473763118442" y="-1671.2"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="j4a-AG-6lU">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" modalTransitionStyle="crossDissolve" id="rRc-As-Gwh" customClass="MainViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EYg-KI-fao">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txU-4d-e5g">
+                                <rect key="frame" x="513" y="95" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="txU-4d-e5g" firstAttribute="top" secondItem="Wl9-Vw-4t6" secondAttribute="top" constant="95" id="IcD-C2-f3I"/>
+                            <constraint firstItem="Wl9-Vw-4t6" firstAttribute="trailing" secondItem="txU-4d-e5g" secondAttribute="trailing" constant="108" id="nkW-yF-qpe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wl9-Vw-4t6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJa-Be-Dtd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="430" y="-1671"/>
+        </scene>
+        <!--Master View Controller-->
+        <scene sceneID="EO7-Mn-LKS">
+            <objects>
+                <viewController storyboardIdentifier="MasterViewController" id="mww-fR-E5o" customClass="MasterViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A70-J6-i64">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-hillBackground" translatesAutoresizingMaskIntoConstraints="NO" id="56g-V5-UnV">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-rightCurtain" translatesAutoresizingMaskIntoConstraints="NO" id="mSD-IA-9Ad">
+                                <rect key="frame" x="647" y="40" width="20" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="0y3-ph-whG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-leftCurtain" translatesAutoresizingMaskIntoConstraints="NO" id="bjJ-uN-03t">
+                                <rect key="frame" x="0.0" y="40" width="20" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="36K-fZ-RmF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-navBar" translatesAutoresizingMaskIntoConstraints="NO" id="LCs-C1-40b">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="lTU-GU-obj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7F-Hq-vbE">
+                                <rect key="frame" x="436.5" y="12" width="53" height="53"/>
+                                <state key="normal" image="ic-fav"/>
+                                <connections>
+                                    <action selector="favoriteClick:" destination="mww-fR-E5o" eventType="touchUpInside" id="yrp-ZY-4xY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzL-lF-fdn">
+                                <rect key="frame" x="261.5" y="15" width="144" height="37"/>
+                                <state key="normal" image="ic-logo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldZ-5y-i2H">
+                                <rect key="frame" x="5" y="5" width="62" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="51u-Fu-REA"/>
+                                    <constraint firstAttribute="height" constant="60" id="QOc-It-wSk"/>
+                                </constraints>
+                                <state key="normal" image="ic-treasure"/>
+                                <connections>
+                                    <action selector="treasureClick:" destination="mww-fR-E5o" eventType="touchUpInside" id="ftd-aK-zSf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-ej-vI3">
+                                <rect key="frame" x="177.5" y="12" width="53" height="53"/>
+                                <state key="normal" image="ic-search"/>
+                                <connections>
+                                    <action selector="searchClick:" destination="mww-fR-E5o" eventType="touchUpInside" id="9N8-aG-3BX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSb-f0-cbG">
+                                <rect key="frame" x="69" y="12" width="53" height="53"/>
+                                <state key="normal" image="ic-heart"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmd-eN-sOH">
+                                <rect key="frame" x="5" y="304" width="62" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Fz4-eb-79e"/>
+                                    <constraint firstAttribute="width" constant="62" id="tN4-lw-FP8"/>
+                                </constraints>
+                                <state key="normal" image="ic-settings"/>
+                                <connections>
+                                    <action selector="settingsClick:" destination="mww-fR-E5o" eventType="touchUpInside" id="Ti1-3C-f9n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cSb-f0-cbG" firstAttribute="top" secondItem="lUs-9o-Pok" secondAttribute="top" constant="12" id="0s7-7X-65P"/>
+                            <constraint firstItem="k7F-Hq-vbE" firstAttribute="top" secondItem="lUs-9o-Pok" secondAttribute="top" constant="12" id="2FB-hA-VFz"/>
+                            <constraint firstItem="mzL-lF-fdn" firstAttribute="leading" secondItem="bY4-ej-vI3" secondAttribute="trailing" constant="31" id="2h5-qo-zKS"/>
+                            <constraint firstItem="LCs-C1-40b" firstAttribute="leading" secondItem="lUs-9o-Pok" secondAttribute="leading" id="3k1-Wq-W5J"/>
+                            <constraint firstItem="56g-V5-UnV" firstAttribute="leading" secondItem="lUs-9o-Pok" secondAttribute="leading" id="6EE-Qu-FxR"/>
+                            <constraint firstItem="ldZ-5y-i2H" firstAttribute="leading" secondItem="lUs-9o-Pok" secondAttribute="leading" constant="5" id="FLi-rd-ltg"/>
+                            <constraint firstItem="mzL-lF-fdn" firstAttribute="centerX" secondItem="A70-J6-i64" secondAttribute="centerX" id="Fqp-qm-ONQ"/>
+                            <constraint firstItem="56g-V5-UnV" firstAttribute="top" secondItem="A70-J6-i64" secondAttribute="top" id="ItV-4w-Tgd"/>
+                            <constraint firstItem="wmd-eN-sOH" firstAttribute="leading" secondItem="ldZ-5y-i2H" secondAttribute="leading" id="Kkd-dp-T4T"/>
+                            <constraint firstItem="bjJ-uN-03t" firstAttribute="bottom" secondItem="lUs-9o-Pok" secondAttribute="bottom" id="LZh-ZA-Wxp"/>
+                            <constraint firstItem="ldZ-5y-i2H" firstAttribute="top" secondItem="lUs-9o-Pok" secondAttribute="top" constant="5" id="OqI-2d-0ac"/>
+                            <constraint firstItem="LCs-C1-40b" firstAttribute="top" secondItem="lUs-9o-Pok" secondAttribute="top" id="QRB-r9-Ua0"/>
+                            <constraint firstItem="cSb-f0-cbG" firstAttribute="leading" secondItem="ldZ-5y-i2H" secondAttribute="trailing" constant="2" id="Tin-3Z-XHb"/>
+                            <constraint firstItem="bY4-ej-vI3" firstAttribute="top" secondItem="lUs-9o-Pok" secondAttribute="top" constant="12" id="WvN-GX-8Rd"/>
+                            <constraint firstItem="mSD-IA-9Ad" firstAttribute="top" secondItem="lUs-9o-Pok" secondAttribute="top" constant="40" id="Ys3-N9-wwr"/>
+                            <constraint firstItem="k7F-Hq-vbE" firstAttribute="leading" secondItem="mzL-lF-fdn" secondAttribute="trailing" constant="31" id="d2i-L9-AiU"/>
+                            <constraint firstItem="56g-V5-UnV" firstAttribute="bottom" secondItem="lUs-9o-Pok" secondAttribute="bottom" id="dzQ-OT-Opt"/>
+                            <constraint firstItem="mSD-IA-9Ad" firstAttribute="trailing" secondItem="lUs-9o-Pok" secondAttribute="trailing" id="evE-X3-tXf"/>
+                            <constraint firstItem="lUs-9o-Pok" firstAttribute="bottom" secondItem="wmd-eN-sOH" secondAttribute="bottom" constant="11" id="l03-87-ykf"/>
+                            <constraint firstItem="mSD-IA-9Ad" firstAttribute="bottom" secondItem="lUs-9o-Pok" secondAttribute="bottom" id="orl-f9-SRc"/>
+                            <constraint firstItem="LCs-C1-40b" firstAttribute="trailing" secondItem="lUs-9o-Pok" secondAttribute="trailing" id="uss-lT-FU6"/>
+                            <constraint firstItem="mzL-lF-fdn" firstAttribute="top" secondItem="lUs-9o-Pok" secondAttribute="top" constant="15" id="vOS-88-N8V"/>
+                            <constraint firstItem="bjJ-uN-03t" firstAttribute="top" secondItem="lUs-9o-Pok" secondAttribute="top" constant="40" id="vnY-si-ou8"/>
+                            <constraint firstItem="bjJ-uN-03t" firstAttribute="leading" secondItem="lUs-9o-Pok" secondAttribute="leading" id="vuz-eB-nB7"/>
+                            <constraint firstItem="56g-V5-UnV" firstAttribute="trailing" secondItem="lUs-9o-Pok" secondAttribute="trailing" id="wXf-Ei-hGl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lUs-9o-Pok"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QZG-xz-Bg2"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="56g-V5-UnV" id="NLV-qV-6Sl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJO-kW-R7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-257.72113943028489" y="-2575.1999999999998"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-childePlus" width="91" height="35"/>
+        <image name="ic-fav" width="53" height="53"/>
+        <image name="ic-heart" width="53" height="53"/>
+        <image name="ic-hillBackground" width="667" height="375"/>
+        <image name="ic-leftCurtain" width="55" height="333"/>
+        <image name="ic-logo" width="144" height="37"/>
+        <image name="ic-navBar" width="667" height="70"/>
+        <image name="ic-rightCurtain" width="55" height="333"/>
+        <image name="ic-search" width="53" height="53"/>
+        <image name="ic-settings" width="53" height="53"/>
+        <image name="ic-treasure" width="64" height="63"/>
+    </resources>
+</document>

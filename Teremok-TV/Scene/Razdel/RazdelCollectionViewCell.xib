@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.30.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.19.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RazdelCollectionViewCell" id="pO4-Ab-pLO" customClass="RazdelCollectionViewCell" customModule="Teremok_TV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="284" height="396"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="284" height="396"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFw-3g-Hwa">
+                        <rect key="frame" x="141" y="0.0" width="2" height="350.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="0cb-2U-Aot"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taK-CD-Yz5">
+                        <rect key="frame" x="10" y="48" width="264" height="119"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCloudOne" translatesAutoresizingMaskIntoConstraints="NO" id="ySb-hR-MRj">
+                                <rect key="frame" x="0.0" y="0.0" width="264" height="119"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzC-bE-hQi">
+                                <rect key="frame" x="39.5" y="51" width="185" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ySb-hR-MRj" firstAttribute="leading" secondItem="taK-CD-Yz5" secondAttribute="leading" id="L08-kg-eCH"/>
+                            <constraint firstItem="ySb-hR-MRj" firstAttribute="top" secondItem="taK-CD-Yz5" secondAttribute="top" id="bms-o7-I3u"/>
+                            <constraint firstAttribute="bottom" secondItem="ySb-hR-MRj" secondAttribute="bottom" id="env-cF-Sym"/>
+                            <constraint firstItem="ZzC-bE-hQi" firstAttribute="centerX" secondItem="taK-CD-Yz5" secondAttribute="centerX" id="iMJ-DV-yYI"/>
+                            <constraint firstAttribute="trailing" secondItem="ySb-hR-MRj" secondAttribute="trailing" id="ixH-Ou-2pj"/>
+                            <constraint firstItem="ZzC-bE-hQi" firstAttribute="width" secondItem="ySb-hR-MRj" secondAttribute="width" multiplier="0.7" id="ua0-M9-u5b"/>
+                            <constraint firstItem="ZzC-bE-hQi" firstAttribute="centerY" secondItem="taK-CD-Yz5" secondAttribute="centerY" id="x3z-KB-DCh"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="28s-cu-nVy" customClass="PreviewImage" customModule="Teremok_TV" customModuleProvider="target">
+                        <rect key="frame" x="10" y="177" width="264" height="148.5"/>
+                        <color key="backgroundColor" red="0.91912621259689331" green="0.95921593904495239" blue="0.99856835603713989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="28s-cu-nVy" secondAttribute="height" multiplier="16:9" id="KoT-iD-XIK"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMm-fc-Xz8">
+                        <rect key="frame" x="109.5" y="335.5" width="65" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="CRs-Ao-2RI"/>
+                            <constraint firstAttribute="width" constant="65" id="JLS-Dq-MVw"/>
+                        </constraints>
+                        <state key="normal" image="icCloudBurger"/>
+                        <connections>
+                            <action selector="burgerClick:" destination="pO4-Ab-pLO" eventType="touchUpInside" id="bYN-xQ-WuA"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="UMm-fc-Xz8" firstAttribute="top" secondItem="MFw-3g-Hwa" secondAttribute="bottom" constant="-15" id="1Xh-2p-GzI"/>
+                <constraint firstItem="MFw-3g-Hwa" firstAttribute="centerX" secondItem="pO4-Ab-pLO" secondAttribute="centerX" id="1ad-qz-3o7"/>
+                <constraint firstItem="taK-CD-Yz5" firstAttribute="leading" secondItem="pO4-Ab-pLO" secondAttribute="leading" constant="10" id="1gB-PS-Bsk"/>
+                <constraint firstItem="taK-CD-Yz5" firstAttribute="centerX" secondItem="pO4-Ab-pLO" secondAttribute="centerX" id="6bh-c2-rKv"/>
+                <constraint firstItem="MFw-3g-Hwa" firstAttribute="top" secondItem="pO4-Ab-pLO" secondAttribute="top" id="GAy-ib-V0q"/>
+                <constraint firstItem="taK-CD-Yz5" firstAttribute="top" secondItem="pO4-Ab-pLO" secondAttribute="top" constant="48" id="GMk-Z0-WDd"/>
+                <constraint firstItem="28s-cu-nVy" firstAttribute="leading" secondItem="pO4-Ab-pLO" secondAttribute="leading" constant="10" id="GfX-q0-g42"/>
+                <constraint firstItem="UMm-fc-Xz8" firstAttribute="centerX" secondItem="MFw-3g-Hwa" secondAttribute="centerX" id="PJN-na-pEQ"/>
+                <constraint firstItem="taK-CD-Yz5" firstAttribute="height" secondItem="pO4-Ab-pLO" secondAttribute="height" multiplier="0.3" id="TLG-dX-QXa"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UMm-fc-Xz8" secondAttribute="bottom" id="Wsr-Bn-ivS"/>
+                <constraint firstItem="28s-cu-nVy" firstAttribute="top" secondItem="taK-CD-Yz5" secondAttribute="bottom" constant="10" id="cjl-ES-OQN"/>
+                <constraint firstAttribute="trailing" secondItem="28s-cu-nVy" secondAttribute="trailing" constant="10" id="gSA-Dk-meZ"/>
+                <constraint firstAttribute="trailing" secondItem="taK-CD-Yz5" secondAttribute="trailing" constant="10" id="kwP-hL-AKp"/>
+                <constraint firstItem="UMm-fc-Xz8" firstAttribute="top" secondItem="28s-cu-nVy" secondAttribute="bottom" constant="10" id="rp4-Uu-YSq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="xZk-1u-Nvz"/>
+            <size key="customSize" width="284" height="396"/>
+            <connections>
+                <outlet property="cloudImageView" destination="ySb-hR-MRj" id="b6G-oj-TMw"/>
+                <outlet property="imageView" destination="28s-cu-nVy" id="dnz-a5-rnA"/>
+                <outlet property="titleLbl" destination="ZzC-bE-hQi" id="gMz-IV-3f9"/>
+            </connections>
+            <point key="canvasLocation" x="435.19999999999999" y="271.664167916042"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icCloudBurger" width="75" height="50"/>
+        <image name="icCloudOne" width="147" height="67"/>
+    </resources>
+</document>

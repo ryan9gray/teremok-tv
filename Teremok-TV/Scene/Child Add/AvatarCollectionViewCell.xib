@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AvatarCollectionViewCell" id="gTV-IL-0wX" customClass="AvatarCollectionViewCell" customModule="Teremok_TV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="63" height="62"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="63" height="62"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="5YS-HF-lfc" customClass="TTImageView" customModule="Teremok_TV" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="63" height="62"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="5YS-HF-lfc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1p5-2u-22h"/>
+                <constraint firstItem="5YS-HF-lfc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="L8z-Dh-d7h"/>
+                <constraint firstAttribute="bottom" secondItem="5YS-HF-lfc" secondAttribute="bottom" id="Vxl-3n-j81"/>
+                <constraint firstAttribute="trailing" secondItem="5YS-HF-lfc" secondAttribute="trailing" id="Wqr-F5-T8a"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="63" height="62"/>
+            <connections>
+                <outlet property="avatarImageView" destination="5YS-HF-lfc" id="7go-aE-wzO"/>
+            </connections>
+            <point key="canvasLocation" x="148" y="158.32083958020991"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icPhoto" width="29" height="23"/>
+    </resources>
+</document>
