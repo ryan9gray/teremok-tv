@@ -12,13 +12,15 @@
 
 import UIKit
 
-protocol AlphaviteMasterPresentationLogic {
+protocol AlphaviteMasterPresentationLogic: CommonPresentationLogic {
     
 }
 
 class AlphaviteMasterPresenter: AlphaviteMasterPresentationLogic {
+    var displayModule: CommonDisplayLogic? {
+        return viewController
+    }
     weak var viewController: AlphaviteMasterDisplayLogic?
   
-    // MARK: Do something
     
 }
