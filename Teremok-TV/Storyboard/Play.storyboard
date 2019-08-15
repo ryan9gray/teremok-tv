@@ -61,10 +61,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arp-g8-tZj">
-                                <rect key="frame" x="116" y="134" width="120" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="MNG-BG-h85"/>
-                                </constraints>
+                                <rect key="frame" x="116" y="134" width="271.66666666666669" height="0.0"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -76,7 +73,7 @@
                             <constraint firstItem="LGB-2T-Y6p" firstAttribute="top" secondItem="NkN-5k-9jm" secondAttribute="bottom" constant="10" id="BKw-DP-9hp"/>
                             <constraint firstAttribute="trailing" secondItem="LGB-2T-Y6p" secondAttribute="trailing" id="Es7-1K-Lpn"/>
                             <constraint firstItem="Hts-NT-sZ3" firstAttribute="trailing" secondItem="NkN-5k-9jm" secondAttribute="trailing" priority="800" constant="75" id="OKe-Wp-IPi"/>
-                            <constraint firstItem="NkN-5k-9jm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Arp-g8-tZj" secondAttribute="trailing" constant="5" id="VH5-5g-dFQ"/>
+                            <constraint firstItem="NkN-5k-9jm" firstAttribute="leading" secondItem="Arp-g8-tZj" secondAttribute="trailing" constant="5" id="VH5-5g-dFQ"/>
                             <constraint firstItem="NkN-5k-9jm" firstAttribute="top" secondItem="Hts-NT-sZ3" secondAttribute="top" constant="65" id="Vqd-rC-vk3"/>
                             <constraint firstItem="Hts-NT-sZ3" firstAttribute="bottom" secondItem="LGB-2T-Y6p" secondAttribute="bottom" constant="20" id="b3V-a0-jfQ"/>
                             <constraint firstItem="Arp-g8-tZj" firstAttribute="top" secondItem="03A-KY-gcw" secondAttribute="bottom" constant="16" id="e9x-il-5tz"/>
