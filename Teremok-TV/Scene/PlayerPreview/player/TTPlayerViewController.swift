@@ -186,9 +186,12 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             window?.rootViewController = parent
             parent.view.frame = window?.bounds ?? self.view.bounds
             delegate?.avPlayerOverlay(self, didFullScreen: nil)
-            
-            UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .layoutSubviews, animations: {
-                self.window?.frame = (self.mainWindow?.bounds)!
+
+            UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeCubic, animations: {
+                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
+                    self.window?.frame = (self.mainWindow?.bounds)!
+
+                }
             }) { (finish) in
                 
             }
@@ -207,7 +210,8 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         delegate?.avPlayerOverlay(self, didNormalScreen: nil)
         
         UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .layoutSubviews, animations: {
-            
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
+
             parent.view.removeFromSuperview()
             self.window?.rootViewController = nil
             self.mainParent?.addChild(parent)
@@ -218,13 +222,13 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             self.containerView = nil;
             self.mainParent = nil;
             self.window = nil;
+            }
         }) { (finish) in
         }
         setControls(isFull: isFullScreen)
     }
     
     func setControls(isFull: Bool){
-        let rek =  (isPremium || !isFull)
         fullscreenButton.isSelected = isFull
     }
 

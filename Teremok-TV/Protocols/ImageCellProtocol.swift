@@ -27,7 +27,5 @@ extension ImageCellProtocol where Self : PreviewImageCollectionViewCell {
                 imageTransition: .crossDissolve(0.5),
                 completion: nil)
         }
-        
     }
-    
 }

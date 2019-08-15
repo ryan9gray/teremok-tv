@@ -16,7 +16,6 @@ class PreviewImageCollectionViewCell: UICollectionViewCell, ImageCellProtocol {
         }
     }
     
-    
     @IBOutlet var imageView: PreviewImage!
 
     override func awakeFromNib() {
@@ -24,5 +23,4 @@ class PreviewImageCollectionViewCell: UICollectionViewCell, ImageCellProtocol {
         
         imageView.clipsToBounds = true
     }
-    
 }
