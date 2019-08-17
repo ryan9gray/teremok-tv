@@ -20,12 +20,9 @@ protocol MasterDisplayLogic: CommonDisplayLogic {
 
 final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimationDelegate {
     var activityView: LottieHUD?
-    
     var interactor: MasterBusinessLogic?
     var router: (NSObjectProtocol & MasterVCRoutingLogic & MasterDataPassing & CommonRoutingLogic)?
-    
-    // MARK: Object lifecycle
-    
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -95,8 +92,9 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     @IBAction func musicClick(_ sender: UIButton) {
         router?.navigateToMusic()
     }
-    @IBAction func animalsClick(_ sender: UIButton) {
-        router?.navigateToGameList()
+    @IBAction func gameClick(_ sender: UIButton) {
+        //router?.navigateToGameList()
+        router?.navigateToAnimals()
     }
     @IBAction func touchDown(_ sender: UIButton) {
         if !isAuth {
@@ -106,7 +104,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         }
         if isOffline {
             sender.cancelTracking(with: nil)
-            self.presentCloud(title: "Offline", subtitle: "Отсутствует подключение к Интернету или слишком слабый сигнал. Вам доступны только сохраненные на телефон мультфильмы.", completion: nil)
+            presentCloud(title: "Offline", subtitle: "Отсутствует подключение к Интернету или слишком слабый сигнал. Вам доступны только сохраненные на телефон мультфильмы.", completion: nil)
             router?.navigateToFav()
         }
     }
@@ -116,7 +114,6 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     var audioPlayer = AVAudioPlayer()
 
     private func selectButton(_ button: UIButton){
-        //AudioServicesPlayAlertSound(SystemSoundID(1305))
         deselectButtons()
         button.isSelected = true
     }
@@ -211,9 +208,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     func prepareBackground(){
         BackgroundMediaWorker.setImage(background: backgroundView)
     }
-    
-    // MARK: - Helper Methods
-    
+
     func showWelcome(){
         router?.presentWelcome()
     }

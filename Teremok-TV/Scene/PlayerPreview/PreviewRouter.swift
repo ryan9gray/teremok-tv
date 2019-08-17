@@ -20,7 +20,7 @@ protocol PreviewDataPassing {
     var dataStore: PreviewDataStore? { get }
 }
 
-class PreviewRouter: NSObject, PreviewRoutingLogic, PreviewDataPassing {
+class PreviewRouter: PreviewRoutingLogic, PreviewDataPassing {
     weak var viewController: PreviewViewController?
     var dataStore: PreviewDataStore?
     

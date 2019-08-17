@@ -41,6 +41,7 @@ protocol MasterVCRoutingLogic: MasterRoutingLogic {
     func navigateToAddChild()
     func navigateToMusic()
     func navigateToGameList()
+    func navigateToAnimals()
 }
 
 protocol MasterDataPassing {

@@ -26,7 +26,7 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     var activityView: LottieHUD?
     
     var interactor: PreviewBusinessLogic?
-    var router: (NSObjectProtocol & PreviewRoutingLogic & PreviewDataPassing & CommonRoutingLogic)?
+    var router: (PreviewRoutingLogic & PreviewDataPassing & CommonRoutingLogic)?
 
     // MARK: Object lifecycle
 
@@ -65,12 +65,6 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     weak var playerVC: PlayerViewController!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
         if segue.identifier == "playerSeg" {
             if let container = segue.destination as? PlayerViewController {
                 self.playerVC = container
@@ -82,7 +76,7 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     // MARK: View lifecycle
     
     @IBAction func backClick(_ sender: Any) {
-        self.masterRouter?.popChild()
+        masterRouter?.popChild()
     }
     
     var streams: [Preview.StreamItem] = []
@@ -91,9 +85,6 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     
     @IBOutlet private var playerContainer: UIView!
     @IBOutlet private var titleLbl: UILabel!
-    
-    var cellWidth: CGFloat = 0
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,7 +103,6 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
 
     func prepareUI(){
         collectionView.delegate = self
-        cellWidth = self.view.bounds.width/4
         let cells = [PreviewCollectionViewCell.self, LoadingCollectionViewCell.self]
         collectionView.register(cells: cells)
     }
@@ -134,7 +124,7 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
 
     var currentLink: URL? {
         didSet{
-            self.playerVC.contentURL = currentLink
+            playerVC.contentURL = currentLink
         }
     }
     
@@ -145,7 +135,7 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     }
 
     func getName(){
-        self.titleLbl.text = (router?.dataStore?.videoModel?.series?.name ?? "") + "\n" + (router?.dataStore?.videoModel?.name ?? "")
+        titleLbl.text = (router?.dataStore?.videoModel?.series?.name ?? "") + "\n" + (router?.dataStore?.videoModel?.name ?? "")
     }
 
     deinit {
@@ -154,7 +144,6 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
 }
 
 extension PreviewViewController: UICollectionViewDelegate {
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //self.router?.navigateToPreview(number: indexPath.row)
         track(
@@ -165,7 +154,6 @@ extension PreviewViewController: UICollectionViewDelegate {
     }
 }
 extension PreviewViewController: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recommendations.count
     }
@@ -177,9 +165,8 @@ extension PreviewViewController: UICollectionViewDataSource {
     }
 }
 extension PreviewViewController: UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: cellWidth, height: collectionView.bounds.height)
+        return CGSize(width: collectionView.bounds.height * 1.76, height: collectionView.bounds.height)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
@@ -193,29 +180,17 @@ extension PreviewViewController : TrackableClass {
 }
 
 extension PreviewViewController : AVPlayerOverlayVCDelegate {
-    
     func avPlayerOverlay(_ vc: TTPlayerViewController, didFullScreen sender: Any?) {
-        
     }
-    
     func avPlayerOverlay(_ vc: TTPlayerViewController, willNormalScreen sender: Any?) {
-        
     }
-    
     func avPlayerOverlay(_ vc: TTPlayerViewController, didNormalScreen sender: Any?) {
-        
     }
-    
     func avPlayerOverlay(_ vc: TTPlayerViewController, periodicTimeObserver time: CMTime) {
-        
     }
-    
     func avPlayerOverlay(_ vc: TTPlayerViewController, statusReadyToPlay sender: Any?) {
-        
     }
-    
     func avPlayerOverlay(_ vc: TTPlayerViewController, didCloseAll sender: Any?) {
-        
     }
     
     func avPlayerOverlay(_ vc: TTPlayerViewController, download sender: Any?) {

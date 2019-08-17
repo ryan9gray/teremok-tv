@@ -19,7 +19,6 @@ protocol SearchDisplayLogic: CommonDisplayLogic {
 
 class SearchViewController: AbstracViewController, SearchDisplayLogic {
     var activityView: LottieHUD?
-    
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing & CommonRoutingLogic)?
 
@@ -76,7 +75,7 @@ class SearchViewController: AbstracViewController, SearchDisplayLogic {
     func prepareUI(){
         activityView = LottieHUD()
         collectionView.delegate = self
-        self.searchFldConstraint.isActive = false
+        searchFldConstraint.isActive = false
         let cells = [SearchCharacterCollectionViewCell.self, LoadingCollectionViewCell.self]
         collectionView.register(cells: cells)
     }
@@ -89,8 +88,7 @@ class SearchViewController: AbstracViewController, SearchDisplayLogic {
     }
 
     func displayTags(items: [Search.Tag]){
-        
-        self.tags = items
+        tags = items
         collectionView.reloadData()
     }
     
@@ -105,6 +103,7 @@ class SearchViewController: AbstracViewController, SearchDisplayLogic {
     }
     func toSearchText(){
         guard let txt = seartchFld.text, !txt.isEmpty else {
+            seartchFld.resignFirstResponder()
             return
         }
         view.endEditing(true)
@@ -157,8 +156,7 @@ extension SearchViewController: UICollectionViewDataSource {
 extension SearchViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        self.showPreloader()
+        showPreloader()
        // DispatchQueue.main.asyncAfter(deadline: .now()+3) {
             self.interactor?.selectTag(idx: indexPath.row)
         //}
@@ -167,12 +165,6 @@ extension SearchViewController: UICollectionViewDelegate {
         if indexPath.row == tags.count-1 {
             self.interactor?.fetchSearchTags()
         }
-    }
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
     }
 }
 extension SearchViewController: UICollectionViewDelegateFlowLayout {

@@ -223,7 +223,7 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         setControls(isFull: isFullScreen)
     }
     
-    func setControls(isFull: Bool){
+    func setControls(isFull: Bool) {
         fullscreenButton.isSelected = isFull
     }
 
@@ -286,11 +286,10 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     @objc fileprivate func setPlayBottomViewAnimation() {
-        
-        if self.bottomView.alpha == 0 {
-            self.displayControlAnimation()
+        if bottomView.alpha == 0 {
+            displayControlAnimation()
         } else {
-            self.hiddenControlAnimation()
+            hiddenControlAnimation()
         }
     }
     

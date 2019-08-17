@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Shnobel-Regular.otf">
+        <array key="Shnobelregular.ttf">
             <string>Shnobel-Regular</string>
         </array>
         <array key="appetite.ttf">
@@ -646,27 +646,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qk-6m-yNC" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="597" y="310" width="45" height="45"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGE-GG-oQz" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="587" y="295" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="zbP-ck-w58"/>
+                                    <constraint firstAttribute="width" constant="60" id="6VS-mc-qIK"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="7" minY="9" maxX="11" maxY="11"/>
-                                <state key="normal" image="icArrow" backgroundImage="icCircle"/>
+                                <inset key="contentEdgeInsets" minX="19" minY="12" maxX="11" maxY="11"/>
+                                <state key="normal" image="icPlayRed" backgroundImage="icCircle90"/>
                                 <connections>
-                                    <action selector="nextClick:" destination="AAz-60-mGg" eventType="touchUpInside" id="qrh-A3-UYN"/>
+                                    <action selector="nextClick:" destination="AAz-60-mGg" eventType="touchUpInside" id="46e-iq-AKl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="CmX-Tj-cbO" secondAttribute="trailing" id="4Mi-2V-upx"/>
+                            <constraint firstItem="EGE-GG-oQz" firstAttribute="width" secondItem="EGE-GG-oQz" secondAttribute="height" multiplier="1:1" id="7mi-h8-oQ2"/>
                             <constraint firstAttribute="bottom" secondItem="CmX-Tj-cbO" secondAttribute="bottom" id="RIQ-Xb-2D3"/>
                             <constraint firstItem="CmX-Tj-cbO" firstAttribute="top" secondItem="vuH-Je-KW5" secondAttribute="top" id="Ut6-1V-fn0"/>
-                            <constraint firstAttribute="trailing" secondItem="1qk-6m-yNC" secondAttribute="trailing" constant="25" id="Vbk-vX-nnM"/>
+                            <constraint firstAttribute="trailing" secondItem="EGE-GG-oQz" secondAttribute="trailing" constant="20" id="fcD-7U-IEf"/>
                             <constraint firstItem="CmX-Tj-cbO" firstAttribute="leading" secondItem="vuH-Je-KW5" secondAttribute="leading" id="gLx-ti-QbW"/>
-                            <constraint firstAttribute="bottom" secondItem="1qk-6m-yNC" secondAttribute="bottom" constant="20" id="kPJ-oF-AjV"/>
-                            <constraint firstItem="1qk-6m-yNC" firstAttribute="width" secondItem="1qk-6m-yNC" secondAttribute="height" multiplier="1:1" id="wOQ-0A-tzx"/>
+                            <constraint firstAttribute="bottom" secondItem="EGE-GG-oQz" secondAttribute="bottom" constant="20" id="wcM-O9-YNZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wus-be-kLD"/>
                     </view>
@@ -914,7 +914,6 @@
         <image name="icAnimalsMainBack" width="667" height="375"/>
         <image name="icAnimalsPlay" width="155" height="155"/>
         <image name="icAnimalsTitle" width="341" height="127"/>
-        <image name="icArrow" width="30" height="30"/>
         <image name="icArrowBackNavigate" width="16" height="27"/>
         <image name="icCircle" width="47" height="47"/>
         <image name="icCircle90" width="90" height="90"/>
