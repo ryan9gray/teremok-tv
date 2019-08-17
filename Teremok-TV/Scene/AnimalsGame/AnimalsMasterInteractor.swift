@@ -21,7 +21,7 @@ protocol AnimalsMasterDataStore {
 }
 
 class AnimalsMasterInteractor: AnimalsMasterBusinessLogic, AnimalsMasterDataStore {
-    var presenter: AnimalsMasterPresentationLogic?    
+    var presenter: AnimalsMasterPresentationLogic?
 
     var isEasy = true
 

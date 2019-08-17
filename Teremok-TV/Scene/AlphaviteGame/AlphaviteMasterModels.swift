@@ -28,6 +28,11 @@ enum AlphaviteMaster {
         let char: String
         let seconds: Int
         let isRight: Bool
+
+        func maping() -> AlphaviteStatistic {
+            let mapa = AlphaviteStatistic.init(char: char, seconds: seconds, isRight: isRight)
+            return mapa
+        }
     }
 
     static let Names = [

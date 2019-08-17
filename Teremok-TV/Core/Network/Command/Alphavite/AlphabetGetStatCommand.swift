@@ -9,6 +9,7 @@
 import Alamofire
 
 class AlphabetGetStatCommand: BasicCommand {
+
     func execute(success: ((AlphaviteStatisticResponse) -> Void)?, failure: ApiCompletionBlock?) {
         requestObject(success: success, failure: failure)
     }
@@ -18,6 +19,6 @@ class AlphabetGetStatCommand: BasicCommand {
     }
 
     override var parameters: [String : Any] {
-        return [:]
+        return [ : ]
     }
 }

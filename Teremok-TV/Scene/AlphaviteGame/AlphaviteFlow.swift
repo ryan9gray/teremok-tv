@@ -18,6 +18,7 @@ class AlphaviteGameFlow  {
 
     private var isHard: Bool = false
     var game: Game!
+    var service: AlphabetServiceProtocol!
 
     func startFlow() {
         guard !LocalStore.alphaviteIntroduce() else {
@@ -98,9 +99,13 @@ class AlphaviteGameFlow  {
             resume: repeatRound
         )
         master?.router?.presentModalChild(viewController: controller)
+        service.sendStat(statistic: game.statistic.map { $0.maping() } ) { [weak self] _ in
+            self?.game.statistic = []
+        }
     }
 
     func finishGame() {
+
 
     }
 

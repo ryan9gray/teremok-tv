@@ -266,6 +266,10 @@
 		CA6CB8D72196F7C300429089 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CB8D62196F7C300429089 /* PurchaseService.swift */; };
 		CA6F0C8F2158C3E90031C135 /* EditChildCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F0C8E2158C3E90031C135 /* EditChildCommand.swift */; };
 		CA70272021396F3100629260 /* RegService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70271F21396F3100629260 /* RegService.swift */; };
+		CA70867923082EA80015851C /* AlphaviteStatisticPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70867323082EA80015851C /* AlphaviteStatisticPresenter.swift */; };
+		CA70867B23082EA80015851C /* AlphaviteStatisticRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70867523082EA80015851C /* AlphaviteStatisticRouter.swift */; };
+		CA70867D23082EA80015851C /* AlphaviteStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70867723082EA80015851C /* AlphaviteStatisticViewController.swift */; };
+		CA70867E23082EA80015851C /* AlphaviteStatisticInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70867823082EA80015851C /* AlphaviteStatisticInteractor.swift */; };
 		CA76362A226A5FDF00168AB1 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA763628226A5FDF00168AB1 /* StoreCollectionViewCell.swift */; };
 		CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA763629226A5FDF00168AB1 /* StoreCollectionViewCell.xib */; };
 		CA76362D226A617900168AB1 /* RoundCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76362C226A617900168AB1 /* RoundCornerView.swift */; };
@@ -419,7 +423,6 @@
 		CAC0988822FEDCD400EFB01E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988722FEDCD400EFB01E /* Style.swift */; };
 		CAC0988D22FF12A700EFB01E /* EasyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988B22FF12A700EFB01E /* EasyTipView.swift */; };
 		CAC0988E22FF12A800EFB01E /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988C22FF12A700EFB01E /* UIKitExtensions.swift */; };
-		CAC0989022FF401100EFB01E /* AlphaviteStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988F22FF401100EFB01E /* AlphaviteStatisticViewController.swift */; };
 		CAC0989222FF47ED00EFB01E /* AlphaviteStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0989122FF47ED00EFB01E /* AlphaviteStatView.swift */; };
 		CAC0989422FF47FD00EFB01E /* AlphaviteStatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC0989322FF47FD00EFB01E /* AlphaviteStatView.xib */; };
 		CAC1126321562A0400678D1B /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1126221562A0400678D1B /* UIButton.swift */; };
@@ -992,6 +995,10 @@
 		CA6CB8D62196F7C300429089 /* PurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
 		CA6F0C8E2158C3E90031C135 /* EditChildCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChildCommand.swift; sourceTree = "<group>"; };
 		CA70271F21396F3100629260 /* RegService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegService.swift; sourceTree = "<group>"; };
+		CA70867323082EA80015851C /* AlphaviteStatisticPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatisticPresenter.swift; sourceTree = "<group>"; };
+		CA70867523082EA80015851C /* AlphaviteStatisticRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatisticRouter.swift; sourceTree = "<group>"; };
+		CA70867723082EA80015851C /* AlphaviteStatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatisticViewController.swift; sourceTree = "<group>"; };
+		CA70867823082EA80015851C /* AlphaviteStatisticInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatisticInteractor.swift; sourceTree = "<group>"; };
 		CA763628226A5FDF00168AB1 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA763629226A5FDF00168AB1 /* StoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCollectionViewCell.xib; sourceTree = "<group>"; };
 		CA76362C226A617900168AB1 /* RoundCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerView.swift; sourceTree = "<group>"; };
@@ -1147,7 +1154,6 @@
 		CAC0988722FEDCD400EFB01E /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		CAC0988B22FF12A700EFB01E /* EasyTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTipView.swift; sourceTree = "<group>"; };
 		CAC0988C22FF12A700EFB01E /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
-		CAC0988F22FF401100EFB01E /* AlphaviteStatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatisticViewController.swift; sourceTree = "<group>"; };
 		CAC0989122FF47ED00EFB01E /* AlphaviteStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatView.swift; sourceTree = "<group>"; };
 		CAC0989322FF47FD00EFB01E /* AlphaviteStatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlphaviteStatView.xib; sourceTree = "<group>"; };
 		CAC1126221562A0400678D1B /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -1503,6 +1509,7 @@
 		CA1AB66322F30CBC003A2584 /* AlphaviteGame */ = {
 			isa = PBXGroup;
 			children = (
+				CA70867223082E940015851C /* Stats */,
 				CA51004122F5FFAE00821C25 /* AlphaviteFlow.swift */,
 				CAAD25E722F59872005CFCD2 /* Main */,
 				CAB59FC822F315D800D7CA71 /* AlphaviteMasterPresenter.swift */,
@@ -1904,6 +1911,17 @@
 			path = ServiceCommand;
 			sourceTree = "<group>";
 		};
+		CA70867223082E940015851C /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				CA70867323082EA80015851C /* AlphaviteStatisticPresenter.swift */,
+				CA70867523082EA80015851C /* AlphaviteStatisticRouter.swift */,
+				CA70867723082EA80015851C /* AlphaviteStatisticViewController.swift */,
+				CA70867823082EA80015851C /* AlphaviteStatisticInteractor.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
 		CA763634226BD76100168AB1 /* OfflinePlaylist */ = {
 			isa = PBXGroup;
 			children = (
@@ -2121,7 +2139,6 @@
 			isa = PBXGroup;
 			children = (
 				CAAD25E822F59E82005CFCD2 /* AlphaviteMainViewController.swift */,
-				CAC0988F22FF401100EFB01E /* AlphaviteStatisticViewController.swift */,
 				CAAD25F422F5DC80005CFCD2 /* AlphaviteCharsViewController.swift */,
 				CAAD25F022F5DBC1005CFCD2 /* AlphaviteStartViewController.swift */,
 				CA51003F22F5F8E600821C25 /* AlphaviteChoiceViewController.swift */,
@@ -3491,6 +3508,7 @@
 				CAF96230229970F7006E3046 /* AnimalsStatisticViewController.swift in Sources */,
 				CA8EA71A214145E700159451 /* PreviewViewController.swift in Sources */,
 				CAF4C122214B8F8800954AA8 /* ChildProfileDoneInteractor.swift in Sources */,
+				CA70867B23082EA80015851C /* AlphaviteStatisticRouter.swift in Sources */,
 				CA49E4A8212D76FA00711324 /* UIView.swift in Sources */,
 				CA10414A22629A0B005D62DE /* SearchMusicRouter.swift in Sources */,
 				CAC2D52F2115A68300945003 /* UIFont.swift in Sources */,
@@ -3572,6 +3590,7 @@
 				CA8EA717214145E700159451 /* PreviewInteractor.swift in Sources */,
 				CA1C37AF214E5A7C00C8006D /* MasterModels.swift in Sources */,
 				CAC9100E215D31FD00E62F01 /* AchievesViewController.swift in Sources */,
+				CA70867D23082EA80015851C /* AlphaviteStatisticViewController.swift in Sources */,
 				CAA4455F2157BF4F0023E340 /* ErrorHandler.swift in Sources */,
 				CA1041522262A259005D62DE /* SearchMusicCollectionViewCell.swift in Sources */,
 				CA80481C21416836000A3C5B /* SerialRouter.swift in Sources */,
@@ -3753,7 +3772,6 @@
 				CAF9622F229970F7006E3046 /* AnimalsStatisticModels.swift in Sources */,
 				CAE1C470211DC8CA0058C9C6 /* AuthViewController.swift in Sources */,
 				CAAD25F122F5DBC1005CFCD2 /* AlphaviteStartViewController.swift in Sources */,
-				CAC0989022FF401100EFB01E /* AlphaviteStatisticViewController.swift in Sources */,
 				CA49E480212D2ED300711324 /* SettingsModels.swift in Sources */,
 				CA49E48E212D326600711324 /* TerPushPayload.swift in Sources */,
 				CAC0989222FF47ED00EFB01E /* AlphaviteStatView.swift in Sources */,
@@ -3792,6 +3810,7 @@
 				CA9A6746213C134000FCB400 /* RazdelModels.swift in Sources */,
 				CAC9100F215D31FD00E62F01 /* AchievesInteractor.swift in Sources */,
 				CAA4455621578FC50023E340 /* AvatarCollectionViewCell.swift in Sources */,
+				CA70867E23082EA80015851C /* AlphaviteStatisticInteractor.swift in Sources */,
 				CAC2D51C2115A68200945003 /* SigninResponse.swift in Sources */,
 				CA52DF3822907EC000458EE5 /* AnimalsMasterPresenter.swift in Sources */,
 				CA7E8BA5218200820076E5A0 /* ReachabilityManager.swift in Sources */,
@@ -3833,6 +3852,7 @@
 				CAE1C430211DACE10058C9C6 /* CoreDataStack.swift in Sources */,
 				CAD16DF12147F68400A82DBB /* SwithChildeCommand.swift in Sources */,
 				CAAF1EFE2177099300460F58 /* AppLaunchScreenPresenter.swift in Sources */,
+				CA70867923082EA80015851C /* AlphaviteStatisticPresenter.swift in Sources */,
 				CAAF1F012177099300460F58 /* AppLaunchScreenModels.swift in Sources */,
 				CAC2D51B2115A68200945003 /* ApiURLString.swift in Sources */,
 				CAA8845221381D9900E27F7A /* ChildProfileAddInteractor.swift in Sources */,

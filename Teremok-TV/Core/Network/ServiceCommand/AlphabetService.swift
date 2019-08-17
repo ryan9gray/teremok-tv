@@ -8,15 +8,27 @@
 
 protocol AlphabetServiceProtocol {
     func getStat(completion: @escaping (Result<AlphaviteStatisticResponse>) -> Void)
-    func sendStat(statistic: [AlphaviteMaster.Statistic], completion: @escaping (Result<StatusResponse>) -> Void)
+    func sendStat(statistic: [AlphaviteStatistic], completion: @escaping (Result<StatusResponse>) -> Void)
 }
 
 struct AlphabetService: AlphabetServiceProtocol {
     func getStat(completion: @escaping (Result<AlphaviteStatisticResponse>) -> Void) {
-
+        AlphabetGetStatCommand().execute(success: { (responseObject) in
+            completion(.success(responseObject))
+        }) { (com, response) in
+            if let error = response.error {
+                completion(.failure(error))
+            }
+        }
     }
-    func sendStat(statistic: [AlphaviteMaster.Statistic], completion: @escaping (Result<StatusResponse>) -> Void) {
-        
-    }
 
+    func sendStat(statistic: [AlphaviteStatistic], completion: @escaping (Result<StatusResponse>) -> Void) {
+        AlphabetSendStatCommand(stats: statistic).execute(success: { (responseObject) in
+            completion(.success(responseObject))
+        }) { (com, response) in
+            if let error = response.error {
+                completion(.failure(error))
+            }
+        }
+    }
 }

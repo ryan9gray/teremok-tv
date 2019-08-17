@@ -30,7 +30,6 @@ class AlphaviteMasterRouter: AlphaviteMasterRoutingLogic, AlphaviteMasterDataPas
         guard modalChildVC == nil else { return }
 
         let vc = AlphaviteStatisticViewController.instantiate(fromStoryboard: .alphavite)
-        vc.input = AlphaviteStatisticViewController.Input(good: ["А": "10 / 10", "Б": "10 / 10"], bad: ["А": "10 / 10", "Б": "10 / 10"])
         viewController?.presentAlertModally(alertController: vc)
     }
 
@@ -46,6 +45,7 @@ class AlphaviteMasterRouter: AlphaviteMasterRoutingLogic, AlphaviteMasterDataPas
 
         viewController?.tipView?.dismiss()
         let flow = AlphaviteGameFlow(master: controller)
+        flow.service = dataStore?.service
         flow.startFlow()
     }
     
