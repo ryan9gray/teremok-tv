@@ -210,13 +210,7 @@
 		CA51010222F6EACF00821C25 /* alphavite_17.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A322F6EACF00821C25 /* alphavite_17.wav */; };
 		CA51010322F6EACF00821C25 /* alphavite_16.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A422F6EACF00821C25 /* alphavite_16.wav */; };
 		CA51010422F6EACF00821C25 /* alphavite_33_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A522F6EACF00821C25 /* alphavite_33_word_2.wav */; };
-		CA51E1C322FEC8C60028DF63 /* happy_2_cloud.json in Resources */ = {isa = PBXBuildFile; fileRef = CA51E1BC22FEC8C50028DF63 /* happy_2_cloud.json */; };
-		CA51E1C422FEC8C60028DF63 /* sad_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CA51E1BD22FEC8C50028DF63 /* sad_Pick.json */; };
 		CA51E1C522FEC8C60028DF63 /* main_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CA51E1BE22FEC8C50028DF63 /* main_Pick.json */; };
-		CA51E1C622FEC8C60028DF63 /* happy_2_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CA51E1BF22FEC8C50028DF63 /* happy_2_Pick.json */; };
-		CA51E1C722FEC8C60028DF63 /* happy_1_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CA51E1C022FEC8C50028DF63 /* happy_1_Pick.json */; };
-		CA51E1C822FEC8C60028DF63 /* sad_cloud.json in Resources */ = {isa = PBXBuildFile; fileRef = CA51E1C122FEC8C50028DF63 /* sad_cloud.json */; };
-		CA51E1C922FEC8C60028DF63 /* happy_1_cloud.json in Resources */ = {isa = PBXBuildFile; fileRef = CA51E1C222FEC8C50028DF63 /* happy_1_cloud.json */; };
 		CA51E1CB22FECDC10028DF63 /* GameParentRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51E1CA22FECDC10028DF63 /* GameParentRouting.swift */; };
 		CA51E1CD22FED1790028DF63 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51E1CC22FED1790028DF63 /* GameHelper.swift */; };
 		CA51E1CF22FED7410028DF63 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51E1CE22FED7410028DF63 /* GameModel.swift */; };
@@ -377,7 +371,6 @@
 		CAAAFB7522E355070006BD60 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAAFB6F22E355070006BD60 /* Property.swift */; };
 		CAAAFB7622E355070006BD60 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAAFB7022E355070006BD60 /* Event.swift */; };
 		CAAAFB7722E355FA0006BD60 /* Trackable.h in Headers */ = {isa = PBXBuildFile; fileRef = CAAAFB6B22E355060006BD60 /* Trackable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CAAD25E922F59E82005CFCD2 /* AlphaviteMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD25E822F59E82005CFCD2 /* AlphaviteMainViewController.swift */; };
 		CAAD25EC22F5A464005CFCD2 /* Glober Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CAAD25EA22F5A463005CFCD2 /* Glober Black.otf */; };
 		CAAD25ED22F5A464005CFCD2 /* Foo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAAD25EB22F5A464005CFCD2 /* Foo.ttf */; };
 		CAAD25EF22F5B2C4005CFCD2 /* StrokeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD25EE22F5B2C4005CFCD2 /* StrokeLabel.swift */; };
@@ -510,6 +503,7 @@
 		CADB3D7A21F7AD4D009467B8 /* day_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CADB3D7421F7AD4D009467B8 /* day_sound.mp3 */; };
 		CADB3D7C21F7B64E009467B8 /* BackgroundMediaWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB3D7B21F7B64E009467B8 /* BackgroundMediaWorker.swift */; };
 		CADB3D7E21F8D54B009467B8 /* GetAchievementsCommand .swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB3D7D21F8D54B009467B8 /* GetAchievementsCommand .swift */; };
+		CADD14AB2309683400AE920A /* happy_Pick_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AA2309683400AE920A /* happy_Pick_1.json */; };
 		CADE0E4221189BE800CC9871 /* SwiftyStoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADE0E4121189BE800CC9871 /* SwiftyStoreHelper.swift */; };
 		CADE0E442118A33E00CC9871 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADE0E432118A33E00CC9871 /* LocalStore.swift */; };
 		CAE09466214BDD810052F283 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE09465214BDD810052F283 /* ProfileService.swift */; };
@@ -939,13 +933,7 @@
 		CA5100A322F6EACF00821C25 /* alphavite_17.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphavite_17.wav; sourceTree = "<group>"; };
 		CA5100A422F6EACF00821C25 /* alphavite_16.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphavite_16.wav; sourceTree = "<group>"; };
 		CA5100A522F6EACF00821C25 /* alphavite_33_word_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphavite_33_word_2.wav; sourceTree = "<group>"; };
-		CA51E1BC22FEC8C50028DF63 /* happy_2_cloud.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_2_cloud.json; sourceTree = "<group>"; };
-		CA51E1BD22FEC8C50028DF63 /* sad_Pick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_Pick.json; sourceTree = "<group>"; };
 		CA51E1BE22FEC8C50028DF63 /* main_Pick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main_Pick.json; sourceTree = "<group>"; };
-		CA51E1BF22FEC8C50028DF63 /* happy_2_Pick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_2_Pick.json; sourceTree = "<group>"; };
-		CA51E1C022FEC8C50028DF63 /* happy_1_Pick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_1_Pick.json; sourceTree = "<group>"; };
-		CA51E1C122FEC8C50028DF63 /* sad_cloud.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_cloud.json; sourceTree = "<group>"; };
-		CA51E1C222FEC8C50028DF63 /* happy_1_cloud.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_1_cloud.json; sourceTree = "<group>"; };
 		CA51E1CA22FECDC10028DF63 /* GameParentRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameParentRouting.swift; sourceTree = "<group>"; };
 		CA51E1CC22FED1790028DF63 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		CA51E1CE22FED7410028DF63 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
@@ -1108,7 +1096,6 @@
 		CAAAFB6E22E355070006BD60 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		CAAAFB6F22E355070006BD60 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		CAAAFB7022E355070006BD60 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		CAAD25E822F59E82005CFCD2 /* AlphaviteMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteMainViewController.swift; sourceTree = "<group>"; };
 		CAAD25EA22F5A463005CFCD2 /* Glober Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glober Black.otf"; sourceTree = "<group>"; };
 		CAAD25EB22F5A464005CFCD2 /* Foo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foo.ttf; sourceTree = "<group>"; };
 		CAAD25EE22F5B2C4005CFCD2 /* StrokeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeLabel.swift; sourceTree = "<group>"; };
@@ -1244,6 +1231,7 @@
 		CADB3D7421F7AD4D009467B8 /* day_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = day_sound.mp3; sourceTree = "<group>"; };
 		CADB3D7B21F7B64E009467B8 /* BackgroundMediaWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMediaWorker.swift; sourceTree = "<group>"; };
 		CADB3D7D21F8D54B009467B8 /* GetAchievementsCommand .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetAchievementsCommand .swift"; sourceTree = "<group>"; };
+		CADD14AA2309683400AE920A /* happy_Pick_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_Pick_1.json; sourceTree = "<group>"; };
 		CADE0E4121189BE800CC9871 /* SwiftyStoreHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyStoreHelper.swift; sourceTree = "<group>"; };
 		CADE0E432118A33E00CC9871 /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		CAE09465214BDD810052F283 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
@@ -1729,13 +1717,8 @@
 		CA51E1BB22FEC8C50028DF63 /* Pick_and_cloud */ = {
 			isa = PBXGroup;
 			children = (
-				CA51E1BC22FEC8C50028DF63 /* happy_2_cloud.json */,
-				CA51E1BD22FEC8C50028DF63 /* sad_Pick.json */,
+				CADD14AA2309683400AE920A /* happy_Pick_1.json */,
 				CA51E1BE22FEC8C50028DF63 /* main_Pick.json */,
-				CA51E1BF22FEC8C50028DF63 /* happy_2_Pick.json */,
-				CA51E1C022FEC8C50028DF63 /* happy_1_Pick.json */,
-				CA51E1C122FEC8C50028DF63 /* sad_cloud.json */,
-				CA51E1C222FEC8C50028DF63 /* happy_1_cloud.json */,
 			);
 			path = Pick_and_cloud;
 			sourceTree = "<group>";
@@ -2138,7 +2121,6 @@
 		CAAD25E722F59872005CFCD2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				CAAD25E822F59E82005CFCD2 /* AlphaviteMainViewController.swift */,
 				CAAD25F422F5DC80005CFCD2 /* AlphaviteCharsViewController.swift */,
 				CAAD25F022F5DBC1005CFCD2 /* AlphaviteStartViewController.swift */,
 				CA51003F22F5F8E600821C25 /* AlphaviteChoiceViewController.swift */,
@@ -3108,7 +3090,6 @@
 				CA51E1C522FEC8C60028DF63 /* main_Pick.json in Resources */,
 				CA5100BE22F6EACF00821C25 /* alphavite_22.wav in Resources */,
 				CAF961F622995FF3006E3046 /* animal_34.mp3 in Resources */,
-				CA51E1C422FEC8C60028DF63 /* sad_Pick.json in Resources */,
 				CA5100C322F6EACF00821C25 /* alphavite_23_word_2.wav in Resources */,
 				CA4C28C621451D9200CA264D /* VideoCollectionViewCell.xib in Resources */,
 				CA992D36212FF1EF008BFC8D /* Auth.storyboard in Resources */,
@@ -3128,6 +3109,7 @@
 				CAF961CE22995FF3006E3046 /* animal_3.pdf in Resources */,
 				CA1AB66122F1ABA7003A2584 /* MontserratAlternates-ExtraBoldItalic.ttf in Resources */,
 				CA04863B22A845A60017B8A2 /* Round_1.json in Resources */,
+				CADD14AB2309683400AE920A /* happy_Pick_1.json in Resources */,
 				CAD16DEB2147E69100A82DBB /* rainbow.json in Resources */,
 				CAF961C422995FF3006E3046 /* animal_6.pdf in Resources */,
 				CAF961FE22995FF3006E3046 /* animal_21.mp3 in Resources */,
@@ -3255,7 +3237,6 @@
 				CA5100EF22F6EACF00821C25 /* alphavite_5_word_2.wav in Resources */,
 				CA4C28CE2147DFDB00CA264D /* box.json in Resources */,
 				CAF961B122995FF3006E3046 /* animal_44.pdf in Resources */,
-				CA51E1C922FEC8C60028DF63 /* happy_1_cloud.json in Resources */,
 				CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */,
 				CAF961FF22995FF3006E3046 /* animal_9.pdf in Resources */,
 				CAF9620A22995FF3006E3046 /* animal_46.mp3 in Resources */,
@@ -3293,7 +3274,6 @@
 				CAC6F72F22A81BC000756AE2 /* sad_2.wav in Resources */,
 				CA5100BB22F6EACF00821C25 /* alphavite_24_word_1.wav in Resources */,
 				CA5100EB22F6EACF00821C25 /* alphavite_27_word_1.wav in Resources */,
-				CA51E1C722FEC8C60028DF63 /* happy_1_Pick.json in Resources */,
 				CA5100DA22F6EACF00821C25 /* alphavite_25_word_1.wav in Resources */,
 				CA51010022F6EACF00821C25 /* alphavite_15_word_1.wav in Resources */,
 				CAF961B522995FF3006E3046 /* animal_42.pdf in Resources */,
@@ -3326,14 +3306,12 @@
 				CAC6F72922A81BC000756AE2 /* fun_1.wav in Resources */,
 				CAF961D922995FF3006E3046 /* animal_8.mp3 in Resources */,
 				CAF961BF22995FF3006E3046 /* animal_32.pdf in Resources */,
-				CA51E1C622FEC8C60028DF63 /* happy_2_Pick.json in Resources */,
 				CA52DF20229050F400458EE5 /* Pacifico Regular.ttf in Resources */,
 				CAAF1EF62174E7E100460F58 /* Dog_progress.json in Resources */,
 				CA09978F21A572E20051F41D /* Common.storyboard in Resources */,
 				CAC6F73022A81BC000756AE2 /* fun_4.mp3 in Resources */,
 				CA5100CF22F6EACF00821C25 /* alphavite_11_word_1.wav in Resources */,
 				CA04864222A845A60017B8A2 /* Round_2.json in Resources */,
-				CA51E1C322FEC8C60028DF63 /* happy_2_cloud.json in Resources */,
 				CAF961F822995FF3006E3046 /* animal_28.pdf in Resources */,
 				CAF961FA22995FF3006E3046 /* animal_15.pdf in Resources */,
 				CA992D38212FF218008BFC8D /* Play.storyboard in Resources */,
@@ -3406,7 +3384,6 @@
 				CAF961FC22995FF3006E3046 /* animal_3.mp3 in Resources */,
 				CA04864322A845A60017B8A2 /* Round_7.json in Resources */,
 				CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */,
-				CA51E1C822FEC8C60028DF63 /* sad_cloud.json in Resources */,
 				CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */,
 				CA1AB65E22F1ABA7003A2584 /* MontserratAlternates-BoldItalic.ttf in Resources */,
 				CA5100F522F6EACF00821C25 /* alphavite_5_word_1.wav in Resources */,
@@ -3560,7 +3537,6 @@
 				CAE3649C2291819D003E891D /* AnimalsRoundsRouter.swift in Sources */,
 				CA49E481212D2ED300711324 /* SettingsViewController.swift in Sources */,
 				CA9A6747213C134000FCB400 /* RazdelViewController.swift in Sources */,
-				CAAD25E922F59E82005CFCD2 /* AlphaviteMainViewController.swift in Sources */,
 				CAE09482214CF62C0052F283 /* ResetPassService.swift in Sources */,
 				CAE1C432211DACE10058C9C6 /* MigrationDefaults.swift in Sources */,
 				CAF94CC7215F6D94000E8183 /* CarouselLayout.swift in Sources */,

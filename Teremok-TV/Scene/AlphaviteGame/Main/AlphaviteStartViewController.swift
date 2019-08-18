@@ -20,5 +20,4 @@ class AlphaviteStartViewController: GameViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 }

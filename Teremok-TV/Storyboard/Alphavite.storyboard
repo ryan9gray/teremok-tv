@@ -53,7 +53,7 @@
                                 <rect key="frame" x="40" y="80" width="587" height="255"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtZ-K8-Ail" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="0.0" y="34" width="287" height="187"/>
+                                        <rect key="frame" x="0.0" y="54.5" width="223.5" height="146"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HtZ-K8-Ail" secondAttribute="height" multiplier="23:15" id="gUu-H1-ofT"/>
                                         </constraints>
@@ -76,7 +76,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEb-L1-TRg" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="297" y="33" width="290" height="189"/>
+                                        <rect key="frame" x="233.5" y="12.5" width="353.5" height="230"/>
                                         <state key="normal" image="ic-animalgame"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
@@ -202,48 +202,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ZU-0G-1b7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="26" y="-307"/>
-        </scene>
-        <!--Alphavite Main View Controller-->
-        <scene sceneID="uBb-FY-3DL">
-            <objects>
-                <viewController storyboardIdentifier="AlphaviteMainViewController" id="VEc-dq-gUt" customClass="AlphaviteMainViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0VN-7p-hii">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ML7-Ml-J5i" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="281" y="135" width="105" height="105"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="105" id="XXC-2J-0m3"/>
-                                    <constraint firstAttribute="width" constant="105" id="iUF-sq-rZU"/>
-                                </constraints>
-                                <inset key="contentEdgeInsets" minX="10" minY="12" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="ic-alphavitePlay"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="indent">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="playTap:" destination="VEc-dq-gUt" eventType="touchUpInside" id="iGs-8o-e5m"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ML7-Ml-J5i" firstAttribute="centerY" secondItem="0VN-7p-hii" secondAttribute="centerY" id="jsD-SD-Ert"/>
-                            <constraint firstItem="ML7-Ml-J5i" firstAttribute="centerX" secondItem="0VN-7p-hii" secondAttribute="centerX" id="ukH-ym-Qe6"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ws2-kn-H6B"/>
-                    </view>
-                    <connections>
-                        <outlet property="playButton" destination="ML7-Ml-J5i" id="Yhs-M2-uaZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2ap-bV-zGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="38" y="470"/>
         </scene>
         <!--Alphavite Chars View Controller-->
         <scene sceneID="MGS-7W-RYV">
@@ -402,7 +360,7 @@
                                 <subviews>
                                     <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RBG-j0-oSR">
                                         <rect key="frame" x="5" y="5" width="260" height="41"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <segments>
                                             <segment title="Я учу алфавит"/>
                                             <segment title="Я знаю алфавит"/>
@@ -450,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ody-o1-eAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.44227886056979" y="-308"/>
+            <point key="canvasLocation" x="37" y="470"/>
         </scene>
         <!--Alphavite Finish View Controller-->
         <scene sceneID="lcM-4p-F6V">
@@ -780,7 +738,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="195" id="Kqk-S3-SWw"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial" pointSize="160"/>
+                                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial" pointSize="150"/>
                                                 <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="shadowColor" white="0.0" alpha="0.1821569684068966" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -857,7 +815,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="195" id="gPy-ds-So0"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial" pointSize="160"/>
+                                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial" pointSize="150"/>
                                                 <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="shadowColor" white="0.0" alpha="0.18186512214252878" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -982,7 +940,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xjH-sh-1VT" firstAttribute="trailing" secondItem="GTK-de-LHa" secondAttribute="leading" id="6dK-xW-FoC"/>
+                            <constraint firstItem="xjH-sh-1VT" firstAttribute="trailing" secondItem="GTK-de-LHa" secondAttribute="leading" identifier="pickPlace" id="6dK-xW-FoC"/>
                             <constraint firstItem="WfT-nT-KtM" firstAttribute="top" secondItem="Cgv-Z3-5G6" secondAttribute="top" constant="20" id="6zd-F9-pbb"/>
                             <constraint firstItem="Juu-3q-K8b" firstAttribute="top" secondItem="Cgv-Z3-5G6" secondAttribute="top" constant="20" id="Hke-7s-x4f"/>
                             <constraint firstAttribute="trailing" secondItem="Juu-3q-K8b" secondAttribute="trailing" constant="40" id="XH1-Uo-3Ih"/>

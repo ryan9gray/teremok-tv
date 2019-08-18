@@ -207,19 +207,16 @@ class AlphaviteChoiceViewController: GameViewController {
                 }
                 self.stackView.layoutIfNeeded()
         }) { _ in
-            self.movePick(side: answer)
+            self.movePick(side: answer) { _ in
+                self.nextChar()
+                cross.removeFromSuperlayer()
+            }
         }
 
         output.result(AlphaviteMaster.Statistic(char: currentChar, seconds: Int(seconds), isRight: isRight))
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            self.hidePick(side: answer)
-            self.nextChar()
-            cross.removeFromSuperlayer()
-        }
     }
 
-    func reset() {
+    private func reset() {
         isDone = false
         seconds = 0
         fireTimer()
@@ -248,23 +245,41 @@ class AlphaviteChoiceViewController: GameViewController {
         }
     }
 
-    private func movePick(side: GameModel.Option) {
+    // MARK: Pick Animation
+
+    private func movePick(side: GameModel.Option, completion: @escaping (Bool) -> Void) {
+        let name = AlphaviteMaster.PickAnimations.main.rawValue
+        pickAnimationView.animation = Animation.named(name)
+        pickAnimationView.loopMode = .loop
+        pickAnimationView.animationSpeed = 1.0
         let point = stackView.convert(imageContainer.frame.origin, to: view)
         var position = point.x
+        pickAnimationView.transform = .identity
         switch side {
         case .left:
-            pickPlace.constant = pickView.bounds.width + view.bounds.width
+            let startPoint = pickView.bounds.width + view.bounds.width
+            pickPlace.constant = startPoint
             position += imageContainer.bounds.width + pickView.bounds.width
+            pickAnimationView.transform = CGAffineTransform(scaleX: -1, y: 1)
         case .right:
             pickPlace.constant = 0.0
         }
+        view.layoutIfNeeded()
         UIView.animate(withDuration: 1.0, animations: {
                 self.pickPlace.constant = position
                 self.view.layoutIfNeeded()
+        }, completion: { _ in
+            self.pickReaction(isHappy: self.cheack(answer: side), complition: { _ in
+                self.hidePick(side: side, completion: completion)
+            })
         })
     }
 
-    private func hidePick(side: GameModel.Option) {
+    private func hidePick(side: GameModel.Option, completion: @escaping (Bool) -> Void) {
+        let name = AlphaviteMaster.PickAnimations.main.rawValue
+        pickAnimationView.animation = Animation.named(name)
+        pickAnimationView.loopMode = .loop
+        pickAnimationView.animationSpeed = 1.0
         let position: CGFloat
         switch side {
         case .left:
@@ -275,18 +290,28 @@ class AlphaviteChoiceViewController: GameViewController {
         UIView.animate(withDuration: 1.0, animations: {
                 self.pickPlace.constant = position
                 self.view.layoutIfNeeded()
-        })
+        }, completion: completion)
     }
+
+    private func pickReaction(isHappy: Bool, complition: @escaping (Bool) -> Void) {
+        let name = AlphaviteMaster.PickAnimations.happyOne.rawValue
+        pickAnimationView.animation = Animation.named(name)
+        pickAnimationView.loopMode = .playOnce
+        pickAnimationView.animationSpeed = 2.0
+        pickAnimationView.play(completion: complition)
+    }
+
+    private var pickAnimationView: AnimationView!
 
     private func setAnimation() {
         let name = AlphaviteMaster.PickAnimations.main.rawValue
-        let av = AnimationView(name: name)
-        av.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        av.contentMode = .scaleAspectFit
-        av.loopMode = .loop
-        av.animationSpeed = 1.0
-        av.frame = pickView.bounds
-        pickView.addSubview(av)
-        av.play()
+        pickAnimationView = AnimationView(name: name)
+        pickAnimationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        pickAnimationView.contentMode = .scaleAspectFit
+        pickAnimationView.loopMode = .loop
+        pickAnimationView.animationSpeed = 1.0
+        pickAnimationView.frame = pickView.bounds
+        pickView.addSubview(pickAnimationView)
+        pickAnimationView.play()
     }
 }

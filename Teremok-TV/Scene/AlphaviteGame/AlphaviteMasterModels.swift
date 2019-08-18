@@ -22,6 +22,7 @@ enum AlphaviteMaster {
 
     enum PickAnimations: String {
         case main = "main_Pick"
+        case happyOne = "happy_Pick_1"
     }
 
     struct Statistic {
