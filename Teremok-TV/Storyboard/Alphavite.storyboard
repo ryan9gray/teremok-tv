@@ -366,6 +366,9 @@
                                             <segment title="Я знаю алфавит"/>
                                         </segments>
                                         <color key="tintColor" red="0.93725490199999995" green="0.72549019609999998" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="difficultsChange:" destination="1u9-L6-ei9" eventType="valueChanged" id="4Hi-eE-WEs"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -403,6 +406,7 @@
                         <viewLayoutGuide key="safeArea" id="Sug-3Q-O0Q"/>
                     </view>
                     <connections>
+                        <outlet property="difficulteSegmentControl" destination="RBG-j0-oSR" id="XkV-Dp-isi"/>
                         <outlet property="startButton" destination="zjl-Wx-ske" id="i5f-Iu-xEj"/>
                     </connections>
                 </viewController>

@@ -13,7 +13,7 @@ class AlphaviteGameFlow  {
 
     init(master: AlphaviteMasterViewController) {
         self.master = master
-        isHard = true//LocalStore.alphaviteIsHard
+        isHard = LocalStore.alphaviteIsHard
     }
 
     private var isHard: Bool = false

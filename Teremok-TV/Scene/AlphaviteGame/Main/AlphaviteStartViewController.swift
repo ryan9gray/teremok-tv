@@ -10,14 +10,27 @@ import UIKit
 
 class AlphaviteStartViewController: GameViewController {
     @IBOutlet private var startButton: KeyButton!
+    @IBOutlet private var difficulteSegmentControl: UISegmentedControl!
 
     @IBAction private func startTap(_ sender: Any) {
         masterRouter?.startFlow(0)
     }
+    
+    @IBAction private func difficultsChange(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            LocalStore.alphaviteIsHard = false
+        case 1:
+            LocalStore.alphaviteIsHard = true
+        default:
+            break
+        }
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        difficulteSegmentControl.selectedSegmentIndex = LocalStore.alphaviteIsHard ? 1 : 0
     }
 }
