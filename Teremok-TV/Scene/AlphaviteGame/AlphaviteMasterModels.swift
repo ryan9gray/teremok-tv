@@ -21,7 +21,8 @@ enum AlphaviteMaster {
     ]
 
     enum PickAnimations: String {
-        case main = "main_Pick"
+        case start = "start_Pick"
+        case end = "end_Pick"
         case happyOne = "happy_Pick_1"
     }
 

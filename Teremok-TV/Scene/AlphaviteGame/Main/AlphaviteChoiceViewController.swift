@@ -76,12 +76,6 @@ class AlphaviteChoiceViewController: GameViewController {
         setAnimation()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        setWord("Слово")
-    }
-
     private func setupUI() {
         wordLabel.textColor = .white
         leftChar.textColor = UIColor.Alphavite.Button.blueOne
@@ -104,6 +98,7 @@ class AlphaviteChoiceViewController: GameViewController {
     }
 
     private func setWord(_ text: String) {
+        wordLabel.text = text
         let attributedWord = NSMutableAttributedString(string: text, attributes: Styles.TextAttributes.alphabetWord)
         attributedWord.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSRange(location:0,length:1))
         wordLabel.attributedText = attributedWord
@@ -138,15 +133,13 @@ class AlphaviteChoiceViewController: GameViewController {
         input.words.removeValue(forKey: word)
         if let wordName = AlphaviteMaster.Names[word] {
             setWord(wordName)
-        } else {
-            setWord("Слово")
         }
         displayChoice(char: char, wrong: gameHelper.randomChar(from: char), image: UIImage(named: word))
     }
 
     private func displayChoice(char: String, wrong: String, image: UIImage?) {
         reset()
-        right = GameModel.Option(rawValue: Int(arc4random_uniform(2)))!
+        right = GameModel.Option(rawValue: Int.random(in: 0...1))!
         currentChar = char
         switch right {
         case .left:
@@ -248,10 +241,11 @@ class AlphaviteChoiceViewController: GameViewController {
     // MARK: Pick Animation
 
     private func movePick(side: GameModel.Option, completion: @escaping (Bool) -> Void) {
-        let name = AlphaviteMaster.PickAnimations.main.rawValue
+        let name = AlphaviteMaster.PickAnimations.end.rawValue
         pickAnimationView.animation = Animation.named(name)
         pickAnimationView.loopMode = .loop
         pickAnimationView.animationSpeed = 1.0
+        pickAnimationView.play()
         let point = stackView.convert(imageContainer.frame.origin, to: view)
         var position = point.x
         pickAnimationView.transform = .identity
@@ -276,10 +270,11 @@ class AlphaviteChoiceViewController: GameViewController {
     }
 
     private func hidePick(side: GameModel.Option, completion: @escaping (Bool) -> Void) {
-        let name = AlphaviteMaster.PickAnimations.main.rawValue
+        let name = AlphaviteMaster.PickAnimations.end.rawValue
         pickAnimationView.animation = Animation.named(name)
         pickAnimationView.loopMode = .loop
         pickAnimationView.animationSpeed = 1.0
+        pickAnimationView.play()
         let position: CGFloat
         switch side {
         case .left:
@@ -297,14 +292,14 @@ class AlphaviteChoiceViewController: GameViewController {
         let name = AlphaviteMaster.PickAnimations.happyOne.rawValue
         pickAnimationView.animation = Animation.named(name)
         pickAnimationView.loopMode = .playOnce
-        pickAnimationView.animationSpeed = 2.0
+        pickAnimationView.animationSpeed = 1.5
         pickAnimationView.play(completion: complition)
     }
 
     private var pickAnimationView: AnimationView!
 
     private func setAnimation() {
-        let name = AlphaviteMaster.PickAnimations.main.rawValue
+        let name = AlphaviteMaster.PickAnimations.start.rawValue
         pickAnimationView = AnimationView(name: name)
         pickAnimationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         pickAnimationView.contentMode = .scaleAspectFit

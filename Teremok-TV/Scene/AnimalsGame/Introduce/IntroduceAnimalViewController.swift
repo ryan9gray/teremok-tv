@@ -59,5 +59,6 @@ class IntroduceAnimalViewController: GameViewController, IntroduceViewController
     enum PrincessMovie: String {
         case introduce = "scene-1"
         case start = "scene-2"
+        case alphavite = "Pick_introduce"
     }
 }

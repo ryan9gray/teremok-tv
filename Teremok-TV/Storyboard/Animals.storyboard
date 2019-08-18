@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Shnobelregular.ttf">
+        <array key="Shnobel-Regular.otf">
             <string>Shnobel-Regular</string>
         </array>
         <array key="appetite.ttf">
@@ -651,7 +651,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="6VS-mc-qIK"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="19" minY="12" maxX="11" maxY="11"/>
+                                <inset key="contentEdgeInsets" minX="18" minY="11" maxX="12" maxY="11"/>
                                 <state key="normal" image="icPlayRed" backgroundImage="icCircle90"/>
                                 <connections>
                                     <action selector="nextClick:" destination="AAz-60-mGg" eventType="touchUpInside" id="46e-iq-AKl"/>
