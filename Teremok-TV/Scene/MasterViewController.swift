@@ -100,7 +100,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         if !isAuth {
             sender.cancelTracking(with: nil)
             router?.navigateToReg()
-            presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегестрироваться", completion: nil)
+            presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегистрироваться", completion: nil)
         }
         if isOffline {
             sender.cancelTracking(with: nil)

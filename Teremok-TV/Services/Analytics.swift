@@ -44,7 +44,7 @@ class AnalyticsService: Analitics {
         }
 
         log.events[eventName] = listOfArguments
-        let interval = TimeInterval(lastSend) - Date().timeIntervalSince1970
+        let interval = abs(TimeInterval(lastSend) - Date().timeIntervalSince1970)
         if  interval > CacheExpiration.day || log.events.count > 30 {
             send()
             return

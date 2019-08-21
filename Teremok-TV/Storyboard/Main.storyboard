@@ -151,7 +151,7 @@
                                                     <constraint firstAttribute="height" constant="35" id="mjx-K4-jec"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="Зарегестрироваться">
+                                                <state key="normal" title="Зарегистрироваться">
                                                     <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -643,10 +643,10 @@
                                 <color key="trackTintColor" red="0.99138075113296509" green="0.95762544870376587" blue="0.89802205562591553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44F-DI-cmG" customClass="DesignableButton" customModule="Spring">
-                                <rect key="frame" x="334" y="16.666666666666671" width="144" height="37"/>
+                                <rect key="frame" x="391" y="16.666666666666671" width="30" height="34"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-logo" translatesAutoresizingMaskIntoConstraints="NO" id="KwL-bz-NyR">
-                                        <rect key="frame" x="0.0" y="0.0" width="144" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -661,7 +661,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bm-y4-kHR" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="488" y="12" width="46" height="46"/>
+                                <rect key="frame" x="431" y="12" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="NIb-wG-AYl"/>
                                     <constraint firstAttribute="width" secondItem="5Bm-y4-kHR" secondAttribute="height" multiplier="1:1" id="eyf-nb-c89"/>
@@ -674,7 +674,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A46-8C-pxL" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="536" y="12" width="46" height="46"/>
+                                <rect key="frame" x="479" y="12" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="Ku9-kt-wT4"/>
                                     <constraint firstAttribute="width" secondItem="A46-8C-pxL" secondAttribute="height" multiplier="1:1" id="dVp-pR-Rzg"/>

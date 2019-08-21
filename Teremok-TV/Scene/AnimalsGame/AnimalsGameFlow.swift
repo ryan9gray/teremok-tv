@@ -175,7 +175,7 @@ class AnimalsGameFlow  {
     }
 
     private func authAlert() {
-        master?.presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегестрироваться") { [weak self] in
+        master?.presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегистрироваться") { [weak self] in
             self?.master?.openAutorization()
         }
     }

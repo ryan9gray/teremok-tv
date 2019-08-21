@@ -29,7 +29,7 @@ class PlaylistsRouter: NSObject, PlaylistsRoutingLogic, PlaylistsDataPassing, Co
 
     func playTrack(track: Int) {
         guard Profile.isAuthorized else {
-            viewController?.presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегестрироваться") { [weak self] in
+            viewController?.presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегистрироваться") { [weak self] in
                 self?.viewController?.master?.openAutorization()
             }
             return
