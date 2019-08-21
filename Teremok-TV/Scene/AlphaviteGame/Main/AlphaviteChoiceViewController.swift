@@ -55,7 +55,6 @@ class AlphaviteChoiceViewController: GameViewController {
             progressBar.setProgress(progress: progress, animated: true)
             if seconds == limit {
                 timer.invalidate()
-                output.result(AlphaviteMaster.Statistic(char: currentChar, seconds: Int(seconds), isRight: false))
                 nextChar()
             }
         }
