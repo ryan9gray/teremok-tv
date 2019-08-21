@@ -162,10 +162,18 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
         
         let emeil = profile.email ?? ""
         profileTitle.text = "Электронная почта аккаунта " + emeil
-        if profile.premium {
-            subscribeTitle.text = "Вы подписаны на"
-            subscribeTitle.text = ""
+
+        let subscribeTitleText: String
+        if profile.premiumGame {
+            subscribeTitleText = "У Вас подписка «Интеллектум»"
+        } else if profile.premiumMusic {
+            subscribeTitleText = "У Вас подписка «Дети Супер +»"
+        } else if profile.premium {
+            subscribeTitleText = "У Вас подписка «Дети+»"
+        } else {
+            subscribeTitleText = "Возможности подписки»"
         }
+        subscribeTitle.text = subscribeTitleText
 
         let isAuth = Profile.current != nil
         setMode(isAuth: isAuth)

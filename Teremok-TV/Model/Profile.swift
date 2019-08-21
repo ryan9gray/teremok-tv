@@ -43,11 +43,11 @@ final class Profile: Mappable  {
     static var subscribe: String {
         if let profile = Profile.current {
             if profile.premiumGame {
-                return "У Вас подписка «Дети+»"
+                return "У Вас подписка «Интеллектум»"
             } else if profile.premiumMusic {
                 return "У Вас подписка «Дети Супер +»"
             } else if profile.premium {
-                return "У Вас подписка «Интеллектум»"
+                return "У Вас подписка «Дети+»"
             } else {
                 return "Вас нет подписки"
             }
