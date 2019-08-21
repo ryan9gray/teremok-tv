@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1163619B2303E456000D2C82 /* Monster.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1163619A2303E456000D2C82 /* Monster.storyboard */; };
+		11BA2489230551A700A9EA15 /* MonsterMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA2483230551A700A9EA15 /* MonsterMasterPresenter.swift */; };
+		11BA248A230551A700A9EA15 /* MonsterMasterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA2484230551A700A9EA15 /* MonsterMasterWorker.swift */; };
+		11BA248C230551A700A9EA15 /* MonsterMasterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA2486230551A700A9EA15 /* MonsterMasterModels.swift */; };
+		11BA248E230551A700A9EA15 /* MonsterMasterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA2488230551A700A9EA15 /* MonsterMasterInteractor.swift */; };
+		11BA2494230AB84B00A9EA15 /* MonsterFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA2493230AB84B00A9EA15 /* MonsterFlow.swift */; };
+		11BA2496230AC95D00A9EA15 /* MonsterGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA2495230AC95D00A9EA15 /* MonsterGameViewController.swift */; };
+		11BA249D230AE99700A9EA15 /* MonsterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA249B230AE99700A9EA15 /* MonsterCollectionViewCell.swift */; };
+		11BA249E230AE99700A9EA15 /* MonsterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BA249C230AE99700A9EA15 /* MonsterCollectionViewCell.xib */; };
+		11BC751D23042DB4001B5CC8 /* MonsterMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC751C23042DB4001B5CC8 /* MonsterMasterViewController.swift */; };
+		11BC751F23042E06001B5CC8 /* MonsterStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */; };
+		11BC752523043A1E001B5CC8 /* MonsterMasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
 		CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */; };
@@ -726,6 +738,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1163619A2303E456000D2C82 /* Monster.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Monster.storyboard; sourceTree = "<group>"; };
+		11BA2483230551A700A9EA15 /* MonsterMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterPresenter.swift; sourceTree = "<group>"; };
+		11BA2484230551A700A9EA15 /* MonsterMasterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterWorker.swift; sourceTree = "<group>"; };
+		11BA2486230551A700A9EA15 /* MonsterMasterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterModels.swift; sourceTree = "<group>"; };
+		11BA2488230551A700A9EA15 /* MonsterMasterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterInteractor.swift; sourceTree = "<group>"; };
+		11BA2493230AB84B00A9EA15 /* MonsterFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterFlow.swift; sourceTree = "<group>"; };
+		11BA2495230AC95D00A9EA15 /* MonsterGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameViewController.swift; sourceTree = "<group>"; };
+		11BA249B230AE99700A9EA15 /* MonsterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterCollectionViewCell.swift; sourceTree = "<group>"; };
+		11BA249C230AE99700A9EA15 /* MonsterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonsterCollectionViewCell.xib; sourceTree = "<group>"; };
+		11BC751C23042DB4001B5CC8 /* MonsterMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterViewController.swift; sourceTree = "<group>"; };
+		11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStartViewController.swift; sourceTree = "<group>"; };
+		11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterRouter.swift; sourceTree = "<group>"; };
 		1BEFDF490D1FB5747257F78F /* Pods-Teremok-TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.debug.xcconfig"; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
@@ -1452,6 +1476,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11BC751B23042D44001B5CC8 /* MonsterGame */ = {
+			isa = PBXGroup;
+			children = (
+				11BC751C23042DB4001B5CC8 /* MonsterMasterViewController.swift */,
+				11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */,
+				11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */,
+				11BA2488230551A700A9EA15 /* MonsterMasterInteractor.swift */,
+				11BA2486230551A700A9EA15 /* MonsterMasterModels.swift */,
+				11BA2484230551A700A9EA15 /* MonsterMasterWorker.swift */,
+				11BA2483230551A700A9EA15 /* MonsterMasterPresenter.swift */,
+				11BA2493230AB84B00A9EA15 /* MonsterFlow.swift */,
+				11BA2495230AC95D00A9EA15 /* MonsterGameViewController.swift */,
+				11BA249B230AE99700A9EA15 /* MonsterCollectionViewCell.swift */,
+				11BA249C230AE99700A9EA15 /* MonsterCollectionViewCell.xib */,
+			);
+			path = MonsterGame;
+			sourceTree = "<group>";
+		};
 		8BFE56BA8D2FDC0505E1093F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2000,6 +2042,7 @@
 				CAA7325E21315456006276B4 /* Alerts.storyboard */,
 				CA09978E21A572E20051F41D /* Common.storyboard */,
 				CA52F345223B065A0058194E /* Music.storyboard */,
+				1163619A2303E456000D2C82 /* Monster.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -2606,6 +2649,7 @@
 		CAE1C447211DC2070058C9C6 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				11BC751B23042D44001B5CC8 /* MonsterGame */,
 				CA1AB66322F30CBC003A2584 /* AlphaviteGame */,
 				CA52DF292290782200458EE5 /* AnimalsGame */,
 				CA52F347223D2A950058194E /* Music */,
@@ -3086,6 +3130,7 @@
 				CAF961F622995FF3006E3046 /* animal_34.mp3 in Resources */,
 				CA5100C322F6EACF00821C25 /* alphavite_23_word_2.wav in Resources */,
 				CA4C28C621451D9200CA264D /* VideoCollectionViewCell.xib in Resources */,
+				1163619B2303E456000D2C82 /* Monster.storyboard in Resources */,
 				CA992D36212FF1EF008BFC8D /* Auth.storyboard in Resources */,
 				CA5100D022F6EACF00821C25 /* alphavite_9_word_1.wav in Resources */,
 				CA5100C022F6EACF00821C25 /* alphavite_13_word_2.wav in Resources */,
@@ -3292,6 +3337,7 @@
 				CA1AB65D22F1ABA7003A2584 /* Shnobel-Regular.otf in Resources */,
 				CA5100E922F6EACF00821C25 /* alphavite_20_word_1.wav in Resources */,
 				CAF961B622995FF3006E3046 /* animal_43.pdf in Resources */,
+				11BA249E230AE99700A9EA15 /* MonsterCollectionViewCell.xib in Resources */,
 				CAF961C922995FF3006E3046 /* animal_31.pdf in Resources */,
 				CA5100E322F6EACF00821C25 /* alphavite_20_word_2.wav in Resources */,
 				CAAF1F1121771E4300460F58 /* Shade_close.json in Resources */,
@@ -3480,6 +3526,7 @@
 				CA6CB8D52196F6B700429089 /* SubscriptionCommand.swift in Sources */,
 				CAF96230229970F7006E3046 /* AnimalsStatisticViewController.swift in Sources */,
 				CA8EA71A214145E700159451 /* PreviewViewController.swift in Sources */,
+				11BA2496230AC95D00A9EA15 /* MonsterGameViewController.swift in Sources */,
 				CAF4C122214B8F8800954AA8 /* ChildProfileDoneInteractor.swift in Sources */,
 				CA70867B23082EA80015851C /* AlphaviteStatisticRouter.swift in Sources */,
 				CA49E4A8212D76FA00711324 /* UIView.swift in Sources */,
@@ -3490,6 +3537,7 @@
 				CA61D87A22A1D23D00E3D603 /* AnimalsListResponse.swift in Sources */,
 				CAD90EB122AC71AB004D74BD /* AnimalPackDownloader.swift in Sources */,
 				CA6F0C8F2158C3E90031C135 /* EditChildCommand.swift in Sources */,
+				11BA248A230551A700A9EA15 /* MonsterMasterWorker.swift in Sources */,
 				CAE5A58B22A9AB630034B448 /* AMProgressView.swift in Sources */,
 				CA0053C1213BD46900AA187F /* MainlCollectionViewCell.swift in Sources */,
 				CA846D24215B54B900241EF5 /* TTPlayerSlider.swift in Sources */,
@@ -3536,6 +3584,7 @@
 				CAE09482214CF62C0052F283 /* ResetPassService.swift in Sources */,
 				CAE1C432211DACE10058C9C6 /* MigrationDefaults.swift in Sources */,
 				CAF94CC7215F6D94000E8183 /* CarouselLayout.swift in Sources */,
+				11BA2489230551A700A9EA15 /* MonsterMasterPresenter.swift in Sources */,
 				CAA73261213163A5006276B4 /* TTImageView.swift in Sources */,
 				CAAF1F052177115100460F58 /* Common_Extensions.swift in Sources */,
 				CA9A6745213C134000FCB400 /* RazdelRouter.swift in Sources */,
@@ -3545,6 +3594,7 @@
 				CAEEF2422299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift in Sources */,
 				CA433FF9224FA8E700B0788E /* TrackCollectionViewCell.swift in Sources */,
 				CA0053C4213BD92500AA187F /* AppDelegate+Push.swift in Sources */,
+				11BA248C230551A700A9EA15 /* MonsterMasterModels.swift in Sources */,
 				CA61D92322A445A900E3D603 /* UPCarouselFlowLayout.swift in Sources */,
 				CA49E48B212D326600711324 /* TerPush.swift in Sources */,
 				CAE1C459211DC5BC0058C9C6 /* CommonDisplayLogic.swift in Sources */,
@@ -3554,6 +3604,7 @@
 				CAF4C11D214B8F8800954AA8 /* ChildProfileDonePresenter.swift in Sources */,
 				CAE3649D2291819D003E891D /* AnimalsRoundsModels.swift in Sources */,
 				CA49E4A2212D5A9200711324 /* MainModels.swift in Sources */,
+				11BA2494230AB84B00A9EA15 /* MonsterFlow.swift in Sources */,
 				CAD90EB522B13644004D74BD /* AnimalsSendStatCommand.swift in Sources */,
 				CAE1C451211DC23A0058C9C6 /* RegistrationRouter.swift in Sources */,
 				CA0053B8213AF3E600AA187F /* Stack.swift in Sources */,
@@ -3586,6 +3637,7 @@
 				CAC2D5292115A68300945003 /* Collection.swift in Sources */,
 				CA49E498212D59F900711324 /* RoundEdgeButton.swift in Sources */,
 				CA896C7422933F2700ECC628 /* AnimalСompilationCollectionViewCell.swift in Sources */,
+				11BC751F23042E06001B5CC8 /* MonsterStartViewController.swift in Sources */,
 				CAC9100C215D31FD00E62F01 /* AchievesRouter.swift in Sources */,
 				CA9A6744213C134000FCB400 /* RazdelService.swift in Sources */,
 				CAB5A4542171F18200A00C8E /* ChildsViewController.swift in Sources */,
@@ -3610,6 +3662,7 @@
 				CAE0947F214CF43C0052F283 /* ResetPassViewController.swift in Sources */,
 				CAF4C120214B8F8800954AA8 /* ChildProfileDoneModels.swift in Sources */,
 				CAD90EB322B13636004D74BD /* AnimalsGetStatCommand.swift in Sources */,
+				11BC752523043A1E001B5CC8 /* MonsterMasterRouter.swift in Sources */,
 				CA10414B22629A0B005D62DE /* SearchMusicModels.swift in Sources */,
 				CA149975216F65B0008FBEE9 /* FavService.swift in Sources */,
 				CAE1C460211DC7BA0058C9C6 /* UIApplication.swift in Sources */,
@@ -3635,6 +3688,7 @@
 				CAE1C42C211DACE10058C9C6 /* LocationCacher.swift in Sources */,
 				CADE0E4221189BE800CC9871 /* SwiftyStoreHelper.swift in Sources */,
 				CA6CB8D72196F7C300429089 /* PurchaseService.swift in Sources */,
+				11BA248E230551A700A9EA15 /* MonsterMasterInteractor.swift in Sources */,
 				CAE1C475211DC9F70058C9C6 /* Queue.swift in Sources */,
 				CA433FF6224F9EFA00B0788E /* MusicService.swift in Sources */,
 				CAA8844D21381D9900E27F7A /* ChildProfileAddPresenter.swift in Sources */,
@@ -3717,6 +3771,7 @@
 				CAAF1EE92174E40300460F58 /* LottieHUD.swift in Sources */,
 				CA51E1CF22FED7410028DF63 /* GameModel.swift in Sources */,
 				CA61D88022A1D49700E3D603 /* AnimalsGameService.swift in Sources */,
+				11BA249D230AE99700A9EA15 /* MonsterCollectionViewCell.swift in Sources */,
 				CAC0988822FEDCD400EFB01E /* Style.swift in Sources */,
 				CA252526216F8492001986F5 /* FavTableViewHeader.swift in Sources */,
 				CAE1C446211DB6B80058C9C6 /* KeychainService.swift in Sources */,
@@ -3803,6 +3858,7 @@
 				CA52DF3C22907EC000458EE5 /* AnimalsMasterViewController.swift in Sources */,
 				CA433FF2224F918700B0788E /* MusicActions.swift in Sources */,
 				CAE1C463211DC84A0058C9C6 /* ViewHierarchyWorker.swift in Sources */,
+				11BC751D23042DB4001B5CC8 /* MonsterMasterViewController.swift in Sources */,
 				CA1C37B0214E5A7C00C8006D /* MasterViewController.swift in Sources */,
 				CA61D87E22A1D33700E3D603 /* AnimalsPackResponse.swift in Sources */,
 				CA49E47D212D2ED300711324 /* SettingsPresenter.swift in Sources */,

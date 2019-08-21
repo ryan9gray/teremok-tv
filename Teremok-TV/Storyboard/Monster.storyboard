@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uqq-Wf-7b4">
+    <device id="retina5_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Foo.ttf">
+            <string>Foo-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Monster Start View Controller-->
+        <scene sceneID="F7Z-JZ-anV">
+            <objects>
+                <viewController storyboardIdentifier="MonsterStartViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="acf-Iw-onH" customClass="MonsterStartViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eKl-vP-Hld">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-monsterBack" translatesAutoresizingMaskIntoConstraints="NO" id="sEe-u5-47R">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-monstergameTitle" translatesAutoresizingMaskIntoConstraints="NO" id="yF5-Eg-NHN">
+                                <rect key="frame" x="194.66666666666663" y="140" width="423" height="158"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Uu-aj-Jud">
+                                <rect key="frame" x="184" y="283" width="444" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnZ-j2-3RP" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="41"/>
+                                        <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                        <state key="normal" title="1-2 года">
+                                            <color key="titleColor" red="0.0" green="0.21568627450980393" blue="0.67843137254901964" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startGame:" destination="acf-Iw-onH" eventType="touchUpInside" id="ggn-55-5im"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nO-Pv-Co7" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="151.33333333333331" y="0.0" width="141.33333333333331" height="41"/>
+                                        <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                        <state key="normal" title="2-3 года">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startGame:" destination="acf-Iw-onH" eventType="touchUpInside" id="eWi-mK-znk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVa-Zu-gHs" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="302.66666666666669" y="0.0" width="141.33333333333331" height="41"/>
+                                        <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                        <state key="normal" title="3-5 лет">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startGame:" destination="acf-Iw-onH" eventType="touchUpInside" id="djV-vd-WwD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Uu-aj-Jud" firstAttribute="leading" secondItem="dAm-zr-cyt" secondAttribute="leading" constant="140" id="5Vo-W5-RCy"/>
+                            <constraint firstItem="yF5-Eg-NHN" firstAttribute="top" secondItem="dAm-zr-cyt" secondAttribute="top" constant="140" id="CVe-9n-3wT"/>
+                            <constraint firstItem="0Uu-aj-Jud" firstAttribute="centerX" secondItem="eKl-vP-Hld" secondAttribute="centerX" id="G6I-l6-AfI"/>
+                            <constraint firstAttribute="bottom" secondItem="sEe-u5-47R" secondAttribute="bottom" id="Hnu-BY-Pts"/>
+                            <constraint firstItem="dAm-zr-cyt" firstAttribute="trailing" secondItem="0Uu-aj-Jud" secondAttribute="trailing" constant="140" id="L5m-zO-Hfx"/>
+                            <constraint firstItem="yF5-Eg-NHN" firstAttribute="centerX" secondItem="eKl-vP-Hld" secondAttribute="centerX" id="RPK-Xb-WL8"/>
+                            <constraint firstItem="dAm-zr-cyt" firstAttribute="bottom" secondItem="0Uu-aj-Jud" secondAttribute="bottom" constant="30" id="aRx-YS-nog"/>
+                            <constraint firstItem="sEe-u5-47R" firstAttribute="leading" secondItem="eKl-vP-Hld" secondAttribute="leading" id="gus-vv-EKV"/>
+                            <constraint firstItem="sEe-u5-47R" firstAttribute="top" secondItem="eKl-vP-Hld" secondAttribute="top" id="pu9-8S-cEZ"/>
+                            <constraint firstAttribute="trailing" secondItem="sEe-u5-47R" secondAttribute="trailing" id="stz-zc-okn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dAm-zr-cyt"/>
+                    </view>
+                    <connections>
+                        <outlet property="startEasy" destination="BnZ-j2-3RP" id="BTR-EC-Cu0"/>
+                        <outlet property="startHard" destination="WVa-Zu-gHs" id="MYa-00-PfL"/>
+                        <outlet property="startMedium" destination="4nO-Pv-Co7" id="pph-bp-1gx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X7b-Ac-COu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="-307"/>
+        </scene>
+        <!--Monster Game View Controller-->
+        <scene sceneID="HsU-et-qnp">
+            <objects>
+                <viewController storyboardIdentifier="MonsterGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Byr-uE-eNh" customClass="MonsterGameViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aoy-be-qBT">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameProcessBG" translatesAutoresizingMaskIntoConstraints="NO" id="PNl-Co-0Lj">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xsT-MH-07t">
+                                <rect key="frame" x="104" y="90" width="604" height="224"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OLp-Xf-gnJ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="monsterCell" id="fyN-ui-sfz" customClass="MonsterCollectionViewCell" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monsterCellCover" translatesAutoresizingMaskIntoConstraints="NO" id="yBT-1s-b6p">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="110"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="yBT-1s-b6p" secondAttribute="trailing" id="5u3-tO-gXC"/>
+                                            <constraint firstItem="yBT-1s-b6p" firstAttribute="top" secondItem="fyN-ui-sfz" secondAttribute="top" id="NBh-mz-iOE"/>
+                                            <constraint firstItem="yBT-1s-b6p" firstAttribute="leading" secondItem="fyN-ui-sfz" secondAttribute="leading" id="xKp-wl-9JE"/>
+                                            <constraint firstAttribute="bottom" secondItem="yBT-1s-b6p" secondAttribute="bottom" id="zmv-hZ-3Bb"/>
+                                        </constraints>
+                                        <size key="customSize" width="130" height="110"/>
+                                        <connections>
+                                            <outlet property="backImage" destination="yBT-1s-b6p" id="41a-KO-B3M"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Byr-uE-eNh" id="QZa-kA-ZFR"/>
+                                    <outlet property="delegate" destination="Byr-uE-eNh" id="w3B-Ae-jJD"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PNl-Co-0Lj" secondAttribute="trailing" id="B4f-Lb-5Nq"/>
+                            <constraint firstItem="PNl-Co-0Lj" firstAttribute="top" secondItem="Aoy-be-qBT" secondAttribute="top" id="EZW-RD-AJp"/>
+                            <constraint firstItem="PNl-Co-0Lj" firstAttribute="leading" secondItem="Aoy-be-qBT" secondAttribute="leading" id="Ozl-Dw-R42"/>
+                            <constraint firstItem="Hb2-pn-ILr" firstAttribute="bottom" secondItem="xsT-MH-07t" secondAttribute="bottom" constant="40" id="Sdq-cW-OyS"/>
+                            <constraint firstItem="xsT-MH-07t" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="90" id="YHX-ua-n2w"/>
+                            <constraint firstItem="xsT-MH-07t" firstAttribute="leading" secondItem="Hb2-pn-ILr" secondAttribute="leading" constant="60" id="dG3-t9-Ylr"/>
+                            <constraint firstAttribute="bottom" secondItem="PNl-Co-0Lj" secondAttribute="bottom" id="eIz-hX-blh"/>
+                            <constraint firstItem="Hb2-pn-ILr" firstAttribute="trailing" secondItem="xsT-MH-07t" secondAttribute="trailing" constant="60" id="lYd-5V-E5c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hb2-pn-ILr"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="xsT-MH-07t" id="auM-Co-fG7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YY9-A2-1f4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="545"/>
+        </scene>
+        <!--Monster Master View Controller-->
+        <scene sceneID="HgC-BW-Mti">
+            <objects>
+                <viewController storyboardIdentifier="MonsterMasterViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uqq-Wf-7b4" customClass="MonsterMasterViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="czV-1v-uky">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-monsterBack" translatesAutoresizingMaskIntoConstraints="NO" id="9W5-9i-4S5">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySG-71-GXL" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="30" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2dD-DY-kmT"/>
+                                    <constraint firstAttribute="height" constant="50" id="3fq-RD-o5R"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="ic-alphHome"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indent">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="homeClick:" destination="uqq-Wf-7b4" eventType="touchUpInside" id="rcU-44-YrN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wE-wZ-2Ow" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="742" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="TOf-6K-AIJ"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icUtka"/>
+                                <connections>
+                                    <action selector="avatarClick:" destination="uqq-Wf-7b4" eventType="touchUpInside" id="EMV-ws-UpR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0wE-wZ-2Ow" firstAttribute="top" secondItem="3hc-F9-1gZ" secondAttribute="top" constant="20" id="4lM-Qi-tE3"/>
+                            <constraint firstAttribute="trailing" secondItem="0wE-wZ-2Ow" secondAttribute="trailing" constant="20" id="6Cm-AO-8DN"/>
+                            <constraint firstItem="9W5-9i-4S5" firstAttribute="leading" secondItem="czV-1v-uky" secondAttribute="leading" id="FKn-z9-oCx"/>
+                            <constraint firstItem="ySG-71-GXL" firstAttribute="leading" secondItem="czV-1v-uky" secondAttribute="leading" constant="30" id="JsG-d7-IQS"/>
+                            <constraint firstItem="9W5-9i-4S5" firstAttribute="top" secondItem="czV-1v-uky" secondAttribute="top" id="MMW-uL-fHr"/>
+                            <constraint firstAttribute="bottom" secondItem="9W5-9i-4S5" secondAttribute="bottom" id="RgF-mD-v9L"/>
+                            <constraint firstAttribute="trailing" secondItem="9W5-9i-4S5" secondAttribute="trailing" id="qBR-vp-jsl"/>
+                            <constraint firstItem="0wE-wZ-2Ow" firstAttribute="width" secondItem="0wE-wZ-2Ow" secondAttribute="height" multiplier="1:1" id="ySa-K0-Nqu"/>
+                            <constraint firstItem="ySG-71-GXL" firstAttribute="top" secondItem="3hc-F9-1gZ" secondAttribute="top" constant="20" id="zuT-ij-1t1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3hc-F9-1gZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarButton" destination="0wE-wZ-2Ow" id="k7W-D9-X7f"/>
+                        <outlet property="backgroundView" destination="9W5-9i-4S5" id="sC5-PC-oy3"/>
+                        <outlet property="homeBtn" destination="ySG-71-GXL" id="i4v-x4-Grh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztu-tc-lUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="-1124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gameProcessBG" width="667" height="375"/>
+        <image name="ic-alphHome" width="31" height="29"/>
+        <image name="ic-monsterBack" width="667" height="375"/>
+        <image name="ic-monstergameTitle" width="423" height="158"/>
+        <image name="icUtka" width="29" height="35"/>
+        <image name="monsterCellCover" width="100" height="60"/>
+    </resources>
+</document>

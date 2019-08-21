@@ -83,7 +83,8 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
         let vc = GamesListViewController.instantiate(fromStoryboard: .alphavite)
         vc.output = GamesListViewController.Output(
             openAnimals: navigateToAnimals,
-            openAlphavite: navigateToAlphavite
+            openAlphavite: navigateToAlphavite,
+            openMonster: navigateToMonster
         )
         viewController?.present(vc, animated: true, completion: nil)
     }
@@ -109,6 +110,15 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
         viewController?.present(animals, animated: true, completion: nil)
     }
 
+    func navigateToMonster() {
+        let vc = MonsterMasterViewController.instantiate(fromStoryboard: .monster)
+        vc.output = MonsterMasterViewController.Output(
+            openSettings: navigateToSettings,
+            openAuthorization: navigateToReg
+        )
+        viewController?.present(vc, animated: true, completion: nil)
+    }
+    
     func navigateToCatalog(){
         let serials = RazdelViewController.instantiate(fromStoryboard: .main)
         pushChild(serials)

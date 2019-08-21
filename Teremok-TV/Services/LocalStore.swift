@@ -25,6 +25,8 @@ struct LocalStore {
     fileprivate static let animalsDifficultyKey = "animalsDifficultyKey"
     fileprivate static let alphaviteDifficultyKey = "alphaviteDifficultyKey"
 
+    fileprivate static let monsterIntroduceKey = "monsterIntroduceKey"
+    
     fileprivate static let userDefaults = UserDefaults.standard
 
     static var animalsIsHard: Bool {
@@ -84,6 +86,16 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: "animalsTip")
+            userDefaults.synchronize()
+        }
+    }
+    
+    static var monsterTip: Int {
+        get {
+            return userDefaults.integer(forKey: "monsterTip")
+        }
+        set {
+            userDefaults.set(newValue, forKey: "monsterTip")
             userDefaults.synchronize()
         }
     }
@@ -159,6 +171,17 @@ struct LocalStore {
     static func alphaviteIntroduce() -> Bool {
         if !userDefaults.bool(forKey: alphaviteIntroduceKey){
             userDefaults.set(true, forKey: alphaviteIntroduceKey)
+            userDefaults.synchronize()
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    
+    static func monsterIntroduce() -> Bool {
+        if !userDefaults.bool(forKey: monsterIntroduceKey){
+            userDefaults.set(true, forKey: monsterIntroduceKey)
             userDefaults.synchronize()
             return true
         }

@@ -108,6 +108,7 @@ enum Events {
     enum Time: String, Event {
         case AnimalFlow
         case AlphabetFlow
+        case MonsterFlow
 
         case MusicFlow
         case Razdel
