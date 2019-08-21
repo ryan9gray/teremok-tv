@@ -18,26 +18,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SubscriptionCollectionViewCell" customModule="Teremok_TV" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="260" height="404"/>
+            <rect key="frame" x="0.0" y="0.0" width="260" height="336"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="260" height="404"/>
+                <rect key="frame" x="0.0" y="0.0" width="260" height="336"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRF-ZT-ntM" customClass="RoundCornerView" customModule="Teremok_TV" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="260" height="404"/>
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="336"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дети +" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg0-Us-SpX">
-                                <rect key="frame" x="96.5" y="9" width="67.5" height="34"/>
+                                <rect key="frame" x="96.5" y="0.0" width="67.5" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="lDR-Ig-ZjW"/>
+                                    <constraint firstAttribute="height" constant="28" id="lDR-Ig-ZjW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUY-Ck-ZSW">
-                                <rect key="frame" x="20" y="51" width="230" height="163"/>
+                                <rect key="frame" x="20" y="36" width="230" height="163"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65S-wC-t02">
                                         <rect key="frame" x="0.0" y="0.0" width="230" height="28"/>
@@ -150,7 +150,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Wx6-8o-TU6">
-                                <rect key="frame" x="20" y="338" width="230" height="37"/>
+                                <rect key="frame" x="20" y="270" width="230" height="37"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6J1-TB-OYO" customClass="UIRoundedButtonWithGradientAndShadow" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="114" height="37"/>
@@ -180,7 +180,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUo-9z-Tev" customClass="UIButton">
-                                <rect key="frame" x="20" y="381" width="230" height="17"/>
+                                <rect key="frame" x="20" y="313" width="230" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Восстановить подписку" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puF-c5-dzb" customClass="UnderlinedLabel" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1.5" width="150.5" height="14.5"/>
@@ -202,11 +202,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Wx6-8o-TU6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hUY-Ck-ZSW" secondAttribute="bottom" constant="4" id="6I5-77-5e0"/>
+                            <constraint firstItem="Wx6-8o-TU6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hUY-Ck-ZSW" secondAttribute="bottom" constant="2" id="6I5-77-5e0"/>
                             <constraint firstAttribute="bottom" secondItem="xUo-9z-Tev" secondAttribute="bottom" constant="6" id="GGD-cc-7U9"/>
                             <constraint firstAttribute="trailing" secondItem="hUY-Ck-ZSW" secondAttribute="trailing" constant="10" id="HXj-Yz-4uE"/>
                             <constraint firstItem="hUY-Ck-ZSW" firstAttribute="top" secondItem="tg0-Us-SpX" secondAttribute="bottom" constant="8" id="IPY-Dz-hug"/>
-                            <constraint firstItem="tg0-Us-SpX" firstAttribute="top" secondItem="aRF-ZT-ntM" secondAttribute="top" constant="9" id="JdE-Sl-NkW"/>
+                            <constraint firstItem="tg0-Us-SpX" firstAttribute="top" secondItem="aRF-ZT-ntM" secondAttribute="top" id="JdE-Sl-NkW"/>
                             <constraint firstItem="xUo-9z-Tev" firstAttribute="trailing" secondItem="Wx6-8o-TU6" secondAttribute="trailing" id="L2c-xo-rt9"/>
                             <constraint firstItem="Wx6-8o-TU6" firstAttribute="trailing" secondItem="hUY-Ck-ZSW" secondAttribute="trailing" id="Yja-PZ-51v"/>
                             <constraint firstItem="tg0-Us-SpX" firstAttribute="centerX" secondItem="aRF-ZT-ntM" secondAttribute="centerX" id="Zod-JE-aMd"/>
@@ -215,6 +215,11 @@
                             <constraint firstItem="Wx6-8o-TU6" firstAttribute="leading" secondItem="hUY-Ck-ZSW" secondAttribute="leading" id="vGs-gm-AND"/>
                             <constraint firstItem="hUY-Ck-ZSW" firstAttribute="leading" secondItem="aRF-ZT-ntM" secondAttribute="leading" constant="20" id="wSB-ni-JhB"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -225,7 +230,7 @@
                 <constraint firstAttribute="bottom" secondItem="aRF-ZT-ntM" secondAttribute="bottom" id="uPt-ia-3sU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="260" height="490"/>
+            <size key="customSize" width="260" height="422"/>
             <connections>
                 <outlet property="downloadView" destination="65S-wC-t02" id="jJZ-dc-fbF"/>
                 <outlet property="gameView" destination="FqB-wU-NSx" id="VzM-Ed-wbG"/>
@@ -240,7 +245,7 @@
                 <outletCollection property="labels" destination="KM7-ph-t4n" collectionClass="NSMutableArray" id="8uv-GK-lKC"/>
                 <outletCollection property="labels" destination="nZV-7K-sAG" collectionClass="NSMutableArray" id="i7h-Md-mhi"/>
             </connections>
-            <point key="canvasLocation" x="21.739130434782609" y="114.50892857142857"/>
+            <point key="canvasLocation" x="21.739130434782609" y="137.27678571428569"/>
         </collectionViewCell>
     </objects>
     <resources>

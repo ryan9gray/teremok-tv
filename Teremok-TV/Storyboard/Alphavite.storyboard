@@ -387,7 +387,7 @@
                                             <segment title="Я учу алфавит"/>
                                             <segment title="Я знаю алфавит"/>
                                         </segments>
-                                        <color key="tintColor" red="0.93725490199999995" green="0.72549019609999998" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.8901960784313725" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="difficultsChange:" destination="1u9-L6-ei9" eventType="valueChanged" id="4Hi-eE-WEs"/>
                                         </connections>
@@ -495,7 +495,7 @@
                                                 <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 из 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfh-Va-Anu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 из 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfh-Va-Anu">
                                                 <rect key="frame" x="201" y="14.5" width="69" height="21"/>
                                                 <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="17"/>
                                                 <color key="textColor" red="0.18431372549019609" green="0.63921568627450975" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
@@ -999,64 +999,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wt6-8X-Wqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="36.431784107946029" y="1261.5999999999999"/>
-        </scene>
-        <!--Introduce Animal View Controller-->
-        <scene sceneID="l4x-bk-iQS">
-            <objects>
-                <viewController storyboardIdentifier="IntroduceAnimalViewController" id="xDe-W9-pK3" customClass="IntroduceAnimalViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pt1-av-4kp">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzO-Tg-uWJ" customClass="RoundCornerView" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewh-ox-tAS" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="603" y="311" width="44" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="GgD-5B-LGa"/>
-                                            <constraint firstAttribute="height" constant="44" id="laZ-oH-wzU"/>
-                                        </constraints>
-                                        <inset key="contentEdgeInsets" minX="8" minY="7" maxX="4" maxY="0.0"/>
-                                        <state key="normal" image="ic-alphavitePlay"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="indent">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="nextClick:" destination="xDe-W9-pK3" eventType="touchUpInside" id="sLd-ID-FZG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ewh-ox-tAS" secondAttribute="trailing" constant="20" id="PAG-lo-iFm"/>
-                                    <constraint firstAttribute="bottom" secondItem="ewh-ox-tAS" secondAttribute="bottom" constant="20" id="hWL-bA-fe6"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.84705882349999995" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="qzO-Tg-uWJ" secondAttribute="bottom" id="7rQ-wq-4vL"/>
-                            <constraint firstItem="qzO-Tg-uWJ" firstAttribute="top" secondItem="pt1-av-4kp" secondAttribute="top" id="PK2-tj-Gah"/>
-                            <constraint firstAttribute="trailing" secondItem="qzO-Tg-uWJ" secondAttribute="trailing" id="dST-DN-2Zf"/>
-                            <constraint firstItem="qzO-Tg-uWJ" firstAttribute="leading" secondItem="pt1-av-4kp" secondAttribute="leading" id="hXv-xy-O3J"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="4fe-pW-mM0"/>
-                    </view>
-                    <connections>
-                        <outlet property="videoBackView" destination="qzO-Tg-uWJ" id="Cx4-4S-oJc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="98w-Db-hbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-669" y="470"/>
         </scene>
     </scenes>
     <resources>

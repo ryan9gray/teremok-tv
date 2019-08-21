@@ -68,6 +68,11 @@
                             <constraint firstItem="SKm-Z4-rBa" firstAttribute="top" secondItem="LPs-5k-aTY" secondAttribute="bottom" constant="10" id="pI7-MQ-5O5"/>
                             <constraint firstItem="wyr-ZB-5eG" firstAttribute="top" secondItem="8ku-wY-qgB" secondAttribute="top" constant="13" id="x49-UE-63q"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHE-Pl-ec8" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
                         <rect key="frame" x="389" y="113" width="54" height="54"/>

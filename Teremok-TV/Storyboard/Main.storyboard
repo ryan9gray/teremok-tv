@@ -643,10 +643,10 @@
                                 <color key="trackTintColor" red="0.99138075113296509" green="0.95762544870376587" blue="0.89802205562591553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44F-DI-cmG" customClass="DesignableButton" customModule="Spring">
-                                <rect key="frame" x="391" y="16.666666666666671" width="30" height="34"/>
+                                <rect key="frame" x="334" y="16.666666666666671" width="144" height="37"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-logo" translatesAutoresizingMaskIntoConstraints="NO" id="KwL-bz-NyR">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="37"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -661,7 +661,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bm-y4-kHR" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="431" y="12" width="46" height="46"/>
+                                <rect key="frame" x="488" y="12" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="NIb-wG-AYl"/>
                                     <constraint firstAttribute="width" secondItem="5Bm-y4-kHR" secondAttribute="height" multiplier="1:1" id="eyf-nb-c89"/>
@@ -674,7 +674,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A46-8C-pxL" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="479" y="12" width="46" height="46"/>
+                                <rect key="frame" x="536" y="12" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="Ku9-kt-wT4"/>
                                     <constraint firstAttribute="width" secondItem="A46-8C-pxL" secondAttribute="height" multiplier="1:1" id="dVp-pR-Rzg"/>
@@ -1012,7 +1012,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tTY-i6-ZnR">
-                                <rect key="frame" x="84" y="80" width="644" height="264"/>
+                                <rect key="frame" x="64" y="80" width="684" height="264"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="R0d-Wp-0fX">
                                     <size key="itemSize" width="50" height="50"/>
@@ -1030,8 +1030,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mhb-gH-pjX" firstAttribute="bottom" secondItem="tTY-i6-ZnR" secondAttribute="bottom" constant="10" id="ABH-Vs-iEz"/>
-                            <constraint firstItem="tTY-i6-ZnR" firstAttribute="trailing" secondItem="mhb-gH-pjX" secondAttribute="trailing" constant="-40" id="HsP-1e-bgd"/>
-                            <constraint firstItem="tTY-i6-ZnR" firstAttribute="leading" secondItem="mhb-gH-pjX" secondAttribute="leading" constant="40" id="WKY-oS-ePe"/>
+                            <constraint firstItem="tTY-i6-ZnR" firstAttribute="trailing" secondItem="mhb-gH-pjX" secondAttribute="trailing" constant="-20" id="HsP-1e-bgd"/>
+                            <constraint firstItem="tTY-i6-ZnR" firstAttribute="leading" secondItem="mhb-gH-pjX" secondAttribute="leading" constant="20" id="WKY-oS-ePe"/>
                             <constraint firstItem="tTY-i6-ZnR" firstAttribute="top" secondItem="mhb-gH-pjX" secondAttribute="top" constant="80" id="xhI-MX-bff"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mhb-gH-pjX"/>

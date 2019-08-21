@@ -39,6 +39,21 @@ final class Profile: Mappable  {
     static var isAuthorized: Bool {
         return current != nil
     }
+
+    static var subscribe: String {
+        if let profile = Profile.current {
+            if profile.premiumGame {
+                return "У Вас подписка «Дети+»"
+            } else if profile.premiumMusic {
+                return "У Вас подписка «Дети Супер +»"
+            } else if profile.premium {
+                return "У Вас подписка «Интеллектум»"
+            } else {
+                return "Вас нет подписки"
+            }
+        }
+        return "Вы не авторизованы"
+    }
     
     var id: Int?
     var email: String?
