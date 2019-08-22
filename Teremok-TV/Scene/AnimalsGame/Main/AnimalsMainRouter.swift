@@ -43,7 +43,7 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
     }
 
     func introduce() {
-        let controller = IntroduceAnimalViewController.instantiate(fromStoryboard: .animals)
+        let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .introduce
         controller.action = { [weak self] in
             self?.navigateToStart()

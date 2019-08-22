@@ -194,8 +194,64 @@
             </objects>
             <point key="canvasLocation" x="-221" y="932"/>
         </scene>
+        <!--Introduce Video View Controller-->
+        <scene sceneID="qM5-J2-BKB">
+            <objects>
+                <viewController storyboardIdentifier="IntroduceVideoViewController" id="VXj-tD-Gho" customClass="IntroduceVideoViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Se6-gz-7P8">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIV-hw-tfC" customClass="RoundCornerView" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.84705882349999995" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFc-Wu-RMO" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="740" y="300" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="NcB-Wp-usV"/>
+                                    <constraint firstAttribute="height" constant="44" id="dAo-nw-1zX"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="8" minY="7" maxX="4" maxY="0.0"/>
+                                <state key="normal" image="ic-alphavitePlay"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indent">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextClick:" destination="VXj-tD-Gho" eventType="touchUpInside" id="XcY-6i-1rj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VIV-hw-tfC" secondAttribute="bottom" id="3me-gO-iNL"/>
+                            <constraint firstAttribute="trailing" secondItem="VIV-hw-tfC" secondAttribute="trailing" id="8rE-6p-CDi"/>
+                            <constraint firstAttribute="trailing" secondItem="jFc-Wu-RMO" secondAttribute="trailing" constant="28" id="iZ5-Lw-UbN"/>
+                            <constraint firstItem="VIV-hw-tfC" firstAttribute="top" secondItem="Se6-gz-7P8" secondAttribute="top" id="lHN-qK-rZZ"/>
+                            <constraint firstItem="VIV-hw-tfC" firstAttribute="leading" secondItem="Se6-gz-7P8" secondAttribute="leading" id="q4e-7N-uZZ"/>
+                            <constraint firstItem="oa4-2R-DW8" firstAttribute="bottom" secondItem="jFc-Wu-RMO" secondAttribute="bottom" constant="10" id="rov-bB-V20"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oa4-2R-DW8"/>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="jFc-Wu-RMO" id="Sb0-GV-CVJ"/>
+                        <outlet property="videoBackView" destination="VIV-hw-tfC" id="yF2-cb-Suk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89b-IZ-5cF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="-33"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ic-alphavitePlay" width="68" height="73"/>
         <image name="icCross" width="20" height="20"/>
         <image name="icTree" width="142" height="176"/>
     </resources>

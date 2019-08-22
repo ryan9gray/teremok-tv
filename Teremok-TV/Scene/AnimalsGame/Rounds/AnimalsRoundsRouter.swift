@@ -29,7 +29,7 @@ class AnimalsRoundsRouter: AnimalsRoundsRoutingLogic, AnimalsRoundsDataPassing {
     var testBool = true
 
     func showWithIntroducePack(idx: Int) {
-        let controller = IntroduceAnimalViewController.instantiate(fromStoryboard: .animals)
+        let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .introduce
         viewController?.masterRouter?.introduceController(viewController: controller, completion: { [weak self] in
             self?.showPack(idx: idx)

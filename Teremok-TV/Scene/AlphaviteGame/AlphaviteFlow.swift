@@ -110,7 +110,7 @@ class AlphaviteGameFlow  {
     }
 
     private func showIntroduce() {
-        let controller = IntroduceAnimalViewController.instantiate(fromStoryboard: .animals)
+        let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .alphavite
         master?.router?.introduceController(viewController: controller, completion: {
             self.startFlow()

@@ -1,5 +1,5 @@
 //
-//  IntroduceAnimalViewController.swift
+//  IntroduceVideoViewController.swift
 //  Teremok-TV
 //
 //  Created by Evgeny Ivanov on 25/05/2019.
@@ -9,19 +9,21 @@
 import UIKit
 import AVKit
 
-class IntroduceAnimalViewController: GameViewController, IntroduceViewController {
+class IntroduceVideoViewController: GameViewController, IntroduceViewController {
     @IBOutlet private var videoBackView: RoundCornerView!
+    @IBOutlet private var playButton: KeyButton!
 
     var video: PrincessMovie!
     var action: (() -> Void)?
 
-    @IBAction func nextClick(_ sender: Any) {
+    @IBAction private func nextClick(_ sender: Any) {
         action?()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        playButton.isHidden = ServiceConfiguration.activeConfiguration() == .prod
         playVideo()
     }
 
