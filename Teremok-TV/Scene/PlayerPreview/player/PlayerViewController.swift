@@ -89,11 +89,10 @@ class PlayerViewController: AVPlayerViewController {
         fullOverlay.playerLayer.frame = fullOverlay.view.layer.bounds
         fullOverlay.playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         fullOverlay.startedPlaying()
-        
     }
 
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        
+
     }
     
     deinit {

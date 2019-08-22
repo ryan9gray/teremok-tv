@@ -50,10 +50,18 @@ class IntroduceAnimalViewController: GameViewController, IntroduceViewController
         avPlayer.actionAtItemEnd = .none
         videoBackView.layer.addSublayer(avPlayerLayer)
         avPlayerLayer.frame = videoBackView.layer.bounds
-
+        NotificationCenter.default.addObserver(self, selector: #selector(self.playerEnd), name: .AVPlayerItemDidPlayToEndTime, object: avPlayer!.currentItem)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.avPlayer.play()
         }
+    }
+
+    @objc func playerEnd() {
+        action?()
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
     }
 
     enum PrincessMovie: String {
