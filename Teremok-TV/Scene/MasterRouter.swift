@@ -80,7 +80,7 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
     }
 
     func navigateToGameList() {
-        let vc = GamesListViewController.instantiate(fromStoryboard: .alphavite)
+        let vc = GamesListViewController.instantiate(fromStoryboard: .common)
         vc.output = GamesListViewController.Output(
             openAnimals: navigateToAnimals,
             openAlphavite: navigateToAlphavite,

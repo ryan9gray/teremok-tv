@@ -93,8 +93,8 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         router?.navigateToMusic()
     }
     @IBAction func gameClick(_ sender: UIButton) {
-        //router?.navigateToGameList()
-        router?.navigateToAnimals()
+        router?.navigateToGameList()
+        //router?.navigateToAnimals()
     }
     @IBAction func touchDown(_ sender: UIButton) {
         if !isAuth {

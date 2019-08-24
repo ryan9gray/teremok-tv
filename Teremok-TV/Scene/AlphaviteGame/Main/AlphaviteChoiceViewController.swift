@@ -26,6 +26,7 @@ class AlphaviteChoiceViewController: GameViewController {
     @IBOutlet private var pickPlace: NSLayoutConstraint!
     @IBOutlet private var wordLabel: UILabel!
     @IBOutlet private var imageContainer: DesignableView!
+    @IBOutlet private var cloudView: UIView!
 
     var input: Input!
     var output: Output!
@@ -289,24 +290,50 @@ class AlphaviteChoiceViewController: GameViewController {
     }
 
     private func pickReaction(isHappy: Bool, complition: @escaping (Bool) -> Void) {
-        let name = AlphaviteMaster.PickAnimations.happyOne.rawValue
-        pickAnimationView.animation = Animation.named(name)
+        let namePick: AlphaviteMaster.PickAnimations = isHappy ? .happy : .sad
+        pickAnimationView.animation = Animation.named(namePick.rawValue)
         pickAnimationView.loopMode = .playOnce
         pickAnimationView.animationSpeed = 1.5
         pickAnimationView.play(completion: complition)
+
+        let nameCloud: AlphaviteMaster.CloudAnimations = isHappy
+            ? (Bool.random() ? .happyTwo : .happyOne)
+            : .sad
+        cloudAnimationView.animation = Animation.named(nameCloud.rawValue)
+        cloudAnimationView.loopMode = .playOnce
+        cloudAnimationView.animationSpeed = 1.5
+        cloudAnimationView.play { _ in
+            self.setCloudMain()
+        }
     }
 
     private var pickAnimationView: AnimationView!
+    private var cloudAnimationView: AnimationView!
 
     private func setAnimation() {
-        let name = AlphaviteMaster.PickAnimations.start.rawValue
-        pickAnimationView = AnimationView(name: name)
+        let namePick = AlphaviteMaster.PickAnimations.start.rawValue
+        pickAnimationView = AnimationView(name: namePick)
         pickAnimationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         pickAnimationView.contentMode = .scaleAspectFit
         pickAnimationView.loopMode = .loop
         pickAnimationView.animationSpeed = 1.0
         pickAnimationView.frame = pickView.bounds
         pickView.addSubview(pickAnimationView)
-        pickAnimationView.play()
+
+        let nameCloud = AlphaviteMaster.CloudAnimations.main.rawValue
+        cloudAnimationView = AnimationView(name: nameCloud)
+        cloudAnimationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        cloudAnimationView.contentMode = .scaleAspectFit
+        cloudAnimationView.frame = cloudView.bounds
+        cloudView.addSubview(cloudAnimationView)
+
+        setCloudMain()
+    }
+
+    private func setCloudMain() {
+        cloudAnimationView.animation = Animation.named(AlphaviteMaster.CloudAnimations.main.rawValue)
+        cloudAnimationView.loopMode = .loop
+        cloudAnimationView.animationSpeed = 1.0
+        cloudAnimationView.play()
     }
 }

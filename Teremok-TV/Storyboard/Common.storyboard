@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Foo.ttf">
+            <string>Foo-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Common Web View Controller-->
         <scene sceneID="2z1-sR-3IE">
@@ -249,9 +254,151 @@
             </objects>
             <point key="canvasLocation" x="148" y="-33"/>
         </scene>
+        <!--Games List View Controller-->
+        <scene sceneID="ihh-Kr-D0V">
+            <objects>
+                <viewController storyboardIdentifier="GamesListViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dlq-k2-hSp" customClass="GamesListViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0bu-gf-cTd">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-gamesBack" translatesAutoresizingMaskIntoConstraints="NO" id="LFa-oO-QAy">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5E-ex-N9F" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="30" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="i0x-AE-W9E"/>
+                                    <constraint firstAttribute="width" constant="50" id="uo8-Mv-ljj"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="ic-alphHome">
+                                    <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeClick:" destination="dlq-k2-hSp" eventType="touchUpInside" id="04N-JB-nKu"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fZ0-ea-DYs">
+                                <rect key="frame" x="90" y="80" width="632" height="255"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io8-Rk-iyX" customClass="DesignableButton" customModule="Spring">
+                                        <rect key="frame" x="8" y="28.333333333333329" width="198.66666666666666" height="170.33333333333337"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Io8-Rk-iyX" secondAttribute="height" multiplier="7:6" id="OB4-M1-Upe"/>
+                                        </constraints>
+                                        <state key="normal" image="ic-alphavite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="alphaviteTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="vvJ-2T-thh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lw-K8-tJz" customClass="DesignableButton" customModule="Spring">
+                                        <rect key="frame" x="216.66666666666669" y="28.333333333333329" width="198.66666666666669" height="170.33333333333337"/>
+                                        <state key="normal" image="ic-animalgame"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="animalsTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="vdu-a3-t3m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8b-ps-329" customClass="DesignableButton" customModule="Spring">
+                                        <rect key="frame" x="425.33333333333343" y="28.333333333333329" width="198.66666666666669" height="170.33333333333337"/>
+                                        <state key="normal" image="ic-monsterGame"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="monsterTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="mpB-B8-cud"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="X8b-ps-329" firstAttribute="width" secondItem="X8b-ps-329" secondAttribute="height" multiplier="7:6" id="6Sa-dJ-KOY"/>
+                                    <constraint firstItem="6Lw-K8-tJz" firstAttribute="width" secondItem="6Lw-K8-tJz" secondAttribute="height" multiplier="7:6" id="OJu-PA-PaQ"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="-20" left="8" bottom="8" right="8"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВЫБЕРИТЕ ИГРУ:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e87-rn-cs2" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="266" y="20" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="3lC-dz-hvB"/>
+                                    <constraint firstAttribute="height" constant="40" id="ai3-sf-z11"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="0.31597970549999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e87-rn-cs2" firstAttribute="centerX" secondItem="0bu-gf-cTd" secondAttribute="centerX" id="2Np-iJ-l34"/>
+                            <constraint firstItem="P5E-ex-N9F" firstAttribute="top" secondItem="0bu-gf-cTd" secondAttribute="top" constant="20" id="9DR-nu-4iX"/>
+                            <constraint firstItem="LFa-oO-QAy" firstAttribute="leading" secondItem="0bu-gf-cTd" secondAttribute="leading" id="GYg-sq-vOd"/>
+                            <constraint firstItem="P5E-ex-N9F" firstAttribute="leading" secondItem="0bu-gf-cTd" secondAttribute="leading" constant="30" id="LU5-Zf-Sup"/>
+                            <constraint firstAttribute="trailing" secondItem="fZ0-ea-DYs" secondAttribute="trailing" constant="90" id="Q03-54-5r6"/>
+                            <constraint firstAttribute="bottom" secondItem="fZ0-ea-DYs" secondAttribute="bottom" constant="40" id="RXi-bI-1un"/>
+                            <constraint firstItem="fZ0-ea-DYs" firstAttribute="top" secondItem="0bu-gf-cTd" secondAttribute="top" constant="80" id="Uey-Ny-hZz"/>
+                            <constraint firstItem="e87-rn-cs2" firstAttribute="top" secondItem="7MP-Ta-Cxx" secondAttribute="top" constant="20" id="Ujt-T4-c4y"/>
+                            <constraint firstItem="LFa-oO-QAy" firstAttribute="top" secondItem="0bu-gf-cTd" secondAttribute="top" id="bbz-7y-bO8"/>
+                            <constraint firstItem="fZ0-ea-DYs" firstAttribute="leading" secondItem="0bu-gf-cTd" secondAttribute="leading" constant="90" id="dvH-3J-83l"/>
+                            <constraint firstAttribute="trailing" secondItem="LFa-oO-QAy" secondAttribute="trailing" id="fTu-lt-HBK"/>
+                            <constraint firstAttribute="bottom" secondItem="LFa-oO-QAy" secondAttribute="bottom" id="t11-8v-Y1r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7MP-Ta-Cxx"/>
+                    </view>
+                    <connections>
+                        <outlet property="homeBtn" destination="P5E-ex-N9F" id="4gs-qN-A6S"/>
+                        <outlet property="titleLabel" destination="e87-rn-cs2" id="bA3-M4-tKY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uk0-KN-ZMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="932"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ic-alphHome" width="31" height="29"/>
+        <image name="ic-alphavite" width="164" height="144"/>
         <image name="ic-alphavitePlay" width="68" height="73"/>
+        <image name="ic-animalgame" width="164" height="144"/>
+        <image name="ic-gamesBack" width="667" height="375"/>
+        <image name="ic-monsterGame" width="164" height="144"/>
         <image name="icCross" width="20" height="20"/>
         <image name="icTree" width="142" height="176"/>
     </resources>

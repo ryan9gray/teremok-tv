@@ -511,9 +511,14 @@
 		CADB3D7A21F7AD4D009467B8 /* day_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CADB3D7421F7AD4D009467B8 /* day_sound.mp3 */; };
 		CADB3D7C21F7B64E009467B8 /* BackgroundMediaWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB3D7B21F7B64E009467B8 /* BackgroundMediaWorker.swift */; };
 		CADB3D7E21F8D54B009467B8 /* GetAchievementsCommand .swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB3D7D21F8D54B009467B8 /* GetAchievementsCommand .swift */; };
-		CADD14AB2309683400AE920A /* happy_Pick_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AA2309683400AE920A /* happy_Pick_1.json */; };
+		CADD14AB2309683400AE920A /* happy_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AA2309683400AE920A /* happy_Pick.json */; };
 		CADD14AD2309887300AE920A /* end_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AC2309887200AE920A /* end_Pick.json */; };
 		CADD14AF2309C6E500AE920A /* Pick_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AE2309C6E500AE920A /* Pick_introduce.mp4 */; };
+		CADD14B523107F7C00AE920A /* happy_Cloud_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B023107F7B00AE920A /* happy_Cloud_1.json */; };
+		CADD14B623107F7C00AE920A /* happy_Cloud_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B123107F7B00AE920A /* happy_Cloud_2.json */; };
+		CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B223107F7B00AE920A /* sad_Pick.json */; };
+		CADD14B823107F7C00AE920A /* cloud_main.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B323107F7B00AE920A /* cloud_main.json */; };
+		CADD14B923107F7C00AE920A /* sad_Cloud.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B423107F7B00AE920A /* sad_Cloud.json */; };
 		CADE0E4221189BE800CC9871 /* SwiftyStoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADE0E4121189BE800CC9871 /* SwiftyStoreHelper.swift */; };
 		CADE0E442118A33E00CC9871 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADE0E432118A33E00CC9871 /* LocalStore.swift */; };
 		CAE09466214BDD810052F283 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE09465214BDD810052F283 /* ProfileService.swift */; };
@@ -1249,9 +1254,14 @@
 		CADB3D7421F7AD4D009467B8 /* day_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = day_sound.mp3; sourceTree = "<group>"; };
 		CADB3D7B21F7B64E009467B8 /* BackgroundMediaWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundMediaWorker.swift; sourceTree = "<group>"; };
 		CADB3D7D21F8D54B009467B8 /* GetAchievementsCommand .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetAchievementsCommand .swift"; sourceTree = "<group>"; };
-		CADD14AA2309683400AE920A /* happy_Pick_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_Pick_1.json; sourceTree = "<group>"; };
+		CADD14AA2309683400AE920A /* happy_Pick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_Pick.json; sourceTree = "<group>"; };
 		CADD14AC2309887200AE920A /* end_Pick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = end_Pick.json; sourceTree = "<group>"; };
 		CADD14AE2309C6E500AE920A /* Pick_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Pick_introduce.mp4; path = "Teremok-TV/Resource/Game/Pick_introduce.mp4"; sourceTree = SOURCE_ROOT; };
+		CADD14B023107F7B00AE920A /* happy_Cloud_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_Cloud_1.json; sourceTree = "<group>"; };
+		CADD14B123107F7B00AE920A /* happy_Cloud_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_Cloud_2.json; sourceTree = "<group>"; };
+		CADD14B223107F7B00AE920A /* sad_Pick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_Pick.json; sourceTree = "<group>"; };
+		CADD14B323107F7B00AE920A /* cloud_main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cloud_main.json; sourceTree = "<group>"; };
+		CADD14B423107F7B00AE920A /* sad_Cloud.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_Cloud.json; sourceTree = "<group>"; };
 		CADE0E4121189BE800CC9871 /* SwiftyStoreHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyStoreHelper.swift; sourceTree = "<group>"; };
 		CADE0E432118A33E00CC9871 /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		CAE09465214BDD810052F283 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
@@ -1756,7 +1766,12 @@
 		CA51E1BB22FEC8C50028DF63 /* Pick_and_cloud */ = {
 			isa = PBXGroup;
 			children = (
-				CADD14AA2309683400AE920A /* happy_Pick_1.json */,
+				CADD14B323107F7B00AE920A /* cloud_main.json */,
+				CADD14B023107F7B00AE920A /* happy_Cloud_1.json */,
+				CADD14B123107F7B00AE920A /* happy_Cloud_2.json */,
+				CADD14B423107F7B00AE920A /* sad_Cloud.json */,
+				CADD14B223107F7B00AE920A /* sad_Pick.json */,
+				CADD14AA2309683400AE920A /* happy_Pick.json */,
 				CADD14AC2309887200AE920A /* end_Pick.json */,
 				CA51E1BE22FEC8C50028DF63 /* start_Pick.json */,
 			);
@@ -3124,6 +3139,7 @@
 				CA5CB166213F095F000CB3D5 /* krya.json in Resources */,
 				CA5100E722F6EACF00821C25 /* alphavite_6.wav in Resources */,
 				CAF961B322995FF3006E3046 /* animal_47.pdf in Resources */,
+				CADD14B823107F7C00AE920A /* cloud_main.json in Resources */,
 				CA1AB65C22F1ABA7003A2584 /* MontserratAlternates-Light.ttf in Resources */,
 				CA51E1C522FEC8C60028DF63 /* start_Pick.json in Resources */,
 				CA5100BE22F6EACF00821C25 /* alphavite_22.wav in Resources */,
@@ -3148,7 +3164,7 @@
 				CAF961CE22995FF3006E3046 /* animal_3.pdf in Resources */,
 				CA1AB66122F1ABA7003A2584 /* MontserratAlternates-ExtraBoldItalic.ttf in Resources */,
 				CA04863B22A845A60017B8A2 /* Round_1.json in Resources */,
-				CADD14AB2309683400AE920A /* happy_Pick_1.json in Resources */,
+				CADD14AB2309683400AE920A /* happy_Pick.json in Resources */,
 				CAD16DEB2147E69100A82DBB /* rainbow.json in Resources */,
 				CAF961C422995FF3006E3046 /* animal_6.pdf in Resources */,
 				CAF961FE22995FF3006E3046 /* animal_21.mp3 in Resources */,
@@ -3263,6 +3279,7 @@
 				CA5100C122F6EACF00821C25 /* alphavite_24_word_2.wav in Resources */,
 				CA5100AA22F6EACF00821C25 /* alphavite_32.wav in Resources */,
 				CA5100AC22F6EACF00821C25 /* alphavite_16_word_2.wav in Resources */,
+				CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */,
 				CA5100DC22F6EACF00821C25 /* alphavite_1.wav in Resources */,
 				CAF961C122995FF3006E3046 /* animal_12.mp3 in Resources */,
 				CAC6F72C22A81BC000756AE2 /* ready_r_8.wav in Resources */,
@@ -3302,6 +3319,7 @@
 				CA5100C622F6EACF00821C25 /* alphavite_32_word_1.wav in Resources */,
 				CAF961BC22995FF3006E3046 /* animal_33.pdf in Resources */,
 				CA14997B216F7511008FBEE9 /* FavTableViewCell.xib in Resources */,
+				CADD14B623107F7C00AE920A /* happy_Cloud_2.json in Resources */,
 				CAF961EA22995FF3006E3046 /* animal_31.mp3 in Resources */,
 				CA51010322F6EACF00821C25 /* alphavite_16.wav in Resources */,
 				CAC6F75022A81D1300756AE2 /* Firework_3.json in Resources */,
@@ -3391,6 +3409,7 @@
 				CA5100EE22F6EACF00821C25 /* alphavite_13.wav in Resources */,
 				CA5100C422F6EACF00821C25 /* alphavite_19_word_1.wav in Resources */,
 				CA5100F122F6EACF00821C25 /* alphavite_27_word_2.wav in Resources */,
+				CADD14B923107F7C00AE920A /* sad_Cloud.json in Resources */,
 				CA7AAF662170C35300747D4B /* SearchCharacterCollectionViewCell.xib in Resources */,
 				CA763631226A63CD00168AB1 /* SubscriptionCollectionViewCell.xib in Resources */,
 				CA5100B322F6EACF00821C25 /* alphavite_19.wav in Resources */,
@@ -3410,6 +3429,7 @@
 				CAC6F74F22A81D1300756AE2 /* Firework_2.json in Resources */,
 				CAC6F72422A81BC000756AE2 /* fun_3.wav in Resources */,
 				CA04863F22A845A60017B8A2 /* Round_10.json in Resources */,
+				CADD14B523107F7C00AE920A /* happy_Cloud_1.json in Resources */,
 				CAF961DA22995FF3006E3046 /* animal_36.pdf in Resources */,
 				CA5100FC22F6EACF00821C25 /* alphavite_29.wav in Resources */,
 				CA5100A722F6EACF00821C25 /* alphavite_33.wav in Resources */,

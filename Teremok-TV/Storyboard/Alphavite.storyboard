@@ -24,143 +24,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Games List View Controller-->
-        <scene sceneID="2je-1J-56L">
-            <objects>
-                <viewController storyboardIdentifier="GamesListViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qFc-qL-LmY" customClass="GamesListViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rfn-KW-kCz">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-gamesBack" translatesAutoresizingMaskIntoConstraints="NO" id="uXU-Hb-gpw">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                            </imageView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tC-RM-TRk" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="30" y="20" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="5As-9r-FTh"/>
-                                    <constraint firstAttribute="width" constant="50" id="pQV-sj-hC4"/>
-                                </constraints>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="ic-alphHome">
-                                    <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="homeClick:" destination="qFc-qL-LmY" eventType="touchUpInside" id="qs3-gq-nMQ"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zQ8-G6-aFA">
-                                <rect key="frame" x="90" y="80" width="487" height="255"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtZ-K8-Ail" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="8" y="49" width="150.5" height="129"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="HtZ-K8-Ail" secondAttribute="height" multiplier="7:6" id="gUu-H1-ofT"/>
-                                        </constraints>
-                                        <state key="normal" image="ic-alphavite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                <real key="value" value="0.20000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="alphaviteTap:" destination="qFc-qL-LmY" eventType="touchUpInside" id="LJH-cX-hcf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEb-L1-TRg" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="168.5" y="49" width="150" height="129"/>
-                                        <state key="normal" image="ic-animalgame"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                <real key="value" value="0.20000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="animalsTap:" destination="qFc-qL-LmY" eventType="touchUpInside" id="UeF-dT-vju"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxP-u9-pUB" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="328.5" y="49" width="150.5" height="129"/>
-                                        <state key="normal" image="ic-monsterGame"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                <real key="value" value="0.20000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="monsterTap:" destination="qFc-qL-LmY" eventType="touchUpInside" id="bcN-FG-BZZ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="bEb-L1-TRg" firstAttribute="width" secondItem="bEb-L1-TRg" secondAttribute="height" multiplier="7:6" id="2Gk-Lh-AWX"/>
-                                    <constraint firstItem="WxP-u9-pUB" firstAttribute="width" secondItem="WxP-u9-pUB" secondAttribute="height" multiplier="7:6" id="2i0-mC-Bgr"/>
-                                </constraints>
-                                <edgeInsets key="layoutMargins" top="-20" left="8" bottom="8" right="8"/>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВЫБЕРИТЕ ИГРУ:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcN-ti-WSz" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="193.5" y="20" width="280" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="Kj1-ub-ko3"/>
-                                    <constraint firstAttribute="height" constant="40" id="Mp5-f3-eU0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="shadowColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="0.31597970545977005" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="zQ8-G6-aFA" firstAttribute="top" secondItem="Rfn-KW-kCz" secondAttribute="top" constant="80" id="3u3-RR-iDX"/>
-                            <constraint firstAttribute="bottom" secondItem="zQ8-G6-aFA" secondAttribute="bottom" constant="40" id="EiK-Nd-Y62"/>
-                            <constraint firstAttribute="trailing" secondItem="uXU-Hb-gpw" secondAttribute="trailing" id="Fl3-Cs-HGQ"/>
-                            <constraint firstItem="uXU-Hb-gpw" firstAttribute="leading" secondItem="Rfn-KW-kCz" secondAttribute="leading" id="H3c-bw-OzJ"/>
-                            <constraint firstItem="2tC-RM-TRk" firstAttribute="top" secondItem="Rfn-KW-kCz" secondAttribute="top" constant="20" id="IGi-qV-t3l"/>
-                            <constraint firstItem="qcN-ti-WSz" firstAttribute="top" secondItem="uz7-lT-lbh" secondAttribute="top" constant="20" id="Jbl-4f-Kgl"/>
-                            <constraint firstItem="uXU-Hb-gpw" firstAttribute="top" secondItem="Rfn-KW-kCz" secondAttribute="top" id="LI3-tY-0Yx"/>
-                            <constraint firstItem="qcN-ti-WSz" firstAttribute="centerX" secondItem="Rfn-KW-kCz" secondAttribute="centerX" id="M62-xg-B5l"/>
-                            <constraint firstAttribute="bottom" secondItem="uXU-Hb-gpw" secondAttribute="bottom" id="Uu6-xn-0wF"/>
-                            <constraint firstAttribute="trailing" secondItem="zQ8-G6-aFA" secondAttribute="trailing" constant="90" id="nY3-5d-Mwc"/>
-                            <constraint firstItem="zQ8-G6-aFA" firstAttribute="leading" secondItem="Rfn-KW-kCz" secondAttribute="leading" constant="90" id="v40-V1-0FW"/>
-                            <constraint firstItem="2tC-RM-TRk" firstAttribute="leading" secondItem="Rfn-KW-kCz" secondAttribute="leading" constant="30" id="z68-lI-A5c"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="uz7-lT-lbh"/>
-                    </view>
-                    <connections>
-                        <outlet property="homeBtn" destination="2tC-RM-TRk" id="cya-FE-bBs"/>
-                        <outlet property="titleLabel" destination="qcN-ti-WSz" id="oMM-YC-p2D"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p0C-lv-4ok" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="37.331334332833585" y="-1037.5999999999999"/>
-        </scene>
         <!--Alphavite Master View Controller-->
         <scene sceneID="cwk-1w-DEv">
             <objects>
@@ -963,12 +826,22 @@
                                     <constraint firstAttribute="height" constant="140" id="VWh-UP-AFW"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpT-3d-suh">
+                                <rect key="frame" x="461" y="38" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="NuJ-AB-TFr"/>
+                                    <constraint firstAttribute="width" constant="80" id="h0D-ni-VRb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xjH-sh-1VT" firstAttribute="trailing" secondItem="GTK-de-LHa" secondAttribute="leading" identifier="pickPlace" id="6dK-xW-FoC"/>
                             <constraint firstItem="WfT-nT-KtM" firstAttribute="top" secondItem="Cgv-Z3-5G6" secondAttribute="top" constant="20" id="6zd-F9-pbb"/>
                             <constraint firstItem="Juu-3q-K8b" firstAttribute="top" secondItem="Cgv-Z3-5G6" secondAttribute="top" constant="20" id="Hke-7s-x4f"/>
+                            <constraint firstItem="Juu-3q-K8b" firstAttribute="leading" secondItem="EpT-3d-suh" secondAttribute="trailing" constant="2" id="IGX-rx-rNm"/>
+                            <constraint firstItem="EpT-3d-suh" firstAttribute="top" secondItem="WfT-nT-KtM" secondAttribute="bottom" id="JwC-qo-H2S"/>
                             <constraint firstAttribute="trailing" secondItem="Juu-3q-K8b" secondAttribute="trailing" constant="40" id="XH1-Uo-3Ih"/>
                             <constraint firstAttribute="bottom" secondItem="ldo-eS-MkM" secondAttribute="bottom" constant="40" id="Xjs-Vf-AHU"/>
                             <constraint firstItem="Cgv-Z3-5G6" firstAttribute="bottom" secondItem="xjH-sh-1VT" secondAttribute="bottom" constant="20" id="bKI-Nh-qkb"/>
@@ -980,6 +853,7 @@
                         <viewLayoutGuide key="safeArea" id="Cgv-Z3-5G6"/>
                     </view>
                     <connections>
+                        <outlet property="cloudView" destination="EpT-3d-suh" id="Ide-nb-pJ8"/>
                         <outlet property="firstItem" destination="PnL-Ha-mfW" id="A5d-b4-IRg"/>
                         <outlet property="imageContainer" destination="Y3u-df-QHi" id="54v-Nh-aK9"/>
                         <outlet property="imageView" destination="iMr-Qr-GU2" id="Mq6-oF-Sql"/>
@@ -1003,13 +877,9 @@
     </scenes>
     <resources>
         <image name="ic-alphHome" width="31" height="29"/>
-        <image name="ic-alphavite" width="164" height="144"/>
         <image name="ic-alphaviteBack" width="667" height="375"/>
         <image name="ic-alphaviteLogo" width="319" height="188"/>
         <image name="ic-alphavitePlay" width="68" height="73"/>
-        <image name="ic-animalgame" width="164" height="144"/>
-        <image name="ic-gamesBack" width="667" height="375"/>
-        <image name="ic-monsterGame" width="164" height="144"/>
         <image name="icUtka" width="29" height="35"/>
     </resources>
 </document>
