@@ -442,7 +442,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Знает хорошо" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRk-Rx-5Yp">
-                                <rect key="frame" x="113" y="80.5" width="108" height="16"/>
+                                <rect key="frame" x="123.5" y="81" width="86.5" height="15.5"/>
                                 <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="13"/>
                                 <color key="textColor" red="0.1843137255" green="0.63921568630000003" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -452,7 +452,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHK-gA-S8Z" customClass="GradientView" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="92" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="92" id="fP0-o5-LR3"/>
                                         </constraints>
@@ -496,7 +496,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaB-LA-Eo3" customClass="GradientView" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="92" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="92" id="1ib-VH-3Al"/>
                                         </constraints>
@@ -567,7 +567,7 @@
                                 <state key="normal" image="icUtka"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нужно подучить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZ0-LC-mEW">
-                                <rect key="frame" x="436" y="80.5" width="128.5" height="16"/>
+                                <rect key="frame" x="450" y="81" width="100.5" height="15.5"/>
                                 <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="13"/>
                                 <color key="textColor" red="0.98039215686274506" green="0.3411764705882353" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

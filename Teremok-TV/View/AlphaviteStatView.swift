@@ -13,9 +13,10 @@ class AlphaviteStatView: UIView {
     @IBOutlet private var countLabel: UILabel!
 
     override func awakeFromNib() {
+        super.awakeFromNib()
+        
         charLabel.textColor = .white
         countLabel.textColor = UIColor.Alphavite.Button.grey
-
     }
 
     func set(char: String, count: String) {

@@ -25,8 +25,6 @@ class AlphaviteStatisticPresenter: AlphaviteStatisticPresentationLogic {
     func presentStat(response: AlphaviteStatisticResponse) {
         let good = Dictionary(uniqueKeysWithValues: response.good.map{ ($0.char, $0.value) })
         let bad = Dictionary(uniqueKeysWithValues: response.bad.map{ ($0.char, $0.value) })
-        //let input = AlphaviteStatisticViewController.Input(good: ["А": "10 / 10", "Б": "10 / 10"], bad: ["А": "10 / 10", "Б": "10 / 10"])
-
         let model = AlphaviteStatisticViewController.Input(good: good, bad: bad)
         viewController?.showStats(model)
     }

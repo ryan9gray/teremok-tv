@@ -136,6 +136,7 @@ class AlphaviteChoiceViewController: GameViewController {
             setWord(wordName)
         }
         displayChoice(char: char, wrong: gameHelper.randomChar(from: char), image: UIImage(named: word))
+        playSounds(gameHelper.getSounds(name: word)) {}
     }
 
     private func displayChoice(char: String, wrong: String, image: UIImage?) {
@@ -167,7 +168,6 @@ class AlphaviteChoiceViewController: GameViewController {
         })
 
         imageView.image = image
-        playSounds(gameHelper.getSounds(name: AlphaviteMaster.Char[char]!)) {}
     }
 
     private func result(view: UIView, answer: GameModel.Option) {

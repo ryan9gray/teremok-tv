@@ -101,7 +101,7 @@
                                         <rect key="frame" x="20" y="69.999999999999986" width="447.33333333333331" height="133.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZgW-Kb-Iqf">
-                                                <rect key="frame" x="0.0" y="32.333333333333343" width="149" height="69"/>
+                                                <rect key="frame" x="0.0" y="31.000000000000007" width="149" height="71.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peA-tx-0FB">
                                                         <rect key="frame" x="30.999999999999993" y="0.0" width="87.333333333333314" height="33.666666666666664"/>
@@ -112,7 +112,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 из 20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="N5U-NS-lGj">
-                                                        <rect key="frame" x="33.333333333333321" y="39.666666666666657" width="82.666666666666686" height="29.333333333333329"/>
+                                                        <rect key="frame" x="33.333333333333321" y="39.666666666666657" width="82.666666666666686" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="ovs-g6-osJ"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="Shnobel-Regular" family="Shnobel" pointSize="28"/>
                                                         <color key="textColor" red="0.97647058819999999" green="0.33725490200000002" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="highlightedColor" red="0.97647058819999999" green="0.33725490200000002" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -120,7 +123,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="gxM-Kr-9U0">
-                                                <rect key="frame" x="148.99999999999994" y="17.66666666666665" width="149.33333333333331" height="98.333333333333314"/>
+                                                <rect key="frame" x="148.99999999999994" y="17.333333333333343" width="149.33333333333331" height="99"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Угадано:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DT-dq-JEp">
                                                         <rect key="frame" x="43.666666666666686" y="0.0" width="62" height="17"/>
@@ -132,7 +135,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="IfI-UL-x6T">
-                                                        <rect key="frame" x="22.333333333333371" y="23" width="105" height="75.333333333333329"/>
+                                                        <rect key="frame" x="22.333333333333371" y="23" width="105" height="76"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="76" id="VMN-0Q-kT4"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="Shnobel-Regular" family="Shnobel" pointSize="72"/>
                                                         <color key="textColor" red="0.16078431372549018" green="0.76862745098039209" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="highlightedColor" red="0.97647058819999999" green="0.33725490200000002" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,7 +146,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6gn-Ws-mDF">
-                                                <rect key="frame" x="298.33333333333337" y="32.333333333333343" width="149" height="69"/>
+                                                <rect key="frame" x="298.33333333333337" y="31.000000000000007" width="149" height="71.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGZ-pc-9Tv">
                                                         <rect key="frame" x="35.666666666666693" y="0.0" width="77.666666666666686" height="33.666666666666664"/>
@@ -151,7 +157,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+27%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na8-ZI-fGo">
-                                                        <rect key="frame" x="45.333333333333314" y="39.666666666666657" width="58" height="29.333333333333329"/>
+                                                        <rect key="frame" x="45.333333333333314" y="39.666666666666657" width="58" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="bPv-ie-Evw"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="Shnobel-Regular" family="Shnobel" pointSize="28"/>
                                                         <color key="textColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="highlightedColor" red="0.97647058819999999" green="0.33725490200000002" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>

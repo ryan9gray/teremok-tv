@@ -16,7 +16,7 @@ protocol AlphaviteStatisticDisplayLogic: CommonDisplayLogic {
     func showStats(_ model: AlphaviteStatisticViewController.Input)
 }
 
-class AlphaviteStatisticViewController: UIViewController, AlphaviteStatisticDisplayLogic {
+class AlphaviteStatisticViewController: GameViewController, AlphaviteStatisticDisplayLogic {
     var interactor: AlphaviteStatisticBusinessLogic?
     var router: (CommonRoutingLogic & AlphaviteStatisticRoutingLogic & AlphaviteStatisticDataPassing)?
     var modallyControllerRoutingLogic: CommonRoutingLogic? {
@@ -63,6 +63,7 @@ class AlphaviteStatisticViewController: UIViewController, AlphaviteStatisticDisp
 
     @IBAction private func closeTap(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        
     }
 
     struct Input {
@@ -73,12 +74,14 @@ class AlphaviteStatisticViewController: UIViewController, AlphaviteStatisticDisp
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        displayProfile()
+        activityView = LottieHUD()
         showPreloader()
-
+        displayProfile()
         goodTitleLabel.textColor = UIColor.Alphavite.Button.greenTwo
         badTitleLabel.textColor = UIColor.Alphavite.Button.redTwo
         interactor?.fetchStat()
+        leftGradientView.gradientColors = Styles.Gradients.green.value
+        rightGradientView.gradientColors = Styles.Gradients.red.value
     }
 
     func showStats(_ model: Input) {
@@ -94,6 +97,7 @@ class AlphaviteStatisticViewController: UIViewController, AlphaviteStatisticDisp
             NSLayoutConstraint.fixHeight(view: view, constant: 30.0)
             rightStackView.addArrangedSubview(view)
         }
+        hidePreloader()
     }
 
     func displayProfile() {

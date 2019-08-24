@@ -26,11 +26,14 @@ class GradientView: UIView {
     private var gradientLayer = CAGradientLayer()
     private var vertical: Bool = false
 
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        // Drawing code
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        layer.masksToBounds = true
+        layer.cornerRadius = cornerRadius
 
         //fill view with gradient layer
+
         gradientLayer.frame = self.bounds
 
         //style and insert layer if not already inserted
@@ -43,11 +46,5 @@ class GradientView: UIView {
 
             layer.insertSublayer(gradientLayer, at: 0)
         }
-    }
-    override func layoutSubviews() {
-        super.layoutSubviews()
-
-        layer.masksToBounds = true
-        layer.cornerRadius = cornerRadius
     }
 }

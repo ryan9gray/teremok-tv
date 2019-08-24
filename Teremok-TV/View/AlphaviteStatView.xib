@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Glober Black.otf">
-            <string>GloberBlack</string>
-        </array>
         <array key="MontserratAlternates-Regular.ttf">
             <string>MontserratAlternates-Regular</string>
+        </array>
+        <array key="ariblk.ttf">
+            <string>Arial-Black</string>
         </array>
     </customFonts>
     <objects>
@@ -29,7 +29,7 @@
                         <constraint firstAttribute="width" constant="50" id="33c-42-7tC"/>
                         <constraint firstAttribute="height" constant="70" id="DSx-8J-pke"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="GloberBlack" family="Glober" pointSize="24"/>
+                    <fontDescription key="fontDescription" name="Arial-Black" family="Arial" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                     <color key="shadowColor" white="0.0" alpha="0.20029633620689655" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

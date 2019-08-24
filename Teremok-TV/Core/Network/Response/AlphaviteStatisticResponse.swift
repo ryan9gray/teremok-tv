@@ -30,7 +30,7 @@ final class AlphabetStat: Mappable {
 
     func mapping(map: Map) {
         char     <- map["char"]
-        value     <- map["value"]
+        value     <- map["val"]
     }
 }
 
