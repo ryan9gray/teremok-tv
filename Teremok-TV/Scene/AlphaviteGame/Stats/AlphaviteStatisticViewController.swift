@@ -63,7 +63,6 @@ class AlphaviteStatisticViewController: GameViewController, AlphaviteStatisticDi
 
     @IBAction private func closeTap(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        
     }
 
     struct Input {
@@ -75,13 +74,14 @@ class AlphaviteStatisticViewController: GameViewController, AlphaviteStatisticDi
         super.viewDidLoad()
 
         activityView = LottieHUD()
-        showPreloader()
         displayProfile()
         goodTitleLabel.textColor = UIColor.Alphavite.Button.greenTwo
         badTitleLabel.textColor = UIColor.Alphavite.Button.redTwo
-        interactor?.fetchStat()
         leftGradientView.gradientColors = Styles.Gradients.green.value
         rightGradientView.gradientColors = Styles.Gradients.red.value
+
+        showPreloader()
+        interactor?.fetchStat()
     }
 
     func showStats(_ model: Input) {

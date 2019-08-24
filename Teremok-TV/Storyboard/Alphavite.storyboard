@@ -131,8 +131,8 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="А" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovf-3P-aqo">
-                                                <rect key="frame" x="90" y="161" width="15" height="29"/>
-                                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                                <rect key="frame" x="89.5" y="162" width="16" height="28"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                                 <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -622,7 +622,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnL-Ha-mfW" customClass="DesignableButton" customModule="Spring">
                                         <rect key="frame" x="0.0" y="45" width="180" height="195"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoY-nF-Hdr" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoY-nF-Hdr" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="195"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="195" id="Kqk-S3-SWw"/>
@@ -666,9 +666,9 @@
                                                 <rect key="frame" x="5" y="5" width="185" height="185"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="А" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4R-xX-V17">
-                                                <rect key="frame" x="90" y="161" width="15" height="29"/>
-                                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цветы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4R-xX-V17">
+                                                <rect key="frame" x="5" y="161" width="185" height="29"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                                 <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -678,8 +678,10 @@
                                             <constraint firstItem="E4R-xX-V17" firstAttribute="centerX" secondItem="Y3u-df-QHi" secondAttribute="centerX" id="0V7-nt-yYX"/>
                                             <constraint firstAttribute="width" constant="195" id="4A6-9R-7N5"/>
                                             <constraint firstAttribute="bottom" secondItem="E4R-xX-V17" secondAttribute="bottom" constant="5" id="8Da-KW-BHZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="E4R-xX-V17" secondAttribute="trailing" constant="5" id="Cll-Hg-AWd"/>
                                             <constraint firstAttribute="width" secondItem="Y3u-df-QHi" secondAttribute="height" multiplier="1:1" id="H1p-KN-eUT"/>
                                             <constraint firstItem="iMr-Qr-GU2" firstAttribute="leading" secondItem="Y3u-df-QHi" secondAttribute="leading" constant="5" id="MX2-LX-8gP"/>
+                                            <constraint firstItem="E4R-xX-V17" firstAttribute="leading" secondItem="Y3u-df-QHi" secondAttribute="leading" constant="5" id="T1P-6C-IEd"/>
                                             <constraint firstAttribute="trailing" secondItem="iMr-Qr-GU2" secondAttribute="trailing" constant="5" id="YaT-lZ-eFQ"/>
                                             <constraint firstItem="iMr-Qr-GU2" firstAttribute="top" secondItem="Y3u-df-QHi" secondAttribute="top" constant="5" id="c4m-fd-jgJ"/>
                                             <constraint firstAttribute="bottom" secondItem="iMr-Qr-GU2" secondAttribute="bottom" constant="5" id="fuB-I9-WK9"/>
@@ -692,7 +694,7 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.1843137255" green="0.63921568630000003" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.0" green="0.47058823529411764" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>

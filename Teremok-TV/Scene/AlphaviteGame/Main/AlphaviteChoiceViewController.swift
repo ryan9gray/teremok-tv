@@ -166,7 +166,7 @@ class AlphaviteChoiceViewController: GameViewController {
                 self.wordLabel.isHidden = true
                 self.stackView.layoutIfNeeded()
         })
-
+        imageContainer.borderColor = UIColor.Alphavite.Button.blueTwo
         imageView.image = image
     }
 
@@ -183,6 +183,7 @@ class AlphaviteChoiceViewController: GameViewController {
         } else {
             view.layer.addSublayer(cross)
         }
+        imageContainer.borderColor = isRight ? UIColor.Alphavite.Button.greenTwo : UIColor.Alphavite.Button.redTwo
         UIView.animate(
             withDuration: 0.5,
             delay: 0.0,

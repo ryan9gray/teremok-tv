@@ -35,16 +35,15 @@ class AlphaviteGameFlow  {
             game.roundWords = AlphaviteMaster.DefaultChars
             AlphaviteMaster.DefaultChars.forEach { game.currentChars.remove($0) }
         } else {
-            guard !game.currentChars.isEmpty else {
-                finishGame()
-                return
-            }
-
             game.roundWords = []
             for _ in 0..<3 {
                 let char = game.currentChars.randomElement()!
                 game.roundWords.append(char)
                 game.currentChars.remove(char)
+            }
+            guard !game.currentChars.isEmpty else {
+                finishGame()
+                return
             }
         }
         game.round += 1
@@ -76,10 +75,10 @@ class AlphaviteGameFlow  {
     }
 
     private func nextRound() {
-//        if game.round == 1, !(Profile.current?.premiumGame ?? false) {
-//            buyAlert()
-//            return
-//        }
+        if game.round == 1, !(Profile.current?.premiumGame ?? false) {
+            buyAlert()
+            return
+        }
         randomRound()
     }
     func repeatRound() {
@@ -105,8 +104,7 @@ class AlphaviteGameFlow  {
     }
 
     func finishGame() {
-
-
+        master?.router?.popChild()
     }
 
     private func showIntroduce() {
