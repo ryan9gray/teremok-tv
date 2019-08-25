@@ -38,7 +38,7 @@ struct AlphabetGameHelper {
         let keys = Array(AlphaviteMaster.Char.keys)
         let index = Int.random(in: 0..<keys.count)
         if keys[index] == from {
-            let newIndex = index < 32 ?  index + 1 : index + 1
+            let newIndex = index < 32 ?  index + 1 : index - 1
             return keys[newIndex]
         } else {
             return keys[index]

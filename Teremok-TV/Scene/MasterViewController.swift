@@ -99,13 +99,18 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     @IBAction func touchDown(_ sender: UIButton) {
         if !isAuth {
             sender.cancelTracking(with: nil)
-            router?.navigateToReg()
-            presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегистрироваться", completion: nil)
+            presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегистрироваться") { [weak self] in
+                self?.router?.navigateToReg()
+            }
         }
         if isOffline {
             sender.cancelTracking(with: nil)
-            presentCloud(title: "Offline", subtitle: "Отсутствует подключение к Интернету или слишком слабый сигнал. Вам доступны только сохраненные на телефон мультфильмы.", completion: nil)
-            router?.navigateToFav()
+            presentCloud(
+                title: "Offline",
+                subtitle: "Отсутствует подключение к Интернету или слишком слабый сигнал. Вам доступны только сохраненные на телефон мультфильмы."
+            ) { [weak self] in
+                self?.router?.navigateToFav()
+            }
         }
     }
 

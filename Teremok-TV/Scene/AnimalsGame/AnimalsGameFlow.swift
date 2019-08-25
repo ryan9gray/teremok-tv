@@ -90,9 +90,9 @@ class AnimalsGameFlow  {
     }
 
     private func randomAnimal(from: AnimalsGame.Animal) -> AnimalsGame.Animal {
-        let index = Int(arc4random_uniform( UInt32(pack.allAnimals.count)))
+        let index = Int.random(in: 0..<pack.allAnimals.count)
         if pack.allAnimals[index] == from {
-            let newIndex = index < 47 ?  index + 1 : index + 1
+            let newIndex = index < 47 ?  index + 1 : index - 1
             return pack.allAnimals[newIndex]
         } else {
             return pack.allAnimals[index]
