@@ -519,6 +519,7 @@
 		CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B223107F7B00AE920A /* sad_Pick.json */; };
 		CADD14B823107F7C00AE920A /* cloud_main.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B323107F7B00AE920A /* cloud_main.json */; };
 		CADD14B923107F7C00AE920A /* sad_Cloud.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B423107F7B00AE920A /* sad_Cloud.json */; };
+		CADD14BB23129A4000AE920A /* TTSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD14BA23129A4000AE920A /* TTSegmentedControl.swift */; };
 		CADE0E4221189BE800CC9871 /* SwiftyStoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADE0E4121189BE800CC9871 /* SwiftyStoreHelper.swift */; };
 		CADE0E442118A33E00CC9871 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADE0E432118A33E00CC9871 /* LocalStore.swift */; };
 		CAE09466214BDD810052F283 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE09465214BDD810052F283 /* ProfileService.swift */; };
@@ -1262,6 +1263,7 @@
 		CADD14B223107F7B00AE920A /* sad_Pick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_Pick.json; sourceTree = "<group>"; };
 		CADD14B323107F7B00AE920A /* cloud_main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cloud_main.json; sourceTree = "<group>"; };
 		CADD14B423107F7B00AE920A /* sad_Cloud.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_Cloud.json; sourceTree = "<group>"; };
+		CADD14BA23129A4000AE920A /* TTSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSegmentedControl.swift; sourceTree = "<group>"; };
 		CADE0E4121189BE800CC9871 /* SwiftyStoreHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyStoreHelper.swift; sourceTree = "<group>"; };
 		CADE0E432118A33E00CC9871 /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		CAE09465214BDD810052F283 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
@@ -1627,6 +1629,7 @@
 		CA49E496212D59E600711324 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CADD14BA23129A4000AE920A /* TTSegmentedControl.swift */,
 				CAC0988A22FF12A700EFB01E /* EasyTipView */,
 				CAAD25EE22F5B2C4005CFCD2 /* StrokeLabel.swift */,
 				CAE5A58A22A9AB630034B448 /* AMProgressView.swift */,
@@ -2177,8 +2180,8 @@
 		CAAD25E722F59872005CFCD2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				CAAD25F422F5DC80005CFCD2 /* AlphaviteCharsViewController.swift */,
 				CAAD25F022F5DBC1005CFCD2 /* AlphaviteStartViewController.swift */,
+				CAAD25F422F5DC80005CFCD2 /* AlphaviteCharsViewController.swift */,
 				CA51003F22F5F8E600821C25 /* AlphaviteChoiceViewController.swift */,
 				CAAD25F222F5DBEC005CFCD2 /* AlphaviteFinishViewController.swift */,
 			);
@@ -3573,6 +3576,7 @@
 				CAE1C452211DC23A0058C9C6 /* RegistrationModels.swift in Sources */,
 				CA49E48D212D326600711324 /* TerPush+Mapping.swift in Sources */,
 				CA52F36C223D9FE50058194E /* AlbumModels.swift in Sources */,
+				CADD14BB23129A4000AE920A /* TTSegmentedControl.swift in Sources */,
 				CAAD25F522F5DC80005CFCD2 /* AlphaviteCharsViewController.swift in Sources */,
 				CAA445602157BF4F0023E340 /* CustomError.swift in Sources */,
 				CAE1C46E211DC8CA0058C9C6 /* AuthRouter.swift in Sources */,

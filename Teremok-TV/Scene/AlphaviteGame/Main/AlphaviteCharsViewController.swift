@@ -110,7 +110,8 @@ class AlphaviteCharsViewController: GameViewController {
                 nextChar()
                 return
             }
-            imagewView.image = UIImage(named: word)
+
+            imagewView.image = UIImage(named: word) ?? #imageLiteral(resourceName: "icDotes")
             animateImage()
             wordLabel.text = AlphaviteMaster.Names[word]
 

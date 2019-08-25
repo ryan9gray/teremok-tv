@@ -36,9 +36,9 @@ struct AlphabetGameHelper {
 
     func randomChar(from: String) -> String {
         let keys = Array(AlphaviteMaster.Char.keys)
-        let index = Int(arc4random_uniform( UInt32(keys.count)))
+        let index = Int.random(in: 0..<keys.count)
         if keys[index] == from {
-            let newIndex = index < 47 ?  index + 1 : index + 1
+            let newIndex = index < 32 ?  index + 1 : index + 1
             return keys[newIndex]
         } else {
             return keys[index]

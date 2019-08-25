@@ -24,7 +24,7 @@ class GradientView: UIView {
         }
     }
     private var gradientLayer = CAGradientLayer()
-    private var vertical: Bool = false
+    private var vector: GradientOrientation = .topLeftBottomRight
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -39,12 +39,42 @@ class GradientView: UIView {
         //style and insert layer if not already inserted
         if gradientLayer.superlayer == nil {
 
-            gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-            gradientLayer.endPoint = vertical ? CGPoint(x: 0, y: 1) : CGPoint(x: 1, y: 0)
+            gradientLayer.startPoint = vector.startPoint
+            gradientLayer.endPoint = vector.endPoint
             gradientLayer.colors = gradientColors.map { $0.cgColor }
             gradientLayer.locations = [0.0, 1.0]
 
             layer.insertSublayer(gradientLayer, at: 0)
+        }
+    }
+
+    enum GradientOrientation {
+        case topRightBottomLeft
+        case topLeftBottomRight
+        case horizontal
+        case vertical
+
+        var startPoint : CGPoint {
+            return points.startPoint
+        }
+
+        var endPoint : CGPoint {
+            return points.endPoint
+        }
+
+        var points : GradientPoints {
+            get {
+                switch(self) {
+                case .topRightBottomLeft:
+                    return (CGPoint(x: 0.0,y: 1.0), CGPoint(x: 1.0,y: 0.0))
+                case .topLeftBottomRight:
+                    return (CGPoint(x: 0.0,y: 0.0), CGPoint(x: 1,y: 1))
+                case .horizontal:
+                    return (CGPoint(x: 0.0,y: 0.5), CGPoint(x: 1.0,y: 0.5))
+                case .vertical:
+                    return (CGPoint(x: 0.0,y: 0.0), CGPoint(x: 0.0,y: 1.0))
+                }
+            }
         }
     }
 }

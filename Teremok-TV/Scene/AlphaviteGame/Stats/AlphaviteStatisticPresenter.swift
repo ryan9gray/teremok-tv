@@ -23,8 +23,8 @@ class AlphaviteStatisticPresenter: AlphaviteStatisticPresentationLogic {
     }
 
     func presentStat(response: AlphaviteStatisticResponse) {
-        let good = Dictionary(uniqueKeysWithValues: response.good.map{ ($0.char, $0.value) })
-        let bad = Dictionary(uniqueKeysWithValues: response.bad.map{ ($0.char, $0.value) })
+        let good = Dictionary(uniqueKeysWithValues: response.good.prefix(5).map{ ($0.char, $0.value) })
+        let bad = Dictionary(uniqueKeysWithValues: response.bad.prefix(5).map{ ($0.char, $0.value) })
         let model = AlphaviteStatisticViewController.Input(good: good, bad: bad)
         viewController?.showStats(model)
     }

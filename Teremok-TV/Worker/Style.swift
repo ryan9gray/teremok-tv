@@ -38,7 +38,7 @@ enum Styles {
             .foregroundColor: UIColor.red,
         ]
         static let alphabetWord: [NSAttributedString.Key: Any] = [
-            .font: Font.alphaviteMain(size: 24.0),
+            .font: Font.helveticaBold(size: 24.0),
             .foregroundColor: UIColor.Alphavite.Button.blueTwo,
         ]
     }
@@ -46,6 +46,13 @@ enum Styles {
     enum Font {
         static func alphaviteMain(size: CGFloat) -> UIFont {
             if let font = UIFont(name: "Foo-Regular", size: size) {
+                return font
+            } else {
+                return UIFont.systemFont(ofSize: size, weight: .regular)
+            }
+        }
+        static func helveticaBold(size: CGFloat) -> UIFont {
+            if let font = UIFont(name: "HelveticaNeue-Bold", size: size) {
                 return font
             } else {
                 return UIFont.systemFont(ofSize: size, weight: .regular)

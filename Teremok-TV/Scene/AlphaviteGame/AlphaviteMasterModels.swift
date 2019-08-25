@@ -15,7 +15,7 @@ import UIKit
 enum AlphaviteMaster {
   
     static let DefaultChars = [
-        "А",
+        "Ь",
         "Р",
         "Е"
     ]
@@ -47,7 +47,7 @@ enum AlphaviteMaster {
 
     static let Names = [
         "alphavite_1_word_1": "Аист", "alphavite_1_word_2": "Арбуз",
-        "alphavite_2_word_1": "Бобр", "alphavite_2_word_2": "Блин",
+        "alphavite_2_word_1": "Белка", "alphavite_2_word_2": "Блин",
         "alphavite_3_word_1": "Ведро", "alphavite_3_word_2": "Ворона",
         "alphavite_4_word_1": "Горы", "alphavite_4_word_2": "Гусь",
         "alphavite_5_word_1": "Дерево", "alphavite_5_word_2": "Динозавр",
@@ -73,9 +73,9 @@ enum AlphaviteMaster {
         "alphavite_25_word_1": "Черепаха", "alphavite_25_word_2": "Чеснок",
         "alphavite_26_word_1": "Шиповник", "alphavite_26_word_2": "Шишка",
         "alphavite_27_word_1": "Щётка", "alphavite_27_word_2": "Щука",
-//        "alphavite_28_word_1": "Ъ", "alphavite_28_word_2": "Ъ",
-//        "alphavite_29_word_1": "Ы", "alphavite_29_word_2": "Ы",
-//        "alphavite_30_word_1": "Ь", "alphavite_30_word_2": "Ь",
+        "alphavite_28": "Ъ",
+        "alphavite_29": "Ы",
+        "alphavite_30": "Ь",
         "alphavite_31_word_1": "Экран", "alphavite_31_word_2": "Эскимо",
         "alphavite_32_word_1": "Юнга", "alphavite_32_word_2": "Юпитер",
         "alphavite_33_word_1": "Яблоко", "alphavite_33_word_2": "Ястреб"
@@ -111,9 +111,9 @@ enum AlphaviteMaster {
         "Ч": "alphavite_25",
         "Ш": "alphavite_26",
         "Щ": "alphavite_27",
-//        "Ъ": "alphavite_28",
-//        "Ы": "alphavite_29",
-//        "Ь": "alphavite_30",
+        "Ъ": "alphavite_28",
+        "Ы": "alphavite_29",
+        "Ь": "alphavite_30",
         "Э": "alphavite_31",
         "Ю": "alphavite_32",
         "Я": "alphavite_33"
@@ -147,9 +147,9 @@ enum AlphaviteMaster {
         "Ч": ["alphavite_25_word_1", "alphavite_25_word_2"],
         "Ш": ["alphavite_26_word_1", "alphavite_26_word_2"],
         "Щ": ["alphavite_27_word_1", "alphavite_27_word_2"],
-//        "Ъ": ["alphavite_28_word_1", "alphavite_28_word_2"],
-//        "Ы": ["alphavite_29_word_1", "alphavite_29_word_2"],
-//        "Ь": ["alphavite_30_word_1", "alphavite_30_word_2"],
+        "Ъ": ["alphavite_28", "alphavite_28"],
+        "Ы": ["alphavite_29", "alphavite_29"],
+        "Ь": ["alphavite_30", "alphavite_30"],
         "Э": ["alphavite_31_word_1", "alphavite_31_word_2"],
         "Ю": ["alphavite_32_word_1", "alphavite_32_word_2"],
         "Я": ["alphavite_33_word_1", "alphavite_33_word_2"]

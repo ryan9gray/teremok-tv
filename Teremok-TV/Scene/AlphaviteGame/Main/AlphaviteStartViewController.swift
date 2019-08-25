@@ -10,27 +10,26 @@ import UIKit
 
 class AlphaviteStartViewController: GameViewController {
     @IBOutlet private var startButton: KeyButton!
-    @IBOutlet private var difficulteSegmentControl: UISegmentedControl!
 
     @IBAction private func startTap(_ sender: Any) {
         masterRouter?.startFlow(0)
     }
-    
-    @IBAction private func difficultsChange(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            LocalStore.alphaviteIsHard = false
-        case 1:
-            LocalStore.alphaviteIsHard = true
-        default:
-            break
-        }
-    }
-
+    @IBOutlet private var segmentController: TTSegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        difficulteSegmentControl.selectedSegmentIndex = LocalStore.alphaviteIsHard ? 1 : 0
+        segmentController.itemTitles = [ "Я учу алфавит", "Я знаю алфавит" ]
+        segmentController.didSelectItemWith = { (index, title) -> () in
+            switch index {
+            case 0:
+                LocalStore.alphaviteIsHard = false
+            case 1:
+                LocalStore.alphaviteIsHard = true
+            default:
+                break
+            }
+        }
+        segmentController.selectItemAt(index: LocalStore.alphaviteIsHard ? 1 : 0)
     }
 }

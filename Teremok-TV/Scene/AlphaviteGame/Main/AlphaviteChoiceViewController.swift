@@ -101,7 +101,7 @@ class AlphaviteChoiceViewController: GameViewController {
     private func setWord(_ text: String) {
         wordLabel.text = text
         let attributedWord = NSMutableAttributedString(string: text, attributes: Styles.TextAttributes.alphabetWord)
-        attributedWord.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSRange(location:0,length:1))
+        attributedWord.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSRange(location: 0,length: 1))
         wordLabel.attributedText = attributedWord
     }
 
