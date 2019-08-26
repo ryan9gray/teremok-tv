@@ -18,7 +18,6 @@ class MonsterCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func layoutSubviews() {
@@ -26,13 +25,10 @@ class MonsterCollectionViewCell: UICollectionViewCell {
         backImage.layer.cornerRadius = 12
     }
     
-    func configuration(monster: MonsterMaster.Monster, matchMonsters: @escaping () -> Void) {
-        self.matchMonsters = matchMonsters
+    func configuration(monster: MonsterMaster.Monster) {
         item = monster
         backImage.image = UIImage(named: "monsterCellCover")
         frontImage.image = UIImage(named: monster.imageName)
-        backImage.isUserInteractionEnabled = true
-        backImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flipCard)))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
             self.flipCard()
         })
@@ -45,7 +41,8 @@ class MonsterCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    @objc func flipCard() {
+    func flipCard(matchMonsters: (() -> Void)? = nil) {
+        self.matchMonsters = matchMonsters
         let flipped = item.flipped
         let fromView = flipped ? frontImage : backImage
         let toView = flipped ? backImage : frontImage
