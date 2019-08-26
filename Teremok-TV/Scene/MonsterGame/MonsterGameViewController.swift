@@ -28,7 +28,7 @@ class MonsterGameViewController: GameViewController {
     private var timer = Timer()
     private var seconds = 0 {
         didSet {
-            timerBtn.setTitle(timeString(time: Double(seconds)), for: .normal)
+            timerBtn.setTitle(PlayerHelper.stringFromTimeInterval(TimeInterval(seconds)), for: .normal)
             if (seconds >= limit) {
                 timerBtn.setTitleColor(UIColor.Button.redTwo, for: .normal)
             }
@@ -70,12 +70,6 @@ class MonsterGameViewController: GameViewController {
             guard let self = self else { return }
             self.seconds += 1
         }
-    }
-        
-    func timeString(time:TimeInterval) -> String {
-        let minutes = Int(time) / 60 % 60
-        let seconds = Int(time) % 60
-        return String(format: "%02i:%02i", minutes, seconds)
     }
     
     func matchMonsters(cell: MonsterCollectionViewCell) {
