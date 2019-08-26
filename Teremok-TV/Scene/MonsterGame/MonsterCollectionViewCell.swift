@@ -28,9 +28,6 @@ class MonsterCollectionViewCell: UICollectionViewCell {
         item = monster
         backImage.image = UIImage(named: "monsterCellCover")
         frontImage.image = UIImage(named: monster.imageName)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-            self.flipCard()
-        })
     }
     
     var flipped: Bool = true {
@@ -39,17 +36,27 @@ class MonsterCollectionViewCell: UICollectionViewCell {
             backImage.isHidden = flipped
         }
     }
+
+    func open() {
+        guard !flipped else { return }
+
+        flipCard()
+    }
+
+    func close() {
+        guard flipped else { return }
+
+        flipCard()
+    }
     
     func flipCard(completion: (() -> Void)? = nil) {
         let fromView = flipped ? frontImage : backImage
         let toView = flipped ? backImage : frontImage
         let flipDirection: UIView.AnimationOptions = flipped ? .transitionFlipFromRight : .transitionFlipFromLeft
         let options: UIView.AnimationOptions = [flipDirection, .showHideTransitionViews]
-        UIView.transition(from: fromView!, to: toView!, duration: 1.0, options: options) {
-            finished in
-            self.flipped = !self.flipped
+        UIView.transition(from: fromView!, to: toView!, duration: 1.0, options: options) { finished in
+            self.flipped.toggle()
             completion?()
         }
     }
-
 }

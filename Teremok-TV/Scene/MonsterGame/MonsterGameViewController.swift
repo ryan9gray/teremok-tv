@@ -60,11 +60,23 @@ class MonsterGameViewController: GameViewController {
         timerBtn.gradientColors = Styles.Gradients.lightGray.value
         let cells = [MonsterCollectionViewCell.self]
         collectionView.register(cells: cells)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+
+        collectionView.performBatchUpdates(nil) { result in
+            self.start()
+        }
+    }
+
+    private func start() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
             self.fireTimer()
+            self.collectionView.visibleCells.forEach { ($0 as? MonsterCollectionViewCell)?.close() }
         })
     }
-    
+
     private func fireTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
             guard let self = self else { return }
@@ -94,7 +106,7 @@ class MonsterGameViewController: GameViewController {
     }
     
     func flipBack(shouldFlip: Bool) {
-        if (shouldFlip) {
+        if shouldFlip {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                 self.firstSelectedItem?.flipCard()
                 self.secondSelectedItem?.flipCard()
@@ -122,12 +134,13 @@ extension MonsterGameViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCell = collectionView.cellForItem(at: indexPath) as! MonsterCollectionViewCell
+        guard let selectedCell = collectionView.cellForItem(at: indexPath) as? MonsterCollectionViewCell else { return }
+
         saveSelectedCell(cell: selectedCell)
         selectedCell.flipCard { [weak self] in
-            if (self?.firstSelectedItem != nil && self?.secondSelectedItem != nil) {
-                self?.matchMonsters()
-            }
+            guard self?.firstSelectedItem != nil && self?.secondSelectedItem != nil else { return }
+
+            self?.matchMonsters()
         }
     }
     
