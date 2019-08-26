@@ -20,6 +20,7 @@ enum Styles {
         case blue
         case red
         case green
+        case lightGray
     }
 
     enum TextAttributes {
@@ -98,6 +99,8 @@ extension Styles.Gradients {
                 return [UIColor.Alphavite.Button.redOne, UIColor.Alphavite.Button.redTwo]
             case .green:
                 return [UIColor.Alphavite.Button.greenOne, UIColor.Alphavite.Button.greenTwo]
+            case .lightGray:
+                return [UIColor.Button.lightGray, UIColor.white]
             }
         }
     }

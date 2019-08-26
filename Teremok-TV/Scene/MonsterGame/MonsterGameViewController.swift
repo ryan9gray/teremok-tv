@@ -10,9 +10,40 @@ import UIKit
 
 class MonsterGameViewController: GameViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private var timerBtn: KeyButton!
+    @IBOutlet private var collectionView: UICollectionView!
     var input: Input!
     var output: Output!
+    
+    private var selectedItem: MonsterCollectionViewCell?
+    private var score = 0 {
+        didSet {
+            if (score == input.game.difficulty.fieldSize/2) {
+                //game ended. open next screen
+            }
+        }
+    }
+    private var timer = Timer()
+    private var seconds = 0.0 {
+        didSet {
+            timerBtn.setTitle(timeString(time: seconds), for: .normal)
+            if (seconds >= limit) {
+                timerBtn.setTitleColor(UIColor.Button.redTwo, for: .normal)
+            }
+        }
+    }
+    private var limit: Double {
+        get {
+            switch input.game.difficulty {
+            case .easy:
+                return 60.0
+            case .medium:
+                return 180.0
+            case .hard:
+                return 300.0
+            }
+        }
+    }
     
     struct Output {
         
@@ -24,9 +55,45 @@ class MonsterGameViewController: GameViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        timerBtn.gradientColors = Styles.Gradients.lightGray.value
         let cells = [MonsterCollectionViewCell.self]
         collectionView.register(cells: cells)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            self.fireTimer()
+        })
         // Do any additional setup after loading the view.
+    }
+    
+    private func fireTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
+            guard let self = self else { return }
+            self.seconds += 1
+        }
+    }
+        
+    func timeString(time:TimeInterval) -> String {
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format: "%02i:%02i", minutes, seconds)
+    }
+    
+    func matchMonsters(cell: MonsterCollectionViewCell) {
+        if (selectedItem == nil) {
+            selectedItem = cell
+        }
+        else {
+            if (selectedItem!.item.matchId == cell.item.matchId) {
+                score += 1
+                selectedItem = nil
+            }
+            else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                    self.selectedItem!.flipCard()
+                    cell.flipCard()
+                    self.selectedItem = nil
+                })
+            }
+        }
     }
 }
 
@@ -38,7 +105,9 @@ extension MonsterGameViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withCell: MonsterCollectionViewCell.self, for: indexPath)
-        cell.configuration(monster: input.game.items[indexPath.row])
+        cell.configuration(monster: input.game.items[indexPath.row]) {
+            self.matchMonsters(cell: cell)
+        }
         return cell
     }
     
