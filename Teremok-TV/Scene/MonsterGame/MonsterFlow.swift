@@ -49,8 +49,12 @@ class MonsterGameFlow {
     private func startGame() {
         let controller = MonsterGameViewController.instantiate(fromStoryboard: .monster)
         controller.input = MonsterGameViewController.Input(game: game)
-//        controller.output = MonsterGameViewController.Output(startChoice: startChoice)
+        controller.output = MonsterGameViewController.Output(openResults: openResult)
         master?.router?.presentModalChild(viewController: controller)
+    }
+    
+    private func openResult(result: Double) {
+        //open result screen
     }
     
     private func showIntroduce(difficulty: Int) {

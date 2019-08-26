@@ -20,7 +20,8 @@ class MonsterGameViewController: GameViewController {
     private var score = 0 {
         didSet {
             if (score == input.game.difficulty.fieldSize/2) {
-                output.seconds = seconds
+                output.openResults(seconds)
+                timer.invalidate()
             }
         }
     }
@@ -47,7 +48,7 @@ class MonsterGameViewController: GameViewController {
     }
     
     struct Output {
-        var seconds: Double
+        let openResults: (Double) -> Void
     }
     
     struct Input {
