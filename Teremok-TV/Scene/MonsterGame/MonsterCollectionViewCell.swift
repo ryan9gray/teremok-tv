@@ -14,7 +14,6 @@ class MonsterCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var frontImage: UIImageView!
 
     var item: MonsterMaster.Monster!
-    private var matchMonsters: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,26 +33,22 @@ class MonsterCollectionViewCell: UICollectionViewCell {
         })
     }
     
-    private var flipped: Bool = true {
+    var flipped: Bool = true {
         didSet {
             frontImage.isHidden = !flipped
             backImage.isHidden = flipped
         }
     }
     
-    func flipCard(matchMonsters: (() -> Void)? = nil) {
-        self.matchMonsters = matchMonsters
-        let flipped = item.flipped
+    func flipCard(completion: (() -> Void)? = nil) {
         let fromView = flipped ? frontImage : backImage
         let toView = flipped ? backImage : frontImage
         let flipDirection: UIView.AnimationOptions = flipped ? .transitionFlipFromRight : .transitionFlipFromLeft
         let options: UIView.AnimationOptions = [flipDirection, .showHideTransitionViews]
         UIView.transition(from: fromView!, to: toView!, duration: 1.0, options: options) {
             finished in
-            self.item.flipped = !flipped
-            if (!flipped) {
-                self.matchMonsters?()
-            }
+            self.flipped = !self.flipped
+            completion?()
         }
     }
 

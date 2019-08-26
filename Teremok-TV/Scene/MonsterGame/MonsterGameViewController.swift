@@ -72,28 +72,39 @@ class MonsterGameViewController: GameViewController {
         }
     }
     
-    func matchMonsters(cell: MonsterCollectionViewCell) {
+    func saveSelectedCell(cell: MonsterCollectionViewCell) {
         if (firstSelectedItem == nil) {
             firstSelectedItem = cell
-            firstSelectedItem?.flipCard()
         }
         else {
             secondSelectedItem = cell
-            secondSelectedItem?.flipCard() {
-                if (self.firstSelectedItem?.item.matchId == self.secondSelectedItem?.item.matchId) {
-                    self.score += 1
-                    self.firstSelectedItem = nil
-                    self.secondSelectedItem = nil
-                }
-                else {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                        self.firstSelectedItem?.flipCard()
-                        self.secondSelectedItem?.flipCard()
-                        self.firstSelectedItem = nil
-                        self.secondSelectedItem = nil
-                    })
-                }
+        }
+    }
+    
+    func matchMonsters() {
+        if (firstSelectedItem!.flipped && secondSelectedItem!.flipped) {
+            if (firstSelectedItem?.item.matchId == secondSelectedItem?.item.matchId) {
+                score += 1
+                flipBack(shouldFlip: false)
             }
+            else {
+                flipBack(shouldFlip: true)
+            }
+        }
+    }
+    
+    func flipBack(shouldFlip: Bool) {
+        if (shouldFlip) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                self.firstSelectedItem?.flipCard()
+                self.secondSelectedItem?.flipCard()
+                self.firstSelectedItem = nil
+                self.secondSelectedItem = nil
+            })
+        }
+        else {
+            firstSelectedItem = nil
+            secondSelectedItem = nil
         }
     }
 }
@@ -111,14 +122,20 @@ extension MonsterGameViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        matchMonsters(cell: collectionView.cellForItem(at: indexPath) as! MonsterCollectionViewCell)
+        let selectedCell = collectionView.cellForItem(at: indexPath) as! MonsterCollectionViewCell
+        saveSelectedCell(cell: selectedCell)
+        selectedCell.flipCard { [weak self] in
+            if (self?.firstSelectedItem != nil && self?.secondSelectedItem != nil) {
+                self?.matchMonsters()
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        if ((firstSelectedItem != nil) && (secondSelectedItem != nil)) {
-            return false
+        if ((firstSelectedItem == nil) || ((secondSelectedItem == nil) && firstSelectedItem != collectionView.cellForItem(at: indexPath))) {
+            return true
         }
-        return true
+        return false
     }
 }
 extension MonsterGameViewController: UICollectionViewDelegateFlowLayout {
