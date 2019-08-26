@@ -53,7 +53,7 @@ class MonsterGameFlow {
         master?.router?.presentModalChild(viewController: controller)
     }
     
-    private func openResult(result: Double) {
+    private func openResult(result: Int) {
         //open result screen
     }
     

@@ -26,29 +26,29 @@ class MonsterGameViewController: GameViewController {
         }
     }
     private var timer = Timer()
-    private var seconds = 0.0 {
+    private var seconds = 0 {
         didSet {
-            timerBtn.setTitle(timeString(time: seconds), for: .normal)
+            timerBtn.setTitle(timeString(time: Double(seconds)), for: .normal)
             if (seconds >= limit) {
                 timerBtn.setTitleColor(UIColor.Button.redTwo, for: .normal)
             }
         }
     }
-    private var limit: Double {
+    private var limit: Int {
         get {
             switch input.game.difficulty {
             case .easy:
-                return 60.0
+                return 60
             case .medium:
-                return 180.0
+                return 180
             case .hard:
-                return 300.0
+                return 300
             }
         }
     }
     
     struct Output {
-        let openResults: (Double) -> Void
+        let openResults: (Int) -> Void
     }
     
     struct Input {
