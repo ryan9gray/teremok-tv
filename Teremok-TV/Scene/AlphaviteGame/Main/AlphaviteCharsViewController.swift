@@ -70,7 +70,14 @@ class AlphaviteCharsViewController: GameViewController {
         imageContainer.velocity =  0.6
         imageContainer.animate()
     }
-    
+
+    private func setWord(_ text: String) {
+        wordLabel.text = text
+        let attributedWord = NSMutableAttributedString(string: text, attributes: Styles.TextAttributes.alphabetWord)
+        attributedWord.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSRange(location: 0,length: 1))
+        wordLabel.attributedText = attributedWord
+    }
+
     private func nextChar() {
         guard let char = input.chars.popLast() else {
             finish()
@@ -113,7 +120,8 @@ class AlphaviteCharsViewController: GameViewController {
 
             imagewView.image = UIImage(named: word) ?? #imageLiteral(resourceName: "icDotes")
             animateImage()
-            wordLabel.text = AlphaviteMaster.Names[word]
+            let wordName = AlphaviteMaster.Names[word] ?? "..."
+            setWord(wordName)
 
             playSounds(gameHelper.getSounds(name: word)) {
                 getWord()

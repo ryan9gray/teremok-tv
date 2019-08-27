@@ -27,18 +27,18 @@ enum Styles {
             .font: Font.alphaviteMain
         ]
         static let alpavitreChar: [NSAttributedString.Key: Any] = [
-            .font: Font.alphaviteMain
+            .font: Font.istokWeb
         ]
         static let gameList: [NSAttributedString.Key: Any] = [
             .font: Font.alphaviteMain(size: 32.0),
             .foregroundColor: UIColor.white
         ]
         static let alphabetWordRed: [NSAttributedString.Key: Any] = [
-            .font: Font.alphaviteMain(size: 24.0),
+            .font: Font.istokWeb(size: 24.0),
             .foregroundColor: UIColor.red,
         ]
         static let alphabetWord: [NSAttributedString.Key: Any] = [
-            .font: Font.helveticaBold(size: 24.0),
+            .font: Font.istokWeb(size: 24.0),
             .foregroundColor: UIColor.Alphavite.Button.blueTwo,
         ]
     }
@@ -58,8 +58,8 @@ enum Styles {
                 return UIFont.systemFont(ofSize: size, weight: .regular)
             }
         }
-        static func montsserat(size: CGFloat) -> UIFont {
-            if let font = UIFont(name: "Montserrat Alternates-Regular", size: size) {
+        static func istokWeb(size: CGFloat) -> UIFont {
+            if let font = UIFont(name: "IstokWeb-Bold", size: size) {
                 return font
             } else {
                 return UIFont.systemFont(ofSize: size, weight: .regular)

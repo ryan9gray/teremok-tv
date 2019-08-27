@@ -102,7 +102,7 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
         if LocalStore.monsterTip < 3 {
             LocalStore.monsterTip += 1
             var preferences = EasyTipView.Preferences()
-            preferences.drawing.font = Styles.Font.montsserat(size: 16)
+            preferences.drawing.font = Styles.Font.istokWeb(size: 16)
             preferences.drawing.foregroundColor = UIColor.View.titleText
             preferences.drawing.backgroundColor = .white
             preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
