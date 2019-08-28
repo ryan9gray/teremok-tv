@@ -122,11 +122,15 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
     }
     
     func openSettings() {
-        output.openSettings()
+        dismiss(animated: true) {
+            self.output.openSettings()
+        }
     }
 
     func openAutorization() {
-        output.openAuthorization()
+        dismiss(animated: true) {
+            self.output.openAuthorization()
+        }
     }
 
     deinit {

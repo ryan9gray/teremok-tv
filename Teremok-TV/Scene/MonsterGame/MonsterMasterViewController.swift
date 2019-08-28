@@ -37,13 +37,17 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
         var openSettings: () -> Void
         var openAuthorization: () -> Void
     }
-    
+
     func openSettings() {
-        output.openSettings()
+        dismiss(animated: true) {
+            self.output.openSettings()
+        }
     }
-    
+
     func openAutorization() {
-        output.openAuthorization()
+        dismiss(animated: true) {
+            self.output.openAuthorization()
+        }
     }
     
     // MARK: Object lifecycle
