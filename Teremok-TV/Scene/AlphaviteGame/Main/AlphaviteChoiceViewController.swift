@@ -43,6 +43,8 @@ class AlphaviteChoiceViewController: GameViewController {
 
     private let gameHelper = AlphabetGameHelper()
     private var audioPlayer = AVAudioPlayer()
+    private var pickPlayer = AVAudioPlayer()
+
     private var timer = Timer()
     private let limit: CGFloat = 30.0
     private var progress: CGFloat {
@@ -180,7 +182,9 @@ class AlphaviteChoiceViewController: GameViewController {
         let cross = gameHelper.drawCross(view)
         if isRight {
             points += 1
+            playSounds(AlphaviteMaster.Sound.rightAnswer.url) {}
         } else {
+            playSounds(AlphaviteMaster.Sound.wrongAnswer.url) {}
             view.layer.addSublayer(cross)
         }
         imageContainer.borderColor = isRight ? UIColor.Alphavite.Button.greenTwo : UIColor.Alphavite.Button.redTwo
@@ -243,6 +247,12 @@ class AlphaviteChoiceViewController: GameViewController {
     // MARK: Pick Animation
 
     private func movePick(side: GameModel.Option, completion: @escaping (Bool) -> Void) {
+        do {
+            pickPlayer = try AVAudioPlayer(contentsOf: AlphaviteMaster.Sound.pickDriveTo.url)
+        } catch {
+            print("no file)")
+        }
+        pickPlayer.play()
         let name = AlphaviteMaster.PickAnimations.end.rawValue
         pickAnimationView.animation = Animation.named(name)
         pickAnimationView.loopMode = .loop
@@ -264,7 +274,10 @@ class AlphaviteChoiceViewController: GameViewController {
         UIView.animate(withDuration: 1.0, animations: {
                 self.pickPlace.constant = position
                 self.view.layoutIfNeeded()
-        }, completion: { _ in
+        }, completion: { [weak self] _ in
+            guard let self = self else { return }
+
+            self.pickPlayer.stop()
             self.pickReaction(isHappy: self.cheack(answer: side), complition: { _ in
                 self.hidePick(side: side, completion: completion)
             })
@@ -272,6 +285,12 @@ class AlphaviteChoiceViewController: GameViewController {
     }
 
     private func hidePick(side: GameModel.Option, completion: @escaping (Bool) -> Void) {
+        do {
+            pickPlayer = try AVAudioPlayer(contentsOf: AlphaviteMaster.Sound.pickDriveFrom.url)
+        } catch {
+            print("no file)")
+        }
+        pickPlayer.play()
         let name = AlphaviteMaster.PickAnimations.end.rawValue
         pickAnimationView.animation = Animation.named(name)
         pickAnimationView.loopMode = .loop
@@ -287,7 +306,10 @@ class AlphaviteChoiceViewController: GameViewController {
         UIView.animate(withDuration: 1.0, animations: {
                 self.pickPlace.constant = position
                 self.view.layoutIfNeeded()
-        }, completion: completion)
+        }, completion: { [weak self] _ in
+            self?.pickPlayer.stop()
+            completion(true)
+        })
     }
 
     private func pickReaction(isHappy: Bool, complition: @escaping (Bool) -> Void) {

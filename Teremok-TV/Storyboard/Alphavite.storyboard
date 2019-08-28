@@ -13,14 +13,14 @@
         <array key="Foo.ttf">
             <string>Foo-Regular</string>
         </array>
+        <array key="IstokWeb-Bold.ttf">
+            <string>IstokWeb-Bold</string>
+        </array>
         <array key="MontserratAlternates-ExtraBold.ttf">
             <string>MontserratAlternates-ExtraBold</string>
         </array>
         <array key="MontserratAlternates-Medium.ttf">
             <string>MontserratAlternates-Medium</string>
-        </array>
-        <array key="ariblk.ttf">
-            <string>Arial-Black</string>
         </array>
     </customFonts>
     <scenes>
@@ -117,7 +117,7 @@
                                             <constraint firstAttribute="height" constant="194" id="Tna-wv-1AN"/>
                                             <constraint firstAttribute="width" constant="195" id="yyH-vs-OZV"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Arial-Black" family="Arial" pointSize="160"/>
+                                        <fontDescription key="fontDescription" name="IstokWeb-Bold" family="Istok Web" pointSize="160"/>
                                         <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="shadowColor" white="0.0" alpha="0.16839529455632188" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,8 +131,8 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovf-3P-aqo">
-                                                <rect key="frame" x="60" y="161" width="75.5" height="29"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                                <rect key="frame" x="61.5" y="155" width="72" height="35"/>
+                                                <fontDescription key="fontDescription" name="IstokWeb-Bold" family="Istok Web" pointSize="24"/>
                                                 <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -220,7 +220,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjl-Wx-ske" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="198.5" y="208" width="270" height="60"/>
+                                <rect key="frame" x="198.5" y="36" width="270" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="XtD-FH-CJ7"/>
                                     <constraint firstAttribute="height" constant="60" id="hKz-1n-Igj"/>
@@ -241,10 +241,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-alphaviteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="BWD-Ar-XJG">
-                                <rect key="frame" x="174" y="10" width="319" height="188"/>
+                                <rect key="frame" x="325.5" y="10" width="16" height="16"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQ2-ta-1cb" customClass="TTSegmentedControl" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="203.5" y="278" width="260" height="48"/>
+                                <rect key="frame" x="203.5" y="106" width="260" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="CSX-yC-vVi"/>
@@ -441,7 +441,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="118"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Знает хорошо" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRk-Rx-5Yp">
-                                                <rect key="frame" x="31" y="0.0" width="108" height="16"/>
+                                                <rect key="frame" x="42" y="0.0" width="86.5" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="Vyz-ZG-Qso"/>
                                                 </constraints>
@@ -510,7 +510,7 @@
                                         <rect key="frame" x="180" y="0.0" width="170" height="118"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нужно подучить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZ0-LC-mEW">
-                                                <rect key="frame" x="21" y="0.0" width="128.5" height="16"/>
+                                                <rect key="frame" x="35" y="0.0" width="100.5" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="BcT-fp-dq8"/>
                                                 </constraints>
@@ -656,7 +656,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="195" id="Kqk-S3-SWw"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial" pointSize="150"/>
+                                                <fontDescription key="fontDescription" name="IstokWeb-Bold" family="Istok Web" pointSize="150"/>
                                                 <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="shadowColor" white="0.0" alpha="0.1821569684068966" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -696,8 +696,8 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цветы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4R-xX-V17">
-                                                <rect key="frame" x="5" y="161" width="185" height="29"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                                <rect key="frame" x="5" y="155" width="185" height="35"/>
+                                                <fontDescription key="fontDescription" name="IstokWeb-Bold" family="Istok Web" pointSize="24"/>
                                                 <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -735,7 +735,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="195" id="gPy-ds-So0"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Arial-Black" family="Arial" pointSize="150"/>
+                                                <fontDescription key="fontDescription" name="IstokWeb-Bold" family="Istok Web" pointSize="150"/>
                                                 <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="shadowColor" white="0.0" alpha="0.18186512214252878" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -817,7 +817,7 @@
                                 <rect key="frame" x="543" y="20" width="84" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLK-UP-9Qd">
-                                        <rect key="frame" x="21" y="2" width="22" height="27"/>
+                                        <rect key="frame" x="23" y="2" width="18" height="28"/>
                                         <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -825,7 +825,7 @@
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="очков" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tv-0s-AF5">
-                                        <rect key="frame" x="13" y="32" width="38.5" height="16"/>
+                                        <rect key="frame" x="15" y="33" width="34" height="15"/>
                                         <fontDescription key="fontDescription" name="MontserratAlternates-Medium" family="Montserrat Alternates" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

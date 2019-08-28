@@ -9,10 +9,12 @@
 import Foundation
 
 enum BackendError: Error, LocalizedError {
-    case network(error: Error)
+    case network(Error)
     case jsonSerialization(error: Error)
     case objectSerialization(reason: String)
-    
+    case unreachable(Error)
+    case badUrl
+
     var errorDescription: String? {
         switch self {
         case .network:
@@ -21,8 +23,20 @@ enum BackendError: Error, LocalizedError {
             return "Неверный формат входящих данных"
         case .objectSerialization:
             return "Сервис недоступен. Попробуйте, пожалуйста, позднее."
+        case .unreachable(_):
+            return "Нет интернет соединения."
+        case .badUrl:
+            return "Неверный адрес"
         }
     }
+}
+
+public enum HttpError: Error {
+    case nonHttpResponse(response: URLResponse)
+    case badUrl
+    case error(Error)
+    case status(code: Int, error: Error?)
+    case serialization
 }
 
 enum BackendInternalError: Error, LocalizedError {

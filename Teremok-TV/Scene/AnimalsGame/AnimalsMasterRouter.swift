@@ -50,15 +50,6 @@ class AnimalsMasterRouter: AnimalsMasterRoutingLogic, AnimalsMasterDataPassing {
         return viewController
     }
     var modalChildVC: GameViewController?
-
-    func introduceController<T: GameViewController>(viewController: T, completion: @escaping () -> Void)
-        where T: IntroduceViewController {
-            viewController.setAction {
-                completion()
-            }
-            presentModalChild(viewController: viewController)
-    }
-
     var childControllersStack = Stack<GameViewController>()
 
     func pushChild(_ vc: GameViewController){
