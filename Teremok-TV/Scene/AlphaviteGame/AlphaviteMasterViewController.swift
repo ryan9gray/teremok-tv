@@ -66,7 +66,11 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
     }
 
     @IBAction private func homeClick(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if router?.canPop() ?? false {
+            router?.popChild()
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
     }
 
     override func viewDidLoad() {
@@ -91,7 +95,7 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
         if LocalStore.alphabetTip < 3 {
             LocalStore.alphabetTip += 1
             var preferences = EasyTipView.Preferences()
-            preferences.drawing.font = Styles.Font.montsserat(size: 16)
+            preferences.drawing.font = Styles.Font.istokWeb(size: 16)
             preferences.drawing.foregroundColor = UIColor.View.titleText
             preferences.drawing.backgroundColor = .white
             preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
@@ -118,11 +122,15 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
     }
     
     func openSettings() {
-        output.openSettings()
+        dismiss(animated: true) {
+            self.output.openSettings()
+        }
     }
 
     func openAutorization() {
-        output.openAuthorization()
+        dismiss(animated: true) {
+            self.output.openAuthorization()
+        }
     }
 
     deinit {

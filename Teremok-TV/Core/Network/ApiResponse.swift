@@ -9,7 +9,6 @@
 import SwiftyJSON
 
 class ApiResponse {
-    var baseError: Error?
     var restError: BackendError?
     var jsonError: BackendInternalError?
     var resultJson: JSON!
@@ -17,7 +16,7 @@ class ApiResponse {
     var data: Data?
     
     var error: Error? {
-        return jsonError ?? restError ?? baseError
+        return jsonError ?? restError
     }
     
     var responseString: String? {
@@ -71,14 +70,23 @@ class ApiResponse {
             return fullJson
         }
     }
+
+    func processICError(_ error: Error) -> BackendError {
+        let urlError = error as NSError
+        guard urlError.domain == NSURLErrorDomain else { return BackendError.network(error) }
+
+        switch urlError.code {
+        case NSURLErrorTimedOut, NSURLErrorCannotFindHost, NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost,
+             NSURLErrorDNSLookupFailed, NSURLErrorNotConnectedToInternet:
+            return BackendError.unreachable(error)
+        default:
+            return BackendError.network(error)
+        }
+    }
     
     init(response: HTTPURLResponse?, data: Data?, error: Error?) {
         if let error = error {
-            if (error as NSError).code == NSURLErrorCancelled {
-                baseError = NSError(domain: "NSURLErrorCancelled", code: NSURLErrorCancelled, userInfo: [NSLocalizedDescriptionKey: "Не удалось завершить операцию. Попробуйте, пожалуйста, позже."])
-                return
-            }
-            self.baseError = error
+            restError = processICError(error)
             return
         } else {
             guard let httpResponse = response,

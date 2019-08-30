@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AlphaviteStartViewController: GameViewController {
     @IBOutlet private var startButton: KeyButton!
@@ -15,6 +16,7 @@ class AlphaviteStartViewController: GameViewController {
         masterRouter?.startFlow(0)
     }
     @IBOutlet private var segmentController: TTSegmentedControl!
+    var audioPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +33,23 @@ class AlphaviteStartViewController: GameViewController {
             }
         }
         segmentController.selectItemAt(index: LocalStore.alphaviteIsHard ? 1 : 0)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: AlphaviteMaster.Sound.main.url)
+            audioPlayer.prepareToPlay()
+        } catch {
+            print("no file)")
+        }
+        audioPlayer.play()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        audioPlayer.stop()
     }
 }

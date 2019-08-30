@@ -61,22 +61,7 @@
 		CA19C46A22F5E3BD0011E4DF /* AlphaviteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA19C46922F5E3BD0011E4DF /* AlphaviteControl.swift */; };
 		CA1AB64022ECC284003A2584 /* EventsLogCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB63F22ECC284003A2584 /* EventsLogCommand.swift */; };
 		CA1AB64222F188B5003A2584 /* Alphavite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64122F188B5003A2584 /* Alphavite.storyboard */; };
-		CA1AB65322F1ABA7003A2584 /* MontserratAlternates-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64322F1ABA4003A2584 /* MontserratAlternates-Italic.ttf */; };
-		CA1AB65422F1ABA7003A2584 /* MontserratAlternates-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64422F1ABA4003A2584 /* MontserratAlternates-Medium.ttf */; };
-		CA1AB65522F1ABA7003A2584 /* MontserratAlternates-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64522F1ABA4003A2584 /* MontserratAlternates-ExtraBold.ttf */; };
-		CA1AB65622F1ABA7003A2584 /* MontserratAlternates-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64622F1ABA4003A2584 /* MontserratAlternates-MediumItalic.ttf */; };
-		CA1AB65722F1ABA7003A2584 /* MontserratAlternates-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64722F1ABA5003A2584 /* MontserratAlternates-ExtraLight.ttf */; };
-		CA1AB65822F1ABA7003A2584 /* MontserratAlternates-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64822F1ABA5003A2584 /* MontserratAlternates-Regular.ttf */; };
-		CA1AB65922F1ABA7003A2584 /* MontserratAlternates-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64922F1ABA5003A2584 /* MontserratAlternates-Thin.ttf */; };
-		CA1AB65A22F1ABA7003A2584 /* MontserratAlternates-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64A22F1ABA5003A2584 /* MontserratAlternates-SemiBoldItalic.ttf */; };
-		CA1AB65B22F1ABA7003A2584 /* MontserratAlternates-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64B22F1ABA5003A2584 /* MontserratAlternates-LightItalic.ttf */; };
-		CA1AB65C22F1ABA7003A2584 /* MontserratAlternates-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64C22F1ABA6003A2584 /* MontserratAlternates-Light.ttf */; };
 		CA1AB65D22F1ABA7003A2584 /* Shnobel-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64D22F1ABA6003A2584 /* Shnobel-Regular.otf */; };
-		CA1AB65E22F1ABA7003A2584 /* MontserratAlternates-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64E22F1ABA6003A2584 /* MontserratAlternates-BoldItalic.ttf */; };
-		CA1AB65F22F1ABA7003A2584 /* MontserratAlternates-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB64F22F1ABA6003A2584 /* MontserratAlternates-ThinItalic.ttf */; };
-		CA1AB66022F1ABA7003A2584 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB65022F1ABA6003A2584 /* MontserratAlternates-ExtraLightItalic.ttf */; };
-		CA1AB66122F1ABA7003A2584 /* MontserratAlternates-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB65122F1ABA6003A2584 /* MontserratAlternates-ExtraBoldItalic.ttf */; };
-		CA1AB66222F1ABA7003A2584 /* MontserratAlternates-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA1AB65222F1ABA6003A2584 /* MontserratAlternates-SemiBold.ttf */; };
 		CA1AB66522F30CE4003A2584 /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1AB66422F30CE4003A2584 /* GamesListViewController.swift */; };
 		CA1C37AC214E5A7C00C8006D /* MasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C37A6214E5A7C00C8006D /* MasterPresenter.swift */; };
 		CA1C37AE214E5A7C00C8006D /* MasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C37A8214E5A7C00C8006D /* MasterRouter.swift */; };
@@ -503,6 +488,31 @@
 		CAD16DF12147F68400A82DBB /* SwithChildeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD16DF02147F68400A82DBB /* SwithChildeCommand.swift */; };
 		CAD16DF32147F7DC00A82DBB /* GetProfileCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD16DF22147F7DC00A82DBB /* GetProfileCommand.swift */; };
 		CAD16DF52147F83A00A82DBB /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD16DF42147F83A00A82DBB /* ProfileResponse.swift */; };
+		CAD2102A2315BAD0006F2F08 /* IstokWeb-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD210262315BACF006F2F08 /* IstokWeb-BoldItalic.ttf */; };
+		CAD2102B2315BAD0006F2F08 /* IstokWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD210272315BACF006F2F08 /* IstokWeb-Italic.ttf */; };
+		CAD2102C2315BAD0006F2F08 /* IstokWeb-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD210282315BAD0006F2F08 /* IstokWeb-Bold.ttf */; };
+		CAD2102D2315BAD0006F2F08 /* IstokWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD210292315BAD0006F2F08 /* IstokWeb-Regular.ttf */; };
+		CAD2103D231700DC006F2F08 /* MontserratAlternates-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD2102E231700DB006F2F08 /* MontserratAlternates-Light.ttf */; };
+		CAD2103E231700DC006F2F08 /* MontserratAlternates-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD2102F231700DB006F2F08 /* MontserratAlternates-Regular.ttf */; };
+		CAD2103F231700DC006F2F08 /* MontserratAlternates-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD21030231700DB006F2F08 /* MontserratAlternates-LightItalic.ttf */; };
+		CAD21040231700DC006F2F08 /* MontserratAlternates-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD21031231700DB006F2F08 /* MontserratAlternates-SemiBold.ttf */; };
+		CAD21041231700DC006F2F08 /* MontserratAlternates-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD21032231700DB006F2F08 /* MontserratAlternates-SemiBoldItalic.ttf */; };
+		CAD21042231700DC006F2F08 /* MontserratAlternates-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD21033231700DB006F2F08 /* MontserratAlternates-ExtraLight.ttf */; };
+		CAD21043231700DC006F2F08 /* MontserratAlternates-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD21034231700DB006F2F08 /* MontserratAlternates-ExtraBold.ttf */; };
+		CAD21044231700DC006F2F08 /* MontserratAlternates-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD21035231700DB006F2F08 /* MontserratAlternates-ExtraBoldItalic.ttf */; };
+		CAD21045231700DC006F2F08 /* MontserratAlternates-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD21036231700DC006F2F08 /* MontserratAlternates-Thin.ttf */; };
+		CAD21046231700DC006F2F08 /* MontserratAlternates-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD21037231700DC006F2F08 /* MontserratAlternates-MediumItalic.ttf */; };
+		CAD21047231700DC006F2F08 /* MontserratAlternates-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD21038231700DC006F2F08 /* MontserratAlternates-Italic.ttf */; };
+		CAD21048231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD21039231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf */; };
+		CAD21049231700DC006F2F08 /* MontserratAlternates-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD2103A231700DC006F2F08 /* MontserratAlternates-ThinItalic.ttf */; };
+		CAD2104A231700DC006F2F08 /* MontserratAlternates-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD2103B231700DC006F2F08 /* MontserratAlternates-Medium.ttf */; };
+		CAD2104B231700DD006F2F08 /* MontserratAlternates-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD2103C231700DC006F2F08 /* MontserratAlternates-BoldItalic.ttf */; };
+		CAD2105223170C69006F2F08 /* alphabetPickMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104C23170C68006F2F08 /* alphabetPickMain.wav */; };
+		CAD2105323170C69006F2F08 /* pickDriveFrom.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104D23170C68006F2F08 /* pickDriveFrom.wav */; };
+		CAD2105423170C69006F2F08 /* pickDriveTo.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104E23170C68006F2F08 /* pickDriveTo.wav */; };
+		CAD2105523170C69006F2F08 /* alphabetButton.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104F23170C68006F2F08 /* alphabetButton.wav */; };
+		CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105023170C68006F2F08 /* alphabetRight.wav */; };
+		CAD2105723170C69006F2F08 /* alphabetWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105123170C68006F2F08 /* alphabetWrong.wav */; };
 		CAD90EB122AC71AB004D74BD /* AnimalPackDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB022AC71AB004D74BD /* AnimalPackDownloader.swift */; };
 		CAD90EB322B13636004D74BD /* AnimalsGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB222B13636004D74BD /* AnimalsGetStatCommand.swift */; };
 		CAD90EB522B13644004D74BD /* AnimalsSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB422B13644004D74BD /* AnimalsSendStatCommand.swift */; };
@@ -801,22 +811,7 @@
 		CA19C46922F5E3BD0011E4DF /* AlphaviteControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteControl.swift; sourceTree = "<group>"; };
 		CA1AB63F22ECC284003A2584 /* EventsLogCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsLogCommand.swift; sourceTree = "<group>"; };
 		CA1AB64122F188B5003A2584 /* Alphavite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alphavite.storyboard; sourceTree = "<group>"; };
-		CA1AB64322F1ABA4003A2584 /* MontserratAlternates-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Italic.ttf"; sourceTree = "<group>"; };
-		CA1AB64422F1ABA4003A2584 /* MontserratAlternates-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Medium.ttf"; sourceTree = "<group>"; };
-		CA1AB64522F1ABA4003A2584 /* MontserratAlternates-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraBold.ttf"; sourceTree = "<group>"; };
-		CA1AB64622F1ABA4003A2584 /* MontserratAlternates-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-MediumItalic.ttf"; sourceTree = "<group>"; };
-		CA1AB64722F1ABA5003A2584 /* MontserratAlternates-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraLight.ttf"; sourceTree = "<group>"; };
-		CA1AB64822F1ABA5003A2584 /* MontserratAlternates-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Regular.ttf"; sourceTree = "<group>"; };
-		CA1AB64922F1ABA5003A2584 /* MontserratAlternates-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Thin.ttf"; sourceTree = "<group>"; };
-		CA1AB64A22F1ABA5003A2584 /* MontserratAlternates-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		CA1AB64B22F1ABA5003A2584 /* MontserratAlternates-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-LightItalic.ttf"; sourceTree = "<group>"; };
-		CA1AB64C22F1ABA6003A2584 /* MontserratAlternates-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Light.ttf"; sourceTree = "<group>"; };
 		CA1AB64D22F1ABA6003A2584 /* Shnobel-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shnobel-Regular.otf"; sourceTree = "<group>"; };
-		CA1AB64E22F1ABA6003A2584 /* MontserratAlternates-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-BoldItalic.ttf"; sourceTree = "<group>"; };
-		CA1AB64F22F1ABA6003A2584 /* MontserratAlternates-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ThinItalic.ttf"; sourceTree = "<group>"; };
-		CA1AB65022F1ABA6003A2584 /* MontserratAlternates-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		CA1AB65122F1ABA6003A2584 /* MontserratAlternates-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		CA1AB65222F1ABA6003A2584 /* MontserratAlternates-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBold.ttf"; sourceTree = "<group>"; };
 		CA1AB66422F30CE4003A2584 /* GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
 		CA1C37A6214E5A7C00C8006D /* MasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterPresenter.swift; sourceTree = "<group>"; };
 		CA1C37A8214E5A7C00C8006D /* MasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterRouter.swift; sourceTree = "<group>"; };
@@ -1248,6 +1243,31 @@
 		CAD16DF02147F68400A82DBB /* SwithChildeCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwithChildeCommand.swift; sourceTree = "<group>"; };
 		CAD16DF22147F7DC00A82DBB /* GetProfileCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileCommand.swift; sourceTree = "<group>"; };
 		CAD16DF42147F83A00A82DBB /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
+		CAD210262315BACF006F2F08 /* IstokWeb-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IstokWeb-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CAD210272315BACF006F2F08 /* IstokWeb-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IstokWeb-Italic.ttf"; sourceTree = "<group>"; };
+		CAD210282315BAD0006F2F08 /* IstokWeb-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IstokWeb-Bold.ttf"; sourceTree = "<group>"; };
+		CAD210292315BAD0006F2F08 /* IstokWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IstokWeb-Regular.ttf"; sourceTree = "<group>"; };
+		CAD2102E231700DB006F2F08 /* MontserratAlternates-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Light.ttf"; sourceTree = "<group>"; };
+		CAD2102F231700DB006F2F08 /* MontserratAlternates-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Regular.ttf"; sourceTree = "<group>"; };
+		CAD21030231700DB006F2F08 /* MontserratAlternates-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-LightItalic.ttf"; sourceTree = "<group>"; };
+		CAD21031231700DB006F2F08 /* MontserratAlternates-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBold.ttf"; sourceTree = "<group>"; };
+		CAD21032231700DB006F2F08 /* MontserratAlternates-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		CAD21033231700DB006F2F08 /* MontserratAlternates-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CAD21034231700DB006F2F08 /* MontserratAlternates-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CAD21035231700DB006F2F08 /* MontserratAlternates-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		CAD21036231700DC006F2F08 /* MontserratAlternates-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Thin.ttf"; sourceTree = "<group>"; };
+		CAD21037231700DC006F2F08 /* MontserratAlternates-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-MediumItalic.ttf"; sourceTree = "<group>"; };
+		CAD21038231700DC006F2F08 /* MontserratAlternates-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Italic.ttf"; sourceTree = "<group>"; };
+		CAD21039231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		CAD2103A231700DC006F2F08 /* MontserratAlternates-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ThinItalic.ttf"; sourceTree = "<group>"; };
+		CAD2103B231700DC006F2F08 /* MontserratAlternates-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Medium.ttf"; sourceTree = "<group>"; };
+		CAD2103C231700DC006F2F08 /* MontserratAlternates-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CAD2104C23170C68006F2F08 /* alphabetPickMain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphabetPickMain.wav; sourceTree = "<group>"; };
+		CAD2104D23170C68006F2F08 /* pickDriveFrom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pickDriveFrom.wav; sourceTree = "<group>"; };
+		CAD2104E23170C68006F2F08 /* pickDriveTo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pickDriveTo.wav; sourceTree = "<group>"; };
+		CAD2104F23170C68006F2F08 /* alphabetButton.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphabetButton.wav; sourceTree = "<group>"; };
+		CAD2105023170C68006F2F08 /* alphabetRight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphabetRight.wav; sourceTree = "<group>"; };
+		CAD2105123170C68006F2F08 /* alphabetWrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphabetWrong.wav; sourceTree = "<group>"; };
 		CAD90EB022AC71AB004D74BD /* AnimalPackDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPackDownloader.swift; sourceTree = "<group>"; };
 		CAD90EB222B13636004D74BD /* AnimalsGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsGetStatCommand.swift; sourceTree = "<group>"; };
 		CAD90EB422B13644004D74BD /* AnimalsSendStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsSendStatCommand.swift; sourceTree = "<group>"; };
@@ -1678,6 +1698,12 @@
 		CA51004622F6EACE00821C25 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				CAD2104F23170C68006F2F08 /* alphabetButton.wav */,
+				CAD2104C23170C68006F2F08 /* alphabetPickMain.wav */,
+				CAD2105023170C68006F2F08 /* alphabetRight.wav */,
+				CAD2105123170C68006F2F08 /* alphabetWrong.wav */,
+				CAD2104D23170C68006F2F08 /* pickDriveFrom.wav */,
+				CAD2104E23170C68006F2F08 /* pickDriveTo.wav */,
 				CA51004722F6EACE00821C25 /* alphavite_3_word_1.wav */,
 				CA51004822F6EACE00821C25 /* alphavite_33.wav */,
 				CA51004922F6EACE00821C25 /* alphavite_27.wav */,
@@ -1890,24 +1916,28 @@
 		CA61D86C229ACBB300E3D603 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				CAD2103C231700DC006F2F08 /* MontserratAlternates-BoldItalic.ttf */,
+				CAD21034231700DB006F2F08 /* MontserratAlternates-ExtraBold.ttf */,
+				CAD21035231700DB006F2F08 /* MontserratAlternates-ExtraBoldItalic.ttf */,
+				CAD21033231700DB006F2F08 /* MontserratAlternates-ExtraLight.ttf */,
+				CAD21039231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf */,
+				CAD21038231700DC006F2F08 /* MontserratAlternates-Italic.ttf */,
+				CAD2102E231700DB006F2F08 /* MontserratAlternates-Light.ttf */,
+				CAD21030231700DB006F2F08 /* MontserratAlternates-LightItalic.ttf */,
+				CAD2103B231700DC006F2F08 /* MontserratAlternates-Medium.ttf */,
+				CAD21037231700DC006F2F08 /* MontserratAlternates-MediumItalic.ttf */,
+				CAD2102F231700DB006F2F08 /* MontserratAlternates-Regular.ttf */,
+				CAD21031231700DB006F2F08 /* MontserratAlternates-SemiBold.ttf */,
+				CAD21032231700DB006F2F08 /* MontserratAlternates-SemiBoldItalic.ttf */,
+				CAD21036231700DC006F2F08 /* MontserratAlternates-Thin.ttf */,
+				CAD2103A231700DC006F2F08 /* MontserratAlternates-ThinItalic.ttf */,
+				CAD210282315BAD0006F2F08 /* IstokWeb-Bold.ttf */,
+				CAD210262315BACF006F2F08 /* IstokWeb-BoldItalic.ttf */,
+				CAD210272315BACF006F2F08 /* IstokWeb-Italic.ttf */,
+				CAD210292315BAD0006F2F08 /* IstokWeb-Regular.ttf */,
 				CAAD25EB22F5A464005CFCD2 /* Foo.ttf */,
 				CAAD25EA22F5A463005CFCD2 /* Glober Black.otf */,
-				CA1AB64E22F1ABA6003A2584 /* MontserratAlternates-BoldItalic.ttf */,
-				CA1AB64522F1ABA4003A2584 /* MontserratAlternates-ExtraBold.ttf */,
-				CA1AB65122F1ABA6003A2584 /* MontserratAlternates-ExtraBoldItalic.ttf */,
-				CA1AB64722F1ABA5003A2584 /* MontserratAlternates-ExtraLight.ttf */,
-				CA1AB65022F1ABA6003A2584 /* MontserratAlternates-ExtraLightItalic.ttf */,
-				CA1AB64322F1ABA4003A2584 /* MontserratAlternates-Italic.ttf */,
 				CA56D0C52302A424006298C5 /* ariblk.ttf */,
-				CA1AB64C22F1ABA6003A2584 /* MontserratAlternates-Light.ttf */,
-				CA1AB64B22F1ABA5003A2584 /* MontserratAlternates-LightItalic.ttf */,
-				CA1AB64422F1ABA4003A2584 /* MontserratAlternates-Medium.ttf */,
-				CA1AB64622F1ABA4003A2584 /* MontserratAlternates-MediumItalic.ttf */,
-				CA1AB64822F1ABA5003A2584 /* MontserratAlternates-Regular.ttf */,
-				CA1AB65222F1ABA6003A2584 /* MontserratAlternates-SemiBold.ttf */,
-				CA1AB64A22F1ABA5003A2584 /* MontserratAlternates-SemiBoldItalic.ttf */,
-				CA1AB64922F1ABA5003A2584 /* MontserratAlternates-Thin.ttf */,
-				CA1AB64F22F1ABA6003A2584 /* MontserratAlternates-ThinItalic.ttf */,
 				CA1AB64D22F1ABA6003A2584 /* Shnobel-Regular.otf */,
 				CA52DF212290683300458EE5 /* appetite.ttf */,
 				CA52DF222290683400458EE5 /* Shnobeloblique.ttf */,
@@ -3146,6 +3176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA5100CA22F6EACF00821C25 /* alphavite_9.wav in Resources */,
+				CAD2103D231700DC006F2F08 /* MontserratAlternates-Light.ttf in Resources */,
 				CAC6F72622A81BC000756AE2 /* ready_r_4.wav in Resources */,
 				CAF961EC22995FF3006E3046 /* animal_11.pdf in Resources */,
 				CAAD25EC22F5A464005CFCD2 /* Glober Black.otf in Resources */,
@@ -3154,9 +3185,9 @@
 				CA5100E722F6EACF00821C25 /* alphavite_6.wav in Resources */,
 				CAF961B322995FF3006E3046 /* animal_47.pdf in Resources */,
 				CADD14B823107F7C00AE920A /* cloud_main.json in Resources */,
-				CA1AB65C22F1ABA7003A2584 /* MontserratAlternates-Light.ttf in Resources */,
 				CA51E1C522FEC8C60028DF63 /* start_Pick.json in Resources */,
 				CA5100BE22F6EACF00821C25 /* alphavite_22.wav in Resources */,
+				CAD21047231700DC006F2F08 /* MontserratAlternates-Italic.ttf in Resources */,
 				CAF961F622995FF3006E3046 /* animal_34.mp3 in Resources */,
 				CA5100C322F6EACF00821C25 /* alphavite_23_word_2.wav in Resources */,
 				CA4C28C621451D9200CA264D /* VideoCollectionViewCell.xib in Resources */,
@@ -3174,9 +3205,7 @@
 				CA4C28D02147DFDB00CA264D /* music.json in Resources */,
 				CAF961E222995FF3006E3046 /* animal_26.mp3 in Resources */,
 				CA0053C2213BD46900AA187F /* MainlCollectionViewCell.xib in Resources */,
-				CA1AB65B22F1ABA7003A2584 /* MontserratAlternates-LightItalic.ttf in Resources */,
 				CAF961CE22995FF3006E3046 /* animal_3.pdf in Resources */,
-				CA1AB66122F1ABA7003A2584 /* MontserratAlternates-ExtraBoldItalic.ttf in Resources */,
 				CA04863B22A845A60017B8A2 /* Round_1.json in Resources */,
 				CADD14AB2309683400AE920A /* happy_Pick.json in Resources */,
 				CAD16DEB2147E69100A82DBB /* rainbow.json in Resources */,
@@ -3187,11 +3216,11 @@
 				CA433FFA224FA8E700B0788E /* TrackCollectionViewCell.xib in Resources */,
 				CA9AA3D3218469E100019CA7 /* FavCollectionViewCell.xib in Resources */,
 				CAC6F72A22A81BC000756AE2 /* ready_r_7.wav in Resources */,
-				CA1AB65422F1ABA7003A2584 /* MontserratAlternates-Medium.ttf in Resources */,
 				CA5100CE22F6EACF00821C25 /* alphavite_26_word_1.wav in Resources */,
 				CA5100AE22F6EACF00821C25 /* alphavite_18.wav in Resources */,
 				CAF961F122995FF3006E3046 /* animal_10.pdf in Resources */,
 				CA5100DD22F6EACF00821C25 /* alphavite_12_word_2.wav in Resources */,
+				CAD2104B231700DD006F2F08 /* MontserratAlternates-BoldItalic.ttf in Resources */,
 				CA52DF252290683400458EE5 /* Shnobeloblique.ttf in Resources */,
 				CA5100FA22F6EACF00821C25 /* alphavite_14.wav in Resources */,
 				CAF9620822995FF3006E3046 /* animal_45.mp3 in Resources */,
@@ -3211,6 +3240,7 @@
 				CA5100BC22F6EACF00821C25 /* alphavite_1_1.wav in Resources */,
 				CA5100B822F6EACF00821C25 /* alphavite_21.wav in Resources */,
 				CA5100C922F6EACF00821C25 /* alphavite_19_word_2.wav in Resources */,
+				CAD2103F231700DC006F2F08 /* MontserratAlternates-LightItalic.ttf in Resources */,
 				CAF961F522995FF3006E3046 /* animal_20.mp3 in Resources */,
 				CAC6F73222A81BC000756AE2 /* fun_7.mp3 in Resources */,
 				CAF961CC22995FF3006E3046 /* animal_7.pdf in Resources */,
@@ -3222,10 +3252,11 @@
 				CA56D0C62302A424006298C5 /* ariblk.ttf in Resources */,
 				CAF9620B22995FF3006E3046 /* animal_47.mp3 in Resources */,
 				CA5100A622F6EACF00821C25 /* alphavite_3_word_1.wav in Resources */,
+				CAD21040231700DC006F2F08 /* MontserratAlternates-SemiBold.ttf in Resources */,
 				CAF961ED22995FF3006E3046 /* animal_39.pdf in Resources */,
 				CA52F372223DA1360058194E /* PlaylistCollectionViewCell.xib in Resources */,
+				CAD21044231700DC006F2F08 /* MontserratAlternates-ExtraBoldItalic.ttf in Resources */,
 				CAF9620122995FF3006E3046 /* animal_23.mp3 in Resources */,
-				CA1AB65622F1ABA7003A2584 /* MontserratAlternates-MediumItalic.ttf in Resources */,
 				CAF961CD22995FF3006E3046 /* animal_11.mp3 in Resources */,
 				CAC6F71E22A81BC000756AE2 /* click_button_2.mp3 in Resources */,
 				CADB3D7A21F7AD4D009467B8 /* day_sound.mp3 in Resources */,
@@ -3255,6 +3286,7 @@
 				CA5100B222F6EACF00821C25 /* alphavite_25.wav in Resources */,
 				CA51010422F6EACF00821C25 /* alphavite_33_word_2.wav in Resources */,
 				CA5100FF22F6EACF00821C25 /* alphavite_18_word_2.wav in Resources */,
+				CAD2102B2315BAD0006F2F08 /* IstokWeb-Italic.ttf in Resources */,
 				CAF961DC22995FF3006E3046 /* animal_23.pdf in Resources */,
 				CA8EA70F21413F0800159451 /* PreviewCollectionViewCell.xib in Resources */,
 				CA5100F722F6EACF00821C25 /* alphavite_18_word_1.wav in Resources */,
@@ -3266,13 +3298,14 @@
 				CAF961B222995FF3006E3046 /* animal_45.pdf in Resources */,
 				CA5100EC22F6EACF00821C25 /* alphavite_10_word_1.wav in Resources */,
 				CAF9620F22995FF3006E3046 /* animal_48.pdf in Resources */,
+				CAD2105523170C69006F2F08 /* alphabetButton.wav in Resources */,
 				CAF961C322995FF3006E3046 /* animal_38.mp3 in Resources */,
 				CAF961E722995FF3006E3046 /* animal_27.mp3 in Resources */,
 				CAF961E522995FF3006E3046 /* animal_5.mp3 in Resources */,
+				CAD2102D2315BAD0006F2F08 /* IstokWeb-Regular.ttf in Resources */,
 				CAF961B822995FF3006E3046 /* animal_40.pdf in Resources */,
 				CAF961C722995FF3006E3046 /* animal_18.pdf in Resources */,
 				CA896C7522933F2700ECC628 /* AnimalСompilationCollectionViewCell.xib in Resources */,
-				CA1AB65522F1ABA7003A2584 /* MontserratAlternates-ExtraBold.ttf in Resources */,
 				CAF961D622995FF3006E3046 /* animal_28.mp3 in Resources */,
 				CAA4455721578FC50023E340 /* AvatarCollectionViewCell.xib in Resources */,
 				CAF9620C22995FF3006E3046 /* animal_43.mp3 in Resources */,
@@ -3285,7 +3318,6 @@
 				CAF9620322995FF3006E3046 /* animal_17.pdf in Resources */,
 				CAAF1F1221771E4300460F58 /* Shade.json in Resources */,
 				CAF961DF22995FF3006E3046 /* animal_17.mp3 in Resources */,
-				CA1AB65922F1ABA7003A2584 /* MontserratAlternates-Thin.ttf in Resources */,
 				CAF961E022995FF3006E3046 /* animal_1.pdf in Resources */,
 				CAC6F72222A81BC000756AE2 /* ready_r_1.wav in Resources */,
 				CAF961F022995FF3006E3046 /* animal_6.mp3 in Resources */,
@@ -3301,39 +3333,40 @@
 				CA5100E622F6EACF00821C25 /* alphavite_2_word_2.wav in Resources */,
 				CA04864422A845A60017B8A2 /* Round_3.json in Resources */,
 				CAF94CCF2160BECF000E8183 /* Welcome.storyboard in Resources */,
-				CA1AB65A22F1ABA7003A2584 /* MontserratAlternates-SemiBoldItalic.ttf in Resources */,
 				CAD16DE32147E23000A82DBB /* Numeral.json in Resources */,
 				CAC6F73322A81BC000756AE2 /* fun_6.mp3 in Resources */,
 				CAA7325F21315456006276B4 /* Alerts.storyboard in Resources */,
 				CA5100EF22F6EACF00821C25 /* alphavite_5_word_2.wav in Resources */,
+				CAD2105223170C69006F2F08 /* alphabetPickMain.wav in Resources */,
 				CA4C28CE2147DFDB00CA264D /* box.json in Resources */,
 				CAF961B122995FF3006E3046 /* animal_44.pdf in Resources */,
 				CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */,
 				CAF961FF22995FF3006E3046 /* animal_9.pdf in Resources */,
 				CAF9620A22995FF3006E3046 /* animal_46.mp3 in Resources */,
 				CA5100F322F6EACF00821C25 /* alphavite_11.wav in Resources */,
+				CAD21043231700DC006F2F08 /* MontserratAlternates-ExtraBold.ttf in Resources */,
 				CA5CB168213F0966000CB3D5 /* Sue.json in Resources */,
 				CAF9621022995FF3006E3046 /* animal_41.mp3 in Resources */,
 				CAF961F922995FF3006E3046 /* animal_14.pdf in Resources */,
 				CAD16DE92147E29400A82DBB /* Candy.json in Resources */,
 				CAF961C022995FF3006E3046 /* animal_4.pdf in Resources */,
-				CA1AB65322F1ABA7003A2584 /* MontserratAlternates-Italic.ttf in Resources */,
+				CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */,
 				CA5100B622F6EACF00821C25 /* alphavite_1_2.wav in Resources */,
 				CAF961DE22995FF3006E3046 /* animal_37.pdf in Resources */,
 				CA5100D522F6EACF00821C25 /* alphavite_4_word_1.wav in Resources */,
-				CA1AB66022F1ABA7003A2584 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */,
 				CAF961B922995FF3006E3046 /* animal_48.mp3 in Resources */,
 				CA52DF242290683400458EE5 /* appetite.ttf in Resources */,
 				CAC6F72122A81BC000756AE2 /* ready_r_10.wav in Resources */,
 				CADD14AD2309887300AE920A /* end_Pick.json in Resources */,
-				CA1AB66222F1ABA7003A2584 /* MontserratAlternates-SemiBold.ttf in Resources */,
 				CAAF1EF42174E7E100460F58 /* Dog_start.json in Resources */,
 				CADB3D7721F7AD4D009467B8 /* night_sound.wav in Resources */,
 				CA5100B722F6EACF00821C25 /* alphavite_6_word_2.wav in Resources */,
 				CA5100C622F6EACF00821C25 /* alphavite_32_word_1.wav in Resources */,
 				CAF961BC22995FF3006E3046 /* animal_33.pdf in Resources */,
+				CAD21042231700DC006F2F08 /* MontserratAlternates-ExtraLight.ttf in Resources */,
 				CA14997B216F7511008FBEE9 /* FavTableViewCell.xib in Resources */,
 				CADD14B623107F7C00AE920A /* happy_Cloud_2.json in Resources */,
+				CAD21041231700DC006F2F08 /* MontserratAlternates-SemiBoldItalic.ttf in Resources */,
 				CAF961EA22995FF3006E3046 /* animal_31.mp3 in Resources */,
 				CA51010322F6EACF00821C25 /* alphavite_16.wav in Resources */,
 				CAC6F75022A81D1300756AE2 /* Firework_3.json in Resources */,
@@ -3366,9 +3399,11 @@
 				CAF961D522995FF3006E3046 /* animal_14.mp3 in Resources */,
 				CA04863E22A845A60017B8A2 /* Round_9.json in Resources */,
 				CA5100C522F6EACF00821C25 /* alphavite_1_word_1.wav in Resources */,
+				CAD21045231700DC006F2F08 /* MontserratAlternates-Thin.ttf in Resources */,
 				CA1AB65D22F1ABA7003A2584 /* Shnobel-Regular.otf in Resources */,
 				CA5100E922F6EACF00821C25 /* alphavite_20_word_1.wav in Resources */,
 				CAF961B622995FF3006E3046 /* animal_43.pdf in Resources */,
+				CAD2104A231700DC006F2F08 /* MontserratAlternates-Medium.ttf in Resources */,
 				11BA249E230AE99700A9EA15 /* MonsterCollectionViewCell.xib in Resources */,
 				CAF961C922995FF3006E3046 /* animal_31.pdf in Resources */,
 				CA5100E322F6EACF00821C25 /* alphavite_20_word_2.wav in Resources */,
@@ -3379,6 +3414,7 @@
 				CA5100AD22F6EACF00821C25 /* alphavite_3_word_2.wav in Resources */,
 				CAC6F72922A81BC000756AE2 /* fun_1.wav in Resources */,
 				CAF961D922995FF3006E3046 /* animal_8.mp3 in Resources */,
+				CAD2105423170C69006F2F08 /* pickDriveTo.wav in Resources */,
 				CAF961BF22995FF3006E3046 /* animal_32.pdf in Resources */,
 				CA52DF20229050F400458EE5 /* Pacifico Regular.ttf in Resources */,
 				CAAF1EF62174E7E100460F58 /* Dog_progress.json in Resources */,
@@ -3390,6 +3426,7 @@
 				CAF961FA22995FF3006E3046 /* animal_15.pdf in Resources */,
 				CA992D38212FF218008BFC8D /* Play.storyboard in Resources */,
 				CA5100E022F6EACF00821C25 /* alphavite_2_word_1.wav in Resources */,
+				CAD2102C2315BAD0006F2F08 /* IstokWeb-Bold.ttf in Resources */,
 				CAC6F72322A81BC000756AE2 /* ready_r_5.wav in Resources */,
 				CAF9620022995FF3006E3046 /* animal_37.mp3 in Resources */,
 				CA5100F022F6EACF00821C25 /* alphavite_8_word_1.wav in Resources */,
@@ -3401,13 +3438,12 @@
 				CA1041532262A259005D62DE /* SearchMusicCollectionViewCell.xib in Resources */,
 				CA5100A922F6EACF00821C25 /* alphavite_26.wav in Resources */,
 				CA5100BF22F6EACF00821C25 /* alphavite_23.wav in Resources */,
+				CAD2103E231700DC006F2F08 /* MontserratAlternates-Regular.ttf in Resources */,
 				CAA4455121577F760023E340 /* Main.storyboard in Resources */,
 				CAC6F74E22A81D1300756AE2 /* Firework_4.json in Resources */,
 				CAAF1F1021771E4300460F58 /* Shade_open.json in Resources */,
-				CA1AB65822F1ABA7003A2584 /* MontserratAlternates-Regular.ttf in Resources */,
 				CAF961B722995FF3006E3046 /* animal_41.pdf in Resources */,
 				CAF961BE22995FF3006E3046 /* animal_26.pdf in Resources */,
-				CA1AB65F22F1ABA7003A2584 /* MontserratAlternates-ThinItalic.ttf in Resources */,
 				CA5100DF22F6EACF00821C25 /* alphavite_31_word_1.wav in Resources */,
 				CAF9620522995FF3006E3046 /* animal_22.mp3 in Resources */,
 				CA5100AB22F6EACF00821C25 /* alphavite_21_word_2.wav in Resources */,
@@ -3424,11 +3460,12 @@
 				CA5100C422F6EACF00821C25 /* alphavite_19_word_1.wav in Resources */,
 				CA5100F122F6EACF00821C25 /* alphavite_27_word_2.wav in Resources */,
 				CADD14B923107F7C00AE920A /* sad_Cloud.json in Resources */,
+				CAD2105323170C69006F2F08 /* pickDriveFrom.wav in Resources */,
+				CAD2102A2315BAD0006F2F08 /* IstokWeb-BoldItalic.ttf in Resources */,
 				CA7AAF662170C35300747D4B /* SearchCharacterCollectionViewCell.xib in Resources */,
 				CA763631226A63CD00168AB1 /* SubscriptionCollectionViewCell.xib in Resources */,
 				CA5100B322F6EACF00821C25 /* alphavite_19.wav in Resources */,
 				CAC6F72E22A81BC000756AE2 /* sad_3.wav in Resources */,
-				CA1AB65722F1ABA7003A2584 /* MontserratAlternates-ExtraLight.ttf in Resources */,
 				CAC0989422FF47FD00EFB01E /* AlphaviteStatView.xib in Resources */,
 				CAF961C622995FF3006E3046 /* animal_30.pdf in Resources */,
 				CA5100EA22F6EACF00821C25 /* alphavite_17_word_1.wav in Resources */,
@@ -3452,16 +3489,19 @@
 				CA5100BD22F6EACF00821C25 /* alphavite_6_word_1.wav in Resources */,
 				CAF961CB22995FF3006E3046 /* animal_39.mp3 in Resources */,
 				CAF889DB21A6975800A245A7 /* GoogleService-Info.plist in Resources */,
+				CAD21049231700DC006F2F08 /* MontserratAlternates-ThinItalic.ttf in Resources */,
+				CAD2105723170C69006F2F08 /* alphabetWrong.wav in Resources */,
 				CAD16DE82147E29400A82DBB /* unicorn.json in Resources */,
+				CAD21046231700DC006F2F08 /* MontserratAlternates-MediumItalic.ttf in Resources */,
 				CAF961BA22995FF3006E3046 /* animal_13.mp3 in Resources */,
 				CAF961D022995FF3006E3046 /* animal_15.mp3 in Resources */,
 				CA04864122A845A60017B8A2 /* Round_4.json in Resources */,
 				CA52DF282290701500458EE5 /* Animals.storyboard in Resources */,
 				CAF961FC22995FF3006E3046 /* animal_3.mp3 in Resources */,
 				CA04864322A845A60017B8A2 /* Round_7.json in Resources */,
+				CAD21048231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */,
 				CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */,
 				CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */,
-				CA1AB65E22F1ABA7003A2584 /* MontserratAlternates-BoldItalic.ttf in Resources */,
 				CA5100F522F6EACF00821C25 /* alphavite_5_word_1.wav in Resources */,
 				CADB3D7521F7AD4D009467B8 /* swipe_drill_sound.wav in Resources */,
 				CA5100D122F6EACF00821C25 /* alphavite_4_word_2.wav in Resources */,

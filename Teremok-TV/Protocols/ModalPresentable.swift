@@ -75,6 +75,9 @@ extension ModalPresentable where Self: UIViewController {
         if let err = error as? URLError, err.code.rawValue == -1009 {
             return
         }
+//        if case BackendError.unreachable = error {
+//            NotificationCenter.default.post(name: .Internet, object: true, userInfo: nil)
+//        }
         present(string: error.localizedDescription, cancelTitle: cancelTitle, completion: completion)
     }
     
