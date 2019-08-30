@@ -38,7 +38,7 @@ class MonsterGameFlow {
         var monsterNames = MonsterMaster.monsterNames
         for idx in 0..<length/2 {
             let name = monsterNames.randomElement()!
-            let monster = MonsterMaster.Monster(imageName: name, matchId: idx, flipped: true)
+            let monster = MonsterMaster.Monster(imageName: name, matchId: idx)
             game.items.append(monster)
             game.items.append(monster)
             monsterNames.remove(at:monsterNames.index(of: name)!)
@@ -49,8 +49,12 @@ class MonsterGameFlow {
     private func startGame() {
         let controller = MonsterGameViewController.instantiate(fromStoryboard: .monster)
         controller.input = MonsterGameViewController.Input(game: game)
-//        controller.output = MonsterGameViewController.Output(startChoice: startChoice)
+        controller.output = MonsterGameViewController.Output(openResults: openResult)
         master?.router?.presentModalChild(viewController: controller)
+    }
+    
+    private func openResult(result: Int) {
+        //open result screen
     }
     
     private func showIntroduce(difficulty: Int) {

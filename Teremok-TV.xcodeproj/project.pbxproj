@@ -1508,16 +1508,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11BC751B23042D44001B5CC8 /* MonsterGame */ = {
+		116BEDFB2313B4560043CCEA /* Master */ = {
 			isa = PBXGroup;
 			children = (
 				11BC751C23042DB4001B5CC8 /* MonsterMasterViewController.swift */,
-				11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */,
 				11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */,
 				11BA2488230551A700A9EA15 /* MonsterMasterInteractor.swift */,
 				11BA2486230551A700A9EA15 /* MonsterMasterModels.swift */,
 				11BA2484230551A700A9EA15 /* MonsterMasterWorker.swift */,
 				11BA2483230551A700A9EA15 /* MonsterMasterPresenter.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		11BC751B23042D44001B5CC8 /* MonsterGame */ = {
+			isa = PBXGroup;
+			children = (
+				116BEDFB2313B4560043CCEA /* Master */,
+				11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */,
 				11BA2493230AB84B00A9EA15 /* MonsterFlow.swift */,
 				11BA2495230AC95D00A9EA15 /* MonsterGameViewController.swift */,
 				11BA249B230AE99700A9EA15 /* MonsterCollectionViewCell.swift */,

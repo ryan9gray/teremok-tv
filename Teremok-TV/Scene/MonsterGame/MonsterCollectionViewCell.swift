@@ -17,7 +17,6 @@ class MonsterCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func layoutSubviews() {
@@ -29,29 +28,37 @@ class MonsterCollectionViewCell: UICollectionViewCell {
         item = monster
         backImage.image = UIImage(named: "monsterCellCover")
         frontImage.image = UIImage(named: monster.imageName)
-        backImage.isUserInteractionEnabled = true
-        frontImage.isUserInteractionEnabled = true
-        backImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flipCard)))
-        frontImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flipCard)))
     }
     
-    private var flipped: Bool = true {
+    var flipped: Bool = true {
         didSet {
             frontImage.isHidden = !flipped
             backImage.isHidden = flipped
         }
     }
+
+    func open(completion: (() -> Void)? = nil) {
+        guard !flipped else { return }
+
+        flipCard() {
+            completion?()
+        }
+    }
+
+    func close() {
+        guard flipped else { return }
+
+        flipCard()
+    }
     
-    @objc func flipCard() {
-        let flipped = item.flipped
+    func flipCard(completion: (() -> Void)? = nil) {
         let fromView = flipped ? frontImage : backImage
         let toView = flipped ? backImage : frontImage
         let flipDirection: UIView.AnimationOptions = flipped ? .transitionFlipFromRight : .transitionFlipFromLeft
         let options: UIView.AnimationOptions = [flipDirection, .showHideTransitionViews]
-        UIView.transition(from: fromView!, to: toView!, duration: 1.0, options: options) {
-            finished in
-            self.item.flipped = !flipped
+        UIView.transition(from: fromView!, to: toView!, duration: 1.0, options: options) { finished in
+            self.flipped.toggle()
+            completion?()
         }
     }
-
 }

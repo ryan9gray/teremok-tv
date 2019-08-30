@@ -101,6 +101,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameProcessBG" translatesAutoresizingMaskIntoConstraints="NO" id="PNl-Co-0Lj">
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJi-rO-aQu" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="348.66666666666669" y="20" width="115" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="hjr-k5-x20"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                <state key="normal" title="00:00">
+                                    <color key="titleColor" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xsT-MH-07t">
                                 <rect key="frame" x="104" y="90" width="604" height="224"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,14 +159,17 @@
                             <constraint firstItem="PNl-Co-0Lj" firstAttribute="leading" secondItem="Aoy-be-qBT" secondAttribute="leading" id="Ozl-Dw-R42"/>
                             <constraint firstItem="Hb2-pn-ILr" firstAttribute="bottom" secondItem="xsT-MH-07t" secondAttribute="bottom" constant="40" id="Sdq-cW-OyS"/>
                             <constraint firstItem="xsT-MH-07t" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="90" id="YHX-ua-n2w"/>
+                            <constraint firstItem="zJi-rO-aQu" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="20" id="cL2-WK-Vrz"/>
                             <constraint firstItem="xsT-MH-07t" firstAttribute="leading" secondItem="Hb2-pn-ILr" secondAttribute="leading" constant="60" id="dG3-t9-Ylr"/>
                             <constraint firstAttribute="bottom" secondItem="PNl-Co-0Lj" secondAttribute="bottom" id="eIz-hX-blh"/>
                             <constraint firstItem="Hb2-pn-ILr" firstAttribute="trailing" secondItem="xsT-MH-07t" secondAttribute="trailing" constant="60" id="lYd-5V-E5c"/>
+                            <constraint firstItem="zJi-rO-aQu" firstAttribute="centerX" secondItem="Aoy-be-qBT" secondAttribute="centerX" id="ltX-qK-GoI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hb2-pn-ILr"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="xsT-MH-07t" id="auM-Co-fG7"/>
+                        <outlet property="timerBtn" destination="zJi-rO-aQu" id="hk4-HO-Zj7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YY9-A2-1f4" userLabel="First Responder" sceneMemberID="firstResponder"/>
