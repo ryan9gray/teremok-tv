@@ -20,6 +20,7 @@ protocol GameParentRouting: CommonRoutingLogic {
     var moduleRouter: MasterModuleDisplayLogic? { get }
     func introduceController<T: GameViewController>(viewController: T, completion: @escaping () -> Void)
         where T: IntroduceViewController
+    var modalChildVC: GameViewController? { get }
 
     func navigateMain()
 
@@ -39,7 +40,15 @@ extension GameParentRouting {
     }
 
     func canPop() -> Bool {
-        return childControllersStack.count > 1
+        return childControllersStack.count > 1 || modalChildVC != nil
+    }
+
+    func introduceController<T: GameViewController>(viewController: T, completion: @escaping () -> Void)
+        where T: IntroduceViewController {
+        viewController.setAction {
+            completion()
+        }
+        presentModalChild(viewController: viewController)
     }
 
     func remove() {

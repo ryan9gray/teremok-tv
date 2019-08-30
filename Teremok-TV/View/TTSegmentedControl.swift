@@ -13,17 +13,17 @@ import UIKit
 open class TTSegmentedControl: UIView {
     
     //Configure the options to for a custom design
-    @IBInspectable open var defaultTextFont: UIFont = Styles.Font.helveticaBold(size: 12)
-    @IBInspectable open var selectedTextFont: UIFont = Styles.Font.helveticaBold(size: 12)
-    @IBInspectable open var defaultTextColor: UIColor = UIColor.black
-    @IBInspectable open var selectedTextColor: UIColor = UIColor.white
-    @IBInspectable open var useGradient: Bool = true
+    var defaultTextFont: UIFont = Styles.Font.istokWeb(size: 13)
+    var selectedTextFont: UIFont = Styles.Font.istokWeb(size: 13)
+    @IBInspectable var defaultTextColor: UIColor = UIColor.black
+    @IBInspectable var selectedTextColor: UIColor = UIColor.white
+    @IBInspectable var useGradient: Bool = true
     
-    @IBInspectable open var containerBackgroundColor: UIColor = .white
-    @IBInspectable open var thumbColor: UIColor = UIColor.clear
-    @IBInspectable open var thumbGradientColors: [UIColor] = Styles.Gradients.orange.value
-    @IBInspectable open var thumbShadowColor: UIColor = .white
-    @IBInspectable open var useShadow:Bool = true
+    @IBInspectable var containerBackgroundColor: UIColor = .white
+    @IBInspectable var thumbColor: UIColor = UIColor.clear
+    @IBInspectable var thumbGradientColors: [UIColor] = Styles.Gradients.orange.value
+    @IBInspectable var thumbShadowColor: UIColor = .white
+    @IBInspectable var useShadow:Bool = true
     
     //left and right space between items
     @IBInspectable open var padding: CGSize = CGSize(width: 30, height: 10)
@@ -46,7 +46,7 @@ open class TTSegmentedControl: UIView {
         case cancel
     }
     
-    open var animationOptions:BounceOptions = BounceOptions()
+    open var animationOptions: BounceOptions = BounceOptions()
     open var hasBounceAnimation:Bool = false
     public struct BounceOptions {
         var springDamping:CGFloat = 0.7

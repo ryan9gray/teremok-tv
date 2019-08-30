@@ -15,7 +15,7 @@ import UIKit
 enum AlphaviteMaster {
   
     static let DefaultChars = [
-        "Ь",
+        "A",
         "Р",
         "Е"
     ]
@@ -32,6 +32,20 @@ enum AlphaviteMaster {
         case sad = "sad_Cloud"
         case happyOne = "happy_Cloud_1"
         case happyTwo = "happy_Cloud_2"
+    }
+    
+    enum Sound: String {
+        case main = "alphabetPickMain"
+        case button = "alphabetButton"
+        case rightAnswer = "alphabetRight"
+        case wrongAnswer = "alphabetWrong"
+        case pickDriveTo = "pickDriveTo"
+        case pickDriveFrom = "pickDriveFrom"
+
+        var url: URL {
+            return URL(fileURLWithPath: Bundle.main.path(forResource: self.rawValue, ofType: "wav")!)
+        }
+
     }
 
     struct Statistic {

@@ -257,7 +257,7 @@ class BasicCommand {
                 success: { (_, response) in
                     if callStackCount > 10 {
                         let error = NSError(domain: "", code: 1, userInfo: [NSLocalizedDescriptionKey: "Сервис недоступен. Попробуйте, пожалуйста, позднее."])
-                        response.restError = BackendError.network(error: error)
+                        response.restError = BackendError.network(error)
                         DispatchQueue.main.async {
                             failure?(self, response)
                         }
