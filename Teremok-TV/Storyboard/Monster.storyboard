@@ -240,13 +240,73 @@
             </objects>
             <point key="canvasLocation" x="26" y="-1124"/>
         </scene>
+        <!--Monster Game Results View Controller-->
+        <scene sceneID="gF5-D2-do4">
+            <objects>
+                <viewController storyboardIdentifier="MonsterGameResultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yTx-a0-M98" customClass="MonsterGameResultsViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="05F-xK-YJJ">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameProcessBG" translatesAutoresizingMaskIntoConstraints="NO" id="LWu-Kd-wHN">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playNext" translatesAutoresizingMaskIntoConstraints="NO" id="0Ir-5m-boz">
+                                <rect key="frame" x="247.66666666666663" y="76" width="317" height="165"/>
+                            </imageView>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5e-Hy-udo" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="288.66666666666669" y="20" width="235.00000000000006" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="H3x-dr-mkA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                <state key="normal" title="Твое время 00:00">
+                                    <color key="titleColor" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbj-Zo-doR" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="358.66666666666669" y="240" width="95" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="8vJ-q5-u3P"/>
+                                    <constraint firstAttribute="width" constant="95" id="ZFT-tV-ZsN"/>
+                                    <constraint firstAttribute="width" secondItem="Mbj-Zo-doR" secondAttribute="height" multiplier="1:1" id="mdf-DE-hth"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icPlayBlue">
+                                    <color key="titleColor" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Ir-5m-boz" firstAttribute="top" secondItem="E5e-Hy-udo" secondAttribute="bottom" constant="15" id="3Bv-cf-41Y"/>
+                            <constraint firstItem="E5e-Hy-udo" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="4AE-Dc-dPw"/>
+                            <constraint firstItem="LWu-Kd-wHN" firstAttribute="leading" secondItem="05F-xK-YJJ" secondAttribute="leading" id="Ah5-bJ-4bP"/>
+                            <constraint firstItem="LWu-Kd-wHN" firstAttribute="top" secondItem="05F-xK-YJJ" secondAttribute="top" id="Bj2-tf-391"/>
+                            <constraint firstAttribute="bottom" secondItem="Mbj-Zo-doR" secondAttribute="bottom" constant="40" id="GTI-fU-J4u"/>
+                            <constraint firstItem="E5e-Hy-udo" firstAttribute="top" secondItem="kSq-H1-JTs" secondAttribute="top" constant="20" id="GX9-bc-2Nf"/>
+                            <constraint firstAttribute="trailing" secondItem="LWu-Kd-wHN" secondAttribute="trailing" id="LRA-fz-CDQ"/>
+                            <constraint firstAttribute="bottom" secondItem="LWu-Kd-wHN" secondAttribute="bottom" id="UE4-wp-eLC"/>
+                            <constraint firstItem="0Ir-5m-boz" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="a3M-sx-4ly"/>
+                            <constraint firstItem="Mbj-Zo-doR" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="rIJ-gn-sZM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kSq-H1-JTs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTH-NR-CcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="1326"/>
+        </scene>
     </scenes>
     <resources>
         <image name="gameProcessBG" width="667" height="375"/>
         <image name="ic-alphHome" width="31" height="29"/>
         <image name="ic-monsterBack" width="667" height="375"/>
         <image name="ic-monstergameTitle" width="423" height="158"/>
+        <image name="icPlayBlue" width="61" height="65"/>
         <image name="icUtka" width="29" height="35"/>
         <image name="monsterCellCover" width="100" height="60"/>
+        <image name="playNext" width="317" height="165"/>
     </resources>
 </document>

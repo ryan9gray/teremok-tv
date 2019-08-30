@@ -19,6 +19,7 @@
 		11BC751D23042DB4001B5CC8 /* MonsterMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC751C23042DB4001B5CC8 /* MonsterMasterViewController.swift */; };
 		11BC751F23042E06001B5CC8 /* MonsterStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */; };
 		11BC752523043A1E001B5CC8 /* MonsterMasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */; };
+		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
 		CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */; };
@@ -756,6 +757,7 @@
 		11BC751C23042DB4001B5CC8 /* MonsterMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterViewController.swift; sourceTree = "<group>"; };
 		11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStartViewController.swift; sourceTree = "<group>"; };
 		11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterRouter.swift; sourceTree = "<group>"; };
+		11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameResultsViewController.swift; sourceTree = "<group>"; };
 		1BEFDF490D1FB5747257F78F /* Pods-Teremok-TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.debug.xcconfig"; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
@@ -1510,6 +1512,7 @@
 				11BA2495230AC95D00A9EA15 /* MonsterGameViewController.swift */,
 				11BA249B230AE99700A9EA15 /* MonsterCollectionViewCell.swift */,
 				11BA249C230AE99700A9EA15 /* MonsterCollectionViewCell.xib */,
+				11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */,
 			);
 			path = MonsterGame;
 			sourceTree = "<group>";
@@ -3709,6 +3712,7 @@
 				CA7AAF4F2170B0E200747D4B /* SearchCommand.swift in Sources */,
 				CAB59FD122F315D800D7CA71 /* AlphaviteMasterModels.swift in Sources */,
 				CA52F354223D2DF40058194E /* MusicMasterInteractor.swift in Sources */,
+				11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */,
 				CAF94CC3215E80F0000E8183 /* CarouselCollectionViewLayout.swift in Sources */,
 				CAC2D5242115A68200945003 /* AppInfoWorker.swift in Sources */,
 				CAB59FCE22F315D800D7CA71 /* AlphaviteMasterPresenter.swift in Sources */,
