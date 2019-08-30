@@ -17,6 +17,7 @@ class MonsterGameFlow {
     }
     
     var game: Game!
+    var gameResults: GameResults!
     
     func startFlow(difficulty: Int) {
         guard !LocalStore.monsterIntroduce() else {
@@ -54,8 +55,20 @@ class MonsterGameFlow {
     }
     
     private func openResult(result: Int) {
+        gameResults = GameResults.init(result: result, state: MonsterGameFlow.GameResults.State.init(rawValue: result > game.limit ? 0 : 1))
         let controller = MonsterGameResultsViewController.instantiate(fromStoryboard: .monster)
+        controller.input = MonsterGameResultsViewController.Input(gameResult: gameResults)
+        controller.output = MonsterGameResultsViewController.Output(openNext: openNext)
         master?.router?.presentModalChild(viewController: controller)
+    }
+    
+    private func openNext() {
+        switch gameResults.state {
+        case .win:
+            randomRound()
+        case .lose:
+            startGame()
+        }
     }
     
     private func showIntroduce(difficulty: Int) {
@@ -94,15 +107,46 @@ class MonsterGameFlow {
         }
         
         init(difficulty: Difficulty?) {
-            if let diff = difficulty {
-                self.difficulty = diff
-            }
-            else {
+            guard let diff = difficulty else {
                 self.difficulty = Difficulty.easy
+                return
             }
+            self.difficulty = diff
         }
         
         let difficulty: Difficulty
         var items = [MonsterMaster.Monster]()
+        
+        var limit: Int {
+            get {
+                switch difficulty {
+                case .easy:
+                    return 60
+                case .medium:
+                    return 180
+                case .hard:
+                    return 300
+                }
+            }
+        }
+    }
+    
+    struct GameResults {
+        let result: Int
+        let state: State
+        
+        enum State: Int {
+            case lose = 0
+            case win = 1
+        }
+        
+        init(result: Int, state: State?) {
+            self.result = result
+            guard let gameState = state else {
+                self.state = State.win
+                return
+            }
+            self.state = gameState
+        }
     }
 }

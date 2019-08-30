@@ -7,24 +7,42 @@
 //
 
 import UIKit
+import Spring
 
 class MonsterGameResultsViewController: GameViewController {
 
+    @IBOutlet private var BGImageView: UIImageView!
+    @IBOutlet private var titleImageView: UIImageView!
+    @IBOutlet private var timeView: DesignableView!
+    @IBOutlet private var timeLbl: UILabel!
+    @IBOutlet private var nextBtn: KeyButton!
+    
+    var input: Input!
+    var output: Output!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        timeLbl.text = "Твое время \(PlayerHelper.stringFromTimeInterval(TimeInterval(input.gameResult.result)))"
+        if input.gameResult.state == MonsterGameFlow.GameResults.State.lose {
+            timeView.borderColor = UIColor.Button.redThree
+            timeLbl.textColor = UIColor.Button.redThree
+            BGImageView.image = UIImage(named: "gameLostBG")
+            titleImageView.image = UIImage(named: "playAgain")
+            nextBtn.setImage(UIImage(named: "icAgainYellow"), for: .normal)
+            nextBtn.gradientColors = Styles.Gradients.red.value
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    struct Input {
+        var gameResult: MonsterGameFlow.GameResults
     }
-    */
 
+    struct Output {
+        let openNext: () -> Void
+    }
+    
+    @IBAction func openNextVC(_ sender: Any) {
+        output.openNext()
+    }
+    
 }

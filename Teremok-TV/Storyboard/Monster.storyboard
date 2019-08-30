@@ -27,13 +27,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-monstergameTitle" translatesAutoresizingMaskIntoConstraints="NO" id="yF5-Eg-NHN">
-                                <rect key="frame" x="194.66666666666663" y="140" width="423" height="158"/>
+                                <rect key="frame" x="398" y="140" width="16" height="16"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Uu-aj-Jud">
-                                <rect key="frame" x="184" y="283" width="444" height="41"/>
+                                <rect key="frame" x="184" y="284" width="444" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnZ-j2-3RP" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="40"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="1-2 года">
                                             <color key="titleColor" red="0.0" green="0.21568627450980393" blue="0.67843137254901964" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nO-Pv-Co7" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="151.33333333333331" y="0.0" width="141.33333333333331" height="41"/>
+                                        <rect key="frame" x="151.33333333333331" y="0.0" width="141.33333333333331" height="40"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="2-3 года">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVa-Zu-gHs" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="302.66666666666669" y="0.0" width="141.33333333333331" height="41"/>
+                                        <rect key="frame" x="302.66666666666669" y="0.0" width="141.33333333333331" height="40"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="3-5 лет">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,7 +102,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJi-rO-aQu" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="348.66666666666669" y="20" width="115" height="41"/>
+                                <rect key="frame" x="348.66666666666669" y="20" width="115" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="hjr-k5-x20"/>
                                 </constraints>
@@ -248,23 +248,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameProcessBG" translatesAutoresizingMaskIntoConstraints="NO" id="LWu-Kd-wHN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameWonBG" translatesAutoresizingMaskIntoConstraints="NO" id="LWu-Kd-wHN">
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playNext" translatesAutoresizingMaskIntoConstraints="NO" id="0Ir-5m-boz">
-                                <rect key="frame" x="247.66666666666663" y="76" width="317" height="165"/>
-                            </imageView>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5e-Hy-udo" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="288.66666666666669" y="20" width="235.00000000000006" height="41"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqH-ie-GhK" customClass="DesignableView" customModule="Spring">
+                                <rect key="frame" x="288.66666666666669" y="20" width="235.00000000000006" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="deF-1u-NDW">
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Твое время 00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNl-xJ-AO8">
+                                                <rect key="frame" x="0.0" y="10.666666666666668" width="235" height="29.000000000000004"/>
+                                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                                <color key="textColor" red="0.0" green="0.34509803921568627" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="235" id="H3x-dr-mkA"/>
+                                    <constraint firstAttribute="bottom" secondItem="deF-1u-NDW" secondAttribute="bottom" id="a9G-tc-wkT"/>
+                                    <constraint firstAttribute="height" constant="50" id="bLA-1n-vIe"/>
+                                    <constraint firstAttribute="trailing" secondItem="deF-1u-NDW" secondAttribute="trailing" id="jpY-B8-Rt6"/>
+                                    <constraint firstAttribute="width" constant="235" id="qVu-61-abA"/>
+                                    <constraint firstItem="deF-1u-NDW" firstAttribute="top" secondItem="pqH-ie-GhK" secondAttribute="top" id="ujb-Yf-Nbb"/>
+                                    <constraint firstItem="deF-1u-NDW" firstAttribute="leading" secondItem="pqH-ie-GhK" secondAttribute="leading" id="z5P-lk-aEo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
-                                <state key="normal" title="Твое время 00:00">
-                                    <color key="titleColor" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbj-Zo-doR" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playNext" translatesAutoresizingMaskIntoConstraints="NO" id="0Ir-5m-boz">
+                                <rect key="frame" x="247.66666666666663" y="80" width="317" height="165"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbj-Zo-doR" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
                                 <rect key="frame" x="358.66666666666669" y="240" width="95" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="8vJ-q5-u3P"/>
@@ -276,23 +311,33 @@
                                 <state key="normal" image="icPlayBlue">
                                     <color key="titleColor" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="openNextVC:" destination="yTx-a0-M98" eventType="touchUpInside" id="sHZ-l0-Yyv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0Ir-5m-boz" firstAttribute="top" secondItem="E5e-Hy-udo" secondAttribute="bottom" constant="15" id="3Bv-cf-41Y"/>
-                            <constraint firstItem="E5e-Hy-udo" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="4AE-Dc-dPw"/>
                             <constraint firstItem="LWu-Kd-wHN" firstAttribute="leading" secondItem="05F-xK-YJJ" secondAttribute="leading" id="Ah5-bJ-4bP"/>
                             <constraint firstItem="LWu-Kd-wHN" firstAttribute="top" secondItem="05F-xK-YJJ" secondAttribute="top" id="Bj2-tf-391"/>
+                            <constraint firstItem="pqH-ie-GhK" firstAttribute="top" secondItem="kSq-H1-JTs" secondAttribute="top" constant="20" id="E4X-g4-HQX"/>
                             <constraint firstAttribute="bottom" secondItem="Mbj-Zo-doR" secondAttribute="bottom" constant="40" id="GTI-fU-J4u"/>
-                            <constraint firstItem="E5e-Hy-udo" firstAttribute="top" secondItem="kSq-H1-JTs" secondAttribute="top" constant="20" id="GX9-bc-2Nf"/>
+                            <constraint firstItem="pqH-ie-GhK" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="L49-zF-UNa"/>
                             <constraint firstAttribute="trailing" secondItem="LWu-Kd-wHN" secondAttribute="trailing" id="LRA-fz-CDQ"/>
                             <constraint firstAttribute="bottom" secondItem="LWu-Kd-wHN" secondAttribute="bottom" id="UE4-wp-eLC"/>
                             <constraint firstItem="0Ir-5m-boz" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="a3M-sx-4ly"/>
+                            <constraint firstItem="0Ir-5m-boz" firstAttribute="top" secondItem="pqH-ie-GhK" secondAttribute="bottom" constant="10" id="aVA-IF-cGN"/>
                             <constraint firstItem="Mbj-Zo-doR" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="rIJ-gn-sZM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kSq-H1-JTs"/>
                     </view>
+                    <connections>
+                        <outlet property="BGImageView" destination="LWu-Kd-wHN" id="lkY-09-f8L"/>
+                        <outlet property="nextBtn" destination="Mbj-Zo-doR" id="UTO-xN-iQS"/>
+                        <outlet property="timeLbl" destination="RNl-xJ-AO8" id="IPa-do-cNg"/>
+                        <outlet property="timeView" destination="pqH-ie-GhK" id="WZ0-E8-Pog"/>
+                        <outlet property="titleImageView" destination="0Ir-5m-boz" id="WRe-hT-A9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTH-NR-CcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -301,6 +346,7 @@
     </scenes>
     <resources>
         <image name="gameProcessBG" width="667" height="375"/>
+        <image name="gameWonBG" width="667" height="375"/>
         <image name="ic-alphHome" width="31" height="29"/>
         <image name="ic-monsterBack" width="667" height="375"/>
         <image name="ic-monstergameTitle" width="423" height="158"/>

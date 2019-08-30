@@ -1530,9 +1530,9 @@
 				11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */,
 				11BA2493230AB84B00A9EA15 /* MonsterFlow.swift */,
 				11BA2495230AC95D00A9EA15 /* MonsterGameViewController.swift */,
+				11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */,
 				11BA249B230AE99700A9EA15 /* MonsterCollectionViewCell.swift */,
 				11BA249C230AE99700A9EA15 /* MonsterCollectionViewCell.xib */,
-				11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */,
 			);
 			path = MonsterGame;
 			sourceTree = "<group>";

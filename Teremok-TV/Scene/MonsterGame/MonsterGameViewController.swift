@@ -29,20 +29,8 @@ class MonsterGameViewController: GameViewController {
     private var seconds = 0 {
         didSet {
             timerBtn.setTitle(PlayerHelper.stringFromTimeInterval(TimeInterval(seconds)), for: .normal)
-            if (seconds >= limit) {
-                timerBtn.setTitleColor(UIColor.Button.redTwo, for: .normal)
-            }
-        }
-    }
-    private var limit: Int {
-        get {
-            switch input.game.difficulty {
-            case .easy:
-                return 60
-            case .medium:
-                return 180
-            case .hard:
-                return 300
+            if (seconds >= input.game.limit) {
+                timerBtn.setTitleColor(UIColor.Button.redThree, for: .normal)
             }
         }
     }
