@@ -71,7 +71,7 @@ class MonsterGameViewController: GameViewController {
     }
 
     private func start() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
             self.fireTimer()
             self.collectionView.visibleCells.forEach { ($0 as? MonsterCollectionViewCell)?.close() }
         })
@@ -108,8 +108,8 @@ class MonsterGameViewController: GameViewController {
     func flipBack(shouldFlip: Bool) {
         if shouldFlip {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                self.firstSelectedItem?.flipCard()
-                self.secondSelectedItem?.flipCard()
+                self.firstSelectedItem?.close()
+                self.secondSelectedItem?.close()
                 self.firstSelectedItem = nil
                 self.secondSelectedItem = nil
             })
@@ -137,7 +137,7 @@ extension MonsterGameViewController: UICollectionViewDataSource {
         guard let selectedCell = collectionView.cellForItem(at: indexPath) as? MonsterCollectionViewCell else { return }
 
         saveSelectedCell(cell: selectedCell)
-        selectedCell.flipCard { [weak self] in
+        selectedCell.open { [weak self] in
             guard self?.firstSelectedItem != nil && self?.secondSelectedItem != nil else { return }
 
             self?.matchMonsters()
