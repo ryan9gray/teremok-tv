@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Styles {
+enum Style {
     enum Gradients {
         typealias RawValue = [UIColor]
 
@@ -86,7 +86,7 @@ enum Styles {
     }
 }
 
-extension Styles.Gradients {
+extension Style.Gradients {
     var value: [UIColor] {
         get {
             switch self {

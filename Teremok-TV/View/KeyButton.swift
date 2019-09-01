@@ -11,7 +11,7 @@ import Spring
 
 @IBDesignable
 class KeyButton: UIButton {
-    @IBInspectable var gradientColors : [UIColor] = Styles.Gradients.yellow.value {
+    @IBInspectable var gradientColors : [UIColor] = Style.Gradients.yellow.value {
         didSet {
             layoutSubviews()
         }

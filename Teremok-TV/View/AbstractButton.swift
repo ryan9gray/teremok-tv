@@ -34,6 +34,6 @@ class TTAbstractMainButton: UIButton {
 class OrangeButton: UIRoundedButtonWithGradientAndShadow {
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.gradientColors = Styles.Gradients.yellow.value
+        self.gradientColors = Style.Gradients.yellow.value
     }
 }

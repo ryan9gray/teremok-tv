@@ -57,7 +57,7 @@ class MonsterGameViewController: GameViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timerBtn.gradientColors = Styles.Gradients.lightGray.value
+        timerBtn.gradientColors = Style.Gradients.lightGray.value
         let cells = [MonsterCollectionViewCell.self]
         collectionView.register(cells: cells)
     }

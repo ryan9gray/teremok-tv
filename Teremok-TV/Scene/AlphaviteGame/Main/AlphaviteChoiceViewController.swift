@@ -72,7 +72,7 @@ class AlphaviteChoiceViewController: GameViewController {
         progressBar.isHidden = !input.isHard
         pointsView.isHidden = !input.isHard
         if input.isHard {
-            pointsView.gradientColors = Styles.Gradients.orange.value
+            pointsView.gradientColors = Style.Gradients.orange.value
         }
 
         nextChar()
@@ -102,7 +102,7 @@ class AlphaviteChoiceViewController: GameViewController {
 
     private func setWord(_ text: String) {
         wordLabel.text = text
-        let attributedWord = NSMutableAttributedString(string: text, attributes: Styles.TextAttributes.alphabetWord)
+        let attributedWord = NSMutableAttributedString(string: text, attributes: Style.TextAttributes.alphabetWord)
         attributedWord.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSRange(location: 0,length: 1))
         wordLabel.attributedText = attributedWord
     }

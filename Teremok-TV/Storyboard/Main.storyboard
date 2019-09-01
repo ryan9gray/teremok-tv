@@ -464,7 +464,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-hillBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Mdf-zU-wD7">
-                                <rect key="frame" x="0.0" y="0.0" width="812" height="354"/>
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-rightCurtain" translatesAutoresizingMaskIntoConstraints="NO" id="8nD-Pj-X3U">
                                 <rect key="frame" x="792" y="40" width="20" height="314"/>
@@ -517,7 +517,7 @@
                                             <constraint firstAttribute="width" secondItem="fVM-2a-9oI" secondAttribute="height" multiplier="1:1" id="9SP-51-gv1"/>
                                             <constraint firstAttribute="height" constant="54" id="x7f-dK-PTq"/>
                                         </constraints>
-                                        <state key="normal" image="icGame" backgroundImage="icCircle"/>
+                                        <state key="normal" image="icGameCube" backgroundImage="icCircle"/>
                                         <connections>
                                             <action selector="gameClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="XIq-8S-WUZ"/>
                                         </connections>
@@ -574,7 +574,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="ZCj-br-U4m" customClass="ChildsStackView" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="761" y="17" width="0.0" height="54"/>
+                                <rect key="frame" x="592" y="17" width="200" height="54"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTC-rA-kap" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
@@ -686,6 +686,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Mdf-zU-wD7" secondAttribute="trailing" id="17C-GM-QLy"/>
+                            <constraint firstItem="ZCj-br-U4m" firstAttribute="leading" secondItem="A46-8C-pxL" secondAttribute="trailing" constant="10" id="1Ag-Yh-Ixd"/>
                             <constraint firstItem="pYk-Mk-z4c" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="1h5-T4-J6m"/>
                             <constraint firstItem="wfC-Bn-aZg" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" constant="28" id="3WQ-gm-yV7"/>
                             <constraint firstItem="A46-8C-pxL" firstAttribute="leading" secondItem="5Bm-y4-kHR" secondAttribute="trailing" constant="2" id="4FP-25-Rno"/>
@@ -693,7 +694,7 @@
                             <constraint firstItem="jpI-y1-YEg" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="40" id="API-sF-1qh"/>
                             <constraint firstItem="Mdf-zU-wD7" firstAttribute="top" secondItem="1CP-Fn-cIu" secondAttribute="top" id="C1P-7M-gdR"/>
                             <constraint firstItem="44F-DI-cmG" firstAttribute="top" secondItem="pYk-Mk-z4c" secondAttribute="bottom" constant="15" id="Cb3-zg-6ku"/>
-                            <constraint firstItem="Mdf-zU-wD7" firstAttribute="bottom" secondItem="Chn-OP-K9t" secondAttribute="bottom" id="Dlq-I0-LnB"/>
+                            <constraint firstItem="Mdf-zU-wD7" firstAttribute="bottom" secondItem="1CP-Fn-cIu" secondAttribute="bottom" id="Dlq-I0-LnB"/>
                             <constraint firstItem="Chn-OP-K9t" firstAttribute="bottom" secondItem="wfC-Bn-aZg" secondAttribute="bottom" constant="10" id="EBG-fM-Pn5"/>
                             <constraint firstItem="eBd-tF-Ihc" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" constant="20" id="GKX-WK-cyu"/>
                             <constraint firstItem="jpI-y1-YEg" firstAttribute="bottom" secondItem="Chn-OP-K9t" secondAttribute="bottom" id="Hyr-yU-HNV"/>
@@ -707,7 +708,7 @@
                             <constraint firstItem="eBd-tF-Ihc" firstAttribute="top" secondItem="pYk-Mk-z4c" secondAttribute="bottom" constant="8" id="i7d-oj-aye"/>
                             <constraint firstItem="oUb-4A-L4a" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="iCx-DS-V6i"/>
                             <constraint firstItem="5Bm-y4-kHR" firstAttribute="leading" secondItem="44F-DI-cmG" secondAttribute="trailing" priority="990" constant="10" id="mQO-q2-2Fb"/>
-                            <constraint firstItem="Chn-OP-K9t" firstAttribute="trailing" secondItem="ZCj-br-U4m" secondAttribute="trailing" constant="7" id="mwN-QN-rgq"/>
+                            <constraint firstAttribute="trailing" secondItem="ZCj-br-U4m" secondAttribute="trailing" constant="20" id="mwN-QN-rgq"/>
                             <constraint firstItem="5Bm-y4-kHR" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="17" id="owC-lV-bcK"/>
                             <constraint firstItem="ZCj-br-U4m" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="17" id="pLZ-QO-fef"/>
                             <constraint firstItem="jpI-y1-YEg" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="qxJ-LX-itD"/>
@@ -1052,6 +1053,7 @@
         <image name="icDown" width="20" height="25"/>
         <image name="icFav" width="21" height="30"/>
         <image name="icGame" width="22" height="24"/>
+        <image name="icGameCube" width="31" height="35"/>
         <image name="icHeadphone" width="32" height="32"/>
         <image name="icHeart" width="26" height="21"/>
         <image name="icHome" width="24" height="22"/>

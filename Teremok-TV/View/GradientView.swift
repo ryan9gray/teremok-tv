@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class GradientView: UIView {
-    var gradientColors : [UIColor] = Styles.Gradients.yellow.value {
+    var gradientColors : [UIColor] = Style.Gradients.yellow.value {
         didSet {
             layoutSubviews()
         }

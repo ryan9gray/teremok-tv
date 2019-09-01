@@ -45,12 +45,12 @@ class GamesListViewController: AbstracViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        homeBtn.gradientColors = Styles.Gradients.brown.value
-        titleLabel.attributedText = "ВЫБЕРИТЕ ИГРУ:" <~ Styles.TextAttributes.gameList
+        homeBtn.gradientColors = Style.Gradients.brown.value
+        titleLabel.attributedText = "ВЫБЕРИТЕ ИГРУ:" <~ Style.TextAttributes.gameList
         titleLabel.textColor = .white
         titleLabel.strokeSize = 12.0
         titleLabel.strokePosition = .center
-        titleLabel.gradientColors = Styles.Gradients.blue.value
+        titleLabel.gradientColors = Style.Gradients.blue.value
     }
 
 }

@@ -137,8 +137,8 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
 
     private func prepareUI(){
         activityView = LottieHUD()
-        registrationBtn.gradientColors = Styles.Gradients.beige.value
-        logInBtn.gradientColors = Styles.Gradients.beige.value
+        registrationBtn.gradientColors = Style.Gradients.beige.value
+        logInBtn.gradientColors = Style.Gradients.beige.value
         childStack.delegate = self
         let isAuth = Profile.isAuthorized
         setMode(isAuth: isAuth)

@@ -229,13 +229,13 @@ class StrokeLabel: UILabel {
         var alignment = CTTextAlignment(self.textAlignment)
         var lineBreakMode = CTLineBreakModeFromUILineBreakMode(self.lineBreakMode)
         var lineSpacing = self.lineSpacing
-        let paragraphStyleSettings: [CTParagraphStyleSetting] = [
+        let paragraphStyleettings: [CTParagraphStyleSetting] = [
             CTParagraphStyleSetting(spec: .alignment, valueSize: MemoryLayout.size(ofValue: alignment), value: &alignment),
             CTParagraphStyleSetting(spec: .lineBreakMode, valueSize: MemoryLayout.size(ofValue: lineBreakMode), value: &lineBreakMode),
             CTParagraphStyleSetting(spec: .lineSpacingAdjustment, valueSize: MemoryLayout.size(ofValue: lineSpacing), value: &lineSpacing)
             ]
         
-        let paragraphStyleRef = CTParagraphStyleCreate(paragraphStyleSettings, paragraphStyleSettings.count)
+        let paragraphStyleRef = CTParagraphStyleCreate(paragraphStyleettings, paragraphStyleettings.count)
         let kernRef = CFNumberCreate(kCFAllocatorDefault, .cgFloatType, &letterSpacing)
         // Set up attributed string.
         

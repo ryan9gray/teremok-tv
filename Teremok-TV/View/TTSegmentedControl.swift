@@ -13,15 +13,15 @@ import UIKit
 open class TTSegmentedControl: UIView {
     
     //Configure the options to for a custom design
-    var defaultTextFont: UIFont = Styles.Font.istokWeb(size: 13)
-    var selectedTextFont: UIFont = Styles.Font.istokWeb(size: 13)
+    var defaultTextFont: UIFont = Style.Font.istokWeb(size: 13)
+    var selectedTextFont: UIFont = Style.Font.istokWeb(size: 13)
     @IBInspectable var defaultTextColor: UIColor = UIColor.black
     @IBInspectable var selectedTextColor: UIColor = UIColor.white
     @IBInspectable var useGradient: Bool = true
     
     @IBInspectable var containerBackgroundColor: UIColor = .white
     @IBInspectable var thumbColor: UIColor = UIColor.clear
-    @IBInspectable var thumbGradientColors: [UIColor] = Styles.Gradients.orange.value
+    @IBInspectable var thumbGradientColors: [UIColor] = Style.Gradients.orange.value
     @IBInspectable var thumbShadowColor: UIColor = .white
     @IBInspectable var useShadow:Bool = true
     
