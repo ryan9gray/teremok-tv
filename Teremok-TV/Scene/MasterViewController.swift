@@ -81,10 +81,6 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         selectButton(sender)
         router?.navigateToAchieves()
     }
-    @IBAction func treasureClick(_ sender: UIButton) {
-        selectButton(sender)
-        router?.navigateToCatalog()
-    }
     @IBAction func heartClick(_ sender: UIButton) {
         selectButton(sender)
         router?.navigateToFav()
@@ -150,6 +146,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: .ProfileDidChanged, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.uploadDidProgress(_:)), name: .UploadProgress, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.addBadge), name: .AchievmentBadge, object: nil)
@@ -179,6 +176,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         }
 
     }
+
     @objc func addBadge(_ notification: Notification) {
         DispatchQueue.main.async {
             //notification.name
@@ -195,11 +193,10 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
             }
             guard let btn = bagButton  else { return }
 
-            btn.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
             btn.tintColor = UIColor.darkGray
             btn.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
             btn.addbadgetobutton(badge: count)
-            self.view.setNeedsLayout()
+            self.view.layoutIfNeeded()
         }
         }
     }

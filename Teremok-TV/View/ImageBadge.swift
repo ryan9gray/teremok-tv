@@ -43,6 +43,7 @@ class BadgeButton: TTAbstractMainButton {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+
         addbadgetobutton(badge: nil)
     }
 

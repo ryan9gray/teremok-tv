@@ -66,13 +66,17 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
             musicView.isHidden = true
             titleLabel.text = "Дети +"
         }
-
+        priceLabel.isHidden = have
+        restoreButton.isHidden = have
         if have {
             purchaseButton.gradientColors = Style.Gradients.green.value
             purchaseButton.setTitle("Оформлена", for: .normal)
+            purchaseButton.setTitleColor(.white, for: .normal)
         } else {
             purchaseButton.gradientColors = Style.Gradients.yellow.value
             purchaseButton.setTitle("Оформить", for: .normal)
+            purchaseButton.setTitleColor(UIColor.View.Label.titleText, for: .normal)
+
         }
         input.updatePrice(subscription) { [weak self] price in
             self?.priceLabel.text = "\(price) / мес"
