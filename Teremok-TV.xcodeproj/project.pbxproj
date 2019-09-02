@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11246D62231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */; };
 		1163619B2303E456000D2C82 /* Monster.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1163619A2303E456000D2C82 /* Monster.storyboard */; };
 		11BA2489230551A700A9EA15 /* MonsterMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA2483230551A700A9EA15 /* MonsterMasterPresenter.swift */; };
 		11BA248A230551A700A9EA15 /* MonsterMasterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA2484230551A700A9EA15 /* MonsterMasterWorker.swift */; };
@@ -755,6 +756,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameCollectionViewLayout.swift; sourceTree = "<group>"; };
 		1163619A2303E456000D2C82 /* Monster.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Monster.storyboard; sourceTree = "<group>"; };
 		11BA2483230551A700A9EA15 /* MonsterMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterPresenter.swift; sourceTree = "<group>"; };
 		11BA2484230551A700A9EA15 /* MonsterMasterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterWorker.swift; sourceTree = "<group>"; };
@@ -1533,6 +1535,7 @@
 				11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */,
 				11BA249B230AE99700A9EA15 /* MonsterCollectionViewCell.swift */,
 				11BA249C230AE99700A9EA15 /* MonsterCollectionViewCell.xib */,
+				11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */,
 			);
 			path = MonsterGame;
 			sourceTree = "<group>";
@@ -3808,6 +3811,7 @@
 				CA76363D226BD7A500168AB1 /* OfflinePlaylistRouter.swift in Sources */,
 				CA52F36D223D9FE50058194E /* AlbumViewController.swift in Sources */,
 				CACD540F213FBA0C00B425C4 /* Timer.swift in Sources */,
+				11246D62231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift in Sources */,
 				CA8CF70D225EBE1900B217C7 /* MusicActionService.swift in Sources */,
 				CA4C28C521451D9200CA264D /* VideoCollectionViewCell.swift in Sources */,
 				CA91028022FF607900140D5A /* AlphabetSendStatCommand.swift in Sources */,
