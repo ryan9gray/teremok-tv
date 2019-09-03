@@ -9,7 +9,6 @@
 import UIKit
 
 class MonsterGameFlow {
-    
     weak var master: MonsterMasterViewController?
     
     init(master: MonsterMasterViewController) {
@@ -17,6 +16,7 @@ class MonsterGameFlow {
     }
     
     var game: Game!
+    var gameResults: GameResults!
     
     func startFlow(difficulty: Int) {
         guard !LocalStore.monsterIntroduce() else {
@@ -24,7 +24,7 @@ class MonsterGameFlow {
             return
         }
         
-        game = Game.init(difficulty: Game.Difficulty.init(rawValue: difficulty))
+        game = Game(gameDifficulty: Game.Difficulty(rawValue: difficulty) ?? .easy)
         randomRound()
     }
     
@@ -41,7 +41,9 @@ class MonsterGameFlow {
             let monster = MonsterMaster.Monster(imageName: name, matchId: idx)
             game.items.append(monster)
             game.items.append(monster)
-            monsterNames.remove(at:monsterNames.index(of: name)!)
+            if let idx = monsterNames.firstIndex(of: name) {
+                monsterNames.remove(at: idx)
+            }
         }
         game.items.shuffle()
     }
@@ -54,24 +56,35 @@ class MonsterGameFlow {
     }
     
     private func openResult(result: Int) {
-        //open result screen
+        gameResults = GameResults(result: result, gameWon: result > game.limit ? false : true)
+        let controller = MonsterGameResultsViewController.instantiate(fromStoryboard: .monster)
+        controller.input = MonsterGameResultsViewController.Input(gameResult: gameResults)
+        controller.output = MonsterGameResultsViewController.Output(openNext: openNext)
+        master?.router?.presentModalChild(viewController: controller)
+    }
+    
+    private func openNext() {
+        if gameResults.gameWon {
+            randomRound()
+        }
+        else {
+            startGame()
+        }
     }
     
     private func showIntroduce(difficulty: Int) {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .start
-        master?.router?.introduceController(viewController: controller, completion: {
+        master?.router?.introduceController(viewController: controller) {
             self.startFlow(difficulty: difficulty)
-        })
+        }
     }
     
     deinit {
         print("Logger: GameFlow deinit")
     }
     
-    
     class Game {
-        
         enum Difficulty: Int {
             case easy = 0
             case medium = 1
@@ -92,16 +105,29 @@ class MonsterGameFlow {
             
         }
         
-        init(difficulty: Difficulty?) {
-            if let diff = difficulty {
-                self.difficulty = diff
-            }
-            else {
-                self.difficulty = Difficulty.easy
-            }
+        init(gameDifficulty: Difficulty) {
+            difficulty = gameDifficulty
         }
         
         let difficulty: Difficulty
         var items = [MonsterMaster.Monster]()
+        
+        var limit: Int {
+            get {
+                switch difficulty {
+                case .easy:
+                    return 60
+                case .medium:
+                    return 180
+                case .hard:
+                    return 300
+                }
+            }
+        }
+    }
+    
+    struct GameResults {
+        let result: Int
+        let gameWon: Bool
     }
 }

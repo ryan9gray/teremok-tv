@@ -29,20 +29,8 @@ class MonsterGameViewController: GameViewController {
     private var seconds = 0 {
         didSet {
             timerBtn.setTitle(PlayerHelper.stringFromTimeInterval(TimeInterval(seconds)), for: .normal)
-            if (seconds >= limit) {
-                timerBtn.setTitleColor(UIColor.Button.redTwo, for: .normal)
-            }
-        }
-    }
-    private var limit: Int {
-        get {
-            switch input.game.difficulty {
-            case .easy:
-                return 60
-            case .medium:
-                return 180
-            case .hard:
-                return 300
+            if (seconds >= input.game.limit) {
+                timerBtn.setTitleColor(UIColor.Button.redThree, for: .normal)
             }
         }
     }
@@ -132,7 +120,9 @@ extension MonsterGameViewController: UICollectionViewDataSource {
         cell.configuration(monster: input.game.items[indexPath.row])
         return cell
     }
-    
+}
+
+extension MonsterGameViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let selectedCell = collectionView.cellForItem(at: indexPath) as? MonsterCollectionViewCell else { return }
 
@@ -149,24 +139,5 @@ extension MonsterGameViewController: UICollectionViewDataSource {
             return true
         }
         return false
-    }
-}
-extension MonsterGameViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var height = collectionView.bounds.height / 2.2
-        var width = collectionView.bounds.width / 4.2
-        switch input.game.difficulty {
-        case MonsterGameFlow.Game.Difficulty.medium:
-            height = collectionView.bounds.height / 3.4
-            width = collectionView.bounds.width / 4.4
-            break
-        case MonsterGameFlow.Game.Difficulty.hard:
-            height = collectionView.bounds.height / 4.6
-            width = collectionView.bounds.width / 6
-            break
-        default:
-            break
-        }
-        return CGSize(width: width, height: height)
     }
 }
