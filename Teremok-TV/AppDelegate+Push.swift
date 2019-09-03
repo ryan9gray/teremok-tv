@@ -148,7 +148,9 @@ extension AppDelegate {
         }
         completionHandler(.newData)
     }
-    
+
+    func updateCloudTokenOnService() {
+    }
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {

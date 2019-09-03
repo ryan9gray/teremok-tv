@@ -39,7 +39,6 @@ class AlphaviteCharsViewController: GameViewController {
         super.viewDidLoad()
 
         wordLabel.textColor = UIColor.Alphavite.Button.blueTwo
-
         titleLabel.textColor = UIColor.Alphavite.Button.blueTwo
         titleLabel.strokeSize = 12.0
         titleLabel.strokePosition = .center

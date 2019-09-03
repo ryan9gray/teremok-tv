@@ -81,6 +81,7 @@ class AlphaviteGameFlow  {
         }
         randomRound()
     }
+
     func repeatRound() {
         startTraining()
     }

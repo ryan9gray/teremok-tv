@@ -9,7 +9,6 @@
 import UIKit
 
 class MonsterStartViewController: GameViewController {
-
     @IBOutlet private var startEasy: KeyButton!
     @IBOutlet private var startMedium: KeyButton!
     @IBOutlet private var startHard: KeyButton!
@@ -24,5 +23,4 @@ class MonsterStartViewController: GameViewController {
     @IBAction func startGame(_ sender: UIButton) {
         masterRouter?.startFlow(sender.tag)
     }
-    
 }

@@ -21,9 +21,7 @@ protocol MonsterMasterDataStore {
 }
 
 class MonsterMasterInteractor: MonsterMasterBusinessLogic, MonsterMasterDataStore {
-    var presenter: MonsterMasterPresentationLogic?
-    var worker: MonsterMasterWorker?
-    
+    var presenter: MonsterMasterPresentationLogic?    
 
     // MARK: Do something
 

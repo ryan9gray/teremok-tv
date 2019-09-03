@@ -89,7 +89,11 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
     }
     
     @IBAction private func homeClick(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if router?.canPop() ?? false {
+            router?.popChild()
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
@@ -97,7 +101,6 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
 
         displayProfile()
         router?.navigateMain()
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {

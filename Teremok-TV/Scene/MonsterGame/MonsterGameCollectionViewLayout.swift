@@ -9,7 +9,6 @@
 import UIKit
 
 class MonsterGameCollectionViewLayout: UICollectionViewLayout {
-    
     let xOffset: CGFloat = 50
     
     enum FieldSize: Int {
@@ -29,6 +28,7 @@ class MonsterGameCollectionViewLayout: UICollectionViewLayout {
             }
         }
     }
+
     var itemSpacing: CGFloat {
         get {
             switch numberOfItems {
@@ -58,7 +58,8 @@ class MonsterGameCollectionViewLayout: UICollectionViewLayout {
     
     override func prepare() {
         guard let collectionView = collectionView else { return }
-        numberOfItems = FieldSize.init(rawValue: collectionView.numberOfItems(inSection: 0)) ?? FieldSize.small
+
+        numberOfItems = FieldSize(rawValue: collectionView.numberOfItems(inSection: 0)) ?? .small
         layoutAttributes.removeAll()
         
         for idx in 0..<numberOfItems.rawValue {

@@ -30,10 +30,10 @@
                                 <rect key="frame" x="194.66666666666663" y="140" width="423" height="158"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Uu-aj-Jud">
-                                <rect key="frame" x="184" y="284" width="444" height="40"/>
+                                <rect key="frame" x="184" y="283" width="444" height="41"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnZ-j2-3RP" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="1-2 года">
                                             <color key="titleColor" red="0.0" green="0.21568627450980393" blue="0.67843137254901964" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nO-Pv-Co7" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="151.33333333333331" y="0.0" width="141.33333333333331" height="40"/>
+                                        <rect key="frame" x="151.33333333333331" y="0.0" width="141.33333333333331" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="2-3 года">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVa-Zu-gHs" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="302.66666666666669" y="0.0" width="141.33333333333331" height="40"/>
+                                        <rect key="frame" x="302.66666666666669" y="0.0" width="141.33333333333331" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="3-5 лет">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -277,6 +277,7 @@
                                     <constraint firstAttribute="width" secondItem="Mbj-Zo-doR" secondAttribute="height" multiplier="1:1" id="mdf-DE-hth"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="icPlayBlue">
                                     <color key="titleColor" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>

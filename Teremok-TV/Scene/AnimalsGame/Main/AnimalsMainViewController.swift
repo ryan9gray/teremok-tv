@@ -106,7 +106,10 @@ class AnimalsMainViewController: GameViewController, AnimalsMainDisplayLogic {
     }
 
     func displayProfile(){
-        guard let childs = Profile.current?.childs else { return }
+        guard let childs = Profile.current?.childs else {
+            avatarButton.isHidden = true
+            return
+        }
 
         if let avatar = childs.first(where: {$0.current ?? false})?.pic {
             avatarButton.setAvatar(linktoLoad: avatar)
