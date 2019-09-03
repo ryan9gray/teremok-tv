@@ -23,7 +23,7 @@ class MonsterGameResultsViewController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timeLbl.text = "Твое время \(PlayerHelper.stringFromTimeInterval(TimeInterval(input.gameResult.result)))"
-        if input.gameResult.state == MonsterGameFlow.GameResults.State.lose {
+        if !input.gameResult.gameWon {
             timeView.borderColor = UIColor.Button.redThree
             timeLbl.textColor = UIColor.Button.redThree
             BGImageView.image = UIImage(named: "gameLostBG")

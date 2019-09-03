@@ -25,7 +25,7 @@ class MonsterGameFlow {
             return
         }
         
-        game = Game.init(difficulty: Game.Difficulty.init(rawValue: difficulty))
+        game = Game(gameDifficulty: Game.Difficulty(rawValue: difficulty) ?? Game.Difficulty.easy)
         randomRound()
     }
     
@@ -55,7 +55,7 @@ class MonsterGameFlow {
     }
     
     private func openResult(result: Int) {
-        gameResults = GameResults.init(result: result, state: MonsterGameFlow.GameResults.State.init(rawValue: result > game.limit ? 0 : 1))
+        gameResults = GameResults(result: result, gameWon: result > game.limit ? false : true)
         let controller = MonsterGameResultsViewController.instantiate(fromStoryboard: .monster)
         controller.input = MonsterGameResultsViewController.Input(gameResult: gameResults)
         controller.output = MonsterGameResultsViewController.Output(openNext: openNext)
@@ -63,10 +63,10 @@ class MonsterGameFlow {
     }
     
     private func openNext() {
-        switch gameResults.state {
-        case .win:
+        if gameResults.gameWon {
             randomRound()
-        case .lose:
+        }
+        else {
             startGame()
         }
     }
@@ -106,12 +106,8 @@ class MonsterGameFlow {
             
         }
         
-        init(difficulty: Difficulty?) {
-            guard let diff = difficulty else {
-                self.difficulty = Difficulty.easy
-                return
-            }
-            self.difficulty = diff
+        init(gameDifficulty: Difficulty) {
+            difficulty = gameDifficulty
         }
         
         let difficulty: Difficulty
@@ -133,20 +129,6 @@ class MonsterGameFlow {
     
     struct GameResults {
         let result: Int
-        let state: State
-        
-        enum State: Int {
-            case lose = 0
-            case win = 1
-        }
-        
-        init(result: Int, state: State?) {
-            self.result = result
-            guard let gameState = state else {
-                self.state = State.win
-                return
-            }
-            self.state = gameState
-        }
+        let gameWon: Bool
     }
 }
