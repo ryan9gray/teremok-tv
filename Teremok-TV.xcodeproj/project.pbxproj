@@ -1228,6 +1228,7 @@
 		CAD21336231BFD4D006F2F08 /* ready_r_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAC6F70722A81BC000756AE2 /* ready_r_3.wav */; };
 		CAD21337231BFD4D006F2F08 /* alphavite_21_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005522F6EACE00821C25 /* alphavite_21_word_1.wav */; };
 		CAD2133B231BFD4D006F2F08 /* Trackable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAAAFB5E22E3549B0006BD60 /* Trackable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAD21341231EDC15006F2F08 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
 		CAD90EB122AC71AB004D74BD /* AnimalPackDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB022AC71AB004D74BD /* AnimalPackDownloader.swift */; };
 		CAD90EB322B13636004D74BD /* AnimalsGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB222B13636004D74BD /* AnimalsGetStatCommand.swift */; };
 		CAD90EB522B13644004D74BD /* AnimalsSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB422B13644004D74BD /* AnimalsSendStatCommand.swift */; };
@@ -5303,6 +5304,7 @@
 				CAD21111231BFD4D006F2F08 /* SearchCommand.swift in Sources */,
 				CAD21112231BFD4D006F2F08 /* AlphaviteMasterModels.swift in Sources */,
 				CAD21113231BFD4D006F2F08 /* MusicMasterInteractor.swift in Sources */,
+				CAD21341231EDC15006F2F08 /* MonsterGameResultsViewController.swift in Sources */,
 				CAD21114231BFD4D006F2F08 /* CarouselCollectionViewLayout.swift in Sources */,
 				CAD21115231BFD4D006F2F08 /* AppInfoWorker.swift in Sources */,
 				CAD21116231BFD4D006F2F08 /* AlphaviteMasterPresenter.swift in Sources */,
