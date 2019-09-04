@@ -13,6 +13,9 @@
         <array key="Foo.ttf">
             <string>Foo-Regular</string>
         </array>
+        <array key="MontserratAlternates-ExtraBold.ttf">
+            <string>MontserratAlternates-ExtraBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Monster Start View Controller-->
@@ -30,10 +33,10 @@
                                 <rect key="frame" x="194.66666666666663" y="140" width="423" height="158"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Uu-aj-Jud">
-                                <rect key="frame" x="184" y="284" width="444" height="40"/>
+                                <rect key="frame" x="184" y="283" width="444" height="41"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnZ-j2-3RP" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="1-2 года">
                                             <color key="titleColor" red="0.0" green="0.21568627450980393" blue="0.67843137254901964" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,7 +46,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nO-Pv-Co7" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="151.33333333333331" y="0.0" width="141.33333333333331" height="40"/>
+                                        <rect key="frame" x="151.33333333333331" y="0.0" width="141.33333333333331" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="2-3 года">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,7 +56,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVa-Zu-gHs" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="302.66666666666669" y="0.0" width="141.33333333333331" height="40"/>
+                                        <rect key="frame" x="302.66666666666669" y="0.0" width="141.33333333333331" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="3-5 лет">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -312,6 +315,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTH-NR-CcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="26" y="1326"/>
+        </scene>
+        <!--Monster Statistic View Controller-->
+        <scene sceneID="0fr-as-3QU">
+            <objects>
+                <viewController storyboardIdentifier="MonsterStatisticViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jmp-jG-gMT" customClass="MonsterStatisticViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TPf-3W-u8n">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameProcessBG" translatesAutoresizingMaskIntoConstraints="NO" id="Z2D-KC-xQs">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Lastname" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMa-lD-0jS">
+                                <rect key="frame" x="357.66666666666669" y="20" width="96.666666666666686" height="44"/>
+                                <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="18"/>
+                                <color key="textColor" red="0.8666666666666667" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-rd-j2j">
+                                <rect key="frame" x="286" y="155.66666666666666" width="240" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="Koi-F1-wyt"/>
+                                    <constraint firstAttribute="height" constant="2" id="edx-wt-aP0"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Среднее время:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cug-QC-6hB">
+                                <rect key="frame" x="275.33333333333326" y="94" width="261.66666666666674" height="36.666666666666657"/>
+                                <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Z2D-KC-xQs" secondAttribute="bottom" id="2fN-HU-rpM"/>
+                            <constraint firstAttribute="trailing" secondItem="Z2D-KC-xQs" secondAttribute="trailing" id="6vD-F8-tJi"/>
+                            <constraint firstItem="EYC-rd-j2j" firstAttribute="top" secondItem="Cug-QC-6hB" secondAttribute="bottom" constant="25" id="FSl-b7-3kV"/>
+                            <constraint firstItem="RMa-lD-0jS" firstAttribute="centerX" secondItem="TPf-3W-u8n" secondAttribute="centerX" id="GBS-fs-xTx"/>
+                            <constraint firstItem="Z2D-KC-xQs" firstAttribute="top" secondItem="TPf-3W-u8n" secondAttribute="top" id="SLI-fJ-Sf2"/>
+                            <constraint firstItem="Cug-QC-6hB" firstAttribute="top" secondItem="RMa-lD-0jS" secondAttribute="bottom" constant="30" id="WKB-Qp-3Ph"/>
+                            <constraint firstItem="Cug-QC-6hB" firstAttribute="centerX" secondItem="TPf-3W-u8n" secondAttribute="centerX" id="jQS-zf-7Y0"/>
+                            <constraint firstItem="Z2D-KC-xQs" firstAttribute="leading" secondItem="TPf-3W-u8n" secondAttribute="leading" id="pDw-KK-n5s"/>
+                            <constraint firstItem="RMa-lD-0jS" firstAttribute="top" secondItem="luX-RK-3dX" secondAttribute="top" constant="20" id="q7r-2a-qGT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="luX-RK-3dX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0J-ZW-C37" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="-1124"/>
         </scene>
     </scenes>
     <resources>
