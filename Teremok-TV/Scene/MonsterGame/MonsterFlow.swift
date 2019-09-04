@@ -9,7 +9,6 @@
 import UIKit
 
 class MonsterGameFlow {
-    
     weak var master: MonsterMasterViewController?
     
     init(master: MonsterMasterViewController) {
@@ -25,7 +24,7 @@ class MonsterGameFlow {
             return
         }
         
-        game = Game(gameDifficulty: Game.Difficulty(rawValue: difficulty) ?? Game.Difficulty.easy)
+        game = Game(gameDifficulty: Game.Difficulty(rawValue: difficulty) ?? .easy)
         randomRound()
     }
     
@@ -42,7 +41,9 @@ class MonsterGameFlow {
             let monster = MonsterMaster.Monster(imageName: name, matchId: idx)
             game.items.append(monster)
             game.items.append(monster)
-            monsterNames.remove(at:monsterNames.index(of: name)!)
+            if let idx = monsterNames.firstIndex(of: name) {
+                monsterNames.remove(at: idx)
+            }
         }
         game.items.shuffle()
     }
@@ -74,18 +75,16 @@ class MonsterGameFlow {
     private func showIntroduce(difficulty: Int) {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .start
-        master?.router?.introduceController(viewController: controller, completion: {
+        master?.router?.introduceController(viewController: controller) {
             self.startFlow(difficulty: difficulty)
-        })
+        }
     }
     
     deinit {
         print("Logger: GameFlow deinit")
     }
     
-    
     class Game {
-        
         enum Difficulty: Int {
             case easy = 0
             case medium = 1
