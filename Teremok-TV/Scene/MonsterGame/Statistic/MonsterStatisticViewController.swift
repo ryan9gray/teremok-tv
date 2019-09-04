@@ -13,10 +13,16 @@
 import UIKit
 
 protocol MonsterStatisticDisplayLogic: CommonDisplayLogic {
-    
+    func showStats(_ model: MonsterStatisticViewController.Input)
 }
 
 class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayLogic {
+    @IBOutlet private var userName: UILabel!
+    @IBOutlet private var lastWeakTime: UILabel!
+    @IBOutlet private var thisWeakTime: UILabel!
+    @IBOutlet private var statStatus: UILabel!
+    @IBOutlet private var homeBtn: KeyButton!
+    @IBOutlet private var avatarBtn: AvatarButton!
     var interactor: MonsterStatisticBusinessLogic?
     var router: (CommonRoutingLogic & MonsterStatisticRoutingLogic & MonsterStatisticDataPassing)?
     var modallyControllerRoutingLogic: CommonRoutingLogic? {
@@ -24,6 +30,10 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
     }
     var activityView: LottieHUD?
 
+    struct Input {
+        
+    }
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -46,8 +56,29 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
         router.viewController = viewController
         router.dataStore = interactor
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        activityView = LottieHUD()
+        displayProfile()        
+        showPreloader()
+        interactor?.fetchStat()
+    }
+    
+    func showStats(_ model: Input) {
+        hidePreloader()
+    }
+    
+    func displayProfile() {
+        guard let child = Profile.currentChild else { return }
+        
+        if let avatar = child.pic {
+            avatarBtn.setAvatar(linktoLoad: avatar)
+            
+        }
+        if let name = child.name {
+            userName.text = name
+        }
     }
 }

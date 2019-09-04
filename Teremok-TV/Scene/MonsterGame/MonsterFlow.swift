@@ -16,6 +16,7 @@ class MonsterGameFlow {
     }
     
     var game: Game!
+    var service: MonsterServiceProtocol!
     var gameResults: GameResults!
     
     func startFlow(difficulty: Int) {
@@ -61,6 +62,7 @@ class MonsterGameFlow {
         controller.input = MonsterGameResultsViewController.Input(gameResult: gameResults)
         controller.output = MonsterGameResultsViewController.Output(openNext: openNext)
         master?.router?.presentModalChild(viewController: controller)
+        service.sendStat(statistic: MonsterStatisticRequest(difficulty: game.difficulty.rawValue, seconds: result)) { _ in }
     }
     
     private func openNext() {

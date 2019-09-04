@@ -10,7 +10,7 @@ import UIKit
 
 protocol MonsterServiceProtocol {
     func getStat(completion: @escaping (Result<MonsterStatisticResponse>) -> Void)
-    func sendStat(statistic: [MonsterStatisticRequest], completion: @escaping (Result<StatusResponse>) -> Void)
+    func sendStat(statistic: MonsterStatisticRequest, completion: @escaping (Result<StatusResponse>) -> Void)
 }
 
 struct MonsterService: MonsterServiceProtocol {
@@ -24,7 +24,7 @@ struct MonsterService: MonsterServiceProtocol {
         }
     }
     
-    func sendStat(statistic: [MonsterStatisticRequest], completion: @escaping (Result<StatusResponse>) -> Void) {
+    func sendStat(statistic: MonsterStatisticRequest, completion: @escaping (Result<StatusResponse>) -> Void) {
         MonsterSendStatCommand(stats: statistic).execute(success: { (responseObject) in
             completion(.success(responseObject))
         }) { (com, response) in

@@ -18,7 +18,7 @@ class MonsterGameViewController: GameViewController {
     private var secondSelectedItem: MonsterCollectionViewCell?
     private var score = 0 {
         didSet {
-            if (score == input.game.difficulty.fieldSize/2) {
+            if score == input.game.difficulty.fieldSize/2 {
                 output.openResults(seconds)
                 timer.invalidate()
             }
@@ -28,7 +28,7 @@ class MonsterGameViewController: GameViewController {
     private var seconds = 0 {
         didSet {
             timerBtn.setTitle(PlayerHelper.stringFromTimeInterval(TimeInterval(seconds)), for: .normal)
-            if (seconds >= input.game.limit) {
+            if seconds >= input.game.limit {
                 timerBtn.setTitleColor(UIColor.Button.redThree, for: .normal)
             }
         }
@@ -72,7 +72,7 @@ class MonsterGameViewController: GameViewController {
     }
     
     func saveSelectedCell(cell: MonsterCollectionViewCell) {
-        if (firstSelectedItem == nil) {
+        if firstSelectedItem == nil {
             firstSelectedItem = cell
         }
         else {
@@ -81,8 +81,8 @@ class MonsterGameViewController: GameViewController {
     }
     
     func matchMonsters() {
-        if (firstSelectedItem!.flipped && secondSelectedItem!.flipped) {
-            if (firstSelectedItem?.item.matchId == secondSelectedItem?.item.matchId) {
+        if firstSelectedItem!.flipped && secondSelectedItem!.flipped {
+            if firstSelectedItem?.item.matchId == secondSelectedItem?.item.matchId {
                 score += 1
                 flipBack(shouldFlip: false)
             }
@@ -134,7 +134,7 @@ extension MonsterGameViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        if ((firstSelectedItem == nil) || ((secondSelectedItem == nil) && firstSelectedItem != collectionView.cellForItem(at: indexPath))) {
+        if firstSelectedItem == nil || (secondSelectedItem == nil && firstSelectedItem != collectionView.cellForItem(at: indexPath)) {
             return true
         }
         return false

@@ -9,9 +9,9 @@
 import Alamofire
 
 class MonsterSendStatCommand: BasicCommand {
-    let stats: [MonsterStatisticRequest]
+    let stats: MonsterStatisticRequest
     
-    init(stats: [MonsterStatisticRequest]) {
+    init(stats: MonsterStatisticRequest) {
         self.stats = stats
     }
     func execute(success: ((StatusResponse) -> Void)?, failure: ApiCompletionBlock?) {
@@ -23,6 +23,9 @@ class MonsterSendStatCommand: BasicCommand {
     }
     
     override var parameters: [String : Any] {
-        return [ "Stats" : stats.map { $0.toJSON() } ]
+        return [
+            "difficulty" : stats.difficulty,
+            "seconds": stats.seconds
+        ]
     }
 }
