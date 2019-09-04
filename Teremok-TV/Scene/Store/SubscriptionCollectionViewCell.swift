@@ -20,11 +20,12 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var gameView: UIView!
     
     @IBOutlet private var labels: [UILabel]!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         restoreButton.text = "Восстановить подписку"
-        purchaseButton.gradientColors = Styles.Gradients.yellow.value
+        purchaseButton.gradientColors = Style.Gradients.yellow.value
         labels.forEach { $0.textColor = UIColor.View.Label.titleText }
     }
     
@@ -48,7 +49,7 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
         let purchaseAction: () -> Void
     }
     
-    func configurate(sub: RegisteredPurchase, input: Input) {
+    func configurate(sub: RegisteredPurchase, input: Input, have: Bool = false) {
         self.input = input
         subscription = sub
         switch sub {
@@ -65,7 +66,18 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
             musicView.isHidden = true
             titleLabel.text = "Дети +"
         }
+        priceLabel.isHidden = have
+        restoreButton.isHidden = have
+        if have {
+            purchaseButton.gradientColors = Style.Gradients.green.value
+            purchaseButton.setTitle("Оформлена", for: .normal)
+            purchaseButton.setTitleColor(.white, for: .normal)
+        } else {
+            purchaseButton.gradientColors = Style.Gradients.yellow.value
+            purchaseButton.setTitle("Оформить", for: .normal)
+            purchaseButton.setTitleColor(UIColor.View.Label.titleText, for: .normal)
 
+        }
         input.updatePrice(subscription) { [weak self] price in
             self?.priceLabel.text = "\(price) / мес"
         }

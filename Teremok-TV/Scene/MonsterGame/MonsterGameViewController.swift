@@ -9,7 +9,6 @@
 import UIKit
 
 class MonsterGameViewController: GameViewController {
-
     @IBOutlet private var timerBtn: KeyButton!
     @IBOutlet private var collectionView: UICollectionView!
     var input: Input!
@@ -45,7 +44,7 @@ class MonsterGameViewController: GameViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timerBtn.gradientColors = Styles.Gradients.lightGray.value
+        timerBtn.gradientColors = Style.Gradients.lightGray.value
         let cells = [MonsterCollectionViewCell.self]
         collectionView.register(cells: cells)
     }

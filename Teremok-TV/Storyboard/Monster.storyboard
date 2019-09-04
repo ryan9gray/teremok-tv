@@ -280,6 +280,7 @@
                                     <constraint firstAttribute="width" secondItem="Mbj-Zo-doR" secondAttribute="height" multiplier="1:1" id="mdf-DE-hth"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="icPlayBlue">
                                     <color key="titleColor" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>

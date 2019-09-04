@@ -57,6 +57,8 @@ class StoreViewController: AbstracViewController, StoreDisplayLogic, UITextViewD
     @IBOutlet private var collectionView: UICollectionView!
     let subscriptions: [RegisteredPurchase] = RegisteredPurchase.allValues()
 
+    let profile = Profile.current
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -109,7 +111,11 @@ extension StoreViewController: UICollectionViewDataSource {
         } else {
             let cell = collectionView.dequeueReusableCell(withCell: SubscriptionCollectionViewCell.self, for: indexPath)
             let subscription = subscriptions[(indexPath.row - 1)]
-            cell.configurate(sub: subscription, input: SubscriptionCollectionViewCell.Input(updatePrice: interactor!.fetchProduct))
+            cell.configurate(
+                sub: subscription,
+                input: SubscriptionCollectionViewCell.Input(updatePrice: interactor!.fetchProduct),
+                have: profile?.currentPremium() == subscription.premium
+            )
             cell.output = SubscriptionCollectionViewCell.Output(
                 restoreAction: restoreClick,
                 purchaseAction: { [weak self] in

@@ -42,14 +42,15 @@ final class Profile: Mappable  {
 
     static var subscribe: String {
         if let profile = Profile.current {
-            if profile.premiumGame {
-                return "У Вас подписка «Интеллектум»"
-            } else if profile.premiumMusic {
-                return "У Вас подписка «Дети Супер +»"
-            } else if profile.premium {
-                return "У Вас подписка «Дети+»"
-            } else {
-                return "Вас нет подписки"
+            switch profile.currentPremium() {
+                case .game:
+                    return "У Вас подписка «Интеллектум»"
+                case .music:
+                    return "У Вас подписка «Дети Супер +»"
+                case .offline:
+                    return "У Вас подписка «Дети+»"
+                case .simple:
+                    return "Вас нет подписки"
             }
         }
         return "Вы не авторизованы"
@@ -58,6 +59,18 @@ final class Profile: Mappable  {
     var id: Int?
     var email: String?
     var childs: [Child] = []
+
+    func currentPremium() -> Premium {
+        if premiumGame {
+            return .game
+        } else if premiumMusic {
+            return .music
+        } else if premium {
+            return .offline
+        } else {
+            return .simple
+        }
+    }
     
     var premium: Bool = false
     var premiumMusic: Bool = false
@@ -84,8 +97,15 @@ final class Profile: Mappable  {
         mapping(map: map)
     }
 
+
 }
 
+enum Premium {
+    case offline
+    case music
+    case game
+    case simple
+}
 
 final class Child: Mappable  {
 

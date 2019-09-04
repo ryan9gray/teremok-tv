@@ -53,7 +53,7 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
     }
 
     private var timer = Timer()
-    private let limit: CGFloat = 30.0
+    private let limit: CGFloat = 15.0
     private var progress: CGFloat {
         return seconds / limit
     }

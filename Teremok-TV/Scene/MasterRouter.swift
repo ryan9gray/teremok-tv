@@ -33,7 +33,6 @@ protocol MasterRoutingLogic: CommonRoutingLogic, ParentRoutingLogic {
 protocol MasterVCRoutingLogic: MasterRoutingLogic {
     func navigateToAchieves()
     func navigateToFav()
-    func navigateToCatalog()
     func navigateToSearch()
     func navigateToMain()
     func navigateToVideo(id: Int)
@@ -118,7 +117,8 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
         )
         viewController?.present(vc, animated: true, completion: nil)
     }
-    
+
+    /// Deprecate
     func navigateToCatalog(){
         let serials = RazdelViewController.instantiate(fromStoryboard: .main)
         pushChild(serials)

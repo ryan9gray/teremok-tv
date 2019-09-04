@@ -9,18 +9,14 @@
 import UIKit
 
 class MonsterCollectionViewCell: UICollectionViewCell {
-
     @IBOutlet private var backImage: UIImageView!
     @IBOutlet private var frontImage: UIImageView!
 
     var item: MonsterMaster.Monster!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
     override func layoutSubviews() {
         super.layoutSubviews()
+
         backImage.layer.cornerRadius = 12
     }
     

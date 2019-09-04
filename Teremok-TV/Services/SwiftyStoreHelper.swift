@@ -12,6 +12,17 @@ enum RegisteredPurchase : String {
     case game = "fullSubs"
     case music = "VandM"
     case video = "month"
+
+    var premium: Premium {
+        switch self {
+        case .game:
+            return .game
+        case .music:
+            return .music
+        case .video:
+            return .offline
+        }
+    }
 }
 
 protocol SwiftyStorePorotocol {

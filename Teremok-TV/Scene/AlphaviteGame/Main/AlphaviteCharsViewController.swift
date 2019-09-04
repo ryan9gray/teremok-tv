@@ -39,7 +39,6 @@ class AlphaviteCharsViewController: GameViewController {
         super.viewDidLoad()
 
         wordLabel.textColor = UIColor.Alphavite.Button.blueTwo
-
         titleLabel.textColor = UIColor.Alphavite.Button.blueTwo
         titleLabel.strokeSize = 12.0
         titleLabel.strokePosition = .center
@@ -73,7 +72,7 @@ class AlphaviteCharsViewController: GameViewController {
 
     private func setWord(_ text: String) {
         wordLabel.text = text
-        let attributedWord = NSMutableAttributedString(string: text, attributes: Styles.TextAttributes.alphabetWord)
+        let attributedWord = NSMutableAttributedString(string: text, attributes: Style.TextAttributes.alphabetWord)
         attributedWord.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSRange(location: 0,length: 1))
         wordLabel.attributedText = attributedWord
     }
@@ -118,7 +117,7 @@ class AlphaviteCharsViewController: GameViewController {
                 return
             }
 
-            imagewView.image = UIImage(named: word) ?? #imageLiteral(resourceName: "icDotes")
+            imagewView.image = UIImage(named: word)
             animateImage()
             let wordName = AlphaviteMaster.Names[word] ?? "..."
             setWord(wordName)

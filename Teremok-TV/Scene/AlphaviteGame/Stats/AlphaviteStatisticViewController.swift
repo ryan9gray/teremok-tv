@@ -77,8 +77,8 @@ class AlphaviteStatisticViewController: GameViewController, AlphaviteStatisticDi
         displayProfile()
         goodTitleLabel.textColor = UIColor.Alphavite.Button.greenTwo
         badTitleLabel.textColor = UIColor.Alphavite.Button.redTwo
-        leftGradientView.gradientColors = Styles.Gradients.green.value
-        rightGradientView.gradientColors = Styles.Gradients.red.value
+        leftGradientView.gradientColors = Style.Gradients.green.value
+        rightGradientView.gradientColors = Style.Gradients.red.value
 
         showPreloader()
         interactor?.fetchStat()

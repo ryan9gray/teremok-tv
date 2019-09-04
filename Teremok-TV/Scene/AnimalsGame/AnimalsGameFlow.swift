@@ -58,7 +58,10 @@ class AnimalsGameFlow  {
     private func presentWords() {
         let animals = generateRound()
 
-        guard !animals.isEmpty else { return }
+        guard !animals.isEmpty else {
+            finishPack()
+            return
+        }
 
         let controller = AnimalsWordsViewController.instantiate(fromStoryboard: .animals)
         controller.input = AnimalsWordsViewController.Input(animals:  animals)
@@ -100,7 +103,7 @@ class AnimalsGameFlow  {
     }
 
     private func randomChoice() -> AnimalsGame.Animal {
-        let index = Int(arc4random_uniform( UInt32(pack.roundAnimals.count)))
+        let index = Int.random(in: 0..<pack.roundAnimals.count)
         let animal = pack.roundAnimals[index]
         pack.roundAnimals.remove(at: index)
         return animal
@@ -121,11 +124,11 @@ class AnimalsGameFlow  {
         controller.input = ResumeRoundViewController.Input(answers: answers)
         controller.output = ResumeRoundViewController.Output(
             next: {
-                guard Profile.isAuthorized else {
+                guard let profile = Profile.current else {
                     self.authAlert()
                     return
                 }
-                guard Profile.current?.premiumGame ?? false else {
+                guard profile.premiumGame else {
                     self.buyAlert()
                     return
                 }

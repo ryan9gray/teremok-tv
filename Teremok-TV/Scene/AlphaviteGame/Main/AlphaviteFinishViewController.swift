@@ -43,7 +43,7 @@ class AlphaviteFinishViewController: GameViewController {
         titleLabel.textColor = .white
         titleLabel.strokeSize = 12.0
         titleLabel.strokePosition = .center
-        titleLabel.gradientColors = Styles.Gradients.green.value
+        titleLabel.gradientColors = Style.Gradients.green.value
         pointsLabel.textColor = UIColor.Alphavite.Button.greenOne
         greyLabel.textColor = UIColor.Alphavite.Button.grey
         buttonTitleLabel.textColor = .white
@@ -55,7 +55,7 @@ class AlphaviteFinishViewController: GameViewController {
 
     private func presentResult(isGood: Bool) {
         self.isGood = isGood
-        playButton.gradientColors = isGood ? Styles.Gradients.red.value : Styles.Gradients.green.value
+        playButton.gradientColors = isGood ? Style.Gradients.red.value : Style.Gradients.green.value
         buttonTitleLabel.text = isGood ? "Далее" : "Заново"
         playButton.setImage(isGood ? UIImage(named: "ic-alphavitePlay") : UIImage(named: "ic-alphaviteRepeat"), for: .normal)
     }

@@ -95,7 +95,7 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
         if LocalStore.alphabetTip < 3 {
             LocalStore.alphabetTip += 1
             var preferences = EasyTipView.Preferences()
-            preferences.drawing.font = Styles.Font.istokWeb(size: 16)
+            preferences.drawing.font = Style.Font.istokWeb(size: 16)
             preferences.drawing.foregroundColor = UIColor.View.titleText
             preferences.drawing.backgroundColor = .white
             preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
@@ -107,7 +107,10 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
     // MARK: Do something
 
     func displayProfile() {
-        guard let childs = Profile.current?.childs else { return }
+        guard let childs = Profile.current?.childs else {
+            avatarButton.isHidden = true
+            return
+        }
 
         if let avatar = childs.first(where: {$0.current ?? false})?.pic {
             avatarButton.setAvatar(linktoLoad: avatar)

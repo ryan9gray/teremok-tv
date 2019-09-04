@@ -24,7 +24,10 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
     var tipView: EasyTipView?
     
     func displayProfile() {
-        guard let childs = Profile.current?.childs else { return }
+        guard let childs = Profile.current?.childs else {
+            avatarButton.isHidden = true
+            return
+        }
         
         if let avatar = childs.first(where: {$0.current ?? false})?.pic {
             avatarButton.setAvatar(linktoLoad: avatar)
@@ -89,7 +92,11 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
     }
     
     @IBAction private func homeClick(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if router?.canPop() ?? false {
+            router?.popChild()
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
@@ -97,7 +104,6 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
 
         displayProfile()
         router?.navigateMain()
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -106,7 +112,7 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
         if LocalStore.monsterTip < 3 {
             LocalStore.monsterTip += 1
             var preferences = EasyTipView.Preferences()
-            preferences.drawing.font = Styles.Font.istokWeb(size: 16)
+            preferences.drawing.font = Style.Font.istokWeb(size: 16)
             preferences.drawing.foregroundColor = UIColor.View.titleText
             preferences.drawing.backgroundColor = .white
             preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right

@@ -31,18 +31,9 @@ extension AppDelegate {
                 })
             }
         }
-  
-    }
-    
-    func updateCloudTokenOnService() {
-
-        if let _ = Profile.current?.email, AppInfoWorker.isHaveCloudToken {
-
-        }
     }
     
     @discardableResult func application(_ application: UIApplication, handlePush push: TTPush) -> Bool {
-        
         switch push.action {
         case .web(let link):
             if application.canOpenURL(link) {
@@ -157,7 +148,9 @@ extension AppDelegate {
         }
         completionHandler(.newData)
     }
-    
+
+    func updateCloudTokenOnService() {
+    }
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {

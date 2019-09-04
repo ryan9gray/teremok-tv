@@ -13,16 +13,21 @@ class AlphaviteStartViewController: GameViewController {
     @IBOutlet private var startButton: KeyButton!
 
     @IBAction private func startTap(_ sender: Any) {
+        buttonPlayer.play()
         masterRouter?.startFlow(0)
     }
+
     @IBOutlet private var segmentController: TTSegmentedControl!
-    var audioPlayer = AVAudioPlayer()
+    private var audioPlayer = AVAudioPlayer()
+    private var buttonPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
         segmentController.itemTitles = [ "Я учу алфавит", "Я знаю алфавит" ]
         segmentController.didSelectItemWith = { (index, title) -> () in
+            self.buttonPlayer.play()
             switch index {
             case 0:
                 LocalStore.alphaviteIsHard = false
@@ -45,6 +50,13 @@ class AlphaviteStartViewController: GameViewController {
             print("no file)")
         }
         audioPlayer.play()
+
+        do {
+            buttonPlayer = try AVAudioPlayer(contentsOf: AlphaviteMaster.Sound.button.url)
+            buttonPlayer.prepareToPlay()
+        } catch {
+            print("no file)")
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

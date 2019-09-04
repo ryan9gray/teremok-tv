@@ -10,13 +10,23 @@ import UIKit
 import Spring
 
 class MonsterGameResultsViewController: GameViewController {
-
     @IBOutlet private var BGImageView: UIImageView!
     @IBOutlet private var titleImageView: UIImageView!
     @IBOutlet private var timeView: DesignableView!
     @IBOutlet private var timeLbl: UILabel!
     @IBOutlet private var nextBtn: KeyButton!
-    
+
+    @IBAction func openNextVC(_ sender: Any) {
+        output.openNext()
+    }
+
+    struct Input {
+        var gameResult: MonsterGameFlow.GameResults
+    }
+
+    struct Output {
+        let openNext: () -> Void
+    }
     var input: Input!
     var output: Output!
     
@@ -29,20 +39,7 @@ class MonsterGameResultsViewController: GameViewController {
             BGImageView.image = UIImage(named: "gameLostBG")
             titleImageView.image = UIImage(named: "playAgain")
             nextBtn.setImage(UIImage(named: "icAgainYellow"), for: .normal)
-            nextBtn.gradientColors = Styles.Gradients.red.value
+            nextBtn.gradientColors = Style.Gradients.red.value
         }
     }
-    
-    struct Input {
-        var gameResult: MonsterGameFlow.GameResults
-    }
-
-    struct Output {
-        let openNext: () -> Void
-    }
-    
-    @IBAction func openNextVC(_ sender: Any) {
-        output.openNext()
-    }
-    
 }

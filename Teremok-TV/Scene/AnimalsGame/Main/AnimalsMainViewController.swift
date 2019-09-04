@@ -76,7 +76,7 @@ class AnimalsMainViewController: GameViewController, AnimalsMainDisplayLogic {
         if LocalStore.animalsTip < 3 {
             LocalStore.animalsTip += 1
             var preferences = EasyTipView.Preferences()
-            preferences.drawing.font = Styles.Font.istokWeb(size: 16)
+            preferences.drawing.font = Style.Font.istokWeb(size: 16)
             preferences.drawing.foregroundColor = UIColor.View.titleText
             preferences.drawing.backgroundColor = .white
             preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
@@ -106,7 +106,10 @@ class AnimalsMainViewController: GameViewController, AnimalsMainDisplayLogic {
     }
 
     func displayProfile(){
-        guard let childs = Profile.current?.childs else { return }
+        guard let childs = Profile.current?.childs else {
+            avatarButton.isHidden = true
+            return
+        }
 
         if let avatar = childs.first(where: {$0.current ?? false})?.pic {
             avatarButton.setAvatar(linktoLoad: avatar)

@@ -464,7 +464,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-hillBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Mdf-zU-wD7">
-                                <rect key="frame" x="0.0" y="0.0" width="812" height="354"/>
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-rightCurtain" translatesAutoresizingMaskIntoConstraints="NO" id="8nD-Pj-X3U">
                                 <rect key="frame" x="792" y="40" width="20" height="314"/>
@@ -484,7 +484,7 @@
                                     <constraint firstAttribute="height" constant="65" id="aqh-Lt-ZTf"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="eBd-tF-Ihc">
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="eBd-tF-Ihc">
                                 <rect key="frame" x="20" y="9.6666666666666643" width="200" height="54"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTI-UW-NQM" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
@@ -499,43 +499,19 @@
                                             <action selector="logoClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="aF5-Xj-dSG"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eB-Tb-I1C" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="54" y="8" width="46" height="46"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="3eB-Tb-I1C" secondAttribute="height" multiplier="1:1" id="6jD-YX-E1i"/>
-                                            <constraint firstAttribute="height" constant="46" id="oyn-Js-Fka"/>
-                                        </constraints>
-                                        <inset key="contentEdgeInsets" minX="1" minY="2" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="icTreasure" backgroundImage="icCircle"/>
-                                        <connections>
-                                            <action selector="treasureClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="jio-ZM-1EH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVM-2a-9oI" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVM-2a-9oI" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="54" y="0.0" width="54" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fVM-2a-9oI" secondAttribute="height" multiplier="1:1" id="9SP-51-gv1"/>
                                             <constraint firstAttribute="height" constant="54" id="x7f-dK-PTq"/>
                                         </constraints>
-                                        <state key="normal" image="icGame" backgroundImage="icCircle"/>
+                                        <state key="normal" image="icGameCube" backgroundImage="icCircle"/>
                                         <connections>
                                             <action selector="gameClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="XIq-8S-WUZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAH-8J-gH9" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jq1-I8-9ZH" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="108" y="8" width="46" height="46"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="2oN-C4-mfg"/>
-                                        </constraints>
-                                        <inset key="contentEdgeInsets" minX="1" minY="2" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="icHeart" backgroundImage="icCircle"/>
-                                        <connections>
-                                            <action selector="heartClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="qfP-ut-iAd"/>
-                                            <action selector="touchDown:" destination="Wgh-R5-Tjp" eventType="touchDown" id="8qV-p3-lRt"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jq1-I8-9ZH" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="154" y="8" width="46" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Jq1-I8-9ZH" secondAttribute="height" multiplier="1:1" id="GGg-Zl-aFc"/>
                                             <constraint firstAttribute="height" constant="46" id="Hqm-bB-SXJ"/>
@@ -544,6 +520,18 @@
                                         <state key="normal" image="icHeadphone" backgroundImage="icCircle"/>
                                         <connections>
                                             <action selector="musicClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="yqz-2R-OCX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAH-8J-gH9" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="154" y="8" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="2oN-C4-mfg"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="1" minY="2" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="icHeart" backgroundImage="icCircle"/>
+                                        <connections>
+                                            <action selector="heartClick:" destination="Wgh-R5-Tjp" eventType="touchUpInside" id="qfP-ut-iAd"/>
+                                            <action selector="touchDown:" destination="Wgh-R5-Tjp" eventType="touchDown" id="8qV-p3-lRt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -574,7 +562,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="ZCj-br-U4m" customClass="ChildsStackView" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="761" y="17" width="0.0" height="54"/>
+                                <rect key="frame" x="592" y="17" width="200" height="54"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTC-rA-kap" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
@@ -686,6 +674,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Mdf-zU-wD7" secondAttribute="trailing" id="17C-GM-QLy"/>
+                            <constraint firstItem="ZCj-br-U4m" firstAttribute="leading" secondItem="A46-8C-pxL" secondAttribute="trailing" constant="10" id="1Ag-Yh-Ixd"/>
                             <constraint firstItem="pYk-Mk-z4c" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="1h5-T4-J6m"/>
                             <constraint firstItem="wfC-Bn-aZg" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" constant="28" id="3WQ-gm-yV7"/>
                             <constraint firstItem="A46-8C-pxL" firstAttribute="leading" secondItem="5Bm-y4-kHR" secondAttribute="trailing" constant="2" id="4FP-25-Rno"/>
@@ -693,7 +682,7 @@
                             <constraint firstItem="jpI-y1-YEg" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="40" id="API-sF-1qh"/>
                             <constraint firstItem="Mdf-zU-wD7" firstAttribute="top" secondItem="1CP-Fn-cIu" secondAttribute="top" id="C1P-7M-gdR"/>
                             <constraint firstItem="44F-DI-cmG" firstAttribute="top" secondItem="pYk-Mk-z4c" secondAttribute="bottom" constant="15" id="Cb3-zg-6ku"/>
-                            <constraint firstItem="Mdf-zU-wD7" firstAttribute="bottom" secondItem="Chn-OP-K9t" secondAttribute="bottom" id="Dlq-I0-LnB"/>
+                            <constraint firstItem="Mdf-zU-wD7" firstAttribute="bottom" secondItem="1CP-Fn-cIu" secondAttribute="bottom" id="Dlq-I0-LnB"/>
                             <constraint firstItem="Chn-OP-K9t" firstAttribute="bottom" secondItem="wfC-Bn-aZg" secondAttribute="bottom" constant="10" id="EBG-fM-Pn5"/>
                             <constraint firstItem="eBd-tF-Ihc" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" constant="20" id="GKX-WK-cyu"/>
                             <constraint firstItem="jpI-y1-YEg" firstAttribute="bottom" secondItem="Chn-OP-K9t" secondAttribute="bottom" id="Hyr-yU-HNV"/>
@@ -707,7 +696,7 @@
                             <constraint firstItem="eBd-tF-Ihc" firstAttribute="top" secondItem="pYk-Mk-z4c" secondAttribute="bottom" constant="8" id="i7d-oj-aye"/>
                             <constraint firstItem="oUb-4A-L4a" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="iCx-DS-V6i"/>
                             <constraint firstItem="5Bm-y4-kHR" firstAttribute="leading" secondItem="44F-DI-cmG" secondAttribute="trailing" priority="990" constant="10" id="mQO-q2-2Fb"/>
-                            <constraint firstItem="Chn-OP-K9t" firstAttribute="trailing" secondItem="ZCj-br-U4m" secondAttribute="trailing" constant="7" id="mwN-QN-rgq"/>
+                            <constraint firstAttribute="trailing" secondItem="ZCj-br-U4m" secondAttribute="trailing" constant="20" id="mwN-QN-rgq"/>
                             <constraint firstItem="5Bm-y4-kHR" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="17" id="owC-lV-bcK"/>
                             <constraint firstItem="ZCj-br-U4m" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="17" id="pLZ-QO-fef"/>
                             <constraint firstItem="jpI-y1-YEg" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="qxJ-LX-itD"/>
@@ -733,7 +722,6 @@
                         <outletCollection property="allButtons" destination="A46-8C-pxL" collectionClass="NSMutableArray" id="hBE-Oj-JFc"/>
                         <outletCollection property="allButtons" destination="5Bm-y4-kHR" collectionClass="NSMutableArray" id="UcO-4y-CIi"/>
                         <outletCollection property="allButtons" destination="wfC-Bn-aZg" collectionClass="NSMutableArray" id="Uj1-RD-xbh"/>
-                        <outletCollection property="allButtons" destination="3eB-Tb-I1C" collectionClass="NSMutableArray" id="eA5-jK-e9D"/>
                         <outletCollection property="allButtons" destination="fAH-8J-gH9" collectionClass="NSMutableArray" id="g5x-Zb-L5z"/>
                         <outletCollection property="allButtons" destination="CTI-UW-NQM" collectionClass="NSMutableArray" id="NiC-G0-TjQ"/>
                     </connections>
@@ -1052,6 +1040,7 @@
         <image name="icDown" width="20" height="25"/>
         <image name="icFav" width="21" height="30"/>
         <image name="icGame" width="22" height="24"/>
+        <image name="icGameCube" width="31" height="35"/>
         <image name="icHeadphone" width="32" height="32"/>
         <image name="icHeart" width="26" height="21"/>
         <image name="icHome" width="24" height="22"/>
@@ -1059,7 +1048,6 @@
         <image name="icPlus" width="24" height="24"/>
         <image name="icSearch" width="24" height="26"/>
         <image name="icSettings" width="26" height="26"/>
-        <image name="icTreasure" width="25" height="28"/>
         <image name="icUtka" width="29" height="35"/>
     </resources>
 </document>

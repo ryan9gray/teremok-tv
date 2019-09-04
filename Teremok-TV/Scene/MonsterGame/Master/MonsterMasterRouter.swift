@@ -23,11 +23,6 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     
     // MARK: Routing
     func openStatistic() {
-//        guard modalChildVC == nil else { return }
-//
-//        let vc = AlphaviteStatisticViewController.instantiate(fromStoryboard: .alphavite)
-//        vc.input = AlphaviteStatisticViewController.Input(good: ["А": "10 / 10", "Б": "10 / 10"], bad: ["А": "10 / 10", "Б": "10 / 10"])
-//        viewController?.presentAlertModally(alertController: vc)
     }
     
     func navigateMain() {
