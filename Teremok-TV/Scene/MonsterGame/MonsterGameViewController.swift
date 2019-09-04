@@ -72,7 +72,7 @@ class MonsterGameViewController: GameViewController {
     }
     
     func saveSelectedCell(cell: MonsterCollectionViewCell) {
-        if (firstSelectedItem == nil) {
+        if firstSelectedItem == nil {
             firstSelectedItem = cell
         }
         else {
@@ -81,8 +81,8 @@ class MonsterGameViewController: GameViewController {
     }
     
     func matchMonsters() {
-        if (firstSelectedItem!.flipped && secondSelectedItem!.flipped) {
-            if (firstSelectedItem?.item.matchId == secondSelectedItem?.item.matchId) {
+        if firstSelectedItem!.flipped && secondSelectedItem!.flipped {
+            if firstSelectedItem?.item.matchId == secondSelectedItem?.item.matchId {
                 score += 1
                 flipBack(shouldFlip: false)
             }

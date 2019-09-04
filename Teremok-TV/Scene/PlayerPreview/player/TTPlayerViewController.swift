@@ -129,7 +129,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     private func setUI(){
-   
         mainWindow = UIApplication.shared.keyWindow
         addGesture()
         playerSlider.addTarget(self, action: #selector(self.handlePlayheadSliderTouchBegin), for: .touchDown)
@@ -140,7 +139,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         downloadButton.addTarget(self, action: #selector(self.downloadClick(_:)), for: .touchUpInside)
         playButton.addTarget(self, action: #selector(self.playClick), for: .touchUpInside)
         heartButton.addTarget(self, action: #selector(self.heartClick), for: .touchUpInside)
-        //reaklamButton.addTarget(self, action: #selector(self.reklamClick), for: .touchUpInside)
     }
 
     

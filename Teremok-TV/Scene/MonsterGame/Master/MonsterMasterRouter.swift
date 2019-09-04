@@ -46,14 +46,6 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     var childControllersStack = Stack<GameViewController>()
     var modalChildVC: GameViewController?
     
-    func introduceController<T: GameViewController>(viewController: T, completion: @escaping () -> Void)
-        where T: IntroduceViewController {
-            viewController.setAction {
-                completion()
-            }
-            presentModalChild(viewController: viewController)
-    }
-    
     func pushChild(_ vc: GameViewController){
         remove()
         childControllersStack.toEmpty()

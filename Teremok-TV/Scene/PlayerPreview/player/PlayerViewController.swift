@@ -66,9 +66,9 @@ class PlayerViewController: AVPlayerViewController {
     func setVideoBack(){
         guard let url = contentURL else { return }
         //player = AVPlayer(url: url)
-        let testUrl = URL(string: "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8")!
+        //let testUrl = URL(string: "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8")!
         
-        let playerAsset = AVURLAsset(url: testUrl, options: .none)
+        let playerAsset = AVURLAsset(url: url, options: .none)
         var playerItem: AVPlayerItem
 
         if url.absoluteString.hasPrefix("file:///") {
