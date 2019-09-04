@@ -111,6 +111,14 @@ enum APIMethod {
             return .alphabetGame
         }
     }
+    enum MonsterGame: String, ServiceMethod {
+        case getStat
+        case sendStat
+        
+        var controller: APIController {
+            return .alphabetGame
+        }
+    }
 }
 
 protocol ServiceMethod {
@@ -155,6 +163,7 @@ enum APIController: String {
     case animalsGame
     case analytic
     case alphabetGame
+    case monsterGame
 
     var methodType: ServiceMethod.Type {
         switch self {
@@ -167,6 +176,7 @@ enum APIController: String {
             case .animalsGame: return APIMethod.AnimalsGame.self
             case .analytic: return APIMethod.Analytic.self
             case .alphabetGame: return APIMethod.AlphabetGame.self
+            case .monsterGame: return APIMethod.MonsterGame.self
         }
     }
     
