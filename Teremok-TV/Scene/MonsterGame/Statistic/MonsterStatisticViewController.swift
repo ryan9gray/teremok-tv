@@ -18,11 +18,16 @@ protocol MonsterStatisticDisplayLogic: CommonDisplayLogic {
 
 class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayLogic {
     @IBOutlet private var userName: UILabel!
-    @IBOutlet private var lastWeakTime: UILabel!
-    @IBOutlet private var thisWeakTime: UILabel!
+    @IBOutlet private var lastWeekTime: UILabel!
+    @IBOutlet private var lastWeekLbl: UILabel!
+    @IBOutlet private var thisWeekTime: UILabel!
+    @IBOutlet private var thisWeekLbl: UILabel!
     @IBOutlet private var statStatus: UILabel!
     @IBOutlet private var homeBtn: KeyButton!
     @IBOutlet private var avatarBtn: AvatarButton!
+    @IBOutlet private var avgTimeLbl: UILabel!
+    @IBOutlet weak var sadMonsterImage: UIImageView!
+    @IBOutlet weak var happyMonsterImage: UIImageView!
     
     @IBAction private func closeTap(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -65,19 +70,40 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userName.textColor = UIColor.View.Label.yellow
+        thisWeekLbl.textColor = .white
+        thisWeekTime.textColor = UIColor.View.Label.yellow
+        lastWeekLbl.textColor = .white
+        lastWeekTime.textColor = UIColor.View.Label.yellow
+        avgTimeLbl.textColor = .white
+        statStatus.textColor = .white
+        
         activityView = LottieHUD()
         displayProfile()        
         showPreloader()
         interactor?.fetchStat()
     }
     
-    func fillTime(model: Input) {
-        thisWeakTime.text = PlayerHelper.stringFromTimeInterval(TimeInterval(model.stat.currentweek))
-        lastWeakTime.text = PlayerHelper.stringFromTimeInterval(TimeInterval(model.stat.pastweek))
+    func fillInfo(model: Input) {
+        thisWeekTime.text = model.stat.currentweek == 0 ? "-" : PlayerHelper.stringFromTimeInterval(TimeInterval(model.stat.currentweek))
+        lastWeekTime.text = model.stat.pastweek == 0 ? "-" : PlayerHelper.stringFromTimeInterval(TimeInterval(model.stat.pastweek))
+        if model.stat.currentweek > model.stat.pastweek {
+            statStatus.text = "Ты стал медленно находить монстров, нужно ускориться!"
+            sadMonsterImage.isHidden.toggle()
+        }
+        else {
+            statStatus.text = "Теперь ты стал находить монстров быстрее!"
+            happyMonsterImage.isHidden.toggle()
+        }
+        if model.stat.currentweek == 0 || model.stat.pastweek == 0 {
+            statStatus.text = "Обновление вашей статистики будет " + PlayerHelper.updateDaysText(days: model.stat.daysToUpdate)
+            sadMonsterImage.isHidden = true
+            happyMonsterImage.isHidden = true
+        }
     }
     
     func showStats(_ model: Input) {
-        fillTime(model: model)
+        fillInfo(model: model)
         hidePreloader()
     }
     
