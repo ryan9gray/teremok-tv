@@ -115,7 +115,7 @@
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xsT-MH-07t">
-                                <rect key="frame" x="60" y="90" width="547" height="260"/>
+                                <rect key="frame" x="60" y="80" width="547" height="270"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="y5c-PR-At1" customClass="MonsterGameCollectionViewLayout" customModule="Teremok_TV" customModuleProvider="target"/>
                                 <cells/>
@@ -131,7 +131,7 @@
                             <constraint firstItem="PNl-Co-0Lj" firstAttribute="top" secondItem="Aoy-be-qBT" secondAttribute="top" id="EZW-RD-AJp"/>
                             <constraint firstItem="PNl-Co-0Lj" firstAttribute="leading" secondItem="Aoy-be-qBT" secondAttribute="leading" id="Ozl-Dw-R42"/>
                             <constraint firstAttribute="bottom" secondItem="xsT-MH-07t" secondAttribute="bottom" constant="25" id="Sdq-cW-OyS"/>
-                            <constraint firstItem="xsT-MH-07t" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="90" id="YHX-ua-n2w"/>
+                            <constraint firstItem="xsT-MH-07t" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="80" id="YHX-ua-n2w"/>
                             <constraint firstItem="zJi-rO-aQu" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="20" id="cL2-WK-Vrz"/>
                             <constraint firstItem="xsT-MH-07t" firstAttribute="leading" secondItem="Aoy-be-qBT" secondAttribute="leading" constant="60" id="dG3-t9-Ylr"/>
                             <constraint firstAttribute="bottom" secondItem="PNl-Co-0Lj" secondAttribute="bottom" id="eIz-hX-blh"/>

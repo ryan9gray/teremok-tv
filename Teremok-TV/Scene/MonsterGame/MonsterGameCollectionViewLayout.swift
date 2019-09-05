@@ -9,8 +9,6 @@
 import UIKit
 
 class MonsterGameCollectionViewLayout: UICollectionViewLayout {
-    let xOffset: CGFloat = 50
-    
     enum FieldSize: Int {
         case small = 6
         case medium = 12
@@ -19,12 +17,13 @@ class MonsterGameCollectionViewLayout: UICollectionViewLayout {
     
     var itemSize: CGSize {
         get {
-            guard let collectionView = collectionView else { return CGSize(width: 0, height: 0)}
             switch numberOfItems {
             case .small:
-                return CGSize(width: (collectionView.bounds.width - (xOffset + itemSpacing * CGFloat(numberOfItems.rawValue / numberOfRows))) / CGFloat(numberOfItems.rawValue / numberOfRows), height: (collectionView.bounds.height - itemSpacing * CGFloat(numberOfRows)) / CGFloat(numberOfRows))
-            case .medium, .large:
-                return CGSize(width: (collectionView.bounds.width - (itemSpacing * CGFloat(numberOfItems.rawValue / numberOfRows))) / CGFloat(numberOfItems.rawValue / numberOfRows), height: (collectionView.bounds.height - itemSpacing * CGFloat(numberOfRows - 1)) / CGFloat(numberOfRows))
+                return CGSize(width: 130, height: 110)
+            case .medium:
+                return CGSize(width: 130, height: 80)
+            case .large:
+                return CGSize(width: 100, height: 60)
             }
         }
     }
@@ -66,9 +65,10 @@ class MonsterGameCollectionViewLayout: UICollectionViewLayout {
             let row = idx % numberOfRows
             let column = idx / numberOfRows
             var xPos = column * Int(itemSize.width + itemSpacing)
-            if numberOfItems == .small {
-                xPos += 50
-            }
+            let cellWidth = CGFloat(numberOfItems.rawValue / numberOfRows) * itemSize.width
+            let spacingWidth = CGFloat((numberOfItems.rawValue / numberOfRows) - 1) * itemSpacing
+            let xOffset = Int(collectionView.bounds.width - cellWidth - spacingWidth) / 2
+            xPos += xOffset
             let yPos = row * Int(itemSize.height + itemSpacing)
             let attributes = UICollectionViewLayoutAttributes(forCellWith: IndexPath(row: idx, section: 0))
             attributes.frame = CGRect(x: CGFloat(xPos), y: CGFloat(yPos), width: itemSize.width, height: itemSize.height)
