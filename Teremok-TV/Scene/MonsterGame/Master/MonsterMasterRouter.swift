@@ -23,6 +23,10 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     
     // MARK: Routing
     func openStatistic() {
+        guard modalChildVC == nil else { return }
+        
+        let vc = MonsterStatisticViewController.instantiate(fromStoryboard: .monster)
+        viewController?.presentAlertModally(alertController: vc)
     }
     
     func navigateMain() {

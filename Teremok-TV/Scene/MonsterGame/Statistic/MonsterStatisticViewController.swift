@@ -23,6 +23,11 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
     @IBOutlet private var statStatus: UILabel!
     @IBOutlet private var homeBtn: KeyButton!
     @IBOutlet private var avatarBtn: AvatarButton!
+    
+    @IBAction private func closeTap(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     var interactor: MonsterStatisticBusinessLogic?
     var router: (CommonRoutingLogic & MonsterStatisticRoutingLogic & MonsterStatisticDataPassing)?
     var modallyControllerRoutingLogic: CommonRoutingLogic? {
@@ -33,7 +38,6 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
     struct Input {
         var stat: MonsterStatisticResponse
     }
-    var input: Input!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -61,19 +65,19 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fillTime()
         activityView = LottieHUD()
         displayProfile()        
         showPreloader()
         interactor?.fetchStat()
     }
     
-    func fillTime() {
-        thisWeakTime.text = PlayerHelper.stringFromTimeInterval(TimeInterval(input.stat.currentweek))
-        lastWeakTime.text = PlayerHelper.stringFromTimeInterval(TimeInterval(input.stat.pastweek))
+    func fillTime(model: Input) {
+        thisWeakTime.text = PlayerHelper.stringFromTimeInterval(TimeInterval(model.stat.currentweek))
+        lastWeakTime.text = PlayerHelper.stringFromTimeInterval(TimeInterval(model.stat.pastweek))
     }
     
     func showStats(_ model: Input) {
+        fillTime(model: model)
         hidePreloader()
     }
     
