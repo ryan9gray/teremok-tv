@@ -70,6 +70,7 @@ extension UIColor {
             static let grass                =  #colorLiteral(red: 0.1323567033, green: 0.6418382525, blue: 0.3993836045, alpha: 1)
             static let ocean                =  #colorLiteral(red: 0.1638697982, green: 0.8113344312, blue: 0.9947666526, alpha: 1)
             static let yellow               = UIColor(hex: "DDFF00")
+            static let darkBlue             = UIColor(hex: "0058BA")
         }
         
         enum Alert {

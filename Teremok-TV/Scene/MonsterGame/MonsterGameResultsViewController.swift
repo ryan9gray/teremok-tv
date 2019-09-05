@@ -41,5 +41,8 @@ class MonsterGameResultsViewController: GameViewController {
             nextBtn.setImage(UIImage(named: "icAgainYellow"), for: .normal)
             nextBtn.gradientColors = Style.Gradients.red.value
         }
+        else {
+            timeLbl.textColor = UIColor.View.Label.darkBlue
+        }
     }
 }
