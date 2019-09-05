@@ -31,8 +31,9 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
     var activityView: LottieHUD?
 
     struct Input {
-        
+        var stat: MonsterStatisticResponse
     }
+    var input: Input!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -60,10 +61,16 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fillTime()
         activityView = LottieHUD()
         displayProfile()        
         showPreloader()
         interactor?.fetchStat()
+    }
+    
+    func fillTime() {
+        thisWeakTime.text = PlayerHelper.stringFromTimeInterval(TimeInterval(input.stat.currentweek))
+        lastWeakTime.text = PlayerHelper.stringFromTimeInterval(TimeInterval(input.stat.pastweek))
     }
     
     func showStats(_ model: Input) {

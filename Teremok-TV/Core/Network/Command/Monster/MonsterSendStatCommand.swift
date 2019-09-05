@@ -19,13 +19,12 @@ class MonsterSendStatCommand: BasicCommand {
     }
     
     override var method: String {
-        return APIMethod.MonsterGame.sendStat.methodName
+        return APIMethod.MonstersGame.sendStat.methodName
     }
     
     override var parameters: [String : Any] {
         return [
-            "difficulty" : stats.difficulty,
-            "seconds": stats.seconds
+            "Stats" : stats.toJSON()
         ]
     }
 }

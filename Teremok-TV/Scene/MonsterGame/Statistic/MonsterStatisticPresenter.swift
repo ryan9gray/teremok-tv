@@ -24,7 +24,6 @@ class MonsterStatisticPresenter: MonsterStatisticPresentationLogic {
     }
     
     func presentStat(response: MonsterStatisticResponse) {
-//        let model = MonsterStatisticViewController.Input()
-//        viewController?.showStats(model)
+        viewController?.showStats(MonsterStatisticViewController.Input(stat: response))
     }
 }

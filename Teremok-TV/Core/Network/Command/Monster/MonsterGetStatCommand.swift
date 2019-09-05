@@ -15,7 +15,7 @@ class MonsterGetStatCommand: BasicCommand {
     }
     
     override var method: String {
-        return APIMethod.MonsterGame.getStat.methodName
+        return APIMethod.MonstersGame.getStat.methodName
     }
     
     override var parameters: [String : Any] {

@@ -832,7 +832,7 @@
 		CAD211A1231BFD4D006F2F08 /* OfflinePlaylistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA763635226BD7A500168AB1 /* OfflinePlaylistPresenter.swift */; };
 		CAD211A2231BFD4D006F2F08 /* StrokeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD25EE22F5B2C4005CFCD2 /* StrokeLabel.swift */; };
 		CAD211A3231BFD4D006F2F08 /* AppUpdateDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C428211DACE10058C9C6 /* AppUpdateDefaults.swift */; };
-		CAD211A4231BFD4D006F2F08 /* APIMethod .swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5062115A68200945003 /* APIMethod .swift */; };
+		CAD211A4231BFD4D006F2F08 /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5062115A68200945003 /* APIMethod.swift */; };
 		CAD211A5231BFD4D006F2F08 /* ChildsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44B2171F18200A00C8E /* ChildsWorker.swift */; };
 		CAD211A6231BFD4D006F2F08 /* SqliteCacher+ExirableCacherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C41C211DACE10058C9C6 /* SqliteCacher+ExirableCacherType.swift */; };
 		CAD211A7231BFD4D006F2F08 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49E479212D2ED300711324 /* SettingsRouter.swift */; };
@@ -3141,6 +3141,7 @@
 		CAC2D4FB2115A68200945003 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */,
 				CA91027B22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift */,
 				CA7699A022B1393F003ECFC2 /* AnimalsStatResponse.swift */,
 				CA61D87922A1D23D00E3D603 /* AnimalsListResponse.swift */,
@@ -3156,7 +3157,6 @@
 				CAB08B05214055F8002840E3 /* VideoItemResponse.swift */,
 				CA8197FD214993C40079D46A /* ContentResponse.swift */,
 				CA314FEF2222A95D00B59797 /* StoreResponse.swift */,
-				11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -5493,7 +5493,7 @@
 				CAD211A1231BFD4D006F2F08 /* OfflinePlaylistPresenter.swift in Sources */,
 				CAD211A2231BFD4D006F2F08 /* StrokeLabel.swift in Sources */,
 				CAD211A3231BFD4D006F2F08 /* AppUpdateDefaults.swift in Sources */,
-				CAD211A4231BFD4D006F2F08 /* APIMethod .swift in Sources */,
+				CAD211A4231BFD4D006F2F08 /* APIMethod.swift in Sources */,
 				CAD211A5231BFD4D006F2F08 /* ChildsWorker.swift in Sources */,
 				CAD211A6231BFD4D006F2F08 /* SqliteCacher+ExirableCacherType.swift in Sources */,
 				CAD211A7231BFD4D006F2F08 /* SettingsRouter.swift in Sources */,

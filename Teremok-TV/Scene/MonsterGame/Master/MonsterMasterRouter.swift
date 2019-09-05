@@ -37,6 +37,7 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
         
         viewController?.tipView?.dismiss()
         let flow = MonsterGameFlow(master: controller)
+        flow.service = dataStore?.service
         flow.startFlow(difficulty: idx)
     }
     
