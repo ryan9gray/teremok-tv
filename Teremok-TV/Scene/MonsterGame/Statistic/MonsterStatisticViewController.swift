@@ -85,9 +85,9 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
     }
     
     func fillInfo(model: Input) {
-        thisWeekTime.text = model.stat.currentweek == 0 ? "-" : PlayerHelper.stringFromTimeInterval(TimeInterval(model.stat.currentweek))
-        lastWeekTime.text = model.stat.pastweek == 0 ? "-" : PlayerHelper.stringFromTimeInterval(TimeInterval(model.stat.pastweek))
-        if model.stat.currentweek > model.stat.pastweek {
+        thisWeekTime.text = model.stat.currentweek.time == 0 ? "-" : PlayerHelper.stringFromTimeInterval(TimeInterval(model.stat.currentweek.time))
+        lastWeekTime.text = model.stat.pastweek.time == 0 ? "-" : PlayerHelper.stringFromTimeInterval(TimeInterval(model.stat.pastweek.time))
+        if model.stat.currentweek.time > model.stat.pastweek.time {
             statStatus.text = "Ты стал медленно находить монстров, нужно ускориться!"
             sadMonsterImage.isHidden.toggle()
         }
@@ -95,7 +95,7 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
             statStatus.text = "Теперь ты стал находить монстров быстрее!"
             happyMonsterImage.isHidden.toggle()
         }
-        if model.stat.currentweek == 0 || model.stat.pastweek == 0 {
+        if model.stat.currentweek.time == 0 || model.stat.pastweek.time == 0 {
             statStatus.text = "Обновление вашей статистики будет " + PlayerHelper.updateDaysText(days: model.stat.daysToUpdate)
             sadMonsterImage.isHidden = true
             happyMonsterImage.isHidden = true

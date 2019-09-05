@@ -10,14 +10,23 @@ import ObjectMapper
 
 final class MonsterStatisticResponse: Mappable {
     var daysToUpdate: Int = 0
-    var currentweek: Int = 0
-    var pastweek: Int = 0
+    var currentweek: WeekTime!
+    var pastweek: WeekTime!
     init?(map: Map) {}
     
     func mapping(map: Map) {
         daysToUpdate <- map["daysToUpdate"]
-        currentweek <- map["currentweek"]["avgtime"]
-        pastweek <- map["pastweek"]["avgtime"]
+        currentweek <- map["currentweek"]
+        pastweek <- map["pastweek"]
+    }
+    
+    final class WeekTime: Mappable {
+        var time: Int = 0
+        init?(map: Map) {}
+        
+        func mapping(map: Map) {
+            time <- map["avgtime"]
+        }
     }
 }
 
