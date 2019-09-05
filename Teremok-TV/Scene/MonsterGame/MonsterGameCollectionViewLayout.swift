@@ -19,9 +19,9 @@ class MonsterGameCollectionViewLayout: UICollectionViewLayout {
         get {
             switch numberOfItems {
             case .small:
-                return CGSize(width: 130, height: 110)
+                return CGSize(width: 150, height: 90)
             case .medium:
-                return CGSize(width: 130, height: 80)
+                return CGSize(width: 125, height: 75)
             case .large:
                 return CGSize(width: 100, height: 60)
             }
@@ -69,7 +69,9 @@ class MonsterGameCollectionViewLayout: UICollectionViewLayout {
             let spacingWidth = CGFloat((numberOfItems.rawValue / numberOfRows) - 1) * itemSpacing
             let xOffset = Int(collectionView.bounds.width - cellWidth - spacingWidth) / 2
             xPos += xOffset
-            let yPos = row * Int(itemSize.height + itemSpacing)
+            var yPos = row * Int(itemSize.height + itemSpacing)
+            let yOffset = Int(collectionView.bounds.height - CGFloat(numberOfRows) * itemSize.height - CGFloat(numberOfRows - 1) * itemSpacing) / 2
+            yPos += yOffset
             let attributes = UICollectionViewLayoutAttributes(forCellWith: IndexPath(row: idx, section: 0))
             attributes.frame = CGRect(x: CGFloat(xPos), y: CGFloat(yPos), width: itemSize.width, height: itemSize.height)
             layoutAttributes.append(attributes)
