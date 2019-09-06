@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111187EF231E82D700EBEFC0 /* MonsterStatisticPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187E9231E82D700EBEFC0 /* MonsterStatisticPresenter.swift */; };
+		111187F1231E82D700EBEFC0 /* MonsterStatisticRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187EB231E82D700EBEFC0 /* MonsterStatisticRouter.swift */; };
+		111187F3231E82D700EBEFC0 /* MonsterStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187ED231E82D700EBEFC0 /* MonsterStatisticViewController.swift */; };
+		111187F4231E82D700EBEFC0 /* MonsterStatisticInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187EE231E82D700EBEFC0 /* MonsterStatisticInteractor.swift */; };
+		111187F6231E8D6E00EBEFC0 /* MonsterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187F5231E8D6E00EBEFC0 /* MonsterService.swift */; };
 		11246D62231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */; };
+		11604AD7231F8107001D1C7F /* MonsterStatisticResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */; };
+		11604ADA231F8330001D1C7F /* MonsterGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604AD9231F8330001D1C7F /* MonsterGetStatCommand.swift */; };
+		11604ADC231F8494001D1C7F /* MonsterSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604ADB231F8494001D1C7F /* MonsterSendStatCommand.swift */; };
 		1163619B2303E456000D2C82 /* Monster.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1163619A2303E456000D2C82 /* Monster.storyboard */; };
 		11BA2489230551A700A9EA15 /* MonsterMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA2483230551A700A9EA15 /* MonsterMasterPresenter.swift */; };
 		11BA248C230551A700A9EA15 /* MonsterMasterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BA2486230551A700A9EA15 /* MonsterMasterModels.swift */; };
@@ -428,7 +436,7 @@
 		CAC2D5212115A68200945003 /* AuthSigninCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5022115A68200945003 /* AuthSigninCommand.swift */; };
 		CAC2D5232115A68200945003 /* BasicCommand+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5042115A68200945003 /* BasicCommand+Handler.swift */; };
 		CAC2D5242115A68200945003 /* AppInfoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5052115A68200945003 /* AppInfoWorker.swift */; };
-		CAC2D5252115A68200945003 /* APIMethod .swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5062115A68200945003 /* APIMethod .swift */; };
+		CAC2D5252115A68200945003 /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5062115A68200945003 /* APIMethod.swift */; };
 		CAC2D5262115A68300945003 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5082115A68200945003 /* NetworkService.swift */; };
 		CAC2D5272115A68300945003 /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5092115A68200945003 /* ServiceConfiguration.swift */; };
 		CAC2D5282115A68300945003 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D50B2115A68200945003 /* CALayer.swift */; };
@@ -824,7 +832,7 @@
 		CAD211A1231BFD4D006F2F08 /* OfflinePlaylistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA763635226BD7A500168AB1 /* OfflinePlaylistPresenter.swift */; };
 		CAD211A2231BFD4D006F2F08 /* StrokeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD25EE22F5B2C4005CFCD2 /* StrokeLabel.swift */; };
 		CAD211A3231BFD4D006F2F08 /* AppUpdateDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C428211DACE10058C9C6 /* AppUpdateDefaults.swift */; };
-		CAD211A4231BFD4D006F2F08 /* APIMethod .swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5062115A68200945003 /* APIMethod .swift */; };
+		CAD211A4231BFD4D006F2F08 /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5062115A68200945003 /* APIMethod.swift */; };
 		CAD211A5231BFD4D006F2F08 /* ChildsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44B2171F18200A00C8E /* ChildsWorker.swift */; };
 		CAD211A6231BFD4D006F2F08 /* SqliteCacher+ExirableCacherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C41C211DACE10058C9C6 /* SqliteCacher+ExirableCacherType.swift */; };
 		CAD211A7231BFD4D006F2F08 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49E479212D2ED300711324 /* SettingsRouter.swift */; };
@@ -1488,7 +1496,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		111187E9231E82D700EBEFC0 /* MonsterStatisticPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStatisticPresenter.swift; sourceTree = "<group>"; };
+		111187EB231E82D700EBEFC0 /* MonsterStatisticRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStatisticRouter.swift; sourceTree = "<group>"; };
+		111187ED231E82D700EBEFC0 /* MonsterStatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStatisticViewController.swift; sourceTree = "<group>"; };
+		111187EE231E82D700EBEFC0 /* MonsterStatisticInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStatisticInteractor.swift; sourceTree = "<group>"; };
+		111187F5231E8D6E00EBEFC0 /* MonsterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterService.swift; sourceTree = "<group>"; };
 		11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameCollectionViewLayout.swift; sourceTree = "<group>"; };
+		11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStatisticResponse.swift; sourceTree = "<group>"; };
+		11604AD9231F8330001D1C7F /* MonsterGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGetStatCommand.swift; sourceTree = "<group>"; };
+		11604ADB231F8494001D1C7F /* MonsterSendStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterSendStatCommand.swift; sourceTree = "<group>"; };
 		1163619A2303E456000D2C82 /* Monster.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Monster.storyboard; sourceTree = "<group>"; };
 		11BA2483230551A700A9EA15 /* MonsterMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterPresenter.swift; sourceTree = "<group>"; };
 		11BA2486230551A700A9EA15 /* MonsterMasterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterModels.swift; sourceTree = "<group>"; };
@@ -1914,7 +1930,7 @@
 		CAC2D5022115A68200945003 /* AuthSigninCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthSigninCommand.swift; sourceTree = "<group>"; };
 		CAC2D5042115A68200945003 /* BasicCommand+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BasicCommand+Handler.swift"; sourceTree = "<group>"; };
 		CAC2D5052115A68200945003 /* AppInfoWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoWorker.swift; sourceTree = "<group>"; };
-		CAC2D5062115A68200945003 /* APIMethod .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIMethod .swift"; sourceTree = "<group>"; };
+		CAC2D5062115A68200945003 /* APIMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethod.swift; sourceTree = "<group>"; };
 		CAC2D5082115A68200945003 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CAC2D5092115A68200945003 /* ServiceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
 		CAC2D50B2115A68200945003 /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
@@ -2255,6 +2271,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111187E8231E828800EBEFC0 /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				111187E9231E82D700EBEFC0 /* MonsterStatisticPresenter.swift */,
+				111187EB231E82D700EBEFC0 /* MonsterStatisticRouter.swift */,
+				111187ED231E82D700EBEFC0 /* MonsterStatisticViewController.swift */,
+				111187EE231E82D700EBEFC0 /* MonsterStatisticInteractor.swift */,
+			);
+			path = Statistic;
+			sourceTree = "<group>";
+		};
+		11604AD8231F830B001D1C7F /* Monster */ = {
+			isa = PBXGroup;
+			children = (
+				11604AD9231F8330001D1C7F /* MonsterGetStatCommand.swift */,
+				11604ADB231F8494001D1C7F /* MonsterSendStatCommand.swift */,
+			);
+			path = Monster;
+			sourceTree = "<group>";
+		};
 		116BEDFB2313B4560043CCEA /* Master */ = {
 			isa = PBXGroup;
 			children = (
@@ -2270,6 +2306,7 @@
 		11BC751B23042D44001B5CC8 /* MonsterGame */ = {
 			isa = PBXGroup;
 			children = (
+				111187E8231E828800EBEFC0 /* Statistic */,
 				116BEDFB2313B4560043CCEA /* Master */,
 				11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */,
 				11BA2493230AB84B00A9EA15 /* MonsterFlow.swift */,
@@ -2715,6 +2752,7 @@
 		CA70271E21396F1400629260 /* ServiceCommand */ = {
 			isa = PBXGroup;
 			children = (
+				111187F5231E8D6E00EBEFC0 /* MonsterService.swift */,
 				CA91027822FF5E7E00140D5A /* AlphabetService.swift */,
 				CA61D87F22A1D49700E3D603 /* AnimalsGameService.swift */,
 				CA433FF5224F9EFA00B0788E /* MusicService.swift */,
@@ -3095,7 +3133,7 @@
 				CAC2D4FA2115A68200945003 /* ApiURLString.swift */,
 				CAC2D4FD2115A68200945003 /* BackendError.swift */,
 				CAC2D5052115A68200945003 /* AppInfoWorker.swift */,
-				CAC2D5062115A68200945003 /* APIMethod .swift */,
+				CAC2D5062115A68200945003 /* APIMethod.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -3103,6 +3141,7 @@
 		CAC2D4FB2115A68200945003 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */,
 				CA91027B22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift */,
 				CA7699A022B1393F003ECFC2 /* AnimalsStatResponse.swift */,
 				CA61D87922A1D23D00E3D603 /* AnimalsListResponse.swift */,
@@ -3125,6 +3164,7 @@
 		CAC2D5012115A68200945003 /* Command */ = {
 			isa = PBXGroup;
 			children = (
+				11604AD8231F830B001D1C7F /* Monster */,
 				CA91027A22FF5EDB00140D5A /* Alphavite */,
 				CA1AB63E22ECC266003A2584 /* Analytic */,
 				CA61D87622A1C79E00E3D603 /* Animals */,
@@ -4755,6 +4795,7 @@
 				CA52F362223D9CAD0058194E /* PlaylistsInteractor.swift in Sources */,
 				CAE0947D214CF43C0052F283 /* ResetPassRouter.swift in Sources */,
 				CA52F34F223D2DF40058194E /* MusicMasterPresenter.swift in Sources */,
+				111187F1231E82D700EBEFC0 /* MonsterStatisticRouter.swift in Sources */,
 				CA4C28C021450D9300CA264D /* AnimateCellProtocol.swift in Sources */,
 				CAC2D52B2115A68300945003 /* UIDevice.swift in Sources */,
 				CAE1C445211DB6B80058C9C6 /* MainKeychainService.swift in Sources */,
@@ -4807,12 +4848,14 @@
 				CAC0988E22FF12A800EFB01E /* UIKitExtensions.swift in Sources */,
 				CAE1C433211DACE10058C9C6 /* AppLaunchInfoDefaults.swift in Sources */,
 				CA49E491212D330900711324 /* DeviceInfo.swift in Sources */,
+				111187F6231E8D6E00EBEFC0 /* MonsterService.swift in Sources */,
 				CAA530A621AAB1CF009A5AF2 /* PushTransferRoutingLogic.swift in Sources */,
 				CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */,
 				CA49E4A3212D5A9200711324 /* MainViewController.swift in Sources */,
 				CAC2D5302115A68300945003 /* UIToolbar.swift in Sources */,
 				CA52DF312290794B00458EE5 /* LayoutHelper.swift in Sources */,
 				CAC91012215D359900E62F01 /* AchieveCollectionViewCell.swift in Sources */,
+				111187EF231E82D700EBEFC0 /* MonsterStatisticPresenter.swift in Sources */,
 				CA70272021396F3100629260 /* RegService.swift in Sources */,
 				CAE3649C2291819D003E891D /* AnimalsRoundsRouter.swift in Sources */,
 				CA49E481212D2ED300711324 /* SettingsViewController.swift in Sources */,
@@ -4825,6 +4868,7 @@
 				CAAF1F052177115100460F58 /* Common_Extensions.swift in Sources */,
 				CA9A6745213C134000FCB400 /* RazdelRouter.swift in Sources */,
 				CA49E48C212D326600711324 /* TerPushActionType.swift in Sources */,
+				11604ADA231F8330001D1C7F /* MonsterGetStatCommand.swift in Sources */,
 				CAE3649122918181003E891D /* AnimalsMainModels.swift in Sources */,
 				CA8EA71B214145E700159451 /* PreviewPresenter.swift in Sources */,
 				CAEEF2422299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift in Sources */,
@@ -4854,6 +4898,7 @@
 				CA1041522262A259005D62DE /* SearchMusicCollectionViewCell.swift in Sources */,
 				CA80481C21416836000A3C5B /* SerialRouter.swift in Sources */,
 				CA763630226A63CD00168AB1 /* SubscriptionCollectionViewCell.swift in Sources */,
+				111187F4231E82D700EBEFC0 /* MonsterStatisticInteractor.swift in Sources */,
 				CA9AA3D2218469E100019CA7 /* FavCollectionViewCell.swift in Sources */,
 				CA91027C22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift in Sources */,
 				CAD16DF32147F7DC00A82DBB /* GetProfileCommand.swift in Sources */,
@@ -4945,6 +4990,7 @@
 				CAC1126321562A0400678D1B /* UIButton.swift in Sources */,
 				CAE09480214CF43C0052F283 /* ResetPassInteractor.swift in Sources */,
 				CAE1C46F211DC8CA0058C9C6 /* AuthModels.swift in Sources */,
+				11604ADC231F8494001D1C7F /* MonsterSendStatCommand.swift in Sources */,
 				CAB59FD322F315D800D7CA71 /* AlphaviteMasterInteractor.swift in Sources */,
 				CAF61D90217E118E00035EE9 /* TTPlayerViewController.swift in Sources */,
 				CA314FF02222A95D00B59797 /* StoreResponse.swift in Sources */,
@@ -5004,6 +5050,7 @@
 				CA80481E21416836000A3C5B /* SerialViewController.swift in Sources */,
 				CAF9622C229970F7006E3046 /* AnimalsStatisticPresenter.swift in Sources */,
 				CAF4C108214B054A00954AA8 /* AuthService.swift in Sources */,
+				11604AD7231F8107001D1C7F /* MonsterStatisticResponse.swift in Sources */,
 				CADE0E442118A33E00CC9871 /* LocalStore.swift in Sources */,
 				CAE1C473211DC9190058C9C6 /* UIWindow.swift in Sources */,
 				CAAF1EE92174E40300460F58 /* LottieHUD.swift in Sources */,
@@ -5025,6 +5072,7 @@
 				CAC9100D215D31FD00E62F01 /* AchievesModels.swift in Sources */,
 				CAB5A4552171F18200A00C8E /* ChildsInteractor.swift in Sources */,
 				CAA8845021381D9900E27F7A /* ChildProfileAddModels.swift in Sources */,
+				111187F3231E82D700EBEFC0 /* MonsterStatisticViewController.swift in Sources */,
 				CAB5A4572171F2B200A00C8E /* ChildsStackView.swift in Sources */,
 				CAF7B18321B6927C00A59F5F /* StorePresenter.swift in Sources */,
 				CAF4C106214AF31700954AA8 /* InputView.swift in Sources */,
@@ -5059,7 +5107,7 @@
 				CA76363B226BD7A500168AB1 /* OfflinePlaylistPresenter.swift in Sources */,
 				CAAD25EF22F5B2C4005CFCD2 /* StrokeLabel.swift in Sources */,
 				CAE1C434211DACE10058C9C6 /* AppUpdateDefaults.swift in Sources */,
-				CAC2D5252115A68200945003 /* APIMethod .swift in Sources */,
+				CAC2D5252115A68200945003 /* APIMethod.swift in Sources */,
 				CAB5A4512171F18200A00C8E /* ChildsWorker.swift in Sources */,
 				CAE1C429211DACE10058C9C6 /* SqliteCacher+ExirableCacherType.swift in Sources */,
 				CA49E47F212D2ED300711324 /* SettingsRouter.swift in Sources */,
@@ -5445,7 +5493,7 @@
 				CAD211A1231BFD4D006F2F08 /* OfflinePlaylistPresenter.swift in Sources */,
 				CAD211A2231BFD4D006F2F08 /* StrokeLabel.swift in Sources */,
 				CAD211A3231BFD4D006F2F08 /* AppUpdateDefaults.swift in Sources */,
-				CAD211A4231BFD4D006F2F08 /* APIMethod .swift in Sources */,
+				CAD211A4231BFD4D006F2F08 /* APIMethod.swift in Sources */,
 				CAD211A5231BFD4D006F2F08 /* ChildsWorker.swift in Sources */,
 				CAD211A6231BFD4D006F2F08 /* SqliteCacher+ExirableCacherType.swift in Sources */,
 				CAD211A7231BFD4D006F2F08 /* SettingsRouter.swift in Sources */,

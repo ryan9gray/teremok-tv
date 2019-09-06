@@ -23,6 +23,10 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     
     // MARK: Routing
     func openStatistic() {
+        guard modalChildVC == nil else { return }
+        
+        let vc = MonsterStatisticViewController.instantiate(fromStoryboard: .monster)
+        viewController?.presentAlertModally(alertController: vc)
     }
     
     func navigateMain() {
@@ -37,6 +41,7 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
         
         viewController?.tipView?.dismiss()
         let flow = MonsterGameFlow(master: controller)
+        flow.service = dataStore?.service
         flow.startFlow(difficulty: idx)
     }
     

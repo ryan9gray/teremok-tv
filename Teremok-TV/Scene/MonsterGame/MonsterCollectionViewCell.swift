@@ -18,6 +18,7 @@ class MonsterCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
 
         backImage.layer.cornerRadius = 12
+        frontImage.layer.cornerRadius = 12
     }
     
     func configuration(monster: MonsterMaster.Monster) {
