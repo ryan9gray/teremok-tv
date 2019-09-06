@@ -313,6 +313,9 @@ class AlphaviteChoiceViewController: GameViewController {
     }
 
     private func pickReaction(isHappy: Bool, complition: @escaping (Bool) -> Void) {
+        if isHappy {
+            playSounds(AlphaviteMaster.Sound.jump.url) {}
+        }
         let namePick: AlphaviteMaster.PickAnimations = isHappy ? .happy : .sad
         pickAnimationView.animation = Animation.named(namePick.rawValue)
         pickAnimationView.loopMode = .playOnce

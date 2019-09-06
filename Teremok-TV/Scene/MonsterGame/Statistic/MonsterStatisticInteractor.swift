@@ -22,8 +22,7 @@ protocol MonsterStatisticDataStore {
 
 class MonsterStatisticInteractor: MonsterStatisticBusinessLogic, MonsterStatisticDataStore {
     var presenter: MonsterStatisticPresentationLogic?
-
-    var service: MonsterServiceProtocol = MonsterService()
+    let service: MonsterServiceProtocol = MonsterService()
     
     func fetchStat() {
         service.getStat { [weak self] result in

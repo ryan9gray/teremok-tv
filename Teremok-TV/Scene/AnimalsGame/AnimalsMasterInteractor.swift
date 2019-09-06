@@ -22,7 +22,6 @@ protocol AnimalsMasterDataStore {
 
 class AnimalsMasterInteractor: AnimalsMasterBusinessLogic, AnimalsMasterDataStore {
     var presenter: AnimalsMasterPresentationLogic?
-
     var isEasy = true
 
     func changeComplexity(isEasy: Bool) {

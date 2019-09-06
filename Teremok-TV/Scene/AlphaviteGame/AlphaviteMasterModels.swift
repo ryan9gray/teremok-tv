@@ -41,6 +41,7 @@ enum AlphaviteMaster {
         case wrongAnswer = "alphabetWrong"
         case pickDriveTo = "pickDriveTo"
         case pickDriveFrom = "pickDriveFrom"
+        case jump = "alphabetJump"
 
         var url: URL {
             return URL(fileURLWithPath: Bundle.main.path(forResource: self.rawValue, ofType: "wav")!)

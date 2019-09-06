@@ -22,7 +22,6 @@ protocol AnimalsStatisticDataStore {
 
 class AnimalsStatisticInteractor: AnimalsStatisticBusinessLogic, AnimalsStatisticDataStore {
     var presenter: AnimalsStatisticPresentationLogic?
-    
     let service: AnimalsGameProtocol = AnimalsGameService()
 
     var isEasy: Bool = true

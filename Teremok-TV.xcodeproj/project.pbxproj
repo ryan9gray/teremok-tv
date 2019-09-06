@@ -416,6 +416,16 @@
 		CAB653D8215A5C0F00BEB620 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB653D7215A5C0F00BEB620 /* UIBezierPath.swift */; };
 		CABAE9CD22C3EE820093FC5A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAE9CC22C3EE820093FC5A /* OnboardingViewController.swift */; };
 		CABE8420231EEF7A0082E2E4 /* MonsterGameCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */; };
+		CABE842223223FF80082E2E4 /* alphabetJump.wav in Resources */ = {isa = PBXBuildFile; fileRef = CABE842123223FF80082E2E4 /* alphabetJump.wav */; };
+		CABE842323223FF80082E2E4 /* alphabetJump.wav in Resources */ = {isa = PBXBuildFile; fileRef = CABE842123223FF80082E2E4 /* alphabetJump.wav */; };
+		CABE8424232241420082E2E4 /* MonsterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187F5231E8D6E00EBEFC0 /* MonsterService.swift */; };
+		CABE8425232241740082E2E4 /* MonsterStatisticResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */; };
+		CABE84262322418A0082E2E4 /* MonsterGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604AD9231F8330001D1C7F /* MonsterGetStatCommand.swift */; };
+		CABE8427232241BB0082E2E4 /* MonsterSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604ADB231F8494001D1C7F /* MonsterSendStatCommand.swift */; };
+		CABE842C232241DD0082E2E4 /* MonsterStatisticPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187E9231E82D700EBEFC0 /* MonsterStatisticPresenter.swift */; };
+		CABE842D232241DD0082E2E4 /* MonsterStatisticRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187EB231E82D700EBEFC0 /* MonsterStatisticRouter.swift */; };
+		CABE842E232241DD0082E2E4 /* MonsterStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187ED231E82D700EBEFC0 /* MonsterStatisticViewController.swift */; };
+		CABE842F232241DD0082E2E4 /* MonsterStatisticInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187EE231E82D700EBEFC0 /* MonsterStatisticInteractor.swift */; };
 		CAC0988822FEDCD400EFB01E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988722FEDCD400EFB01E /* Style.swift */; };
 		CAC0988D22FF12A700EFB01E /* EasyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988B22FF12A700EFB01E /* EasyTipView.swift */; };
 		CAC0988E22FF12A800EFB01E /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988C22FF12A700EFB01E /* UIKitExtensions.swift */; };
@@ -1908,6 +1918,7 @@
 		CAB5A4562171F2B200A00C8E /* ChildsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsStackView.swift; sourceTree = "<group>"; };
 		CAB653D7215A5C0F00BEB620 /* UIBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		CABAE9CC22C3EE820093FC5A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		CABE842123223FF80082E2E4 /* alphabetJump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphabetJump.wav; sourceTree = "<group>"; };
 		CAC0988722FEDCD400EFB01E /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		CAC0988B22FF12A700EFB01E /* EasyTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTipView.swift; sourceTree = "<group>"; };
 		CAC0988C22FF12A700EFB01E /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
@@ -2480,6 +2491,7 @@
 		CA51004622F6EACE00821C25 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				CABE842123223FF80082E2E4 /* alphabetJump.wav */,
 				CAD2104F23170C68006F2F08 /* alphabetButton.wav */,
 				CAD2104C23170C68006F2F08 /* alphabetPickMain.wav */,
 				CAD2105023170C68006F2F08 /* alphabetRight.wav */,
@@ -4111,6 +4123,7 @@
 				CAD2105523170C69006F2F08 /* alphabetButton.wav in Resources */,
 				CAF961C322995FF3006E3046 /* animal_38.mp3 in Resources */,
 				CAF961E722995FF3006E3046 /* animal_27.mp3 in Resources */,
+				CABE842223223FF80082E2E4 /* alphabetJump.wav in Resources */,
 				CAF961E522995FF3006E3046 /* animal_5.mp3 in Resources */,
 				CAD2102D2315BAD0006F2F08 /* IstokWeb-Regular.ttf in Resources */,
 				CAF961B822995FF3006E3046 /* animal_40.pdf in Resources */,
@@ -4450,6 +4463,7 @@
 				CAD21267231BFD4D006F2F08 /* alphabetButton.wav in Resources */,
 				CAD21268231BFD4D006F2F08 /* animal_38.mp3 in Resources */,
 				CAD21269231BFD4D006F2F08 /* animal_27.mp3 in Resources */,
+				CABE842323223FF80082E2E4 /* alphabetJump.wav in Resources */,
 				CAD2126A231BFD4D006F2F08 /* animal_5.mp3 in Resources */,
 				CAD2126B231BFD4D006F2F08 /* IstokWeb-Regular.ttf in Resources */,
 				CAD2126C231BFD4D006F2F08 /* animal_40.pdf in Resources */,
@@ -5189,6 +5203,7 @@
 				CAD21072231BFD4D006F2F08 /* PlaylistsInteractor.swift in Sources */,
 				CAD21073231BFD4D006F2F08 /* ResetPassRouter.swift in Sources */,
 				CAD21074231BFD4D006F2F08 /* MusicMasterPresenter.swift in Sources */,
+				CABE842D232241DD0082E2E4 /* MonsterStatisticRouter.swift in Sources */,
 				CAD21075231BFD4D006F2F08 /* AnimateCellProtocol.swift in Sources */,
 				CAD21076231BFD4D006F2F08 /* UIDevice.swift in Sources */,
 				CAD21077231BFD4D006F2F08 /* MainKeychainService.swift in Sources */,
@@ -5220,6 +5235,7 @@
 				CAD21092231BFD4D006F2F08 /* AlbumPresenter.swift in Sources */,
 				CAD21093231BFD4D006F2F08 /* ContentResponse.swift in Sources */,
 				CAD21094231BFD4D006F2F08 /* RegistrationModels.swift in Sources */,
+				CABE842E232241DD0082E2E4 /* MonsterStatisticViewController.swift in Sources */,
 				CAD21095231BFD4D006F2F08 /* TerPush+Mapping.swift in Sources */,
 				CAD21096231BFD4D006F2F08 /* AlbumModels.swift in Sources */,
 				CAD21097231BFD4D006F2F08 /* TTSegmentedControl.swift in Sources */,
@@ -5263,6 +5279,7 @@
 				CAD210BD231BFD4D006F2F08 /* PreviewPresenter.swift in Sources */,
 				CAD210BE231BFD4D006F2F08 /* IntroduceAnimalViewController.swift in Sources */,
 				CAD210BF231BFD4D006F2F08 /* TrackCollectionViewCell.swift in Sources */,
+				CABE842C232241DD0082E2E4 /* MonsterStatisticPresenter.swift in Sources */,
 				CAD210C0231BFD4D006F2F08 /* AppDelegate+Push.swift in Sources */,
 				CAD210C1231BFD4D006F2F08 /* MonsterMasterModels.swift in Sources */,
 				CAD210C2231BFD4D006F2F08 /* UPCarouselFlowLayout.swift in Sources */,
@@ -5293,6 +5310,7 @@
 				CAD210DB231BFD4D006F2F08 /* GetProfileCommand.swift in Sources */,
 				CAD210DC231BFD4D006F2F08 /* StoreReviewHelper.swift in Sources */,
 				CAD210DD231BFD4D006F2F08 /* ChildsRouter.swift in Sources */,
+				CABE8425232241740082E2E4 /* MonsterStatisticResponse.swift in Sources */,
 				CAD210DE231BFD4D006F2F08 /* AlphaviteControl.swift in Sources */,
 				CAD210DF231BFD4D006F2F08 /* ProfileService.swift in Sources */,
 				CAD210E0231BFD4D006F2F08 /* StoreCollectionViewCell.swift in Sources */,
@@ -5333,6 +5351,7 @@
 				CAD21103231BFD4D006F2F08 /* ChildProfileDoneModels.swift in Sources */,
 				CAD21104231BFD4D006F2F08 /* AnimalsGetStatCommand.swift in Sources */,
 				CAD21105231BFD4D006F2F08 /* MonsterMasterRouter.swift in Sources */,
+				CABE8424232241420082E2E4 /* MonsterService.swift in Sources */,
 				CAD21106231BFD4D006F2F08 /* SearchMusicModels.swift in Sources */,
 				CAD21107231BFD4D006F2F08 /* FavService.swift in Sources */,
 				CAD21108231BFD4D006F2F08 /* UIApplication.swift in Sources */,
@@ -5388,6 +5407,7 @@
 				CAD21139231BFD4D006F2F08 /* SecurityCodeViewController.swift in Sources */,
 				CAD2113A231BFD4D006F2F08 /* ListPacksCommand .swift in Sources */,
 				CAD2113B231BFD4D006F2F08 /* ChildProfileInteractor.swift in Sources */,
+				CABE84262322418A0082E2E4 /* MonsterGetStatCommand.swift in Sources */,
 				CAD2113C231BFD4D006F2F08 /* ChoiceAnimalViewController.swift in Sources */,
 				CAD2113D231BFD4D006F2F08 /* MainContentCommand.swift in Sources */,
 				CAD2113E231BFD4D006F2F08 /* PreviewModels.swift in Sources */,
@@ -5458,6 +5478,7 @@
 				CAD2117E231BFD4D006F2F08 /* AnimalsRoundsViewController.swift in Sources */,
 				CAD2117F231BFD4D006F2F08 /* AchievesModels.swift in Sources */,
 				CAD21180231BFD4D006F2F08 /* ChildsInteractor.swift in Sources */,
+				CABE8427232241BB0082E2E4 /* MonsterSendStatCommand.swift in Sources */,
 				CAD21181231BFD4D006F2F08 /* ChildProfileAddModels.swift in Sources */,
 				CAD21182231BFD4D006F2F08 /* ChildsStackView.swift in Sources */,
 				CAD21183231BFD4D006F2F08 /* StorePresenter.swift in Sources */,
@@ -5505,6 +5526,7 @@
 				CAD211AD231BFD4D006F2F08 /* AvatarButton.swift in Sources */,
 				CAD211AE231BFD4D006F2F08 /* AuthSigninCommand.swift in Sources */,
 				CAD211AF231BFD4D006F2F08 /* RazdelModels.swift in Sources */,
+				CABE842F232241DD0082E2E4 /* MonsterStatisticInteractor.swift in Sources */,
 				CAD211B0231BFD4D006F2F08 /* AchievesInteractor.swift in Sources */,
 				CAD211B1231BFD4D006F2F08 /* AvatarCollectionViewCell.swift in Sources */,
 				CAD211B2231BFD4D006F2F08 /* AlphaviteStatisticInteractor.swift in Sources */,

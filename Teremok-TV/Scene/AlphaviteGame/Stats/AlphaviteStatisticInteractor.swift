@@ -22,8 +22,7 @@ protocol AlphaviteStatisticDataStore {
 
 class AlphaviteStatisticInteractor: AlphaviteStatisticBusinessLogic, AlphaviteStatisticDataStore {
     var presenter: AlphaviteStatisticPresentationLogic?
-
-    var service: AlphabetServiceProtocol = AlphabetService()
+    let service: AlphabetServiceProtocol = AlphabetService()
 
     func fetchStat() {
         service.getStat { [weak self] result in
