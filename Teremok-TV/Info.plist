@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.6.2</string>
+	<string>1.6.3</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>1</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -61,12 +61,12 @@
 	<string>Разрешите доступ к камере</string>
 	<key>NSExceptionDomains</key>
 	<dict>
-		<key>teremok-vod-hls.cdnvideo.ru</key>
+		<key>devimages-cdn.apple.com</key>
 		<dict>
 			<key>NSExceptionRequiresForwardSecrecy</key>
 			<false/>
 		</dict>
-		<key>devimages-cdn.apple.com</key>
+		<key>teremok-vod-hls.cdnvideo.ru</key>
 		<dict>
 			<key>NSExceptionRequiresForwardSecrecy</key>
 			<false/>
