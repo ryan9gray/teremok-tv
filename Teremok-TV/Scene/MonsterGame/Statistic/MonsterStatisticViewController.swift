@@ -96,10 +96,25 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
             happyMonsterImage.isHidden.toggle()
         }
         if model.stat.currentweek.time == 0 || model.stat.pastweek.time == 0 {
-            statStatus.text = "Обновление вашей статистики будет " + PlayerHelper.updateDaysText(days: model.stat.daysToUpdate)
+            statStatus.text = "Обновление вашей статистики будет " + updateDaysText(days: model.stat.daysToUpdate)
             sadMonsterImage.isHidden = true
             happyMonsterImage.isHidden = true
         }
+    }
+
+    func updateDaysText(days: Int) -> String {
+        var daysText = ""
+        switch days {
+        case 0:
+            return "сегодня"
+        case 1:
+            daysText = "день"
+        case 2,3,4:
+            daysText = "дня"
+        default:
+            daysText = "дней"
+        }
+        return "через \(days) " + daysText
     }
     
     func showStats(_ model: Input) {

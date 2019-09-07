@@ -44,7 +44,7 @@ enum AlphaviteMaster {
         case jump = "alphabetJump"
 
         var url: URL {
-            return URL(fileURLWithPath: Bundle.main.path(forResource: self.rawValue, ofType: "wav")!)
+            return URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
         }
 
     }

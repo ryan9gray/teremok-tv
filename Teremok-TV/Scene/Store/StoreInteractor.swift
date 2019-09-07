@@ -27,7 +27,7 @@ class StoreInteractor: StoreBusinessLogic, StoreDataStore {
     var presenter: StorePresentationLogic?
 
     let purchaseService: PurchaseProtocol = PurchaseService()
-    lazy var storeService: SwiftyStorePorotocol = SwiftyStoreHelper()
+    let storeService: SwiftyStorePorotocol = SwiftyStoreHelper()
 
     func fetchProduct(sub: RegisteredPurchase, completion: @escaping (String) -> Void) {
         storeService.info(product: sub, completion: completion)

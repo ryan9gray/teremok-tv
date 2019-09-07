@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CAD21068231BFD4D006F2F08"
-               BuildableName = "Teremok-TV Sand.app"
-               BlueprintName = "Teremok-TV Sand"
+               BlueprintIdentifier = "CAC2D4E02114D2DF00945003"
+               BuildableName = "Teremok-TV.app"
+               BlueprintName = "Teremok-TV"
                ReferencedContainer = "container:Teremok-TV.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CAD21068231BFD4D006F2F08"
-            BuildableName = "Teremok-TV Sand.app"
-            BlueprintName = "Teremok-TV Sand"
+            BlueprintIdentifier = "CAC2D4E02114D2DF00945003"
+            BuildableName = "Teremok-TV.app"
+            BlueprintName = "Teremok-TV"
             ReferencedContainer = "container:Teremok-TV.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CAD21068231BFD4D006F2F08"
-            BuildableName = "Teremok-TV Sand.app"
-            BlueprintName = "Teremok-TV Sand"
+            BlueprintIdentifier = "CAC2D4E02114D2DF00945003"
+            BuildableName = "Teremok-TV.app"
+            BlueprintName = "Teremok-TV"
             ReferencedContainer = "container:Teremok-TV.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CAD21068231BFD4D006F2F08"
-            BuildableName = "Teremok-TV Sand.app"
-            BlueprintName = "Teremok-TV Sand"
+            BlueprintIdentifier = "CAC2D4E02114D2DF00945003"
+            BuildableName = "Teremok-TV.app"
+            BlueprintName = "Teremok-TV"
             ReferencedContainer = "container:Teremok-TV.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -17,13 +17,13 @@ protocol AlphaviteMasterBusinessLogic {
 }
 
 protocol AlphaviteMasterDataStore {
-    var service: AlphabetServiceProtocol { get set }
+    var service: AlphabetServiceProtocol { get }
 }
 
 class AlphaviteMasterInteractor: AlphaviteMasterBusinessLogic, AlphaviteMasterDataStore {
     var presenter: AlphaviteMasterPresentationLogic?
 
-    var service: AlphabetServiceProtocol = AlphabetService()
+    let service: AlphabetServiceProtocol = AlphabetService()
 
 
 }

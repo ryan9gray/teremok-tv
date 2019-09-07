@@ -18,21 +18,4 @@ struct PlayerHelper {
         let min = interval / 60
         return String(format: "%02d:%02d", min, sec)
     }
-    
-    static func updateDaysText(days: Int) -> String {
-        var daysText = ""
-        switch days {
-        case 0:
-            return "сегодня"
-        case 1:
-            daysText = "день"
-        case 2,3,4:
-            daysText = "дня"
-        case 5,6,7:
-            daysText = "дней"
-        default:
-            return ""
-        }
-        return "через \(days) " + daysText
-    }
 }
