@@ -338,6 +338,8 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             // Player item failed. See error.
             case .unknown: break
                 // Player item is not yet ready.
+            @unknown default:
+                break
             }
         }
         if(keyPath == "playbackBufferEmpty") {

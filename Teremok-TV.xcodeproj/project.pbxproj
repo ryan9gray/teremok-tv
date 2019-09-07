@@ -430,7 +430,6 @@
 		CAC2D51B2115A68200945003 /* ApiURLString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D4FA2115A68200945003 /* ApiURLString.swift */; };
 		CAC2D51C2115A68200945003 /* SigninResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D4FC2115A68200945003 /* SigninResponse.swift */; };
 		CAC2D51D2115A68200945003 /* BackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D4FD2115A68200945003 /* BackendError.swift */; };
-		CAC2D51E2115A68200945003 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D4FE2115A68200945003 /* Result.swift */; };
 		CAC2D51F2115A68200945003 /* BasicCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D4FF2115A68200945003 /* BasicCommand.swift */; };
 		CAC2D5202115A68200945003 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5002115A68200945003 /* ApiResponse.swift */; };
 		CAC2D5212115A68200945003 /* AuthSigninCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5022115A68200945003 /* AuthSigninCommand.swift */; };
@@ -738,6 +737,7 @@
 		CAF9AB9A22ABCC4E006DFB5F /* ResumeRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9AB9922ABCC4E006DFB5F /* ResumeRoundViewController.swift */; };
 		CAF9AB9C22ABD137006DFB5F /* AnimalsGameFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9AB9B22ABD136006DFB5F /* AnimalsGameFlow.swift */; };
 		CAFF983E2323C1E900003076 /* Sandbox.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CAFF983D2323C1E900003076 /* Sandbox.xcconfig */; };
+		CAFF98432323CEFA00003076 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF98422323CEFA00003076 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1194,7 +1194,6 @@
 		CAC2D4FA2115A68200945003 /* ApiURLString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiURLString.swift; sourceTree = "<group>"; };
 		CAC2D4FC2115A68200945003 /* SigninResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninResponse.swift; sourceTree = "<group>"; };
 		CAC2D4FD2115A68200945003 /* BackendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
-		CAC2D4FE2115A68200945003 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		CAC2D4FF2115A68200945003 /* BasicCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCommand.swift; sourceTree = "<group>"; };
 		CAC2D5002115A68200945003 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		CAC2D5022115A68200945003 /* AuthSigninCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthSigninCommand.swift; sourceTree = "<group>"; };
@@ -1287,7 +1286,6 @@
 		CAD2104F23170C68006F2F08 /* alphabetButton.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphabetButton.wav; sourceTree = "<group>"; };
 		CAD2105023170C68006F2F08 /* alphabetRight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphabetRight.wav; sourceTree = "<group>"; };
 		CAD2105123170C68006F2F08 /* alphabetWrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphabetWrong.wav; sourceTree = "<group>"; };
-		CAD21340231BFD4D006F2F08 /* Teremok-TV copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Teremok-TV copy-Info.plist"; path = "/Users/ryan9gray/Projects/Teremok-TV/Teremok-TV copy-Info.plist"; sourceTree = "<absolute>"; };
 		CAD90EB022AC71AB004D74BD /* AnimalPackDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPackDownloader.swift; sourceTree = "<group>"; };
 		CAD90EB222B13636004D74BD /* AnimalsGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsGetStatCommand.swift; sourceTree = "<group>"; };
 		CAD90EB422B13644004D74BD /* AnimalsSendStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsSendStatCommand.swift; sourceTree = "<group>"; };
@@ -1508,6 +1506,7 @@
 		CAF9AB9922ABCC4E006DFB5F /* ResumeRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeRoundViewController.swift; sourceTree = "<group>"; };
 		CAF9AB9B22ABD136006DFB5F /* AnimalsGameFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsGameFlow.swift; sourceTree = "<group>"; };
 		CAFF983D2323C1E900003076 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
+		CAFF98422323CEFA00003076 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2331,7 +2330,6 @@
 				CAC2D4E22114D2DF00945003 /* Products */,
 				8BFE56BA8D2FDC0505E1093F /* Pods */,
 				E020040F967E0FFC10C3033D /* Frameworks */,
-				CAD21340231BFD4D006F2F08 /* Teremok-TV copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2386,10 +2384,10 @@
 				CAC2D4FB2115A68200945003 /* Response */,
 				CAC2D5012115A68200945003 /* Command */,
 				CAC2D4FF2115A68200945003 /* BasicCommand.swift */,
+				CAFF98422323CEFA00003076 /* Result.swift */,
 				CAC2D5042115A68200945003 /* BasicCommand+Handler.swift */,
 				CAC2D5002115A68200945003 /* ApiResponse.swift */,
 				CAA884672139222C00E27F7A /* CacheableCommand.swift */,
-				CAC2D4FE2115A68200945003 /* Result.swift */,
 				CAC1126421562F5800678D1B /* RequestCacheCleaner.swift */,
 				CAC2D4FA2115A68200945003 /* ApiURLString.swift */,
 				CAC2D4FD2115A68200945003 /* BackendError.swift */,
@@ -3182,7 +3180,7 @@
 					};
 					CAC2D4E02114D2DF00945003 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1030;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -3768,7 +3766,6 @@
 				CA49E4A6212D736300711324 /* Animator.swift in Sources */,
 				CAAF1F022177099300460F58 /* AppLaunchScreenViewController.swift in Sources */,
 				CA52DF3D22907EC000458EE5 /* AnimalsMasterInteractor.swift in Sources */,
-				CAC2D51E2115A68200945003 /* Result.swift in Sources */,
 				CAE1C471211DC8CA0058C9C6 /* AuthInteractor.swift in Sources */,
 				CAC2D5322115A68300945003 /* ModalPresentable.swift in Sources */,
 				CAC2D5292115A68300945003 /* Collection.swift in Sources */,
@@ -3986,6 +3983,7 @@
 				CA7AAF5F2170B52500747D4B /* SearchViewController.swift in Sources */,
 				CAF7B18521B6927C00A59F5F /* StoreRouter.swift in Sources */,
 				CAE1C43F211DB5960058C9C6 /* GULogsCacheModel.swift in Sources */,
+				CAFF98432323CEFA00003076 /* Result.swift in Sources */,
 				CAE0947B214CF43C0052F283 /* ResetPassPresenter.swift in Sources */,
 				CA433FF0224F900C00B0788E /* MusicPlaylistResponse.swift in Sources */,
 				CAE3649F2291819D003E891D /* AnimalsRoundsInteractor.swift in Sources */,
@@ -4257,7 +4255,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Teremok-TV/HeaderObj.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -4283,7 +4281,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Teremok-TV/HeaderObj.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -4372,7 +4370,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Teremok-TV/HeaderObj.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Sandbox;

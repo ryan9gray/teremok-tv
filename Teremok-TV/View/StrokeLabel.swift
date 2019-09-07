@@ -448,6 +448,8 @@ class StrokeLabel: UILabel {
         case .byTruncatingHead: return .byTruncatingHead;
         case .byTruncatingTail: return .byTruncatingTail;
         case .byTruncatingMiddle: return .byTruncatingMiddle;
+        @unknown default:
+            fatalError()
         }
     }
 }
