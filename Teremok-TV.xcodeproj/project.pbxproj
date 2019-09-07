@@ -786,8 +786,8 @@
 		11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStartViewController.swift; sourceTree = "<group>"; };
 		11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterRouter.swift; sourceTree = "<group>"; };
 		11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameResultsViewController.swift; sourceTree = "<group>"; };
-		1BEFDF490D1FB5747257F78F /* Pods-Teremok-TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.debug.xcconfig"; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
 		CA0053B7213AF3E600AA187F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardShowable.swift; path = "Teremok-TV/Extensions/KeyboardShowable.swift"; sourceTree = SOURCE_ROOT; };
@@ -1507,6 +1507,7 @@
 		CAF9AB9B22ABD136006DFB5F /* AnimalsGameFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsGameFlow.swift; sourceTree = "<group>"; };
 		CAFF983D2323C1E900003076 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		CAFF98422323CEFA00003076 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CD8F4E30A715216C15EAB110 /* Pods-Teremok-TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1581,8 +1582,9 @@
 		8BFE56BA8D2FDC0505E1093F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1BEFDF490D1FB5747257F78F /* Pods-Teremok-TV.debug.xcconfig */,
 				B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */,
+				CD8F4E30A715216C15EAB110 /* Pods-Teremok-TV.debug.xcconfig */,
+				561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -4235,7 +4237,7 @@
 		};
 		CAC2D4F42114D2E200945003 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BEFDF490D1FB5747257F78F /* Pods-Teremok-TV.debug.xcconfig */;
+			baseConfigurationReference = CD8F4E30A715216C15EAB110 /* Pods-Teremok-TV.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -4377,7 +4379,6 @@
 		};
 		CAFF98412323C2FE00003076 /* Sandbox */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BEFDF490D1FB5747257F78F /* Pods-Teremok-TV.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
