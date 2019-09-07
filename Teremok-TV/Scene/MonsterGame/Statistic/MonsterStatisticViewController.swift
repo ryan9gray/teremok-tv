@@ -103,7 +103,7 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
     }
 
     func updateDaysText(days: Int) -> String {
-        var daysText = ""
+        let daysText: String
         switch days {
         case 0:
             return "сегодня"
