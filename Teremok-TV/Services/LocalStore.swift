@@ -24,6 +24,7 @@ struct LocalStore {
     fileprivate static let animalThirdIntroduce = "animalThirdIntroduce"
     fileprivate static let animalsDifficultyKey = "animalsDifficultyKey"
     fileprivate static let alphaviteDifficultyKey = "alphaviteDifficultyKey"
+    fileprivate static let colorsDifficultyKey = "colorsDifficultyKey"
 
     fileprivate static let monsterIntroduceKey = "monsterIntroduceKey"
     
@@ -45,6 +46,16 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: alphaviteDifficultyKey)
+            userDefaults.synchronize()
+        }
+    }
+
+    static var colorsIsHard: Bool {
+        get {
+            return userDefaults.bool(forKey: colorsDifficultyKey)
+        }
+        set {
+            userDefaults.set(newValue, forKey: colorsDifficultyKey)
             userDefaults.synchronize()
         }
     }

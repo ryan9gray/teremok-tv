@@ -74,7 +74,7 @@ class ColorsMasterViewController: GameMasterViewController, ColorsMasterDisplayL
 
     deinit {
         track(
-            Events.Time.AlphabetFlow,
+            Events.Time.ColorsFlow,
             trackedProperties: [Keys.Timer  ~>> NSDate().timeIntervalSince(startTime)]
         )
         if ServiceConfiguration.activeConfiguration().logging {

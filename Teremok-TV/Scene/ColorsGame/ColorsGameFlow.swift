@@ -6,4 +6,22 @@
 //  Copyright © 2019 xmedia. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ColorsGameFlow  {
+    weak var master: ColorsMasterViewController?
+
+    init(master: ColorsMasterViewController) {
+        self.master = master
+        isHard = LocalStore.colorsIsHard
+    }
+    private var isHard: Bool = false
+
+    func startFlow() {
+
+    }
+
+    deinit {
+        print("Logger: ColorsFlow deinit")
+    }
+}
