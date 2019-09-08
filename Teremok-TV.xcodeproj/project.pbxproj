@@ -447,7 +447,6 @@
 		CAC2D52E2115A68300945003 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5112115A68200945003 /* UIViewController.swift */; };
 		CAC2D52F2115A68300945003 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5122115A68200945003 /* UIFont.swift */; };
 		CAC2D5302115A68300945003 /* UIToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5132115A68200945003 /* UIToolbar.swift */; };
-		CAC2D5312115A68300945003 /* ATTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5152115A68200945003 /* ATTextFieldViewModel.swift */; };
 		CAC2D5322115A68300945003 /* ModalPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5162115A68200945003 /* ModalPresentable.swift */; };
 		CAC6F71C22A81BC000756AE2 /* after_announce_round_n.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAC6F70422A81BC000756AE2 /* after_announce_round_n.wav */; };
 		CAC6F71D22A81BC000756AE2 /* click_button_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAC6F70522A81BC000756AE2 /* click_button_1.mp3 */; };
@@ -738,6 +737,18 @@
 		CAF9AB9C22ABD137006DFB5F /* AnimalsGameFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9AB9B22ABD136006DFB5F /* AnimalsGameFlow.swift */; };
 		CAFF983E2323C1E900003076 /* Sandbox.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CAFF983D2323C1E900003076 /* Sandbox.xcconfig */; };
 		CAFF98432323CEFA00003076 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF98422323CEFA00003076 /* Result.swift */; };
+		CAFF984623251FDD00003076 /* ColorsGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFF984523251FDD00003076 /* ColorsGame.storyboard */; };
+		CAFF984823252D3E00003076 /* ImageFillter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984723252D3E00003076 /* ImageFillter.swift */; };
+		CAFF984F2325305300003076 /* ColorsMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF98492325305300003076 /* ColorsMasterPresenter.swift */; };
+		CAFF98512325305300003076 /* ColorsMasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984B2325305300003076 /* ColorsMasterRouter.swift */; };
+		CAFF98522325305300003076 /* ColorsMasterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984C2325305300003076 /* ColorsMasterModels.swift */; };
+		CAFF98532325305300003076 /* ColorsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984D2325305300003076 /* ColorsMasterViewController.swift */; };
+		CAFF98542325305300003076 /* ColorsMasterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984E2325305300003076 /* ColorsMasterInteractor.swift */; };
+		CAFF9857232530DE00003076 /* ColorsGameFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF9856232530DE00003076 /* ColorsGameFlow.swift */; };
+		CAFF98592325313C00003076 /* ColorsStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF98582325313C00003076 /* ColorsStartViewController.swift */; };
+		CAFF985B2325318E00003076 /* ColorsTeachingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF985A2325318E00003076 /* ColorsTeachingViewController.swift */; };
+		CAFF985D232531A900003076 /* ColorsChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF985C232531A900003076 /* ColorsChoiceViewController.swift */; };
+		CAFF985F2325342600003076 /* GameMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF985E2325342600003076 /* GameMasterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1211,7 +1222,6 @@
 		CAC2D5112115A68200945003 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CAC2D5122115A68200945003 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		CAC2D5132115A68200945003 /* UIToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIToolbar.swift; sourceTree = "<group>"; };
-		CAC2D5152115A68200945003 /* ATTextFieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATTextFieldViewModel.swift; sourceTree = "<group>"; };
 		CAC2D5162115A68200945003 /* ModalPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentable.swift; sourceTree = "<group>"; };
 		CAC2D5342115A7FB00945003 /* HeaderObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeaderObj.h; path = "../../Teremok-TV/Teremok-TV/HeaderObj.h"; sourceTree = "<group>"; };
 		CAC6F70422A81BC000756AE2 /* after_announce_round_n.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = after_announce_round_n.wav; sourceTree = "<group>"; };
@@ -1507,6 +1517,18 @@
 		CAF9AB9B22ABD136006DFB5F /* AnimalsGameFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsGameFlow.swift; sourceTree = "<group>"; };
 		CAFF983D2323C1E900003076 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		CAFF98422323CEFA00003076 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CAFF984523251FDD00003076 /* ColorsGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorsGame.storyboard; sourceTree = "<group>"; };
+		CAFF984723252D3E00003076 /* ImageFillter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFillter.swift; sourceTree = "<group>"; };
+		CAFF98492325305300003076 /* ColorsMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsMasterPresenter.swift; sourceTree = "<group>"; };
+		CAFF984B2325305300003076 /* ColorsMasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsMasterRouter.swift; sourceTree = "<group>"; };
+		CAFF984C2325305300003076 /* ColorsMasterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsMasterModels.swift; sourceTree = "<group>"; };
+		CAFF984D2325305300003076 /* ColorsMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsMasterViewController.swift; sourceTree = "<group>"; };
+		CAFF984E2325305300003076 /* ColorsMasterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsMasterInteractor.swift; sourceTree = "<group>"; };
+		CAFF9856232530DE00003076 /* ColorsGameFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameFlow.swift; sourceTree = "<group>"; };
+		CAFF98582325313C00003076 /* ColorsStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsStartViewController.swift; sourceTree = "<group>"; };
+		CAFF985A2325318E00003076 /* ColorsTeachingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTeachingViewController.swift; sourceTree = "<group>"; };
+		CAFF985C232531A900003076 /* ColorsChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsChoiceViewController.swift; sourceTree = "<group>"; };
+		CAFF985E2325342600003076 /* GameMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMasterViewController.swift; sourceTree = "<group>"; };
 		CD8F4E30A715216C15EAB110 /* Pods-Teremok-TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1623,12 +1645,11 @@
 			children = (
 				CA70867223082E940015851C /* Stats */,
 				CA51004122F5FFAE00821C25 /* AlphaviteFlow.swift */,
-				CAAD25E722F59872005CFCD2 /* Main */,
-				CAB59FC822F315D800D7CA71 /* AlphaviteMasterPresenter.swift */,
-				CAB59FCA22F315D800D7CA71 /* AlphaviteMasterRouter.swift */,
-				CAB59FCB22F315D800D7CA71 /* AlphaviteMasterModels.swift */,
-				CAB59FCC22F315D800D7CA71 /* AlphaviteMasterViewController.swift */,
-				CAB59FCD22F315D800D7CA71 /* AlphaviteMasterInteractor.swift */,
+				CAAD25F022F5DBC1005CFCD2 /* AlphaviteStartViewController.swift */,
+				CAAD25F422F5DC80005CFCD2 /* AlphaviteCharsViewController.swift */,
+				CA51003F22F5F8E600821C25 /* AlphaviteChoiceViewController.swift */,
+				CAAD25F222F5DBEC005CFCD2 /* AlphaviteFinishViewController.swift */,
+				CAAD25E722F59872005CFCD2 /* Master */,
 			);
 			path = AlphaviteGame;
 			sourceTree = "<group>";
@@ -2098,6 +2119,7 @@
 				CA09979021A573490051F41D /* SecurityCodeViewController.swift */,
 				CA0ABB762180CC8900523F5B /* ScrollViewAlertViewController.swift */,
 				CA82C12C2132B4360020272E /* CloudAlertViewController.swift */,
+				CAFF985E2325342600003076 /* GameMasterViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2140,6 +2162,7 @@
 				CA1AB64122F188B5003A2584 /* Alphavite.storyboard */,
 				CA992D35212FF1EE008BFC8D /* Auth.storyboard */,
 				CA992D37212FF218008BFC8D /* Play.storyboard */,
+				CAFF984523251FDD00003076 /* ColorsGame.storyboard */,
 				CA52DF272290701500458EE5 /* Animals.storyboard */,
 				CAA4455021577F760023E340 /* Main.storyboard */,
 				CAA88454213820D200E27F7A /* Profile.storyboard */,
@@ -2263,15 +2286,16 @@
 			path = Trackable;
 			sourceTree = "<group>";
 		};
-		CAAD25E722F59872005CFCD2 /* Main */ = {
+		CAAD25E722F59872005CFCD2 /* Master */ = {
 			isa = PBXGroup;
 			children = (
-				CAAD25F022F5DBC1005CFCD2 /* AlphaviteStartViewController.swift */,
-				CAAD25F422F5DC80005CFCD2 /* AlphaviteCharsViewController.swift */,
-				CA51003F22F5F8E600821C25 /* AlphaviteChoiceViewController.swift */,
-				CAAD25F222F5DBEC005CFCD2 /* AlphaviteFinishViewController.swift */,
+				CAB59FC822F315D800D7CA71 /* AlphaviteMasterPresenter.swift */,
+				CAB59FCA22F315D800D7CA71 /* AlphaviteMasterRouter.swift */,
+				CAB59FCB22F315D800D7CA71 /* AlphaviteMasterModels.swift */,
+				CAB59FCC22F315D800D7CA71 /* AlphaviteMasterViewController.swift */,
+				CAB59FCD22F315D800D7CA71 /* AlphaviteMasterInteractor.swift */,
 			);
-			path = Main;
+			path = Master;
 			sourceTree = "<group>";
 		};
 		CAAF1EEA2174E7E100460F58 /* Dog_preloader */ = {
@@ -2493,7 +2517,6 @@
 				CAE1C457211DC5BC0058C9C6 /* CommonPresentationLogic.swift */,
 				CAC2D5162115A68200945003 /* ModalPresentable.swift */,
 				CAE1C455211DC5BC0058C9C6 /* CommonRoutingLogic.swift */,
-				CAC2D5152115A68200945003 /* ATTextFieldViewModel.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -2756,6 +2779,7 @@
 		CAE1C447211DC2070058C9C6 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				CAFF984423251F4800003076 /* ColorsGame */,
 				11BC751B23042D44001B5CC8 /* MonsterGame */,
 				CA1AB66322F30CBC003A2584 /* AlphaviteGame */,
 				CA52DF292290782200458EE5 /* AnimalsGame */,
@@ -2814,6 +2838,7 @@
 				CAE1C474211DC9F60058C9C6 /* Queue.swift */,
 				CA0053B7213AF3E600AA187F /* Stack.swift */,
 				CA51E1CC22FED1790028DF63 /* GameHelper.swift */,
+				CAFF984723252D3E00003076 /* ImageFillter.swift */,
 				CAC0988722FEDCD400EFB01E /* Style.swift */,
 			);
 			path = Worker;
@@ -3097,6 +3122,30 @@
 				CAFF983D2323C1E900003076 /* Sandbox.xcconfig */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		CAFF984423251F4800003076 /* ColorsGame */ = {
+			isa = PBXGroup;
+			children = (
+				CAFF9856232530DE00003076 /* ColorsGameFlow.swift */,
+				CAFF98582325313C00003076 /* ColorsStartViewController.swift */,
+				CAFF985A2325318E00003076 /* ColorsTeachingViewController.swift */,
+				CAFF985C232531A900003076 /* ColorsChoiceViewController.swift */,
+				CAFF9855232530C100003076 /* Master */,
+			);
+			path = ColorsGame;
+			sourceTree = "<group>";
+		};
+		CAFF9855232530C100003076 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				CAFF98492325305300003076 /* ColorsMasterPresenter.swift */,
+				CAFF984B2325305300003076 /* ColorsMasterRouter.swift */,
+				CAFF984C2325305300003076 /* ColorsMasterModels.swift */,
+				CAFF984D2325305300003076 /* ColorsMasterViewController.swift */,
+				CAFF984E2325305300003076 /* ColorsMasterInteractor.swift */,
+			);
+			path = Master;
 			sourceTree = "<group>";
 		};
 		E020040F967E0FFC10C3033D /* Frameworks */ = {
@@ -3422,6 +3471,7 @@
 				CAF961BC22995FF3006E3046 /* animal_33.pdf in Resources */,
 				CAD21042231700DC006F2F08 /* MontserratAlternates-ExtraLight.ttf in Resources */,
 				CA14997B216F7511008FBEE9 /* FavTableViewCell.xib in Resources */,
+				CAFF984623251FDD00003076 /* ColorsGame.storyboard in Resources */,
 				CADD14B623107F7C00AE920A /* happy_Cloud_2.json in Resources */,
 				CAD21041231700DC006F2F08 /* MontserratAlternates-SemiBoldItalic.ttf in Resources */,
 				CAF961EA22995FF3006E3046 /* animal_31.mp3 in Resources */,
@@ -3646,6 +3696,7 @@
 				CAC2D51F2115A68200945003 /* BasicCommand.swift in Sources */,
 				CAB08B022140515B002840E3 /* VideoItemsCommand.swift in Sources */,
 				CA8EA70E21413F0800159451 /* PreviewCollectionViewCell.swift in Sources */,
+				CAFF985B2325318E00003076 /* ColorsTeachingViewController.swift in Sources */,
 				CAB59FD022F315D800D7CA71 /* AlphaviteMasterRouter.swift in Sources */,
 				CA80481A21416836000A3C5B /* SerialPresenter.swift in Sources */,
 				CA52F362223D9CAD0058194E /* PlaylistsInteractor.swift in Sources */,
@@ -3688,6 +3739,7 @@
 				CADD14BB23129A4000AE920A /* TTSegmentedControl.swift in Sources */,
 				CAAD25F522F5DC80005CFCD2 /* AlphaviteCharsViewController.swift in Sources */,
 				CAA445602157BF4F0023E340 /* CustomError.swift in Sources */,
+				CAFF985D232531A900003076 /* ColorsChoiceViewController.swift in Sources */,
 				CAE1C46E211DC8CA0058C9C6 /* AuthRouter.swift in Sources */,
 				CA4C28C82145202A00CA264D /* SerialsService.swift in Sources */,
 				CAA6FDAE224BED99008C2F87 /* MusicMainCommand.swift in Sources */,
@@ -3734,7 +3786,9 @@
 				CA61D92322A445A900E3D603 /* UPCarouselFlowLayout.swift in Sources */,
 				CA49E48B212D326600711324 /* TerPush.swift in Sources */,
 				CAE1C459211DC5BC0058C9C6 /* CommonDisplayLogic.swift in Sources */,
+				CAFF9857232530DE00003076 /* ColorsGameFlow.swift in Sources */,
 				CAB08B06214055F8002840E3 /* VideoItemResponse.swift in Sources */,
+				CAFF98522325305300003076 /* ColorsMasterModels.swift in Sources */,
 				CA7AAF532170B30B00747D4B /* SearchService.swift in Sources */,
 				CAEBC712212D858F00730891 /* UIRoundedButtonWithGradientAndShadow.swift in Sources */,
 				CAF4C11D214B8F8800954AA8 /* ChildProfileDonePresenter.swift in Sources */,
@@ -3771,9 +3825,11 @@
 				CAE1C471211DC8CA0058C9C6 /* AuthInteractor.swift in Sources */,
 				CAC2D5322115A68300945003 /* ModalPresentable.swift in Sources */,
 				CAC2D5292115A68300945003 /* Collection.swift in Sources */,
+				CAFF984F2325305300003076 /* ColorsMasterPresenter.swift in Sources */,
 				CA49E498212D59F900711324 /* RoundEdgeButton.swift in Sources */,
 				CA896C7422933F2700ECC628 /* AnimalСompilationCollectionViewCell.swift in Sources */,
 				11BC751F23042E06001B5CC8 /* MonsterStartViewController.swift in Sources */,
+				CAFF98512325305300003076 /* ColorsMasterRouter.swift in Sources */,
 				CAC9100C215D31FD00E62F01 /* AchievesRouter.swift in Sources */,
 				CA9A6744213C134000FCB400 /* RazdelService.swift in Sources */,
 				CAB5A4542171F18200A00C8E /* ChildsViewController.swift in Sources */,
@@ -3784,10 +3840,10 @@
 				CAE1C42A211DACE10058C9C6 /* AppCacher.swift in Sources */,
 				CA7AAF482170A25000747D4B /* ChildProfileRouter.swift in Sources */,
 				CA51E1CD22FED1790028DF63 /* GameHelper.swift in Sources */,
-				CAC2D5312115A68300945003 /* ATTextFieldViewModel.swift in Sources */,
 				CAADDF1A21A43A4F00C02D8C /* CommonWebViewController.swift in Sources */,
 				CA51004222F5FFAE00821C25 /* AlphaviteFlow.swift in Sources */,
 				CA61D874229AD7E700E3D603 /* AnimalCollectionViewCell.swift in Sources */,
+				CAFF98542325305300003076 /* ColorsMasterInteractor.swift in Sources */,
 				CAC2D51D2115A68200945003 /* BackendError.swift in Sources */,
 				CA8197FC214992430079D46A /* ContentCommands.swift in Sources */,
 				CAE3648E22918181003E891D /* AnimalsMainPresenter.swift in Sources */,
@@ -3832,6 +3888,7 @@
 				CAE1C42F211DACE10058C9C6 /* SqliteCacher+MappableCacherType.swift in Sources */,
 				CA10414822629A0B005D62DE /* SearchMusicPresenter.swift in Sources */,
 				CA0053D2213BF72D00AA187F /* UICollectioView.swift in Sources */,
+				CAFF98532325305300003076 /* ColorsMasterViewController.swift in Sources */,
 				CAA8844F21381D9900E27F7A /* ChildProfileAddRouter.swift in Sources */,
 				CA7AAF602170B52500747D4B /* SearchInteractor.swift in Sources */,
 				CAE3649322918181003E891D /* AnimalsMainInteractor.swift in Sources */,
@@ -3930,6 +3987,7 @@
 				111187F3231E82D700EBEFC0 /* MonsterStatisticViewController.swift in Sources */,
 				CAB5A4572171F2B200A00C8E /* ChildsStackView.swift in Sources */,
 				CAF7B18321B6927C00A59F5F /* StorePresenter.swift in Sources */,
+				CAFF985F2325342600003076 /* GameMasterViewController.swift in Sources */,
 				CAF4C106214AF31700954AA8 /* InputView.swift in Sources */,
 				CAC9100A215D31FD00E62F01 /* AchievesPresenter.swift in Sources */,
 				CA1AB66522F30CE4003A2584 /* GamesListViewController.swift in Sources */,
@@ -3965,6 +4023,7 @@
 				CAC2D5252115A68200945003 /* APIMethod.swift in Sources */,
 				CAB5A4512171F18200A00C8E /* ChildsWorker.swift in Sources */,
 				CAE1C429211DACE10058C9C6 /* SqliteCacher+ExirableCacherType.swift in Sources */,
+				CAFF98592325313C00003076 /* ColorsStartViewController.swift in Sources */,
 				CA49E47F212D2ED300711324 /* SettingsRouter.swift in Sources */,
 				CAC2D52A2115A68300945003 /* UIColor.swift in Sources */,
 				CAC1126721563A9900678D1B /* ChildService.swift in Sources */,
@@ -3995,6 +4054,7 @@
 				CA9A6748213C134000FCB400 /* RazdelInteractor.swift in Sources */,
 				CAC2D52D2115A68300945003 /* String.swift in Sources */,
 				CAA884682139222C00E27F7A /* CacheableCommand.swift in Sources */,
+				CAFF984823252D3E00003076 /* ImageFillter.swift in Sources */,
 				CAE3649022918181003E891D /* AnimalsMainRouter.swift in Sources */,
 				CA52F351223D2DF40058194E /* MusicMasterRouter.swift in Sources */,
 				CA52DF3C22907EC000458EE5 /* AnimalsMasterViewController.swift in Sources */,

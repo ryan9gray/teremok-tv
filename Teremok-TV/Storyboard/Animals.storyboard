@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Shnobelregular.ttf">
+        <array key="Shnobel-Regular.otf">
             <string>Shnobel-Regular</string>
         </array>
         <array key="appetite.ttf">

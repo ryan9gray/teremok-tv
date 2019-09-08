@@ -92,7 +92,7 @@ extension Style.Gradients {
         get {
             switch self {
             case .beige:
-                return [UIColor.white, UIColor.Button.beige]
+                return [.white, UIColor.Button.beige]
             case .yellow:
                 return [UIColor.Button.yellowOne, UIColor.Button.yellowTwo]
             case .orange:
@@ -108,9 +108,9 @@ extension Style.Gradients {
             case .green:
                 return [UIColor.Alphavite.Button.greenOne, UIColor.Alphavite.Button.greenTwo]
             case .lightGray:
-                return [UIColor.Button.lightGray, UIColor.white]
+                return [UIColor.Button.lightGray, .white]
             case .blueBorder:
-                return [UIColor.Alphavite.Button.blueOne, UIColor.white]
+                return [UIColor.Alphavite.Button.blueOne, .white]
             }
         }
     }

@@ -47,9 +47,12 @@ extension UIColor {
 
         }
     }
+
+    enum ColorGame {
+        static let purp = UIColor(hex: "634BF4")
+    }
  
     enum TextField {
-        static let head                     = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)   // 999999
         static let placeholder              = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)   // 999999
         static let baseline                 = #colorLiteral(red: 0.8823529412, green: 0.8862745098, blue: 0.9019607843, alpha: 1)   // E1E2E6
         static let baselineActive           = #colorLiteral(red: 0.1960784314, green: 0.5607843137, blue: 0.8745098039, alpha: 1)   // 328FDF

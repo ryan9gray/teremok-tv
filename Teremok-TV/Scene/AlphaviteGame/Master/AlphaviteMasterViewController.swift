@@ -18,14 +18,13 @@ protocol AlphaviteMasterDisplayLogic: MasterModuleDisplayLogic, TrackableClass {
     
 }
 
-class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLogic {
+class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDisplayLogic {
     var interactor: AlphaviteMasterBusinessLogic?
     var router: (CommonRoutingLogic & AlphaviteMasterRoutingLogic & AlphaviteMasterDataPassing)?
     var modallyControllerRoutingLogic: CommonRoutingLogic? {
         get { return router }
     }
     var activityView: LottieHUD?
-    var tipView: EasyTipView?
 
     // MARK: Object lifecycle
 
@@ -55,10 +54,6 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
     }
 
     // MARK: View lifecycle
-    @IBOutlet var backgroundView: UIImageView!
-    @IBOutlet private var homeBtn: KeyButton!
-    @IBOutlet private var avatarButton: AvatarButton!
-    private let startTime = Date()
 
     @IBAction func avatarClick(_ sender: Any) {
         tipView?.dismiss()
@@ -85,7 +80,6 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
             // report for an error
         }
 
-        displayProfile()
         router?.navigateMain()
     }
 
@@ -106,35 +100,6 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
 
     // MARK: Do something
 
-    func displayProfile() {
-        guard let childs = Profile.current?.childs else {
-            avatarButton.isHidden = true
-            return
-        }
-
-        if let avatar = childs.first(where: {$0.current ?? false})?.pic {
-            avatarButton.setAvatar(linktoLoad: avatar)
-        }
-    }
-    
-    var output: Output!
-
-    struct Output {
-        var openSettings: () -> Void
-        var openAuthorization: () -> Void
-    }
-    
-    func openSettings() {
-        dismiss(animated: true) {
-            self.output.openSettings()
-        }
-    }
-
-    func openAutorization() {
-        dismiss(animated: true) {
-            self.output.openAuthorization()
-        }
-    }
 
     deinit {
         track(
