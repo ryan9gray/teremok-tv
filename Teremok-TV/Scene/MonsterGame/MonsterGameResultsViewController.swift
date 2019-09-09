@@ -10,12 +10,15 @@ import UIKit
 import Spring
 
 class MonsterGameResultsViewController: GameViewController {
-    @IBOutlet private var BGImageView: UIImageView!
     @IBOutlet private var titleImageView: UIImageView!
     @IBOutlet private var timeView: DesignableView!
     @IBOutlet private var timeLbl: UILabel!
     @IBOutlet private var nextBtn: KeyButton!
-
+    @IBOutlet private var topleftMonster: UIImageView!
+    @IBOutlet private var bottomRightMonster: UIImageView!
+    @IBOutlet private var bottomLeftMonsterWon: UIImageView!
+    @IBOutlet private var bottomLeftMonsterLose: UIImageView!
+    
     @IBAction func openNextVC(_ sender: Any) {
         output.openNext()
     }
@@ -36,10 +39,14 @@ class MonsterGameResultsViewController: GameViewController {
         if !input.gameResult.gameWon {
             timeView.borderColor = UIColor.Button.redThree
             timeLbl.textColor = UIColor.Button.redThree
-            BGImageView.image = UIImage(named: "gameLostBG")
             titleImageView.image = UIImage(named: "playAgain")
             nextBtn.setImage(UIImage(named: "icAgainYellow"), for: .normal)
             nextBtn.gradientColors = Style.Gradients.red.value
+            nextBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            bottomRightMonster.image = UIImage(named: "monsterBottomRightLose")
+            topleftMonster.image = UIImage(named: "monsterTopLeftLose")
+            bottomLeftMonsterWon.isHidden = true
+            bottomLeftMonsterLose.isHidden = false
         }
         else {
             timeLbl.textColor = UIColor.View.Label.darkBlue
