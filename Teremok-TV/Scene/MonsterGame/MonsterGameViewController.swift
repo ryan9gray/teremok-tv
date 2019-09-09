@@ -84,7 +84,10 @@ class MonsterGameViewController: GameViewController {
         if firstSelectedItem!.flipped && secondSelectedItem!.flipped {
             if firstSelectedItem?.item.matchId == secondSelectedItem?.item.matchId {
                 score += 1
-                flipBack(shouldFlip: false)
+                firstSelectedItem?.bounceAnimation()
+                secondSelectedItem?.bounceAnimation(completion: { [weak self] in
+                    self?.flipBack(shouldFlip: false)
+                })
             }
             else {
                 flipBack(shouldFlip: true)

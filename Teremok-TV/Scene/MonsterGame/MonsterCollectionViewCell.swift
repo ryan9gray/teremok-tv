@@ -53,9 +53,29 @@ class MonsterCollectionViewCell: UICollectionViewCell {
         let toView = flipped ? backImage : frontImage
         let flipDirection: UIView.AnimationOptions = flipped ? .transitionFlipFromRight : .transitionFlipFromLeft
         let options: UIView.AnimationOptions = [flipDirection, .showHideTransitionViews]
-        UIView.transition(from: fromView!, to: toView!, duration: 1.0, options: options) { finished in
+        UIView.transition(from: fromView!, to: toView!, duration: 0.7, options: options) { finished in
             self.flipped.toggle()
             completion?()
         }
+    }
+    
+    func bounceAnimation(completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            [weak self] in
+            self?.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
+            }, completion: {
+                finished in
+//                completion?()
+                UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                    [weak self] in
+                    self?.layer.transform = CATransform3DIdentity
+                    }, completion: {
+                        finished in
+                        completion?()
+                }
+                )
+            }
+        )
+
     }
 }
