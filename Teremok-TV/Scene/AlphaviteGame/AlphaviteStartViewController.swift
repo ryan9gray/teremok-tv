@@ -24,7 +24,6 @@ class AlphaviteStartViewController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         segmentController.itemTitles = [ "Я учу алфавит", "Я знаю алфавит" ]
         segmentController.didSelectItemWith = { (index, title) -> () in
             self.buttonPlayer.play()
