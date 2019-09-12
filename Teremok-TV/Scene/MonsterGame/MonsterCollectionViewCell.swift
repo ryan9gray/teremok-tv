@@ -62,13 +62,11 @@ class MonsterCollectionViewCell: UICollectionViewCell {
     
     func bounceAnimation(completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            [weak self] in
-            self?.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
+            self.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
             }, completion: {
                 finished in
                 UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                    [weak self] in
-                    self?.layer.transform = CATransform3DIdentity
+                    self.layer.transform = CATransform3DIdentity
                     }, completion: {
                         finished in
                         completion?()

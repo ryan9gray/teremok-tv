@@ -159,13 +159,13 @@ extension MonsterGameViewController: UICollectionViewDelegate {
 
         saveSelectedCell(cell: selectedCell)
         if self.secondSelectedItem == nil {
-            playSounds(MonsterMaster.Sound.button.url) { [weak self] in
-                self?.playSounds(MonsterMaster.Sound.openCard.url)
+            playSounds(MonsterMaster.Sound.button.url) {
+                self.playSounds(MonsterMaster.Sound.openCard.url)
             }
         }
         else {
-            playSounds(MonsterMaster.Sound.button.url, isOpenPlayer: false) { [weak self] in
-                self?.playSounds(MonsterMaster.Sound.openCard.url, isOpenPlayer: false)
+            playSounds(MonsterMaster.Sound.button.url, isOpenPlayer: false) {
+                self.playSounds(MonsterMaster.Sound.openCard.url, isOpenPlayer: false)
             }
         }
         selectedCell.open { [weak self] in
