@@ -14,10 +14,7 @@ class MonsterGameResultsViewController: GameViewController {
     @IBOutlet private var timeView: DesignableView!
     @IBOutlet private var timeLbl: UILabel!
     @IBOutlet private var nextBtn: KeyButton!
-    @IBOutlet private var topleftMonster: UIImageView!
-    @IBOutlet private var bottomRightMonster: UIImageView!
-    @IBOutlet private var bottomLeftMonsterWon: UIImageView!
-    @IBOutlet private var bottomLeftMonsterLose: UIImageView!
+    @IBOutlet private var monstersView: UIImageView!
     
     @IBAction func openNextVC(_ sender: Any) {
         output.openNext()
@@ -43,10 +40,7 @@ class MonsterGameResultsViewController: GameViewController {
             nextBtn.setImage(UIImage(named: "icAgainYellow"), for: .normal)
             nextBtn.gradientColors = Style.Gradients.red.value
             nextBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-            bottomRightMonster.image = UIImage(named: "monsterBottomRightLose")
-            topleftMonster.image = UIImage(named: "monsterTopLeftLose")
-            bottomLeftMonsterWon.isHidden = true
-            bottomLeftMonsterLose.isHidden = false
+            monstersView.image = UIImage(named: "monstersLose")
         }
         else {
             timeLbl.textColor = UIColor.View.Label.darkBlue
