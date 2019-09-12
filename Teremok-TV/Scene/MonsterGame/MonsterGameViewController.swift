@@ -123,18 +123,25 @@ class MonsterGameViewController: GameViewController {
     
     func flipBack(shouldFlip: Bool) {
         if shouldFlip {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                self.firstSelectedItem?.close()
-                self.secondSelectedItem?.close()
-                self.playSounds(MonsterMaster.Sound.closeCards.url, isOpenPlayer: false)
-                self.firstSelectedItem = nil
-                self.secondSelectedItem = nil
-            })
+            self.firstSelectedItem?.shakeAnimation()
+            self.secondSelectedItem?.shakeAnimation { [weak self] in
+                self?.close()
+            }
         }
         else {
             firstSelectedItem = nil
             secondSelectedItem = nil
         }
+    }
+
+    func close() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.firstSelectedItem?.close()
+            self.secondSelectedItem?.close()
+            self.playSounds(MonsterMaster.Sound.closeCards.url, isOpenPlayer: false)
+            self.firstSelectedItem = nil
+            self.secondSelectedItem = nil
+        })
     }
 }
 

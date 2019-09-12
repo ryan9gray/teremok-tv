@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 
 class MonsterCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var backImage: UIImageView!
@@ -18,7 +17,6 @@ class MonsterCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        backImage.layer.cornerRadius = 12
         frontImage.layer.cornerRadius = 12
     }
     
@@ -59,20 +57,37 @@ class MonsterCollectionViewCell: UICollectionViewCell {
             completion?()
         }
     }
-    
+
+    func shakeAnimation(completion: (() -> Void)? = nil) {
+        UIView.animateKeyframes(withDuration: 1.0, delay: 0, options: [], animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
+                let animation = CAKeyframeAnimation()
+                animation.keyPath = "position.x"
+                animation.values = [0, 10, -10, 10, -5, 5, -5, 0 ]
+                animation.keyTimes = [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1]
+                animation.duration = 0.4
+                animation.isAdditive = true
+                self.layer.add(animation, forKey: "shake")
+            })
+
+        }, completion: { _ in
+            completion?()
+        })
+    }
     func bounceAnimation(completion: (() -> Void)? = nil) {
-        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
-            }, completion: {
-                finished in
-                UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                    self.layer.transform = CATransform3DIdentity
-                    }, completion: {
-                        finished in
-                        completion?()
-                }
-                )
-            }
-        )
+        UIView.animateKeyframes(withDuration: 1.0, delay: 0, options: [], animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
+                let animation = CAKeyframeAnimation()
+                animation.keyPath = "transform.scale"
+                animation.values = [0, 0.2, -0.2, 0.2, 0]
+                animation.keyTimes = [0, 0.2, 0.4, 0.6, 0.8, 1]
+                animation.duration = 1.0
+                animation.isAdditive = true
+                self.layer.add(animation, forKey: "pop")
+            })
+
+        }, completion: { _ in
+            completion?()
+        })
     }
 }
