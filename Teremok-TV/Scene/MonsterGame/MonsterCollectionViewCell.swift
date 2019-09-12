@@ -15,7 +15,6 @@ class MonsterCollectionViewCell: UICollectionViewCell {
 
     var item: MonsterMaster.Monster!
 
-    private var audioPlayer = AVAudioPlayer()
     override func layoutSubviews() {
         super.layoutSubviews()
 
@@ -39,16 +38,14 @@ class MonsterCollectionViewCell: UICollectionViewCell {
     func open(completion: (() -> Void)? = nil) {
         guard !flipped else { return }
         
-        playSounds(MonsterMaster.Sound.openCard.url)
         flipCard() {
             completion?()
         }
     }
 
-    func close(playSound: Bool = false) {
+    func close() {
         guard flipped else { return }
 
-        if playSound { playSounds(MonsterMaster.Sound.closeCards.url) }
         flipCard()
     }
     
@@ -79,14 +76,5 @@ class MonsterCollectionViewCell: UICollectionViewCell {
                 )
             }
         )
-    }
-    
-    func playSounds(_ url: URL) {
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-        } catch {
-            print("no file)")
-        }
-        audioPlayer.play()
     }
 }
