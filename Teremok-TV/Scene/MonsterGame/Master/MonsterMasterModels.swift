@@ -17,7 +17,6 @@ enum MonsterMaster {
     
     struct Monster {
         var imageName = ""
-        var matchId: Int
     }
     
     static let monsterNames = [

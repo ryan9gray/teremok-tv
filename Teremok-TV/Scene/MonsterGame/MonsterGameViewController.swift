@@ -105,8 +105,8 @@ class MonsterGameViewController: GameViewController {
     }
     
     func matchMonsters() {
-        if firstSelectedItem!.flipped && secondSelectedItem!.flipped {
-            if firstSelectedItem?.item.matchId == secondSelectedItem?.item.matchId {
+        if (firstSelectedItem?.flipped ?? true) && (secondSelectedItem?.flipped ?? true) {
+            if firstSelectedItem?.item.imageName == secondSelectedItem?.item.imageName {
                 score += 1
                 playSounds(MonsterMaster.Sound.rightAnswer.url)
                 firstSelectedItem?.bounceAnimation()

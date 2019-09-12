@@ -69,7 +69,6 @@ class MonsterCollectionViewCell: UICollectionViewCell {
                 animation.isAdditive = true
                 self.layer.add(animation, forKey: "shake")
             })
-
         }, completion: { _ in
             completion?()
         })
@@ -85,7 +84,6 @@ class MonsterCollectionViewCell: UICollectionViewCell {
                 animation.isAdditive = true
                 self.layer.add(animation, forKey: "pop")
             })
-
         }, completion: { _ in
             completion?()
         })
