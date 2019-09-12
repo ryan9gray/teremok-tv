@@ -33,4 +33,19 @@ enum MonsterMaster {
         "monster_10",
         "monster_11"
     ]
+    
+    enum Sound: String {
+        case main = "monsterPickMain"
+        case button = "monsterButton"
+        case rightAnswer = "monsterRight"
+        case wrongAnswer = "monsterWrong"
+        case closeAll = "monsterCloseAll"
+        case openCard = "monsterOpenCard"
+        case closeCards = "monsterCloseCards"
+        
+        var url: URL {
+            return URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
+        }
+        
+    }
 }

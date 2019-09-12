@@ -27,6 +27,13 @@
 		11BC751D23042DB4001B5CC8 /* MonsterMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC751C23042DB4001B5CC8 /* MonsterMasterViewController.swift */; };
 		11BC751F23042E06001B5CC8 /* MonsterStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */; };
 		11BC752523043A1E001B5CC8 /* MonsterMasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */; };
+		11CF6B8D232A071A00F8E529 /* monsterCloseCards.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B86232A071A00F8E529 /* monsterCloseCards.wav */; };
+		11CF6B8E232A071A00F8E529 /* monsterWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B87232A071A00F8E529 /* monsterWrong.wav */; };
+		11CF6B8F232A071A00F8E529 /* monsterPickMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B88232A071A00F8E529 /* monsterPickMain.wav */; };
+		11CF6B90232A071A00F8E529 /* monsterOpenCard.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B89232A071A00F8E529 /* monsterOpenCard.wav */; };
+		11CF6B91232A071A00F8E529 /* monsterButton.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8A232A071A00F8E529 /* monsterButton.wav */; };
+		11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8B232A071A00F8E529 /* monsterCloseAll.wav */; };
+		11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8C232A071A00F8E529 /* monsterRight.wav */; };
 		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
@@ -785,6 +792,13 @@
 		11BC751C23042DB4001B5CC8 /* MonsterMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterViewController.swift; sourceTree = "<group>"; };
 		11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStartViewController.swift; sourceTree = "<group>"; };
 		11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterRouter.swift; sourceTree = "<group>"; };
+		11CF6B86232A071A00F8E529 /* monsterCloseCards.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterCloseCards.wav; sourceTree = "<group>"; };
+		11CF6B87232A071A00F8E529 /* monsterWrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterWrong.wav; sourceTree = "<group>"; };
+		11CF6B88232A071A00F8E529 /* monsterPickMain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterPickMain.wav; sourceTree = "<group>"; };
+		11CF6B89232A071A00F8E529 /* monsterOpenCard.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterOpenCard.wav; sourceTree = "<group>"; };
+		11CF6B8A232A071A00F8E529 /* monsterButton.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterButton.wav; sourceTree = "<group>"; };
+		11CF6B8B232A071A00F8E529 /* monsterCloseAll.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterCloseAll.wav; sourceTree = "<group>"; };
+		11CF6B8C232A071A00F8E529 /* monsterRight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterRight.wav; sourceTree = "<group>"; };
 		11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameResultsViewController.swift; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
@@ -1577,6 +1591,28 @@
 				11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */,
 			);
 			path = MonsterGame;
+			sourceTree = "<group>";
+		};
+		11CF6B84232A069D00F8E529 /* Monster */ = {
+			isa = PBXGroup;
+			children = (
+				11CF6B85232A06A800F8E529 /* sounds */,
+			);
+			path = Monster;
+			sourceTree = "<group>";
+		};
+		11CF6B85232A06A800F8E529 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				11CF6B89232A071A00F8E529 /* monsterOpenCard.wav */,
+				11CF6B8B232A071A00F8E529 /* monsterCloseAll.wav */,
+				11CF6B86232A071A00F8E529 /* monsterCloseCards.wav */,
+				11CF6B8A232A071A00F8E529 /* monsterButton.wav */,
+				11CF6B88232A071A00F8E529 /* monsterPickMain.wav */,
+				11CF6B8C232A071A00F8E529 /* monsterRight.wav */,
+				11CF6B87232A071A00F8E529 /* monsterWrong.wav */,
+			);
+			path = sounds;
 			sourceTree = "<group>";
 		};
 		8BFE56BA8D2FDC0505E1093F /* Pods */ = {
@@ -2950,6 +2986,7 @@
 		CAF9614F22995FAC006E3046 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				11CF6B84232A069D00F8E529 /* Monster */,
 				CA51004522F6EA5A00821C25 /* Alphavite */,
 				CAC6F70322A81BC000756AE2 /* PrincesPhrase */,
 				CA61D88122A3FE1700E3D603 /* Animation */,
@@ -3272,6 +3309,7 @@
 				CA433FFA224FA8E700B0788E /* TrackCollectionViewCell.xib in Resources */,
 				CA9AA3D3218469E100019CA7 /* FavCollectionViewCell.xib in Resources */,
 				CAC6F72A22A81BC000756AE2 /* ready_r_7.wav in Resources */,
+				11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */,
 				CA5100CE22F6EACF00821C25 /* alphavite_26_word_1.wav in Resources */,
 				CA5100AE22F6EACF00821C25 /* alphavite_18.wav in Resources */,
 				CAF961F122995FF3006E3046 /* animal_10.pdf in Resources */,
@@ -3376,6 +3414,7 @@
 				CAAF1F1221771E4300460F58 /* Shade.json in Resources */,
 				CAF961DF22995FF3006E3046 /* animal_17.mp3 in Resources */,
 				CAF961E022995FF3006E3046 /* animal_1.pdf in Resources */,
+				11CF6B8E232A071A00F8E529 /* monsterWrong.wav in Resources */,
 				CAC6F72222A81BC000756AE2 /* ready_r_1.wav in Resources */,
 				CAF961F022995FF3006E3046 /* animal_6.mp3 in Resources */,
 				CA5100F822F6EACF00821C25 /* alphavite_15_word_2.wav in Resources */,
@@ -3389,6 +3428,7 @@
 				CAF9620722995FF3006E3046 /* animal_36.mp3 in Resources */,
 				CA5100E622F6EACF00821C25 /* alphavite_2_word_2.wav in Resources */,
 				CA04864422A845A60017B8A2 /* Round_3.json in Resources */,
+				11CF6B91232A071A00F8E529 /* monsterButton.wav in Resources */,
 				CAF94CCF2160BECF000E8183 /* Welcome.storyboard in Resources */,
 				CAD16DE32147E23000A82DBB /* Numeral.json in Resources */,
 				CAC6F73322A81BC000756AE2 /* fun_6.mp3 in Resources */,
@@ -3485,6 +3525,7 @@
 				CA992D38212FF218008BFC8D /* Play.storyboard in Resources */,
 				CA5100E022F6EACF00821C25 /* alphavite_2_word_1.wav in Resources */,
 				CAD2102C2315BAD0006F2F08 /* IstokWeb-Bold.ttf in Resources */,
+				11CF6B8D232A071A00F8E529 /* monsterCloseCards.wav in Resources */,
 				CAC6F72322A81BC000756AE2 /* ready_r_5.wav in Resources */,
 				CAF9620022995FF3006E3046 /* animal_37.mp3 in Resources */,
 				CA5100F022F6EACF00821C25 /* alphavite_8_word_1.wav in Resources */,
@@ -3492,6 +3533,7 @@
 				CAF961D322995FF3006E3046 /* animal_34.pdf in Resources */,
 				CAF9621522996022006E3046 /* scene-2.mp4 in Resources */,
 				CAF961BB22995FF3006E3046 /* animal_5.pdf in Resources */,
+				11CF6B90232A071A00F8E529 /* monsterOpenCard.wav in Resources */,
 				CA2A911822022AD500CD77FD /* swipe_card_sound.wav in Resources */,
 				CA1041532262A259005D62DE /* SearchMusicCollectionViewCell.xib in Resources */,
 				CA5100A922F6EACF00821C25 /* alphavite_26.wav in Resources */,
@@ -3557,6 +3599,7 @@
 				CA52DF282290701500458EE5 /* Animals.storyboard in Resources */,
 				CAF961FC22995FF3006E3046 /* animal_3.mp3 in Resources */,
 				CA04864322A845A60017B8A2 /* Round_7.json in Resources */,
+				11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */,
 				CAD21048231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */,
 				CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */,
 				CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */,
@@ -3564,6 +3607,7 @@
 				CADB3D7521F7AD4D009467B8 /* swipe_drill_sound.wav in Resources */,
 				CA5100D122F6EACF00821C25 /* alphavite_4_word_2.wav in Resources */,
 				CAC6F71F22A81BC000756AE2 /* ready_r_3.wav in Resources */,
+				11CF6B8F232A071A00F8E529 /* monsterPickMain.wav in Resources */,
 				CA5100B422F6EACF00821C25 /* alphavite_21_word_1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
