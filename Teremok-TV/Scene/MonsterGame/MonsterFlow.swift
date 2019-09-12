@@ -76,7 +76,7 @@ class MonsterGameFlow {
     
     private func showIntroduce(difficulty: Int) {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
-        controller.video = .start
+        controller.video = .monster
         master?.router?.introduceController(viewController: controller) {
             self.startFlow(difficulty: difficulty)
         }
