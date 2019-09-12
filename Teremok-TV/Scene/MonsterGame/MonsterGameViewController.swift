@@ -72,19 +72,17 @@ class MonsterGameViewController: GameViewController {
         do {
             if isOpenPlayer {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer.play()
+
             }
             else {
                 closeAudioPlayer = try AVAudioPlayer(contentsOf: url)
+                closeAudioPlayer.play()
             }
         } catch {
             print("no file)")
         }
-        if isOpenPlayer {
-            audioPlayer.play()
-        }
-        else {
-            closeAudioPlayer.play()
-        }
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             completion?()
         }

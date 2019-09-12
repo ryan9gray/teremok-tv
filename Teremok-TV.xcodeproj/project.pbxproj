@@ -611,7 +611,7 @@
 		CAEEF22F2299C0F900AF5AF6 /* ChoiceAnimalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF2292299C0F900AF5AF6 /* ChoiceAnimalModels.swift */; };
 		CAEEF2302299C0F900AF5AF6 /* ChoiceAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF22A2299C0F900AF5AF6 /* ChoiceAnimalViewController.swift */; };
 		CAEEF2402299C9FD00AF5AF6 /* RoundPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF23F2299C9FD00AF5AF6 /* RoundPresentViewController.swift */; };
-		CAEEF2422299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF2412299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift */; };
+		CAEEF2422299CB8E00AF5AF6 /* IntroduceVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF2412299CB8E00AF5AF6 /* IntroduceVideoViewController.swift */; };
 		CAF4C106214AF31700954AA8 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C105214AF31700954AA8 /* InputView.swift */; };
 		CAF4C108214B054A00954AA8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C107214B054A00954AA8 /* AuthService.swift */; };
 		CAF4C110214B0C7900954AA8 /* FavPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C10A214B0C7900954AA8 /* FavPresenter.swift */; };
@@ -1384,7 +1384,7 @@
 		CAEEF2292299C0F900AF5AF6 /* ChoiceAnimalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceAnimalModels.swift; sourceTree = "<group>"; };
 		CAEEF22A2299C0F900AF5AF6 /* ChoiceAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceAnimalViewController.swift; sourceTree = "<group>"; };
 		CAEEF23F2299C9FD00AF5AF6 /* RoundPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundPresentViewController.swift; sourceTree = "<group>"; };
-		CAEEF2412299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceAnimalViewController.swift; sourceTree = "<group>"; };
+		CAEEF2412299CB8E00AF5AF6 /* IntroduceVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceVideoViewController.swift; sourceTree = "<group>"; };
 		CAF4C105214AF31700954AA8 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		CAF4C107214B054A00954AA8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CAF4C10A214B0C7900954AA8 /* FavPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPresenter.swift; sourceTree = "<group>"; };
@@ -2902,7 +2902,7 @@
 		CAEEF20C2299837700AF5AF6 /* Introduce */ = {
 			isa = PBXGroup;
 			children = (
-				CAEEF2412299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift */,
+				CAEEF2412299CB8E00AF5AF6 /* IntroduceVideoViewController.swift */,
 			);
 			path = Introduce;
 			sourceTree = "<group>";
@@ -3775,7 +3775,7 @@
 				11604ADA231F8330001D1C7F /* MonsterGetStatCommand.swift in Sources */,
 				CAE3649122918181003E891D /* AnimalsMainModels.swift in Sources */,
 				CA8EA71B214145E700159451 /* PreviewPresenter.swift in Sources */,
-				CAEEF2422299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift in Sources */,
+				CAEEF2422299CB8E00AF5AF6 /* IntroduceVideoViewController.swift in Sources */,
 				CA433FF9224FA8E700B0788E /* TrackCollectionViewCell.swift in Sources */,
 				CA0053C4213BD92500AA187F /* AppDelegate+Push.swift in Sources */,
 				11BA248C230551A700A9EA15 /* MonsterMasterModels.swift in Sources */,
