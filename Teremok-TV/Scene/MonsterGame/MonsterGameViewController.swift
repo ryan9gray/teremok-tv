@@ -15,8 +15,7 @@ class MonsterGameViewController: GameViewController {
     var input: Input!
     var output: Output!
     
-    private var openAudioPlayer = AVAudioPlayer()
-    private var closeAudioPlayer = AVAudioPlayer()
+    private var audioPlayer = AVAudioPlayer()
     private var firstSelectedItem: MonsterCollectionViewCell?
     private var secondSelectedItem: MonsterCollectionViewCell?
     private var score = 0 {
@@ -63,28 +62,18 @@ class MonsterGameViewController: GameViewController {
     private func start() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
             self.fireTimer()
-            self.playSounds(MonsterMaster.Sound.closeAll.url, isOpenPlayer: true)
+            self.playSounds(MonsterMaster.Sound.closeAll.url)
             self.collectionView.visibleCells.forEach { ($0 as? MonsterCollectionViewCell)?.close() }
         })
     }
 
-    func playSounds(_ url: URL, isOpenPlayer: Bool, completion: (() -> Void)? = nil) {
+    func playSounds(_ url: URL, completion: (() -> Void)? = nil) {
         do {
-            if isOpenPlayer {
-                openAudioPlayer = try AVAudioPlayer(contentsOf: url)
-            }
-            else {
-                closeAudioPlayer = try AVAudioPlayer(contentsOf: url)
-            }
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
         } catch {
             print("no file)")
         }
-        if isOpenPlayer {
-            openAudioPlayer.play()
-        }
-        else {
-            closeAudioPlayer.play()
-        }
+        audioPlayer.play()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             completion?()
         }
@@ -110,7 +99,7 @@ class MonsterGameViewController: GameViewController {
         if firstSelectedItem!.flipped && secondSelectedItem!.flipped {
             if firstSelectedItem?.item.matchId == secondSelectedItem?.item.matchId {
                 score += 1
-                playSounds(MonsterMaster.Sound.rightAnswer.url, isOpenPlayer: true)
+                playSounds(MonsterMaster.Sound.rightAnswer.url)
                 firstSelectedItem?.bounceAnimation()
                 secondSelectedItem?.bounceAnimation(completion: { [weak self] in
                     self?.flipBack(shouldFlip: false)
@@ -118,7 +107,7 @@ class MonsterGameViewController: GameViewController {
             }
             else {
                 flipBack(shouldFlip: true)
-                playSounds(MonsterMaster.Sound.wrongAnswer.url, isOpenPlayer: true)
+                playSounds(MonsterMaster.Sound.wrongAnswer.url)
             }
         }
     }
@@ -126,8 +115,7 @@ class MonsterGameViewController: GameViewController {
     func flipBack(shouldFlip: Bool) {
         if shouldFlip {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                self.playSounds(MonsterMaster.Sound.closeCards.url, isOpenPlayer: false)
-                self.firstSelectedItem?.close()
+                self.firstSelectedItem?.close(playSound: true)
                 self.secondSelectedItem?.close()
                 self.firstSelectedItem = nil
                 self.secondSelectedItem = nil
@@ -158,9 +146,7 @@ extension MonsterGameViewController: UICollectionViewDelegate {
         guard let selectedCell = collectionView.cellForItem(at: indexPath) as? MonsterCollectionViewCell else { return }
 
         saveSelectedCell(cell: selectedCell)
-        playSounds(MonsterMaster.Sound.button.url, isOpenPlayer: true) { [weak self] in
-            self?.playSounds(MonsterMaster.Sound.openCard.url, isOpenPlayer: true)
-        }
+        playSounds(MonsterMaster.Sound.button.url)
         selectedCell.open { [weak self] in
             guard self?.firstSelectedItem != nil && self?.secondSelectedItem != nil else { return }
 
