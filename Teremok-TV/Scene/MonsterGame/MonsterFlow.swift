@@ -37,9 +37,9 @@ class MonsterGameFlow {
     private func randomizeMonsters(length: Int) {
         game.items = [MonsterMaster.Monster]()
         var monsterNames = MonsterMaster.monsterNames
-        for idx in 0..<length/2 {
+        for _ in 0..<length/2 {
             let name = monsterNames.randomElement()!
-            let monster = MonsterMaster.Monster(imageName: name, matchId: idx)
+            let monster = MonsterMaster.Monster(imageName: name)
             game.items.append(monster)
             game.items.append(monster)
             if let idx = monsterNames.firstIndex(of: name) {
@@ -76,7 +76,7 @@ class MonsterGameFlow {
     
     private func showIntroduce(difficulty: Int) {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
-        controller.video = .start
+        controller.video = .monster
         master?.router?.introduceController(viewController: controller) {
             self.startFlow(difficulty: difficulty)
         }

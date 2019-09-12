@@ -108,7 +108,7 @@
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xsT-MH-07t">
-                                <rect key="frame" x="60" y="80" width="547" height="270"/>
+                                <rect key="frame" x="0.0" y="55" width="667" height="320"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="y5c-PR-At1" customClass="MonsterGameCollectionViewLayout" customModule="Teremok_TV" customModuleProvider="target"/>
                                 <cells/>
@@ -123,12 +123,12 @@
                             <constraint firstAttribute="trailing" secondItem="PNl-Co-0Lj" secondAttribute="trailing" id="B4f-Lb-5Nq"/>
                             <constraint firstItem="PNl-Co-0Lj" firstAttribute="top" secondItem="Aoy-be-qBT" secondAttribute="top" id="EZW-RD-AJp"/>
                             <constraint firstItem="PNl-Co-0Lj" firstAttribute="leading" secondItem="Aoy-be-qBT" secondAttribute="leading" id="Ozl-Dw-R42"/>
-                            <constraint firstAttribute="bottom" secondItem="xsT-MH-07t" secondAttribute="bottom" constant="25" id="Sdq-cW-OyS"/>
-                            <constraint firstItem="xsT-MH-07t" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="80" id="YHX-ua-n2w"/>
+                            <constraint firstAttribute="bottom" secondItem="xsT-MH-07t" secondAttribute="bottom" id="Sdq-cW-OyS"/>
+                            <constraint firstItem="xsT-MH-07t" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="55" id="YHX-ua-n2w"/>
                             <constraint firstItem="zJi-rO-aQu" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="20" id="cL2-WK-Vrz"/>
-                            <constraint firstItem="xsT-MH-07t" firstAttribute="leading" secondItem="Aoy-be-qBT" secondAttribute="leading" constant="60" id="dG3-t9-Ylr"/>
+                            <constraint firstItem="xsT-MH-07t" firstAttribute="leading" secondItem="Aoy-be-qBT" secondAttribute="leading" id="dG3-t9-Ylr"/>
                             <constraint firstAttribute="bottom" secondItem="PNl-Co-0Lj" secondAttribute="bottom" id="eIz-hX-blh"/>
-                            <constraint firstAttribute="trailing" secondItem="xsT-MH-07t" secondAttribute="trailing" constant="60" id="lYd-5V-E5c"/>
+                            <constraint firstAttribute="trailing" secondItem="xsT-MH-07t" secondAttribute="trailing" id="lYd-5V-E5c"/>
                             <constraint firstItem="zJi-rO-aQu" firstAttribute="centerX" secondItem="Aoy-be-qBT" secondAttribute="centerX" id="ltX-qK-GoI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hb2-pn-ILr"/>
@@ -214,7 +214,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameWonBG" translatesAutoresizingMaskIntoConstraints="NO" id="LWu-Kd-wHN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameProcessBG" translatesAutoresizingMaskIntoConstraints="NO" id="LWu-Kd-wHN">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monstersWin" translatesAutoresizingMaskIntoConstraints="NO" id="UQ4-dH-5hM">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqH-ie-GhK" customClass="DesignableView" customModule="Spring">
@@ -287,19 +290,23 @@
                         <constraints>
                             <constraint firstItem="LWu-Kd-wHN" firstAttribute="leading" secondItem="05F-xK-YJJ" secondAttribute="leading" id="Ah5-bJ-4bP"/>
                             <constraint firstItem="LWu-Kd-wHN" firstAttribute="top" secondItem="05F-xK-YJJ" secondAttribute="top" id="Bj2-tf-391"/>
+                            <constraint firstAttribute="trailing" secondItem="UQ4-dH-5hM" secondAttribute="trailing" id="Dde-hS-Sjt"/>
                             <constraint firstItem="pqH-ie-GhK" firstAttribute="top" secondItem="kSq-H1-JTs" secondAttribute="top" constant="20" id="E4X-g4-HQX"/>
                             <constraint firstAttribute="bottom" secondItem="Mbj-Zo-doR" secondAttribute="bottom" constant="40" id="GTI-fU-J4u"/>
                             <constraint firstItem="pqH-ie-GhK" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="L49-zF-UNa"/>
                             <constraint firstAttribute="trailing" secondItem="LWu-Kd-wHN" secondAttribute="trailing" id="LRA-fz-CDQ"/>
+                            <constraint firstItem="UQ4-dH-5hM" firstAttribute="leading" secondItem="05F-xK-YJJ" secondAttribute="leading" id="LsZ-TO-Jsu"/>
+                            <constraint firstItem="UQ4-dH-5hM" firstAttribute="top" secondItem="05F-xK-YJJ" secondAttribute="top" id="SNc-s8-FW2"/>
                             <constraint firstAttribute="bottom" secondItem="LWu-Kd-wHN" secondAttribute="bottom" id="UE4-wp-eLC"/>
                             <constraint firstItem="0Ir-5m-boz" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="a3M-sx-4ly"/>
                             <constraint firstItem="0Ir-5m-boz" firstAttribute="top" secondItem="pqH-ie-GhK" secondAttribute="bottom" constant="10" id="aVA-IF-cGN"/>
                             <constraint firstItem="Mbj-Zo-doR" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="rIJ-gn-sZM"/>
+                            <constraint firstAttribute="bottom" secondItem="UQ4-dH-5hM" secondAttribute="bottom" id="tod-ze-LRO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kSq-H1-JTs"/>
                     </view>
                     <connections>
-                        <outlet property="BGImageView" destination="LWu-Kd-wHN" id="lkY-09-f8L"/>
+                        <outlet property="monstersView" destination="UQ4-dH-5hM" id="uMH-u4-Zgw"/>
                         <outlet property="nextBtn" destination="Mbj-Zo-doR" id="UTO-xN-iQS"/>
                         <outlet property="timeLbl" destination="RNl-xJ-AO8" id="IPa-do-cNg"/>
                         <outlet property="timeView" destination="pqH-ie-GhK" id="WZ0-E8-Pog"/>
@@ -318,9 +325,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameStatisticsBG" translatesAutoresizingMaskIntoConstraints="NO" id="Z2D-KC-xQs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameProcessBG" translatesAutoresizingMaskIntoConstraints="NO" id="Z2D-KC-xQs">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbl-7q-GLc">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Stat status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXB-aY-INz">
                                 <rect key="frame" x="161" y="300" width="345" height="40"/>
                                 <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="17"/>
@@ -473,8 +484,10 @@
                             <constraint firstItem="RMa-lD-0jS" firstAttribute="centerX" secondItem="TPf-3W-u8n" secondAttribute="centerX" id="GBS-fs-xTx"/>
                             <constraint firstItem="0gg-lj-Gqy" firstAttribute="trailing" secondItem="EYC-rd-j2j" secondAttribute="trailing" id="H2n-8o-SVQ"/>
                             <constraint firstItem="zoK-7e-Rlj" firstAttribute="width" secondItem="zoK-7e-Rlj" secondAttribute="height" multiplier="1:1" id="Hga-gl-pu9"/>
+                            <constraint firstItem="zbl-7q-GLc" firstAttribute="bottom" secondItem="TPf-3W-u8n" secondAttribute="bottom" id="Kfi-pV-UTn"/>
                             <constraint firstItem="wXB-aY-INz" firstAttribute="leading" secondItem="zgu-Mj-4te" secondAttribute="leading" id="Mry-5k-5Xz"/>
                             <constraint firstAttribute="trailing" secondItem="OfL-WO-B3g" secondAttribute="trailing" id="RZ1-Kn-o6s"/>
+                            <constraint firstItem="zbl-7q-GLc" firstAttribute="trailing" secondItem="TPf-3W-u8n" secondAttribute="trailing" id="Rup-4d-d7Q"/>
                             <constraint firstItem="Z2D-KC-xQs" firstAttribute="top" secondItem="TPf-3W-u8n" secondAttribute="top" id="SLI-fJ-Sf2"/>
                             <constraint firstItem="Cug-QC-6hB" firstAttribute="top" secondItem="RMa-lD-0jS" secondAttribute="bottom" constant="30" id="WKB-Qp-3Ph"/>
                             <constraint firstItem="wXB-aY-INz" firstAttribute="trailing" secondItem="zgu-Mj-4te" secondAttribute="trailing" id="XFn-zR-Z2v"/>
@@ -489,7 +502,9 @@
                             <constraint firstItem="RMa-lD-0jS" firstAttribute="top" secondItem="luX-RK-3dX" secondAttribute="top" constant="20" id="q7r-2a-qGT"/>
                             <constraint firstItem="zgu-Mj-4te" firstAttribute="leading" secondItem="0gg-lj-Gqy" secondAttribute="leading" id="qPh-dg-ee4"/>
                             <constraint firstItem="r5D-4R-J5O" firstAttribute="top" secondItem="luX-RK-3dX" secondAttribute="top" constant="20" id="s8a-PV-Ifu"/>
+                            <constraint firstItem="zbl-7q-GLc" firstAttribute="top" secondItem="TPf-3W-u8n" secondAttribute="top" id="sru-xm-mLa"/>
                             <constraint firstItem="wXB-aY-INz" firstAttribute="top" secondItem="zgu-Mj-4te" secondAttribute="bottom" constant="20" id="wmr-sO-phS"/>
+                            <constraint firstItem="zbl-7q-GLc" firstAttribute="leading" secondItem="TPf-3W-u8n" secondAttribute="leading" id="zSG-Dt-5Ur"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="luX-RK-3dX"/>
                     </view>
@@ -509,13 +524,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0J-ZW-C37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864.50892857142856" y="-1124.6376811594205"/>
+            <point key="canvasLocation" x="864.01799100449784" y="-1125.5999999999999"/>
         </scene>
     </scenes>
     <resources>
         <image name="gameProcessBG" width="667" height="375"/>
-        <image name="gameStatisticsBG" width="667" height="375"/>
-        <image name="gameWonBG" width="667" height="375"/>
         <image name="ic-alphHome" width="31" height="29"/>
         <image name="ic-monsterBack" width="667" height="375"/>
         <image name="ic-monstergameTitle" width="423" height="158"/>
@@ -523,6 +536,7 @@
         <image name="icUtka" width="29" height="35"/>
         <image name="monster_10_stat" width="202" height="226"/>
         <image name="monster_6_stat" width="200" height="185"/>
+        <image name="monstersWin" width="667" height="375"/>
         <image name="playNext" width="317" height="165"/>
     </resources>
 </document>

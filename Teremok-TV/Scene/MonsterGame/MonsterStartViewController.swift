@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MonsterStartViewController: GameViewController {
     @IBOutlet private var startEasy: KeyButton!
     @IBOutlet private var startMedium: KeyButton!
     @IBOutlet private var startHard: KeyButton!
     
+    private var buttonPlayer = AVAudioPlayer()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,18 @@ class MonsterStartViewController: GameViewController {
     }
     
     @IBAction func startGame(_ sender: UIButton) {
+        buttonPlayer.play()
         masterRouter?.startFlow(sender.tag)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        do {
+            buttonPlayer = try AVAudioPlayer(contentsOf: MonsterMaster.Sound.main.url)
+            buttonPlayer.prepareToPlay()
+        } catch {
+            print("no file)")
+        }
     }
 }
