@@ -138,7 +138,7 @@ class AlphaviteChoiceViewController: GameViewController {
             setWord(wordName)
         }
         displayChoice(char: char, wrong: gameHelper.randomChar(from: char), image: UIImage(named: word))
-        playSounds(gameHelper.getSounds(name: word)) {}
+        playSounds(gameHelper.getSounds(name: word))
     }
 
     private func displayChoice(char: String, wrong: String, image: UIImage?) {
@@ -182,9 +182,9 @@ class AlphaviteChoiceViewController: GameViewController {
         let cross = gameHelper.drawCross(view)
         if isRight {
             points += 1
-            playSounds(AlphaviteMaster.Sound.rightAnswer.url) {}
+            playSounds(AlphaviteMaster.Sound.rightAnswer.url)
         } else {
-            playSounds(AlphaviteMaster.Sound.wrongAnswer.url) {}
+            playSounds(AlphaviteMaster.Sound.wrongAnswer.url)
             view.layer.addSublayer(cross)
         }
         imageContainer.borderColor = isRight ? UIColor.Alphavite.Button.greenTwo : UIColor.Alphavite.Button.redTwo
@@ -232,16 +232,13 @@ class AlphaviteChoiceViewController: GameViewController {
         }
     }
 
-    private func playSounds(_ url: URL, completion: @escaping () -> Void) {
+    private func playSounds(_ url: URL) {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
         } catch {
             print("no file)")
         }
         audioPlayer.play()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            completion()
-        }
     }
 
     // MARK: Pick Animation
@@ -314,7 +311,7 @@ class AlphaviteChoiceViewController: GameViewController {
 
     private func pickReaction(isHappy: Bool, complition: @escaping (Bool) -> Void) {
         if isHappy {
-            playSounds(AlphaviteMaster.Sound.jump.url) {}
+            playSounds(AlphaviteMaster.Sound.jump.url)
         }
         let namePick: AlphaviteMaster.PickAnimations = isHappy ? .happy : .sad
         pickAnimationView.animation = Animation.named(namePick.rawValue)
