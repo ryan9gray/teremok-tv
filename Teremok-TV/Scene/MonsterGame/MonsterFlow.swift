@@ -50,10 +50,26 @@ class MonsterGameFlow {
     }
     
     private func startGame() {
-        let controller = MonsterGameViewController.instantiate(fromStoryboard: .monster)
-        controller.input = MonsterGameViewController.Input(game: game)
-        controller.output = MonsterGameViewController.Output(openResults: openResult)
-        master?.router?.presentModalChild(viewController: controller)
+        if canPlay() {
+            let controller = MonsterGameViewController.instantiate(fromStoryboard: .monster)
+            controller.input = MonsterGameViewController.Input(game: game)
+            controller.output = MonsterGameViewController.Output(openResults: openResult)
+            master?.router?.presentModalChild(viewController: controller)
+        }
+    }
+    
+    private func canPlay() -> Bool {
+        if LocalStore.monsterFreeGames < 3 {
+            LocalStore.monsterFreeGames += 1
+            return true
+        }
+        else {
+            guard Profile.current?.premiumGame ?? false else {
+                self.buyAlert()
+                return false
+            }
+            return true
+        }
     }
     
     private func openResult(result: Int) {
@@ -80,6 +96,18 @@ class MonsterGameFlow {
         master?.router?.introduceController(viewController: controller) {
             self.startFlow(difficulty: difficulty)
         }
+    }
+    
+    private func buyAlert() {
+        let vc = CloudAlertViewController.instantiate(fromStoryboard: .alerts)
+        let text = Main.Messages.buyGames
+        vc.model = AlertModel(title: "", subtitle: text, buttonTitle: "В настройки")
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.complition = {
+            self.master?.openSettings()
+        }
+        master?.presentAlertModally(alertController: vc)
     }
     
     deinit {

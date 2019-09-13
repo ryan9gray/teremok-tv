@@ -13,6 +13,7 @@
 		111187F4231E82D700EBEFC0 /* MonsterStatisticInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187EE231E82D700EBEFC0 /* MonsterStatisticInteractor.swift */; };
 		111187F6231E8D6E00EBEFC0 /* MonsterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187F5231E8D6E00EBEFC0 /* MonsterService.swift */; };
 		11246D62231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */; };
+		112860B6232BA6E30002852A /* monster_menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112860B5232BA6E20002852A /* monster_menu.mp3 */; };
 		11604AD7231F8107001D1C7F /* MonsterStatisticResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */; };
 		11604ADA231F8330001D1C7F /* MonsterGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604AD9231F8330001D1C7F /* MonsterGetStatCommand.swift */; };
 		11604ADC231F8494001D1C7F /* MonsterSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604ADB231F8494001D1C7F /* MonsterSendStatCommand.swift */; };
@@ -779,6 +780,7 @@
 		111187EE231E82D700EBEFC0 /* MonsterStatisticInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStatisticInteractor.swift; sourceTree = "<group>"; };
 		111187F5231E8D6E00EBEFC0 /* MonsterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterService.swift; sourceTree = "<group>"; };
 		11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameCollectionViewLayout.swift; sourceTree = "<group>"; };
+		112860B5232BA6E20002852A /* monster_menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = monster_menu.mp3; sourceTree = "<group>"; };
 		11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStatisticResponse.swift; sourceTree = "<group>"; };
 		11604AD9231F8330001D1C7F /* MonsterGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGetStatCommand.swift; sourceTree = "<group>"; };
 		11604ADB231F8494001D1C7F /* MonsterSendStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterSendStatCommand.swift; sourceTree = "<group>"; };
@@ -1598,6 +1600,7 @@
 		11CF6B84232A069D00F8E529 /* Monster */ = {
 			isa = PBXGroup;
 			children = (
+				112860B5232BA6E20002852A /* monster_menu.mp3 */,
 				11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */,
 				11CF6B85232A06A800F8E529 /* sounds */,
 			);
@@ -3338,6 +3341,7 @@
 				CA5100B822F6EACF00821C25 /* alphavite_21.wav in Resources */,
 				CA5100C922F6EACF00821C25 /* alphavite_19_word_2.wav in Resources */,
 				CAD2103F231700DC006F2F08 /* MontserratAlternates-LightItalic.ttf in Resources */,
+				112860B6232BA6E30002852A /* monster_menu.mp3 in Resources */,
 				CAF961F522995FF3006E3046 /* animal_20.mp3 in Resources */,
 				CAC6F73222A81BC000756AE2 /* fun_7.mp3 in Resources */,
 				CAF961CC22995FF3006E3046 /* animal_7.pdf in Resources */,
