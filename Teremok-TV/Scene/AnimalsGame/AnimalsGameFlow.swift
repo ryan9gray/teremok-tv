@@ -167,7 +167,7 @@ class AnimalsGameFlow  {
 
     private func buyAlert() {
         let vc = CloudAlertViewController.instantiate(fromStoryboard: .alerts)
-        let text = Main.Messages.buyIntelect
+        let text = Main.Messages.buyGames
         vc.model = AlertModel(title: "", subtitle: text, buttonTitle: "В настройки")
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext

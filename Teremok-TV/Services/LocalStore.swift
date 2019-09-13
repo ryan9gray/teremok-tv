@@ -100,6 +100,16 @@ struct LocalStore {
         }
     }
 
+    static var monsterFreeGames: Int {
+        get {
+            return userDefaults.integer(forKey: "monsterFreeGames")
+        }
+        set {
+            userDefaults.set(newValue, forKey: "monsterFreeGames")
+            userDefaults.synchronize()
+        }
+    }
+    
     static var analiticsLastSend: Double {
         get {
             return userDefaults.double(forKey: analiticsKey)
