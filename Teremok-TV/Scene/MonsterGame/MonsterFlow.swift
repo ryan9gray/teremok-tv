@@ -68,8 +68,8 @@ class MonsterGameFlow {
                 self.buyAlert()
                 return false
             }
+            return true
         }
-        return false
     }
     
     private func openResult(result: Int) {
