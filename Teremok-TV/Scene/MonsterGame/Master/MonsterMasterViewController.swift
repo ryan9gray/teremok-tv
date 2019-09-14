@@ -109,7 +109,7 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if LocalStore.monsterTip < 3 {
+        if !avatarButton.isHidden, LocalStore.monsterTip < 3 {
             LocalStore.monsterTip += 1
             var preferences = EasyTipView.Preferences()
             preferences.drawing.font = Style.Font.istokWeb(size: 16)

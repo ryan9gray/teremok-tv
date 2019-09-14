@@ -73,7 +73,7 @@ class AnimalsMainViewController: GameViewController, AnimalsMainDisplayLogic {
         super.viewDidLoad()
 
         displayProfile()
-        if LocalStore.animalsTip < 3 {
+        if !avatarButton.isHidden, LocalStore.animalsTip < 3 {
             LocalStore.animalsTip += 1
             var preferences = EasyTipView.Preferences()
             preferences.drawing.font = Style.Font.istokWeb(size: 16)

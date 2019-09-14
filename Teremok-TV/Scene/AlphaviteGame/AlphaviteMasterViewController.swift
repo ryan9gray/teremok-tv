@@ -92,7 +92,7 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        if LocalStore.alphabetTip < 3 {
+        if !avatarButton.isHidden, LocalStore.alphabetTip < 3 {
             LocalStore.alphabetTip += 1
             var preferences = EasyTipView.Preferences()
             preferences.drawing.font = Style.Font.istokWeb(size: 16)
