@@ -43,9 +43,8 @@ class AlphaviteMasterRouter: AlphaviteMasterRoutingLogic, AlphaviteMasterDataPas
     func startFlow(_ idx: Int) {
         guard let controller = viewController else { return }
 
-        viewController?.tipView?.dismiss()
+        controller.tipView?.dismiss()
         let flow = AlphaviteGameFlow(master: controller)
-        flow.service = dataStore?.service
         flow.startFlow()
     }
     

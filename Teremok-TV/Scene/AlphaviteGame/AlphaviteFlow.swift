@@ -10,6 +10,7 @@ import UIKit
 
 class AlphaviteGameFlow  {
     weak var master: AlphaviteMasterViewController?
+    private let service: AlphabetServiceProtocol = AlphabetService()
 
     init(master: AlphaviteMasterViewController) {
         self.master = master
@@ -18,7 +19,6 @@ class AlphaviteGameFlow  {
 
     private var isHard: Bool = false
     var game: Game!
-    var service: AlphabetServiceProtocol!
 
     func startFlow() {
         guard !LocalStore.alphaviteIntroduce() else {

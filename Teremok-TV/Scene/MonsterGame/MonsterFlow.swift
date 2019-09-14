@@ -10,15 +10,14 @@ import UIKit
 
 class MonsterGameFlow {
     weak var master: MonsterMasterViewController?
-    
+    private let service: MonsterServiceProtocol = MonsterService()
+
     init(master: MonsterMasterViewController) {
         self.master = master
     }
     
     var game: Game!
-    var service: MonsterServiceProtocol!
-    var gameResults: GameResults!
-    
+
     func startFlow(difficulty: Int) {
         guard !LocalStore.monsterIntroduce() else {
             showIntroduce(difficulty: difficulty)
@@ -73,16 +72,18 @@ class MonsterGameFlow {
     }
     
     private func openResult(result: Int) {
-        gameResults = GameResults(result: result, gameWon: result > game.limit ? false : true)
+        let gameResults = GameResults(result: result, gameWon: result > game.limit ? false : true)
         let controller = MonsterGameResultsViewController.instantiate(fromStoryboard: .monster)
         controller.input = .init(gameResult: gameResults)
-        controller.output = MonsterGameResultsViewController.Output(openNext: openNext)
+        controller.output = MonsterGameResultsViewController.Output(openNext: {
+            self.openNext(isWon: gameResults.gameWon)
+        })
         master?.router?.presentModalChild(viewController: controller)
         service.sendStat(statistic: MonsterStatisticRequest(round: game.difficulty.rawValue, seconds: result)) { _ in }
     }
     
-    private func openNext() {
-        if gameResults.gameWon {
+    private func openNext(isWon: Bool) {
+        if isWon {
             randomRound()
         }
         else {

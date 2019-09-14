@@ -16,18 +16,19 @@ class MonsterStartViewController: GameViewController {
     
     private var buttonPlayer = AVAudioPlayer()
     private var bgMusicPlayer = AVAudioPlayer()
+
+    @IBAction func startGame(_ sender: UIButton) {
+        buttonPlayer.play()
+        masterRouter?.startFlow(sender.tag)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         startMedium.gradientColors = Style.Gradients.green.value
         startHard.gradientColors = Style.Gradients.orange.value
     }
-    
-    @IBAction func startGame(_ sender: UIButton) {
-        buttonPlayer.play()
-        masterRouter?.startFlow(sender.tag)
-    }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -47,5 +48,11 @@ class MonsterStartViewController: GameViewController {
         } catch {
             print("no file)")
         }
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        bgMusicPlayer.stop()
     }
 }

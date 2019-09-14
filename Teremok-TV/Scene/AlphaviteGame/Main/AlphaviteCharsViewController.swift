@@ -54,6 +54,12 @@ class AlphaviteCharsViewController: GameViewController {
         start()
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        audioPlayer.stop()
+    }
+
     func start() {
         nextChar()
     }
