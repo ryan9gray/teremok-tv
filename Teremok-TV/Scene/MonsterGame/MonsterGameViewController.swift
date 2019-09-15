@@ -64,7 +64,12 @@ class MonsterGameViewController: GameViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
             self.fireTimer()
             self.playSounds(MonsterMaster.Sound.closeAll.url)
-            self.collectionView.visibleCells.forEach { ($0 as? MonsterCollectionViewCell)?.close() }
+            self.collectionView.visibleCells.forEach {
+                let cell = ($0 as? MonsterCollectionViewCell)
+                cell?.close() {
+                    cell?.isUserInteractionEnabled = true
+                }
+            }
         })
     }
 
@@ -96,6 +101,7 @@ class MonsterGameViewController: GameViewController {
     }
     
     func saveSelectedCell(cell: MonsterCollectionViewCell) {
+        cell.isUserInteractionEnabled = false
         if firstSelectedItem == nil {
             firstSelectedItem = cell
         }
@@ -139,6 +145,8 @@ class MonsterGameViewController: GameViewController {
             self.firstSelectedItem?.close()
             self.secondSelectedItem?.close()
             self.playSounds(MonsterMaster.Sound.closeCards.url, isOpenPlayer: false)
+            self.firstSelectedItem?.isUserInteractionEnabled = true
+            self.secondSelectedItem?.isUserInteractionEnabled = true
             self.firstSelectedItem = nil
             self.secondSelectedItem = nil
         })
@@ -154,6 +162,7 @@ extension MonsterGameViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withCell: MonsterCollectionViewCell.self, for: indexPath)
         cell.configuration(monster: input.game.items[indexPath.row])
+        cell.isUserInteractionEnabled = false
         return cell
     }
 }
