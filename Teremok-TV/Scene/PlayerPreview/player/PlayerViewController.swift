@@ -35,9 +35,9 @@ class PlayerViewController: AVPlayerViewController {
         overlaySetup()
     }
 
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-          return .landscapeLeft
-    }
+//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//          return .landscapeRight
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

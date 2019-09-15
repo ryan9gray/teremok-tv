@@ -174,12 +174,12 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             window = UIWindow(frame: currentFrame!)
 
             window?.backgroundColor = .black
-            window?.windowLevel = .normal
+            window?.windowLevel = .statusBar
             window?.makeKeyAndVisible()
             window?.rootViewController = parent
             parent.view.frame = window?.bounds ?? view.bounds
             delegate?.avPlayerOverlay(self, didFullScreen: nil)
-            window?.frame = (mainWindow?.bounds)!
+            window?.frame = (mainWindow?.frame)!
             setControls(isFull: isFullScreen)
         }
     }
