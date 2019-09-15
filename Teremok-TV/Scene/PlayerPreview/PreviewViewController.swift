@@ -67,8 +67,8 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "playerSeg" {
             if let container = segue.destination as? PlayerViewController {
-                self.playerVC = container
-                self.playerVC.fullOverlay.delegate = self
+                playerVC = container
+                playerVC.fullOverlay.delegate = self
             }
         }
     }

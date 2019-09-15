@@ -61,7 +61,7 @@ class PlayerViewController: AVPlayerViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         UIApplication.shared.endReceivingRemoteControlEvents()
-        self.resignFirstResponder()
+        resignFirstResponder()
     }
     
     func overlaySetup(){

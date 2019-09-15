@@ -158,16 +158,10 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     private func toFullScreen(){
-        guard !isFullScreen else {
-            return
-        }
-        isFullScreen = true
-        
-        if mainWindow == nil {
-               mainWindow = UIApplication.shared.keyWindow
-        }
+        guard !isFullScreen else { return }
         guard let parent = self.parent else { return }
 
+        isFullScreen = true
         if window == nil {
             originalFrame = parent.view.frame
             mainParent = parent.parent
@@ -196,13 +190,11 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     private func toNormalScreen() {
-        guard isFullScreen else {
-            return
-        }
-        isFullScreen = false
+        guard isFullScreen else { return }
         guard let parent = self.parent else { return }
 
-        self.window?.frame = (self.mainWindow?.bounds)!
+        isFullScreen = false
+        window?.frame = (self.mainWindow?.bounds)!
         delegate?.avPlayerOverlay(self, didNormalScreen: nil)
         
         UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .layoutSubviews, animations: {
