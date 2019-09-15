@@ -112,8 +112,8 @@ class PlayerViewController: AVPlayerViewController {
         }
         removePlayerNotifations()
         //self.player = nil
-        self.fullOverlay.removeFromParent()
-        self.fullOverlay = nil
+        fullOverlay.removeFromParent()
+        fullOverlay = nil
     }
 }
 extension PlayerViewController {

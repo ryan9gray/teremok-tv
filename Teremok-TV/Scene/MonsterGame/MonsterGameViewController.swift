@@ -50,6 +50,7 @@ class MonsterGameViewController: GameViewController {
         timerBtn.gradientColors = Style.Gradients.lightGray.value
         let cells = [MonsterCollectionViewCell.self]
         collectionView.register(cells: cells)
+        collectionView.isUserInteractionEnabled = false
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -65,6 +66,7 @@ class MonsterGameViewController: GameViewController {
             self.fireTimer()
             self.playSounds(MonsterMaster.Sound.closeAll.url)
             self.collectionView.visibleCells.forEach { ($0 as? MonsterCollectionViewCell)?.close() }
+            self.collectionView.isUserInteractionEnabled = true
         })
     }
 
