@@ -157,7 +157,10 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    private func toFullScreen(){
+    private func toFullScreen() {
+        if #available(iOS 13.0, *) {
+            return
+        }
         guard !isFullScreen else { return }
         guard let parent = self.parent else { return }
 
@@ -165,7 +168,7 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         if window == nil {
             originalFrame = parent.view.frame
             mainParent = parent.parent
-            currentFrame = parent.view.convert(parent.view.frame, from: mainWindow)
+            currentFrame = mainWindow?.frame
             containerView = parent.view.superview
             
             parent.removeFromParent()
@@ -175,11 +178,10 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
 
             window?.backgroundColor = .black
             window?.windowLevel = .statusBar
-            window?.makeKeyAndVisible()
             window?.rootViewController = parent
-            parent.view.frame = window?.bounds ?? view.bounds
-            delegate?.avPlayerOverlay(self, didFullScreen: nil)
             window?.frame = (mainWindow?.frame)!
+            window?.makeKeyAndVisible()
+            delegate?.avPlayerOverlay(self, didFullScreen: nil)
             setControls(isFull: isFullScreen)
         }
     }
