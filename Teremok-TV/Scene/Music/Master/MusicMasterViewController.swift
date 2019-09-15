@@ -82,10 +82,30 @@ class MusicMasterViewController: UIViewController, MusicMasterDisplayLogic {
         let commandCenter = MPRemoteCommandCenter.shared()
         commandCenter.changePlaybackPositionCommand.isEnabled = true
         commandCenter.changePlaybackPositionCommand.addTarget(self, action: #selector(changePlaybackPositionCommand(_:)))
-        commandCenter.nextTrackCommand.addTarget(self, action:  #selector(MusicMasterViewController.nextTrack))
-        commandCenter.previousTrackCommand.addTarget(self, action:  #selector(MusicMasterViewController.previuse))
-        commandCenter.playCommand.addTarget(self, action:  #selector(MusicMasterViewController.playTrack))
-        commandCenter.pauseCommand.addTarget(self, action:  #selector(MusicMasterViewController.pauseTrack))
+        commandCenter.nextTrackCommand.addTarget { [weak self] event in
+            guard let self = self else { return .commandFailed }
+
+            self.nextTrack()
+            return .success
+        }
+        commandCenter.previousTrackCommand.addTarget { [weak self] event in
+              guard let self = self else { return .commandFailed }
+
+              self.previuse()
+              return .success
+        }
+        commandCenter.playCommand.addTarget { [weak self] event in
+              guard let self = self else { return .commandFailed }
+
+              self.playTrack()
+              return .success
+        }
+        commandCenter.pauseCommand.addTarget { [weak self] event in
+               guard let self = self else { return .commandFailed }
+
+               self.pauseTrack()
+               return .success
+         }
     }
 
     @IBOutlet var backgroundView: UIImageView!

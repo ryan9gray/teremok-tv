@@ -745,7 +745,6 @@
 		CAF96231229970F7006E3046 /* AnimalsStatisticInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9622B229970F7006E3046 /* AnimalsStatisticInteractor.swift */; };
 		CAF9AB9A22ABCC4E006DFB5F /* ResumeRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9AB9922ABCC4E006DFB5F /* ResumeRoundViewController.swift */; };
 		CAF9AB9C22ABD137006DFB5F /* AnimalsGameFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9AB9B22ABD136006DFB5F /* AnimalsGameFlow.swift */; };
-		CAFF983E2323C1E900003076 /* Sandbox.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CAFF983D2323C1E900003076 /* Sandbox.xcconfig */; };
 		CAFF98432323CEFA00003076 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF98422323CEFA00003076 /* Result.swift */; };
 /* End PBXBuildFile section */
 
@@ -3216,7 +3215,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = xmedia;
 				TargetAttributes = {
 					CAAAFB5D22E3549B0006BD60 = {
@@ -3501,7 +3500,6 @@
 				CA5100DE22F6EACF00821C25 /* alphavite_25_word_2.wav in Resources */,
 				CA5100B522F6EACF00821C25 /* alphavite_16_word_1.wav in Resources */,
 				CA2A91162202293800CD77FD /* push_button_sound.wav in Resources */,
-				CAFF983E2323C1E900003076 /* Sandbox.xcconfig in Resources */,
 				CAF961D522995FF3006E3046 /* animal_14.mp3 in Resources */,
 				CA04863E22A845A60017B8A2 /* Round_9.json in Resources */,
 				CA5100C522F6EACF00821C25 /* alphavite_1_word_1.wav in Resources */,
