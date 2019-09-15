@@ -14,7 +14,7 @@ class GetProfileCommand: BasicCommand {
     var isNewSession: Bool
 
     init(isNewSession: Bool = false) {
-        self.isNewSession = false
+        self.isNewSession = isNewSession
     }
 
     func execute(success: ((GetProfileResponse) -> Void)?, failure: ApiCompletionBlock?) {

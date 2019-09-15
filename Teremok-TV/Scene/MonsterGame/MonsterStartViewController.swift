@@ -27,27 +27,26 @@ class MonsterStartViewController: GameViewController {
 
         startMedium.gradientColors = Style.Gradients.green.value
         startHard.gradientColors = Style.Gradients.orange.value
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
         let menuMusic = URL(fileURLWithPath: Bundle.main.path(forResource: "monster_menu", ofType: "mp3")!)
-        
+
         do {
             bgMusicPlayer = try AVAudioPlayer(contentsOf: menuMusic)
             bgMusicPlayer.prepareToPlay()
         } catch {
             print("no file)")
         }
-        bgMusicPlayer.play()
-        
         do {
             buttonPlayer = try AVAudioPlayer(contentsOf: MonsterMaster.Sound.main.url)
             buttonPlayer.prepareToPlay()
         } catch {
             print("no file)")
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        bgMusicPlayer.play()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
