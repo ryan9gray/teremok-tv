@@ -179,12 +179,7 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             window?.rootViewController = parent
             parent.view.frame = window?.bounds ?? view.bounds
             delegate?.avPlayerOverlay(self, didFullScreen: nil)
-
-            UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeCubic, animations: { [weak self] in
-                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
-                    self?.window?.frame = (self?.mainWindow?.bounds)!
-                }
-            })
+            window?.frame = (mainWindow?.bounds)!
             setControls(isFull: isFullScreen)
         }
     }
@@ -196,21 +191,16 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         isFullScreen = false
         window?.frame = (self.mainWindow?.bounds)!
         delegate?.avPlayerOverlay(self, didNormalScreen: nil)
-        
-        UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .layoutSubviews, animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
-                parent.view.removeFromSuperview()
-                self.window?.rootViewController = nil
-                self.mainParent?.addChild(parent)
-                self.containerView?.addSubview(parent.view)
-                parent.view.frame = self.originalFrame ?? parent.view.frame
-                parent.didMove(toParent: self.mainParent)
-                self.mainWindow?.makeKeyAndVisible()
-                self.containerView = nil
-                self.mainParent = nil
-                self.window = nil
-            }
-        })
+        parent.view.removeFromSuperview()
+        self.window?.rootViewController = nil
+        self.mainParent?.addChild(parent)
+        self.containerView?.addSubview(parent.view)
+        parent.view.frame = self.originalFrame ?? parent.view.frame
+        parent.didMove(toParent: self.mainParent)
+        self.mainWindow?.makeKeyAndVisible()
+        self.containerView = nil
+        self.mainParent = nil
+        self.window = nil
         setControls(isFull: isFullScreen)
     }
     
