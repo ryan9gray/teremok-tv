@@ -113,7 +113,7 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     var isPremium = false
     
     func startedPlaying(){
-        //toFullScreen()
+        toFullScreen()
     }
     
     func setPlayer(_ newPlayer: AVPlayer){
@@ -149,9 +149,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     var window: UIWindow?
     
     @IBAction  func didFullscreenButtonSelected(_ sender: Any){
-        if mainWindow == nil {
-            mainWindow = UIApplication.shared.keyWindow
-        }
         if !isFullScreen {
             toFullScreen()
         }
@@ -165,9 +162,13 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             return
         }
         isFullScreen = true
+        
+        if mainWindow == nil {
+               mainWindow = UIApplication.shared.keyWindow
+        }
         guard let parent = self.parent else { return }
 
-        if window == nil{
+        if window == nil {
             originalFrame = parent.view.frame
             mainParent = parent.parent
             currentFrame = parent.view.convert(parent.view.frame, from: mainWindow)
@@ -177,6 +178,7 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             parent.view.removeFromSuperview()
             parent.willMove(toParent: nil)
             window = UIWindow(frame: currentFrame!)
+
             window?.backgroundColor = .black
             window?.windowLevel = .normal
             window?.makeKeyAndVisible()
