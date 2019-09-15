@@ -79,7 +79,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     private var playerItemContext = 0
 
     @IBAction func playClick() {
-        //sender.isSelected.toggle()
         if player?.rate == 0 {
             play()
         } else {
@@ -114,7 +113,7 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     var isPremium = false
     
     func startedPlaying(){
-        toFullScreen()
+        //toFullScreen()
     }
     
     func setPlayer(_ newPlayer: AVPlayer){
@@ -169,32 +168,32 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         guard let parent = self.parent else { return }
 
         if window == nil{
-            self.originalFrame = parent.view.frame
-            self.mainParent = parent.parent
-            self.currentFrame = parent.view.convert(parent.view.frame, from: mainWindow)
-            self.containerView = parent.view.superview;
+            originalFrame = parent.view.frame
+            mainParent = parent.parent
+            currentFrame = parent.view.convert(parent.view.frame, from: mainWindow)
+            containerView = parent.view.superview
             
             parent.removeFromParent()
             parent.view.removeFromSuperview()
             parent.willMove(toParent: nil)
-            self.window = UIWindow.init(frame: currentFrame!)
+            window = UIWindow(frame: currentFrame!)
             window?.backgroundColor = .black
             window?.windowLevel = .normal
             window?.makeKeyAndVisible()
             window?.rootViewController = parent
-            parent.view.frame = window?.bounds ?? self.view.bounds
+            parent.view.frame = window?.bounds ?? view.bounds
             delegate?.avPlayerOverlay(self, didFullScreen: nil)
 
-            UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeCubic, animations: {
+            UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeCubic, animations: { [weak self] in
                 UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
-                    self.window?.frame = (self.mainWindow?.bounds)!
+                    self?.window?.frame = (self?.mainWindow?.bounds)!
                 }
             })
             setControls(isFull: isFullScreen)
         }
     }
 
-    private func toNormalScreen(){
+    private func toNormalScreen() {
         guard isFullScreen else {
             return
         }

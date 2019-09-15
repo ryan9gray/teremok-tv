@@ -139,6 +139,8 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     }
 
     deinit {
+        playerVC.removeFromParent()
+        playerVC = nil
         track(Events.Time.Video, trackedProperties: [Keys.Timer  ~>> playerVC?.player?.currentItem?.currentTime().seconds ?? 0.0])
     }
 }

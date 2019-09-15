@@ -163,6 +163,7 @@ extension MonsterGameViewController: UICollectionViewDataSource {
 extension MonsterGameViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let selectedCell = collectionView.cellForItem(at: indexPath) as? MonsterCollectionViewCell else { return }
+        guard selectedCell.flipped else { return }
 
         saveSelectedCell(cell: selectedCell)
         if self.secondSelectedItem == nil {
