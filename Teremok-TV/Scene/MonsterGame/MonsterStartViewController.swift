@@ -14,11 +14,11 @@ class MonsterStartViewController: GameViewController {
     @IBOutlet private var startMedium: KeyButton!
     @IBOutlet private var startHard: KeyButton!
     
-    private var buttonPlayer = AVAudioPlayer()
-    private var bgMusicPlayer = AVAudioPlayer()
+    private var buttonPlayer: AVAudioPlayer?
+    private var bgMusicPlayer: AVAudioPlayer?
 
     @IBAction func startGame(_ sender: UIButton) {
-        buttonPlayer.play()
+        buttonPlayer?.play()
         masterRouter?.startFlow(sender.tag)
     }
     
@@ -31,13 +31,13 @@ class MonsterStartViewController: GameViewController {
 
         do {
             bgMusicPlayer = try AVAudioPlayer(contentsOf: menuMusic)
-            bgMusicPlayer.prepareToPlay()
+            bgMusicPlayer?.prepareToPlay()
         } catch {
             print("no file)")
         }
         do {
             buttonPlayer = try AVAudioPlayer(contentsOf: MonsterMaster.Sound.main.url)
-            buttonPlayer.prepareToPlay()
+            buttonPlayer?.prepareToPlay()
         } catch {
             print("no file)")
         }
@@ -46,12 +46,12 @@ class MonsterStartViewController: GameViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        bgMusicPlayer.play()
+        bgMusicPlayer?.play()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-        bgMusicPlayer.stop()
+        bgMusicPlayer?.stop()
     }
 }

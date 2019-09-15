@@ -16,7 +16,7 @@ import AVKit
 class AnimalsWordsViewController: GameViewController {
     @IBOutlet private var collectionView: UICollectionView!
     @IBOutlet private var startButton: TTAbstractMainButton!
-    private var audioPlayer = AVAudioPlayer()
+    private var audioPlayer: AVAudioPlayer?
 
     @IBAction func startClick(_ sender: Any) {
         output.startChoice()
@@ -75,7 +75,7 @@ class AnimalsWordsViewController: GameViewController {
         } catch {
             print("no file)")
         }
-        audioPlayer.play()
+        audioPlayer?.play()
         self.collectionView.selectItem(at: IndexPath.init(row: idx, section: 0), animated: true, scrollPosition: .centeredVertically)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) { [weak self] in

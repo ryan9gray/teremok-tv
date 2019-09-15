@@ -61,8 +61,8 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     var razdels: [Main.RazdelItem] = []
     
     var cellWidth: CGFloat = 0
-    var audioPlayer = AVAudioPlayer()
-    var buttonPlayer = AVAudioPlayer()
+    var audioPlayer: AVAudioPlayer?
+    var buttonPlayer: AVAudioPlayer?
 
     // MARK: View lifecycle
 
@@ -76,13 +76,13 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        if ServiceConfiguration.activeConfiguration() == .prod  {
-            audioPlayer.play()
+            audioPlayer?.play()
         }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
 
     private func prepareUI(){
@@ -103,15 +103,15 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
 
         do {
             buttonPlayer = try AVAudioPlayer(contentsOf: buttonSound)
-            buttonPlayer.prepareToPlay()
+            buttonPlayer?.prepareToPlay()
         } catch {
             print("no file \(buttonSound)")
         }
     }
 
     func didSelectSoundPlay(){
-        audioPlayer.stop()
-        buttonPlayer.play()
+        audioPlayer?.stop()
+        buttonPlayer?.play()
     }
 
     // MARK: Do something

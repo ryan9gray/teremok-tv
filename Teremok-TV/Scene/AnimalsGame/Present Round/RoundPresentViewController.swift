@@ -13,7 +13,7 @@ import Lottie
 class RoundPresentViewController: GameViewController, IntroduceViewController, AVAudioPlayerDelegate {
     var round: Int = 1
     var action: (() -> Void)?
-    private var audioPlayer = AVAudioPlayer()
+    private var audioPlayer: AVAudioPlayer?
     @IBOutlet private var animationView: AnimationView!
 
     override func viewDidLoad() {
@@ -43,9 +43,9 @@ class RoundPresentViewController: GameViewController, IntroduceViewController, A
         } catch {
             print("no file)")
         }
-        audioPlayer.prepareToPlay()
-        audioPlayer.delegate = self
-        audioPlayer.play()
+        audioPlayer?.prepareToPlay()
+        audioPlayer?.delegate = self
+        audioPlayer?.play()
     }
 
 
