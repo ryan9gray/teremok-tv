@@ -41,12 +41,10 @@ class MonsterCollectionViewCell: UICollectionViewCell {
         }
     }
 
-    func close(completion: (() -> Void)? = nil) {
+    func close() {
         guard flipped else { return }
 
-        flipCard() {
-            completion?()
-        }
+        flipCard() 
     }
     
     func flipCard(completion: (() -> Void)? = nil) {
