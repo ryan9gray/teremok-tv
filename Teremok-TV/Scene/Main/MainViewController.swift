@@ -90,7 +90,7 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
         collectionView.delegate = self
         collectionView.register(cells: [MainlCollectionViewCell.self])
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-        cellWidth = self.view.bounds.width/3.2
+        cellWidth = view.bounds.width/3.2
 
         let backSound = BackgroundMediaWorker.getSound()
 

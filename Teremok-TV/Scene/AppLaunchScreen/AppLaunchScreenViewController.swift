@@ -18,6 +18,12 @@ class AppLaunchScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if ServiceConfiguration.activeConfiguration() == .sandbox  {
+            ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
+            self.dismiss(animated: true, completion: nil)
+            return
+        }
 
         animationView = AnimationView(name: AppLaunchScreen.Animation.finish.rawValue)
         animationView.frame = view.bounds

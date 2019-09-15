@@ -192,15 +192,15 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         window?.frame = (self.mainWindow?.bounds)!
         delegate?.avPlayerOverlay(self, didNormalScreen: nil)
         parent.view.removeFromSuperview()
-        self.window?.rootViewController = nil
-        self.mainParent?.addChild(parent)
-        self.containerView?.addSubview(parent.view)
+        window?.rootViewController = nil
+        mainParent?.addChild(parent)
+        containerView?.addSubview(parent.view)
         parent.view.frame = self.originalFrame ?? parent.view.frame
         parent.didMove(toParent: self.mainParent)
-        self.mainWindow?.makeKeyAndVisible()
-        self.containerView = nil
-        self.mainParent = nil
-        self.window = nil
+        mainWindow?.makeKeyAndVisible()
+        containerView = nil
+        mainParent = nil
+        window = nil
         setControls(isFull: isFullScreen)
     }
     
@@ -386,9 +386,8 @@ extension TTPlayerViewController {
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackLikelyToKeepUp), options: options, context: &playerItemContext)
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackBufferFull), options: options, context: &playerItemContext)
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.playbackBufferEmpty), options: options, context: &playerItemContext)
-
-
     }
+    
     internal func addPlayerNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.playerEnd), name: .AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
         NotificationCenter.default.addObserver(self, selector: .applicationWillEnterForeground, name: UIApplication.willEnterForegroundNotification, object: nil)
