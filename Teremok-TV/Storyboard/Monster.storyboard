@@ -26,6 +26,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-monsterBack" translatesAutoresizingMaskIntoConstraints="NO" id="IpB-fd-Usu">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-monstergameTitle" translatesAutoresizingMaskIntoConstraints="NO" id="yF5-Eg-NHN">
                                 <rect key="frame" x="194.66666666666663" y="140" width="423" height="158"/>
                             </imageView>
@@ -67,12 +70,16 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="IpB-fd-Usu" firstAttribute="top" secondItem="dAm-zr-cyt" secondAttribute="top" id="5Tp-rV-Ft9"/>
                             <constraint firstItem="0Uu-aj-Jud" firstAttribute="leading" secondItem="dAm-zr-cyt" secondAttribute="leading" constant="140" id="5Vo-W5-RCy"/>
                             <constraint firstItem="yF5-Eg-NHN" firstAttribute="top" secondItem="dAm-zr-cyt" secondAttribute="top" constant="140" id="CVe-9n-3wT"/>
+                            <constraint firstAttribute="bottom" secondItem="IpB-fd-Usu" secondAttribute="bottom" id="Cpx-6v-l9L"/>
                             <constraint firstItem="0Uu-aj-Jud" firstAttribute="centerX" secondItem="eKl-vP-Hld" secondAttribute="centerX" id="G6I-l6-AfI"/>
                             <constraint firstItem="dAm-zr-cyt" firstAttribute="trailing" secondItem="0Uu-aj-Jud" secondAttribute="trailing" constant="140" id="L5m-zO-Hfx"/>
                             <constraint firstItem="yF5-Eg-NHN" firstAttribute="centerX" secondItem="eKl-vP-Hld" secondAttribute="centerX" id="RPK-Xb-WL8"/>
+                            <constraint firstAttribute="trailing" secondItem="IpB-fd-Usu" secondAttribute="trailing" id="a6n-uH-IHY"/>
                             <constraint firstItem="dAm-zr-cyt" firstAttribute="bottom" secondItem="0Uu-aj-Jud" secondAttribute="bottom" constant="30" id="aRx-YS-nog"/>
+                            <constraint firstItem="IpB-fd-Usu" firstAttribute="leading" secondItem="eKl-vP-Hld" secondAttribute="leading" id="v6E-R4-JRL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dAm-zr-cyt"/>
                     </view>
@@ -94,9 +101,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameProcessBG" translatesAutoresizingMaskIntoConstraints="NO" id="PNl-Co-0Lj">
-                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
-                            </imageView>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJi-rO-aQu" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
                                 <rect key="frame" x="348.66666666666669" y="20" width="115" height="41"/>
                                 <constraints>
@@ -118,16 +122,12 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="PNl-Co-0Lj" secondAttribute="trailing" id="B4f-Lb-5Nq"/>
-                            <constraint firstItem="PNl-Co-0Lj" firstAttribute="top" secondItem="Aoy-be-qBT" secondAttribute="top" id="EZW-RD-AJp"/>
-                            <constraint firstItem="PNl-Co-0Lj" firstAttribute="leading" secondItem="Aoy-be-qBT" secondAttribute="leading" id="Ozl-Dw-R42"/>
                             <constraint firstAttribute="bottom" secondItem="xsT-MH-07t" secondAttribute="bottom" id="Sdq-cW-OyS"/>
                             <constraint firstItem="xsT-MH-07t" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="55" id="YHX-ua-n2w"/>
                             <constraint firstItem="zJi-rO-aQu" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="20" id="cL2-WK-Vrz"/>
                             <constraint firstItem="xsT-MH-07t" firstAttribute="leading" secondItem="Aoy-be-qBT" secondAttribute="leading" id="dG3-t9-Ylr"/>
-                            <constraint firstAttribute="bottom" secondItem="PNl-Co-0Lj" secondAttribute="bottom" id="eIz-hX-blh"/>
                             <constraint firstAttribute="trailing" secondItem="xsT-MH-07t" secondAttribute="trailing" id="lYd-5V-E5c"/>
                             <constraint firstItem="zJi-rO-aQu" firstAttribute="centerX" secondItem="Aoy-be-qBT" secondAttribute="centerX" id="ltX-qK-GoI"/>
                         </constraints>
@@ -150,7 +150,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-monsterBack" translatesAutoresizingMaskIntoConstraints="NO" id="9W5-9i-4S5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameProcessBG" translatesAutoresizingMaskIntoConstraints="NO" id="9W5-9i-4S5">
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySG-71-GXL" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
@@ -214,11 +214,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameProcessBG" translatesAutoresizingMaskIntoConstraints="NO" id="LWu-Kd-wHN">
-                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monstersWin" translatesAutoresizingMaskIntoConstraints="NO" id="UQ4-dH-5hM">
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqH-ie-GhK" customClass="DesignableView" customModule="Spring">
                                 <rect key="frame" x="288.66666666666669" y="20" width="235.00000000000006" height="50"/>
@@ -286,18 +284,14 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LWu-Kd-wHN" firstAttribute="leading" secondItem="05F-xK-YJJ" secondAttribute="leading" id="Ah5-bJ-4bP"/>
-                            <constraint firstItem="LWu-Kd-wHN" firstAttribute="top" secondItem="05F-xK-YJJ" secondAttribute="top" id="Bj2-tf-391"/>
                             <constraint firstAttribute="trailing" secondItem="UQ4-dH-5hM" secondAttribute="trailing" id="Dde-hS-Sjt"/>
                             <constraint firstItem="pqH-ie-GhK" firstAttribute="top" secondItem="kSq-H1-JTs" secondAttribute="top" constant="20" id="E4X-g4-HQX"/>
                             <constraint firstAttribute="bottom" secondItem="Mbj-Zo-doR" secondAttribute="bottom" constant="40" id="GTI-fU-J4u"/>
                             <constraint firstItem="pqH-ie-GhK" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="L49-zF-UNa"/>
-                            <constraint firstAttribute="trailing" secondItem="LWu-Kd-wHN" secondAttribute="trailing" id="LRA-fz-CDQ"/>
                             <constraint firstItem="UQ4-dH-5hM" firstAttribute="leading" secondItem="05F-xK-YJJ" secondAttribute="leading" id="LsZ-TO-Jsu"/>
                             <constraint firstItem="UQ4-dH-5hM" firstAttribute="top" secondItem="05F-xK-YJJ" secondAttribute="top" id="SNc-s8-FW2"/>
-                            <constraint firstAttribute="bottom" secondItem="LWu-Kd-wHN" secondAttribute="bottom" id="UE4-wp-eLC"/>
                             <constraint firstItem="0Ir-5m-boz" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="a3M-sx-4ly"/>
                             <constraint firstItem="0Ir-5m-boz" firstAttribute="top" secondItem="pqH-ie-GhK" secondAttribute="bottom" constant="10" id="aVA-IF-cGN"/>
                             <constraint firstItem="Mbj-Zo-doR" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="rIJ-gn-sZM"/>
