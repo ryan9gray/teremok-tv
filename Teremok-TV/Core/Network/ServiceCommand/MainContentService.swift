@@ -16,7 +16,6 @@ protocol MainContentProtocol {
 struct MainContentService: MainContentProtocol {
     
     func getMain(completion: @escaping (Result<MainContentResponse>) -> Void) {
-        
         MainContentCommand().execute(success: { (responseObject) in
             completion(.success(responseObject))
         }) { (com, response) in

@@ -117,8 +117,8 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     // MARK: Do something
     
     func fetchRazdels(){
-        self.interactor?.getMainContent()
         showPreloader()
+        interactor?.getMainContent()
     }
     
     func display(razdels: [Main.RazdelItem]) {
@@ -126,6 +126,7 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
         self.razdels = razdels
         collectionView.reloadData()
     }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         var visibleRect = CGRect()
         
