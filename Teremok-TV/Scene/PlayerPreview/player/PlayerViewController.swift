@@ -34,14 +34,12 @@ class PlayerViewController: AVPlayerViewController {
         
         overlaySetup()
     }
-
 //    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
 //          return .landscapeRight
 //    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         addPlayerNotifications()
         addChild(fullOverlay)
         view.addSubview(fullOverlay.view)
