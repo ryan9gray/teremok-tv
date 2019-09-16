@@ -15,8 +15,8 @@ class MonsterGameViewController: GameViewController {
     var input: Input!
     var output: Output!
     
-    private var audioPlayer = AVAudioPlayer()
-    private var closeAudioPlayer = AVAudioPlayer()
+    private var audioPlayer: AVAudioPlayer?
+    private var closeAudioPlayer: AVAudioPlayer?
     private var firstSelectedItem: MonsterCollectionViewCell?
     private var secondSelectedItem: MonsterCollectionViewCell?
     private var score = 0 {
@@ -74,12 +74,12 @@ class MonsterGameViewController: GameViewController {
         do {
             if isOpenPlayer {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer.play()
+                audioPlayer?.play()
 
             }
             else {
                 closeAudioPlayer = try AVAudioPlayer(contentsOf: url)
-                closeAudioPlayer.play()
+                closeAudioPlayer?.play()
             }
         } catch {
             print("no file)")

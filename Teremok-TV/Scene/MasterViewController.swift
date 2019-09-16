@@ -112,7 +112,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
 
     var isAuth = false
     var isOffline = false
-    var audioPlayer = AVAudioPlayer()
+    var audioPlayer: AVAudioPlayer?
 
     private func selectButton(_ button: UIButton){
         deselectButtons()
@@ -120,7 +120,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     }
 
     private func deselectButtons(){
-        audioPlayer.play()
+        audioPlayer?.play()
         self.allButtons.forEach { $0.isSelected = false }
     }
 

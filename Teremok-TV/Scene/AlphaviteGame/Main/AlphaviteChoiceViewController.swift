@@ -42,8 +42,8 @@ class AlphaviteChoiceViewController: GameViewController {
     }
 
     private let gameHelper = AlphabetGameHelper()
-    private var audioPlayer = AVAudioPlayer()
-    private var pickPlayer = AVAudioPlayer()
+    private var audioPlayer: AVAudioPlayer?
+    private var pickPlayer: AVAudioPlayer?
 
     private var timer = Timer()
     private let limit: CGFloat = 30.0
@@ -110,7 +110,7 @@ class AlphaviteChoiceViewController: GameViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         timer.invalidate()
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
 
     @IBAction private func rightTap(_ sender: Any) {
@@ -238,7 +238,7 @@ class AlphaviteChoiceViewController: GameViewController {
         } catch {
             print("no file)")
         }
-        audioPlayer.play()
+        audioPlayer?.play()
     }
 
     // MARK: Pick Animation
@@ -249,7 +249,7 @@ class AlphaviteChoiceViewController: GameViewController {
         } catch {
             print("no file)")
         }
-        pickPlayer.play()
+        pickPlayer?.play()
         let name = AlphaviteMaster.PickAnimations.end.rawValue
         pickAnimationView.animation = Animation.named(name)
         pickAnimationView.loopMode = .loop
@@ -274,7 +274,7 @@ class AlphaviteChoiceViewController: GameViewController {
         }, completion: { [weak self] _ in
             guard let self = self else { return }
 
-            self.pickPlayer.stop()
+            self.pickPlayer?.stop()
             self.pickReaction(isHappy: self.cheack(answer: side), complition: { _ in
                 self.hidePick(side: side, completion: completion)
             })
@@ -287,7 +287,7 @@ class AlphaviteChoiceViewController: GameViewController {
         } catch {
             print("no file)")
         }
-        pickPlayer.play()
+        pickPlayer?.play()
         let name = AlphaviteMaster.PickAnimations.end.rawValue
         pickAnimationView.animation = Animation.named(name)
         pickAnimationView.loopMode = .loop
@@ -304,7 +304,7 @@ class AlphaviteChoiceViewController: GameViewController {
                 self.pickPlace.constant = position
                 self.view.layoutIfNeeded()
         }, completion: { [weak self] _ in
-            self?.pickPlayer.stop()
+            self?.pickPlayer?.stop()
             completion(true)
         })
     }

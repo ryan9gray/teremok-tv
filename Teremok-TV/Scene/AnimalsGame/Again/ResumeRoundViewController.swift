@@ -11,7 +11,6 @@ import AVKit
 
 class ResumeRoundViewController: GameViewController {
     @IBOutlet private var pointsLabel: UILabel!
-    private var audioPlayer = AVAudioPlayer()
     @IBOutlet private var againButtonView: UIStackView!
     @IBOutlet private var nextButtonView: UIStackView!
     @IBOutlet private var cloudImageView: UIImageView!
