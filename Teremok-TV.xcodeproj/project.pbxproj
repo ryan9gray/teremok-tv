@@ -35,7 +35,7 @@
 		11CF6B91232A071A00F8E529 /* monsterButton.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8A232A071A00F8E529 /* monsterButton.wav */; };
 		11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8B232A071A00F8E529 /* monsterCloseAll.wav */; };
 		11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8C232A071A00F8E529 /* monsterRight.wav */; };
-		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; };
+		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; settings = {ASSET_TAGS = (IntroducingVideo, ); }; };
 		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
@@ -541,7 +541,7 @@
 		CADB3D7E21F8D54B009467B8 /* GetAchievementsCommand .swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB3D7D21F8D54B009467B8 /* GetAchievementsCommand .swift */; };
 		CADD14AB2309683400AE920A /* happy_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AA2309683400AE920A /* happy_Pick.json */; };
 		CADD14AD2309887300AE920A /* end_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AC2309887200AE920A /* end_Pick.json */; };
-		CADD14AF2309C6E500AE920A /* Pick_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AE2309C6E500AE920A /* Pick_introduce.mp4 */; };
+		CADD14AF2309C6E500AE920A /* Pick_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AE2309C6E500AE920A /* Pick_introduce.mp4 */; settings = {ASSET_TAGS = (IntroducingVideo, ); }; };
 		CADD14B523107F7C00AE920A /* happy_Cloud_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B023107F7B00AE920A /* happy_Cloud_1.json */; };
 		CADD14B623107F7C00AE920A /* happy_Cloud_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B123107F7B00AE920A /* happy_Cloud_2.json */; };
 		CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B223107F7B00AE920A /* sad_Pick.json */; };
@@ -736,8 +736,8 @@
 		CAF9620E22995FF3006E3046 /* animal_40.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AE22995FF3006E3046 /* animal_40.mp3 */; };
 		CAF9620F22995FF3006E3046 /* animal_48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AF22995FF3006E3046 /* animal_48.pdf */; };
 		CAF9621022995FF3006E3046 /* animal_41.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961B022995FF3006E3046 /* animal_41.mp3 */; };
-		CAF9621522996022006E3046 /* scene-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621222996022006E3046 /* scene-2.mp4 */; };
-		CAF9621722996022006E3046 /* scene-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621422996022006E3046 /* scene-1.mp4 */; };
+		CAF9621522996022006E3046 /* scene-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621222996022006E3046 /* scene-2.mp4 */; settings = {ASSET_TAGS = (IntroducingVideo, ); }; };
+		CAF9621722996022006E3046 /* scene-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621422996022006E3046 /* scene-1.mp4 */; settings = {ASSET_TAGS = (IntroducingVideo, ); }; };
 		CAF9622C229970F7006E3046 /* AnimalsStatisticPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF96226229970F7006E3046 /* AnimalsStatisticPresenter.swift */; };
 		CAF9622E229970F7006E3046 /* AnimalsStatisticRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF96228229970F7006E3046 /* AnimalsStatisticRouter.swift */; };
 		CAF9622F229970F7006E3046 /* AnimalsStatisticModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF96229229970F7006E3046 /* AnimalsStatisticModels.swift */; };
@@ -747,6 +747,7 @@
 		CAF9AB9C22ABD137006DFB5F /* AnimalsGameFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9AB9B22ABD136006DFB5F /* AnimalsGameFlow.swift */; };
 		CAFF983E2323C1E900003076 /* Sandbox.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CAFF983D2323C1E900003076 /* Sandbox.xcconfig */; };
 		CAFF98432323CEFA00003076 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF98422323CEFA00003076 /* Result.swift */; };
+		E76CD1A723326BE20094E29A /* OnDemandLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76CD1A623326BE20094E29A /* OnDemandLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1526,6 +1527,7 @@
 		CAFF983D2323C1E900003076 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		CAFF98422323CEFA00003076 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		CD8F4E30A715216C15EAB110 /* Pods-Teremok-TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.debug.xcconfig"; sourceTree = "<group>"; };
+		E76CD1A623326BE20094E29A /* OnDemandLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDemandLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2850,6 +2852,7 @@
 				CAF94CC2215E80F0000E8183 /* CarouselCollectionViewLayout.swift */,
 				CAE1C462211DC8490058C9C6 /* ViewHierarchyWorker.swift */,
 				CA52DF302290794A00458EE5 /* LayoutHelper.swift */,
+				E76CD1A623326BE20094E29A /* OnDemandLoader.swift */,
 				CA7E8BA4218200820076E5A0 /* ReachabilityManager.swift */,
 				CADB3D7B21F7B64E009467B8 /* BackgroundMediaWorker.swift */,
 				CA9AA3CE218467CD00019CA7 /* ImageLoader.swift */,
@@ -3215,6 +3218,9 @@
 		CAC2D4D92114D2DF00945003 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					IntroducingVideo,
+				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = xmedia;
@@ -3911,6 +3917,7 @@
 				CA9A6758213C1E1900FCB400 /* MainContentCommand.swift in Sources */,
 				CA8EA719214145E700159451 /* PreviewModels.swift in Sources */,
 				CA51004422F617DB00821C25 /* GradientView.swift in Sources */,
+				E76CD1A723326BE20094E29A /* OnDemandLoader.swift in Sources */,
 				CADB3D7C21F7B64E009467B8 /* BackgroundMediaWorker.swift in Sources */,
 				CA8EA70A2141363B00159451 /* RazdelCollectionViewCell.swift in Sources */,
 				CAB08AFE2140512A002840E3 /* RazdCommand.swift in Sources */,
