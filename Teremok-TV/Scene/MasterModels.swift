@@ -13,8 +13,6 @@
 import UIKit
 
 enum Master {
-    
-    
 
 }
 

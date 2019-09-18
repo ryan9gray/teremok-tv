@@ -28,7 +28,6 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
     
     
     func getMainContent(){
-
         mainContentService.getMain { [weak self] (result) in
             switch result {
             case .success(let mainContent):
@@ -41,6 +40,4 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
             }
         }
     }
-    // MARK: Do something
-
 }

@@ -170,7 +170,6 @@ extension MainViewController: UICollectionViewDataSource {
         return razdels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withCell: MainlCollectionViewCell.self, for: indexPath)
         let razdel = razdels[indexPath.row]
         cell.configurate(title: razdel.title, image: Cloud.clouds.randomElement(), link: razdel.link)

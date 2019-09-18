@@ -135,9 +135,8 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
     }
 
     func navigateToSettings(){
-        let vc = Profile.isAuthorized
-            ? SecurityCodeViewController.instantiate(fromStoryboard: .common)
-            : SettingsViewController.instantiate(fromStoryboard: .main)
+        let vc = SecurityCodeViewController.instantiate(fromStoryboard: .common)
+        vc.screen = .settings
         pushChild(vc)
     }
 
