@@ -43,7 +43,10 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
     private func playVideo() {
         guard
             let moviePath = Bundle.main.path(forResource: video.rawValue, ofType: "mp4")
-        else { return }
+        else {
+            action?()
+            return
+        }
 
         let videoURL = URL(fileURLWithPath: moviePath)
         avPlayer = AVPlayer(url: videoURL)

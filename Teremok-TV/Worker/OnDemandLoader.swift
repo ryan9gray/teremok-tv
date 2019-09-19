@@ -10,7 +10,7 @@ import Foundation
 class OnDemandLoader {
     private lazy var bundleResourceRequest = NSBundleResourceRequest(tags: Set(["IntroducingVideo"]))
 
-    private func loadOnDemandAssets() {
+    func loadOnDemandAssets() {
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] (available) in
             if available {
                 //self.loadOnboardingAssets()
