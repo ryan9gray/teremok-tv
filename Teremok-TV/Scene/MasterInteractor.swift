@@ -26,7 +26,8 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
     let service: ProfileProtocol = ProfileService()
     var profileModel: GetProfileResponse?
     var isOffline = false
-    
+    let onDemand = OnDemandLoader()
+
     var keychain: KeychainService? = {
         return MainKeychainService()
     }()
@@ -37,7 +38,9 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
         NetworkManager.shared.startNetworkReachabilityObserver()
         NotificationCenter.default.addObserver(self, selector: #selector(profileDidChanged(_:)), name: .ProfileNeedReload, object: nil)
         rateService.checkAndAskForReview()
+        getOnDemandResources()
     }
+    
     deinit {
         NotificationCenter.default.removeObserver(self, name: .ProfileNeedReload, object: nil)
     }
@@ -81,5 +84,9 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
 //            presenter?.presentAuthScreen()
 //        }
         presenter?.presentMain()
+    }
+
+    func getOnDemandResources() {
+        onDemand.loadOnDemandAssets()
     }
 }
