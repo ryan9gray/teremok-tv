@@ -157,46 +157,42 @@ struct LocalStore {
     }
 
     // MARK: Introduce Video
-    static func firstAnimalsIntroduce() -> Bool {
-        if !userDefaults.bool(forKey: animalFirstIntroduce){
-            userDefaults.set(true, forKey: animalFirstIntroduce)
-            userDefaults.synchronize()
-            return true
+    static var firstAnimalsIntroduce: Bool {
+        get {
+            return !userDefaults.bool(forKey: animalFirstIntroduce)
         }
-        else{
-            return false
+        set {
+            userDefaults.set(newValue, forKey: animalFirstIntroduce)
+            userDefaults.synchronize()
         }
     }
-    static func secondAnimalsIntroduce() -> Bool {
-        if !userDefaults.bool(forKey: animalSecondIntroduce){
-            userDefaults.set(true, forKey: animalSecondIntroduce)
-            userDefaults.synchronize()
-            return true
+    static var secondAnimalsIntroduce: Bool {
+        get {
+            return !userDefaults.bool(forKey: animalSecondIntroduce)
         }
-        else{
-            return false
+        set {
+            userDefaults.set(newValue, forKey: animalSecondIntroduce)
+            userDefaults.synchronize()
         }
     }
 
-    static func alphaviteIntroduce() -> Bool {
-        if !userDefaults.bool(forKey: alphaviteIntroduceKey){
-            userDefaults.set(true, forKey: alphaviteIntroduceKey)
-            userDefaults.synchronize()
-            return true
+    static var alphaviteIntroduce: Bool {
+        get {
+            return !userDefaults.bool(forKey: alphaviteIntroduceKey)
         }
-        else{
-            return false
+        set {
+            userDefaults.set(newValue, forKey: alphaviteIntroduceKey)
+            userDefaults.synchronize()
         }
     }
     
-    static func monsterIntroduce() -> Bool {
-        if !userDefaults.bool(forKey: monsterIntroduceKey){
-            userDefaults.set(true, forKey: monsterIntroduceKey)
-            userDefaults.synchronize()
-            return true
+    static var monsterIntroduce: Bool {
+        get {
+            return !userDefaults.bool(forKey: monsterIntroduceKey)
         }
-        else{
-            return false
+        set {
+            userDefaults.set(newValue, forKey: monsterIntroduceKey)
+            userDefaults.synchronize()
         }
     }
 }

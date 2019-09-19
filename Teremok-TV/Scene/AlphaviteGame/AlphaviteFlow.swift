@@ -21,7 +21,7 @@ class AlphaviteGameFlow  {
     var game: Game!
 
     func startFlow() {
-        guard !LocalStore.alphaviteIntroduce() else {
+        guard !LocalStore.alphaviteIntroduce else {
             showIntroduce()
             return
         }
@@ -111,7 +111,8 @@ class AlphaviteGameFlow  {
     private func showIntroduce() {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .alphavite
-        master?.router?.introduceController(viewController: controller, completion: {
+        master?.router?.introduceController(viewController: controller, completion: { finish in
+            LocalStore.alphaviteIntroduce = finish
             self.startFlow()
         })
     }

@@ -12,7 +12,7 @@ import Lottie
 
 class RoundPresentViewController: GameViewController, IntroduceViewController, AVAudioPlayerDelegate {
     var round: Int = 1
-    var action: (() -> Void)?
+    var action: ((Bool) -> Void)?
     private var audioPlayer: AVAudioPlayer?
     @IBOutlet private var animationView: AnimationView!
 
@@ -36,7 +36,10 @@ class RoundPresentViewController: GameViewController, IntroduceViewController, A
     }
 
     func playSound(round: Int) {
-        let path = Bundle.main.path(forResource: sounds[round], ofType: "wav")!
+        guard let path = Bundle.main.path(forResource: sounds[round], ofType: "wav") else {
+            action?(false)
+            return
+        }
         let url = URL(fileURLWithPath: path)
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -51,7 +54,7 @@ class RoundPresentViewController: GameViewController, IntroduceViewController, A
 
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("end playing")
-        action?()
+        action?(true)
     }
 
     let animations = [

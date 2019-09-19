@@ -26,7 +26,7 @@ class AnimalsGameFlow  {
     }
 
     private func showPack(idx: Int) {
-        guard !LocalStore.secondAnimalsIntroduce() else {
+        guard !LocalStore.secondAnimalsIntroduce else {
             showWithIntroducePack(idx: idx)
             return
         }
@@ -50,7 +50,8 @@ class AnimalsGameFlow  {
     private func presentRound(_ number: Int) {
         let controller = RoundPresentViewController.instantiate(fromStoryboard: .animals)
         controller.round = number
-        master?.router?.introduceController(viewController: controller, completion: {
+        master?.router?.introduceController(viewController: controller, completion: { finish in
+            LocalStore.secondAnimalsIntroduce = finish
             self.startChoice()
         })
     }
@@ -160,8 +161,8 @@ class AnimalsGameFlow  {
     private func showWithIntroducePack(idx: Int) {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .start
-        master?.router?.introduceController(viewController: controller, completion: {
-            self.showPack(idx: idx)
+        master?.router?.introduceController(viewController: controller, completion: { [weak self] finish in
+            self?.showPack(idx: idx)
         })
     }
 

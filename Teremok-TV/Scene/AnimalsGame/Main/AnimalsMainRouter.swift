@@ -34,7 +34,7 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
     }
 
     func navigateToStart() {
-        guard !LocalStore.firstAnimalsIntroduce() else {
+        guard !LocalStore.firstAnimalsIntroduce else {
             introduce()
             return
         }
@@ -45,7 +45,8 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
     func introduce() {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .introduce
-        controller.action = { [weak self] in
+        controller.action = { [weak self] finish in
+            LocalStore.firstAnimalsIntroduce = finish
             self?.navigateToStart()
         }
         viewController?.masterRouter?.presentNextChild(viewController: controller)

@@ -14,10 +14,10 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
     @IBOutlet private var playButton: KeyButton!
 
     var video: PrincessMovie!
-    var action: (() -> Void)?
+    var action: ((Bool) -> Void)?
 
     @IBAction private func nextClick(_ sender: Any) {
-        action?()
+        action?(true)
     }
 
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
         guard
             let moviePath = Bundle.main.path(forResource: video.rawValue, ofType: "mp4")
         else {
-            action?()
+            action?(false)
             return
         }
 
@@ -62,7 +62,7 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
     }
 
     @objc func playerEnd() {
-        action?()
+        action?(true)
     }
 
     deinit {
