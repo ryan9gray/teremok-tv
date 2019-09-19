@@ -62,7 +62,8 @@ class MonsterGameViewController: GameViewController {
     }
 
     private func start() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+        let time = input.game.difficulty.memTime
+        DispatchQueue.main.asyncAfter(deadline: .now() + time, execute: {
             self.fireTimer()
             self.playSounds(MonsterMaster.Sound.closeAll.url)
             self.collectionView.visibleCells.forEach { ($0 as? MonsterCollectionViewCell)?.close() }
