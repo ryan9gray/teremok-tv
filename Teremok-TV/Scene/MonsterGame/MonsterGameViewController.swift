@@ -71,7 +71,7 @@ class MonsterGameViewController: GameViewController {
         })
     }
 
-    func playSounds(_ url: URL, isOpenPlayer: Bool = true, completion: (() -> Void)? = nil) {
+    func playSounds(_ url: URL, isOpenPlayer: Bool = true) {
         do {
             if isOpenPlayer {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -84,10 +84,6 @@ class MonsterGameViewController: GameViewController {
             }
         } catch {
             print("no file)")
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            completion?()
         }
     }
 
@@ -168,14 +164,10 @@ extension MonsterGameViewController: UICollectionViewDelegate {
         
         saveSelectedCell(cell: selectedCell)
         if self.secondSelectedItem == nil {
-            playSounds(MonsterMaster.Sound.button.url) {
-                self.playSounds(MonsterMaster.Sound.openCard.url)
-            }
+            playSounds(MonsterMaster.Sound.openCard.url)
         }
         else {
-            playSounds(MonsterMaster.Sound.button.url, isOpenPlayer: false) {
-                self.playSounds(MonsterMaster.Sound.openCard.url, isOpenPlayer: false)
-            }
+            playSounds(MonsterMaster.Sound.openCard.url, isOpenPlayer: false)
         }
         selectedCell.open { [weak self] in
             guard self?.firstSelectedItem != nil && self?.secondSelectedItem != nil else { return }
