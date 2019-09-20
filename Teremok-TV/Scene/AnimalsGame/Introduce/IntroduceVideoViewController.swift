@@ -27,16 +27,18 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
         playVideo()
     }
 
-    var avPlayer: AVPlayer!
+    var avPlayer: AVPlayer?
     var avPlayerLayer: AVPlayerLayer!
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-        avPlayer.pause()
+        avPlayer?.pause()
     }
 
     override func viewWillLayoutSubviews() {
+        guard avPlayer != nil else { return }
+        
         avPlayerLayer.frame = videoBackView.layer.bounds
     }
 
@@ -52,12 +54,12 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
         avPlayer = AVPlayer(url: videoURL)
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
         avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        avPlayer.actionAtItemEnd = .none
+        avPlayer?.actionAtItemEnd = .none
         videoBackView.layer.addSublayer(avPlayerLayer)
         avPlayerLayer.frame = videoBackView.layer.bounds
         NotificationCenter.default.addObserver(self, selector: #selector(self.playerEnd), name: .AVPlayerItemDidPlayToEndTime, object: avPlayer!.currentItem)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.avPlayer.play()
+            self.avPlayer?.play()
         }
     }
 
