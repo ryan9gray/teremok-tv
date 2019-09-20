@@ -161,8 +161,9 @@ class AnimalsGameFlow  {
     private func showWithIntroducePack(idx: Int) {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .start
-        master?.router?.introduceController(viewController: controller, completion: { [weak self] finish in
-            self?.showPack(idx: idx)
+        master?.router?.introduceController(viewController: controller, completion: { finish in
+            LocalStore.secondAnimalsIntroduce = finish
+            self.showPack(idx: idx)
         })
     }
 

@@ -159,7 +159,7 @@ struct LocalStore {
     // MARK: Introduce Video
     static var firstAnimalsIntroduce: Bool {
         get {
-            return !userDefaults.bool(forKey: animalFirstIntroduce)
+            return userDefaults.bool(forKey: animalFirstIntroduce)
         }
         set {
             userDefaults.set(newValue, forKey: animalFirstIntroduce)
@@ -168,7 +168,7 @@ struct LocalStore {
     }
     static var secondAnimalsIntroduce: Bool {
         get {
-            return !userDefaults.bool(forKey: animalSecondIntroduce)
+            return userDefaults.bool(forKey: animalSecondIntroduce)
         }
         set {
             userDefaults.set(newValue, forKey: animalSecondIntroduce)
@@ -178,7 +178,7 @@ struct LocalStore {
 
     static var alphaviteIntroduce: Bool {
         get {
-            return !userDefaults.bool(forKey: alphaviteIntroduceKey)
+            return userDefaults.bool(forKey: alphaviteIntroduceKey)
         }
         set {
             userDefaults.set(newValue, forKey: alphaviteIntroduceKey)
@@ -188,7 +188,7 @@ struct LocalStore {
     
     static var monsterIntroduce: Bool {
         get {
-            return !userDefaults.bool(forKey: monsterIntroduceKey)
+            return userDefaults.bool(forKey: monsterIntroduceKey)
         }
         set {
             userDefaults.set(newValue, forKey: monsterIntroduceKey)

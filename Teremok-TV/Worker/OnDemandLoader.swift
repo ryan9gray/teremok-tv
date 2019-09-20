@@ -11,16 +11,16 @@ class OnDemandLoader {
     private lazy var bundleResourceRequest = NSBundleResourceRequest(tags: Set(["IntroducingVideo"]))
 
     func loadOnDemandAssets() {
-        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] (available) in
-            if available {
-                //self.loadOnboardingAssets()
-            } else {
-                self.bundleResourceRequest.beginAccessingResources { (error) in
-                    guard error == nil else { return }
-                    //self.loadOnboardingAssets()
-                }
-            }
-        }
+//        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] (available) in
+//            if available {
+//                //self.loadOnboardingAssets()
+//            } else {
+//                self.bundleResourceRequest.beginAccessingResources { (error) in
+//                    guard error == nil else { return }
+//                    //self.loadOnboardingAssets()
+//                }
+//            }
+//        }
     }
 
     private func discardOnDemandAssets() {

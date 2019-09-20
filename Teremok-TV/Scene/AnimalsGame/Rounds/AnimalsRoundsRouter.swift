@@ -31,9 +31,9 @@ class AnimalsRoundsRouter: AnimalsRoundsRoutingLogic, AnimalsRoundsDataPassing {
     func showWithIntroducePack(idx: Int) {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .introduce
-        viewController?.masterRouter?.introduceController(viewController: controller, completion: { [weak self] finish in
+        viewController?.masterRouter?.introduceController(viewController: controller, completion: { finish in
             LocalStore.secondAnimalsIntroduce = finish
-            self?.showPack(idx: idx)
+            self.showPack(idx: idx)
         })
     }
 
