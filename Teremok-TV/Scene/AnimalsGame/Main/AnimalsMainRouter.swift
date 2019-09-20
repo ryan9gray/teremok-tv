@@ -25,6 +25,7 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
     weak var viewController: AnimalsMainViewController?
     var dataStore: AnimalsMainDataStore?
     var modalControllersQueue = Queue<UIViewController>()
+    var checkIntro: Bool = true
 
     func navigateToStatistic() {
         let controller = AnimalsStatisticViewController.instantiate(fromStoryboard: .animals)
@@ -34,7 +35,8 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
     }
 
     func navigateToStart() {
-        guard !LocalStore.firstAnimalsIntroduce else {
+        guard !checkIntro, LocalStore.firstAnimalsIntroduce else {
+            checkIntro = false
             introduce()
             return
         }

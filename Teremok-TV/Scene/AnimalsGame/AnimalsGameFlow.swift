@@ -20,13 +20,17 @@ class AnimalsGameFlow  {
     private var isHard: Bool = false
     var game: Game!
     var pack: Pack!
+    var checkIntro: Bool = true
 
     func startFlow(_ number: Int) {
         showPack(idx: number)
     }
 
+
+
     private func showPack(idx: Int) {
-        guard !LocalStore.secondAnimalsIntroduce else {
+        if checkIntro, !LocalStore.secondAnimalsIntroduce {
+            checkIntro = false
             showWithIntroducePack(idx: idx)
             return
         }

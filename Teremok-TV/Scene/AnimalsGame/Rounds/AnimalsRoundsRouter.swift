@@ -26,17 +26,6 @@ class AnimalsRoundsRouter: AnimalsRoundsRoutingLogic, AnimalsRoundsDataPassing {
     var dataStore: AnimalsRoundsDataStore?
     var modalControllersQueue = Queue<UIViewController>()
 
-    var testBool = true
-
-    func showWithIntroducePack(idx: Int) {
-        let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
-        controller.video = .introduce
-        viewController?.masterRouter?.introduceController(viewController: controller, completion: { finish in
-            LocalStore.secondAnimalsIntroduce = finish
-            self.showPack(idx: idx)
-        })
-    }
-
     func showPack(idx: Int) {
         guard let id = dataStore?.list[safe: idx]?.id else { return }
         
