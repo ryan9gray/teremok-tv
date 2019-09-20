@@ -64,9 +64,9 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
             remove()
         }
         if let viewController = viewController {
+            modalChildVC = viewController
             presentChild(viewController: viewController)
             viewController.masterRouter = self
-            modalChildVC = viewController
         }
     }
     
