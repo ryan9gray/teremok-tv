@@ -34,8 +34,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vyV-SJ-OTe">
-                                <rect key="frame" x="108" y="117" width="200" height="179"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vyV-SJ-OTe">
+                                <rect key="frame" x="108" y="117" width="200" height="213"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Электронная почта аккаунта" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1C-Uj-xBL">
                                         <rect key="frame" x="0.0" y="0.0" width="195" height="17"/>
@@ -142,7 +142,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fso-Bt-gMB">
-                                        <rect key="frame" x="0.0" y="33" width="200" height="146"/>
+                                        <rect key="frame" x="0.0" y="67" width="200" height="146"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-lH-dBj" customClass="UIRoundedButtonWithGradientAndShadow" customModule="Teremok_TV" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
@@ -384,7 +384,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WiX-Ye-IeR" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vyV-SJ-OTe" secondAttribute="bottom" id="2k9-Rq-WIe"/>
+                            <constraint firstItem="WiX-Ye-IeR" firstAttribute="bottom" secondItem="vyV-SJ-OTe" secondAttribute="bottom" id="2k9-Rq-WIe"/>
                             <constraint firstAttribute="trailing" secondItem="qAX-OL-SMI" secondAttribute="trailing" constant="48" id="2u7-k1-hDn"/>
                             <constraint firstItem="2h1-4q-sUC" firstAttribute="centerY" secondItem="g84-8P-JLS" secondAttribute="centerY" id="2v3-HY-1BI"/>
                             <constraint firstItem="2h1-4q-sUC" firstAttribute="leading" secondItem="g84-8P-JLS" secondAttribute="trailing" constant="16.5" id="5uH-AK-d8h"/>
@@ -1040,7 +1040,7 @@
         <image name="icDown" width="20" height="25"/>
         <image name="icFav" width="21" height="30"/>
         <image name="icGame" width="22" height="24"/>
-        <image name="icGameCube" width="31" height="35"/>
+        <image name="icGameCube" width="30" height="35"/>
         <image name="icHeadphone" width="32" height="32"/>
         <image name="icHeart" width="26" height="21"/>
         <image name="icHome" width="24" height="22"/>

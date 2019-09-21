@@ -13,7 +13,7 @@ import AVKit
 class AlphaviteCharsViewController: GameViewController {
     @IBOutlet private var charLabel: StrokeLabel!
     @IBOutlet private var titleLabel: StrokeLabel!
-    private var audioPlayer = AVAudioPlayer()
+    private var audioPlayer: AVAudioPlayer?
     @IBOutlet private var stackView: UIStackView!
     private let gameHelper = AlphabetGameHelper()
     @IBOutlet private var imageContainer: DesignableView!
@@ -57,7 +57,7 @@ class AlphaviteCharsViewController: GameViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
 
     func start() {
@@ -145,7 +145,7 @@ class AlphaviteCharsViewController: GameViewController {
         } catch {
             print("no file)")
         }
-        audioPlayer.play()
+        audioPlayer?.play()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             completion()
         }

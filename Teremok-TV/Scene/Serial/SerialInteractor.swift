@@ -86,8 +86,6 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
     }
 
     func downloadVideo(idx: Int, completion : @escaping (_ like : Bool) -> ()){
-        
-        
         guard let item = videoItems[safe: idx] else {
             self.presenter?.present(errorString: "Не получилось добавить в скачанное", completion: nil)
             return
@@ -98,18 +96,11 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
     }
 
     func addToFav(idx: Int){
-        guard let id = videoItems[safe:idx]?.id else {
-            return
-        }
-        self.presenter?.present(items: videoItems)
+        guard let id = videoItems[safe:idx]?.id else { return }
+        presenter?.present(items: videoItems)
 
-        videoService.addToFav(id: id) { (finish) in
-            if finish{
-                
-            }
-            else {
-                
-            }
+        videoService.addToFav(id: id) { _ in
+
         }
     }
     

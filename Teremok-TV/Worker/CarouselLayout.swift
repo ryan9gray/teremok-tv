@@ -28,7 +28,7 @@ class CarouselLayout: UICollectionViewLayout {
         return CGSize(width: collectionView.bounds.width/3.2, height: collectionView.bounds.height)
     }
     let generator = UISelectionFeedbackGenerator()
-    var audioPlayer = AVAudioPlayer()
+    var audioPlayer: AVAudioPlayer?
     let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "swipe_card_sound", ofType: "wav")!)
 
     private let spacing: CGFloat = 30
@@ -54,7 +54,7 @@ class CarouselLayout: UICollectionViewLayout {
     }
 
     private func playSound(){
-        audioPlayer.play()
+        audioPlayer?.play()
     }
     
     override open func prepare() {

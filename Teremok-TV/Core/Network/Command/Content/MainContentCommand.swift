@@ -9,7 +9,15 @@
 import Alamofire
 
 
-class MainContentCommand: BasicCommand {
+class MainContentCommand: CacheableCommand {
+
+    override init() {
+        super.init()
+
+        self.shoudRemoveCach = false
+        self.shouldUseCache = true
+        self.expirationInterval = CacheExpiration.day
+    }
 
     func execute(success: ((MainContentResponse) -> Void)?, failure: ApiCompletionBlock?) {
         requestObject(success: success, failure: failure)

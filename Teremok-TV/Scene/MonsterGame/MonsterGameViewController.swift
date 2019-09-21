@@ -15,8 +15,8 @@ class MonsterGameViewController: GameViewController {
     var input: Input!
     var output: Output!
     
-    private var audioPlayer = AVAudioPlayer()
-    private var closeAudioPlayer = AVAudioPlayer()
+    private var audioPlayer: AVAudioPlayer?
+    private var closeAudioPlayer: AVAudioPlayer?
     private var firstSelectedItem: MonsterCollectionViewCell?
     private var secondSelectedItem: MonsterCollectionViewCell?
     private var score = 0 {
@@ -50,6 +50,7 @@ class MonsterGameViewController: GameViewController {
         timerBtn.gradientColors = Style.Gradients.lightGray.value
         let cells = [MonsterCollectionViewCell.self]
         collectionView.register(cells: cells)
+        collectionView.isUserInteractionEnabled = false
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -61,30 +62,28 @@ class MonsterGameViewController: GameViewController {
     }
 
     private func start() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+        let time = input.game.difficulty.memTime
+        DispatchQueue.main.asyncAfter(deadline: .now() + time, execute: {
             self.fireTimer()
             self.playSounds(MonsterMaster.Sound.closeAll.url)
             self.collectionView.visibleCells.forEach { ($0 as? MonsterCollectionViewCell)?.close() }
+            self.collectionView.isUserInteractionEnabled = true
         })
     }
 
-    func playSounds(_ url: URL, isOpenPlayer: Bool = true, completion: (() -> Void)? = nil) {
+    func playSounds(_ url: URL, isOpenPlayer: Bool = true) {
         do {
             if isOpenPlayer {
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer.play()
+                audioPlayer?.play()
 
             }
             else {
                 closeAudioPlayer = try AVAudioPlayer(contentsOf: url)
-                closeAudioPlayer.play()
+                closeAudioPlayer?.play()
             }
         } catch {
             print("no file)")
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            completion?()
         }
     }
 
@@ -161,17 +160,14 @@ extension MonsterGameViewController: UICollectionViewDataSource {
 extension MonsterGameViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let selectedCell = collectionView.cellForItem(at: indexPath) as? MonsterCollectionViewCell else { return }
-
+        guard !selectedCell.flipped else { return }
+        
         saveSelectedCell(cell: selectedCell)
         if self.secondSelectedItem == nil {
-            playSounds(MonsterMaster.Sound.button.url) {
-                self.playSounds(MonsterMaster.Sound.openCard.url)
-            }
+            playSounds(MonsterMaster.Sound.openCard.url)
         }
         else {
-            playSounds(MonsterMaster.Sound.button.url, isOpenPlayer: false) {
-                self.playSounds(MonsterMaster.Sound.openCard.url, isOpenPlayer: false)
-            }
+            playSounds(MonsterMaster.Sound.openCard.url, isOpenPlayer: false)
         }
         selectedCell.open { [weak self] in
             guard self?.firstSelectedItem != nil && self?.secondSelectedItem != nil else { return }

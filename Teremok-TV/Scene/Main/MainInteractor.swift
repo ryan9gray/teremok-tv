@@ -26,9 +26,7 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
     let mainContentService: MainContentProtocol = MainContentService()
     var mainRazdels: [RazdelModel] = []
     
-    
     func getMainContent(){
-
         mainContentService.getMain { [weak self] (result) in
             switch result {
             case .success(let mainContent):
@@ -41,6 +39,4 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
             }
         }
     }
-    // MARK: Do something
-
 }

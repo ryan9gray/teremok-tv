@@ -122,15 +122,24 @@ class MonsterGameFlow {
             case hard = 2
             
             var fieldSize: Int {
-                get {
-                    switch self {
-                    case .easy:
-                        return 6
-                    case .medium:
-                        return 12
-                    case .hard:
-                        return 20
-                    }
+                switch self {
+                case .easy:
+                    return 6
+                case .medium:
+                    return 12
+                case .hard:
+                    return 20
+                }
+            }
+
+            var memTime: Double {
+                switch self {
+                case .easy:
+                    return 1.0
+                case .medium:
+                    return 3.0
+                case .hard:
+                    return 4.0
                 }
             }
         }

@@ -153,7 +153,7 @@ struct LocalStore {
     static func logout() {
         userDefaults.removeObject(forKey: accessTokenKey)
         userDefaults.synchronize()
-        
+        //userDefaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
     }
 
     // MARK: Introduce Video
