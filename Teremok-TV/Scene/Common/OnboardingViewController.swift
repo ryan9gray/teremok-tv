@@ -33,13 +33,15 @@ class OnboardingViewController: UIViewController {
     }
 
     override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
         guard avPlayer != nil else { return }
 
         avPlayerLayer.frame = videoBackView.layer.bounds
     }
 
     private func playVideo() {
-        guard let moviePath = Bundle.main.path(forResource: "OnBoarding", ofType: "mov")
+        guard let moviePath = Bundle.main.path(forResource: "OnBoarding", ofType: "mp4")
         else {
             ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
             dismiss(animated: true, completion: nil)
@@ -49,7 +51,7 @@ class OnboardingViewController: UIViewController {
         let videoURL = URL(fileURLWithPath: moviePath)
         avPlayer = AVPlayer(url: videoURL)
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
-        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
         avPlayer?.actionAtItemEnd = .none
         videoBackView.layer.addSublayer(avPlayerLayer)
         avPlayerLayer.frame = videoBackView.layer.bounds
@@ -60,7 +62,7 @@ class OnboardingViewController: UIViewController {
     }
 
     @objc func playerEnd() {
-        OnDemandLoader.discardIntroducing(.onBoarding)
+        LocalStore.onBoarding = true
         ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
         dismiss(animated: true, completion: nil)
     }

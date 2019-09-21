@@ -9,6 +9,8 @@ import Foundation
 
 class OnDemandLoader {
 
+    static let share = OnDemandLoader()
+
     enum Tags {
 
         enum OnDemand: String {
@@ -29,20 +31,20 @@ class OnDemandLoader {
         }
     }
 
+    lazy private var bundleResourceRequest = NSBundleResourceRequest(tags: Set(introducongGames + getTags))
 
-    func getTags() -> [String] {
+    private var getTags: [String] {
         return Tags.Prefetch.allValues().map { $0.rawValue }
             + Tags.Initial.allValues().map { $0.rawValue }
     }
 
     func loadOnDemandAssets() {
-        let tags = getTags() + introducongGames()
-        let bundleResourceRequest = NSBundleResourceRequest(tags: Set(tags))
-        bundleResourceRequest.conditionallyBeginAccessingResources { available in
+        bundleResourceRequest.endAccessingResources()
+        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             if available {
                 //self.loadOnboardingAssets()
             } else {
-                bundleResourceRequest.beginAccessingResources { error in
+                self.bundleResourceRequest.beginAccessingResources { error in
                     guard error == nil else { return }
                     
                     print("OnDemand Error: \(error.debugDescription)")
@@ -51,7 +53,7 @@ class OnDemandLoader {
         }
     }
 
-    private func introducongGames() -> [String] {
+    private var introducongGames: [String] {
         var files: [Tags.OnDemand] = []
         if !LocalStore.alphaviteIntroduce {
             files.append(.introduceAlphabet)
@@ -66,9 +68,5 @@ class OnDemandLoader {
             files.append(.onBoarding)
         }
         return files.map { $0.rawValue }
-    }
-
-    static func discardIntroducing(_ file: Tags.OnDemand) {
-        NSBundleResourceRequest(tags: Set([file.rawValue])).endAccessingResources()
     }
 }

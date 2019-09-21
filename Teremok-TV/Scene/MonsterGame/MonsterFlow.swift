@@ -98,9 +98,6 @@ class MonsterGameFlow {
         controller.video = .monster
         master?.router?.introduceController(viewController: controller) { finish in
             LocalStore.monsterIntroduce = finish
-            if finish {
-                OnDemandLoader.discardIntroducing(.introduceMonsters)
-            }
             self.startFlow(difficulty: difficulty)
         }
     }
