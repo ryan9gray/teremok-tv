@@ -1566,14 +1566,13 @@
 		CA1AB66322F30CBC003A2584 /* AlphaviteGame */ = {
 			isa = PBXGroup;
 			children = (
+				CAAD25E722F59872005CFCD2 /* Master */,
 				CA70867223082E940015851C /* Stats */,
 				CA51004122F5FFAE00821C25 /* AlphaviteFlow.swift */,
-				CAAD25E722F59872005CFCD2 /* Main */,
-				CAB59FC822F315D800D7CA71 /* AlphaviteMasterPresenter.swift */,
-				CAB59FCA22F315D800D7CA71 /* AlphaviteMasterRouter.swift */,
-				CAB59FCB22F315D800D7CA71 /* AlphaviteMasterModels.swift */,
-				CAB59FCC22F315D800D7CA71 /* AlphaviteMasterViewController.swift */,
-				CAB59FCD22F315D800D7CA71 /* AlphaviteMasterInteractor.swift */,
+				CAAD25F022F5DBC1005CFCD2 /* AlphaviteStartViewController.swift */,
+				CAAD25F422F5DC80005CFCD2 /* AlphaviteCharsViewController.swift */,
+				CA51003F22F5F8E600821C25 /* AlphaviteChoiceViewController.swift */,
+				CAAD25F222F5DBEC005CFCD2 /* AlphaviteFinishViewController.swift */,
 			);
 			path = AlphaviteGame;
 			sourceTree = "<group>";
@@ -2184,12 +2183,12 @@
 			isa = PBXGroup;
 			children = (
 				CAF9614F22995FAC006E3046 /* Game */,
+				CAD16DEC2147E69D00A82DBB /* Animation */,
+				CADB3D6E21F7AD4D009467B8 /* Music */,
 				CA61D86C229ACBB300E3D603 /* Fonts */,
 				CA763632226B53B200168AB1 /* downloadCover.png */,
 				CAC2D4EB2114D2E100945003 /* Assets.xcassets */,
 				CAF889DA21A6975800A245A7 /* GoogleService-Info.plist */,
-				CADB3D6E21F7AD4D009467B8 /* Music */,
-				CAD16DEC2147E69D00A82DBB /* Animation */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -2208,15 +2207,16 @@
 			path = Trackable;
 			sourceTree = "<group>";
 		};
-		CAAD25E722F59872005CFCD2 /* Main */ = {
+		CAAD25E722F59872005CFCD2 /* Master */ = {
 			isa = PBXGroup;
 			children = (
-				CAAD25F022F5DBC1005CFCD2 /* AlphaviteStartViewController.swift */,
-				CAAD25F422F5DC80005CFCD2 /* AlphaviteCharsViewController.swift */,
-				CA51003F22F5F8E600821C25 /* AlphaviteChoiceViewController.swift */,
-				CAAD25F222F5DBEC005CFCD2 /* AlphaviteFinishViewController.swift */,
+				CAB59FC822F315D800D7CA71 /* AlphaviteMasterPresenter.swift */,
+				CAB59FCA22F315D800D7CA71 /* AlphaviteMasterRouter.swift */,
+				CAB59FCB22F315D800D7CA71 /* AlphaviteMasterModels.swift */,
+				CAB59FCC22F315D800D7CA71 /* AlphaviteMasterViewController.swift */,
+				CAB59FCD22F315D800D7CA71 /* AlphaviteMasterInteractor.swift */,
 			);
-			path = Main;
+			path = Master;
 			sourceTree = "<group>";
 		};
 		CAAF1EEA2174E7E100460F58 /* Dog_preloader */ = {
@@ -3077,6 +3077,7 @@
 					AnimalsImage,
 					AnimalsSounds,
 					IntroducingVideo,
+					MonstersImage,
 				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1030;
@@ -4120,7 +4121,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds";
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage";
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = AlphabetSounds;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4148,7 +4149,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds";
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage";
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = AlphabetSounds;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4239,7 +4240,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds";
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage";
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = AlphabetSounds;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";

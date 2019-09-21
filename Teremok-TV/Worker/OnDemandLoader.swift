@@ -8,7 +8,12 @@
 import Foundation
 
 class OnDemandLoader {
-    private lazy var bundleResourceRequest = NSBundleResourceRequest(tags: Set(["IntroducingVideo"]))
+
+    enum Tags: String {
+        case IntroducingVideo = "IntroducingVideo"
+    }
+
+    private lazy var bundleResourceRequest = NSBundleResourceRequest(tags: Set([Tags.IntroducingVideo.rawValue]))
 
     func loadOnDemandAssets() {
 //        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] (available) in
