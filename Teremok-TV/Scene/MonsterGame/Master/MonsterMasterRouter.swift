@@ -32,7 +32,9 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     func navigateMain() {
         pushChild(viewControllerClass: MonsterStartViewController.self, storyboard: .monster)
     }
-    
+    func dismiss() {
+        viewController?.dismiss(animated: true)
+    }
     /**
      Clean hierarchy
      */

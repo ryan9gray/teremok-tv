@@ -31,7 +31,7 @@ class OnDemandLoader {
         }
     }
 
-    lazy private var bundleResourceRequest = NSBundleResourceRequest(tags: Set(introducongGames + getTags))
+    lazy private var bundleResourceRequest = NSBundleResourceRequest(tags: Set(getTags + introducongGames))
 
     private var getTags: [String] {
         return Tags.Prefetch.allValues().map { $0.rawValue }

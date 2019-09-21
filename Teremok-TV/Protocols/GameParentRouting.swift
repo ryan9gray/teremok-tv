@@ -24,6 +24,8 @@ protocol GameParentRouting: CommonRoutingLogic {
 
     func navigateMain()
 
+    func dismiss()
+
     // for anmimals костыль
     func startFlow(_ idx: Int)
 }

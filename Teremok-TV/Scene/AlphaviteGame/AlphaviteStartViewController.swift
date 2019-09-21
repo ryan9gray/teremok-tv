@@ -43,8 +43,16 @@ class AlphaviteStartViewController: GameViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        guard let mainSound = Bundle.main.path(forResource: AlphaviteMaster.Sound.main.rawValue, ofType: "wav")
+        else {
+            master?.present(errorString: "игра загружайте, зайдите позже", completion: {
+                self.masterRouter?.dismiss()
+            })
+            return
+        }
+
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: AlphaviteMaster.Sound.main.url)
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: mainSound))
             audioPlayer?.prepareToPlay()
         } catch {
             print("no file)")

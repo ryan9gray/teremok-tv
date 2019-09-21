@@ -36,6 +36,10 @@ class AnimalsMasterRouter: AnimalsMasterRoutingLogic, AnimalsMasterDataPassing {
         pushChild(viewControllerClass: AnimalsMainViewController.self, storyboard: .animals)
     }
 
+    func dismiss() {
+        viewController?.dismiss(animated: true)
+    }
+
     func startFlow(_ idx: Int) {
         guard let controller = viewController else { return }
 

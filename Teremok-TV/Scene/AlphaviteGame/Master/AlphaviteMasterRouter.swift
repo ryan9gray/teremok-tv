@@ -37,6 +37,9 @@ class AlphaviteMasterRouter: AlphaviteMasterRoutingLogic, AlphaviteMasterDataPas
         pushChild(viewControllerClass: AlphaviteStartViewController.self, storyboard: .alphavite)
     }
 
+    func dismiss() {
+        viewController?.dismiss(animated: true)
+    }
     /**
      Clean hierarchy
      */
