@@ -68,12 +68,12 @@ class AppLaunchScreenViewController: UIViewController {
             let vc = OnboardingViewController.instantiate(fromStoryboard: .welcome)
             ViewHierarchyWorker.setRootViewController(rootViewController: vc)
             dismiss(animated: true, completion: nil)
-            return
         } else {
             ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
-            self.dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
         }
     }
+    
     enum AppLaunchScreen {
         enum Animation: String {
             case start = "Shade_open"

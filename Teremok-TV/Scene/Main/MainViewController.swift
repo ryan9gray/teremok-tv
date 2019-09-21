@@ -125,9 +125,6 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
         hidePreloader()
         self.razdels = razdels
         collectionView.reloadData()
-        if !LocalStore.onBoarding {
-            masterRouter?.navigateToAuth()
-        }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

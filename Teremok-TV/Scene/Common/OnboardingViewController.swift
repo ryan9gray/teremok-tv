@@ -41,8 +41,7 @@ class OnboardingViewController: UIViewController {
     }
 
     private func playVideo() {
-        guard let moviePath = Bundle.main.path(forResource: "OnBoarding", ofType: "mp4")
-        else {
+        guard let moviePath = Bundle.main.path(forResource: "OnBoarding", ofType: "mp4") else {
             ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
             dismiss(animated: true, completion: nil)
             return
