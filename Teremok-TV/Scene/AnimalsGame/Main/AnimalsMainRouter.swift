@@ -35,7 +35,7 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
     }
 
     func navigateToStart() {
-        guard !checkIntro, LocalStore.firstAnimalsIntroduce else {
+        if checkIntro, !LocalStore.firstAnimalsIntroduce {
             checkIntro = false
             introduce()
             return

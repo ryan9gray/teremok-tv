@@ -22,7 +22,7 @@ class AlphaviteGameFlow  {
     private var checkIntro: Bool = true
 
     func startFlow() {
-        guard !checkIntro, LocalStore.alphaviteIntroduce else {
+        if checkIntro, !LocalStore.alphaviteIntroduce {
             checkIntro = false
             showIntroduce()
             return

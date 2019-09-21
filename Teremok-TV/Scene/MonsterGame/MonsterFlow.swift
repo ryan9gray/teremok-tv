@@ -20,7 +20,7 @@ class MonsterGameFlow {
     var checkIntro: Bool = true
 
     func startFlow(difficulty: Int) {
-        guard !checkIntro, LocalStore.monsterIntroduce else {
+        if checkIntro, !LocalStore.monsterIntroduce {
             checkIntro = false
             showIntroduce(difficulty: difficulty)
             return
