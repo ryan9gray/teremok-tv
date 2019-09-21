@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 
 class IntroduceVideoViewController: GameViewController, IntroduceViewController {
-    @IBOutlet private var videoBackView: RoundCornerView!
+    @IBOutlet private var videoBackView: UIView!
     @IBOutlet private var playButton: KeyButton!
 
     var video: PrincessMovie!

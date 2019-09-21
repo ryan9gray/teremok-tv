@@ -36,7 +36,6 @@ protocol MasterVCRoutingLogic: MasterRoutingLogic {
     func navigateToSearch()
     func navigateToMain()
     func navigateToVideo(id: Int)
-    func presentWelcome()
     func navigateToAddChild()
     func navigateToMusic()
     func navigateToGameList()
@@ -51,14 +50,6 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
     weak var viewController: MasterViewController?
     var dataStore: MasterDataStore?
     var modalControllersQueue = Queue<UIViewController>()
-    
-    func presentWelcome(){
-        let vc = AppLaunchScreenViewController.instantiate(fromStoryboard: .welcome)
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
-        viewController?.modalPresentationStyle = .overCurrentContext
-        viewController?.navigationController?.present(vc, animated: true, completion: nil)
-    }
 
     func navigateToMain(){
         viewController?.isKidsPlusShow = true

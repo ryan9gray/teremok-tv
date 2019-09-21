@@ -258,6 +258,7 @@
 		CA52F371223DA1360058194E /* PlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA52F36F223DA1360058194E /* PlaylistCollectionViewCell.swift */; };
 		CA52F372223DA1360058194E /* PlaylistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA52F370223DA1360058194E /* PlaylistCollectionViewCell.xib */; };
 		CA56D0C62302A424006298C5 /* ariblk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA56D0C52302A424006298C5 /* ariblk.ttf */; };
+		CA573D462336666E00241990 /* OnBoarding.mov in Resources */ = {isa = PBXBuildFile; fileRef = CA573D452336666E00241990 /* OnBoarding.mov */; settings = {ASSET_TAGS = (OnBoarding, ); }; };
 		CA57897B226FA76600F05A5A /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57897A226FA76500F05A5A /* StoreReviewHelper.swift */; };
 		CA5CB164213F0957000CB3D5 /* flip.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5CB163213F0957000CB3D5 /* flip.json */; };
 		CA5CB166213F095F000CB3D5 /* krya.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5CB165213F095F000CB3D5 /* krya.json */; };
@@ -979,6 +980,7 @@
 		CA52F36F223DA1360058194E /* PlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA52F370223DA1360058194E /* PlaylistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCollectionViewCell.xib; sourceTree = "<group>"; };
 		CA56D0C52302A424006298C5 /* ariblk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ariblk.ttf; sourceTree = "<group>"; };
+		CA573D452336666E00241990 /* OnBoarding.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = OnBoarding.mov; sourceTree = "<group>"; };
 		CA57897A226FA76500F05A5A /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		CA5CB163213F0957000CB3D5 /* flip.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flip.json; sourceTree = "<group>"; };
 		CA5CB165213F095F000CB3D5 /* krya.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = krya.json; sourceTree = "<group>"; };
@@ -2182,6 +2184,7 @@
 		CAA884562139204100E27F7A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CA573D452336666E00241990 /* OnBoarding.mov */,
 				CAF9614F22995FAC006E3046 /* Game */,
 				CAD16DEC2147E69D00A82DBB /* Animation */,
 				CADB3D6E21F7AD4D009467B8 /* Music */,
@@ -3080,6 +3083,7 @@
 					IntroduceAnimals,
 					IntroduceMonsters,
 					MonstersImage,
+					OnBoarding,
 				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1030;
@@ -3270,6 +3274,7 @@
 				CA5100C122F6EACF00821C25 /* alphavite_24_word_2.wav in Resources */,
 				CA5100AA22F6EACF00821C25 /* alphavite_32.wav in Resources */,
 				CA5100AC22F6EACF00821C25 /* alphavite_16_word_2.wav in Resources */,
+				CA573D462336666E00241990 /* OnBoarding.mov in Resources */,
 				CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */,
 				CA5100DC22F6EACF00821C25 /* alphavite_1.wav in Resources */,
 				CAF961C122995FF3006E3046 /* animal_12.mp3 in Resources */,
@@ -4123,7 +4128,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage";
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage OnBoarding";
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = AlphabetSounds;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4151,7 +4156,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage";
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage OnBoarding";
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = AlphabetSounds;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4242,7 +4247,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage";
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage OnBoarding";
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = AlphabetSounds;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";

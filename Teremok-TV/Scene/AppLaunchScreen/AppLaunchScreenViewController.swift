@@ -19,6 +19,14 @@ class AppLaunchScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if !LocalStore.onBoarding {
+            // LocalStore.onBoarding = true
+            let vc = OnboardingViewController.instantiate(fromStoryboard: .welcome)
+            ViewHierarchyWorker.setRootViewController(rootViewController: vc)
+            self.dismiss(animated: true, completion: nil)
+            return
+        }
+
         if ServiceConfiguration.activeConfiguration() == .sandbox  {
             ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
             self.dismiss(animated: true, completion: nil)

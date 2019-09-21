@@ -10,12 +10,14 @@ import Foundation
 class OnDemandLoader {
 
     enum Tags {
+
         enum OnDemand: String {
             case introduceAlphabet = "IntroduceAlphabet"
             case introduceAnimals = "IntroduceAnimals"
             case introduceMonsters = "IntroduceMonsters"
-
+            case onBoarding = "OnBoarding"
         }
+
         enum Prefetch: String {
             case alphabetSounds = "AlphabetSounds"
         }
@@ -27,58 +29,46 @@ class OnDemandLoader {
         }
     }
 
-    private lazy var bundleResourceRequest = NSBundleResourceRequest(tags: Set(getTags()))
 
     func getTags() -> [String] {
         return Tags.Prefetch.allValues().map { $0.rawValue }
             + Tags.Initial.allValues().map { $0.rawValue }
-            + Tags.OnDemand.allValues().map { $0.rawValue }
     }
 
     func loadOnDemandAssets() {
-        introducongGames()
-        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] (available) in
+        let tags = getTags() + introducongGames()
+        let bundleResourceRequest = NSBundleResourceRequest(tags: Set(tags))
+        bundleResourceRequest.conditionallyBeginAccessingResources { available in
             if available {
                 //self.loadOnboardingAssets()
             } else {
-                self.bundleResourceRequest.beginAccessingResources { (error) in
+                bundleResourceRequest.beginAccessingResources { error in
                     guard error == nil else { return }
-                    //self.loadOnboardingAssets()
+                    
+                    print("OnDemand Error: \(error.debugDescription)")
                 }
             }
         }
     }
 
-    private func introducongGames() {
+    private func introducongGames() -> [String] {
+        var files: [Tags.OnDemand] = []
         if !LocalStore.alphaviteIntroduce {
-            getAccess(.introduceAlphabet)
+            files.append(.introduceAlphabet)
         }
         if !LocalStore.monsterIntroduce {
-            getAccess(.introduceMonsters)
+            files.append(.introduceMonsters)
         }
         if !LocalStore.secondAnimalsIntroduce, !LocalStore.firstAnimalsIntroduce {
-            getAccess(.introduceAnimals)
+            files.append(.introduceAnimals)
         }
-    }
-
-    func getAccess(_ file: Tags.OnDemand) {
-        NSBundleResourceRequest(tags: Set([file.rawValue])).conditionallyBeginAccessingResources { [unowned self] available in
-            if available {
-                //self.loadOnboardingAssets()
-            } else {
-                self.bundleResourceRequest.beginAccessingResources { (error) in
-                    guard error == nil else { return }
-                    //self.loadOnboardingAssets()
-                }
-            }
+        if !LocalStore.onBoarding {
+            files.append(.onBoarding)
         }
+        return files.map { $0.rawValue }
     }
 
     static func discardIntroducing(_ file: Tags.OnDemand) {
         NSBundleResourceRequest(tags: Set([file.rawValue])).endAccessingResources()
-    }
-
-    private func discardOnDemandAssets() {
-        bundleResourceRequest.endAccessingResources()
     }
 }

@@ -80,6 +80,16 @@ struct LocalStore {
         }
     }
 
+    static var onBoarding: Bool {
+        get {
+            return userDefaults.bool(forKey: "onBoarding")
+        }
+        set {
+            userDefaults.set(newValue, forKey: "onBoarding")
+            userDefaults.synchronize()
+        }
+    }
+
     static var animalsTip: Int {
         get {
             return userDefaults.integer(forKey: "animalsTip")

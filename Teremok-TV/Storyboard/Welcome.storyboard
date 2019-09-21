@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qdO-Ls-Ae1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qdO-Ls-Ae1">
     <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,6 +35,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6NT-6p-bwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-454.43349753694582" y="-132"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="8MQ-FR-JKh">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="LMp-1x-qVE" customClass="OnboardingViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nf4-VH-6Sc">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97b-Td-Mol">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="97b-Td-Mol" secondAttribute="trailing" id="Uq8-yu-Vz9"/>
+                            <constraint firstItem="97b-Td-Mol" firstAttribute="leading" secondItem="nf4-VH-6Sc" secondAttribute="leading" id="ZuB-fy-YBG"/>
+                            <constraint firstAttribute="bottom" secondItem="97b-Td-Mol" secondAttribute="bottom" id="qI4-m1-O7i"/>
+                            <constraint firstItem="97b-Td-Mol" firstAttribute="top" secondItem="96z-19-The" secondAttribute="top" id="sFK-03-uM1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="96z-19-The"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoBackView" destination="97b-Td-Mol" id="qYi-fe-mLE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUq-Sg-IBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446" y="602"/>
         </scene>
     </scenes>
     <resources>
