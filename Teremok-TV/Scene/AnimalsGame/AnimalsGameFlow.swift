@@ -56,6 +56,9 @@ class AnimalsGameFlow  {
         controller.round = number
         master?.router?.introduceController(viewController: controller, completion: { finish in
             LocalStore.secondAnimalsIntroduce = finish
+            if finish {
+                OnDemandLoader.discardIntroducing(.introduceAnimals)
+            }
             self.startChoice()
         })
     }

@@ -115,6 +115,9 @@ class AlphaviteGameFlow  {
         controller.video = .alphavite
         master?.router?.introduceController(viewController: controller, completion: { finish in
             LocalStore.alphaviteIntroduce = finish
+            if finish {
+                OnDemandLoader.discardIntroducing(.introduceAlphabet)
+            }
             self.startFlow()
         })
     }

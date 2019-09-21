@@ -34,7 +34,7 @@
 		11CF6B90232A071A00F8E529 /* monsterOpenCard.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B89232A071A00F8E529 /* monsterOpenCard.wav */; };
 		11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8B232A071A00F8E529 /* monsterCloseAll.wav */; };
 		11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8C232A071A00F8E529 /* monsterRight.wav */; };
-		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; settings = {ASSET_TAGS = (IntroducingVideo, ); }; };
+		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceMonsters, ); }; };
 		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
@@ -540,7 +540,7 @@
 		CADB3D7E21F8D54B009467B8 /* GetAchievementsCommand .swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB3D7D21F8D54B009467B8 /* GetAchievementsCommand .swift */; };
 		CADD14AB2309683400AE920A /* happy_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AA2309683400AE920A /* happy_Pick.json */; };
 		CADD14AD2309887300AE920A /* end_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AC2309887200AE920A /* end_Pick.json */; };
-		CADD14AF2309C6E500AE920A /* Pick_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AE2309C6E500AE920A /* Pick_introduce.mp4 */; settings = {ASSET_TAGS = (IntroducingVideo, ); }; };
+		CADD14AF2309C6E500AE920A /* Pick_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AE2309C6E500AE920A /* Pick_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceAlphabet, ); }; };
 		CADD14B523107F7C00AE920A /* happy_Cloud_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B023107F7B00AE920A /* happy_Cloud_1.json */; };
 		CADD14B623107F7C00AE920A /* happy_Cloud_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B123107F7B00AE920A /* happy_Cloud_2.json */; };
 		CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B223107F7B00AE920A /* sad_Pick.json */; };
@@ -687,8 +687,8 @@
 		CAF9620D22995FF3006E3046 /* animal_42.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AD22995FF3006E3046 /* animal_42.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
 		CAF9620E22995FF3006E3046 /* animal_40.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AE22995FF3006E3046 /* animal_40.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
 		CAF9621022995FF3006E3046 /* animal_41.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961B022995FF3006E3046 /* animal_41.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
-		CAF9621522996022006E3046 /* scene-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621222996022006E3046 /* scene-2.mp4 */; settings = {ASSET_TAGS = (IntroducingVideo, ); }; };
-		CAF9621722996022006E3046 /* scene-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621422996022006E3046 /* scene-1.mp4 */; settings = {ASSET_TAGS = (IntroducingVideo, ); }; };
+		CAF9621522996022006E3046 /* scene-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621222996022006E3046 /* scene-2.mp4 */; settings = {ASSET_TAGS = (IntroduceAnimals, ); }; };
+		CAF9621722996022006E3046 /* scene-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621422996022006E3046 /* scene-1.mp4 */; settings = {ASSET_TAGS = (IntroduceAnimals, ); }; };
 		CAF9622C229970F7006E3046 /* AnimalsStatisticPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF96226229970F7006E3046 /* AnimalsStatisticPresenter.swift */; };
 		CAF9622E229970F7006E3046 /* AnimalsStatisticRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF96228229970F7006E3046 /* AnimalsStatisticRouter.swift */; };
 		CAF9622F229970F7006E3046 /* AnimalsStatisticModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF96229229970F7006E3046 /* AnimalsStatisticModels.swift */; };
@@ -3076,7 +3076,9 @@
 					AlphabetSounds,
 					AnimalsImage,
 					AnimalsSounds,
-					IntroducingVideo,
+					IntroduceAlphabet,
+					IntroduceAnimals,
+					IntroduceMonsters,
 					MonstersImage,
 				);
 				LastSwiftUpdateCheck = 1020;
