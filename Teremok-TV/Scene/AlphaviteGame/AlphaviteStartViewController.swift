@@ -45,7 +45,7 @@ class AlphaviteStartViewController: GameViewController {
 
         guard let mainSound = Bundle.main.path(forResource: AlphaviteMaster.Sound.main.rawValue, ofType: "wav")
         else {
-            master?.present(errorString: "игра загружайте, зайдите позже", completion: {
+            master?.present(errorString: "Игра загружайте, зайдите позже", completion: {
                 self.masterRouter?.dismiss()
             })
             return

@@ -34,8 +34,8 @@ class OnDemandLoader {
     lazy private var bundleResourceRequest = NSBundleResourceRequest(tags: Set(getTags + introducongGames))
 
     private var getTags: [String] {
-        return Tags.Prefetch.allValues().map { $0.rawValue }
-            + Tags.Initial.allValues().map { $0.rawValue }
+        return Tags.Initial.allValues().map { $0.rawValue }
+            + Tags.Prefetch.allValues().map { $0.rawValue }
     }
 
     func loadOnDemandAssets() {
