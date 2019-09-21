@@ -15,6 +15,8 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
 
     var video: PrincessMovie!
     var action: ((Bool) -> Void)?
+    private var avPlayer: AVPlayer?
+    private var avPlayerLayer: AVPlayerLayer!
 
     @IBAction private func nextClick(_ sender: Any) {
         action?(true)
@@ -24,11 +26,14 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
         super.viewDidLoad()
 
         playButton.isHidden = ServiceConfiguration.activeConfiguration() == .prod
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
         playVideo()
     }
 
-    var avPlayer: AVPlayer?
-    var avPlayerLayer: AVPlayerLayer!
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
