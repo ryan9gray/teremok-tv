@@ -17,7 +17,7 @@ class OnDemandLoader {
             case introduceAlphabet = "IntroduceAlphabet"
             case introduceAnimals = "IntroduceAnimals"
             case introduceMonsters = "IntroduceMonsters"
-            case onBoarding = "OnBoarding"
+            //case onBoarding = "OnBoarding"
         }
 
         enum Prefetch: String {
@@ -63,9 +63,6 @@ class OnDemandLoader {
         }
         if !LocalStore.secondAnimalsIntroduce, !LocalStore.firstAnimalsIntroduce {
             files.append(.introduceAnimals)
-        }
-        if !LocalStore.onBoarding {
-            files.append(.onBoarding)
         }
         return files.map { $0.rawValue }
     }

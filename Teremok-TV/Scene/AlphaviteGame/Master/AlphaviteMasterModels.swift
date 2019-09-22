@@ -15,7 +15,7 @@ import UIKit
 enum AlphaviteMaster {
   
     static let DefaultChars = [
-        "A",
+        "А",
         "Р",
         "Е"
     ]
