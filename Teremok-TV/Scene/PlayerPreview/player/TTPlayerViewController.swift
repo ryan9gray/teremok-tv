@@ -79,7 +79,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     private var playerItemContext = 0
 
     @IBAction func playClick() {
-        //sender.isSelected.toggle()
         if player?.rate == 0 {
             play()
         } else {
@@ -129,7 +128,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     private func setUI(){
-        mainWindow = UIApplication.shared.keyWindow
         addGesture()
         playerSlider.addTarget(self, action: #selector(self.handlePlayheadSliderTouchBegin), for: .touchDown)
         playerSlider.addTarget(self, action:    #selector(self.handlePlayheadSliderTouchEnd), for: .touchUpInside)
@@ -140,19 +138,8 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         playButton.addTarget(self, action: #selector(self.playClick), for: .touchUpInside)
         heartButton.addTarget(self, action: #selector(self.heartClick), for: .touchUpInside)
     }
-
     
-    var mainParent: UIViewController?
-    var originalFrame: CGRect?
-    var currentFrame: CGRect?
-    var mainWindow: UIWindow?
-    var containerView: UIView?
-    var window: UIWindow?
-    
-    @IBAction  func didFullscreenButtonSelected(_ sender: Any){
-        if mainWindow == nil {
-            mainWindow = UIApplication.shared.keyWindow
-        }
+    @IBAction func didFullscreenButtonSelected(_ sender: Any){
         if !isFullScreen {
             toFullScreen()
         }
@@ -166,32 +153,9 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             return
         }
         isFullScreen = true
-        guard let parent = self.parent else { return }
+        delegate?.avPlayerOverlay(self, didFullScreen: nil)
 
-        if window == nil{
-            self.originalFrame = parent.view.frame
-            self.mainParent = parent.parent
-            self.currentFrame = parent.view.convert(parent.view.frame, from: mainWindow)
-            self.containerView = parent.view.superview;
-            
-            parent.removeFromParent()
-            parent.view.removeFromSuperview()
-            parent.willMove(toParent: nil)
-            self.window = UIWindow.init(frame: currentFrame!)
-            window?.backgroundColor = .black
-            window?.windowLevel = .normal
-            window?.makeKeyAndVisible()
-            window?.rootViewController = parent
-            parent.view.frame = window?.bounds ?? self.view.bounds
-            delegate?.avPlayerOverlay(self, didFullScreen: nil)
-
-            UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .calculationModeCubic, animations: {
-                UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
-                    self.window?.frame = (self.mainWindow?.bounds)!
-                }
-            })
-            setControls(isFull: isFullScreen)
-        }
+        setControls(isFull: isFullScreen)
     }
 
     private func toNormalScreen(){
@@ -199,25 +163,7 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             return
         }
         isFullScreen = false
-        guard let parent = self.parent else { return }
-
-        self.window?.frame = (self.mainWindow?.bounds)!
         delegate?.avPlayerOverlay(self, didNormalScreen: nil)
-        
-        UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .layoutSubviews, animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
-                parent.view.removeFromSuperview()
-                self.window?.rootViewController = nil
-                self.mainParent?.addChild(parent)
-                self.containerView?.addSubview(parent.view)
-                parent.view.frame = self.originalFrame ?? parent.view.frame
-                parent.didMove(toParent: self.mainParent)
-                self.mainWindow?.makeKeyAndVisible()
-                self.containerView = nil
-                self.mainParent = nil
-                self.window = nil
-            }
-        })
         setControls(isFull: isFullScreen)
     }
     
@@ -229,11 +175,13 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         pause()
         stopTimer()
     }
+    
     @IBAction func handlePlayheadSliderValueChanged(_ sender: UISlider) {
         guard let duration : CMTime = (player?.currentItem?.asset.duration) else { return }
         let seconds : Float64 = CMTimeGetSeconds(duration) * Double(sender.value)
         timeLbl.text = PlayerHelper.stringFromTimeInterval(seconds)
     }
+
     @IBAction func handlePlayheadSliderTouchEnd(_ sender: UISlider) {
         
         if player?.status == .readyToPlay {
@@ -377,12 +325,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     deinit {
         stopTimer()
         delegate = nil
-        containerView = nil
-        mainParent = nil
-        window?.removeFromSuperview()
-        window = nil;
-        mainWindow?.makeKeyAndVisible()
-        
         removePlayerObservers()
         removePlayerItemObservers()
         removePlayerNotifations()

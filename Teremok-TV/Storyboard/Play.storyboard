@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +14,7 @@
                 <avPlayerViewController storyboardIdentifier="PlayerViewController" showsPlaybackControls="NO" videoGravity="AVLayerVideoGravityResizeAspect" id="bEx-cn-zbA" customClass="PlayerViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNi-AY-Mjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418" y="-762"/>
+            <point key="canvasLocation" x="1521" y="-602"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="MjT-4E-LXe">
@@ -49,9 +47,6 @@
                                         <integer key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="bEx-cn-zbA" kind="embed" identifier="playerSeg" id="9cP-dS-XIs"/>
-                                </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03A-KY-gcw">
                                 <rect key="frame" x="116" y="78" width="64" height="40"/>
@@ -97,7 +92,7 @@
         <scene sceneID="uWo-2A-p4k">
             <objects>
                 <viewController storyboardIdentifier="TTPlayerViewController" id="fcp-Ii-5Ph" customClass="TTPlayerViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oFZ-gz-WPj">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="oFZ-gz-WPj">
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -114,7 +109,7 @@
                                         <state key="selected" image="icPause"/>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y5H-rv-QBg" customClass="TTPlayerSlider" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="61" y="0.0" width="577" height="33"/>
+                                        <rect key="frame" x="61" y="0.0" width="577" height="31"/>
                                         <color key="minimumTrackTintColor" red="0.53333336109999996" green="0.78431373829999995" blue="0.27843138579999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="maximumTrackTintColor" red="1" green="0.52941179279999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="thumbTintColor" red="1" green="0.84705883260000003" blue="0.4196078479" alpha="1" colorSpace="calibratedRGB"/>
