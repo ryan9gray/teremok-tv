@@ -72,6 +72,9 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        OnDemandLoader.share.loadOnDemandAssets { _ in }
+
         do {
             //Preparation to play
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .moviePlayback)
@@ -83,6 +86,14 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
         router?.navigateMain()
 
         setupTrackableChain(parent: analytics)
+
+        OnDemandLoader.share.getAccess(.introduceAnimals) { [weak self] result in
+            guard result.isFailure else { return }
+
+            self?.present(errorString: "Игра еще не загрузилась, попробуйте позже") {
+                self?.dismiss(animated: true)
+            }
+        }
     }
 
     func openSettings() {

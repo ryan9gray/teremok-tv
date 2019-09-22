@@ -102,6 +102,7 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        OnDemandLoader.share.loadOnDemandAssets { _ in }
         displayProfile()
         router?.navigateMain()
     }

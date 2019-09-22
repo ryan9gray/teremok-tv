@@ -38,16 +38,16 @@ class OnDemandLoader {
             + Tags.Prefetch.allValues().map { $0.rawValue }
     }
 
-    func loadOnDemandAssets() {
+    func loadOnDemandAssets(completion: @escaping (Result<Bool>) -> Void) {
         bundleResourceRequest.endAccessingResources()
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             if available {
-                //self.loadOnboardingAssets()
+                completion(.success(true))
             } else {
                 self.bundleResourceRequest.beginAccessingResources { error in
-                    guard error == nil else { return }
-                    
-                    print("OnDemand Error: \(error.debugDescription)")
+                    guard let error = error else { return }
+
+                    completion(.failure(error))
                 }
             }
         }
@@ -66,4 +66,24 @@ class OnDemandLoader {
         }
         return files.map { $0.rawValue }
     }
+
+    func getAccess(_ file: Tags.OnDemand, completion: @escaping (Result<Bool>) -> Void) {
+        getAccess(file.rawValue, completion: completion)
+    }
+
+    func getAccess(_ file: String, completion: @escaping (Result<Bool>) -> Void) {
+        NSBundleResourceRequest(tags: Set([file])).conditionallyBeginAccessingResources { [unowned self] available in
+            if available {
+                completion(.success(true))
+            } else {
+                self.bundleResourceRequest.beginAccessingResources { error in
+                    guard let error = error else { return }
+
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+
+
 }

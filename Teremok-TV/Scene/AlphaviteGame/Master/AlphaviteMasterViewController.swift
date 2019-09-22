@@ -76,6 +76,8 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        OnDemandLoader.share.loadOnDemandAssets { _ in }
+
         do {
             //Preparation to play
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .moviePlayback)
@@ -87,6 +89,7 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
 
         displayProfile()
         router?.navigateMain()
+
     }
 
     override func viewDidAppear(_ animated: Bool) {

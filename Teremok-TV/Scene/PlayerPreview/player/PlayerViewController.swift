@@ -65,7 +65,7 @@ class PlayerViewController: AVPlayerViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
 
-        view.layer.cornerRadius = 12
+        view.layer.cornerRadius = fullOverlay.isFullScreen ? 0 : 12
     }
 
     func overlaySetup(){

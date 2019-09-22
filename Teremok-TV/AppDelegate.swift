@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TrackableClass {
         FirebaseApp.configure()
         Fabric.with([Crashlytics.self])
 
-        OnDemandLoader.share.loadOnDemandAssets()
+        OnDemandLoader.share.loadOnDemandAssets { _ in }
 
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
