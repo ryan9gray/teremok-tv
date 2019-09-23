@@ -75,6 +75,7 @@ class SearchViewController: AbstracViewController, SearchDisplayLogic {
     func prepareUI(){
         activityView = LottieHUD()
         collectionView.delegate = self
+        seartchFld.textColor = UIColor.View.orange
         searchFldConstraint.isActive = false
         let cells = [SearchCharacterCollectionViewCell.self, LoadingCollectionViewCell.self]
         collectionView.register(cells: cells)
