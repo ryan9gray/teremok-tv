@@ -102,7 +102,7 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Initial.monstersImage.rawValue]))
+        let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.monstersImage.rawValue]))
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             DispatchQueue.main.async {
             if available {

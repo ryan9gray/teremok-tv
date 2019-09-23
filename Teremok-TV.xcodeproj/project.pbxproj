@@ -258,7 +258,7 @@
 		CA52F371223DA1360058194E /* PlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA52F36F223DA1360058194E /* PlaylistCollectionViewCell.swift */; };
 		CA52F372223DA1360058194E /* PlaylistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA52F370223DA1360058194E /* PlaylistCollectionViewCell.xib */; };
 		CA56D0C62302A424006298C5 /* ariblk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA56D0C52302A424006298C5 /* ariblk.ttf */; };
-		CA573D4823367BB400241990 /* OnBoarding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA573D4723367BB400241990 /* OnBoarding.mp4 */; };
+		CA573D4823367BB400241990 /* OnBoarding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA573D4723367BB400241990 /* OnBoarding.mp4 */; settings = {ASSET_TAGS = (OnBoarding, ); }; };
 		CA57897B226FA76600F05A5A /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57897A226FA76500F05A5A /* StoreReviewHelper.swift */; };
 		CA5CB164213F0957000CB3D5 /* flip.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5CB163213F0957000CB3D5 /* flip.json */; };
 		CA5CB166213F095F000CB3D5 /* krya.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5CB165213F095F000CB3D5 /* krya.json */; };
@@ -3082,6 +3082,7 @@
 					IntroduceAnimals,
 					IntroduceMonsters,
 					MonstersImage,
+					OnBoarding,
 				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1100;
@@ -4126,8 +4127,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage";
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = AlphabetSounds;
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4155,8 +4156,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage";
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = AlphabetSounds;
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4247,8 +4248,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = "AlphabetImages AnimalsImage AnimalsSounds MonstersImage";
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = AlphabetSounds;
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

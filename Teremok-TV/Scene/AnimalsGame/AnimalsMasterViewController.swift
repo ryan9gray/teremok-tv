@@ -74,7 +74,7 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
         super.viewDidLoad()
         
         let bundleResourceRequest = NSBundleResourceRequest(tags:
-            Set([OnDemandLoader.Tags.Initial.animalsSounds.rawValue, OnDemandLoader.Tags.Initial.animalsImage.rawValue])
+            Set([OnDemandLoader.Tags.Prefetch.animalsSounds.rawValue, OnDemandLoader.Tags.Prefetch.animalsImage.rawValue])
         )
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             DispatchQueue.main.async {

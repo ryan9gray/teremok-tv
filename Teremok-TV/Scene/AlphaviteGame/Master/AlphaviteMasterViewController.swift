@@ -76,7 +76,7 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Initial.alphabetImages.rawValue]))
+        let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.alphabetImages.rawValue]))
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             DispatchQueue.main.async {
                 if available {

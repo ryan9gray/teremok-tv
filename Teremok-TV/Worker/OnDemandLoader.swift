@@ -17,25 +17,24 @@ class OnDemandLoader {
             case introduceAlphabet = "IntroduceAlphabet"
             case introduceAnimals = "IntroduceAnimals"
             case introduceMonsters = "IntroduceMonsters"
-            //case onBoarding = "OnBoarding"
         }
 
         enum Prefetch: String {
             case alphabetSounds = "AlphabetSounds"
-        }
-        enum Initial: String {
             case alphabetImages = "AlphabetImages"
             case animalsImage = "AnimalsImage"
             case animalsSounds = "AnimalsSounds"
             case monstersImage = "MonstersImage"
+        }
+        enum Initial: String {
+            case onBoarding = "OnBoarding"
         }
     }
 
     lazy private var bundleResourceRequest = NSBundleResourceRequest(tags: Set(getTags + introducongGames))
 
     private var getTags: [String] {
-        return Tags.Initial.allValues().map { $0.rawValue }
-            + Tags.Prefetch.allValues().map { $0.rawValue }
+        return Tags.Prefetch.allValues().map { $0.rawValue }
     }
 
     func loadOnDemandAssets(completion: @escaping (Result<Bool>) -> Void) {
@@ -54,17 +53,20 @@ class OnDemandLoader {
     }
 
     private var introducongGames: [String] {
-        var files: [Tags.OnDemand] = []
+        var files: [String] = []
         if !LocalStore.alphaviteIntroduce {
-            files.append(.introduceAlphabet)
+            files.append(Tags.OnDemand.introduceAlphabet.rawValue)
         }
         if !LocalStore.monsterIntroduce {
-            files.append(.introduceMonsters)
+            files.append(Tags.OnDemand.introduceMonsters.rawValue)
         }
         if !LocalStore.secondAnimalsIntroduce, !LocalStore.firstAnimalsIntroduce {
-            files.append(.introduceAnimals)
+            files.append(Tags.OnDemand.introduceAnimals.rawValue)
         }
-        return files.map { $0.rawValue }
+        if !LocalStore.onBoarding {
+            files.append(Tags.Initial.onBoarding.rawValue)
+        }
+        return files
     }
 
     func getAccess(_ file: Tags.OnDemand, completion: @escaping (Result<Bool>) -> Void) {

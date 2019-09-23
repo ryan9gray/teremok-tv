@@ -21,7 +21,7 @@ class AppLaunchScreenViewController: UIViewController {
 
         if ServiceConfiguration.activeConfiguration() == .sandbox  {
             ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
-            self.dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
             return
         }
 
@@ -65,9 +65,20 @@ class AppLaunchScreenViewController: UIViewController {
 
     func onBoard() {
         if !LocalStore.onBoarding {
-            let vc = OnboardingViewController.instantiate(fromStoryboard: .welcome)
-            ViewHierarchyWorker.setRootViewController(rootViewController: vc)
-            dismiss(animated: true, completion: nil)
+            let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.alphabetImages.rawValue]))
+            bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+                DispatchQueue.main.async {
+                    if available {
+                        let vc = OnboardingViewController.instantiate(fromStoryboard: .welcome)
+                        ViewHierarchyWorker.setRootViewController(rootViewController: vc)
+                        self.dismiss(animated: true, completion: nil)
+                      } else {
+                          bundleResourceRequest.beginAccessingResources { error in
+                            print("\(error.debugDescription)")
+                          }
+                      }
+                }
+            }
         } else {
             ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
             dismiss(animated: true, completion: nil)
