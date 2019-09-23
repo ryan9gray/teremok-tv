@@ -211,10 +211,6 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         BackgroundMediaWorker.setImage(background: backgroundView)
     }
 
-    func showWelcome(){
-        router?.presentWelcome()
-    }
-    
     func showMain(){
         router?.navigateToMain()
     }

@@ -35,7 +35,7 @@ enum MonsterMaster {
     
     enum Sound: String {
         case main = "monsterPickMain"
-        case button = "monsterButton"
+        case button = "push_button_sound"
         case rightAnswer = "monsterRight"
         case wrongAnswer = "monsterWrong"
         case closeAll = "monsterCloseAll"

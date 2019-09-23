@@ -32,7 +32,9 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     func navigateMain() {
         pushChild(viewControllerClass: MonsterStartViewController.self, storyboard: .monster)
     }
-    
+    func dismiss() {
+        viewController?.dismiss(animated: true)
+    }
     /**
      Clean hierarchy
      */
@@ -64,9 +66,9 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
             remove()
         }
         if let viewController = viewController {
-            presentChild(viewController: viewController)
             viewController.masterRouter = self
             modalChildVC = viewController
+            presentChild(viewController: viewController)
         }
     }
     

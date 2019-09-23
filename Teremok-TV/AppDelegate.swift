@@ -63,10 +63,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TrackableClass {
     func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
         BackgroundSession.shared.saveBackgroundCompletionHandler(completionHandler)
     }
-    
+
+
     fileprivate func configureApp() {
         FirebaseApp.configure()
         Fabric.with([Crashlytics.self])
+
+        OnDemandLoader.share.loadOnDemandAssets { _ in }
 
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false

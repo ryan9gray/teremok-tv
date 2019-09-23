@@ -67,8 +67,8 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "playerSeg" {
             if let container = segue.destination as? PlayerViewController {
-                self.playerVC = container
-                self.playerVC.fullOverlay.delegate = self
+                playerVC = container
+                playerVC.fullOverlay.delegate = self
             }
         }
     }
@@ -89,6 +89,7 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupPlayer()
         prepareUI()
         setupTrackableChain(parent: analytics)
 
@@ -99,6 +100,20 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
         super.viewWillDisappear(animated)
 
         playerVC.fullOverlay.pause()
+    }
+
+    func setupPlayer() {
+        guard let parent = parent else { return }
+
+        playerVC = PlayerViewController.instantiate(fromStoryboard: .play)
+        playerVC.fullOverlay.delegate = self
+        let currentFrame = parent.view.convert(playerContainer.frame, from: parent.view)
+
+        playerVC.view.frame = currentFrame
+
+        parent.addChild(playerVC)
+        parent.view.addSubview(playerVC.view)
+        playerVC.didMove(toParent: parent)
     }
 
     func prepareUI(){
@@ -139,6 +154,10 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     }
 
     deinit {
+        playerVC.willMove(toParent: nil)
+        playerVC.view.removeFromSuperview()
+        playerVC.removeFromParent()
+        playerVC = nil
         track(Events.Time.Video, trackedProperties: [Keys.Timer  ~>> playerVC?.player?.currentItem?.currentTime().seconds ?? 0.0])
     }
 }
@@ -180,12 +199,21 @@ extension PreviewViewController : TrackableClass {
 }
 
 extension PreviewViewController : AVPlayerOverlayVCDelegate {
-    func avPlayerOverlay(_ vc: TTPlayerViewController, didFullScreen sender: Any?) {
+
+    func avPlayerOverlay(_ vc: TTPlayerViewController, didNormalScreen sender: Any?) {
+        guard let parent = parent else { return }
+        let currentFrame = parent.view.convert(playerContainer.frame, from: parent.view)
+
+        playerVC.view.frame = currentFrame
     }
+
+    func avPlayerOverlay(_ vc: TTPlayerViewController, didFullScreen sender: Any?) {
+        playerVC.view.frame = parent!.view.frame
+    }
+
     func avPlayerOverlay(_ vc: TTPlayerViewController, willNormalScreen sender: Any?) {
     }
-    func avPlayerOverlay(_ vc: TTPlayerViewController, didNormalScreen sender: Any?) {
-    }
+
     func avPlayerOverlay(_ vc: TTPlayerViewController, periodicTimeObserver time: CMTime) {
     }
     func avPlayerOverlay(_ vc: TTPlayerViewController, statusReadyToPlay sender: Any?) {

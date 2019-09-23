@@ -17,9 +17,11 @@ class MonsterGameFlow {
     }
     
     var game: Game!
+    var checkIntro: Bool = true
 
     func startFlow(difficulty: Int) {
-        guard !LocalStore.monsterIntroduce() else {
+        if checkIntro, !LocalStore.monsterIntroduce {
+            checkIntro = false
             showIntroduce(difficulty: difficulty)
             return
         }
@@ -94,7 +96,8 @@ class MonsterGameFlow {
     private func showIntroduce(difficulty: Int) {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .monster
-        master?.router?.introduceController(viewController: controller) {
+        master?.router?.introduceController(viewController: controller) { finish in
+            LocalStore.monsterIntroduce = finish
             self.startFlow(difficulty: difficulty)
         }
     }
