@@ -73,7 +73,24 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        OnDemandLoader.share.loadOnDemandAssets { _ in }
+        let bundleResourceRequest = NSBundleResourceRequest(tags:
+            Set([OnDemandLoader.Tags.Initial.animalsSounds.rawValue, OnDemandLoader.Tags.Initial.animalsImage.rawValue])
+        )
+        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+            DispatchQueue.main.async {
+            if available {
+                self.router?.navigateMain()
+            } else {
+                bundleResourceRequest.beginAccessingResources { error in
+                    guard error == nil else { return }
+
+                    self.present(errorString: "Игра загружается, попробуйте позже") {
+                        self.dismiss(animated: true)
+                    }
+                }
+            }
+            }
+        }
 
         do {
             //Preparation to play
@@ -83,17 +100,8 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
         catch {
             // report for an error
         }
-        router?.navigateMain()
 
         setupTrackableChain(parent: analytics)
-
-        OnDemandLoader.share.getAccess(.introduceAnimals) { [weak self] result in
-            guard result.isFailure else { return }
-
-            self?.present(errorString: "Игра еще не загрузилась, попробуйте позже") {
-                self?.dismiss(animated: true)
-            }
-        }
     }
 
     func openSettings() {

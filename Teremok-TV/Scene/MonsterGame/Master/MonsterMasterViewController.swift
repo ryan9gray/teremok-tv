@@ -102,9 +102,23 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        OnDemandLoader.share.loadOnDemandAssets { _ in }
+        let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Initial.monstersImage.rawValue]))
+        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+            DispatchQueue.main.async {
+            if available {
+                self.router?.navigateMain()
+            } else {
+                bundleResourceRequest.beginAccessingResources { error in
+                    guard error == nil else { return }
+
+                    self.present(errorString: "Игра загружается, попробуйте позже") {
+                        self.dismiss(animated: true)
+                    }
+                }
+            }
+            }
+        }
         displayProfile()
-        router?.navigateMain()
     }
     
     override func viewDidAppear(_ animated: Bool) {
