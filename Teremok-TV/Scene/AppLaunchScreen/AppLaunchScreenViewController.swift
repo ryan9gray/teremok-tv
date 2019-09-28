@@ -37,7 +37,7 @@ class AppLaunchScreenViewController: UIViewController {
     
     // MARK: Do something
     
-    func start(){
+    func start() {
         animationView.animation = Animation.named(AppLaunchScreen.Animation.finish.rawValue)
         animationView.play(completion: { _ in
             print("finish animation")
@@ -45,7 +45,7 @@ class AppLaunchScreenViewController: UIViewController {
         })
     }
     
-    func loop(){
+    func loop() {
         animationView.animation = Animation.named(AppLaunchScreen.Animation.loop.rawValue)
         animationView.loopMode = .loop
         animationView.animationSpeed = 1.0
@@ -54,7 +54,7 @@ class AppLaunchScreenViewController: UIViewController {
             self.finish()
         }
     }
-    func finish(){
+    func finish() {
         animationView.animation = Animation.named(AppLaunchScreen.Animation.finish.rawValue)
         animationView.loopMode = .playOnce
         animationView.animationSpeed = 1.0
@@ -63,28 +63,36 @@ class AppLaunchScreenViewController: UIViewController {
         })
     }
 
+    func access() {
+        let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Initial.onBoarding.rawValue]))
+        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+            DispatchQueue.main.async {
+                if available {
+                    self.onBoarding()
+                  } else {
+                      bundleResourceRequest.beginAccessingResources { error in
+                        self.access()
+                      }
+                  }
+            }
+        }
+    }
+
     func onBoard() {
         if !LocalStore.onBoarding {
-            let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.alphabetImages.rawValue]))
-            bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
-                DispatchQueue.main.async {
-                    if available {
-                        let vc = OnboardingViewController.instantiate(fromStoryboard: .welcome)
-                        ViewHierarchyWorker.setRootViewController(rootViewController: vc)
-                        self.dismiss(animated: true, completion: nil)
-                      } else {
-                          bundleResourceRequest.beginAccessingResources { error in
-                            print("\(error.debugDescription)")
-                          }
-                      }
-                }
-            }
+            access()
         } else {
             ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
             dismiss(animated: true, completion: nil)
         }
     }
-    
+
+    func onBoarding() {
+        let vc = OnboardingViewController.instantiate(fromStoryboard: .welcome)
+        ViewHierarchyWorker.setRootViewController(rootViewController: vc)
+        dismiss(animated: true, completion: nil)
+    }
+
     enum AppLaunchScreen {
         enum Animation: String {
             case start = "Shade_open"
