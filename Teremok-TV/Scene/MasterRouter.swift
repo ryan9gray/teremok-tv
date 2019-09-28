@@ -74,7 +74,17 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
         vc.output = GamesListViewController.Output(
             openAnimals: navigateToAnimals,
             openAlphavite: navigateToAlphavite,
-            openMonster: navigateToMonster
+            openMonster: navigateToMonster,
+            openColors: navigateToColors
+        )
+        viewController?.present(vc, animated: true, completion: nil)
+    }
+
+    func navigateToColors() {
+        let vc = ColorsMasterViewController.instantiate(fromStoryboard: .colors)
+        vc.output = AlphaviteMasterViewController.Output(
+            openSettings: navigateToSettings,
+            openAuthorization: navigateToReg
         )
         viewController?.present(vc, animated: true, completion: nil)
     }

@@ -10,6 +10,11 @@ import UIKit
 
 class ColorsStartViewController: GameViewController {
 
+    @IBAction private func startTap(_ sender: Any) {
+        buttonPlayer?.play()
+        masterRouter?.startFlow(0)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

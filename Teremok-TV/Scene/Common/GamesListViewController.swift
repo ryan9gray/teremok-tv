@@ -15,6 +15,7 @@ class GamesListViewController: AbstracViewController {
         var openAnimals: () -> Void
         var openAlphavite: () -> Void
         var openMonster: () -> Void
+        var openColors: () -> Void
     }
 
     @IBOutlet private var titleLabel: StrokeLabel!
@@ -39,6 +40,11 @@ class GamesListViewController: AbstracViewController {
     @IBAction func monsterTap(_ sender: Any) {
         self.dismiss(animated: true) {
             self.output.openMonster()
+        }
+    }
+    @IBAction func colorsTap(_ sender: Any) {
+        self.dismiss(animated: true) {
+            self.output.openColors()
         }
     }
     
