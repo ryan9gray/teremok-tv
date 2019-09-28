@@ -42,8 +42,8 @@ class AlphaviteChoiceViewController: GameViewController {
     }
 
     private let gameHelper = AlphabetGameHelper()
-    private var audioPlayer = AVAudioPlayer()
-    private var pickPlayer = AVAudioPlayer()
+    private var audioPlayer: AVAudioPlayer?
+    private var pickPlayer: AVAudioPlayer?
 
     private var timer = Timer()
     private let limit: CGFloat = 30.0
@@ -110,7 +110,7 @@ class AlphaviteChoiceViewController: GameViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         timer.invalidate()
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
 
     @IBAction private func rightTap(_ sender: Any) {
@@ -138,7 +138,7 @@ class AlphaviteChoiceViewController: GameViewController {
             setWord(wordName)
         }
         displayChoice(char: char, wrong: gameHelper.randomChar(from: char), image: UIImage(named: word))
-        playSounds(gameHelper.getSounds(name: word)) {}
+        playSounds(gameHelper.getSounds(name: word))
     }
 
     private func displayChoice(char: String, wrong: String, image: UIImage?) {
@@ -182,9 +182,9 @@ class AlphaviteChoiceViewController: GameViewController {
         let cross = gameHelper.drawCross(view)
         if isRight {
             points += 1
-            playSounds(AlphaviteMaster.Sound.rightAnswer.url) {}
+            playSounds(AlphaviteMaster.Sound.rightAnswer.url)
         } else {
-            playSounds(AlphaviteMaster.Sound.wrongAnswer.url) {}
+            playSounds(AlphaviteMaster.Sound.wrongAnswer.url)
             view.layer.addSublayer(cross)
         }
         imageContainer.borderColor = isRight ? UIColor.Alphavite.Button.greenTwo : UIColor.Alphavite.Button.redTwo
@@ -232,16 +232,13 @@ class AlphaviteChoiceViewController: GameViewController {
         }
     }
 
-    private func playSounds(_ url: URL, completion: @escaping () -> Void) {
+    private func playSounds(_ url: URL) {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
         } catch {
             print("no file)")
         }
-        audioPlayer.play()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            completion()
-        }
+        audioPlayer?.play()
     }
 
     // MARK: Pick Animation
@@ -252,7 +249,7 @@ class AlphaviteChoiceViewController: GameViewController {
         } catch {
             print("no file)")
         }
-        pickPlayer.play()
+        pickPlayer?.play()
         let name = AlphaviteMaster.PickAnimations.end.rawValue
         pickAnimationView.animation = Animation.named(name)
         pickAnimationView.loopMode = .loop
@@ -277,7 +274,7 @@ class AlphaviteChoiceViewController: GameViewController {
         }, completion: { [weak self] _ in
             guard let self = self else { return }
 
-            self.pickPlayer.stop()
+            self.pickPlayer?.stop()
             self.pickReaction(isHappy: self.cheack(answer: side), complition: { _ in
                 self.hidePick(side: side, completion: completion)
             })
@@ -290,7 +287,7 @@ class AlphaviteChoiceViewController: GameViewController {
         } catch {
             print("no file)")
         }
-        pickPlayer.play()
+        pickPlayer?.play()
         let name = AlphaviteMaster.PickAnimations.end.rawValue
         pickAnimationView.animation = Animation.named(name)
         pickAnimationView.loopMode = .loop
@@ -307,14 +304,14 @@ class AlphaviteChoiceViewController: GameViewController {
                 self.pickPlace.constant = position
                 self.view.layoutIfNeeded()
         }, completion: { [weak self] _ in
-            self?.pickPlayer.stop()
+            self?.pickPlayer?.stop()
             completion(true)
         })
     }
 
     private func pickReaction(isHappy: Bool, complition: @escaping (Bool) -> Void) {
         if isHappy {
-            playSounds(AlphaviteMaster.Sound.jump.url) {}
+            playSounds(AlphaviteMaster.Sound.jump.url)
         }
         let namePick: AlphaviteMaster.PickAnimations = isHappy ? .happy : .sad
         pickAnimationView.animation = Animation.named(namePick.rawValue)

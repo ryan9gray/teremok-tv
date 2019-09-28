@@ -32,16 +32,17 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     func navigateMain() {
         pushChild(viewControllerClass: MonsterStartViewController.self, storyboard: .monster)
     }
-    
+    func dismiss() {
+        viewController?.dismiss(animated: true)
+    }
     /**
      Clean hierarchy
      */
     func startFlow(_ idx: Int) {
         guard let controller = viewController else { return }
         
-        viewController?.tipView?.dismiss()
+        controller.tipView?.dismiss()
         let flow = MonsterGameFlow(master: controller)
-        flow.service = dataStore?.service
         flow.startFlow(difficulty: idx)
     }
     
@@ -65,9 +66,9 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
             remove()
         }
         if let viewController = viewController {
-            presentChild(viewController: viewController)
             viewController.masterRouter = self
             modalChildVC = viewController
+            presentChild(viewController: viewController)
         }
     }
     

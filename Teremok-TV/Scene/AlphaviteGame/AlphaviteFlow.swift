@@ -10,6 +10,7 @@ import UIKit
 
 class AlphaviteGameFlow  {
     weak var master: AlphaviteMasterViewController?
+    private let service: AlphabetServiceProtocol = AlphabetService()
 
     init(master: AlphaviteMasterViewController) {
         self.master = master
@@ -18,10 +19,11 @@ class AlphaviteGameFlow  {
 
     private var isHard: Bool = false
     var game: Game!
-    var service: AlphabetServiceProtocol!
+    private var checkIntro: Bool = true
 
     func startFlow() {
-        guard !LocalStore.alphaviteIntroduce() else {
+        if checkIntro, !LocalStore.alphaviteIntroduce {
+            checkIntro = false
             showIntroduce()
             return
         }
@@ -111,7 +113,8 @@ class AlphaviteGameFlow  {
     private func showIntroduce() {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .alphavite
-        master?.router?.introduceController(viewController: controller, completion: {
+        master?.router?.introduceController(viewController: controller, completion: { finish in
+            LocalStore.alphaviteIntroduce = finish
             self.startFlow()
         })
     }
@@ -124,7 +127,7 @@ class AlphaviteGameFlow  {
     
     private func buyAlert() {
         let vc = CloudAlertViewController.instantiate(fromStoryboard: .alerts)
-        let text = Main.Messages.buyIntelect
+        let text = Main.Messages.buyGames
         vc.model = AlertModel(title: "", subtitle: text, buttonTitle: "В настройки")
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext

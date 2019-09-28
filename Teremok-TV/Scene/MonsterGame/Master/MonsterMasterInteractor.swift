@@ -17,12 +17,10 @@ protocol MonsterMasterBusinessLogic {
 }
 
 protocol MonsterMasterDataStore {
-    var service: MonsterServiceProtocol { get set }
 }
 
 class MonsterMasterInteractor: MonsterMasterBusinessLogic, MonsterMasterDataStore {
     var presenter: MonsterMasterPresentationLogic?    
 
-    var service: MonsterServiceProtocol = MonsterService()
 
 }

@@ -15,7 +15,7 @@ import UIKit
 enum AlphaviteMaster {
   
     static let DefaultChars = [
-        "A",
+        "А",
         "Р",
         "Е"
     ]
@@ -84,7 +84,7 @@ enum AlphaviteMaster {
         "alphavite_21_word_1": "Улитка", "alphavite_21_word_2": "Утка",
         "alphavite_22_word_1": "Фонарь", "alphavite_22_word_2": "Фрукты",
         "alphavite_23_word_1": "Хлеб", "alphavite_23_word_2": "Хорёк",
-        "alphavite_24_word_1": "Цветы", "alphavite_24_word_2": "Циплёнок",
+        "alphavite_24_word_1": "Цветы", "alphavite_24_word_2": "Цыплёнок",
         "alphavite_25_word_1": "Черепаха", "alphavite_25_word_2": "Чеснок",
         "alphavite_26_word_1": "Шиповник", "alphavite_26_word_2": "Шишка",
         "alphavite_27_word_1": "Щётка", "alphavite_27_word_2": "Щука",

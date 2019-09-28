@@ -8,15 +8,19 @@
 
 import Alamofire
 
-class RazdCommand: BasicCommand {
+class RazdCommand: CacheableCommand {
     let razdId: Int
     let itemsOnPage: Int
     let shiftItem: Int
-    
+
     init(razdId: Int, itemsOnPage: Int, shiftItem: Int) {
         self.razdId = razdId
         self.itemsOnPage = itemsOnPage
         self.shiftItem = shiftItem
+        super.init()
+        self.shoudRemoveCach = false
+        self.shouldUseCache = true
+        self.expirationInterval = CacheExpiration.hour
     }
     
     func execute(success: ((RazdelResponse) -> Void)?, failure: ApiCompletionBlock?) {
@@ -31,13 +35,17 @@ class RazdCommand: BasicCommand {
         return ["razdId": razdId, "itemsOnPage": itemsOnPage, "shiftItem": shiftItem]
     }
 }
-class CatalogCommand: BasicCommand {
+class CatalogCommand: CacheableCommand {
     let itemsOnPage: Int
     let shiftItem: Int
     
     init(itemsOnPage: Int, shiftItem: Int) {
         self.itemsOnPage = itemsOnPage
         self.shiftItem = shiftItem
+        super.init()
+        self.shoudRemoveCach = false
+        self.shouldUseCache = true
+        self.expirationInterval = CacheExpiration.hour
     }
     
     func execute(success: ((RazdelResponse) -> Void)?, failure: ApiCompletionBlock?) {

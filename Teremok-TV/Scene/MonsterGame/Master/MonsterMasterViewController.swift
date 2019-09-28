@@ -67,13 +67,29 @@ class MonsterMasterViewController: GameMasterViewController, MonsterMasterDispla
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        router?.navigateMain()
+        let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.monstersImage.rawValue]))
+        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+            DispatchQueue.main.async {
+            if available {
+                self.router?.navigateMain()
+            } else {
+                bundleResourceRequest.beginAccessingResources { error in
+                    guard error == nil else { return }
+
+                    self.present(errorString: "Игра загружается, попробуйте позже") {
+                        self.dismiss(animated: true)
+                    }
+                }
+            }
+            }
+        }
+        displayProfile()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if LocalStore.monsterTip < 3 {
+        if !avatarButton.isHidden, LocalStore.monsterTip < 3 {
             LocalStore.monsterTip += 1
             var preferences = EasyTipView.Preferences()
             preferences.drawing.font = Style.Font.istokWeb(size: 16)

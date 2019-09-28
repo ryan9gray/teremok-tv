@@ -13,20 +13,20 @@ class AlphaviteStartViewController: GameViewController {
     @IBOutlet private var startButton: KeyButton!
 
     @IBAction private func startTap(_ sender: Any) {
-        buttonPlayer.play()
+        buttonPlayer?.play()
         masterRouter?.startFlow(0)
     }
 
     @IBOutlet private var segmentController: TTSegmentedControl!
-    private var audioPlayer = AVAudioPlayer()
-    private var buttonPlayer = AVAudioPlayer()
+    private var audioPlayer: AVAudioPlayer?
+    private var buttonPlayer: AVAudioPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         segmentController.itemTitles = [ "Я учу алфавит", "Я знаю алфавит" ]
         segmentController.didSelectItemWith = { (index, title) -> () in
-            self.buttonPlayer.play()
+            self.buttonPlayer?.play()
             switch index {
             case 0:
                 LocalStore.alphaviteIsHard = false
@@ -42,17 +42,25 @@ class AlphaviteStartViewController: GameViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        guard let mainSound = Bundle.main.path(forResource: AlphaviteMaster.Sound.main.rawValue, ofType: "wav")
+        else {
+            master?.present(errorString: "Игра загружается! Это может занять 1-2 минуты. Спасибо", completion: {
+                self.masterRouter?.dismiss()
+            })
+            return
+        }
+
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: AlphaviteMaster.Sound.main.url)
-            audioPlayer.prepareToPlay()
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: mainSound))
+            audioPlayer?.prepareToPlay()
         } catch {
             print("no file)")
         }
-        audioPlayer.play()
+        audioPlayer?.play()
 
         do {
             buttonPlayer = try AVAudioPlayer(contentsOf: AlphaviteMaster.Sound.button.url)
-            buttonPlayer.prepareToPlay()
+            buttonPlayer?.prepareToPlay()
         } catch {
             print("no file)")
         }
@@ -61,6 +69,6 @@ class AlphaviteStartViewController: GameViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
 }

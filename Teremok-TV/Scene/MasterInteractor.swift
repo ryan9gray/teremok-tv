@@ -26,7 +26,7 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
     let service: ProfileProtocol = ProfileService()
     var profileModel: GetProfileResponse?
     var isOffline = false
-    
+
     var keychain: KeychainService? = {
         return MainKeychainService()
     }()
@@ -38,6 +38,7 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
         NotificationCenter.default.addObserver(self, selector: #selector(profileDidChanged(_:)), name: .ProfileNeedReload, object: nil)
         rateService.checkAndAskForReview()
     }
+    
     deinit {
         NotificationCenter.default.removeObserver(self, name: .ProfileNeedReload, object: nil)
     }

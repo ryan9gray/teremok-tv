@@ -37,6 +37,8 @@ class PlayerViewController: AVPlayerViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        showsPlaybackControls = false
         addPlayerNotifications()
         addChild(fullOverlay)
         view.addSubview(fullOverlay.view)
@@ -47,7 +49,8 @@ class PlayerViewController: AVPlayerViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
+        view.clipsToBounds = true
         view.bringSubviewToFront(fullOverlay.view)
         UIApplication.shared.beginReceivingRemoteControlEvents()
         becomeFirstResponder()
@@ -58,7 +61,13 @@ class PlayerViewController: AVPlayerViewController {
         UIApplication.shared.endReceivingRemoteControlEvents()
         self.resignFirstResponder()
     }
-    
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        view.layer.cornerRadius = fullOverlay.isFullScreen ? 0 : 12
+    }
+
     func overlaySetup(){
         fullOverlay = TTPlayerViewController.instantiate(fromStoryboard: .play)
     }
@@ -92,11 +101,10 @@ class PlayerViewController: AVPlayerViewController {
         fullOverlay.startedPlaying()
     }
 
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
 
-    }
     
     deinit {
+        print("PlayerViewController deinit")
         do {
             //Preparation to play - Костыль
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .moviePlayback)
@@ -106,9 +114,9 @@ class PlayerViewController: AVPlayerViewController {
             // report for an error
         }
         removePlayerNotifations()
-        //self.player = nil
-        self.fullOverlay.removeFromParent()
-        self.fullOverlay = nil
+        player = nil
+        fullOverlay.removeFromParent()
+        fullOverlay = nil
     }
 }
 extension PlayerViewController {

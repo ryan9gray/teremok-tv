@@ -13,6 +13,7 @@
 		111187F4231E82D700EBEFC0 /* MonsterStatisticInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187EE231E82D700EBEFC0 /* MonsterStatisticInteractor.swift */; };
 		111187F6231E8D6E00EBEFC0 /* MonsterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111187F5231E8D6E00EBEFC0 /* MonsterService.swift */; };
 		11246D62231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */; };
+		112860B6232BA6E30002852A /* monster_menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112860B5232BA6E20002852A /* monster_menu.mp3 */; };
 		11604AD7231F8107001D1C7F /* MonsterStatisticResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */; };
 		11604ADA231F8330001D1C7F /* MonsterGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604AD9231F8330001D1C7F /* MonsterGetStatCommand.swift */; };
 		11604ADC231F8494001D1C7F /* MonsterSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11604ADB231F8494001D1C7F /* MonsterSendStatCommand.swift */; };
@@ -27,6 +28,13 @@
 		11BC751D23042DB4001B5CC8 /* MonsterMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC751C23042DB4001B5CC8 /* MonsterMasterViewController.swift */; };
 		11BC751F23042E06001B5CC8 /* MonsterStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */; };
 		11BC752523043A1E001B5CC8 /* MonsterMasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */; };
+		11CF6B8D232A071A00F8E529 /* monsterCloseCards.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B86232A071A00F8E529 /* monsterCloseCards.wav */; };
+		11CF6B8E232A071A00F8E529 /* monsterWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B87232A071A00F8E529 /* monsterWrong.wav */; };
+		11CF6B8F232A071A00F8E529 /* monsterPickMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B88232A071A00F8E529 /* monsterPickMain.wav */; };
+		11CF6B90232A071A00F8E529 /* monsterOpenCard.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B89232A071A00F8E529 /* monsterOpenCard.wav */; };
+		11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8B232A071A00F8E529 /* monsterCloseAll.wav */; };
+		11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8C232A071A00F8E529 /* monsterRight.wav */; };
+		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceMonsters, ); }; };
 		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
@@ -121,101 +129,101 @@
 		CA51004022F5F8E600821C25 /* AlphaviteChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51003F22F5F8E600821C25 /* AlphaviteChoiceViewController.swift */; };
 		CA51004222F5FFAE00821C25 /* AlphaviteFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51004122F5FFAE00821C25 /* AlphaviteFlow.swift */; };
 		CA51004422F617DB00821C25 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51004322F617DB00821C25 /* GradientView.swift */; };
-		CA5100A622F6EACF00821C25 /* alphavite_3_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004722F6EACE00821C25 /* alphavite_3_word_1.wav */; };
-		CA5100A722F6EACF00821C25 /* alphavite_33.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004822F6EACE00821C25 /* alphavite_33.wav */; };
-		CA5100A822F6EACF00821C25 /* alphavite_27.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004922F6EACE00821C25 /* alphavite_27.wav */; };
-		CA5100A922F6EACF00821C25 /* alphavite_26.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004A22F6EACE00821C25 /* alphavite_26.wav */; };
-		CA5100AA22F6EACF00821C25 /* alphavite_32.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004B22F6EACE00821C25 /* alphavite_32.wav */; };
-		CA5100AB22F6EACF00821C25 /* alphavite_21_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004C22F6EACE00821C25 /* alphavite_21_word_2.wav */; };
-		CA5100AC22F6EACF00821C25 /* alphavite_16_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004D22F6EACE00821C25 /* alphavite_16_word_2.wav */; };
-		CA5100AD22F6EACF00821C25 /* alphavite_3_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004E22F6EACE00821C25 /* alphavite_3_word_2.wav */; };
-		CA5100AE22F6EACF00821C25 /* alphavite_18.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004F22F6EACE00821C25 /* alphavite_18.wav */; };
-		CA5100AF22F6EACF00821C25 /* alphavite_24.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005022F6EACE00821C25 /* alphavite_24.wav */; };
-		CA5100B022F6EACF00821C25 /* alphavite_30.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005122F6EACE00821C25 /* alphavite_30.wav */; };
-		CA5100B122F6EACF00821C25 /* alphavite_31.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005222F6EACE00821C25 /* alphavite_31.wav */; };
-		CA5100B222F6EACF00821C25 /* alphavite_25.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005322F6EACE00821C25 /* alphavite_25.wav */; };
-		CA5100B322F6EACF00821C25 /* alphavite_19.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005422F6EACE00821C25 /* alphavite_19.wav */; };
-		CA5100B422F6EACF00821C25 /* alphavite_21_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005522F6EACE00821C25 /* alphavite_21_word_1.wav */; };
-		CA5100B522F6EACF00821C25 /* alphavite_16_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005622F6EACE00821C25 /* alphavite_16_word_1.wav */; };
-		CA5100B622F6EACF00821C25 /* alphavite_1_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005722F6EACE00821C25 /* alphavite_1_2.wav */; };
-		CA5100B722F6EACF00821C25 /* alphavite_6_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005822F6EACE00821C25 /* alphavite_6_word_2.wav */; };
-		CA5100B822F6EACF00821C25 /* alphavite_21.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005922F6EACE00821C25 /* alphavite_21.wav */; };
-		CA5100B922F6EACF00821C25 /* alphavite_20.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005A22F6EACE00821C25 /* alphavite_20.wav */; };
-		CA5100BA22F6EACF00821C25 /* alphavite_13_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005B22F6EACE00821C25 /* alphavite_13_word_1.wav */; };
-		CA5100BB22F6EACF00821C25 /* alphavite_24_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005C22F6EACE00821C25 /* alphavite_24_word_1.wav */; };
-		CA5100BC22F6EACF00821C25 /* alphavite_1_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005D22F6EACE00821C25 /* alphavite_1_1.wav */; };
-		CA5100BD22F6EACF00821C25 /* alphavite_6_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005E22F6EACE00821C25 /* alphavite_6_word_1.wav */; };
-		CA5100BE22F6EACF00821C25 /* alphavite_22.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005F22F6EACE00821C25 /* alphavite_22.wav */; };
-		CA5100BF22F6EACF00821C25 /* alphavite_23.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006022F6EACE00821C25 /* alphavite_23.wav */; };
-		CA5100C022F6EACF00821C25 /* alphavite_13_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006122F6EACE00821C25 /* alphavite_13_word_2.wav */; };
-		CA5100C122F6EACF00821C25 /* alphavite_24_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006222F6EACE00821C25 /* alphavite_24_word_2.wav */; };
-		CA5100C222F6EACF00821C25 /* alphavite_14_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006322F6EACE00821C25 /* alphavite_14_word_2.wav */; };
-		CA5100C322F6EACF00821C25 /* alphavite_23_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006422F6EACE00821C25 /* alphavite_23_word_2.wav */; };
-		CA5100C422F6EACF00821C25 /* alphavite_19_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006522F6EACE00821C25 /* alphavite_19_word_1.wav */; };
-		CA5100C522F6EACF00821C25 /* alphavite_1_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006622F6EACE00821C25 /* alphavite_1_word_1.wav */; };
-		CA5100C622F6EACF00821C25 /* alphavite_32_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006722F6EACE00821C25 /* alphavite_32_word_1.wav */; };
-		CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006822F6EACE00821C25 /* alphavite_14_word_1.wav */; };
-		CA5100C822F6EACF00821C25 /* alphavite_23_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006922F6EACE00821C25 /* alphavite_23_word_1.wav */; };
-		CA5100C922F6EACF00821C25 /* alphavite_19_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006A22F6EACE00821C25 /* alphavite_19_word_2.wav */; };
-		CA5100CA22F6EACF00821C25 /* alphavite_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006B22F6EACE00821C25 /* alphavite_9.wav */; };
-		CA5100CB22F6EACF00821C25 /* alphavite_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006C22F6EACE00821C25 /* alphavite_8.wav */; };
-		CA5100CC22F6EACF00821C25 /* alphavite_1_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006D22F6EACE00821C25 /* alphavite_1_word_2.wav */; };
-		CA5100CD22F6EACF00821C25 /* alphavite_32_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006E22F6EACE00821C25 /* alphavite_32_word_2.wav */; };
-		CA5100CE22F6EACF00821C25 /* alphavite_26_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006F22F6EACE00821C25 /* alphavite_26_word_1.wav */; };
-		CA5100CF22F6EACF00821C25 /* alphavite_11_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007022F6EACE00821C25 /* alphavite_11_word_1.wav */; };
-		CA5100D022F6EACF00821C25 /* alphavite_9_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007122F6EACE00821C25 /* alphavite_9_word_1.wav */; };
-		CA5100D122F6EACF00821C25 /* alphavite_4_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007222F6EACE00821C25 /* alphavite_4_word_2.wav */; };
-		CA5100D222F6EACF00821C25 /* alphavite_26_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007322F6EACE00821C25 /* alphavite_26_word_2.wav */; };
-		CA5100D322F6EACF00821C25 /* alphavite_11_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007422F6EACE00821C25 /* alphavite_11_word_2.wav */; };
-		CA5100D422F6EACF00821C25 /* alphavite_9_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007522F6EACE00821C25 /* alphavite_9_word_2.wav */; };
-		CA5100D522F6EACF00821C25 /* alphavite_4_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007622F6EACE00821C25 /* alphavite_4_word_1.wav */; };
-		CA5100D622F6EACF00821C25 /* alphavite_7_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007722F6EACE00821C25 /* alphavite_7_word_2.wav */; };
-		CA5100D722F6EACF00821C25 /* alphavite_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007822F6EACE00821C25 /* alphavite_3.wav */; };
-		CA5100D822F6EACF00821C25 /* alphavite_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007922F6EACE00821C25 /* alphavite_2.wav */; };
-		CA5100D922F6EACF00821C25 /* alphavite_12_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007A22F6EACE00821C25 /* alphavite_12_word_1.wav */; };
-		CA5100DA22F6EACF00821C25 /* alphavite_25_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007B22F6EACE00821C25 /* alphavite_25_word_1.wav */; };
-		CA5100DB22F6EACF00821C25 /* alphavite_7_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007C22F6EACE00821C25 /* alphavite_7_word_1.wav */; };
-		CA5100DC22F6EACF00821C25 /* alphavite_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007D22F6EACE00821C25 /* alphavite_1.wav */; };
-		CA5100DD22F6EACF00821C25 /* alphavite_12_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007E22F6EACE00821C25 /* alphavite_12_word_2.wav */; };
-		CA5100DE22F6EACF00821C25 /* alphavite_25_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007F22F6EACE00821C25 /* alphavite_25_word_2.wav */; };
-		CA5100DF22F6EACF00821C25 /* alphavite_31_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008022F6EACE00821C25 /* alphavite_31_word_1.wav */; };
-		CA5100E022F6EACF00821C25 /* alphavite_2_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008122F6EACE00821C25 /* alphavite_2_word_1.wav */; };
-		CA5100E122F6EACF00821C25 /* alphavite_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008222F6EACE00821C25 /* alphavite_5.wav */; };
-		CA5100E222F6EACF00821C25 /* alphavite_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008322F6EACE00821C25 /* alphavite_4.wav */; };
-		CA5100E322F6EACF00821C25 /* alphavite_20_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008422F6EACE00821C25 /* alphavite_20_word_2.wav */; };
-		CA5100E422F6EACF00821C25 /* alphavite_17_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008522F6EACE00821C25 /* alphavite_17_word_2.wav */; };
-		CA5100E522F6EACF00821C25 /* alphavite_31_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008622F6EACF00821C25 /* alphavite_31_word_2.wav */; };
-		CA5100E622F6EACF00821C25 /* alphavite_2_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008722F6EACF00821C25 /* alphavite_2_word_2.wav */; };
-		CA5100E722F6EACF00821C25 /* alphavite_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008822F6EACF00821C25 /* alphavite_6.wav */; };
-		CA5100E822F6EACF00821C25 /* alphavite_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008922F6EACF00821C25 /* alphavite_7.wav */; };
-		CA5100E922F6EACF00821C25 /* alphavite_20_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008A22F6EACF00821C25 /* alphavite_20_word_1.wav */; };
-		CA5100EA22F6EACF00821C25 /* alphavite_17_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008B22F6EACF00821C25 /* alphavite_17_word_1.wav */; };
-		CA5100EB22F6EACF00821C25 /* alphavite_27_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008C22F6EACF00821C25 /* alphavite_27_word_1.wav */; };
-		CA5100EC22F6EACF00821C25 /* alphavite_10_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008D22F6EACF00821C25 /* alphavite_10_word_1.wav */; };
-		CA5100ED22F6EACF00821C25 /* alphavite_12.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008E22F6EACF00821C25 /* alphavite_12.wav */; };
-		CA5100EE22F6EACF00821C25 /* alphavite_13.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008F22F6EACF00821C25 /* alphavite_13.wav */; };
-		CA5100EF22F6EACF00821C25 /* alphavite_5_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009022F6EACF00821C25 /* alphavite_5_word_2.wav */; };
-		CA5100F022F6EACF00821C25 /* alphavite_8_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009122F6EACF00821C25 /* alphavite_8_word_1.wav */; };
-		CA5100F122F6EACF00821C25 /* alphavite_27_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009222F6EACF00821C25 /* alphavite_27_word_2.wav */; };
-		CA5100F222F6EACF00821C25 /* alphavite_10_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009322F6EACF00821C25 /* alphavite_10_word_2.wav */; };
-		CA5100F322F6EACF00821C25 /* alphavite_11.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009422F6EACF00821C25 /* alphavite_11.wav */; };
-		CA5100F422F6EACF00821C25 /* alphavite_10.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009522F6EACF00821C25 /* alphavite_10.wav */; };
-		CA5100F522F6EACF00821C25 /* alphavite_5_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009622F6EACF00821C25 /* alphavite_5_word_1.wav */; };
-		CA5100F622F6EACF00821C25 /* alphavite_8_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009722F6EACF00821C25 /* alphavite_8_word_2.wav */; };
-		CA5100F722F6EACF00821C25 /* alphavite_18_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009822F6EACF00821C25 /* alphavite_18_word_1.wav */; };
-		CA5100F822F6EACF00821C25 /* alphavite_15_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009922F6EACF00821C25 /* alphavite_15_word_2.wav */; };
-		CA5100F922F6EACF00821C25 /* alphavite_22_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009A22F6EACF00821C25 /* alphavite_22_word_2.wav */; };
-		CA5100FA22F6EACF00821C25 /* alphavite_14.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009B22F6EACF00821C25 /* alphavite_14.wav */; };
-		CA5100FB22F6EACF00821C25 /* alphavite_28.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009C22F6EACF00821C25 /* alphavite_28.wav */; };
-		CA5100FC22F6EACF00821C25 /* alphavite_29.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009D22F6EACF00821C25 /* alphavite_29.wav */; };
-		CA5100FD22F6EACF00821C25 /* alphavite_15.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009E22F6EACF00821C25 /* alphavite_15.wav */; };
-		CA5100FE22F6EACF00821C25 /* alphavite_33_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009F22F6EACF00821C25 /* alphavite_33_word_1.wav */; };
-		CA5100FF22F6EACF00821C25 /* alphavite_18_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A022F6EACF00821C25 /* alphavite_18_word_2.wav */; };
-		CA51010022F6EACF00821C25 /* alphavite_15_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A122F6EACF00821C25 /* alphavite_15_word_1.wav */; };
-		CA51010122F6EACF00821C25 /* alphavite_22_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A222F6EACF00821C25 /* alphavite_22_word_1.wav */; };
-		CA51010222F6EACF00821C25 /* alphavite_17.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A322F6EACF00821C25 /* alphavite_17.wav */; };
-		CA51010322F6EACF00821C25 /* alphavite_16.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A422F6EACF00821C25 /* alphavite_16.wav */; };
-		CA51010422F6EACF00821C25 /* alphavite_33_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A522F6EACF00821C25 /* alphavite_33_word_2.wav */; };
+		CA5100A622F6EACF00821C25 /* alphavite_3_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004722F6EACE00821C25 /* alphavite_3_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100A722F6EACF00821C25 /* alphavite_33.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004822F6EACE00821C25 /* alphavite_33.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100A822F6EACF00821C25 /* alphavite_27.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004922F6EACE00821C25 /* alphavite_27.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100A922F6EACF00821C25 /* alphavite_26.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004A22F6EACE00821C25 /* alphavite_26.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100AA22F6EACF00821C25 /* alphavite_32.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004B22F6EACE00821C25 /* alphavite_32.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100AB22F6EACF00821C25 /* alphavite_21_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004C22F6EACE00821C25 /* alphavite_21_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100AC22F6EACF00821C25 /* alphavite_16_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004D22F6EACE00821C25 /* alphavite_16_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100AD22F6EACF00821C25 /* alphavite_3_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004E22F6EACE00821C25 /* alphavite_3_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100AE22F6EACF00821C25 /* alphavite_18.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51004F22F6EACE00821C25 /* alphavite_18.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100AF22F6EACF00821C25 /* alphavite_24.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005022F6EACE00821C25 /* alphavite_24.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100B022F6EACF00821C25 /* alphavite_30.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005122F6EACE00821C25 /* alphavite_30.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100B122F6EACF00821C25 /* alphavite_31.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005222F6EACE00821C25 /* alphavite_31.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100B222F6EACF00821C25 /* alphavite_25.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005322F6EACE00821C25 /* alphavite_25.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100B322F6EACF00821C25 /* alphavite_19.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005422F6EACE00821C25 /* alphavite_19.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100B422F6EACF00821C25 /* alphavite_21_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005522F6EACE00821C25 /* alphavite_21_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100B522F6EACF00821C25 /* alphavite_16_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005622F6EACE00821C25 /* alphavite_16_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100B622F6EACF00821C25 /* alphavite_1_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005722F6EACE00821C25 /* alphavite_1_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100B722F6EACF00821C25 /* alphavite_6_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005822F6EACE00821C25 /* alphavite_6_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100B822F6EACF00821C25 /* alphavite_21.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005922F6EACE00821C25 /* alphavite_21.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100B922F6EACF00821C25 /* alphavite_20.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005A22F6EACE00821C25 /* alphavite_20.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100BA22F6EACF00821C25 /* alphavite_13_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005B22F6EACE00821C25 /* alphavite_13_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100BB22F6EACF00821C25 /* alphavite_24_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005C22F6EACE00821C25 /* alphavite_24_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100BC22F6EACF00821C25 /* alphavite_1_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005D22F6EACE00821C25 /* alphavite_1_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100BD22F6EACF00821C25 /* alphavite_6_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005E22F6EACE00821C25 /* alphavite_6_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100BE22F6EACF00821C25 /* alphavite_22.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51005F22F6EACE00821C25 /* alphavite_22.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100BF22F6EACF00821C25 /* alphavite_23.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006022F6EACE00821C25 /* alphavite_23.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100C022F6EACF00821C25 /* alphavite_13_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006122F6EACE00821C25 /* alphavite_13_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100C122F6EACF00821C25 /* alphavite_24_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006222F6EACE00821C25 /* alphavite_24_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100C222F6EACF00821C25 /* alphavite_14_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006322F6EACE00821C25 /* alphavite_14_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100C322F6EACF00821C25 /* alphavite_23_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006422F6EACE00821C25 /* alphavite_23_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100C422F6EACF00821C25 /* alphavite_19_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006522F6EACE00821C25 /* alphavite_19_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100C522F6EACF00821C25 /* alphavite_1_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006622F6EACE00821C25 /* alphavite_1_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100C622F6EACF00821C25 /* alphavite_32_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006722F6EACE00821C25 /* alphavite_32_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006822F6EACE00821C25 /* alphavite_14_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100C822F6EACF00821C25 /* alphavite_23_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006922F6EACE00821C25 /* alphavite_23_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100C922F6EACF00821C25 /* alphavite_19_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006A22F6EACE00821C25 /* alphavite_19_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100CA22F6EACF00821C25 /* alphavite_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006B22F6EACE00821C25 /* alphavite_9.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100CB22F6EACF00821C25 /* alphavite_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006C22F6EACE00821C25 /* alphavite_8.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100CC22F6EACF00821C25 /* alphavite_1_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006D22F6EACE00821C25 /* alphavite_1_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100CD22F6EACF00821C25 /* alphavite_32_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006E22F6EACE00821C25 /* alphavite_32_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100CE22F6EACF00821C25 /* alphavite_26_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51006F22F6EACE00821C25 /* alphavite_26_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100CF22F6EACF00821C25 /* alphavite_11_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007022F6EACE00821C25 /* alphavite_11_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100D022F6EACF00821C25 /* alphavite_9_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007122F6EACE00821C25 /* alphavite_9_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100D122F6EACF00821C25 /* alphavite_4_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007222F6EACE00821C25 /* alphavite_4_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100D222F6EACF00821C25 /* alphavite_26_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007322F6EACE00821C25 /* alphavite_26_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100D322F6EACF00821C25 /* alphavite_11_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007422F6EACE00821C25 /* alphavite_11_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100D422F6EACF00821C25 /* alphavite_9_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007522F6EACE00821C25 /* alphavite_9_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100D522F6EACF00821C25 /* alphavite_4_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007622F6EACE00821C25 /* alphavite_4_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100D622F6EACF00821C25 /* alphavite_7_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007722F6EACE00821C25 /* alphavite_7_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100D722F6EACF00821C25 /* alphavite_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007822F6EACE00821C25 /* alphavite_3.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100D822F6EACF00821C25 /* alphavite_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007922F6EACE00821C25 /* alphavite_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100D922F6EACF00821C25 /* alphavite_12_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007A22F6EACE00821C25 /* alphavite_12_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100DA22F6EACF00821C25 /* alphavite_25_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007B22F6EACE00821C25 /* alphavite_25_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100DB22F6EACF00821C25 /* alphavite_7_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007C22F6EACE00821C25 /* alphavite_7_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100DC22F6EACF00821C25 /* alphavite_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007D22F6EACE00821C25 /* alphavite_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100DD22F6EACF00821C25 /* alphavite_12_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007E22F6EACE00821C25 /* alphavite_12_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100DE22F6EACF00821C25 /* alphavite_25_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51007F22F6EACE00821C25 /* alphavite_25_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100DF22F6EACF00821C25 /* alphavite_31_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008022F6EACE00821C25 /* alphavite_31_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100E022F6EACF00821C25 /* alphavite_2_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008122F6EACE00821C25 /* alphavite_2_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100E122F6EACF00821C25 /* alphavite_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008222F6EACE00821C25 /* alphavite_5.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100E222F6EACF00821C25 /* alphavite_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008322F6EACE00821C25 /* alphavite_4.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100E322F6EACF00821C25 /* alphavite_20_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008422F6EACE00821C25 /* alphavite_20_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100E422F6EACF00821C25 /* alphavite_17_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008522F6EACE00821C25 /* alphavite_17_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100E522F6EACF00821C25 /* alphavite_31_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008622F6EACF00821C25 /* alphavite_31_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100E622F6EACF00821C25 /* alphavite_2_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008722F6EACF00821C25 /* alphavite_2_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100E722F6EACF00821C25 /* alphavite_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008822F6EACF00821C25 /* alphavite_6.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100E822F6EACF00821C25 /* alphavite_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008922F6EACF00821C25 /* alphavite_7.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100E922F6EACF00821C25 /* alphavite_20_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008A22F6EACF00821C25 /* alphavite_20_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100EA22F6EACF00821C25 /* alphavite_17_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008B22F6EACF00821C25 /* alphavite_17_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100EB22F6EACF00821C25 /* alphavite_27_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008C22F6EACF00821C25 /* alphavite_27_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100EC22F6EACF00821C25 /* alphavite_10_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008D22F6EACF00821C25 /* alphavite_10_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100ED22F6EACF00821C25 /* alphavite_12.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008E22F6EACF00821C25 /* alphavite_12.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100EE22F6EACF00821C25 /* alphavite_13.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51008F22F6EACF00821C25 /* alphavite_13.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100EF22F6EACF00821C25 /* alphavite_5_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009022F6EACF00821C25 /* alphavite_5_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100F022F6EACF00821C25 /* alphavite_8_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009122F6EACF00821C25 /* alphavite_8_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100F122F6EACF00821C25 /* alphavite_27_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009222F6EACF00821C25 /* alphavite_27_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100F222F6EACF00821C25 /* alphavite_10_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009322F6EACF00821C25 /* alphavite_10_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100F322F6EACF00821C25 /* alphavite_11.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009422F6EACF00821C25 /* alphavite_11.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100F422F6EACF00821C25 /* alphavite_10.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009522F6EACF00821C25 /* alphavite_10.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100F522F6EACF00821C25 /* alphavite_5_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009622F6EACF00821C25 /* alphavite_5_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100F622F6EACF00821C25 /* alphavite_8_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009722F6EACF00821C25 /* alphavite_8_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100F722F6EACF00821C25 /* alphavite_18_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009822F6EACF00821C25 /* alphavite_18_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100F822F6EACF00821C25 /* alphavite_15_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009922F6EACF00821C25 /* alphavite_15_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100F922F6EACF00821C25 /* alphavite_22_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009A22F6EACF00821C25 /* alphavite_22_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100FA22F6EACF00821C25 /* alphavite_14.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009B22F6EACF00821C25 /* alphavite_14.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100FB22F6EACF00821C25 /* alphavite_28.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009C22F6EACF00821C25 /* alphavite_28.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100FC22F6EACF00821C25 /* alphavite_29.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009D22F6EACF00821C25 /* alphavite_29.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100FD22F6EACF00821C25 /* alphavite_15.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009E22F6EACF00821C25 /* alphavite_15.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100FE22F6EACF00821C25 /* alphavite_33_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA51009F22F6EACF00821C25 /* alphavite_33_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA5100FF22F6EACF00821C25 /* alphavite_18_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A022F6EACF00821C25 /* alphavite_18_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA51010022F6EACF00821C25 /* alphavite_15_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A122F6EACF00821C25 /* alphavite_15_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA51010122F6EACF00821C25 /* alphavite_22_word_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A222F6EACF00821C25 /* alphavite_22_word_1.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA51010222F6EACF00821C25 /* alphavite_17.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A322F6EACF00821C25 /* alphavite_17.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA51010322F6EACF00821C25 /* alphavite_16.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A422F6EACF00821C25 /* alphavite_16.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CA51010422F6EACF00821C25 /* alphavite_33_word_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA5100A522F6EACF00821C25 /* alphavite_33_word_2.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
 		CA51E1C522FEC8C60028DF63 /* start_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CA51E1BE22FEC8C50028DF63 /* start_Pick.json */; };
 		CA51E1CB22FECDC10028DF63 /* GameParentRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51E1CA22FECDC10028DF63 /* GameParentRouting.swift */; };
 		CA51E1CD22FED1790028DF63 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA51E1CC22FED1790028DF63 /* GameHelper.swift */; };
@@ -250,6 +258,7 @@
 		CA52F371223DA1360058194E /* PlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA52F36F223DA1360058194E /* PlaylistCollectionViewCell.swift */; };
 		CA52F372223DA1360058194E /* PlaylistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA52F370223DA1360058194E /* PlaylistCollectionViewCell.xib */; };
 		CA56D0C62302A424006298C5 /* ariblk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA56D0C52302A424006298C5 /* ariblk.ttf */; };
+		CA573D4823367BB400241990 /* OnBoarding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA573D4723367BB400241990 /* OnBoarding.mp4 */; settings = {ASSET_TAGS = (OnBoarding, ); }; };
 		CA57897B226FA76600F05A5A /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA57897A226FA76500F05A5A /* StoreReviewHelper.swift */; };
 		CA5CB164213F0957000CB3D5 /* flip.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5CB163213F0957000CB3D5 /* flip.json */; };
 		CA5CB166213F095F000CB3D5 /* krya.json in Resources */ = {isa = PBXBuildFile; fileRef = CA5CB165213F095F000CB3D5 /* krya.json */; };
@@ -415,7 +424,7 @@
 		CAB5A4572171F2B200A00C8E /* ChildsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A4562171F2B200A00C8E /* ChildsStackView.swift */; };
 		CAB653D8215A5C0F00BEB620 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB653D7215A5C0F00BEB620 /* UIBezierPath.swift */; };
 		CABAE9CD22C3EE820093FC5A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAE9CC22C3EE820093FC5A /* OnboardingViewController.swift */; };
-		CABE842223223FF80082E2E4 /* alphabetJump.wav in Resources */ = {isa = PBXBuildFile; fileRef = CABE842123223FF80082E2E4 /* alphabetJump.wav */; };
+		CABE842223223FF80082E2E4 /* alphabetJump.wav in Resources */ = {isa = PBXBuildFile; fileRef = CABE842123223FF80082E2E4 /* alphabetJump.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
 		CAC0988822FEDCD400EFB01E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988722FEDCD400EFB01E /* Style.swift */; };
 		CAC0988D22FF12A700EFB01E /* EasyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988B22FF12A700EFB01E /* EasyTipView.swift */; };
 		CAC0988E22FF12A800EFB01E /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988C22FF12A700EFB01E /* UIKitExtensions.swift */; };
@@ -514,12 +523,12 @@
 		CAD21049231700DC006F2F08 /* MontserratAlternates-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD2103A231700DC006F2F08 /* MontserratAlternates-ThinItalic.ttf */; };
 		CAD2104A231700DC006F2F08 /* MontserratAlternates-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD2103B231700DC006F2F08 /* MontserratAlternates-Medium.ttf */; };
 		CAD2104B231700DD006F2F08 /* MontserratAlternates-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD2103C231700DC006F2F08 /* MontserratAlternates-BoldItalic.ttf */; };
-		CAD2105223170C69006F2F08 /* alphabetPickMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104C23170C68006F2F08 /* alphabetPickMain.wav */; };
-		CAD2105323170C69006F2F08 /* pickDriveFrom.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104D23170C68006F2F08 /* pickDriveFrom.wav */; };
-		CAD2105423170C69006F2F08 /* pickDriveTo.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104E23170C68006F2F08 /* pickDriveTo.wav */; };
-		CAD2105523170C69006F2F08 /* alphabetButton.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104F23170C68006F2F08 /* alphabetButton.wav */; };
-		CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105023170C68006F2F08 /* alphabetRight.wav */; };
-		CAD2105723170C69006F2F08 /* alphabetWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105123170C68006F2F08 /* alphabetWrong.wav */; };
+		CAD2105223170C69006F2F08 /* alphabetPickMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104C23170C68006F2F08 /* alphabetPickMain.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CAD2105323170C69006F2F08 /* pickDriveFrom.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104D23170C68006F2F08 /* pickDriveFrom.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CAD2105423170C69006F2F08 /* pickDriveTo.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104E23170C68006F2F08 /* pickDriveTo.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CAD2105523170C69006F2F08 /* alphabetButton.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104F23170C68006F2F08 /* alphabetButton.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105023170C68006F2F08 /* alphabetRight.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CAD2105723170C69006F2F08 /* alphabetWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105123170C68006F2F08 /* alphabetWrong.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
 		CAD90EB122AC71AB004D74BD /* AnimalPackDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB022AC71AB004D74BD /* AnimalPackDownloader.swift */; };
 		CAD90EB322B13636004D74BD /* AnimalsGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB222B13636004D74BD /* AnimalsGetStatCommand.swift */; };
 		CAD90EB522B13644004D74BD /* AnimalsSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB422B13644004D74BD /* AnimalsSendStatCommand.swift */; };
@@ -531,7 +540,7 @@
 		CADB3D7E21F8D54B009467B8 /* GetAchievementsCommand .swift in Sources */ = {isa = PBXBuildFile; fileRef = CADB3D7D21F8D54B009467B8 /* GetAchievementsCommand .swift */; };
 		CADD14AB2309683400AE920A /* happy_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AA2309683400AE920A /* happy_Pick.json */; };
 		CADD14AD2309887300AE920A /* end_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AC2309887200AE920A /* end_Pick.json */; };
-		CADD14AF2309C6E500AE920A /* Pick_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AE2309C6E500AE920A /* Pick_introduce.mp4 */; };
+		CADD14AF2309C6E500AE920A /* Pick_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CADD14AE2309C6E500AE920A /* Pick_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceAlphabet, ); }; };
 		CADD14B523107F7C00AE920A /* happy_Cloud_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B023107F7B00AE920A /* happy_Cloud_1.json */; };
 		CADD14B623107F7C00AE920A /* happy_Cloud_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B123107F7B00AE920A /* happy_Cloud_2.json */; };
 		CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */ = {isa = PBXBuildFile; fileRef = CADD14B223107F7B00AE920A /* sad_Pick.json */; };
@@ -602,7 +611,7 @@
 		CAEEF22F2299C0F900AF5AF6 /* ChoiceAnimalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF2292299C0F900AF5AF6 /* ChoiceAnimalModels.swift */; };
 		CAEEF2302299C0F900AF5AF6 /* ChoiceAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF22A2299C0F900AF5AF6 /* ChoiceAnimalViewController.swift */; };
 		CAEEF2402299C9FD00AF5AF6 /* RoundPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF23F2299C9FD00AF5AF6 /* RoundPresentViewController.swift */; };
-		CAEEF2422299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF2412299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift */; };
+		CAEEF2422299CB8E00AF5AF6 /* IntroduceVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF2412299CB8E00AF5AF6 /* IntroduceVideoViewController.swift */; };
 		CAF4C106214AF31700954AA8 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C105214AF31700954AA8 /* InputView.swift */; };
 		CAF4C108214B054A00954AA8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C107214B054A00954AA8 /* AuthService.swift */; };
 		CAF4C110214B0C7900954AA8 /* FavPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C10A214B0C7900954AA8 /* FavPresenter.swift */; };
@@ -630,104 +639,56 @@
 		CAF94CC9215FF275000E8183 /* ActionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF94CC8215FF275000E8183 /* ActionService.swift */; };
 		CAF94CCF2160BECF000E8183 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF94CCE2160BECF000E8183 /* Welcome.storyboard */; };
 		CAF94CD12160C106000E8183 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF94CD02160C106000E8183 /* AnimationModel.swift */; };
-		CAF961B122995FF3006E3046 /* animal_44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615122995FF2006E3046 /* animal_44.pdf */; };
-		CAF961B222995FF3006E3046 /* animal_45.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615222995FF2006E3046 /* animal_45.pdf */; };
-		CAF961B322995FF3006E3046 /* animal_47.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615322995FF2006E3046 /* animal_47.pdf */; };
-		CAF961B422995FF3006E3046 /* animal_46.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615422995FF2006E3046 /* animal_46.pdf */; };
-		CAF961B522995FF3006E3046 /* animal_42.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615522995FF2006E3046 /* animal_42.pdf */; };
-		CAF961B622995FF3006E3046 /* animal_43.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615622995FF2006E3046 /* animal_43.pdf */; };
-		CAF961B722995FF3006E3046 /* animal_41.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615722995FF2006E3046 /* animal_41.pdf */; };
-		CAF961B822995FF3006E3046 /* animal_40.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615822995FF2006E3046 /* animal_40.pdf */; };
-		CAF961B922995FF3006E3046 /* animal_48.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615922995FF2006E3046 /* animal_48.mp3 */; };
-		CAF961BA22995FF3006E3046 /* animal_13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615A22995FF2006E3046 /* animal_13.mp3 */; };
-		CAF961BB22995FF3006E3046 /* animal_5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615B22995FF2006E3046 /* animal_5.pdf */; };
-		CAF961BC22995FF3006E3046 /* animal_33.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615C22995FF2006E3046 /* animal_33.pdf */; };
-		CAF961BD22995FF3006E3046 /* animal_27.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615D22995FF2006E3046 /* animal_27.pdf */; };
-		CAF961BE22995FF3006E3046 /* animal_26.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615E22995FF2006E3046 /* animal_26.pdf */; };
-		CAF961BF22995FF3006E3046 /* animal_32.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615F22995FF2006E3046 /* animal_32.pdf */; };
-		CAF961C022995FF3006E3046 /* animal_4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616022995FF2006E3046 /* animal_4.pdf */; };
-		CAF961C122995FF3006E3046 /* animal_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616122995FF2006E3046 /* animal_12.mp3 */; };
-		CAF961C222995FF3006E3046 /* animal_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616222995FF2006E3046 /* animal_10.mp3 */; };
-		CAF961C322995FF3006E3046 /* animal_38.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616322995FF2006E3046 /* animal_38.mp3 */; };
-		CAF961C422995FF3006E3046 /* animal_6.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616422995FF2006E3046 /* animal_6.pdf */; };
-		CAF961C522995FF3006E3046 /* animal_24.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616522995FF2006E3046 /* animal_24.pdf */; };
-		CAF961C622995FF3006E3046 /* animal_30.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616622995FF2006E3046 /* animal_30.pdf */; };
-		CAF961C722995FF3006E3046 /* animal_18.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616722995FF2006E3046 /* animal_18.pdf */; };
-		CAF961C822995FF3006E3046 /* animal_19.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616822995FF2006E3046 /* animal_19.pdf */; };
-		CAF961C922995FF3006E3046 /* animal_31.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616922995FF2006E3046 /* animal_31.pdf */; };
-		CAF961CA22995FF3006E3046 /* animal_25.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616A22995FF2006E3046 /* animal_25.pdf */; };
-		CAF961CB22995FF3006E3046 /* animal_39.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616B22995FF2006E3046 /* animal_39.mp3 */; };
-		CAF961CC22995FF3006E3046 /* animal_7.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616C22995FF2006E3046 /* animal_7.pdf */; };
-		CAF961CD22995FF3006E3046 /* animal_11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616D22995FF2006E3046 /* animal_11.mp3 */; };
-		CAF961CE22995FF3006E3046 /* animal_3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616E22995FF2006E3046 /* animal_3.pdf */; };
-		CAF961CF22995FF3006E3046 /* animal_29.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616F22995FF2006E3046 /* animal_29.mp3 */; };
-		CAF961D022995FF3006E3046 /* animal_15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617022995FF2006E3046 /* animal_15.mp3 */; };
-		CAF961D122995FF3006E3046 /* animal_21.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617122995FF2006E3046 /* animal_21.pdf */; };
-		CAF961D222995FF3006E3046 /* animal_35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617222995FF2006E3046 /* animal_35.pdf */; };
-		CAF961D322995FF3006E3046 /* animal_34.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617322995FF2006E3046 /* animal_34.pdf */; };
-		CAF961D422995FF3006E3046 /* animal_20.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617422995FF2006E3046 /* animal_20.pdf */; };
-		CAF961D522995FF3006E3046 /* animal_14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617522995FF2006E3046 /* animal_14.mp3 */; };
-		CAF961D622995FF3006E3046 /* animal_28.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617622995FF2006E3046 /* animal_28.mp3 */; };
-		CAF961D722995FF3006E3046 /* animal_2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617722995FF2006E3046 /* animal_2.pdf */; };
-		CAF961D822995FF3006E3046 /* animal_16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617822995FF2006E3046 /* animal_16.mp3 */; };
-		CAF961D922995FF3006E3046 /* animal_8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617922995FF2006E3046 /* animal_8.mp3 */; };
-		CAF961DA22995FF3006E3046 /* animal_36.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617A22995FF2006E3046 /* animal_36.pdf */; };
-		CAF961DB22995FF3006E3046 /* animal_22.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617B22995FF2006E3046 /* animal_22.pdf */; };
-		CAF961DC22995FF3006E3046 /* animal_23.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617C22995FF2006E3046 /* animal_23.pdf */; };
-		CAF961DD22995FF3006E3046 /* animal_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617D22995FF2006E3046 /* animal_9.mp3 */; };
-		CAF961DE22995FF3006E3046 /* animal_37.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617E22995FF2006E3046 /* animal_37.pdf */; };
-		CAF961DF22995FF3006E3046 /* animal_17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617F22995FF2006E3046 /* animal_17.mp3 */; };
-		CAF961E022995FF3006E3046 /* animal_1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618022995FF2006E3046 /* animal_1.pdf */; };
-		CAF961E122995FF3006E3046 /* animal_32.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618122995FF2006E3046 /* animal_32.mp3 */; };
-		CAF961E222995FF3006E3046 /* animal_26.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618222995FF2006E3046 /* animal_26.mp3 */; };
-		CAF961E322995FF3006E3046 /* animal_12.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618322995FF2006E3046 /* animal_12.pdf */; };
-		CAF961E422995FF3006E3046 /* animal_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618422995FF2006E3046 /* animal_4.mp3 */; };
-		CAF961E522995FF3006E3046 /* animal_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618522995FF2006E3046 /* animal_5.mp3 */; };
-		CAF961E622995FF3006E3046 /* animal_13.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618622995FF2006E3046 /* animal_13.pdf */; };
-		CAF961E722995FF3006E3046 /* animal_27.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618722995FF2006E3046 /* animal_27.mp3 */; };
-		CAF961E822995FF3006E3046 /* animal_33.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618822995FF2006E3046 /* animal_33.mp3 */; };
-		CAF961E922995FF3006E3046 /* animal_25.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618922995FF2006E3046 /* animal_25.mp3 */; };
-		CAF961EA22995FF3006E3046 /* animal_31.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618A22995FF2006E3046 /* animal_31.mp3 */; };
-		CAF961EB22995FF3006E3046 /* animal_19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618B22995FF2006E3046 /* animal_19.mp3 */; };
-		CAF961EC22995FF3006E3046 /* animal_11.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618C22995FF2006E3046 /* animal_11.pdf */; };
-		CAF961ED22995FF3006E3046 /* animal_39.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618D22995FF2006E3046 /* animal_39.pdf */; };
-		CAF961EE22995FF3006E3046 /* animal_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618E22995FF2006E3046 /* animal_7.mp3 */; };
-		CAF961EF22995FF3006E3046 /* animal_38.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618F22995FF2006E3046 /* animal_38.pdf */; };
-		CAF961F022995FF3006E3046 /* animal_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619022995FF2006E3046 /* animal_6.mp3 */; };
-		CAF961F122995FF3006E3046 /* animal_10.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619122995FF2006E3046 /* animal_10.pdf */; };
-		CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619222995FF2006E3046 /* animal_18.mp3 */; };
-		CAF961F322995FF3006E3046 /* animal_30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619322995FF2006E3046 /* animal_30.mp3 */; };
-		CAF961F422995FF3006E3046 /* animal_24.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619422995FF2006E3046 /* animal_24.mp3 */; };
-		CAF961F522995FF3006E3046 /* animal_20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619522995FF2006E3046 /* animal_20.mp3 */; };
-		CAF961F622995FF3006E3046 /* animal_34.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619622995FF2006E3046 /* animal_34.mp3 */; };
-		CAF961F722995FF3006E3046 /* animal_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619722995FF2006E3046 /* animal_2.mp3 */; };
-		CAF961F822995FF3006E3046 /* animal_28.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619822995FF2006E3046 /* animal_28.pdf */; };
-		CAF961F922995FF3006E3046 /* animal_14.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619922995FF2006E3046 /* animal_14.pdf */; };
-		CAF961FA22995FF3006E3046 /* animal_15.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619A22995FF2006E3046 /* animal_15.pdf */; };
-		CAF961FB22995FF3006E3046 /* animal_29.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619B22995FF2006E3046 /* animal_29.pdf */; };
-		CAF961FC22995FF3006E3046 /* animal_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619C22995FF2006E3046 /* animal_3.mp3 */; };
-		CAF961FD22995FF3006E3046 /* animal_35.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619D22995FF2006E3046 /* animal_35.mp3 */; };
-		CAF961FE22995FF3006E3046 /* animal_21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619E22995FF2006E3046 /* animal_21.mp3 */; };
-		CAF961FF22995FF3006E3046 /* animal_9.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619F22995FF2006E3046 /* animal_9.pdf */; };
-		CAF9620022995FF3006E3046 /* animal_37.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A022995FF2006E3046 /* animal_37.mp3 */; };
-		CAF9620122995FF3006E3046 /* animal_23.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A122995FF2006E3046 /* animal_23.mp3 */; };
-		CAF9620222995FF3006E3046 /* animal_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A222995FF2006E3046 /* animal_1.mp3 */; };
-		CAF9620322995FF3006E3046 /* animal_17.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A322995FF2006E3046 /* animal_17.pdf */; };
-		CAF9620422995FF3006E3046 /* animal_16.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A422995FF2006E3046 /* animal_16.pdf */; };
-		CAF9620522995FF3006E3046 /* animal_22.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A522995FF3006E3046 /* animal_22.mp3 */; };
-		CAF9620622995FF3006E3046 /* animal_8.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A622995FF3006E3046 /* animal_8.pdf */; };
-		CAF9620722995FF3006E3046 /* animal_36.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A722995FF3006E3046 /* animal_36.mp3 */; };
-		CAF9620822995FF3006E3046 /* animal_45.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A822995FF3006E3046 /* animal_45.mp3 */; };
-		CAF9620922995FF3006E3046 /* animal_44.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A922995FF3006E3046 /* animal_44.mp3 */; };
-		CAF9620A22995FF3006E3046 /* animal_46.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AA22995FF3006E3046 /* animal_46.mp3 */; };
-		CAF9620B22995FF3006E3046 /* animal_47.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AB22995FF3006E3046 /* animal_47.mp3 */; };
-		CAF9620C22995FF3006E3046 /* animal_43.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AC22995FF3006E3046 /* animal_43.mp3 */; };
-		CAF9620D22995FF3006E3046 /* animal_42.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AD22995FF3006E3046 /* animal_42.mp3 */; };
-		CAF9620E22995FF3006E3046 /* animal_40.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AE22995FF3006E3046 /* animal_40.mp3 */; };
-		CAF9620F22995FF3006E3046 /* animal_48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AF22995FF3006E3046 /* animal_48.pdf */; };
-		CAF9621022995FF3006E3046 /* animal_41.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961B022995FF3006E3046 /* animal_41.mp3 */; };
-		CAF9621522996022006E3046 /* scene-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621222996022006E3046 /* scene-2.mp4 */; };
-		CAF9621722996022006E3046 /* scene-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621422996022006E3046 /* scene-1.mp4 */; };
+		CAF961B922995FF3006E3046 /* animal_48.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615922995FF2006E3046 /* animal_48.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961BA22995FF3006E3046 /* animal_13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9615A22995FF2006E3046 /* animal_13.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961C122995FF3006E3046 /* animal_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616122995FF2006E3046 /* animal_12.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961C222995FF3006E3046 /* animal_10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616222995FF2006E3046 /* animal_10.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961C322995FF3006E3046 /* animal_38.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616322995FF2006E3046 /* animal_38.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961CB22995FF3006E3046 /* animal_39.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616B22995FF2006E3046 /* animal_39.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961CD22995FF3006E3046 /* animal_11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616D22995FF2006E3046 /* animal_11.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961CF22995FF3006E3046 /* animal_29.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9616F22995FF2006E3046 /* animal_29.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961D022995FF3006E3046 /* animal_15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617022995FF2006E3046 /* animal_15.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961D522995FF3006E3046 /* animal_14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617522995FF2006E3046 /* animal_14.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961D622995FF3006E3046 /* animal_28.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617622995FF2006E3046 /* animal_28.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961D822995FF3006E3046 /* animal_16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617822995FF2006E3046 /* animal_16.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961D922995FF3006E3046 /* animal_8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617922995FF2006E3046 /* animal_8.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961DD22995FF3006E3046 /* animal_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617D22995FF2006E3046 /* animal_9.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961DF22995FF3006E3046 /* animal_17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9617F22995FF2006E3046 /* animal_17.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961E122995FF3006E3046 /* animal_32.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618122995FF2006E3046 /* animal_32.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961E222995FF3006E3046 /* animal_26.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618222995FF2006E3046 /* animal_26.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961E422995FF3006E3046 /* animal_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618422995FF2006E3046 /* animal_4.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961E522995FF3006E3046 /* animal_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618522995FF2006E3046 /* animal_5.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961E722995FF3006E3046 /* animal_27.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618722995FF2006E3046 /* animal_27.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961E822995FF3006E3046 /* animal_33.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618822995FF2006E3046 /* animal_33.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961E922995FF3006E3046 /* animal_25.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618922995FF2006E3046 /* animal_25.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961EA22995FF3006E3046 /* animal_31.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618A22995FF2006E3046 /* animal_31.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961EB22995FF3006E3046 /* animal_19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618B22995FF2006E3046 /* animal_19.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961EE22995FF3006E3046 /* animal_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9618E22995FF2006E3046 /* animal_7.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961F022995FF3006E3046 /* animal_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619022995FF2006E3046 /* animal_6.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619222995FF2006E3046 /* animal_18.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961F322995FF3006E3046 /* animal_30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619322995FF2006E3046 /* animal_30.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961F422995FF3006E3046 /* animal_24.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619422995FF2006E3046 /* animal_24.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961F522995FF3006E3046 /* animal_20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619522995FF2006E3046 /* animal_20.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961F622995FF3006E3046 /* animal_34.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619622995FF2006E3046 /* animal_34.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961F722995FF3006E3046 /* animal_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619722995FF2006E3046 /* animal_2.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961FC22995FF3006E3046 /* animal_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619C22995FF2006E3046 /* animal_3.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961FD22995FF3006E3046 /* animal_35.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619D22995FF2006E3046 /* animal_35.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF961FE22995FF3006E3046 /* animal_21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9619E22995FF2006E3046 /* animal_21.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620022995FF3006E3046 /* animal_37.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A022995FF2006E3046 /* animal_37.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620122995FF3006E3046 /* animal_23.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A122995FF2006E3046 /* animal_23.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620222995FF3006E3046 /* animal_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A222995FF2006E3046 /* animal_1.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620522995FF3006E3046 /* animal_22.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A522995FF3006E3046 /* animal_22.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620722995FF3006E3046 /* animal_36.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A722995FF3006E3046 /* animal_36.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620822995FF3006E3046 /* animal_45.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A822995FF3006E3046 /* animal_45.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620922995FF3006E3046 /* animal_44.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961A922995FF3006E3046 /* animal_44.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620A22995FF3006E3046 /* animal_46.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AA22995FF3006E3046 /* animal_46.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620B22995FF3006E3046 /* animal_47.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AB22995FF3006E3046 /* animal_47.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620C22995FF3006E3046 /* animal_43.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AC22995FF3006E3046 /* animal_43.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620D22995FF3006E3046 /* animal_42.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AD22995FF3006E3046 /* animal_42.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9620E22995FF3006E3046 /* animal_40.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961AE22995FF3006E3046 /* animal_40.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9621022995FF3006E3046 /* animal_41.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAF961B022995FF3006E3046 /* animal_41.mp3 */; settings = {ASSET_TAGS = (AnimalsSounds, ); }; };
+		CAF9621522996022006E3046 /* scene-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621222996022006E3046 /* scene-2.mp4 */; settings = {ASSET_TAGS = (IntroduceAnimals, ); }; };
+		CAF9621722996022006E3046 /* scene-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CAF9621422996022006E3046 /* scene-1.mp4 */; settings = {ASSET_TAGS = (IntroduceAnimals, ); }; };
 		CAF9622C229970F7006E3046 /* AnimalsStatisticPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF96226229970F7006E3046 /* AnimalsStatisticPresenter.swift */; };
 		CAF9622E229970F7006E3046 /* AnimalsStatisticRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF96228229970F7006E3046 /* AnimalsStatisticRouter.swift */; };
 		CAF9622F229970F7006E3046 /* AnimalsStatisticModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF96229229970F7006E3046 /* AnimalsStatisticModels.swift */; };
@@ -735,7 +696,6 @@
 		CAF96231229970F7006E3046 /* AnimalsStatisticInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9622B229970F7006E3046 /* AnimalsStatisticInteractor.swift */; };
 		CAF9AB9A22ABCC4E006DFB5F /* ResumeRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9AB9922ABCC4E006DFB5F /* ResumeRoundViewController.swift */; };
 		CAF9AB9C22ABD137006DFB5F /* AnimalsGameFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9AB9B22ABD136006DFB5F /* AnimalsGameFlow.swift */; };
-		CAFF983E2323C1E900003076 /* Sandbox.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CAFF983D2323C1E900003076 /* Sandbox.xcconfig */; };
 		CAFF98432323CEFA00003076 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF98422323CEFA00003076 /* Result.swift */; };
 		CAFF984623251FDD00003076 /* ColorsGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFF984523251FDD00003076 /* ColorsGame.storyboard */; };
 		CAFF984823252D3E00003076 /* ImageFillter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984723252D3E00003076 /* ImageFillter.swift */; };
@@ -749,6 +709,7 @@
 		CAFF985B2325318E00003076 /* ColorsTeachingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF985A2325318E00003076 /* ColorsTeachingViewController.swift */; };
 		CAFF985D232531A900003076 /* ColorsChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF985C232531A900003076 /* ColorsChoiceViewController.swift */; };
 		CAFF985F2325342600003076 /* GameMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF985E2325342600003076 /* GameMasterViewController.swift */; };
+		E76CD1A723326BE20094E29A /* OnDemandLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76CD1A623326BE20094E29A /* OnDemandLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -782,6 +743,7 @@
 		111187EE231E82D700EBEFC0 /* MonsterStatisticInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStatisticInteractor.swift; sourceTree = "<group>"; };
 		111187F5231E8D6E00EBEFC0 /* MonsterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterService.swift; sourceTree = "<group>"; };
 		11246D61231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameCollectionViewLayout.swift; sourceTree = "<group>"; };
+		112860B5232BA6E20002852A /* monster_menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = monster_menu.mp3; sourceTree = "<group>"; };
 		11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStatisticResponse.swift; sourceTree = "<group>"; };
 		11604AD9231F8330001D1C7F /* MonsterGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGetStatCommand.swift; sourceTree = "<group>"; };
 		11604ADB231F8494001D1C7F /* MonsterSendStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterSendStatCommand.swift; sourceTree = "<group>"; };
@@ -796,6 +758,13 @@
 		11BC751C23042DB4001B5CC8 /* MonsterMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterViewController.swift; sourceTree = "<group>"; };
 		11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterStartViewController.swift; sourceTree = "<group>"; };
 		11BC752423043A1E001B5CC8 /* MonsterMasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterMasterRouter.swift; sourceTree = "<group>"; };
+		11CF6B86232A071A00F8E529 /* monsterCloseCards.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterCloseCards.wav; sourceTree = "<group>"; };
+		11CF6B87232A071A00F8E529 /* monsterWrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterWrong.wav; sourceTree = "<group>"; };
+		11CF6B88232A071A00F8E529 /* monsterPickMain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterPickMain.wav; sourceTree = "<group>"; };
+		11CF6B89232A071A00F8E529 /* monsterOpenCard.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterOpenCard.wav; sourceTree = "<group>"; };
+		11CF6B8B232A071A00F8E529 /* monsterCloseAll.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterCloseAll.wav; sourceTree = "<group>"; };
+		11CF6B8C232A071A00F8E529 /* monsterRight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterRight.wav; sourceTree = "<group>"; };
+		11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = monster_game_introduce.mp4; sourceTree = "<group>"; };
 		11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameResultsViewController.swift; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
@@ -1021,6 +990,7 @@
 		CA52F36F223DA1360058194E /* PlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA52F370223DA1360058194E /* PlaylistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCollectionViewCell.xib; sourceTree = "<group>"; };
 		CA56D0C52302A424006298C5 /* ariblk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ariblk.ttf; sourceTree = "<group>"; };
+		CA573D4723367BB400241990 /* OnBoarding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OnBoarding.mp4; sourceTree = "<group>"; };
 		CA57897A226FA76500F05A5A /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		CA5CB163213F0957000CB3D5 /* flip.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flip.json; sourceTree = "<group>"; };
 		CA5CB165213F095F000CB3D5 /* krya.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = krya.json; sourceTree = "<group>"; };
@@ -1378,7 +1348,7 @@
 		CAEEF2292299C0F900AF5AF6 /* ChoiceAnimalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceAnimalModels.swift; sourceTree = "<group>"; };
 		CAEEF22A2299C0F900AF5AF6 /* ChoiceAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceAnimalViewController.swift; sourceTree = "<group>"; };
 		CAEEF23F2299C9FD00AF5AF6 /* RoundPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundPresentViewController.swift; sourceTree = "<group>"; };
-		CAEEF2412299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceAnimalViewController.swift; sourceTree = "<group>"; };
+		CAEEF2412299CB8E00AF5AF6 /* IntroduceVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceVideoViewController.swift; sourceTree = "<group>"; };
 		CAF4C105214AF31700954AA8 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		CAF4C107214B054A00954AA8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CAF4C10A214B0C7900954AA8 /* FavPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPresenter.swift; sourceTree = "<group>"; };
@@ -1410,92 +1380,45 @@
 		CAF94CC8215FF275000E8183 /* ActionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionService.swift; sourceTree = "<group>"; };
 		CAF94CCE2160BECF000E8183 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		CAF94CD02160C106000E8183 /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
-		CAF9615122995FF2006E3046 /* animal_44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_44.pdf; sourceTree = "<group>"; };
-		CAF9615222995FF2006E3046 /* animal_45.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_45.pdf; sourceTree = "<group>"; };
-		CAF9615322995FF2006E3046 /* animal_47.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_47.pdf; sourceTree = "<group>"; };
-		CAF9615422995FF2006E3046 /* animal_46.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_46.pdf; sourceTree = "<group>"; };
-		CAF9615522995FF2006E3046 /* animal_42.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_42.pdf; sourceTree = "<group>"; };
-		CAF9615622995FF2006E3046 /* animal_43.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_43.pdf; sourceTree = "<group>"; };
-		CAF9615722995FF2006E3046 /* animal_41.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_41.pdf; sourceTree = "<group>"; };
-		CAF9615822995FF2006E3046 /* animal_40.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_40.pdf; sourceTree = "<group>"; };
 		CAF9615922995FF2006E3046 /* animal_48.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_48.mp3; sourceTree = "<group>"; };
 		CAF9615A22995FF2006E3046 /* animal_13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_13.mp3; sourceTree = "<group>"; };
-		CAF9615B22995FF2006E3046 /* animal_5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_5.pdf; sourceTree = "<group>"; };
-		CAF9615C22995FF2006E3046 /* animal_33.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_33.pdf; sourceTree = "<group>"; };
-		CAF9615D22995FF2006E3046 /* animal_27.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_27.pdf; sourceTree = "<group>"; };
-		CAF9615E22995FF2006E3046 /* animal_26.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_26.pdf; sourceTree = "<group>"; };
-		CAF9615F22995FF2006E3046 /* animal_32.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_32.pdf; sourceTree = "<group>"; };
-		CAF9616022995FF2006E3046 /* animal_4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_4.pdf; sourceTree = "<group>"; };
 		CAF9616122995FF2006E3046 /* animal_12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_12.mp3; sourceTree = "<group>"; };
 		CAF9616222995FF2006E3046 /* animal_10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_10.mp3; sourceTree = "<group>"; };
 		CAF9616322995FF2006E3046 /* animal_38.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_38.mp3; sourceTree = "<group>"; };
-		CAF9616422995FF2006E3046 /* animal_6.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_6.pdf; sourceTree = "<group>"; };
-		CAF9616522995FF2006E3046 /* animal_24.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_24.pdf; sourceTree = "<group>"; };
-		CAF9616622995FF2006E3046 /* animal_30.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_30.pdf; sourceTree = "<group>"; };
-		CAF9616722995FF2006E3046 /* animal_18.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_18.pdf; sourceTree = "<group>"; };
-		CAF9616822995FF2006E3046 /* animal_19.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_19.pdf; sourceTree = "<group>"; };
-		CAF9616922995FF2006E3046 /* animal_31.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_31.pdf; sourceTree = "<group>"; };
-		CAF9616A22995FF2006E3046 /* animal_25.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_25.pdf; sourceTree = "<group>"; };
 		CAF9616B22995FF2006E3046 /* animal_39.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_39.mp3; sourceTree = "<group>"; };
-		CAF9616C22995FF2006E3046 /* animal_7.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_7.pdf; sourceTree = "<group>"; };
 		CAF9616D22995FF2006E3046 /* animal_11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_11.mp3; sourceTree = "<group>"; };
-		CAF9616E22995FF2006E3046 /* animal_3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_3.pdf; sourceTree = "<group>"; };
 		CAF9616F22995FF2006E3046 /* animal_29.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_29.mp3; sourceTree = "<group>"; };
 		CAF9617022995FF2006E3046 /* animal_15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_15.mp3; sourceTree = "<group>"; };
-		CAF9617122995FF2006E3046 /* animal_21.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_21.pdf; sourceTree = "<group>"; };
-		CAF9617222995FF2006E3046 /* animal_35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_35.pdf; sourceTree = "<group>"; };
-		CAF9617322995FF2006E3046 /* animal_34.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_34.pdf; sourceTree = "<group>"; };
-		CAF9617422995FF2006E3046 /* animal_20.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_20.pdf; sourceTree = "<group>"; };
 		CAF9617522995FF2006E3046 /* animal_14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_14.mp3; sourceTree = "<group>"; };
 		CAF9617622995FF2006E3046 /* animal_28.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_28.mp3; sourceTree = "<group>"; };
-		CAF9617722995FF2006E3046 /* animal_2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_2.pdf; sourceTree = "<group>"; };
 		CAF9617822995FF2006E3046 /* animal_16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_16.mp3; sourceTree = "<group>"; };
 		CAF9617922995FF2006E3046 /* animal_8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_8.mp3; sourceTree = "<group>"; };
-		CAF9617A22995FF2006E3046 /* animal_36.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_36.pdf; sourceTree = "<group>"; };
-		CAF9617B22995FF2006E3046 /* animal_22.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_22.pdf; sourceTree = "<group>"; };
-		CAF9617C22995FF2006E3046 /* animal_23.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_23.pdf; sourceTree = "<group>"; };
 		CAF9617D22995FF2006E3046 /* animal_9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_9.mp3; sourceTree = "<group>"; };
-		CAF9617E22995FF2006E3046 /* animal_37.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_37.pdf; sourceTree = "<group>"; };
 		CAF9617F22995FF2006E3046 /* animal_17.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_17.mp3; sourceTree = "<group>"; };
-		CAF9618022995FF2006E3046 /* animal_1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_1.pdf; sourceTree = "<group>"; };
 		CAF9618122995FF2006E3046 /* animal_32.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_32.mp3; sourceTree = "<group>"; };
 		CAF9618222995FF2006E3046 /* animal_26.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_26.mp3; sourceTree = "<group>"; };
-		CAF9618322995FF2006E3046 /* animal_12.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_12.pdf; sourceTree = "<group>"; };
 		CAF9618422995FF2006E3046 /* animal_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_4.mp3; sourceTree = "<group>"; };
 		CAF9618522995FF2006E3046 /* animal_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_5.mp3; sourceTree = "<group>"; };
-		CAF9618622995FF2006E3046 /* animal_13.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_13.pdf; sourceTree = "<group>"; };
 		CAF9618722995FF2006E3046 /* animal_27.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_27.mp3; sourceTree = "<group>"; };
 		CAF9618822995FF2006E3046 /* animal_33.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_33.mp3; sourceTree = "<group>"; };
 		CAF9618922995FF2006E3046 /* animal_25.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_25.mp3; sourceTree = "<group>"; };
 		CAF9618A22995FF2006E3046 /* animal_31.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_31.mp3; sourceTree = "<group>"; };
 		CAF9618B22995FF2006E3046 /* animal_19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_19.mp3; sourceTree = "<group>"; };
-		CAF9618C22995FF2006E3046 /* animal_11.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_11.pdf; sourceTree = "<group>"; };
-		CAF9618D22995FF2006E3046 /* animal_39.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_39.pdf; sourceTree = "<group>"; };
 		CAF9618E22995FF2006E3046 /* animal_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_7.mp3; sourceTree = "<group>"; };
-		CAF9618F22995FF2006E3046 /* animal_38.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_38.pdf; sourceTree = "<group>"; };
 		CAF9619022995FF2006E3046 /* animal_6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_6.mp3; sourceTree = "<group>"; };
-		CAF9619122995FF2006E3046 /* animal_10.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_10.pdf; sourceTree = "<group>"; };
 		CAF9619222995FF2006E3046 /* animal_18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_18.mp3; sourceTree = "<group>"; };
 		CAF9619322995FF2006E3046 /* animal_30.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_30.mp3; sourceTree = "<group>"; };
 		CAF9619422995FF2006E3046 /* animal_24.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_24.mp3; sourceTree = "<group>"; };
 		CAF9619522995FF2006E3046 /* animal_20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_20.mp3; sourceTree = "<group>"; };
 		CAF9619622995FF2006E3046 /* animal_34.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_34.mp3; sourceTree = "<group>"; };
 		CAF9619722995FF2006E3046 /* animal_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_2.mp3; sourceTree = "<group>"; };
-		CAF9619822995FF2006E3046 /* animal_28.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_28.pdf; sourceTree = "<group>"; };
-		CAF9619922995FF2006E3046 /* animal_14.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_14.pdf; sourceTree = "<group>"; };
-		CAF9619A22995FF2006E3046 /* animal_15.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_15.pdf; sourceTree = "<group>"; };
-		CAF9619B22995FF2006E3046 /* animal_29.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_29.pdf; sourceTree = "<group>"; };
 		CAF9619C22995FF2006E3046 /* animal_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_3.mp3; sourceTree = "<group>"; };
 		CAF9619D22995FF2006E3046 /* animal_35.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_35.mp3; sourceTree = "<group>"; };
 		CAF9619E22995FF2006E3046 /* animal_21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_21.mp3; sourceTree = "<group>"; };
-		CAF9619F22995FF2006E3046 /* animal_9.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_9.pdf; sourceTree = "<group>"; };
 		CAF961A022995FF2006E3046 /* animal_37.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_37.mp3; sourceTree = "<group>"; };
 		CAF961A122995FF2006E3046 /* animal_23.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_23.mp3; sourceTree = "<group>"; };
 		CAF961A222995FF2006E3046 /* animal_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_1.mp3; sourceTree = "<group>"; };
-		CAF961A322995FF2006E3046 /* animal_17.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_17.pdf; sourceTree = "<group>"; };
-		CAF961A422995FF2006E3046 /* animal_16.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_16.pdf; sourceTree = "<group>"; };
 		CAF961A522995FF3006E3046 /* animal_22.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_22.mp3; sourceTree = "<group>"; };
-		CAF961A622995FF3006E3046 /* animal_8.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_8.pdf; sourceTree = "<group>"; };
 		CAF961A722995FF3006E3046 /* animal_36.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_36.mp3; sourceTree = "<group>"; };
 		CAF961A822995FF3006E3046 /* animal_45.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_45.mp3; sourceTree = "<group>"; };
 		CAF961A922995FF3006E3046 /* animal_44.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_44.mp3; sourceTree = "<group>"; };
@@ -1504,7 +1427,6 @@
 		CAF961AC22995FF3006E3046 /* animal_43.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_43.mp3; sourceTree = "<group>"; };
 		CAF961AD22995FF3006E3046 /* animal_42.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_42.mp3; sourceTree = "<group>"; };
 		CAF961AE22995FF3006E3046 /* animal_40.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_40.mp3; sourceTree = "<group>"; };
-		CAF961AF22995FF3006E3046 /* animal_48.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = animal_48.pdf; sourceTree = "<group>"; };
 		CAF961B022995FF3006E3046 /* animal_41.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = animal_41.mp3; sourceTree = "<group>"; };
 		CAF9621222996022006E3046 /* scene-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "scene-2.mp4"; sourceTree = "<group>"; };
 		CAF9621422996022006E3046 /* scene-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "scene-1.mp4"; sourceTree = "<group>"; };
@@ -1530,6 +1452,7 @@
 		CAFF985C232531A900003076 /* ColorsChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsChoiceViewController.swift; sourceTree = "<group>"; };
 		CAFF985E2325342600003076 /* GameMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMasterViewController.swift; sourceTree = "<group>"; };
 		CD8F4E30A715216C15EAB110 /* Pods-Teremok-TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.debug.xcconfig"; sourceTree = "<group>"; };
+		E76CD1A623326BE20094E29A /* OnDemandLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDemandLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1601,6 +1524,29 @@
 			path = MonsterGame;
 			sourceTree = "<group>";
 		};
+		11CF6B84232A069D00F8E529 /* Monster */ = {
+			isa = PBXGroup;
+			children = (
+				11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */,
+				11CF6B85232A06A800F8E529 /* sounds */,
+			);
+			path = Monster;
+			sourceTree = "<group>";
+		};
+		11CF6B85232A06A800F8E529 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				112860B5232BA6E20002852A /* monster_menu.mp3 */,
+				11CF6B89232A071A00F8E529 /* monsterOpenCard.wav */,
+				11CF6B8B232A071A00F8E529 /* monsterCloseAll.wav */,
+				11CF6B86232A071A00F8E529 /* monsterCloseCards.wav */,
+				11CF6B88232A071A00F8E529 /* monsterPickMain.wav */,
+				11CF6B8C232A071A00F8E529 /* monsterRight.wav */,
+				11CF6B87232A071A00F8E529 /* monsterWrong.wav */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 		8BFE56BA8D2FDC0505E1093F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1643,6 +1589,7 @@
 		CA1AB66322F30CBC003A2584 /* AlphaviteGame */ = {
 			isa = PBXGroup;
 			children = (
+				CAAD25E722F59872005CFCD2 /* Master */,
 				CA70867223082E940015851C /* Stats */,
 				CA51004122F5FFAE00821C25 /* AlphaviteFlow.swift */,
 				CAAD25F022F5DBC1005CFCD2 /* AlphaviteStartViewController.swift */,
@@ -2261,13 +2208,14 @@
 		CAA884562139204100E27F7A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CA573D4723367BB400241990 /* OnBoarding.mp4 */,
 				CAF9614F22995FAC006E3046 /* Game */,
+				CAD16DEC2147E69D00A82DBB /* Animation */,
+				CADB3D6E21F7AD4D009467B8 /* Music */,
 				CA61D86C229ACBB300E3D603 /* Fonts */,
 				CA763632226B53B200168AB1 /* downloadCover.png */,
 				CAC2D4EB2114D2E100945003 /* Assets.xcassets */,
 				CAF889DA21A6975800A245A7 /* GoogleService-Info.plist */,
-				CADB3D6E21F7AD4D009467B8 /* Music */,
-				CAD16DEC2147E69D00A82DBB /* Animation */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -2832,6 +2780,7 @@
 				CAF94CC2215E80F0000E8183 /* CarouselCollectionViewLayout.swift */,
 				CAE1C462211DC8490058C9C6 /* ViewHierarchyWorker.swift */,
 				CA52DF302290794A00458EE5 /* LayoutHelper.swift */,
+				E76CD1A623326BE20094E29A /* OnDemandLoader.swift */,
 				CA7E8BA4218200820076E5A0 /* ReachabilityManager.swift */,
 				CADB3D7B21F7B64E009467B8 /* BackgroundMediaWorker.swift */,
 				CA9AA3CE218467CD00019CA7 /* ImageLoader.swift */,
@@ -2888,7 +2837,7 @@
 		CAEEF20C2299837700AF5AF6 /* Introduce */ = {
 			isa = PBXGroup;
 			children = (
-				CAEEF2412299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift */,
+				CAEEF2412299CB8E00AF5AF6 /* IntroduceVideoViewController.swift */,
 			);
 			path = Introduce;
 			sourceTree = "<group>";
@@ -2975,11 +2924,12 @@
 		CAF9614F22995FAC006E3046 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				CAF9615022995FF2006E3046 /* Animals */,
+				11CF6B84232A069D00F8E529 /* Monster */,
 				CA51004522F6EA5A00821C25 /* Alphavite */,
 				CAC6F70322A81BC000756AE2 /* PrincesPhrase */,
 				CA61D88122A3FE1700E3D603 /* Animation */,
 				CAF9621122996022006E3046 /* HD */,
-				CAF9615022995FF2006E3046 /* Animals */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -2987,92 +2937,45 @@
 		CAF9615022995FF2006E3046 /* Animals */ = {
 			isa = PBXGroup;
 			children = (
-				CAF9615122995FF2006E3046 /* animal_44.pdf */,
-				CAF9615222995FF2006E3046 /* animal_45.pdf */,
-				CAF9615322995FF2006E3046 /* animal_47.pdf */,
-				CAF9615422995FF2006E3046 /* animal_46.pdf */,
-				CAF9615522995FF2006E3046 /* animal_42.pdf */,
-				CAF9615622995FF2006E3046 /* animal_43.pdf */,
-				CAF9615722995FF2006E3046 /* animal_41.pdf */,
-				CAF9615822995FF2006E3046 /* animal_40.pdf */,
 				CAF9615922995FF2006E3046 /* animal_48.mp3 */,
 				CAF9615A22995FF2006E3046 /* animal_13.mp3 */,
-				CAF9615B22995FF2006E3046 /* animal_5.pdf */,
-				CAF9615C22995FF2006E3046 /* animal_33.pdf */,
-				CAF9615D22995FF2006E3046 /* animal_27.pdf */,
-				CAF9615E22995FF2006E3046 /* animal_26.pdf */,
-				CAF9615F22995FF2006E3046 /* animal_32.pdf */,
-				CAF9616022995FF2006E3046 /* animal_4.pdf */,
 				CAF9616122995FF2006E3046 /* animal_12.mp3 */,
 				CAF9616222995FF2006E3046 /* animal_10.mp3 */,
 				CAF9616322995FF2006E3046 /* animal_38.mp3 */,
-				CAF9616422995FF2006E3046 /* animal_6.pdf */,
-				CAF9616522995FF2006E3046 /* animal_24.pdf */,
-				CAF9616622995FF2006E3046 /* animal_30.pdf */,
-				CAF9616722995FF2006E3046 /* animal_18.pdf */,
-				CAF9616822995FF2006E3046 /* animal_19.pdf */,
-				CAF9616922995FF2006E3046 /* animal_31.pdf */,
-				CAF9616A22995FF2006E3046 /* animal_25.pdf */,
 				CAF9616B22995FF2006E3046 /* animal_39.mp3 */,
-				CAF9616C22995FF2006E3046 /* animal_7.pdf */,
 				CAF9616D22995FF2006E3046 /* animal_11.mp3 */,
-				CAF9616E22995FF2006E3046 /* animal_3.pdf */,
 				CAF9616F22995FF2006E3046 /* animal_29.mp3 */,
 				CAF9617022995FF2006E3046 /* animal_15.mp3 */,
-				CAF9617122995FF2006E3046 /* animal_21.pdf */,
-				CAF9617222995FF2006E3046 /* animal_35.pdf */,
-				CAF9617322995FF2006E3046 /* animal_34.pdf */,
-				CAF9617422995FF2006E3046 /* animal_20.pdf */,
 				CAF9617522995FF2006E3046 /* animal_14.mp3 */,
 				CAF9617622995FF2006E3046 /* animal_28.mp3 */,
-				CAF9617722995FF2006E3046 /* animal_2.pdf */,
 				CAF9617822995FF2006E3046 /* animal_16.mp3 */,
 				CAF9617922995FF2006E3046 /* animal_8.mp3 */,
-				CAF9617A22995FF2006E3046 /* animal_36.pdf */,
-				CAF9617B22995FF2006E3046 /* animal_22.pdf */,
-				CAF9617C22995FF2006E3046 /* animal_23.pdf */,
 				CAF9617D22995FF2006E3046 /* animal_9.mp3 */,
-				CAF9617E22995FF2006E3046 /* animal_37.pdf */,
 				CAF9617F22995FF2006E3046 /* animal_17.mp3 */,
-				CAF9618022995FF2006E3046 /* animal_1.pdf */,
 				CAF9618122995FF2006E3046 /* animal_32.mp3 */,
 				CAF9618222995FF2006E3046 /* animal_26.mp3 */,
-				CAF9618322995FF2006E3046 /* animal_12.pdf */,
 				CAF9618422995FF2006E3046 /* animal_4.mp3 */,
 				CAF9618522995FF2006E3046 /* animal_5.mp3 */,
-				CAF9618622995FF2006E3046 /* animal_13.pdf */,
 				CAF9618722995FF2006E3046 /* animal_27.mp3 */,
 				CAF9618822995FF2006E3046 /* animal_33.mp3 */,
 				CAF9618922995FF2006E3046 /* animal_25.mp3 */,
 				CAF9618A22995FF2006E3046 /* animal_31.mp3 */,
 				CAF9618B22995FF2006E3046 /* animal_19.mp3 */,
-				CAF9618C22995FF2006E3046 /* animal_11.pdf */,
-				CAF9618D22995FF2006E3046 /* animal_39.pdf */,
 				CAF9618E22995FF2006E3046 /* animal_7.mp3 */,
-				CAF9618F22995FF2006E3046 /* animal_38.pdf */,
 				CAF9619022995FF2006E3046 /* animal_6.mp3 */,
-				CAF9619122995FF2006E3046 /* animal_10.pdf */,
 				CAF9619222995FF2006E3046 /* animal_18.mp3 */,
 				CAF9619322995FF2006E3046 /* animal_30.mp3 */,
 				CAF9619422995FF2006E3046 /* animal_24.mp3 */,
 				CAF9619522995FF2006E3046 /* animal_20.mp3 */,
 				CAF9619622995FF2006E3046 /* animal_34.mp3 */,
 				CAF9619722995FF2006E3046 /* animal_2.mp3 */,
-				CAF9619822995FF2006E3046 /* animal_28.pdf */,
-				CAF9619922995FF2006E3046 /* animal_14.pdf */,
-				CAF9619A22995FF2006E3046 /* animal_15.pdf */,
-				CAF9619B22995FF2006E3046 /* animal_29.pdf */,
 				CAF9619C22995FF2006E3046 /* animal_3.mp3 */,
 				CAF9619D22995FF2006E3046 /* animal_35.mp3 */,
 				CAF9619E22995FF2006E3046 /* animal_21.mp3 */,
-				CAF9619F22995FF2006E3046 /* animal_9.pdf */,
 				CAF961A022995FF2006E3046 /* animal_37.mp3 */,
 				CAF961A122995FF2006E3046 /* animal_23.mp3 */,
 				CAF961A222995FF2006E3046 /* animal_1.mp3 */,
-				CAF961A322995FF2006E3046 /* animal_17.pdf */,
-				CAF961A422995FF2006E3046 /* animal_16.pdf */,
 				CAF961A522995FF3006E3046 /* animal_22.mp3 */,
-				CAF961A622995FF3006E3046 /* animal_8.pdf */,
 				CAF961A722995FF3006E3046 /* animal_36.mp3 */,
 				CAF961A822995FF3006E3046 /* animal_45.mp3 */,
 				CAF961A922995FF3006E3046 /* animal_44.mp3 */,
@@ -3081,7 +2984,6 @@
 				CAF961AC22995FF3006E3046 /* animal_43.mp3 */,
 				CAF961AD22995FF3006E3046 /* animal_42.mp3 */,
 				CAF961AE22995FF3006E3046 /* animal_40.mp3 */,
-				CAF961AF22995FF3006E3046 /* animal_48.pdf */,
 				CAF961B022995FF3006E3046 /* animal_41.mp3 */,
 			);
 			path = Animals;
@@ -3221,8 +3123,19 @@
 		CAC2D4D92114D2DF00945003 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					AlphabetImages,
+					AlphabetSounds,
+					AnimalsImage,
+					AnimalsSounds,
+					IntroduceAlphabet,
+					IntroduceAnimals,
+					IntroduceMonsters,
+					MonstersImage,
+					OnBoarding,
+				);
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = xmedia;
 				TargetAttributes = {
 					CAAAFB5D22E3549B0006BD60 = {
@@ -3283,15 +3196,14 @@
 				CA5100CA22F6EACF00821C25 /* alphavite_9.wav in Resources */,
 				CAD2103D231700DC006F2F08 /* MontserratAlternates-Light.ttf in Resources */,
 				CAC6F72622A81BC000756AE2 /* ready_r_4.wav in Resources */,
-				CAF961EC22995FF3006E3046 /* animal_11.pdf in Resources */,
 				CAAD25EC22F5A464005CFCD2 /* Glober Black.otf in Resources */,
 				CAC6F71D22A81BC000756AE2 /* click_button_1.mp3 in Resources */,
 				CA5CB166213F095F000CB3D5 /* krya.json in Resources */,
 				CA5100E722F6EACF00821C25 /* alphavite_6.wav in Resources */,
-				CAF961B322995FF3006E3046 /* animal_47.pdf in Resources */,
 				CADD14B823107F7C00AE920A /* cloud_main.json in Resources */,
 				CA51E1C522FEC8C60028DF63 /* start_Pick.json in Resources */,
 				CA5100BE22F6EACF00821C25 /* alphavite_22.wav in Resources */,
+				CA573D4823367BB400241990 /* OnBoarding.mp4 in Resources */,
 				CAD21047231700DC006F2F08 /* MontserratAlternates-Italic.ttf in Resources */,
 				CAF961F622995FF3006E3046 /* animal_34.mp3 in Resources */,
 				CA5100C322F6EACF00821C25 /* alphavite_23_word_2.wav in Resources */,
@@ -3310,45 +3222,39 @@
 				CA4C28D02147DFDB00CA264D /* music.json in Resources */,
 				CAF961E222995FF3006E3046 /* animal_26.mp3 in Resources */,
 				CA0053C2213BD46900AA187F /* MainlCollectionViewCell.xib in Resources */,
-				CAF961CE22995FF3006E3046 /* animal_3.pdf in Resources */,
 				CA04863B22A845A60017B8A2 /* Round_1.json in Resources */,
 				CADD14AB2309683400AE920A /* happy_Pick.json in Resources */,
 				CAD16DEB2147E69100A82DBB /* rainbow.json in Resources */,
-				CAF961C422995FF3006E3046 /* animal_6.pdf in Resources */,
 				CAF961FE22995FF3006E3046 /* animal_21.mp3 in Resources */,
 				CA5100D222F6EACF00821C25 /* alphavite_26_word_2.wav in Resources */,
-				CAF961EF22995FF3006E3046 /* animal_38.pdf in Resources */,
 				CA433FFA224FA8E700B0788E /* TrackCollectionViewCell.xib in Resources */,
 				CA9AA3D3218469E100019CA7 /* FavCollectionViewCell.xib in Resources */,
 				CAC6F72A22A81BC000756AE2 /* ready_r_7.wav in Resources */,
+				11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */,
 				CA5100CE22F6EACF00821C25 /* alphavite_26_word_1.wav in Resources */,
 				CA5100AE22F6EACF00821C25 /* alphavite_18.wav in Resources */,
-				CAF961F122995FF3006E3046 /* animal_10.pdf in Resources */,
 				CA5100DD22F6EACF00821C25 /* alphavite_12_word_2.wav in Resources */,
 				CAD2104B231700DD006F2F08 /* MontserratAlternates-BoldItalic.ttf in Resources */,
 				CA52DF252290683400458EE5 /* Shnobeloblique.ttf in Resources */,
 				CA5100FA22F6EACF00821C25 /* alphavite_14.wav in Resources */,
 				CAF9620822995FF3006E3046 /* animal_45.mp3 in Resources */,
-				CAF961BD22995FF3006E3046 /* animal_27.pdf in Resources */,
 				CA5100C222F6EACF00821C25 /* alphavite_14_word_2.wav in Resources */,
 				CAF9620E22995FF3006E3046 /* animal_40.mp3 in Resources */,
 				CAF961F422995FF3006E3046 /* animal_24.mp3 in Resources */,
 				CA5100BA22F6EACF00821C25 /* alphavite_13_word_1.wav in Resources */,
 				CAF961EE22995FF3006E3046 /* animal_7.mp3 in Resources */,
 				CAC6F72522A81BC000756AE2 /* fun_2.wav in Resources */,
-				CAF961E322995FF3006E3046 /* animal_12.pdf in Resources */,
 				CA5100B122F6EACF00821C25 /* alphavite_31.wav in Resources */,
 				CADD14AF2309C6E500AE920A /* Pick_introduce.mp4 in Resources */,
 				CA5100FB22F6EACF00821C25 /* alphavite_28.wav in Resources */,
-				CAF961FB22995FF3006E3046 /* animal_29.pdf in Resources */,
 				CA5100DB22F6EACF00821C25 /* alphavite_7_word_1.wav in Resources */,
 				CA5100BC22F6EACF00821C25 /* alphavite_1_1.wav in Resources */,
 				CA5100B822F6EACF00821C25 /* alphavite_21.wav in Resources */,
 				CA5100C922F6EACF00821C25 /* alphavite_19_word_2.wav in Resources */,
 				CAD2103F231700DC006F2F08 /* MontserratAlternates-LightItalic.ttf in Resources */,
+				112860B6232BA6E30002852A /* monster_menu.mp3 in Resources */,
 				CAF961F522995FF3006E3046 /* animal_20.mp3 in Resources */,
 				CAC6F73222A81BC000756AE2 /* fun_7.mp3 in Resources */,
-				CAF961CC22995FF3006E3046 /* animal_7.pdf in Resources */,
 				CAC6F75122A81D1300756AE2 /* Firework_1.json in Resources */,
 				CAC91013215D359900E62F01 /* AchieveCollectionViewCell.xib in Resources */,
 				CAF961E822995FF3006E3046 /* animal_33.mp3 in Resources */,
@@ -3358,7 +3264,6 @@
 				CAF9620B22995FF3006E3046 /* animal_47.mp3 in Resources */,
 				CA5100A622F6EACF00821C25 /* alphavite_3_word_1.wav in Resources */,
 				CAD21040231700DC006F2F08 /* MontserratAlternates-SemiBold.ttf in Resources */,
-				CAF961ED22995FF3006E3046 /* animal_39.pdf in Resources */,
 				CA52F372223DA1360058194E /* PlaylistCollectionViewCell.xib in Resources */,
 				CAD21044231700DC006F2F08 /* MontserratAlternates-ExtraBoldItalic.ttf in Resources */,
 				CAF9620122995FF3006E3046 /* animal_23.mp3 in Resources */,
@@ -3369,7 +3274,6 @@
 				CA5100F222F6EACF00821C25 /* alphavite_10_word_2.wav in Resources */,
 				CA2A911A22022C2600CD77FD /* push_level_up.mp3 in Resources */,
 				CAC2D4EF2114D2E100945003 /* LaunchScreen.storyboard in Resources */,
-				CAF961C522995FF3006E3046 /* animal_24.pdf in Resources */,
 				CA5100D422F6EACF00821C25 /* alphavite_9_word_2.wav in Resources */,
 				CAF961F722995FF3006E3046 /* animal_2.mp3 in Resources */,
 				CAC6F73122A81BC000756AE2 /* fun_5.mp3 in Resources */,
@@ -3392,39 +3296,28 @@
 				CA51010422F6EACF00821C25 /* alphavite_33_word_2.wav in Resources */,
 				CA5100FF22F6EACF00821C25 /* alphavite_18_word_2.wav in Resources */,
 				CAD2102B2315BAD0006F2F08 /* IstokWeb-Italic.ttf in Resources */,
-				CAF961DC22995FF3006E3046 /* animal_23.pdf in Resources */,
 				CA8EA70F21413F0800159451 /* PreviewCollectionViewCell.xib in Resources */,
 				CA5100F722F6EACF00821C25 /* alphavite_18_word_1.wav in Resources */,
-				CAF961D722995FF3006E3046 /* animal_2.pdf in Resources */,
-				CAF961B422995FF3006E3046 /* animal_46.pdf in Resources */,
 				CA4C28CF2147DFDB00CA264D /* Color.json in Resources */,
-				CAF961DB22995FF3006E3046 /* animal_22.pdf in Resources */,
 				CA5CB164213F0957000CB3D5 /* flip.json in Resources */,
-				CAF961B222995FF3006E3046 /* animal_45.pdf in Resources */,
 				CA5100EC22F6EACF00821C25 /* alphavite_10_word_1.wav in Resources */,
-				CAF9620F22995FF3006E3046 /* animal_48.pdf in Resources */,
 				CAD2105523170C69006F2F08 /* alphabetButton.wav in Resources */,
 				CAF961C322995FF3006E3046 /* animal_38.mp3 in Resources */,
 				CAF961E722995FF3006E3046 /* animal_27.mp3 in Resources */,
 				CABE842223223FF80082E2E4 /* alphabetJump.wav in Resources */,
 				CAF961E522995FF3006E3046 /* animal_5.mp3 in Resources */,
 				CAD2102D2315BAD0006F2F08 /* IstokWeb-Regular.ttf in Resources */,
-				CAF961B822995FF3006E3046 /* animal_40.pdf in Resources */,
-				CAF961C722995FF3006E3046 /* animal_18.pdf in Resources */,
 				CA896C7522933F2700ECC628 /* AnimalСompilationCollectionViewCell.xib in Resources */,
 				CAF961D622995FF3006E3046 /* animal_28.mp3 in Resources */,
 				CAA4455721578FC50023E340 /* AvatarCollectionViewCell.xib in Resources */,
 				CAF9620C22995FF3006E3046 /* animal_43.mp3 in Resources */,
-				CAF961D122995FF3006E3046 /* animal_21.pdf in Resources */,
 				CA5100D322F6EACF00821C25 /* alphavite_11_word_2.wav in Resources */,
 				CAF961F322995FF3006E3046 /* animal_30.mp3 in Resources */,
-				CAF961D422995FF3006E3046 /* animal_20.pdf in Resources */,
 				CAC2D4EC2114D2E100945003 /* Assets.xcassets in Resources */,
 				CAF961EB22995FF3006E3046 /* animal_19.mp3 in Resources */,
-				CAF9620322995FF3006E3046 /* animal_17.pdf in Resources */,
 				CAAF1F1221771E4300460F58 /* Shade.json in Resources */,
 				CAF961DF22995FF3006E3046 /* animal_17.mp3 in Resources */,
-				CAF961E022995FF3006E3046 /* animal_1.pdf in Resources */,
+				11CF6B8E232A071A00F8E529 /* monsterWrong.wav in Resources */,
 				CAC6F72222A81BC000756AE2 /* ready_r_1.wav in Resources */,
 				CAF961F022995FF3006E3046 /* animal_6.mp3 in Resources */,
 				CA5100F822F6EACF00821C25 /* alphavite_15_word_2.wav in Resources */,
@@ -3445,20 +3338,15 @@
 				CA5100EF22F6EACF00821C25 /* alphavite_5_word_2.wav in Resources */,
 				CAD2105223170C69006F2F08 /* alphabetPickMain.wav in Resources */,
 				CA4C28CE2147DFDB00CA264D /* box.json in Resources */,
-				CAF961B122995FF3006E3046 /* animal_44.pdf in Resources */,
 				CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */,
-				CAF961FF22995FF3006E3046 /* animal_9.pdf in Resources */,
 				CAF9620A22995FF3006E3046 /* animal_46.mp3 in Resources */,
 				CA5100F322F6EACF00821C25 /* alphavite_11.wav in Resources */,
 				CAD21043231700DC006F2F08 /* MontserratAlternates-ExtraBold.ttf in Resources */,
 				CA5CB168213F0966000CB3D5 /* Sue.json in Resources */,
 				CAF9621022995FF3006E3046 /* animal_41.mp3 in Resources */,
-				CAF961F922995FF3006E3046 /* animal_14.pdf in Resources */,
 				CAD16DE92147E29400A82DBB /* Candy.json in Resources */,
-				CAF961C022995FF3006E3046 /* animal_4.pdf in Resources */,
 				CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */,
 				CA5100B622F6EACF00821C25 /* alphavite_1_2.wav in Resources */,
-				CAF961DE22995FF3006E3046 /* animal_37.pdf in Resources */,
 				CA5100D522F6EACF00821C25 /* alphavite_4_word_1.wav in Resources */,
 				CAF961B922995FF3006E3046 /* animal_48.mp3 in Resources */,
 				CA52DF242290683400458EE5 /* appetite.ttf in Resources */,
@@ -3468,7 +3356,6 @@
 				CADB3D7721F7AD4D009467B8 /* night_sound.wav in Resources */,
 				CA5100B722F6EACF00821C25 /* alphavite_6_word_2.wav in Resources */,
 				CA5100C622F6EACF00821C25 /* alphavite_32_word_1.wav in Resources */,
-				CAF961BC22995FF3006E3046 /* animal_33.pdf in Resources */,
 				CAD21042231700DC006F2F08 /* MontserratAlternates-ExtraLight.ttf in Resources */,
 				CA14997B216F7511008FBEE9 /* FavTableViewCell.xib in Resources */,
 				CAFF984623251FDD00003076 /* ColorsGame.storyboard in Resources */,
@@ -3478,18 +3365,16 @@
 				CA51010322F6EACF00821C25 /* alphavite_16.wav in Resources */,
 				CAC6F75022A81D1300756AE2 /* Firework_3.json in Resources */,
 				CA5100E422F6EACF00821C25 /* alphavite_17_word_2.wav in Resources */,
-				CAF961C822995FF3006E3046 /* animal_19.pdf in Resources */,
 				CA5100F422F6EACF00821C25 /* alphavite_10.wav in Resources */,
 				CA5100F622F6EACF00821C25 /* alphavite_8_word_2.wav in Resources */,
 				CAC6F72B22A81BC000756AE2 /* ready_r_9.wav in Resources */,
-				CAF9620622995FF3006E3046 /* animal_8.pdf in Resources */,
 				CAF961DD22995FF3006E3046 /* animal_9.mp3 in Resources */,
+				11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */,
 				CAC6F72F22A81BC000756AE2 /* sad_2.wav in Resources */,
 				CA5100BB22F6EACF00821C25 /* alphavite_24_word_1.wav in Resources */,
 				CA5100EB22F6EACF00821C25 /* alphavite_27_word_1.wav in Resources */,
 				CA5100DA22F6EACF00821C25 /* alphavite_25_word_1.wav in Resources */,
 				CA51010022F6EACF00821C25 /* alphavite_15_word_1.wav in Resources */,
-				CAF961B522995FF3006E3046 /* animal_42.pdf in Resources */,
 				CA5100FD22F6EACF00821C25 /* alphavite_15.wav in Resources */,
 				CA5100FE22F6EACF00821C25 /* alphavite_33_word_1.wav in Resources */,
 				CAA88455213820D200E27F7A /* Profile.storyboard in Resources */,
@@ -3498,22 +3383,18 @@
 				CA5100D922F6EACF00821C25 /* alphavite_12_word_1.wav in Resources */,
 				CAF961E922995FF3006E3046 /* animal_25.mp3 in Resources */,
 				CAC6F72022A81BC000756AE2 /* ready_r_2.wav in Resources */,
-				CAF961E622995FF3006E3046 /* animal_13.pdf in Resources */,
 				CA8EA7202141568900159451 /* LoadingCollectionViewCell.xib in Resources */,
 				CA5100DE22F6EACF00821C25 /* alphavite_25_word_2.wav in Resources */,
 				CA5100B522F6EACF00821C25 /* alphavite_16_word_1.wav in Resources */,
 				CA2A91162202293800CD77FD /* push_button_sound.wav in Resources */,
-				CAFF983E2323C1E900003076 /* Sandbox.xcconfig in Resources */,
 				CAF961D522995FF3006E3046 /* animal_14.mp3 in Resources */,
 				CA04863E22A845A60017B8A2 /* Round_9.json in Resources */,
 				CA5100C522F6EACF00821C25 /* alphavite_1_word_1.wav in Resources */,
 				CAD21045231700DC006F2F08 /* MontserratAlternates-Thin.ttf in Resources */,
 				CA1AB65D22F1ABA7003A2584 /* Shnobel-Regular.otf in Resources */,
 				CA5100E922F6EACF00821C25 /* alphavite_20_word_1.wav in Resources */,
-				CAF961B622995FF3006E3046 /* animal_43.pdf in Resources */,
 				CAD2104A231700DC006F2F08 /* MontserratAlternates-Medium.ttf in Resources */,
 				11BA249E230AE99700A9EA15 /* MonsterCollectionViewCell.xib in Resources */,
-				CAF961C922995FF3006E3046 /* animal_31.pdf in Resources */,
 				CA5100E322F6EACF00821C25 /* alphavite_20_word_2.wav in Resources */,
 				CAAF1F1121771E4300460F58 /* Shade_close.json in Resources */,
 				CAC6F71C22A81BC000756AE2 /* after_announce_round_n.wav in Resources */,
@@ -3523,25 +3404,22 @@
 				CAC6F72922A81BC000756AE2 /* fun_1.wav in Resources */,
 				CAF961D922995FF3006E3046 /* animal_8.mp3 in Resources */,
 				CAD2105423170C69006F2F08 /* pickDriveTo.wav in Resources */,
-				CAF961BF22995FF3006E3046 /* animal_32.pdf in Resources */,
 				CA52DF20229050F400458EE5 /* Pacifico Regular.ttf in Resources */,
 				CAAF1EF62174E7E100460F58 /* Dog_progress.json in Resources */,
 				CA09978F21A572E20051F41D /* Common.storyboard in Resources */,
 				CAC6F73022A81BC000756AE2 /* fun_4.mp3 in Resources */,
 				CA5100CF22F6EACF00821C25 /* alphavite_11_word_1.wav in Resources */,
 				CA04864222A845A60017B8A2 /* Round_2.json in Resources */,
-				CAF961F822995FF3006E3046 /* animal_28.pdf in Resources */,
-				CAF961FA22995FF3006E3046 /* animal_15.pdf in Resources */,
 				CA992D38212FF218008BFC8D /* Play.storyboard in Resources */,
 				CA5100E022F6EACF00821C25 /* alphavite_2_word_1.wav in Resources */,
 				CAD2102C2315BAD0006F2F08 /* IstokWeb-Bold.ttf in Resources */,
+				11CF6B8D232A071A00F8E529 /* monsterCloseCards.wav in Resources */,
 				CAC6F72322A81BC000756AE2 /* ready_r_5.wav in Resources */,
 				CAF9620022995FF3006E3046 /* animal_37.mp3 in Resources */,
 				CA5100F022F6EACF00821C25 /* alphavite_8_word_1.wav in Resources */,
 				CAD16DE72147E29400A82DBB /* Animal.json in Resources */,
-				CAF961D322995FF3006E3046 /* animal_34.pdf in Resources */,
 				CAF9621522996022006E3046 /* scene-2.mp4 in Resources */,
-				CAF961BB22995FF3006E3046 /* animal_5.pdf in Resources */,
+				11CF6B90232A071A00F8E529 /* monsterOpenCard.wav in Resources */,
 				CA2A911822022AD500CD77FD /* swipe_card_sound.wav in Resources */,
 				CA1041532262A259005D62DE /* SearchMusicCollectionViewCell.xib in Resources */,
 				CA5100A922F6EACF00821C25 /* alphavite_26.wav in Resources */,
@@ -3550,8 +3428,6 @@
 				CAA4455121577F760023E340 /* Main.storyboard in Resources */,
 				CAC6F74E22A81D1300756AE2 /* Firework_4.json in Resources */,
 				CAAF1F1021771E4300460F58 /* Shade_open.json in Resources */,
-				CAF961B722995FF3006E3046 /* animal_41.pdf in Resources */,
-				CAF961BE22995FF3006E3046 /* animal_26.pdf in Resources */,
 				CA5100DF22F6EACF00821C25 /* alphavite_31_word_1.wav in Resources */,
 				CAF9620522995FF3006E3046 /* animal_22.mp3 in Resources */,
 				CA5100AB22F6EACF00821C25 /* alphavite_21_word_2.wav in Resources */,
@@ -3575,13 +3451,10 @@
 				CA5100B322F6EACF00821C25 /* alphavite_19.wav in Resources */,
 				CAC6F72E22A81BC000756AE2 /* sad_3.wav in Resources */,
 				CAC0989422FF47FD00EFB01E /* AlphaviteStatView.xib in Resources */,
-				CAF961C622995FF3006E3046 /* animal_30.pdf in Resources */,
 				CA5100EA22F6EACF00821C25 /* alphavite_17_word_1.wav in Resources */,
 				CA5100CB22F6EACF00821C25 /* alphavite_8.wav in Resources */,
 				CA5100D822F6EACF00821C25 /* alphavite_2.wav in Resources */,
-				CAF961D222995FF3006E3046 /* animal_35.pdf in Resources */,
 				CA5100CD22F6EACF00821C25 /* alphavite_32_word_2.wav in Resources */,
-				CAF961CA22995FF3006E3046 /* animal_25.pdf in Resources */,
 				CAC6F72722A81BC000756AE2 /* ready_r_6.wav in Resources */,
 				CAF9620222995FF3006E3046 /* animal_1.mp3 in Resources */,
 				CA51010122F6EACF00821C25 /* alphavite_22_word_1.wav in Resources */,
@@ -3589,11 +3462,9 @@
 				CAC6F72422A81BC000756AE2 /* fun_3.wav in Resources */,
 				CA04863F22A845A60017B8A2 /* Round_10.json in Resources */,
 				CADD14B523107F7C00AE920A /* happy_Cloud_1.json in Resources */,
-				CAF961DA22995FF3006E3046 /* animal_36.pdf in Resources */,
 				CA5100FC22F6EACF00821C25 /* alphavite_29.wav in Resources */,
 				CA5100A722F6EACF00821C25 /* alphavite_33.wav in Resources */,
 				CA04864022A845A60017B8A2 /* Round_6.json in Resources */,
-				CAF9620422995FF3006E3046 /* animal_16.pdf in Resources */,
 				CA5100BD22F6EACF00821C25 /* alphavite_6_word_1.wav in Resources */,
 				CAF961CB22995FF3006E3046 /* animal_39.mp3 in Resources */,
 				CAF889DB21A6975800A245A7 /* GoogleService-Info.plist in Resources */,
@@ -3607,6 +3478,7 @@
 				CA52DF282290701500458EE5 /* Animals.storyboard in Resources */,
 				CAF961FC22995FF3006E3046 /* animal_3.mp3 in Resources */,
 				CA04864322A845A60017B8A2 /* Round_7.json in Resources */,
+				11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */,
 				CAD21048231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */,
 				CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */,
 				CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */,
@@ -3614,6 +3486,7 @@
 				CADB3D7521F7AD4D009467B8 /* swipe_drill_sound.wav in Resources */,
 				CA5100D122F6EACF00821C25 /* alphavite_4_word_2.wav in Resources */,
 				CAC6F71F22A81BC000756AE2 /* ready_r_3.wav in Resources */,
+				11CF6B8F232A071A00F8E529 /* monsterPickMain.wav in Resources */,
 				CA5100B422F6EACF00821C25 /* alphavite_21_word_1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3779,7 +3652,7 @@
 				11604ADA231F8330001D1C7F /* MonsterGetStatCommand.swift in Sources */,
 				CAE3649122918181003E891D /* AnimalsMainModels.swift in Sources */,
 				CA8EA71B214145E700159451 /* PreviewPresenter.swift in Sources */,
-				CAEEF2422299CB8E00AF5AF6 /* IntroduceAnimalViewController.swift in Sources */,
+				CAEEF2422299CB8E00AF5AF6 /* IntroduceVideoViewController.swift in Sources */,
 				CA433FF9224FA8E700B0788E /* TrackCollectionViewCell.swift in Sources */,
 				CA0053C4213BD92500AA187F /* AppDelegate+Push.swift in Sources */,
 				11BA248C230551A700A9EA15 /* MonsterMasterModels.swift in Sources */,
@@ -3916,6 +3789,7 @@
 				CA9A6758213C1E1900FCB400 /* MainContentCommand.swift in Sources */,
 				CA8EA719214145E700159451 /* PreviewModels.swift in Sources */,
 				CA51004422F617DB00821C25 /* GradientView.swift in Sources */,
+				E76CD1A723326BE20094E29A /* OnDemandLoader.swift in Sources */,
 				CADB3D7C21F7B64E009467B8 /* BackgroundMediaWorker.swift in Sources */,
 				CA8EA70A2141363B00159451 /* RazdelCollectionViewCell.swift in Sources */,
 				CAB08AFE2140512A002840E3 /* RazdCommand.swift in Sources */,
@@ -4304,15 +4178,19 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.6.7;
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4331,14 +4209,18 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.6.7;
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4419,15 +4301,19 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.6.7;
+				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

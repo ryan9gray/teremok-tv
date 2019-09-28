@@ -26,16 +26,6 @@ class AnimalsRoundsRouter: AnimalsRoundsRoutingLogic, AnimalsRoundsDataPassing {
     var dataStore: AnimalsRoundsDataStore?
     var modalControllersQueue = Queue<UIViewController>()
 
-    var testBool = true
-
-    func showWithIntroducePack(idx: Int) {
-        let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
-        controller.video = .introduce
-        viewController?.masterRouter?.introduceController(viewController: controller, completion: { [weak self] in
-            self?.showPack(idx: idx)
-        })
-    }
-
     func showPack(idx: Int) {
         guard let id = dataStore?.list[safe: idx]?.id else { return }
         
@@ -44,7 +34,7 @@ class AnimalsRoundsRouter: AnimalsRoundsRoutingLogic, AnimalsRoundsDataPassing {
 
     func buyAlert() {
         let vc = CloudAlertViewController.instantiate(fromStoryboard: .alerts)
-        let text = Main.Messages.buyIntelect
+        let text = Main.Messages.buyGames
         vc.model = AlertModel.init(title: "", subtitle: text, buttonTitle: "В настройки")
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overCurrentContext

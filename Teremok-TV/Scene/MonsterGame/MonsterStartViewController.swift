@@ -7,20 +7,51 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MonsterStartViewController: GameViewController {
     @IBOutlet private var startEasy: KeyButton!
     @IBOutlet private var startMedium: KeyButton!
     @IBOutlet private var startHard: KeyButton!
     
+    private var buttonPlayer: AVAudioPlayer?
+    private var bgMusicPlayer: AVAudioPlayer?
+
+    @IBAction func startGame(_ sender: UIButton) {
+        buttonPlayer?.play()
+        masterRouter?.startFlow(sender.tag)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         startMedium.gradientColors = Style.Gradients.green.value
         startHard.gradientColors = Style.Gradients.orange.value
+        let menuMusic = URL(fileURLWithPath: Bundle.main.path(forResource: "monster_menu", ofType: "mp3")!)
+
+        do {
+            bgMusicPlayer = try AVAudioPlayer(contentsOf: menuMusic)
+            bgMusicPlayer?.prepareToPlay()
+        } catch {
+            print("no file)")
+        }
+        do {
+            buttonPlayer = try AVAudioPlayer(contentsOf: MonsterMaster.Sound.main.url)
+            buttonPlayer?.prepareToPlay()
+        } catch {
+            print("no file)")
+        }
     }
-    
-    @IBAction func startGame(_ sender: UIButton) {
-        masterRouter?.startFlow(sender.tag)
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        bgMusicPlayer?.play()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        bgMusicPlayer?.stop()
     }
 }

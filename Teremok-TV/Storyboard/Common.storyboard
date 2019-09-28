@@ -61,45 +61,6 @@
             </objects>
             <point key="canvasLocation" x="-871.18226600985224" y="932"/>
         </scene>
-        <!--Onboarding View Controller-->
-        <scene sceneID="1hW-JE-h31">
-            <objects>
-                <viewController storyboardIdentifier="OnboardingViewController" id="c1m-eB-TcV" customClass="OnboardingViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Op8-Wg-khd">
-                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDe-ub-hUd">
-                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrH-tK-3cI">
-                                        <rect key="frame" x="80" y="70" width="652" height="265"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="SrH-tK-3cI" firstAttribute="leading" secondItem="XDe-ub-hUd" secondAttribute="leading" constant="80" id="QSF-Hb-wMT"/>
-                                    <constraint firstAttribute="bottom" secondItem="SrH-tK-3cI" secondAttribute="bottom" constant="40" id="V5c-Ug-sjd"/>
-                                    <constraint firstItem="SrH-tK-3cI" firstAttribute="top" secondItem="XDe-ub-hUd" secondAttribute="top" constant="70" id="aig-kk-Gc7"/>
-                                    <constraint firstAttribute="trailing" secondItem="SrH-tK-3cI" secondAttribute="trailing" constant="80" id="dlp-LP-dC6"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="XDe-ub-hUd" secondAttribute="bottom" id="F5G-qv-6aC"/>
-                            <constraint firstAttribute="trailing" secondItem="XDe-ub-hUd" secondAttribute="trailing" id="SpL-MX-KMd"/>
-                            <constraint firstItem="XDe-ub-hUd" firstAttribute="top" secondItem="QoY-DK-YtZ" secondAttribute="top" id="Wyc-74-gt7"/>
-                            <constraint firstItem="XDe-ub-hUd" firstAttribute="leading" secondItem="Op8-Wg-khd" secondAttribute="leading" id="YSF-eu-Ukh"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="QoY-DK-YtZ"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t5k-Rb-vkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-565.27093596059115" y="-74.400000000000006"/>
-        </scene>
         <!--Security Code View Controller-->
         <scene sceneID="g3R-8h-KmK">
             <objects>
@@ -143,7 +104,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Раздел доступен только для родителей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HJ-ra-8B2">
-                                <rect key="frame" x="209.66666666666663" y="93.666666666666671" width="393" height="24"/>
+                                <rect key="frame" x="209.66666666666663" y="93.666666666666686" width="393" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -207,14 +168,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIV-hw-tfC" customClass="RoundCornerView" customModule="Teremok_TV" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIV-hw-tfC">
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.84705882349999995" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFc-Wu-RMO" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
                                 <rect key="frame" x="740" y="300" width="44" height="44"/>
@@ -283,7 +239,7 @@
                                 <rect key="frame" x="90" y="80" width="632" height="255"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io8-Rk-iyX" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="8" y="28.333333333333329" width="198.66666666666666" height="170.33333333333337"/>
+                                        <rect key="frame" x="8" y="28.333333333333314" width="198.66666666666666" height="170.33333333333337"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Io8-Rk-iyX" secondAttribute="height" multiplier="7:6" id="OB4-M1-Upe"/>
                                         </constraints>
@@ -306,7 +262,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lw-K8-tJz" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="216.66666666666669" y="28.333333333333329" width="198.66666666666669" height="170.33333333333337"/>
+                                        <rect key="frame" x="216.66666666666669" y="28.333333333333314" width="198.66666666666669" height="170.33333333333337"/>
                                         <state key="normal" image="ic-animalgame"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
@@ -326,7 +282,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8b-ps-329" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="425.33333333333343" y="28.333333333333329" width="198.66666666666669" height="170.33333333333337"/>
+                                        <rect key="frame" x="425.33333333333343" y="28.333333333333314" width="198.66666666666669" height="170.33333333333337"/>
                                         <state key="normal" image="ic-monsterGame"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>

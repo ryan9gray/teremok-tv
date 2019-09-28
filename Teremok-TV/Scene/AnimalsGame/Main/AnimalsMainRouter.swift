@@ -25,6 +25,7 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
     weak var viewController: AnimalsMainViewController?
     var dataStore: AnimalsMainDataStore?
     var modalControllersQueue = Queue<UIViewController>()
+    var checkIntro: Bool = true
 
     func navigateToStatistic() {
         let controller = AnimalsStatisticViewController.instantiate(fromStoryboard: .animals)
@@ -34,7 +35,8 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
     }
 
     func navigateToStart() {
-        guard !LocalStore.firstAnimalsIntroduce() else {
+        if checkIntro, !LocalStore.firstAnimalsIntroduce {
+            checkIntro = false
             introduce()
             return
         }
@@ -45,7 +47,8 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
     func introduce() {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
         controller.video = .introduce
-        controller.action = { [weak self] in
+        controller.action = { [weak self] finish in
+            LocalStore.firstAnimalsIntroduce = finish
             self?.navigateToStart()
         }
         viewController?.masterRouter?.presentNextChild(viewController: controller)

@@ -71,6 +71,23 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.alphabetImages.rawValue]))
+        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+            DispatchQueue.main.async {
+                if available {
+                      self.router?.navigateMain()
+                  } else {
+                      bundleResourceRequest.beginAccessingResources { error in
+                          guard error == nil else { return }
+
+                          self.present(errorString: "Игра загружается, попробуйте позже") {
+                              self.dismiss(animated: true)
+                          }
+                      }
+                  }
+            }
+
+        }
         do {
             //Preparation to play
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .moviePlayback)
@@ -79,14 +96,13 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
         catch {
             // report for an error
         }
-
-        router?.navigateMain()
+        displayProfile()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        if LocalStore.alphabetTip < 3 {
+        if !avatarButton.isHidden, LocalStore.alphabetTip < 3 {
             LocalStore.alphabetTip += 1
             var preferences = EasyTipView.Preferences()
             preferences.drawing.font = Style.Font.istokWeb(size: 16)

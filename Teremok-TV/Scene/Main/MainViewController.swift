@@ -61,8 +61,8 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     var razdels: [Main.RazdelItem] = []
     
     var cellWidth: CGFloat = 0
-    var audioPlayer = AVAudioPlayer()
-    var buttonPlayer = AVAudioPlayer()
+    var audioPlayer: AVAudioPlayer?
+    var buttonPlayer: AVAudioPlayer?
 
     // MARK: View lifecycle
 
@@ -76,13 +76,13 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        if ServiceConfiguration.activeConfiguration() == .prod  {
-            audioPlayer.play()
+            audioPlayer?.play()
         }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
 
     private func prepareUI(){
@@ -103,22 +103,22 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
 
         do {
             buttonPlayer = try AVAudioPlayer(contentsOf: buttonSound)
-            buttonPlayer.prepareToPlay()
+            buttonPlayer?.prepareToPlay()
         } catch {
             print("no file \(buttonSound)")
         }
     }
 
     func didSelectSoundPlay(){
-        audioPlayer.stop()
-        buttonPlayer.play()
+        audioPlayer?.stop()
+        buttonPlayer?.play()
     }
 
     // MARK: Do something
     
     func fetchRazdels(){
-        self.interactor?.getMainContent()
         showPreloader()
+        interactor?.getMainContent()
     }
     
     func display(razdels: [Main.RazdelItem]) {
@@ -126,6 +126,7 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
         self.razdels = razdels
         collectionView.reloadData()
     }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         var visibleRect = CGRect()
         
@@ -169,7 +170,6 @@ extension MainViewController: UICollectionViewDataSource {
         return razdels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withCell: MainlCollectionViewCell.self, for: indexPath)
         let razdel = razdels[indexPath.row]
         cell.configurate(title: razdel.title, image: Cloud.clouds.randomElement(), link: razdel.link)

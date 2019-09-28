@@ -24,9 +24,12 @@ class NetworkManager {
                 
             case .notReachable:
                 print("The network is not reachable")
-                NotificationCenter.default.post(name: .Internet, object: true, userInfo: nil)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+                    if !NetworkManager.isConnectedToInternet {
+                        NotificationCenter.default.post(name: .Internet, object: true, userInfo: nil)
+                    }
+                })
                 return
-                
             case .unknown :
                 print("It is unknown whether the network is reachable")
                 
@@ -38,17 +41,16 @@ class NetworkManager {
                 
             }
             NotificationCenter.default.post(name: .Internet, object: false, userInfo: nil)
-
         }
         
         // start listening
         reachabilityManager?.startListening()
     }
     
-    class var isConnectedToInternet:Bool {
+    class var isConnectedToInternet: Bool {
         return NetworkReachabilityManager()!.isReachable
     }
-    class var isConnectedToWifi:Bool {
+    class var isConnectedToWifi: Bool {
         return NetworkReachabilityManager()!.isReachableOnEthernetOrWiFi
     }
 }

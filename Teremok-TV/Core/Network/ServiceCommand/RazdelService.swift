@@ -22,7 +22,6 @@ struct RazdelService: RazdelProtocol {
     
     
     func getCatalog(itemsOnPage: Int, shiftItem: Int, completion: @escaping (Result<RazdelResponse>) -> Void){
-        
         CatalogCommand(itemsOnPage: itemsOnPage, shiftItem: shiftItem).execute(success: { (responseObject) in
             completion(.success(responseObject))
         }) { (com, response) in
@@ -33,9 +32,8 @@ struct RazdelService: RazdelProtocol {
     }
     
     func getSerials(razdId: Int, itemsOnPage: Int, shiftItem: Int, completion: @escaping (Result<RazdelResponse>) -> Void) {
-        
-        let com = RazdCommand(razdId: razdId, itemsOnPage: itemsOnPage, shiftItem: shiftItem)
-        com.execute(success: { (responseObject) in
+        RazdCommand(razdId: razdId, itemsOnPage: itemsOnPage, shiftItem: shiftItem)
+            .execute(success: { (responseObject) in
             completion(.success(responseObject))
         }) { (com, response) in
             if let error = response.error {

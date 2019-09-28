@@ -29,7 +29,7 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
     @IBOutlet private var progressBar: AMProgressBar!
     @IBOutlet private var pointsView: UIView!
     @IBOutlet private var pointLabel: UILabel!
-    private var audioPlayer = AVAudioPlayer()
+    private var audioPlayer: AVAudioPlayer?
 
     @IBAction func firstClick(_ sender: Any) {
         result(view: secondItem, answer: .left)
@@ -95,7 +95,7 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         timer.invalidate()
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
 
     func result(view: UIView, answer: GameModel.Option) {
@@ -133,9 +133,9 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
         } catch {
             print("no file)")
         }
-        audioPlayer.prepareToPlay()
-        audioPlayer.delegate = self
-        audioPlayer.play()
+        audioPlayer?.prepareToPlay()
+        audioPlayer?.delegate = self
+        audioPlayer?.play()
     }
 
     func playAnimation() {
@@ -174,7 +174,7 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
         } catch {
             print("no file)")
         }
-        audioPlayer.play()
+        audioPlayer?.play()
     }
 
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
