@@ -29,7 +29,7 @@ open class TTSegmentedControl: UIView {
     @IBInspectable open var padding: CGSize = CGSize(width: 30, height: 10)
     @IBInspectable open var cornerRadius: CGFloat = -1 // for rounded corner radius use negative value, 0 to disable
 
-    @IBInspectable public var borderColor: UIColor = UIColor.Alphavite.Button.orangeTwo {
+    @IBInspectable public var borderColor: UIColor = UIColor.Alphavite.orangeTwo {
         didSet {
             layer.borderColor = borderColor.cgColor
         }

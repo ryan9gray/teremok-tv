@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PDU-Ax-ttJ">
-    <device id="retina4_7" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PDU-Ax-ttJ">
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,11 +27,11 @@
             <objects>
                 <viewController storyboardIdentifier="AlphaviteMasterViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PDU-Ax-ttJ" customClass="AlphaviteMasterViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bfj-lM-JRd">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-alphaviteBack" translatesAutoresizingMaskIntoConstraints="NO" id="elW-gb-QYm">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpy-g5-Own" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
                                 <rect key="frame" x="30" y="20" width="50" height="50"/>
@@ -53,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnS-S0-DQB" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="597" y="20" width="50" height="50"/>
+                                <rect key="frame" x="742" y="20" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="xxE-ml-mcM"/>
                                 </constraints>
@@ -93,11 +91,11 @@
             <objects>
                 <viewController storyboardIdentifier="AlphaviteCharsViewController" id="NWb-Sg-ERA" customClass="AlphaviteCharsViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tr4-FD-7tl">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОБУЧЕНИЕ:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7Y-vQ-dYZ" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="193.5" y="20" width="280" height="40"/>
+                                <rect key="frame" x="266" y="20" width="280" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Bvq-hr-Xu4"/>
                                     <constraint firstAttribute="width" constant="280" id="CSi-DV-wrx"/>
@@ -109,7 +107,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-RX-q0q">
-                                <rect key="frame" x="236" y="80" width="195" height="194"/>
+                                <rect key="frame" x="308.66666666666669" y="80" width="195" height="194"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDE-8f-bjp" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="195" height="194"/>
@@ -124,14 +122,14 @@
                                         <size key="shadowOffset" width="2" height="2"/>
                                     </label>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6D-r4-itg" customClass="DesignableView" customModule="Spring">
-                                        <rect key="frame" x="0.0" y="-0.5" width="195" height="195"/>
+                                        <rect key="frame" x="0.0" y="-0.3333333333333286" width="195" height="195"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y6w-U9-OJa">
                                                 <rect key="frame" x="10" y="10" width="175" height="175"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovf-3P-aqo">
-                                                <rect key="frame" x="61.5" y="155" width="72" height="35"/>
+                                                <rect key="frame" x="61.333333333333314" y="155.33333333333331" width="72" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="IstokWeb-Bold" family="Istok Web" pointSize="24"/>
                                                 <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -169,7 +167,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUU-2A-Qbe" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="603" y="311" width="44" height="44"/>
+                                <rect key="frame" x="704" y="311" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="9Jj-mX-ayq"/>
                                     <constraint firstAttribute="height" constant="44" id="dO4-Yh-LSU"/>
@@ -216,11 +214,11 @@
             <objects>
                 <viewController storyboardIdentifier="AlphaviteStartViewController" id="1u9-L6-ei9" customClass="AlphaviteStartViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lu2-Bh-k2l">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjl-Wx-ske" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="198.5" y="208" width="270" height="60"/>
+                                <rect key="frame" x="271" y="208" width="270" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="XtD-FH-CJ7"/>
                                     <constraint firstAttribute="height" constant="60" id="hKz-1n-Igj"/>
@@ -241,10 +239,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-alphaviteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="BWD-Ar-XJG">
-                                <rect key="frame" x="174" y="10" width="319" height="188"/>
+                                <rect key="frame" x="246.66666666666663" y="10" width="319" height="188"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQ2-ta-1cb" customClass="TTSegmentedControl" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="203.5" y="278" width="260" height="48"/>
+                                <rect key="frame" x="276" y="278" width="260" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="CSX-yC-vVi"/>
@@ -297,11 +295,11 @@
             <objects>
                 <viewController storyboardIdentifier="AlphaviteFinishViewController" id="2MS-5m-eDZ" customClass="AlphaviteFinishViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p3u-gk-1eU">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPs-s3-sVG" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="296" y="191" width="75" height="75"/>
+                                <rect key="frame" x="368.66666666666669" y="190.66666666666666" width="75" height="74.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="QL7-oK-vcM"/>
                                     <constraint firstAttribute="height" constant="75" id="q5d-sX-8g5"/>
@@ -318,9 +316,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СЫГРАЕМ ЕЩЕ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMM-4y-pje" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="161" y="92" width="345" height="79"/>
+                                <rect key="frame" x="233.66666666666663" y="91.666666666666686" width="345" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="345" id="dVH-Qk-Yv0"/>
+                                    <constraint firstAttribute="height" constant="79" id="ygY-mI-cAy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -329,7 +328,7 @@
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Далее" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWA-fr-Wvy">
-                                <rect key="frame" x="301.5" y="274" width="64" height="24"/>
+                                <rect key="frame" x="374.33333333333331" y="273.66666666666669" width="63.666666666666686" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="fTz-7H-0jO"/>
                                 </constraints>
@@ -340,19 +339,19 @@
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHN-0i-UuT" customClass="DesignableView" customModule="Spring">
-                                <rect key="frame" x="198.5" y="20" width="270" height="50"/>
+                                <rect key="frame" x="271" y="20" width="270" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cTz-ZN-czZ">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В этой игре ты угадал" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeP-4F-KNx">
-                                                <rect key="frame" x="0.0" y="15" width="201" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="14.999999999999998" width="201" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 из 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfh-Va-Anu">
-                                                <rect key="frame" x="201" y="14.5" width="69" height="21"/>
+                                                <rect key="frame" x="201" y="14.666666666666664" width="69" height="21"/>
                                                 <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="17"/>
                                                 <color key="textColor" red="0.18431372549019609" green="0.63921568627450975" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -431,11 +430,11 @@
             <objects>
                 <viewController storyboardIdentifier="AlphaviteStatisticViewController" id="LUH-hj-VeC" customClass="AlphaviteStatisticViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MEx-PI-6QO">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-Fz-yYi">
-                                <rect key="frame" x="158.5" y="142.5" width="350" height="118"/>
+                                <rect key="frame" x="231" y="142.66666666666666" width="350" height="117.99999999999997"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoN-Ob-lDI">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="118"/>
@@ -510,7 +509,7 @@
                                         <rect key="frame" x="180" y="0.0" width="170" height="118"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нужно подучить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZ0-LC-mEW">
-                                                <rect key="frame" x="21" y="0.0" width="128.5" height="16"/>
+                                                <rect key="frame" x="21" y="0.0" width="128.33333333333334" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="BcT-fp-dq8"/>
                                                 </constraints>
@@ -594,13 +593,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qst-1z-Eet">
-                                <rect key="frame" x="333.5" y="20" width="0.0" height="0.0"/>
+                                <rect key="frame" x="406" y="20" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="18"/>
                                 <color key="textColor" red="0.81568627450980391" green="0.53725490196078429" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSl-fm-bf8" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="597" y="20" width="50" height="50"/>
+                                <rect key="frame" x="742" y="20" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="5Jq-eX-W9f"/>
                                 </constraints>
@@ -642,11 +641,11 @@
             <objects>
                 <viewController storyboardIdentifier="AlphaviteChoiceViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="34x-dO-ZWB" customClass="AlphaviteChoiceViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GTK-de-LHa">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ldo-eS-MkM">
-                                <rect key="frame" x="24" y="50" width="619" height="285"/>
+                                <rect key="frame" x="96.666666666666686" y="50" width="619" height="285"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnL-Ha-mfW" customClass="DesignableButton" customModule="Spring">
                                         <rect key="frame" x="0.0" y="45" width="180" height="195"/>
@@ -696,7 +695,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цветы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4R-xX-V17">
-                                                <rect key="frame" x="5" y="155" width="185" height="35"/>
+                                                <rect key="frame" x="5" y="155.33333333333334" width="185" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="IstokWeb-Bold" family="Istok Web" pointSize="24"/>
                                                 <color key="textColor" red="0.0" green="0.47058823529999999" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -770,7 +769,7 @@
                                 </subviews>
                             </stackView>
                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfT-nT-KtM" customClass="AMProgressBar" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="183.5" y="20" width="300" height="18"/>
+                                <rect key="frame" x="256" y="20" width="300" height="18"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="ech-gG-cCg"/>
@@ -814,10 +813,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Juu-3q-K8b" customClass="GradientView" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="543" y="20" width="84" height="50"/>
+                                <rect key="frame" x="688" y="20" width="84" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLK-UP-9Qd">
-                                        <rect key="frame" x="21" y="2" width="22" height="27"/>
+                                        <rect key="frame" x="21.333333333333371" y="2" width="21.666666666666671" height="27.333333333333332"/>
                                         <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -825,7 +824,7 @@
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="очков" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tv-0s-AF5">
-                                        <rect key="frame" x="13" y="32" width="38.5" height="16"/>
+                                        <rect key="frame" x="13.000000000000004" y="32.333333333333336" width="38.333333333333343" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" name="MontserratAlternates-Medium" family="Montserrat Alternates" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -850,7 +849,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="xjH-sh-1VT">
-                                <rect key="frame" x="-190" y="215" width="190" height="140"/>
+                                <rect key="frame" x="-190" y="194" width="190" height="140"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="106-7O-y2p"/>
@@ -858,7 +857,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpT-3d-suh">
-                                <rect key="frame" x="461" y="38" width="80" height="80"/>
+                                <rect key="frame" x="606" y="38" width="80" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="NuJ-AB-TFr"/>

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Spring
+import AVKit
 
 class ColorsTeachingViewController: GameViewController {
 

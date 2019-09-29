@@ -242,7 +242,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1i-oi-oIF" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="313" y="208" width="270" height="60"/>
+                                <rect key="frame" x="313" y="271" width="270" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="IkG-m4-0OP"/>
                                     <constraint firstAttribute="width" constant="270" id="Vwn-8H-c3o"/>
@@ -262,11 +262,8 @@
                                     <action selector="startTap:" destination="SH1-KP-pWk" eventType="touchUpInside" id="cUS-fV-ahj"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-alphaviteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JfR-s9-WT1">
-                                <rect key="frame" x="288.5" y="10" width="319" height="188"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAr-Mz-2ji" customClass="TTSegmentedControl" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="318" y="278" width="260" height="48"/>
+                                <rect key="frame" x="318" y="341" width="260" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="JkD-vt-ANg"/>
@@ -292,32 +289,38 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Q3W-vx-GD8">
+                                <rect key="frame" x="144" y="0.0" width="608" height="257"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="n1i-oi-oIF" firstAttribute="centerX" secondItem="ptf-sM-dwg" secondAttribute="centerX" id="8Tn-zr-imN"/>
-                            <constraint firstItem="JfR-s9-WT1" firstAttribute="top" secondItem="C8o-Hd-arP" secondAttribute="top" constant="10" id="NPH-Tr-eqW"/>
+                            <constraint firstItem="Q3W-vx-GD8" firstAttribute="top" secondItem="C8o-Hd-arP" secondAttribute="top" id="AAv-Db-ifn"/>
+                            <constraint firstItem="n1i-oi-oIF" firstAttribute="top" secondItem="Q3W-vx-GD8" secondAttribute="bottom" constant="14" id="NIC-hW-FFD"/>
                             <constraint firstItem="JAr-Mz-2ji" firstAttribute="centerX" secondItem="ptf-sM-dwg" secondAttribute="centerX" id="Zm9-nF-b6U"/>
-                            <constraint firstItem="n1i-oi-oIF" firstAttribute="top" secondItem="JfR-s9-WT1" secondAttribute="bottom" constant="10" id="d8W-oJ-EKf"/>
-                            <constraint firstItem="JfR-s9-WT1" firstAttribute="centerX" secondItem="ptf-sM-dwg" secondAttribute="centerX" id="fzh-4j-LGk"/>
+                            <constraint firstItem="C8o-Hd-arP" firstAttribute="trailing" secondItem="Q3W-vx-GD8" secondAttribute="trailing" constant="100" id="ZoU-ca-Giv"/>
                             <constraint firstItem="JAr-Mz-2ji" firstAttribute="top" secondItem="n1i-oi-oIF" secondAttribute="bottom" constant="10" id="rbf-VK-1tT"/>
-                            <constraint firstItem="C8o-Hd-arP" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JAr-Mz-2ji" secondAttribute="bottom" constant="4" id="tkR-F5-Xib"/>
+                            <constraint firstItem="C8o-Hd-arP" firstAttribute="bottom" secondItem="JAr-Mz-2ji" secondAttribute="bottom" constant="4" id="tkR-F5-Xib"/>
+                            <constraint firstItem="Q3W-vx-GD8" firstAttribute="leading" secondItem="C8o-Hd-arP" secondAttribute="leading" constant="100" id="wJg-L4-3Ws"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C8o-Hd-arP"/>
                     </view>
                     <connections>
+                        <outlet property="brushView" destination="Q3W-vx-GD8" id="hh9-LG-1Qd"/>
                         <outlet property="segmentController" destination="JAr-Mz-2ji" id="zT8-18-GXO"/>
                         <outlet property="startButton" destination="n1i-oi-oIF" id="a3T-1c-of7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LqX-MJ-Q1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36.431784107946029" y="469.60000000000002"/>
+            <point key="canvasLocation" x="36.160714285714285" y="469.56521739130437"/>
         </scene>
-        <!--Alphavite Finish View Controller-->
+        <!--Colors Finish View Controller-->
         <scene sceneID="fSa-mk-qrY">
             <objects>
-                <viewController storyboardIdentifier="AlphaviteFinishViewController" id="2cy-Tl-klI" customClass="AlphaviteFinishViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlphaviteFinishViewController" id="2cy-Tl-klI" customClass="ColorsFinishViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Elv-Xz-p2g">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -343,6 +346,7 @@
                                 <rect key="frame" x="275.5" y="105.5" width="345" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="345" id="2nu-qN-4lc"/>
+                                    <constraint firstAttribute="height" constant="79" id="fk0-05-gIz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -670,7 +674,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="7ZK-YI-1WY">
                                 <rect key="frame" x="123.5" y="50" width="649" height="324"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Vk-Bx-eje">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Vk-Bx-eje" customClass="ColorGameContainer" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64.5" width="195" height="195"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9DF-DQ-tiM" customClass="GradientView" customModule="Teremok_TV" customModuleProvider="target">
@@ -682,7 +686,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icBrush" translatesAutoresizingMaskIntoConstraints="NO" id="UUA-Bw-F9Q">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icMarkColorGame" translatesAutoresizingMaskIntoConstraints="NO" id="UUA-Bw-F9Q">
                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="195"/>
                                             </imageView>
                                         </subviews>
@@ -699,23 +703,10 @@
                                             <constraint firstItem="UUA-Bw-F9Q" firstAttribute="leading" secondItem="3Vk-Bx-eje" secondAttribute="leading" id="jCN-2I-t33"/>
                                             <constraint firstItem="9DF-DQ-tiM" firstAttribute="leading" secondItem="3Vk-Bx-eje" secondAttribute="leading" constant="20" id="wNh-Yw-6Dy"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.1843137255" green="0.63921568630000003" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="gradientView" destination="9DF-DQ-tiM" id="cO0-bx-YV8"/>
+                                            <outlet property="imageView" destination="UUA-Bw-F9Q" id="cQA-1D-IXd"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFd-kQ-SxP" customClass="DesignableView" customModule="Spring">
                                         <rect key="frame" x="227" y="64.5" width="195" height="195"/>
@@ -746,7 +737,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xar-vf-1Ej">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xar-vf-1Ej" customClass="ColorGameContainer" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="454" y="64.5" width="195" height="195"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-g8-bXA" customClass="GradientView" customModule="Teremok_TV" customModuleProvider="target">
@@ -775,23 +766,10 @@
                                             <constraint firstItem="zM4-lU-1HL" firstAttribute="top" secondItem="xar-vf-1Ej" secondAttribute="top" id="ubE-1Z-uui"/>
                                             <constraint firstAttribute="trailing" secondItem="Z32-g8-bXA" secondAttribute="trailing" constant="20" id="vI8-kf-djA"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.1843137255" green="0.63921568630000003" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="gradientView" destination="Z32-g8-bXA" id="27O-zU-PgO"/>
+                                            <outlet property="imageView" destination="zM4-lU-1HL" id="DlF-ap-Wbo"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -910,15 +888,15 @@
                         <viewLayoutGuide key="safeArea" id="UL9-gf-xR0"/>
                     </view>
                     <connections>
-                        <outlet property="cloudView" destination="ECY-cS-BLu" id="Wwc-h9-Wb6"/>
                         <outlet property="imageContainer" destination="LFd-kQ-SxP" id="jjR-nF-EnS"/>
-                        <outlet property="imageView" destination="X7k-22-skU" id="TZx-dt-FEr"/>
+                        <outlet property="imageView" destination="X7k-22-skU" id="Hh5-jA-FaP"/>
+                        <outlet property="leftView" destination="3Vk-Bx-eje" id="Ikg-dk-yAm"/>
                         <outlet property="pickPlace" destination="Rkr-z5-7ae" id="Oin-FD-HlF"/>
-                        <outlet property="pickView" destination="IiM-2w-ioJ" id="esg-aI-f0U"/>
                         <outlet property="pointTitleLabel" destination="bdu-3s-37q" id="uQT-n7-sJT"/>
                         <outlet property="pointsLabel" destination="gYP-2I-YkH" id="lUe-lK-cHr"/>
                         <outlet property="pointsView" destination="ZtI-ce-R9O" id="3yL-m2-egA"/>
                         <outlet property="progressBar" destination="n6B-KQ-kRv" id="1fJ-cZ-8aK"/>
+                        <outlet property="rightView" destination="xar-vf-1Ej" id="zcC-Nt-viT"/>
                         <outlet property="stackView" destination="7ZK-YI-1WY" id="YqS-de-zG3"/>
                     </connections>
                 </viewController>
@@ -930,10 +908,10 @@
     <resources>
         <image name="colorGameBack" width="969" height="543"/>
         <image name="ic-alphHome" width="31" height="29"/>
-        <image name="ic-alphaviteLogo" width="319" height="188"/>
         <image name="ic-alphavitePlay" width="68" height="73"/>
         <image name="icBrush" width="175" height="180"/>
         <image name="icHomePurpl" width="31" height="29"/>
+        <image name="icMarkColorGame" width="125" height="125"/>
         <image name="icUtka" width="29" height="35"/>
     </resources>
 </document>

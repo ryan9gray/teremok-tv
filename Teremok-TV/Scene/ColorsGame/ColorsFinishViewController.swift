@@ -1,14 +1,14 @@
 //
-//  AlphaviteFinishViewController.swift
+//  ColorsFinishViewController.swift
 //  Teremok-TV
 //
-//  Created by Evgeny Ivanov on 03/08/2019.
+//  Created by Evgeny Ivanov on 29/09/2019.
 //  Copyright © 2019 xmedia. All rights reserved.
 //
 
 import UIKit
 
-class AlphaviteFinishViewController: GameViewController {
+class ColorsFinishViewController: GameViewController {
     @IBOutlet private var playButton: KeyButton!
     @IBOutlet private var titleLabel: StrokeLabel!
     @IBOutlet private var buttonTitleLabel: UILabel!
@@ -30,7 +30,7 @@ class AlphaviteFinishViewController: GameViewController {
         var nextChoice: () -> Void
         var resume: () -> Void
     }
-    
+
     struct Input {
         var answers: [Bool]
     }
@@ -60,4 +60,3 @@ class AlphaviteFinishViewController: GameViewController {
         playButton.setImage(isGood ? UIImage(named: "ic-alphavitePlay") : UIImage(named: "ic-alphaviteRepeat"), for: .normal)
     }
 }
-

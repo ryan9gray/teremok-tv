@@ -81,7 +81,7 @@ class AlphaviteChoiceViewController: GameViewController {
 
     private func setupUI() {
         wordLabel.textColor = .white
-        leftChar.textColor = UIColor.Alphavite.Button.blueOne
+        leftChar.textColor = UIColor.Alphavite.blueOne
         leftChar.strokeSize = 26.0
         leftChar.strokeColor = .white
         leftChar.strokePosition = .center
@@ -89,7 +89,7 @@ class AlphaviteChoiceViewController: GameViewController {
         leftChar.textAlignment = .center
         leftChar.contentMode = .center
 
-        rightChar.textColor = UIColor.Alphavite.Button.blueOne
+        rightChar.textColor = UIColor.Alphavite.blueOne
         rightChar.strokeSize = 26.0
         rightChar.strokeColor = .white
         rightChar.strokePosition = .center
@@ -109,6 +109,7 @@ class AlphaviteChoiceViewController: GameViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+
         timer.invalidate()
         audioPlayer?.stop()
     }
@@ -168,7 +169,7 @@ class AlphaviteChoiceViewController: GameViewController {
                 self.wordLabel.isHidden = true
                 self.stackView.layoutIfNeeded()
         })
-        imageContainer.borderColor = UIColor.Alphavite.Button.blueTwo
+        imageContainer.borderColor = UIColor.Alphavite.blueTwo
         imageView.image = image
     }
 
@@ -187,7 +188,7 @@ class AlphaviteChoiceViewController: GameViewController {
             playSounds(AlphaviteMaster.Sound.wrongAnswer.url)
             view.layer.addSublayer(cross)
         }
-        imageContainer.borderColor = isRight ? UIColor.Alphavite.Button.greenTwo : UIColor.Alphavite.Button.redTwo
+        imageContainer.borderColor = isRight ? UIColor.Alphavite.greenTwo : UIColor.Alphavite.redTwo
         UIView.animate(
             withDuration: 0.5,
             delay: 0.0,

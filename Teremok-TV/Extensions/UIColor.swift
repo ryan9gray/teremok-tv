@@ -12,44 +12,61 @@ import CoreText
 extension UIColor {
     
     // Palette
-        enum Button {
-            static let beige                        =  #colorLiteral(red: 1, green: 0.9450980392, blue: 0.8, alpha: 1)  //FFF1CC
-            static let yellowOne                    =  #colorLiteral(red: 1, green: 0.862745098, blue: 0.2509803922, alpha: 1)  //FFDC40
-            static let yellowTwo                    =  #colorLiteral(red: 1, green: 0.7803921569, blue: 0.08235294118, alpha: 1)  //FFC715
-            static let titleText                    = UIColor(hex: "2E334D")
-            static let yellowBase                   =  #colorLiteral(red: 1, green: 0.8705882353, blue: 0.4941176471, alpha: 1)  //FFDE7E
-            static let redOne                       =  #colorLiteral(red: 1, green: 0.4431372549, blue: 0.3294117647, alpha: 1)//FF7154
-            static let redTwo                       =  #colorLiteral(red: 0.9019607843, green: 0.3725490196, blue: 0.1450980392, alpha: 1) //E65F25
-            static let redThree                     = UIColor(hex: "E33A3A")
-            static let blueOne                      =  #colorLiteral(red: 0.1647058824, green: 0.8117647059, blue: 0.9960784314, alpha: 1) //2ACFFE
-            static let blueTwo                      =  #colorLiteral(red: 0.4588235294, green: 0.7058823529, blue: 0.9215686275, alpha: 1)//75B4EB
-            static let lightGray                    = UIColor(hex: "E2E2E2")
-        }
-
-    enum Alphavite {
-
-        enum Button {
-            static let orangeOne                      = UIColor(hex: "FFC327")
-            static let orangeTwo                      = UIColor(hex: "F38928")
-            static let violetOne                      = UIColor(hex: "7F7CFF")
-            static let violetTwo                      = UIColor(hex: "4F30C9")
-            static let greenOne                       = UIColor(hex: "4CD179")
-            static let greenTwo                      = UIColor(hex: "1F891D")
-            static let redOne                      = UIColor(hex: "FF5F7C")
-            static let redTwo                      = UIColor(hex: "E33A3A")
-            static let blueOne                      = UIColor(hex: "40AFFF")
-            static let blueTwo                      = UIColor(hex: "0078CF")
-            static let brownOne                     = UIColor(hex: "BA5354")
-            static let brownTwo                      = UIColor(hex: "894A5D")
-            static let playOne                      = UIColor(hex: "FFA826")
-            static let playTwo                      = UIColor(hex: "D3461A")
-            static let grey                      = UIColor(hex: "808080")
-
-        }
+    enum Button {
+        static let beige                        =  #colorLiteral(red: 1, green: 0.9450980392, blue: 0.8, alpha: 1)  //FFF1CC
+        static let yellowOne                    =  #colorLiteral(red: 1, green: 0.862745098, blue: 0.2509803922, alpha: 1)  //FFDC40
+        static let yellowTwo                    =  #colorLiteral(red: 1, green: 0.7803921569, blue: 0.08235294118, alpha: 1)  //FFC715
+        static let titleText                    = UIColor(hex: "2E334D")
+        static let yellowBase                   =  #colorLiteral(red: 1, green: 0.8705882353, blue: 0.4941176471, alpha: 1)  //FFDE7E
+        static let redOne                       =  #colorLiteral(red: 1, green: 0.4431372549, blue: 0.3294117647, alpha: 1) //FF7154
+        static let redTwo                       =  #colorLiteral(red: 0.9019607843, green: 0.3725490196, blue: 0.1450980392, alpha: 1) //E65F25
+        static let redThree                     = UIColor(hex: "E33A3A")
+        static let blueOne                      =  #colorLiteral(red: 0.1647058824, green: 0.8117647059, blue: 0.9960784314, alpha: 1) //2ACFFE
+        static let blueTwo                      =  #colorLiteral(red: 0.4588235294, green: 0.7058823529, blue: 0.9215686275, alpha: 1) //75B4EB
+        static let lightGray                    = UIColor(hex: "E2E2E2")
     }
 
-    enum ColorGame {
+    enum ColorsGame {
         static let purp = UIColor(hex: "634BF4")
+
+        static let orangeOne                      = UIColor(hex: "FFAF37")
+        static let orangeTwo                      = UIColor(hex: "FF6737")
+
+        static let violetOne                      = UIColor(hex: "E57CFF")
+        static let violetTwo                      = UIColor(hex: "634BF4")
+
+        static let greenOne                       = UIColor(hex: "C2EB1C")
+        static let greenTwo                      = UIColor(hex: "2C8800")
+
+        static let redOne                      = UIColor(hex: "FF6535")
+        static let redTwo                      = UIColor(hex: "FF0F0F")
+
+        static let blueOne                      = UIColor(hex: "4FA4F3")
+        static let blueTwo                      = UIColor(hex: "015DB3")
+        
+        static let lightBlueOne                      = UIColor(hex: "00E0FF")
+        static let lightBlueTwo                      = UIColor(hex: "0094FF")
+
+        static let yellowOne                      = UIColor(hex: "FFF62B")
+        static let yellowTwo                      = UIColor(hex: "FFBF2B")
+    }
+
+    enum Alphavite {
+        static let orangeOne                      = UIColor(hex: "FFC327")
+        static let orangeTwo                      = UIColor(hex: "F38928")
+        static let violetOne                      = UIColor(hex: "7F7CFF")
+        static let violetTwo                      = UIColor(hex: "4F30C9")
+        static let greenOne                       = UIColor(hex: "4CD179")
+        static let greenTwo                      = UIColor(hex: "1F891D")
+        static let redOne                      = UIColor(hex: "FF5F7C")
+        static let redTwo                      = UIColor(hex: "E33A3A")
+        static let blueOne                      = UIColor(hex: "40AFFF")
+        static let blueTwo                      = UIColor(hex: "0078CF")
+        static let brownOne                     = UIColor(hex: "BA5354")
+        static let brownTwo                      = UIColor(hex: "894A5D")
+        static let playOne                      = UIColor(hex: "FFA826")
+        static let playTwo                      = UIColor(hex: "D3461A")
+        static let grey                      = UIColor(hex: "808080")
     }
  
     enum TextField {

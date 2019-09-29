@@ -13,14 +13,100 @@
 import UIKit
 
 enum ColorsMaster {
-    // MARK: Use cases
-  
-    enum Something {
-        struct Request {
+
+    enum Colors {
+        typealias RawValue = UIColor
+
+        case white
+        case black
+
+        case red
+        case orange
+        case yellow
+        case green
+        case turquoise
+        case blue
+        case violet
+    }
+
+    enum Gradients {
+        typealias RawValue = [UIColor]
+
+        case white
+        case black
+
+        case red
+        case orange
+        case yellow
+        case green
+        case lightBlue
+        case blue
+        case violet
+    }
+
+    static let Images: [UIImage?] = [
+        UIImage(named: "animal_1"),
+        UIImage(named: "animal_1"),
+        UIImage(named: "animal_1"),
+        UIImage(named: "animal_1"),
+        UIImage(named: "animal_1"),
+        UIImage(named: "animal_1"),
+        UIImage(named: "animal_1"),
+        UIImage(named: "animal_1"),
+        UIImage(named: "animal_1")
+    ]
+}
+
+extension ColorsMaster.Colors {
+    var value: UIColor {
+        get {
+            switch self {
+                case .white:
+                    return .white
+                case .black:
+                    return .black
+                case .red:
+                    return .red
+                case .orange:
+                    return .orange
+                case .yellow:
+                    return .yellow
+                case .green:
+                    return .green
+                case .turquoise:
+                    return UIColor.View.Label.ocean
+                case .blue:
+                    return .blue
+                case .violet:
+                    return UIColor.ColorsGame.purp
+            }
         }
-        struct Response {
-        }
-        struct ViewModel {
+    }
+}
+extension ColorsMaster.Gradients {
+    var value: [UIColor] {
+        get {
+            switch self {
+                case .yellow:
+                    return [UIColor.ColorsGame.yellowOne, UIColor.ColorsGame.yellowTwo]
+                case .orange:
+                    return [UIColor.ColorsGame.orangeOne, UIColor.ColorsGame.orangeTwo]
+                case .blue:
+                    return [UIColor.ColorsGame.blueOne, UIColor.ColorsGame.blueTwo]
+                case .red:
+                    return [UIColor.ColorsGame.redOne, UIColor.ColorsGame.redTwo]
+                case .green:
+                    return [UIColor.ColorsGame.greenOne, UIColor.ColorsGame.greenTwo]
+                case .white:
+                    return [.white, .white]
+                case .black:
+                    return [.black, .black]
+                case .lightBlue:
+                    return [UIColor.ColorsGame.lightBlueOne, UIColor.ColorsGame.lightBlueTwo]
+                case .violet:
+                    return [UIColor.ColorsGame.violetOne, UIColor.ColorsGame.violetTwo]
+
+            }
         }
     }
 }

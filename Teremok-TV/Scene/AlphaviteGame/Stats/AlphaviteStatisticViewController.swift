@@ -75,8 +75,8 @@ class AlphaviteStatisticViewController: GameViewController, AlphaviteStatisticDi
 
         activityView = LottieHUD()
         displayProfile()
-        goodTitleLabel.textColor = UIColor.Alphavite.Button.greenTwo
-        badTitleLabel.textColor = UIColor.Alphavite.Button.redTwo
+        goodTitleLabel.textColor = UIColor.Alphavite.greenTwo
+        badTitleLabel.textColor = UIColor.Alphavite.redTwo
         leftGradientView.gradientColors = Style.Gradients.green.value
         rightGradientView.gradientColors = Style.Gradients.red.value
 
