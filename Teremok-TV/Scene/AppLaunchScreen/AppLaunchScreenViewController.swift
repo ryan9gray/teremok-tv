@@ -19,11 +19,11 @@ class AppLaunchScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if ServiceConfiguration.activeConfiguration() == .sandbox  {
-            ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
-            dismiss(animated: true, completion: nil)
-            return
-        }
+//        if ServiceConfiguration.activeConfiguration() == .sandbox  {
+//            ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
+//            dismiss(animated: true, completion: nil)
+//            return
+//        }
 
         animationView = AnimationView(name: AppLaunchScreen.Animation.finish.rawValue)
         animationView.frame = view.bounds
@@ -63,24 +63,9 @@ class AppLaunchScreenViewController: UIViewController {
         })
     }
 
-    func access() {
-        let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Initial.onBoarding.rawValue]))
-        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
-            DispatchQueue.main.async {
-                if available {
-                    self.onBoarding()
-                  } else {
-                      bundleResourceRequest.beginAccessingResources { error in
-                        self.access()
-                      }
-                  }
-            }
-        }
-    }
-
     func onBoard() {
         if !LocalStore.onBoarding {
-            access()
+            onBoarding()
         } else {
             ViewHierarchyWorker.setRootViewController(rootViewController: MasterViewController.instantiate(fromStoryboard: .main))
             dismiss(animated: true, completion: nil)

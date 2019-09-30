@@ -14,17 +14,32 @@ class OnboardingViewController: UIViewController {
     private var avPlayerLayer: AVPlayerLayer!
     @IBOutlet private var videoBackView: UIView!
 
+    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Initial.onBoarding.rawValue]))
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        access()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        playVideo()
     }
 
+    func access() {
+        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+            DispatchQueue.main.async {
+                if available {
+                    self.playVideo()
+                  } else {
+                    self.bundleResourceRequest.beginAccessingResources { error in
+                        self.access()
+                      }
+                  }
+            }
+        }
+    }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)

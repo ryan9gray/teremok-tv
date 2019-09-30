@@ -62,7 +62,7 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
 
     // MARK: Routing
 
-    weak var playerVC: PlayerViewController!
+    var playerVC: PlayerViewController!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "playerSeg" {

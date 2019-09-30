@@ -114,7 +114,6 @@ class PlayerViewController: AVPlayerViewController {
             // report for an error
         }
         removePlayerNotifations()
-        player = nil
         fullOverlay.removeFromParent()
         fullOverlay = nil
     }
