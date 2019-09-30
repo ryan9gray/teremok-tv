@@ -72,7 +72,7 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
             dismiss(animated: true, completion: nil)
         }
     }
-    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.alphabetImages.rawValue]))
+    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.alphabetImages.rawValue, OnDemandLoader.Tags.Prefetch.alphabetSounds.rawValue]))
 
     override func viewDidLoad() {
         super.viewDidLoad()
