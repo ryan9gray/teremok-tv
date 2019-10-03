@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ColorGameContainer: UIView {
-    @IBOutlet private var imageView: UIImageView!
+class ColorGameContainer: UIButton {
+    @IBOutlet private var objectView: UIImageView!
     @IBOutlet private var gradientView: GradientView!
 
     override func layoutSubviews() {
@@ -24,10 +24,10 @@ class ColorGameContainer: UIView {
     }
 
     func setState(_ state: ImageState) {
-        imageView.image = state.image
+        objectView.image = state.image
     }
 
-    func setGradient(_ gradient: ColorsMaster.Gradients) {
+    func setGradient(_ gradient: ColorsMaster.Colors) {
         gradientView.gradientColors = gradient.value
     }
 

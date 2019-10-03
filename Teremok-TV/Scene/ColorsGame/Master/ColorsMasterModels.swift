@@ -14,37 +14,55 @@ import UIKit
 
 enum ColorsMaster {
 
-    enum Colors {
-        typealias RawValue = UIColor
+    enum Colors: String {
+        case white = "Белый"
+        case black = "Черный"
 
-        case white
-        case black
+        case red = "Красный"
+        case orange = "Оранжевый"
+        case yellow = "Желтый"
+        case green = "Зеленый"
+        case lightBlue = "Голубой"
+        case blue = "Синий"
+        case violet = "Фиолетовый"
 
-        case red
-        case orange
-        case yellow
-        case green
-        case turquoise
-        case blue
-        case violet
+        var sound: String {
+            switch self {
+                case .white:
+                    return ""
+                case .black:
+                    return ""
+                case .red:
+                    return ""
+                case .orange:
+                    return ""
+                case .yellow:
+                    return ""
+                case .green:
+                    return ""
+                case .lightBlue:
+                    return ""
+                case .blue:
+                    return ""
+                case .violet:
+                    return ""
+            }
+        }
     }
 
-    enum Gradients {
-        typealias RawValue = [UIColor]
+    static let Pack: [Colors: UIImage?] = [
+        Colors.white: ColorsMaster.images[0],
+        Colors.black: ColorsMaster.images[1],
+        Colors.red: ColorsMaster.images[2],
+        Colors.orange: ColorsMaster.images[3],
+        Colors.yellow: ColorsMaster.images[4],
+        Colors.green: ColorsMaster.images[5],
+        Colors.lightBlue: ColorsMaster.images[6],
+        Colors.blue: ColorsMaster.images[7],
+        Colors.violet: ColorsMaster.images[8]
+    ]
 
-        case white
-        case black
-
-        case red
-        case orange
-        case yellow
-        case green
-        case lightBlue
-        case blue
-        case violet
-    }
-
-    static let Images: [UIImage?] = [
+    static let images: [UIImage?] = [
         UIImage(named: "animal_1"),
         UIImage(named: "animal_1"),
         UIImage(named: "animal_1"),
@@ -58,32 +76,6 @@ enum ColorsMaster {
 }
 
 extension ColorsMaster.Colors {
-    var value: UIColor {
-        get {
-            switch self {
-                case .white:
-                    return .white
-                case .black:
-                    return .black
-                case .red:
-                    return .red
-                case .orange:
-                    return .orange
-                case .yellow:
-                    return .yellow
-                case .green:
-                    return .green
-                case .turquoise:
-                    return UIColor.View.Label.ocean
-                case .blue:
-                    return .blue
-                case .violet:
-                    return UIColor.ColorsGame.purp
-            }
-        }
-    }
-}
-extension ColorsMaster.Gradients {
     var value: [UIColor] {
         get {
             switch self {
@@ -105,7 +97,6 @@ extension ColorsMaster.Gradients {
                     return [UIColor.ColorsGame.lightBlueOne, UIColor.ColorsGame.lightBlueTwo]
                 case .violet:
                     return [UIColor.ColorsGame.violetOne, UIColor.ColorsGame.violetTwo]
-
             }
         }
     }

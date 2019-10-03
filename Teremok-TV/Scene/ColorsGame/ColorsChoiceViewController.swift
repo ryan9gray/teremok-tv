@@ -21,12 +21,14 @@ class ColorsChoiceViewController: GameViewController {
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var imageContainer: DesignableView!
     @IBOutlet private var stackView: UIStackView!
+    private let gameHelper = AlphabetGameHelper()
+    private var audioPlayer: AVAudioPlayer?
 
     var input: Input!
     var output: Output!
 
     struct Input {
-        var words: [String: String]
+        var colors: [ColorsMaster.Colors]
         var isHard: Bool
     }
 
@@ -35,8 +37,10 @@ class ColorsChoiceViewController: GameViewController {
         var nextChoice: () -> Void
     }
 
+    var currentColor: ColorsMaster.Colors = .white
+
     private var timer = Timer()
-    private let limit: CGFloat = 30.0
+    private let limit: CGFloat = 10.0
     private var progress: CGFloat {
         return seconds / limit
     }
@@ -55,13 +59,72 @@ class ColorsChoiceViewController: GameViewController {
 
     private var right: GameModel.Option = .left
 
+    @IBAction private func rightTap(_ sender: Any) {
+        result(view: rightView, answer: .right)
+    }
+
+    @IBAction private func leftTap(_ sender: Any) {
+        result(view: leftView, answer: .left)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
+        progressBar.isHidden = !input.isHard
+        pointsView.isHidden = !input.isHard
+        if input.isHard {
+            pointsView.gradientColors = Style.Gradients.orange.value
+        }
+
+        nextColor()
+    }
+
+    private func setupUI() {
+        pointsLabel.textColor = UIColor.ColorsGame.purp
+        pointTitleLabel.textColor = UIColor.ColorsGame.purp
     }
 
     func nextColor() {
+        guard let color = input.colors.randomElement() else {
+            output.nextChoice()
+            return
+        }
+
+        displayChoice(color: color, wrong: gameHelper.randomColor(from: color), image: ColorsMaster.Pack[color]!)
+        playSounds(gameHelper.getSounds(name: color.sound))
+    }
+
+    private func displayChoice(color: ColorsMaster.Colors, wrong: ColorsMaster.Colors, image: UIImage?) {
+        reset()
+        right = GameModel.Option(rawValue: Int.random(in: 0...1))!
+        currentColor = color
+        switch right {
+        case .left:
+            leftView.setGradient(color)
+            rightView.setGradient(wrong)
+        case .right:
+            leftView.setGradient(wrong)
+            rightView.setGradient(color)
+        }
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0.0,
+            usingSpringWithDamping: 0.9,
+            initialSpringVelocity: 1,
+            options: [],
+            animations: {
+                self.leftView.alpha = 1.0
+                self.rightView.alpha = 1.0
+                self.leftView.isHidden = false
+                self.rightView.isHidden = false
+                self.stackView.layoutIfNeeded()
+        })
+        imageContainer.borderColor = UIColor.Alphavite.blueTwo
+        imageView.image = image
+    }
+
+    private func result(view: UIView, answer: GameModel.Option) {
 
     }
 
@@ -80,5 +143,13 @@ class ColorsChoiceViewController: GameViewController {
             guard let self = self else { return }
             self.seconds += 1
         }
+    }
+    private func playSounds(_ url: URL) {
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+        } catch {
+            print("no file)")
+        }
+        audioPlayer?.play()
     }
 }

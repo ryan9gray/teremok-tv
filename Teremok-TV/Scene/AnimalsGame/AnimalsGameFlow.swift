@@ -26,8 +26,6 @@ class AnimalsGameFlow  {
         showPack(idx: number)
     }
 
-
-
     private func showPack(idx: Int) {
         if checkIntro, !LocalStore.secondAnimalsIntroduce {
             checkIntro = false

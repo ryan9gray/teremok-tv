@@ -44,4 +44,14 @@ struct AlphabetGameHelper {
             return keys[index]
         }
     }
+    func randomColor(from: ColorsMaster.Colors) -> ColorsMaster.Colors {
+        let all = ColorsMaster.Colors.allValues()
+        let index = Int.random(in: 0..<all.count)
+        if all[index] == from {
+            let newIndex = index < 8 ?  index + 1 : index - 1
+            return all[newIndex]
+        } else {
+            return all[index]
+        }
+    }
 }

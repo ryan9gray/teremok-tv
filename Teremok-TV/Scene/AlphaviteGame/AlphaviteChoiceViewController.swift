@@ -46,7 +46,7 @@ class AlphaviteChoiceViewController: GameViewController {
     private var pickPlayer: AVAudioPlayer?
 
     private var timer = Timer()
-    private let limit: CGFloat = 30.0
+    private let limit: CGFloat = 10.0
     private var progress: CGFloat {
         return seconds / limit
     }
@@ -165,7 +165,6 @@ class AlphaviteChoiceViewController: GameViewController {
                 self.secondItem.alpha = 1.0
                 self.firstItem.isHidden = false
                 self.secondItem.isHidden = false
-                self.stackView.layoutIfNeeded()
                 self.wordLabel.isHidden = true
                 self.stackView.layoutIfNeeded()
         })
@@ -197,13 +196,14 @@ class AlphaviteChoiceViewController: GameViewController {
             options: [],
             animations: {
                 self.wordLabel.isHidden = false
+                guard self.isRight else { return }
                 switch answer {
-                case .left:
-                    self.secondItem.alpha = 0.0
-                    self.secondItem.isHidden = true
-                case .right:
-                    self.firstItem.alpha = 0.0
-                    self.firstItem.isHidden = true
+                    case .left:
+                        self.secondItem.alpha = 0.0
+                        self.secondItem.isHidden = true
+                    case .right:
+                        self.firstItem.alpha = 0.0
+                        self.firstItem.isHidden = true
                 }
                 self.stackView.layoutIfNeeded()
         }) { _ in
