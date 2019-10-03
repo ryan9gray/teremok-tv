@@ -63,17 +63,17 @@ class MonsterMasterViewController: GameMasterViewController, MonsterMasterDispla
             dismiss(animated: true, completion: nil)
         }
     }
-    
+    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.monstersImage.rawValue]))
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.monstersImage.rawValue]))
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             DispatchQueue.main.async {
             if available {
                 self.router?.navigateMain()
             } else {
-                bundleResourceRequest.beginAccessingResources { error in
+                self.bundleResourceRequest.beginAccessingResources { error in
                     guard error == nil else { return }
 
                     self.present(errorString: "Игра загружается, попробуйте позже") {
