@@ -25,6 +25,9 @@ class ColorGameContainer: UIButton {
 
     func setState(_ state: ImageState) {
         objectView.image = state.image
+        if state == .fail {
+            setGradient(.red)
+        }
     }
 
     func setGradient(_ gradient: ColorsMaster.Colors) {

@@ -56,6 +56,11 @@ class ColorsChoiceViewController: GameViewController {
             }
         }
     }
+    var points: Int = 0 {
+        didSet {
+            pointsLabel.text = points.stringValue
+        }
+    }
 
     private var right: GameModel.Option = .left
 
@@ -80,6 +85,13 @@ class ColorsChoiceViewController: GameViewController {
         nextColor()
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        timer.invalidate()
+        audioPlayer?.stop()
+    }
+
     private func setupUI() {
         pointsLabel.textColor = UIColor.ColorsGame.purp
         pointTitleLabel.textColor = UIColor.ColorsGame.purp
@@ -91,7 +103,7 @@ class ColorsChoiceViewController: GameViewController {
             return
         }
 
-        displayChoice(color: color, wrong: gameHelper.randomColor(from: color), image: ColorsMaster.Pack[color]!)
+        displayChoice(color: color, wrong: gameHelper.randomColor(from: color), image: UIImage(named: ColorsMaster.Pack[color]!))
         playSounds(gameHelper.getSounds(name: color.sound))
     }
 
@@ -99,13 +111,14 @@ class ColorsChoiceViewController: GameViewController {
         reset()
         right = GameModel.Option(rawValue: Int.random(in: 0...1))!
         currentColor = color
+
         switch right {
-        case .left:
-            leftView.setGradient(color)
-            rightView.setGradient(wrong)
-        case .right:
-            leftView.setGradient(wrong)
-            rightView.setGradient(color)
+            case .left:
+                leftView.setGradient(color)
+                rightView.setGradient(wrong)
+            case .right:
+                leftView.setGradient(wrong)
+                rightView.setGradient(color)
         }
         UIView.animate(
             withDuration: 0.5,
@@ -124,14 +137,52 @@ class ColorsChoiceViewController: GameViewController {
         imageView.image = image
     }
 
-    private func result(view: UIView, answer: GameModel.Option) {
+    private func result(view: ColorGameContainer, answer: GameModel.Option) {
+        guard !isDone else { return }
 
+        isDone = true
+        isRight = cheack(answer: answer)
+        print(isRight)
+        timer.invalidate()
+        if isRight {
+            view.setState(.access)
+            points += 1
+            playSounds(AlphaviteMaster.Sound.rightAnswer.url)
+        } else {
+            view.setState(.fail)
+            playSounds(AlphaviteMaster.Sound.wrongAnswer.url)
+        }
+        imageContainer.borderColor = isRight ? UIColor.Alphavite.greenTwo : UIColor.Alphavite.redTwo
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0.0,
+            usingSpringWithDamping: 0.9,
+            initialSpringVelocity: 1,
+            options: [],
+            animations: {
+                guard self.isRight else { return }
+                switch answer {
+                    case .left:
+                        self.rightView.alpha = 0.0
+                        self.rightView.isHidden = true
+                    case .right:
+                        self.leftView.alpha = 0.0
+                        self.leftView.isHidden = true
+                }
+                self.stackView.layoutIfNeeded()
+        }) { _ in
+
+        }
+
+        //output.result(AlphaviteMaster.Statistic(char: currentChar, seconds: Int(seconds), isRight: isRight))
     }
 
     private func reset() {
-          isDone = false
-          seconds = 0
-          fireTimer()
+        leftView.setState(.brash)
+        rightView.setState(.brash)
+        isDone = false
+        seconds = 0
+        fireTimer()
     }
 
     private func cheack(answer: GameModel.Option) -> Bool {

@@ -50,28 +50,16 @@ enum ColorsMaster {
         }
     }
 
-    static let Pack: [Colors: UIImage?] = [
-        Colors.white: ColorsMaster.images[0],
-        Colors.black: ColorsMaster.images[1],
-        Colors.red: ColorsMaster.images[2],
-        Colors.orange: ColorsMaster.images[3],
-        Colors.yellow: ColorsMaster.images[4],
-        Colors.green: ColorsMaster.images[5],
-        Colors.lightBlue: ColorsMaster.images[6],
-        Colors.blue: ColorsMaster.images[7],
-        Colors.violet: ColorsMaster.images[8]
-    ]
-
-    static let images: [UIImage?] = [
-        UIImage(named: "animal_1"),
-        UIImage(named: "animal_1"),
-        UIImage(named: "animal_1"),
-        UIImage(named: "animal_1"),
-        UIImage(named: "animal_1"),
-        UIImage(named: "animal_1"),
-        UIImage(named: "animal_1"),
-        UIImage(named: "animal_1"),
-        UIImage(named: "animal_1")
+    static let Pack: [Colors: String] = [
+        Colors.white: "",
+        Colors.black: "",
+        Colors.red: "",
+        Colors.orange: "",
+        Colors.yellow: "",
+        Colors.green: "",
+        Colors.lightBlue: "",
+        Colors.blue: "",
+        Colors.violet: ""
     ]
 }
 
