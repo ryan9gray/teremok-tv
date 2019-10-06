@@ -52,6 +52,12 @@ class OnDemandLoader {
         }
     }
 
+    func createRequest(tags: [String]) -> NSBundleResourceRequest {
+        let bundleResourceRequest = NSBundleResourceRequest(tags: Set(tags))
+        
+        return bundleResourceRequest
+    }
+
     private var introducongGames: [String] {
         var files: [String] = []
         if !LocalStore.alphaviteIntroduce {

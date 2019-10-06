@@ -76,22 +76,19 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             DispatchQueue.main.async {
                 if available {
                       self.router?.navigateMain()
                   } else {
                     self.bundleResourceRequest.beginAccessingResources { error in
-                          guard error == nil else { return }
-
                           self.present(errorString: "Игра загружается, попробуйте позже") {
                               self.dismiss(animated: true)
                           }
                       }
                   }
             }
-
         }
         do {
             //Preparation to play

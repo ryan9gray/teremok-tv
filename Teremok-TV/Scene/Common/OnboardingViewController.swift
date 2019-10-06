@@ -29,15 +29,17 @@ class OnboardingViewController: UIViewController {
 
     func access() {
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
-            DispatchQueue.main.async {
-                if available {
+            if available {
+                DispatchQueue.main.async {
+                self.playVideo()
+                }
+              } else {
+                self.bundleResourceRequest.beginAccessingResources { error in
+                    DispatchQueue.main.async {
                     self.playVideo()
-                  } else {
-                    self.bundleResourceRequest.beginAccessingResources { error in
-                        self.access()
-                      }
+                    }
                   }
-            }
+              }
         }
     }
 

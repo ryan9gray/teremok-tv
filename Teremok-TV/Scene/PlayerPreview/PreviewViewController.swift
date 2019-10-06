@@ -154,11 +154,12 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     }
 
     deinit {
+        track(Events.Time.Video, trackedProperties: [Keys.Timer  ~>> playerVC?.player?.currentItem?.currentTime().seconds ?? 0.0])
+        guard playerVC != nil else { return }
         playerVC.willMove(toParent: nil)
         playerVC.view.removeFromSuperview()
         playerVC.removeFromParent()
         playerVC = nil
-        track(Events.Time.Video, trackedProperties: [Keys.Timer  ~>> playerVC?.player?.currentItem?.currentTime().seconds ?? 0.0])
     }
 }
 
@@ -208,7 +209,9 @@ extension PreviewViewController : AVPlayerOverlayVCDelegate {
     }
 
     func avPlayerOverlay(_ vc: TTPlayerViewController, didFullScreen sender: Any?) {
-        playerVC.view.frame = parent!.view.frame
+        guard let parent = parent else { return }
+
+        playerVC.view.frame = parent.view.frame
     }
 
     func avPlayerOverlay(_ vc: TTPlayerViewController, willNormalScreen sender: Any?) {
