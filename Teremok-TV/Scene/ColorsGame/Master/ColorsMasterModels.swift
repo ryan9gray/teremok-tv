@@ -50,16 +50,22 @@ enum ColorsMaster {
         }
     }
 
-    static let Pack: [Colors: String] = [
-        Colors.white: "",
-        Colors.black: "",
-        Colors.red: "",
-        Colors.orange: "",
-        Colors.yellow: "",
-        Colors.green: "",
-        Colors.lightBlue: "",
-        Colors.blue: "",
-        Colors.violet: ""
+    static let DefaultColors: [Colors] = [
+        Colors.yellow,
+        Colors.green,
+        Colors.white
+    ]
+
+    static let Pack: [Colors: [String]] = [
+        Colors.white: ["", ""],
+        Colors.black: ["", ""],
+        Colors.red: ["", ""],
+        Colors.orange: ["", ""],
+        Colors.yellow: ["", ""],
+        Colors.green: ["", ""],
+        Colors.lightBlue: ["", ""],
+        Colors.blue: ["", ""],
+        Colors.violet: ["", ""]
     ]
 }
 

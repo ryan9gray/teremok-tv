@@ -10,6 +10,7 @@ import UIKit
 
 class ColorsGameFlow  {
     weak var master: ColorsMasterViewController?
+    private let service: ColorsGameServiceProtocol = ColorsGameService()
 
     init(master: ColorsMasterViewController) {
         self.master = master
@@ -25,21 +26,44 @@ class ColorsGameFlow  {
     }
 
     private func randomRound() {
-        
+        if game.round == 0, !(Profile.current?.premiumGame ?? false) {
+            game.roundColors = ColorsMaster.DefaultColors
+            ColorsMaster.DefaultColors.forEach { game.currentColors.remove($0) }
+        } else {
+           game.roundColors = []
+           for _ in 0..<3 {
+               let char = game.currentColors.randomElement()!
+               game.roundColors.append(char)
+               game.currentColors.remove(char)
+           }
+           guard !game.currentColors.isEmpty else {
+               finishGame()
+               return
+           }
+        }
+        game.round += 1
+        startTraining()
+    }
+
+    private func startTraining() {
+
     }
 
     private func startChoice() {
 
     }
 
+
     private func nextRound() {
         
     }
-
+    func finishGame() {
+        master?.router?.popChild()
+    }
     class Game {
-        var currentChars = Set(AlphaviteMaster.Char.keys)
-        var roundWords: [String] = []
-        var words: [String: String] = [:]
+        var currentColors = Set(ColorsMaster.Colors.allValues())
+        var roundColors: [ColorsMaster.Colors] = []
+        var colors: [ColorsMaster.Colors: String] = [:]
         var round = 0
 
         var statistic: [AlphaviteMaster.Statistic] = []

@@ -1,21 +1,21 @@
 //
-//  AlphabetGetStatCommand.swift
+//  colorsGameGetStatCommand.swift
 //  Teremok-TV
 //
-//  Created by Evgeny Ivanov on 10/08/2019.
+//  Created by Evgeny Ivanov on 05/10/2019.
 //  Copyright © 2019 xmedia. All rights reserved.
 //
 
 import Alamofire
 
-class AlphabetGetStatCommand: BasicCommand {
+class ColorsGameGetStatCommand: BasicCommand {
 
     func execute(success: ((AlphaviteStatisticResponse) -> Void)?, failure: ApiCompletionBlock?) {
         requestObject(success: success, failure: failure, path: "Stat")
     }
 
     override var method: String {
-        return APIMethod.AlphabetGame.getStat.methodName
+        return APIMethod.ColorsGame.getStat.methodName
     }
 
     override var parameters: [String : Any] {
@@ -23,7 +23,7 @@ class AlphabetGetStatCommand: BasicCommand {
     }
 }
 
-class AlphabetSendStatCommand: BasicCommand {
+class ColorsGameSendStatCommand: BasicCommand {
     let stats: [AlphaviteStatistic]
 
     init(stats: [AlphaviteStatistic]) {
@@ -34,7 +34,7 @@ class AlphabetSendStatCommand: BasicCommand {
     }
 
     override var method: String {
-        return APIMethod.AlphabetGame.sendStat.methodName
+        return APIMethod.ColorsGame.sendStat.methodName
     }
 
     override var parameters: [String : Any] {

@@ -208,7 +208,9 @@ extension PreviewViewController : AVPlayerOverlayVCDelegate {
     }
 
     func avPlayerOverlay(_ vc: TTPlayerViewController, didFullScreen sender: Any?) {
-        playerVC.view.frame = parent!.view.frame
+        guard let parent = parent else { return }
+
+        playerVC.view.frame = parent.view.frame
     }
 
     func avPlayerOverlay(_ vc: TTPlayerViewController, willNormalScreen sender: Any?) {

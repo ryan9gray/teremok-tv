@@ -344,7 +344,6 @@
 		CA91027922FF5E7E00140D5A /* AlphabetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91027822FF5E7E00140D5A /* AlphabetService.swift */; };
 		CA91027C22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91027B22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift */; };
 		CA91027E22FF606A00140D5A /* AlphabetGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91027D22FF606A00140D5A /* AlphabetGetStatCommand.swift */; };
-		CA91028022FF607900140D5A /* AlphabetSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91027F22FF607900140D5A /* AlphabetSendStatCommand.swift */; };
 		CA992D36212FF1EF008BFC8D /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA992D35212FF1EE008BFC8D /* Auth.storyboard */; };
 		CA992D38212FF218008BFC8D /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA992D37212FF218008BFC8D /* Play.storyboard */; };
 		CA9A6743213C134000FCB400 /* RazdelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A673D213C134000FCB400 /* RazdelPresenter.swift */; };
@@ -405,6 +404,8 @@
 		CAAF1F1021771E4300460F58 /* Shade_open.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAF1F0A21771E4300460F58 /* Shade_open.json */; };
 		CAAF1F1121771E4300460F58 /* Shade_close.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAF1F0B21771E4300460F58 /* Shade_close.json */; };
 		CAAF1F1221771E4300460F58 /* Shade.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAF1F0C21771E4300460F58 /* Shade.json */; };
+		CAAFD1492348EFB6005E086C /* colorsGameGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAFD1482348EFB6005E086C /* colorsGameGetStatCommand.swift */; };
+		CAAFD14B2348F06A005E086C /* ColorsGameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAFD14A2348F06A005E086C /* ColorsGameService.swift */; };
 		CAB08AFC21400B8C002840E3 /* VideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB08AFB21400B8C002840E3 /* VideoResponse.swift */; };
 		CAB08AFE2140512A002840E3 /* RazdCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB08AFD2140512A002840E3 /* RazdCommand.swift */; };
 		CAB08B002140513C002840E3 /* VideosCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB08AFF2140513C002840E3 /* VideosCommand.swift */; };
@@ -1079,7 +1080,6 @@
 		CA91027822FF5E7E00140D5A /* AlphabetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetService.swift; sourceTree = "<group>"; };
 		CA91027B22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatisticResponse.swift; sourceTree = "<group>"; };
 		CA91027D22FF606A00140D5A /* AlphabetGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetGetStatCommand.swift; sourceTree = "<group>"; };
-		CA91027F22FF607900140D5A /* AlphabetSendStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetSendStatCommand.swift; sourceTree = "<group>"; };
 		CA992D35212FF1EE008BFC8D /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		CA992D37212FF218008BFC8D /* Play.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
 		CA9A673D213C134000FCB400 /* RazdelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazdelPresenter.swift; sourceTree = "<group>"; };
@@ -1142,6 +1142,8 @@
 		CAAF1F0A21771E4300460F58 /* Shade_open.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shade_open.json; sourceTree = "<group>"; };
 		CAAF1F0B21771E4300460F58 /* Shade_close.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shade_close.json; sourceTree = "<group>"; };
 		CAAF1F0C21771E4300460F58 /* Shade.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shade.json; sourceTree = "<group>"; };
+		CAAFD1482348EFB6005E086C /* colorsGameGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorsGameGetStatCommand.swift; sourceTree = "<group>"; };
+		CAAFD14A2348F06A005E086C /* ColorsGameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameService.swift; sourceTree = "<group>"; };
 		CAB08AFB21400B8C002840E3 /* VideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResponse.swift; sourceTree = "<group>"; };
 		CAB08AFD2140512A002840E3 /* RazdCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazdCommand.swift; sourceTree = "<group>"; };
 		CAB08AFF2140513C002840E3 /* VideosCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosCommand.swift; sourceTree = "<group>"; };
@@ -1987,6 +1989,7 @@
 		CA70271E21396F1400629260 /* ServiceCommand */ = {
 			isa = PBXGroup;
 			children = (
+				CAAFD14A2348F06A005E086C /* ColorsGameService.swift */,
 				111187F5231E8D6E00EBEFC0 /* MonsterService.swift */,
 				CA91027822FF5E7E00140D5A /* AlphabetService.swift */,
 				CA61D87F22A1D49700E3D603 /* AnimalsGameService.swift */,
@@ -2110,7 +2113,6 @@
 			isa = PBXGroup;
 			children = (
 				CA91027D22FF606A00140D5A /* AlphabetGetStatCommand.swift */,
-				CA91027F22FF607900140D5A /* AlphabetSendStatCommand.swift */,
 			);
 			path = Alphavite;
 			sourceTree = "<group>";
@@ -2289,6 +2291,14 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		CAAFD1472348EF4E005E086C /* ColorsGame */ = {
+			isa = PBXGroup;
+			children = (
+				CAAFD1482348EFB6005E086C /* colorsGameGetStatCommand.swift */,
+			);
+			path = ColorsGame;
+			sourceTree = "<group>";
+		};
 		CAB5A4492171F16700A00C8E /* Childs */ = {
 			isa = PBXGroup;
 			children = (
@@ -2412,6 +2422,7 @@
 		CAC2D5012115A68200945003 /* Command */ = {
 			isa = PBXGroup;
 			children = (
+				CAAFD1472348EF4E005E086C /* ColorsGame */,
 				11604AD8231F830B001D1C7F /* Monster */,
 				CA91027A22FF5EDB00140D5A /* Alphavite */,
 				CA1AB63E22ECC266003A2584 /* Analytic */,
@@ -3718,6 +3729,7 @@
 				CAC2D5322115A68300945003 /* ModalPresentable.swift in Sources */,
 				CAC2D5292115A68300945003 /* Collection.swift in Sources */,
 				CAFF984F2325305300003076 /* ColorsMasterPresenter.swift in Sources */,
+				CAAFD1492348EFB6005E086C /* colorsGameGetStatCommand.swift in Sources */,
 				CA49E498212D59F900711324 /* RoundEdgeButton.swift in Sources */,
 				CA896C7422933F2700ECC628 /* AnimalСompilationCollectionViewCell.swift in Sources */,
 				11BC751F23042E06001B5CC8 /* MonsterStartViewController.swift in Sources */,
@@ -3824,7 +3836,6 @@
 				11246D62231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift in Sources */,
 				CA8CF70D225EBE1900B217C7 /* MusicActionService.swift in Sources */,
 				CA4C28C521451D9200CA264D /* VideoCollectionViewCell.swift in Sources */,
-				CA91028022FF607900140D5A /* AlphabetSendStatCommand.swift in Sources */,
 				CAA732BE21318D0B006276B4 /* MainContentResponse.swift in Sources */,
 				CA8EA71F2141568900159451 /* LoadingCollectionViewCell.swift in Sources */,
 				CA49E49F212D5A9200711324 /* MainPresenter.swift in Sources */,
@@ -3836,6 +3847,7 @@
 				CA433FF4224F94D700B0788E /* MusicSearchCommand.swift in Sources */,
 				CAA6FDB0224BF2A3008C2F87 /* MusicResponse.swift in Sources */,
 				CABAE9CD22C3EE820093FC5A /* OnboardingViewController.swift in Sources */,
+				CAAFD14B2348F06A005E086C /* ColorsGameService.swift in Sources */,
 				CAEEF2402299C9FD00AF5AF6 /* RoundPresentViewController.swift in Sources */,
 				CAE1C453211DC23A0058C9C6 /* RegistrationViewController.swift in Sources */,
 				CA8A005F215A9E0C00CA879E /* Clouds.swift in Sources */,
