@@ -78,17 +78,24 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
         super.viewDidLoad()
         bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
-            DispatchQueue.main.async {
                 if available {
+                    DispatchQueue.main.async {
                       self.router?.navigateMain()
+                    }
                   } else {
                     self.bundleResourceRequest.beginAccessingResources { error in
-                          self.present(errorString: "Игра загружается, попробуйте позже") {
-                              self.dismiss(animated: true)
-                          }
+                        DispatchQueue.main.async {
+                        if error != nil {
+                            self.present(errorString: "Игра загружается, попробуйте позже") {
+                                self.dismiss(animated: true)
+                            }
+                        } else {
+                            self.router?.navigateMain()
+                        }
+                        }
                       }
                   }
-            }
+
         }
         do {
             //Preparation to play

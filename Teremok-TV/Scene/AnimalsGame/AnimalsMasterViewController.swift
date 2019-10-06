@@ -78,18 +78,22 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
         super.viewDidLoad()
 
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
-            DispatchQueue.main.async {
             if available {
-                self.router?.navigateMain()
+                DispatchQueue.main.async {
+                    self.router?.navigateMain()
+                }
             } else {
                 self.bundleResourceRequest.beginAccessingResources { error in
-                    guard error == nil else { return }
-
-                    self.present(errorString: "Игра загружается, попробуйте позже") {
-                        self.dismiss(animated: true)
+                    DispatchQueue.main.async {
+                        if error != nil {
+                            self.present(errorString: "Игра загружается, попробуйте позже") {
+                                self.dismiss(animated: true)
+                            }
+                        } else {
+                            self.router?.navigateMain()
+                        }
                     }
                 }
-            }
             }
         }
 
