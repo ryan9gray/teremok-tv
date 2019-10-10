@@ -72,30 +72,20 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
             dismiss(animated: true, completion: nil)
         }
     }
-    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.alphabetImages.rawValue, OnDemandLoader.Tags.Prefetch.alphabetSounds.rawValue]))
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
-        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
-                if available {
-                    DispatchQueue.main.async {
-                      self.router?.navigateMain()
-                    }
-                  } else {
-                    self.bundleResourceRequest.beginAccessingResources { error in
-                        DispatchQueue.main.async {
-                        if error != nil {
-                            self.present(errorString: "Игра загружается, попробуйте позже") {
-                                self.dismiss(animated: true)
-                            }
-                        } else {
-                            self.router?.navigateMain()
-                        }
-                        }
-                      }
-                  }
 
+        interactor?.onDemand { [weak self] success in
+            DispatchQueue.main.async {
+            if success {
+                self?.router?.navigateMain()
+            } else {
+                self?.present(errorString: "Игра загружается, попробуйте позже") {
+                    self?.dismiss(animated: true)
+                }
+            }
+        }
         }
         do {
             //Preparation to play

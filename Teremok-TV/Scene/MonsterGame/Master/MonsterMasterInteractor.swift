@@ -13,7 +13,7 @@
 import UIKit
 
 protocol MonsterMasterBusinessLogic {
-    
+    func onDemand(completion: @escaping (Bool) -> Void)
 }
 
 protocol MonsterMasterDataStore {
@@ -21,6 +21,19 @@ protocol MonsterMasterDataStore {
 
 class MonsterMasterInteractor: MonsterMasterBusinessLogic, MonsterMasterDataStore {
     var presenter: MonsterMasterPresentationLogic?    
+    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.monstersImage.rawValue]))
 
+    func onDemand(completion: @escaping (Bool) -> Void) {
+        bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
+        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+            if available {
+                completion(true)
+              } else {
+                self.bundleResourceRequest.beginAccessingResources { error in
+                    completion(error == nil)
+                  }
+              }
+        }
+    }
 
 }
