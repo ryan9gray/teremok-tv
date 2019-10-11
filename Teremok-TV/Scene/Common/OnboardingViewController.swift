@@ -31,11 +31,13 @@ class OnboardingViewController: UIViewController {
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             if available {
                 DispatchQueue.main.async {
-                    self.playVideo()
+                self.playVideo()
                 }
               } else {
                 self.bundleResourceRequest.beginAccessingResources { error in
-                    self.access()
+                    DispatchQueue.main.async {
+                    self.playVideo()
+                    }
                   }
               }
         }

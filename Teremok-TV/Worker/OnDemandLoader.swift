@@ -39,6 +39,7 @@ class OnDemandLoader {
 
     func loadOnDemandAssets(completion: @escaping (Result<Bool>) -> Void) {
         bundleResourceRequest.endAccessingResources()
+        bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             if available {
                 completion(.success(true))
@@ -50,6 +51,12 @@ class OnDemandLoader {
                 }
             }
         }
+    }
+
+    func createRequest(tags: [String]) -> NSBundleResourceRequest {
+        let bundleResourceRequest = NSBundleResourceRequest(tags: Set(tags))
+        
+        return bundleResourceRequest
     }
 
     private var introducongGames: [String] {

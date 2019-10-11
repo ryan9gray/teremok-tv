@@ -70,27 +70,19 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
         interactor?.changeComplexity(isEasy: isEasy)
     }
 
-    let bundleResourceRequest = NSBundleResourceRequest(tags:
-           Set([OnDemandLoader.Tags.Prefetch.animalsSounds.rawValue, OnDemandLoader.Tags.Prefetch.animalsImage.rawValue])
-    )
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+        interactor?.onDemand { [weak self] success in
             DispatchQueue.main.async {
-            if available {
-                self.router?.navigateMain()
+            if success {
+                self?.router?.navigateMain()
             } else {
-                self.bundleResourceRequest.beginAccessingResources { error in
-                    guard error == nil else { return }
-
-                    self.present(errorString: "Игра загружается, попробуйте позже") {
-                        self.dismiss(animated: true)
-                    }
+                self?.present(errorString: "Игра загружается, попробуйте позже") {
+                    self?.dismiss(animated: true)
                 }
             }
-            }
+        }
         }
 
         do {

@@ -13,7 +13,6 @@
 import UIKit
 
 protocol AlphaviteMasterPresentationLogic: CommonPresentationLogic {
-    
 }
 
 class AlphaviteMasterPresenter: AlphaviteMasterPresentationLogic {
@@ -21,6 +20,5 @@ class AlphaviteMasterPresenter: AlphaviteMasterPresentationLogic {
         return viewController
     }
     weak var viewController: AlphaviteMasterDisplayLogic?
-  
-    
+
 }

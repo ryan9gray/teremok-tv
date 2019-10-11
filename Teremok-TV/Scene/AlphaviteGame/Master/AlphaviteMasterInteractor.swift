@@ -13,7 +13,7 @@
 import UIKit
 
 protocol AlphaviteMasterBusinessLogic {
-    
+    func onDemand(completion: @escaping (Bool) -> Void)
 }
 
 protocol AlphaviteMasterDataStore {
@@ -22,4 +22,18 @@ protocol AlphaviteMasterDataStore {
 class AlphaviteMasterInteractor: AlphaviteMasterBusinessLogic, AlphaviteMasterDataStore {
     var presenter: AlphaviteMasterPresentationLogic?
 
+    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.alphabetImages.rawValue, OnDemandLoader.Tags.Prefetch.alphabetSounds.rawValue]))
+
+    func onDemand(completion: @escaping (Bool) -> Void) {
+        bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
+        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+            if available {
+                completion(true)
+              } else {
+                self.bundleResourceRequest.beginAccessingResources { error in
+                    completion(error == nil)
+                }
+              }
+        }
+    }
 }
