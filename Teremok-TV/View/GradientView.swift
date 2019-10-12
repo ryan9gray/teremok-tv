@@ -12,6 +12,7 @@ import UIKit
 class GradientView: UIView {
     var gradientColors : [UIColor] = Style.Gradients.yellow.value {
         didSet {
+            gradientLayer.colors = gradientColors.map { $0.cgColor }
             layoutSubviews()
         }
     }

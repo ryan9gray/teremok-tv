@@ -69,7 +69,8 @@ class ColorsMasterViewController: GameMasterViewController, ColorsMasterDisplayL
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        router?.navigateMain()
     }
 
     deinit {

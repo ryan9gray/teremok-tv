@@ -172,7 +172,7 @@
                                     <constraint firstAttribute="width" constant="44" id="9Jj-mX-ayq"/>
                                     <constraint firstAttribute="height" constant="44" id="dO4-Yh-LSU"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="8" minY="7" maxX="4" maxY="0.0"/>
+                                <inset key="contentEdgeInsets" minX="4" minY="2" maxX="4" maxY="-2"/>
                                 <state key="normal" image="ic-alphavitePlay"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="indent">
@@ -304,7 +304,7 @@
                                     <constraint firstAttribute="width" constant="75" id="QL7-oK-vcM"/>
                                     <constraint firstAttribute="height" constant="75" id="q5d-sX-8g5"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="8" minY="10" maxX="4" maxY="0.0"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
                                 <state key="normal" image="ic-alphavitePlay"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="indent">
@@ -909,7 +909,7 @@
         <image name="ic-alphHome" width="31" height="29"/>
         <image name="ic-alphaviteBack" width="667" height="375"/>
         <image name="ic-alphaviteLogo" width="319" height="188"/>
-        <image name="ic-alphavitePlay" width="68" height="73"/>
+        <image name="ic-alphavitePlay" width="70" height="80"/>
         <image name="icUtka" width="29" height="35"/>
     </resources>
 </document>

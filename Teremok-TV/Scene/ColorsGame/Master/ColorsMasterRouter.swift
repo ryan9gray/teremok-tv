@@ -29,12 +29,12 @@ class ColorsMasterRouter: ColorsMasterRoutingLogic, ColorsMasterDataPassing {
     func openStatistic() {
         guard modalChildVC == nil else { return }
 
-        let vc = AlphaviteStatisticViewController.instantiate(fromStoryboard: .alphavite)
+        let vc = ColorsGameStatViewController.instantiate(fromStoryboard: .colors)
         viewController?.presentAlertModally(alertController: vc)
     }
 
     func navigateMain() {
-        pushChild(viewControllerClass: AlphaviteStartViewController.self, storyboard: .alphavite)
+        pushChild(viewControllerClass: ColorsStartViewController.self, storyboard: .colors)
     }
 
     /**
@@ -47,6 +47,9 @@ class ColorsMasterRouter: ColorsMasterRoutingLogic, ColorsMasterDataPassing {
     func startFlow(_ idx: Int) {
         guard let controller = viewController else { return }
 
+        controller.tipView?.dismiss()
+        let flow = ColorsGameFlow(master: controller)
+        flow.startFlow()
     }
 
     var moduleRouter: MasterModuleDisplayLogic? {

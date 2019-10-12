@@ -8,8 +8,8 @@
 import UIKit
 
 struct ImageFillter {
-    func monochrome(_ image: UIImage) -> UIImage? {
-        guard let currentCGImage = image.cgImage else { return nil }
+    func monochrome(_ image: UIImage?) -> UIImage? {
+        guard let currentCGImage = image?.cgImage else { return nil }
 
         let currentCIImage = CIImage(cgImage: currentCGImage)
         let filter = CIFilter(name: "CIColorMonochrome")

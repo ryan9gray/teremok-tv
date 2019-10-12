@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MontserratAlternates-Regular.ttf">
+            <string>MontserratAlternates-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ColorsGameStatView" id="2Vx-nA-MOH" customClass="ColorsGameStatView" customModule="Teremok_TV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xV5-lt-tAS">
+                    <rect key="frame" x="117" y="0.0" width="46" height="30"/>
+                    <fontDescription key="fontDescription" name="MontserratAlternates-Regular" family="Montserrat Alternates" pointSize="18"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-4h-xNQ" customClass="GradientView" customModule="Teremok_TV" customModuleProvider="target">
+                    <rect key="frame" x="5" y="0.0" width="30" height="30"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="s2l-4h-xNQ" secondAttribute="height" multiplier="1:1" id="A3P-rs-iNH"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xV5-lt-tAS" secondAttribute="trailing" constant="2" id="8VA-iP-IW4"/>
+                <constraint firstItem="xV5-lt-tAS" firstAttribute="top" secondItem="2Vx-nA-MOH" secondAttribute="top" id="N4e-9N-ymh"/>
+                <constraint firstItem="s2l-4h-xNQ" firstAttribute="leading" secondItem="2Vx-nA-MOH" secondAttribute="leading" constant="5" id="WbX-Cb-qvV"/>
+                <constraint firstAttribute="bottom" secondItem="xV5-lt-tAS" secondAttribute="bottom" id="X3o-2d-jed"/>
+                <constraint firstItem="s2l-4h-xNQ" firstAttribute="top" secondItem="2Vx-nA-MOH" secondAttribute="top" id="v9n-6H-L08"/>
+                <constraint firstAttribute="bottom" secondItem="s2l-4h-xNQ" secondAttribute="bottom" id="xZq-KO-qIg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="YHh-ED-H1q"/>
+            <connections>
+                <outlet property="countLabel" destination="xV5-lt-tAS" id="gBu-e7-cic"/>
+                <outlet property="gradientView" destination="s2l-4h-xNQ" id="ieh-os-30a"/>
+            </connections>
+            <point key="canvasLocation" x="-47.10144927536232" y="114.50892857142857"/>
+        </view>
+    </objects>
+</document>

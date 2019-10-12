@@ -15,7 +15,9 @@ class ColorsTeachingViewController: GameViewController {
     private var audioPlayer: AVAudioPlayer?
     @IBOutlet private var stackView: UIStackView!
     private let gameHelper = AlphabetGameHelper()
-    @IBOutlet private var imageContainer: ColorGameContainer!
+    @IBOutlet private var colorContainer: ColorGameContainer!
+    @IBOutlet var objectContainer: DesignableView!
+    @IBOutlet private var imageContainer: UIImageView!
 
     @IBAction private func startTap(_ sender: Any) {
         output.startChoice()
@@ -50,17 +52,15 @@ class ColorsTeachingViewController: GameViewController {
     }
 
     func start() {
-
+        nextChar()
     }
     private func nextChar() {
         guard let color = input.colors.popLast() else {
             finish()
             return
         }
-        //guard let name = AlphaviteMaster.Char[color] else { return }
 
-        //charLabel.text = color
-
+        colorContainer.setGradient(color)
         UIView.animate(
             withDuration: 0.5,
             delay: 0.0,
@@ -68,15 +68,45 @@ class ColorsTeachingViewController: GameViewController {
             initialSpringVelocity: 1,
             options: [],
             animations: {
-                self.imageContainer.alpha = 0.0
-                self.imageContainer.isHidden = true
+                self.objectContainer.alpha = 0.0
+                self.objectContainer.isHidden = true
                 self.stackView.layoutIfNeeded()
             }
         )
 
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            self?.nextImage(color)
+        }
 //        playSounds(gameHelper.getSounds(name: name)) { [weak self] in
 //            self?.nextImage(color)
 //        }
+    }
+
+    private func nextImage(_ color: ColorsMaster.Colors) {
+        var words = ColorsMaster.Pack[color] ?? []
+
+        UIView.animate(withDuration: 0.5) {
+            self.objectContainer.alpha = 1.0
+            self.objectContainer.isHidden = false
+        }
+
+        func getWord() {
+            guard let word = words.popLast() else {
+                nextChar()
+                return
+            }
+
+            imageContainer.image = UIImage(named: word)
+            animateImage()
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                getWord()
+            }
+//            playSounds(gameHelper.getSounds(name: word)) {
+//                getWord()
+//            }
+        }
+        getWord()
     }
 
     func finish() {
@@ -93,5 +123,17 @@ class ColorsTeachingViewController: GameViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             completion()
         }
+    }
+
+    private func animateImage() {
+        objectContainer.animation = "shake"
+        objectContainer.curve = "linear"
+        objectContainer.duration =  1.0
+        objectContainer.scaleX =  1.6
+        objectContainer.scaleY =  1.6
+        objectContainer.rotate =  3.3
+        objectContainer.damping =  0.5
+        objectContainer.velocity =  0.6
+        objectContainer.animate()
     }
 }

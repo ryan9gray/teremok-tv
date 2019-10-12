@@ -106,7 +106,7 @@ extension UIColor {
 }
 
 extension UIColor {
-    
+
     convenience init(withHexString hex: String, alpha: CGFloat = 1.0) {
         var hex = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         if hex.hasPrefix("#") {

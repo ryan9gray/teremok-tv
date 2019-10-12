@@ -46,20 +46,59 @@ class ColorsGameFlow  {
     }
 
     private func startTraining() {
-
+        let controller = ColorsTeachingViewController.instantiate(fromStoryboard: .colors)
+        controller.input = ColorsTeachingViewController.Input(colors: game.roundColors)
+        controller.output = ColorsTeachingViewController.Output(startChoice: startChoice)
+        master?.router?.presentModalChild(viewController: controller)
     }
 
     private func startChoice() {
-
+        let controller = ColorsChoiceViewController.instantiate(fromStoryboard: .colors)
+        var words: [String : ColorsMaster.Colors] = [:]
+        for color in game.roundColors {
+            ColorsMaster.Pack[color]?.forEach { words[$0] = color }
+        }
+        controller.input = ColorsChoiceViewController.Input(
+            colors: words,
+            isHard: isHard
+        )
+        controller.output = ColorsChoiceViewController.Output(
+            result: saveResult,
+            nextChoice: finishRound
+        )
+        master?.router?.presentModalChild(viewController: controller)
     }
 
 
     private func nextRound() {
         
     }
+    func repeatRound() {
+        startTraining()
+    }
+
+    private func saveResult(statistic: AlphaviteMaster.Statistic) {
+        game.statistic.append(statistic)
+
+    }
+
+    private func finishRound() {
+        let controller = ColorsFinishViewController.instantiate(fromStoryboard: .colors)
+        controller.input = ColorsFinishViewController.Input(answers: game.statistic.map { $0.isRight })
+        controller.output = ColorsFinishViewController.Output(
+            nextChoice: nextRound,
+            resume: repeatRound
+        )
+        master?.router?.presentModalChild(viewController: controller)
+        service.sendStat(statistic: game.statistic.map { $0.maping() } ) { [weak self] _ in
+            self?.game.statistic = []
+        }
+    }
+
     func finishGame() {
         master?.router?.popChild()
     }
+
     class Game {
         var currentColors = Set(ColorsMaster.Colors.allValues())
         var roundColors: [ColorsMaster.Colors] = []

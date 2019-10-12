@@ -40,10 +40,12 @@ class ColorsFinishViewController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         titleLabel.textColor = .white
         titleLabel.strokeSize = 12.0
         titleLabel.strokePosition = .center
         titleLabel.gradientColors = Style.Gradients.green.value
+        
         pointsLabel.textColor = UIColor.Alphavite.greenOne
         greyLabel.textColor = UIColor.Alphavite.grey
         buttonTitleLabel.textColor = .white

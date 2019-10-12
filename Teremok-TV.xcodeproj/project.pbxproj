@@ -271,6 +271,11 @@
 		CA61D87E22A1D33700E3D603 /* AnimalsPackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61D87D22A1D33700E3D603 /* AnimalsPackResponse.swift */; };
 		CA61D88022A1D49700E3D603 /* AnimalsGameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61D87F22A1D49700E3D603 /* AnimalsGameService.swift */; };
 		CA61D92322A445A900E3D603 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61D92222A445A900E3D603 /* UPCarouselFlowLayout.swift */; };
+		CA62A71E23512B8F0083FD4F /* ColorsGameStatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71823512B8F0083FD4F /* ColorsGameStatPresenter.swift */; };
+		CA62A72023512B8F0083FD4F /* ColorsGameStatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71A23512B8F0083FD4F /* ColorsGameStatRouter.swift */; };
+		CA62A72123512B8F0083FD4F /* ColorsGameStatModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71B23512B8F0083FD4F /* ColorsGameStatModels.swift */; };
+		CA62A72223512B8F0083FD4F /* ColorsGameStatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */; };
+		CA62A72323512B8F0083FD4F /* ColorsGameStatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */; };
 		CA6CB8D52196F6B700429089 /* SubscriptionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CB8D42196F6B700429089 /* SubscriptionCommand.swift */; };
 		CA6CB8D72196F7C300429089 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CB8D62196F7C300429089 /* PurchaseService.swift */; };
 		CA6F0C8F2158C3E90031C135 /* EditChildCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F0C8E2158C3E90031C135 /* EditChildCommand.swift */; };
@@ -611,6 +616,8 @@
 		CAE364AB22918378003E891D /* AnimalsWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364A522918378003E891D /* AnimalsWordsViewController.swift */; };
 		CAE538F6212FFFED005F7463 /* AbstracViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE538F5212FFFED005F7463 /* AbstracViewController.swift */; };
 		CAE5A58B22A9AB630034B448 /* AMProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5A58A22A9AB630034B448 /* AMProgressView.swift */; };
+		CAE6792B235119F800CBCDB3 /* ColorsGameStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE6792A235119F800CBCDB3 /* ColorsGameStatView.swift */; };
+		CAE6792D23511A0C00CBCDB3 /* ColorsGameStatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE6792C23511A0B00CBCDB3 /* ColorsGameStatView.xib */; };
 		CAEBC712212D858F00730891 /* UIRoundedButtonWithGradientAndShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEBC711212D858F00730891 /* UIRoundedButtonWithGradientAndShadow.swift */; };
 		CAEEF22F2299C0F900AF5AF6 /* ChoiceAnimalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF2292299C0F900AF5AF6 /* ChoiceAnimalModels.swift */; };
 		CAEEF2302299C0F900AF5AF6 /* ChoiceAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF22A2299C0F900AF5AF6 /* ChoiceAnimalViewController.swift */; };
@@ -1007,6 +1014,11 @@
 		CA61D87D22A1D33700E3D603 /* AnimalsPackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsPackResponse.swift; sourceTree = "<group>"; };
 		CA61D87F22A1D49700E3D603 /* AnimalsGameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsGameService.swift; sourceTree = "<group>"; };
 		CA61D92222A445A900E3D603 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		CA62A71823512B8F0083FD4F /* ColorsGameStatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatPresenter.swift; sourceTree = "<group>"; };
+		CA62A71A23512B8F0083FD4F /* ColorsGameStatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatRouter.swift; sourceTree = "<group>"; };
+		CA62A71B23512B8F0083FD4F /* ColorsGameStatModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatModels.swift; sourceTree = "<group>"; };
+		CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatViewController.swift; sourceTree = "<group>"; };
+		CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatInteractor.swift; sourceTree = "<group>"; };
 		CA6CB8D42196F6B700429089 /* SubscriptionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCommand.swift; sourceTree = "<group>"; };
 		CA6CB8D62196F7C300429089 /* PurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
 		CA6F0C8E2158C3E90031C135 /* EditChildCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChildCommand.swift; sourceTree = "<group>"; };
@@ -1352,6 +1364,8 @@
 		CAE364A522918378003E891D /* AnimalsWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsWordsViewController.swift; sourceTree = "<group>"; };
 		CAE538F5212FFFED005F7463 /* AbstracViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstracViewController.swift; sourceTree = "<group>"; };
 		CAE5A58A22A9AB630034B448 /* AMProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMProgressView.swift; sourceTree = "<group>"; };
+		CAE6792A235119F800CBCDB3 /* ColorsGameStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatView.swift; sourceTree = "<group>"; };
+		CAE6792C23511A0B00CBCDB3 /* ColorsGameStatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsGameStatView.xib; sourceTree = "<group>"; };
 		CAEBC711212D858F00730891 /* UIRoundedButtonWithGradientAndShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedButtonWithGradientAndShadow.swift; sourceTree = "<group>"; };
 		CAEEF2292299C0F900AF5AF6 /* ChoiceAnimalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceAnimalModels.swift; sourceTree = "<group>"; };
 		CAEEF22A2299C0F900AF5AF6 /* ChoiceAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceAnimalViewController.swift; sourceTree = "<group>"; };
@@ -1697,6 +1711,8 @@
 				CA19C46922F5E3BD0011E4DF /* AlphaviteControl.swift */,
 				CAA73260213163A5006276B4 /* TTImageView.swift */,
 				CAF4C105214AF31700954AA8 /* InputView.swift */,
+				CAE6792A235119F800CBCDB3 /* ColorsGameStatView.swift */,
+				CAE6792C23511A0B00CBCDB3 /* ColorsGameStatView.xib */,
 				CAC0989122FF47ED00EFB01E /* AlphaviteStatView.swift */,
 				CAC0989322FF47FD00EFB01E /* AlphaviteStatView.xib */,
 			);
@@ -1984,6 +2000,18 @@
 				CAC6F73F22A81D1200756AE2 /* Saluts */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		CA62A72423512B930083FD4F /* Stat */ = {
+			isa = PBXGroup;
+			children = (
+				CA62A71823512B8F0083FD4F /* ColorsGameStatPresenter.swift */,
+				CA62A71A23512B8F0083FD4F /* ColorsGameStatRouter.swift */,
+				CA62A71B23512B8F0083FD4F /* ColorsGameStatModels.swift */,
+				CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */,
+				CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */,
+			);
+			path = Stat;
 			sourceTree = "<group>";
 		};
 		CA70271E21396F1400629260 /* ServiceCommand */ = {
@@ -3055,6 +3083,7 @@
 		CAFF984423251F4800003076 /* ColorsGame */ = {
 			isa = PBXGroup;
 			children = (
+				CA62A72423512B930083FD4F /* Stat */,
 				CAFF9856232530DE00003076 /* ColorsGameFlow.swift */,
 				CAFF98582325313C00003076 /* ColorsStartViewController.swift */,
 				CAFF985A2325318E00003076 /* ColorsTeachingViewController.swift */,
@@ -3376,6 +3405,7 @@
 				CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */,
 				CA5100B622F6EACF00821C25 /* alphavite_1_2.wav in Resources */,
 				CA5100D522F6EACF00821C25 /* alphavite_4_word_1.wav in Resources */,
+				CAE6792D23511A0C00CBCDB3 /* ColorsGameStatView.xib in Resources */,
 				CAF961B922995FF3006E3046 /* animal_48.mp3 in Resources */,
 				CA52DF242290683400458EE5 /* appetite.ttf in Resources */,
 				CAC6F72122A81BC000756AE2 /* ready_r_10.wav in Resources */,
@@ -3681,6 +3711,7 @@
 				11604ADA231F8330001D1C7F /* MonsterGetStatCommand.swift in Sources */,
 				CAE3649122918181003E891D /* AnimalsMainModels.swift in Sources */,
 				CA8EA71B214145E700159451 /* PreviewPresenter.swift in Sources */,
+				CA62A72223512B8F0083FD4F /* ColorsGameStatViewController.swift in Sources */,
 				CAEEF2422299CB8E00AF5AF6 /* IntroduceVideoViewController.swift in Sources */,
 				CA433FF9224FA8E700B0788E /* TrackCollectionViewCell.swift in Sources */,
 				CA0053C4213BD92500AA187F /* AppDelegate+Push.swift in Sources */,
@@ -3708,6 +3739,7 @@
 				CA70867D23082EA80015851C /* AlphaviteStatisticViewController.swift in Sources */,
 				CAA4455F2157BF4F0023E340 /* ErrorHandler.swift in Sources */,
 				CA1041522262A259005D62DE /* SearchMusicCollectionViewCell.swift in Sources */,
+				CA62A72023512B8F0083FD4F /* ColorsGameStatRouter.swift in Sources */,
 				CA80481C21416836000A3C5B /* SerialRouter.swift in Sources */,
 				CA763630226A63CD00168AB1 /* SubscriptionCollectionViewCell.swift in Sources */,
 				111187F4231E82D700EBEFC0 /* MonsterStatisticInteractor.swift in Sources */,
@@ -3727,8 +3759,11 @@
 				CA52DF3D22907EC000458EE5 /* AnimalsMasterInteractor.swift in Sources */,
 				CAE1C471211DC8CA0058C9C6 /* AuthInteractor.swift in Sources */,
 				CAC2D5322115A68300945003 /* ModalPresentable.swift in Sources */,
+				CA62A71E23512B8F0083FD4F /* ColorsGameStatPresenter.swift in Sources */,
+				CA62A72123512B8F0083FD4F /* ColorsGameStatModels.swift in Sources */,
 				CAC2D5292115A68300945003 /* Collection.swift in Sources */,
 				CAFF984F2325305300003076 /* ColorsMasterPresenter.swift in Sources */,
+				CAE6792B235119F800CBCDB3 /* ColorsGameStatView.swift in Sources */,
 				CAAFD1492348EFB6005E086C /* colorsGameGetStatCommand.swift in Sources */,
 				CA49E498212D59F900711324 /* RoundEdgeButton.swift in Sources */,
 				CA896C7422933F2700ECC628 /* AnimalСompilationCollectionViewCell.swift in Sources */,
@@ -3809,6 +3844,7 @@
 				CAE1C46F211DC8CA0058C9C6 /* AuthModels.swift in Sources */,
 				11604ADC231F8494001D1C7F /* MonsterSendStatCommand.swift in Sources */,
 				CAB59FD322F315D800D7CA71 /* AlphaviteMasterInteractor.swift in Sources */,
+				CA62A72323512B8F0083FD4F /* ColorsGameStatInteractor.swift in Sources */,
 				CAF61D90217E118E00035EE9 /* TTPlayerViewController.swift in Sources */,
 				CA314FF02222A95D00B59797 /* StoreResponse.swift in Sources */,
 				CAB59FD222F315D800D7CA71 /* AlphaviteMasterViewController.swift in Sources */,

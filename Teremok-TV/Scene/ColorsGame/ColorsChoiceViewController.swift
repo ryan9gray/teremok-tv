@@ -28,7 +28,7 @@ class ColorsChoiceViewController: GameViewController {
     var output: Output!
 
     struct Input {
-        var colors: [ColorsMaster.Colors]
+        var colors: [String: ColorsMaster.Colors]
         var isHard: Bool
     }
 
@@ -37,7 +37,7 @@ class ColorsChoiceViewController: GameViewController {
         var nextChoice: () -> Void
     }
 
-    var currentColor: ColorsMaster.Colors = .white
+    var currentImage: UIImage?
 
     private var timer = Timer()
     private let limit: CGFloat = 10.0
@@ -61,6 +61,8 @@ class ColorsChoiceViewController: GameViewController {
             pointsLabel.text = points.stringValue
         }
     }
+
+    private let imageFillter = ImageFillter()
 
     private var right: GameModel.Option = .left
 
@@ -102,15 +104,15 @@ class ColorsChoiceViewController: GameViewController {
             output.nextChoice()
             return
         }
-
-        displayChoice(color: color, wrong: gameHelper.randomColor(from: color), image: UIImage(named: ColorsMaster.Pack[color]!))
-        playSounds(gameHelper.getSounds(name: color.sound))
+        input.colors.removeValue(forKey: color.key)
+        displayChoice(color: color.value, wrong: gameHelper.randomColor(from: color.value), image: UIImage(named: color.key))
+        playSounds(gameHelper.getSounds(name: color.value.sound))
     }
 
     private func displayChoice(color: ColorsMaster.Colors, wrong: ColorsMaster.Colors, image: UIImage?) {
         reset()
         right = GameModel.Option(rawValue: Int.random(in: 0...1))!
-        currentColor = color
+        currentImage = image
 
         switch right {
             case .left:
@@ -134,7 +136,7 @@ class ColorsChoiceViewController: GameViewController {
                 self.stackView.layoutIfNeeded()
         })
         imageContainer.borderColor = UIColor.Alphavite.blueTwo
-        imageView.image = image
+        imageView.image = imageFillter.monochrome(image)
     }
 
     private func result(view: ColorGameContainer, answer: GameModel.Option) {
@@ -152,6 +154,7 @@ class ColorsChoiceViewController: GameViewController {
             view.setState(.fail)
             playSounds(AlphaviteMaster.Sound.wrongAnswer.url)
         }
+        imageView.image = currentImage
         imageContainer.borderColor = isRight ? UIColor.Alphavite.greenTwo : UIColor.Alphavite.redTwo
         UIView.animate(
             withDuration: 0.5,
@@ -171,10 +174,18 @@ class ColorsChoiceViewController: GameViewController {
                 }
                 self.stackView.layoutIfNeeded()
         }) { _ in
-
+            self.animateMonsters(side: answer) { _ in
+                self.nextColor()
+            }
         }
 
         //output.result(AlphaviteMaster.Statistic(char: currentChar, seconds: Int(seconds), isRight: isRight))
+    }
+
+    private func animateMonsters(side: GameModel.Option, completion: @escaping (Bool) -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            completion(true)
+        }
     }
 
     private func reset() {
