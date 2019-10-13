@@ -325,7 +325,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Stat status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXB-aY-INz">
-                                <rect key="frame" x="233.66666666666663" y="300" width="345" height="19"/>
+                                <rect key="frame" x="233.66666666666663" y="300" width="345" height="21"/>
                                 <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -471,7 +471,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Z2D-KC-xQs" secondAttribute="bottom" id="2fN-HU-rpM"/>
-                            <constraint firstItem="luX-RK-3dX" firstAttribute="bottom" secondItem="wXB-aY-INz" secondAttribute="bottom" constant="35" id="3J2-6C-E6T"/>
                             <constraint firstAttribute="trailing" secondItem="Z2D-KC-xQs" secondAttribute="trailing" id="6vD-F8-tJi"/>
                             <constraint firstItem="zoK-7e-Rlj" firstAttribute="top" secondItem="luX-RK-3dX" secondAttribute="top" constant="20" id="7nB-UF-PW0"/>
                             <constraint firstItem="QPP-wt-KbT" firstAttribute="bottom" secondItem="TPf-3W-u8n" secondAttribute="bottom" id="8ra-gJ-f7T"/>
