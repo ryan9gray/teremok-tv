@@ -48,7 +48,7 @@ class ColorsFinishViewController: GameViewController {
         
         pointsLabel.textColor = UIColor.Alphavite.greenOne
         greyLabel.textColor = UIColor.Alphavite.grey
-        buttonTitleLabel.textColor = .white
+        buttonTitleLabel.textColor = UIColor.ColorsGame.purp
 
         let right = input.answers.filter{$0}
         pointsLabel.text = "\(right.count) из \(input.answers.count)"

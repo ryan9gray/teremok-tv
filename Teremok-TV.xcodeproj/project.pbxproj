@@ -276,6 +276,16 @@
 		CA62A72123512B8F0083FD4F /* ColorsGameStatModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71B23512B8F0083FD4F /* ColorsGameStatModels.swift */; };
 		CA62A72223512B8F0083FD4F /* ColorsGameStatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */; };
 		CA62A72323512B8F0083FD4F /* ColorsGameStatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */; };
+		CA652CE52353510300291E4D /* happy_green_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDB2353510200291E4D /* happy_green_1.json */; };
+		CA652CE62353510300291E4D /* happy_red_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDC2353510200291E4D /* happy_red_2.json */; };
+		CA652CE72353510300291E4D /* sad_red_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDD2353510200291E4D /* sad_red_1.json */; };
+		CA652CE82353510300291E4D /* sad_green_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDE2353510200291E4D /* sad_green_1.json */; };
+		CA652CE92353510300291E4D /* sad_green_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDF2353510200291E4D /* sad_green_2.json */; };
+		CA652CEA2353510300291E4D /* main_green.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CE02353510200291E4D /* main_green.json */; };
+		CA652CEB2353510300291E4D /* happy_green_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CE12353510300291E4D /* happy_green_2.json */; };
+		CA652CEC2353510300291E4D /* sad_red_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CE22353510300291E4D /* sad_red_2.json */; };
+		CA652CED2353510300291E4D /* main_red.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CE32353510300291E4D /* main_red.json */; };
+		CA652CEE2353510300291E4D /* happy_red_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CE42353510300291E4D /* happy_red_1.json */; };
 		CA6CB8D52196F6B700429089 /* SubscriptionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CB8D42196F6B700429089 /* SubscriptionCommand.swift */; };
 		CA6CB8D72196F7C300429089 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CB8D62196F7C300429089 /* PurchaseService.swift */; };
 		CA6F0C8F2158C3E90031C135 /* EditChildCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F0C8E2158C3E90031C135 /* EditChildCommand.swift */; };
@@ -1019,6 +1029,16 @@
 		CA62A71B23512B8F0083FD4F /* ColorsGameStatModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatModels.swift; sourceTree = "<group>"; };
 		CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatViewController.swift; sourceTree = "<group>"; };
 		CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatInteractor.swift; sourceTree = "<group>"; };
+		CA652CDB2353510200291E4D /* happy_green_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_green_1.json; sourceTree = "<group>"; };
+		CA652CDC2353510200291E4D /* happy_red_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_red_2.json; sourceTree = "<group>"; };
+		CA652CDD2353510200291E4D /* sad_red_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_red_1.json; sourceTree = "<group>"; };
+		CA652CDE2353510200291E4D /* sad_green_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_green_1.json; sourceTree = "<group>"; };
+		CA652CDF2353510200291E4D /* sad_green_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_green_2.json; sourceTree = "<group>"; };
+		CA652CE02353510200291E4D /* main_green.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main_green.json; sourceTree = "<group>"; };
+		CA652CE12353510300291E4D /* happy_green_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_green_2.json; sourceTree = "<group>"; };
+		CA652CE22353510300291E4D /* sad_red_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_red_2.json; sourceTree = "<group>"; };
+		CA652CE32353510300291E4D /* main_red.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main_red.json; sourceTree = "<group>"; };
+		CA652CE42353510300291E4D /* happy_red_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_red_1.json; sourceTree = "<group>"; };
 		CA6CB8D42196F6B700429089 /* SubscriptionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCommand.swift; sourceTree = "<group>"; };
 		CA6CB8D62196F7C300429089 /* PurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
 		CA6F0C8E2158C3E90031C135 /* EditChildCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChildCommand.swift; sourceTree = "<group>"; };
@@ -2056,6 +2076,16 @@
 		CA7197192340ECAB005A729A /* ColorsGame */ = {
 			isa = PBXGroup;
 			children = (
+				CA652CDB2353510200291E4D /* happy_green_1.json */,
+				CA652CE12353510300291E4D /* happy_green_2.json */,
+				CA652CE42353510300291E4D /* happy_red_1.json */,
+				CA652CDC2353510200291E4D /* happy_red_2.json */,
+				CA652CE02353510200291E4D /* main_green.json */,
+				CA652CE32353510300291E4D /* main_red.json */,
+				CA652CDE2353510200291E4D /* sad_green_1.json */,
+				CA652CDF2353510200291E4D /* sad_green_2.json */,
+				CA652CDD2353510200291E4D /* sad_red_1.json */,
+				CA652CE22353510300291E4D /* sad_red_2.json */,
 				CA71971A2340ECAB005A729A /* brushAnimation.json */,
 			);
 			name = ColorsGame;
@@ -3318,11 +3348,14 @@
 				CA04863C22A845A60017B8A2 /* Round_8.json in Resources */,
 				CA5100ED22F6EACF00821C25 /* alphavite_12.wav in Resources */,
 				CA56D0C62302A424006298C5 /* ariblk.ttf in Resources */,
+				CA652CE72353510300291E4D /* sad_red_1.json in Resources */,
 				CAF9620B22995FF3006E3046 /* animal_47.mp3 in Resources */,
 				CA5100A622F6EACF00821C25 /* alphavite_3_word_1.wav in Resources */,
 				CAD21040231700DC006F2F08 /* MontserratAlternates-SemiBold.ttf in Resources */,
 				CA52F372223DA1360058194E /* PlaylistCollectionViewCell.xib in Resources */,
+				CA652CEC2353510300291E4D /* sad_red_2.json in Resources */,
 				CAD21044231700DC006F2F08 /* MontserratAlternates-ExtraBoldItalic.ttf in Resources */,
+				CA652CEE2353510300291E4D /* happy_red_1.json in Resources */,
 				CAF9620122995FF3006E3046 /* animal_23.mp3 in Resources */,
 				CAF961CD22995FF3006E3046 /* animal_11.mp3 in Resources */,
 				CAC6F71E22A81BC000756AE2 /* click_button_2.mp3 in Resources */,
@@ -3357,7 +3390,9 @@
 				CA5100F722F6EACF00821C25 /* alphavite_18_word_1.wav in Resources */,
 				CA4C28CF2147DFDB00CA264D /* Color.json in Resources */,
 				CA5CB164213F0957000CB3D5 /* flip.json in Resources */,
+				CA652CE82353510300291E4D /* sad_green_1.json in Resources */,
 				CA5100EC22F6EACF00821C25 /* alphavite_10_word_1.wav in Resources */,
+				CA652CE52353510300291E4D /* happy_green_1.json in Resources */,
 				CAD2105523170C69006F2F08 /* alphabetButton.wav in Resources */,
 				CAF961C322995FF3006E3046 /* animal_38.mp3 in Resources */,
 				CAF961E722995FF3006E3046 /* animal_27.mp3 in Resources */,
@@ -3368,6 +3403,7 @@
 				CAF961D622995FF3006E3046 /* animal_28.mp3 in Resources */,
 				CAA4455721578FC50023E340 /* AvatarCollectionViewCell.xib in Resources */,
 				CAF9620C22995FF3006E3046 /* animal_43.mp3 in Resources */,
+				CA652CE92353510300291E4D /* sad_green_2.json in Resources */,
 				CA5100D322F6EACF00821C25 /* alphavite_11_word_2.wav in Resources */,
 				CAF961F322995FF3006E3046 /* animal_30.mp3 in Resources */,
 				CAC2D4EC2114D2E100945003 /* Assets.xcassets in Resources */,
@@ -3403,6 +3439,7 @@
 				CAF9621022995FF3006E3046 /* animal_41.mp3 in Resources */,
 				CAD16DE92147E29400A82DBB /* Candy.json in Resources */,
 				CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */,
+				CA652CEB2353510300291E4D /* happy_green_2.json in Resources */,
 				CA5100B622F6EACF00821C25 /* alphavite_1_2.wav in Resources */,
 				CA5100D522F6EACF00821C25 /* alphavite_4_word_1.wav in Resources */,
 				CAE6792D23511A0C00CBCDB3 /* ColorsGameStatView.xib in Resources */,
@@ -3459,6 +3496,7 @@
 				CA61D875229AD7E700E3D603 /* AnimalCollectionViewCell.xib in Resources */,
 				CA5100E222F6EACF00821C25 /* alphavite_4.wav in Resources */,
 				CA5100AD22F6EACF00821C25 /* alphavite_3_word_2.wav in Resources */,
+				CA652CE62353510300291E4D /* happy_red_2.json in Resources */,
 				CAC6F72922A81BC000756AE2 /* fun_1.wav in Resources */,
 				CAF961D922995FF3006E3046 /* animal_8.mp3 in Resources */,
 				CAD2105423170C69006F2F08 /* pickDriveTo.wav in Resources */,
@@ -3469,6 +3507,7 @@
 				CA5100CF22F6EACF00821C25 /* alphavite_11_word_1.wav in Resources */,
 				CA04864222A845A60017B8A2 /* Round_2.json in Resources */,
 				CA992D38212FF218008BFC8D /* Play.storyboard in Resources */,
+				CA652CED2353510300291E4D /* main_red.json in Resources */,
 				CA5100E022F6EACF00821C25 /* alphavite_2_word_1.wav in Resources */,
 				CAD2102C2315BAD0006F2F08 /* IstokWeb-Bold.ttf in Resources */,
 				11CF6B8D232A071A00F8E529 /* monsterCloseCards.wav in Resources */,
@@ -3536,6 +3575,7 @@
 				CA04864122A845A60017B8A2 /* Round_4.json in Resources */,
 				CA52DF282290701500458EE5 /* Animals.storyboard in Resources */,
 				CAF961FC22995FF3006E3046 /* animal_3.mp3 in Resources */,
+				CA652CEA2353510300291E4D /* main_green.json in Resources */,
 				CA04864322A845A60017B8A2 /* Round_7.json in Resources */,
 				11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */,
 				CAD21048231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */,

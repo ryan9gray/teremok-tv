@@ -89,6 +89,21 @@ enum ColorsMaster {
         Colors.blue: ["animal_15", "animal_16"],
         Colors.violet: ["animal_17", "animal_18"]
     ]
+
+    enum RedAnimation: String {
+        case main = "main_red"
+        case happy = "happy_red_1"
+        case happyTwo = "happy_red_2"
+        case sad = "sad_red_1"
+        case sadTwo = "sad_red_2"
+    }
+    enum GreenAnimation: String {
+        case main = "main_green"
+        case happy = "happy_green_1"
+        case happyTwo = "happy_green_2"
+        case sad = "sad_green_1"
+        case sadTwo = "sad_green_2"
+    }
 }
 
 extension ColorsMaster.Colors {

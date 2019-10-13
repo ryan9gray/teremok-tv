@@ -71,8 +71,13 @@ class ColorsGameFlow  {
 
 
     private func nextRound() {
-        
+        if game.round == 1, !(Profile.current?.premiumGame ?? false) {
+            buyAlert()
+            return
+        }
+        randomRound()
     }
+
     func repeatRound() {
         startTraining()
     }
@@ -99,6 +104,32 @@ class ColorsGameFlow  {
         master?.router?.popChild()
     }
 
+    private func showIntroduce() {
+        let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
+        controller.video = .alphavite
+        master?.router?.introduceController(viewController: controller, completion: { finish in
+            LocalStore.alphaviteIntroduce = finish
+            self.startFlow()
+        })
+    }
+
+    private func authAlert() {
+        master?.presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегистрироваться") { [weak self] in
+            self?.master?.openAutorization()
+        }
+    }
+
+    private func buyAlert() {
+        let vc = CloudAlertViewController.instantiate(fromStoryboard: .alerts)
+        let text = Main.Messages.buyGames
+        vc.model = AlertModel(title: "", subtitle: text, buttonTitle: "В настройки")
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.complition = { [weak self] in
+            self?.master?.openSettings()
+        }
+        master?.presentAlertModally(alertController: vc)
+    }
     class Game {
         var currentColors = Set(ColorsMaster.Colors.allValues())
         var roundColors: [ColorsMaster.Colors] = []

@@ -276,7 +276,7 @@ class AlphaviteChoiceViewController: GameViewController {
             guard let self = self else { return }
 
             self.pickPlayer?.stop()
-            self.pickReaction(isHappy: self.cheack(answer: side), complition: { _ in
+            self.pickReaction(isHappy: self.cheack(answer: side), completion: { _ in
                 self.hidePick(side: side, completion: completion)
             })
         })
@@ -310,7 +310,7 @@ class AlphaviteChoiceViewController: GameViewController {
         })
     }
 
-    private func pickReaction(isHappy: Bool, complition: @escaping (Bool) -> Void) {
+    private func pickReaction(isHappy: Bool, completion: @escaping (Bool) -> Void) {
         if isHappy {
             playSounds(AlphaviteMaster.Sound.jump.url)
         }
@@ -318,7 +318,7 @@ class AlphaviteChoiceViewController: GameViewController {
         pickAnimationView.animation = Animation.named(namePick.rawValue)
         pickAnimationView.loopMode = .playOnce
         pickAnimationView.animationSpeed = 1.5
-        pickAnimationView.play(completion: complition)
+        pickAnimationView.play(completion: completion)
 
         let nameCloud: AlphaviteMaster.CloudAnimations = isHappy
             ? (Bool.random() ? .happyTwo : .happyOne)

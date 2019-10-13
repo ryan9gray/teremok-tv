@@ -23,6 +23,8 @@ class ColorsChoiceViewController: GameViewController {
     @IBOutlet private var stackView: UIStackView!
     private let gameHelper = AlphabetGameHelper()
     private var audioPlayer: AVAudioPlayer?
+    @IBOutlet private var redMonsterView: UIView!
+    @IBOutlet private var greenMonsterView: UIView!
 
     var input: Input!
     var output: Output!
@@ -83,7 +85,7 @@ class ColorsChoiceViewController: GameViewController {
         if input.isHard {
             pointsView.gradientColors = Style.Gradients.orange.value
         }
-
+        setAnimation()
         nextColor()
     }
 
@@ -174,7 +176,7 @@ class ColorsChoiceViewController: GameViewController {
                 }
                 self.stackView.layoutIfNeeded()
         }) { _ in
-            self.animateMonsters(side: answer) { _ in
+            self.monstersReaction(isHappy: self.isRight) { _ in
                 self.nextColor()
             }
         }
@@ -182,10 +184,29 @@ class ColorsChoiceViewController: GameViewController {
         //output.result(AlphaviteMaster.Statistic(char: currentChar, seconds: Int(seconds), isRight: isRight))
     }
 
-    private func animateMonsters(side: GameModel.Option, completion: @escaping (Bool) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
-            completion(true)
+    private func monstersReaction(isHappy: Bool, completion: @escaping (Bool) -> Void) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+//            completion(true)
+//        }
+
+        let namePick: ColorsMaster.GreenAnimation = isHappy
+            ? (Bool.random() ? .happy : .happyTwo)
+            : (Bool.random() ? .sad : .sadTwo)
+        greenAnimationView.animation = Animation.named(namePick.rawValue)
+        greenAnimationView.loopMode = .playOnce
+        greenAnimationView.animationSpeed = 1.5
+        greenAnimationView.play(completion: completion)
+
+        let redAnimation: ColorsMaster.RedAnimation = isHappy
+            ? (Bool.random() ? .happy : .happyTwo)
+            : (Bool.random() ? .sad : .sadTwo)
+        redAnimationView.animation = Animation.named(redAnimation.rawValue)
+        redAnimationView.loopMode = .playOnce
+        redAnimationView.animationSpeed = 1.5
+        redAnimationView.play { _ in
+            self.setMainAnimation()
         }
+
     }
 
     private func reset() {
@@ -198,6 +219,41 @@ class ColorsChoiceViewController: GameViewController {
 
     private func cheack(answer: GameModel.Option) -> Bool {
         return right == answer
+    }
+
+    private var greenAnimationView: AnimationView = AnimationView()
+    private var redAnimationView: AnimationView = AnimationView()
+
+    private func setAnimation() {
+        let namePick = ColorsMaster.GreenAnimation.main.rawValue
+        greenAnimationView = AnimationView(name: namePick)
+        greenAnimationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        greenAnimationView.contentMode = .scaleAspectFit
+        greenAnimationView.loopMode = .loop
+        greenAnimationView.animationSpeed = 1.0
+        greenAnimationView.frame = greenMonsterView.bounds
+        greenMonsterView.addSubview(greenAnimationView)
+
+        let nameCloud = ColorsMaster.RedAnimation.main.rawValue
+        redAnimationView = AnimationView(name: nameCloud)
+        redAnimationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        redAnimationView.contentMode = .scaleAspectFit
+        redAnimationView.frame = redMonsterView.bounds
+        redMonsterView.addSubview(redAnimationView)
+
+        setMainAnimation()
+    }
+
+    private func setMainAnimation() {
+        redAnimationView.animation = Animation.named(ColorsMaster.RedAnimation.main.rawValue)
+        redAnimationView.loopMode = .loop
+        redAnimationView.animationSpeed = 1.0
+        redAnimationView.play()
+
+        greenAnimationView.animation = Animation.named(ColorsMaster.GreenAnimation.main.rawValue)
+        greenAnimationView.loopMode = .loop
+        greenAnimationView.animationSpeed = 1.0
+        greenAnimationView.play()
     }
 
     private func fireTimer() {
