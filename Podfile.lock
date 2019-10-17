@@ -73,7 +73,6 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - ObjectMapper (3.5.1)
-  - Reveal-SDK (24)
   - Spring (1.0.6)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
@@ -93,14 +92,13 @@ DEPENDENCIES:
   - lottie-ios
   - M13Checkbox
   - ObjectMapper
-  - Reveal-SDK
   - Spring (from `https://github.com/MengTo/Spring.git`)
   - SQLite.swift
   - SwiftyJSON
   - SwiftyStoreKit
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - AlamofireImage
     - Crashlytics
@@ -122,7 +120,6 @@ SPEC REPOS:
     - M13Checkbox
     - nanopb
     - ObjectMapper
-    - Reveal-SDK
     - SQLite.swift
     - SwiftyJSON
     - SwiftyStoreKit
@@ -158,12 +155,11 @@ SPEC CHECKSUMS:
   M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
-  Reveal-SDK: 5d7e56b8f018c0a88b3a2c10bf68d598bbd3b071
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
 
-PODFILE CHECKSUM: 3a7ea0ecfe8e14fef56f21fb08f402421c5125d6
+PODFILE CHECKSUM: e47377951bc174d49f5ecfdd952bdcc9646887c6
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.8.4

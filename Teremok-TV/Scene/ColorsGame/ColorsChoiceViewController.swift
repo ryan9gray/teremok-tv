@@ -225,8 +225,8 @@ class ColorsChoiceViewController: GameViewController {
     private var redAnimationView: AnimationView = AnimationView()
 
     private func setAnimation() {
-        let namePick = ColorsMaster.GreenAnimation.main.rawValue
-        greenAnimationView = AnimationView(name: namePick)
+        let greenName = ColorsMaster.GreenAnimation.main.rawValue
+        greenAnimationView = AnimationView(name: greenName)
         greenAnimationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         greenAnimationView.contentMode = .scaleAspectFit
         greenAnimationView.loopMode = .loop
@@ -234,8 +234,8 @@ class ColorsChoiceViewController: GameViewController {
         greenAnimationView.frame = greenMonsterView.bounds
         greenMonsterView.addSubview(greenAnimationView)
 
-        let nameCloud = ColorsMaster.RedAnimation.main.rawValue
-        redAnimationView = AnimationView(name: nameCloud)
+        let redName = ColorsMaster.RedAnimation.main.rawValue
+        redAnimationView = AnimationView(name: redName)
         redAnimationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         redAnimationView.contentMode = .scaleAspectFit
         redAnimationView.frame = redMonsterView.bounds

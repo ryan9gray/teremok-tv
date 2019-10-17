@@ -3193,6 +3193,7 @@
 				3791F6C709284A28AF0D8A1B /* [CP] Embed Pods Frameworks */,
 				CA51010522FB478E00821C25 /* Fabric */,
 				CAAAFB6A22E3549B0006BD60 /* Embed Frameworks */,
+				CAE9037A2358E087006E73B4 /* Reveal */,
 			);
 			buildRules = (
 			);
@@ -3645,6 +3646,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" cd5f653f2ce23b8699ba88154c0747e64765b937 d28af70431e924f1f151ba2aeb75e8c6370cf738cbde07f6b05006cfc7255098\n";
+		};
+		CAE9037A2358E087006E73B4 /* Reveal */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Reveal;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nREVEAL_APP_PATH=$(mdfind kMDItemCFBundleIdentifier=\"com.ittybittyapps.Reveal2\" | head -n 1)\nBUILD_SCRIPT_PATH=\"${REVEAL_APP_PATH}/Contents/SharedSupport/Scripts/reveal_server_build_phase.sh\"\nif [ \"${REVEAL_APP_PATH}\" -a -e \"${BUILD_SCRIPT_PATH}\" ]; then\n    \"${BUILD_SCRIPT_PATH}\"\nelse\n    echo \"Reveal Server not loaded: Cannot find a compatible Reveal app.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
