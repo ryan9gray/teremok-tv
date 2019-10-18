@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 class GamesListViewController: AbstracViewController {
     var output: Output!
@@ -17,7 +18,8 @@ class GamesListViewController: AbstracViewController {
         var openMonster: () -> Void
         var openColors: () -> Void
     }
-
+    @IBOutlet var buttons: [DesignableButton]!
+    
     @IBOutlet private var titleLabel: StrokeLabel!
     @IBOutlet private var homeBtn: KeyButton!
 
@@ -59,4 +61,9 @@ class GamesListViewController: AbstracViewController {
         titleLabel.gradientColors = Style.Gradients.blue.value
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        buttons.forEach { $0.animate() }
+    }
 }

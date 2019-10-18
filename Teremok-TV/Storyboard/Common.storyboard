@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -265,7 +265,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="delay">
                                                         <real key="value" value="0.20000000000000001"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="force">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -282,7 +282,6 @@
                                                 <state key="normal" image="ic-animalgame"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="force">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -310,7 +309,6 @@
                                                 <state key="normal" image="ic-monsterGame"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="force">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -333,7 +331,6 @@
                                                 <state key="normal" image="icColorsGame"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="force">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -372,6 +369,10 @@
                     <connections>
                         <outlet property="homeBtn" destination="P5E-ex-N9F" id="4gs-qN-A6S"/>
                         <outlet property="titleLabel" destination="e87-rn-cs2" id="bA3-M4-tKY"/>
+                        <outletCollection property="buttons" destination="Io8-Rk-iyX" collectionClass="NSMutableArray" id="bTo-ry-948"/>
+                        <outletCollection property="buttons" destination="X8b-ps-329" collectionClass="NSMutableArray" id="cfV-DA-SLc"/>
+                        <outletCollection property="buttons" destination="6Lw-K8-tJz" collectionClass="NSMutableArray" id="wnf-z7-Lkd"/>
+                        <outletCollection property="buttons" destination="L6d-07-4Xw" collectionClass="NSMutableArray" id="piM-VN-AX5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uk0-KN-ZMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -382,7 +383,7 @@
     <resources>
         <image name="ic-alphHome" width="31" height="29"/>
         <image name="ic-alphavite" width="164" height="144"/>
-        <image name="ic-alphavitePlay" width="68" height="73"/>
+        <image name="ic-alphavitePlay" width="70" height="80"/>
         <image name="ic-animalgame" width="164" height="144"/>
         <image name="ic-gamesBack" width="667" height="375"/>
         <image name="ic-monsterGame" width="164" height="144"/>
