@@ -8,7 +8,7 @@
 import StoreKit
 import SwiftyStoreKit
 
-enum RegisteredPurchase : String {
+enum RegisteredPurchase : String, CaseIterable {
     case game = "fullSubs"
     case music = "VandM"
     case video = "month"

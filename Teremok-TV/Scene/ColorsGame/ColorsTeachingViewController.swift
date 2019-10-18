@@ -45,9 +45,11 @@ class ColorsTeachingViewController: GameViewController {
         start()
     }
 
+    var needPlay = true
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
+        needPlay = false
         audioPlayer?.stop()
     }
 
@@ -74,12 +76,9 @@ class ColorsTeachingViewController: GameViewController {
             }
         )
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+        playSounds(color.soundUrl) { [weak self] in
             self?.nextImage(color)
         }
-//        playSounds(gameHelper.getSounds(name: name)) { [weak self] in
-//            self?.nextImage(color)
-//        }
     }
 
     private func nextImage(_ color: ColorsMaster.Colors) {
@@ -98,13 +97,10 @@ class ColorsTeachingViewController: GameViewController {
 
             imageContainer.image = UIImage(named: word)
             animateImage()
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            
+            playSounds(gameHelper.getSounds(name: word)) {
                 getWord()
             }
-//            playSounds(gameHelper.getSounds(name: word)) {
-//                getWord()
-//            }
         }
         getWord()
     }
@@ -114,6 +110,8 @@ class ColorsTeachingViewController: GameViewController {
     }
 
     func playSounds(_ url: URL, completion: @escaping () -> Void) {
+        guard needPlay else { return }
+        
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
         } catch {

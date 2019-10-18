@@ -13,20 +13,20 @@ class OnDemandLoader {
 
     enum Tags {
 
-        enum OnDemand: String {
+        enum OnDemand: String, CaseIterable {
             case introduceAlphabet = "IntroduceAlphabet"
             case introduceAnimals = "IntroduceAnimals"
             case introduceMonsters = "IntroduceMonsters"
         }
 
-        enum Prefetch: String {
+        enum Prefetch: String, CaseIterable {
             case alphabetSounds = "AlphabetSounds"
             case alphabetImages = "AlphabetImages"
             case animalsImage = "AnimalsImage"
             case animalsSounds = "AnimalsSounds"
             case monstersImage = "MonstersImage"
         }
-        enum Initial: String {
+        enum Initial: String, CaseIterable {
             case onBoarding = "OnBoarding"
         }
     }
@@ -34,7 +34,7 @@ class OnDemandLoader {
     lazy private var bundleResourceRequest = NSBundleResourceRequest(tags: Set(getTags + introducongGames))
 
     private var getTags: [String] {
-        return Tags.Prefetch.allValues().map { $0.rawValue }
+        return Tags.Prefetch.allCases.map { $0.rawValue }
     }
 
     func loadOnDemandAssets(completion: @escaping (Result<Bool>) -> Void) {

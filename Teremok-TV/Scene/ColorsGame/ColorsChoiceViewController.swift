@@ -108,7 +108,7 @@ class ColorsChoiceViewController: GameViewController {
         }
         input.colors.removeValue(forKey: color.key)
         displayChoice(color: color.value, wrong: gameHelper.randomColor(from: color.value), image: UIImage(named: color.key))
-        playSounds(gameHelper.getSounds(name: color.value.sound))
+        playSounds(color.value.soundUrl)
     }
 
     private func displayChoice(color: ColorsMaster.Colors, wrong: ColorsMaster.Colors, image: UIImage?) {
@@ -151,10 +151,10 @@ class ColorsChoiceViewController: GameViewController {
         if isRight {
             view.setState(.access)
             points += 1
-            playSounds(AlphaviteMaster.Sound.rightAnswer.url)
+            playSounds(ColorsMaster.EmotionalsHappy.allCases.randomElement()!.url)
         } else {
             view.setState(.fail)
-            playSounds(AlphaviteMaster.Sound.wrongAnswer.url)
+            playSounds(ColorsMaster.EmotionalsSad.allCases.randomElement()!.url)
         }
         imageView.image = currentImage
         imageContainer.borderColor = isRight ? UIColor.Alphavite.greenTwo : UIColor.Alphavite.redTwo
@@ -185,16 +185,12 @@ class ColorsChoiceViewController: GameViewController {
     }
 
     private func monstersReaction(isHappy: Bool, completion: @escaping (Bool) -> Void) {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
-//            completion(true)
-//        }
-
         let namePick: ColorsMaster.GreenAnimation = isHappy
             ? (Bool.random() ? .happy : .happyTwo)
             : (Bool.random() ? .sad : .sadTwo)
         greenAnimationView.animation = Animation.named(namePick.rawValue)
         greenAnimationView.loopMode = .playOnce
-        greenAnimationView.animationSpeed = 1.5
+        greenAnimationView.animationSpeed = 1
         greenAnimationView.play(completion: completion)
 
         let redAnimation: ColorsMaster.RedAnimation = isHappy
@@ -202,7 +198,7 @@ class ColorsChoiceViewController: GameViewController {
             : (Bool.random() ? .sad : .sadTwo)
         redAnimationView.animation = Animation.named(redAnimation.rawValue)
         redAnimationView.loopMode = .playOnce
-        redAnimationView.animationSpeed = 1.5
+        redAnimationView.animationSpeed = 1
         redAnimationView.play { _ in
             self.setMainAnimation()
         }

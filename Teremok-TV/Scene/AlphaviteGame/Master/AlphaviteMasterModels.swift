@@ -44,9 +44,8 @@ enum AlphaviteMaster {
         case jump = "alphabetJump"
 
         var url: URL {
-            return URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
+            URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
         }
-
     }
 
     struct Statistic {
@@ -55,8 +54,7 @@ enum AlphaviteMaster {
         let isRight: Bool
 
         func maping() -> AlphaviteStatistic {
-            let mapa = AlphaviteStatistic.init(char: char, seconds: seconds, isRight: isRight)
-            return mapa
+            AlphaviteStatistic(char: char, seconds: seconds, isRight: isRight)
         }
     }
 

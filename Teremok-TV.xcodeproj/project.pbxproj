@@ -36,6 +36,56 @@
 		11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8C232A071A00F8E529 /* monsterRight.wav */; };
 		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceMonsters, ); }; };
 		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
+		251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */; };
+		251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */; };
+		251E516D235A579000221BA2 /* ColorsGame_subject_10_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */; };
+		251E516E235A579000221BA2 /* ColorsGame_subject_8_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513F235A578F00221BA2 /* ColorsGame_subject_8_1.wav */; };
+		251E516F235A579000221BA2 /* ColorsGame_color_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5140235A578F00221BA2 /* ColorsGame_color_6.wav */; };
+		251E5170235A579000221BA2 /* ColorsGame_color_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5141235A578F00221BA2 /* ColorsGame_color_7.wav */; };
+		251E5171235A579000221BA2 /* ColorsGame_subject_8_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5142235A578F00221BA2 /* ColorsGame_subject_8_2.wav */; };
+		251E5172235A579000221BA2 /* ColorsGame_color_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5143235A578F00221BA2 /* ColorsGame_color_5.wav */; };
+		251E5173235A579000221BA2 /* ColorsGame_color_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5144235A578F00221BA2 /* ColorsGame_color_4.wav */; };
+		251E5174235A579000221BA2 /* ColorsGame_subject_8_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5145235A578F00221BA2 /* ColorsGame_subject_8_3.wav */; };
+		251E5175235A579000221BA2 /* ColorsGame_color_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5146235A578F00221BA2 /* ColorsGame_color_1.wav */; };
+		251E5176235A579000221BA2 /* ColorsGame_color_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5147235A578F00221BA2 /* ColorsGame_color_3.wav */; };
+		251E5177235A579000221BA2 /* ColorsGame_color_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5148235A578F00221BA2 /* ColorsGame_color_2.wav */; };
+		251E5178235A579000221BA2 /* ColorsGame_subject_2_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5149235A578F00221BA2 /* ColorsGame_subject_2_3.wav */; };
+		251E5179235A579000221BA2 /* ColorsGame_color_10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514A235A578F00221BA2 /* ColorsGame_color_10.wav */; };
+		251E517A235A579000221BA2 /* ColorsGame_subject_2_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514B235A578F00221BA2 /* ColorsGame_subject_2_2.wav */; };
+		251E517B235A579000221BA2 /* ColorsGame_subject_2_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514C235A578F00221BA2 /* ColorsGame_subject_2_1.wav */; };
+		251E517C235A579000221BA2 /* ColorsGame_subject_6_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514D235A578F00221BA2 /* ColorsGame_subject_6_1.wav */; };
+		251E517D235A579000221BA2 /* ColorsGame_subject_4_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514E235A578F00221BA2 /* ColorsGame_subject_4_3.wav */; };
+		251E517E235A579000221BA2 /* ColorsGame_color_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514F235A578F00221BA2 /* ColorsGame_color_8.wav */; };
+		251E517F235A579000221BA2 /* ColorsGame_subject_4_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5150235A578F00221BA2 /* ColorsGame_subject_4_2.wav */; };
+		251E5180235A579000221BA2 /* ColorsGame_subject_6_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5151235A578F00221BA2 /* ColorsGame_subject_6_2.wav */; };
+		251E5181235A579000221BA2 /* ColorsGame_subject_4_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5152235A578F00221BA2 /* ColorsGame_subject_4_1.wav */; };
+		251E5182235A579000221BA2 /* ColorsGame_subject_6_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5153235A578F00221BA2 /* ColorsGame_subject_6_3.wav */; };
+		251E5183235A579000221BA2 /* ColorsGame_subject_1_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5154235A578F00221BA2 /* ColorsGame_subject_1_2.wav */; };
+		251E5184235A579000221BA2 /* ColorsGame_subject_3_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5155235A579000221BA2 /* ColorsGame_subject_3_1.wav */; };
+		251E5185235A579000221BA2 /* ColorsGame_subject_1_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5156235A579000221BA2 /* ColorsGame_subject_1_3.wav */; };
+		251E5186235A579000221BA2 /* ColorsGame_subject_1_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5157235A579000221BA2 /* ColorsGame_subject_1_1.wav */; };
+		251E5187235A579000221BA2 /* ColorsGame_subject_3_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5158235A579000221BA2 /* ColorsGame_subject_3_3.wav */; };
+		251E5188235A579000221BA2 /* ColorsGame_subject_3_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5159235A579000221BA2 /* ColorsGame_subject_3_2.wav */; };
+		251E5189235A579000221BA2 /* ColorsGame_subject_7_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515A235A579000221BA2 /* ColorsGame_subject_7_2.wav */; };
+		251E518A235A579000221BA2 /* ColorsGame_subject_7_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515B235A579000221BA2 /* ColorsGame_subject_7_3.wav */; };
+		251E518B235A579000221BA2 /* ColorsGame_subject_5_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515C235A579000221BA2 /* ColorsGame_subject_5_1.wav */; };
+		251E518C235A579000221BA2 /* ColorsGame_subject_5_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515D235A579000221BA2 /* ColorsGame_subject_5_3.wav */; };
+		251E518D235A579000221BA2 /* ColorsGame_subject_7_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515E235A579000221BA2 /* ColorsGame_subject_7_1.wav */; };
+		251E518E235A579000221BA2 /* ColorsGame_subject_5_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515F235A579000221BA2 /* ColorsGame_subject_5_2.wav */; };
+		251E518F235A579000221BA2 /* ColorsGame_sad_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5161235A579000221BA2 /* ColorsGame_sad_3.wav */; };
+		251E5190235A579100221BA2 /* ColorsGame_sad_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5162235A579000221BA2 /* ColorsGame_sad_2.wav */; };
+		251E5191235A579100221BA2 /* ColorsGame_sad_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5163235A579000221BA2 /* ColorsGame_sad_1.wav */; };
+		251E5192235A579100221BA2 /* ColorsGame_sad_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5164235A579000221BA2 /* ColorsGame_sad_4.wav */; };
+		251E5193235A579100221BA2 /* ColorsGame_fun_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5165235A579000221BA2 /* ColorsGame_fun_1.wav */; };
+		251E5194235A579100221BA2 /* ColorsGame_fun_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5166235A579000221BA2 /* ColorsGame_fun_3.wav */; };
+		251E5195235A579100221BA2 /* ColorsGame_fun_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5167235A579000221BA2 /* ColorsGame_fun_2.wav */; };
+		251E5196235A579100221BA2 /* ColorsGame_fun_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5168235A579000221BA2 /* ColorsGame_fun_6.wav */; };
+		251E5197235A579100221BA2 /* ColorsGame_fun_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5169235A579000221BA2 /* ColorsGame_fun_5.wav */; };
+		251E5198235A579100221BA2 /* ColorsGame_fun_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E516A235A579000221BA2 /* ColorsGame_fun_4.wav */; };
+		251E519A235A583C00221BA2 /* ColorsGame_color_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5199235A583C00221BA2 /* ColorsGame_color_9.wav */; };
+		251E519E235A624A00221BA2 /* ColorsGame_subject_9_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519B235A624900221BA2 /* ColorsGame_subject_9_3.wav */; };
+		251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */; };
+		251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
 		CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */; };
@@ -787,6 +837,56 @@
 		11CF6B8C232A071A00F8E529 /* monsterRight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterRight.wav; sourceTree = "<group>"; };
 		11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = monster_game_introduce.mp4; sourceTree = "<group>"; };
 		11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameResultsViewController.swift; sourceTree = "<group>"; };
+		251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_1.wav; sourceTree = "<group>"; };
+		251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_2.wav; sourceTree = "<group>"; };
+		251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_3.wav; sourceTree = "<group>"; };
+		251E513F235A578F00221BA2 /* ColorsGame_subject_8_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_8_1.wav; sourceTree = "<group>"; };
+		251E5140235A578F00221BA2 /* ColorsGame_color_6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_6.wav; sourceTree = "<group>"; };
+		251E5141235A578F00221BA2 /* ColorsGame_color_7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_7.wav; sourceTree = "<group>"; };
+		251E5142235A578F00221BA2 /* ColorsGame_subject_8_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_8_2.wav; sourceTree = "<group>"; };
+		251E5143235A578F00221BA2 /* ColorsGame_color_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_5.wav; sourceTree = "<group>"; };
+		251E5144235A578F00221BA2 /* ColorsGame_color_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_4.wav; sourceTree = "<group>"; };
+		251E5145235A578F00221BA2 /* ColorsGame_subject_8_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_8_3.wav; sourceTree = "<group>"; };
+		251E5146235A578F00221BA2 /* ColorsGame_color_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_1.wav; sourceTree = "<group>"; };
+		251E5147235A578F00221BA2 /* ColorsGame_color_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_3.wav; sourceTree = "<group>"; };
+		251E5148235A578F00221BA2 /* ColorsGame_color_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_2.wav; sourceTree = "<group>"; };
+		251E5149235A578F00221BA2 /* ColorsGame_subject_2_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_2_3.wav; sourceTree = "<group>"; };
+		251E514A235A578F00221BA2 /* ColorsGame_color_10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_10.wav; sourceTree = "<group>"; };
+		251E514B235A578F00221BA2 /* ColorsGame_subject_2_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_2_2.wav; sourceTree = "<group>"; };
+		251E514C235A578F00221BA2 /* ColorsGame_subject_2_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_2_1.wav; sourceTree = "<group>"; };
+		251E514D235A578F00221BA2 /* ColorsGame_subject_6_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_6_1.wav; sourceTree = "<group>"; };
+		251E514E235A578F00221BA2 /* ColorsGame_subject_4_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_4_3.wav; sourceTree = "<group>"; };
+		251E514F235A578F00221BA2 /* ColorsGame_color_8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_8.wav; sourceTree = "<group>"; };
+		251E5150235A578F00221BA2 /* ColorsGame_subject_4_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_4_2.wav; sourceTree = "<group>"; };
+		251E5151235A578F00221BA2 /* ColorsGame_subject_6_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_6_2.wav; sourceTree = "<group>"; };
+		251E5152235A578F00221BA2 /* ColorsGame_subject_4_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_4_1.wav; sourceTree = "<group>"; };
+		251E5153235A578F00221BA2 /* ColorsGame_subject_6_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_6_3.wav; sourceTree = "<group>"; };
+		251E5154235A578F00221BA2 /* ColorsGame_subject_1_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_1_2.wav; sourceTree = "<group>"; };
+		251E5155235A579000221BA2 /* ColorsGame_subject_3_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_3_1.wav; sourceTree = "<group>"; };
+		251E5156235A579000221BA2 /* ColorsGame_subject_1_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_1_3.wav; sourceTree = "<group>"; };
+		251E5157235A579000221BA2 /* ColorsGame_subject_1_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_1_1.wav; sourceTree = "<group>"; };
+		251E5158235A579000221BA2 /* ColorsGame_subject_3_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_3_3.wav; sourceTree = "<group>"; };
+		251E5159235A579000221BA2 /* ColorsGame_subject_3_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_3_2.wav; sourceTree = "<group>"; };
+		251E515A235A579000221BA2 /* ColorsGame_subject_7_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_7_2.wav; sourceTree = "<group>"; };
+		251E515B235A579000221BA2 /* ColorsGame_subject_7_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_7_3.wav; sourceTree = "<group>"; };
+		251E515C235A579000221BA2 /* ColorsGame_subject_5_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_5_1.wav; sourceTree = "<group>"; };
+		251E515D235A579000221BA2 /* ColorsGame_subject_5_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_5_3.wav; sourceTree = "<group>"; };
+		251E515E235A579000221BA2 /* ColorsGame_subject_7_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_7_1.wav; sourceTree = "<group>"; };
+		251E515F235A579000221BA2 /* ColorsGame_subject_5_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_5_2.wav; sourceTree = "<group>"; };
+		251E5161235A579000221BA2 /* ColorsGame_sad_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_sad_3.wav; sourceTree = "<group>"; };
+		251E5162235A579000221BA2 /* ColorsGame_sad_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_sad_2.wav; sourceTree = "<group>"; };
+		251E5163235A579000221BA2 /* ColorsGame_sad_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_sad_1.wav; sourceTree = "<group>"; };
+		251E5164235A579000221BA2 /* ColorsGame_sad_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_sad_4.wav; sourceTree = "<group>"; };
+		251E5165235A579000221BA2 /* ColorsGame_fun_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_1.wav; sourceTree = "<group>"; };
+		251E5166235A579000221BA2 /* ColorsGame_fun_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_3.wav; sourceTree = "<group>"; };
+		251E5167235A579000221BA2 /* ColorsGame_fun_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_2.wav; sourceTree = "<group>"; };
+		251E5168235A579000221BA2 /* ColorsGame_fun_6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_6.wav; sourceTree = "<group>"; };
+		251E5169235A579000221BA2 /* ColorsGame_fun_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_5.wav; sourceTree = "<group>"; };
+		251E516A235A579000221BA2 /* ColorsGame_fun_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_4.wav; sourceTree = "<group>"; };
+		251E5199235A583C00221BA2 /* ColorsGame_color_9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_9.wav; sourceTree = "<group>"; };
+		251E519B235A624900221BA2 /* ColorsGame_subject_9_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_3.wav; sourceTree = "<group>"; };
+		251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_1.wav; sourceTree = "<group>"; };
+		251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_2.wav; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
@@ -1589,6 +1689,70 @@
 			path = sounds;
 			sourceTree = "<group>";
 		};
+		251E513B235A578F00221BA2 /* Sounds thing colour */ = {
+			isa = PBXGroup;
+			children = (
+				251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */,
+				251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */,
+				251E519B235A624900221BA2 /* ColorsGame_subject_9_3.wav */,
+				251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */,
+				251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */,
+				251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */,
+				251E5199235A583C00221BA2 /* ColorsGame_color_9.wav */,
+				251E513F235A578F00221BA2 /* ColorsGame_subject_8_1.wav */,
+				251E5140235A578F00221BA2 /* ColorsGame_color_6.wav */,
+				251E5141235A578F00221BA2 /* ColorsGame_color_7.wav */,
+				251E5142235A578F00221BA2 /* ColorsGame_subject_8_2.wav */,
+				251E5143235A578F00221BA2 /* ColorsGame_color_5.wav */,
+				251E5144235A578F00221BA2 /* ColorsGame_color_4.wav */,
+				251E5145235A578F00221BA2 /* ColorsGame_subject_8_3.wav */,
+				251E5146235A578F00221BA2 /* ColorsGame_color_1.wav */,
+				251E5147235A578F00221BA2 /* ColorsGame_color_3.wav */,
+				251E5148235A578F00221BA2 /* ColorsGame_color_2.wav */,
+				251E5149235A578F00221BA2 /* ColorsGame_subject_2_3.wav */,
+				251E514A235A578F00221BA2 /* ColorsGame_color_10.wav */,
+				251E514B235A578F00221BA2 /* ColorsGame_subject_2_2.wav */,
+				251E514C235A578F00221BA2 /* ColorsGame_subject_2_1.wav */,
+				251E514D235A578F00221BA2 /* ColorsGame_subject_6_1.wav */,
+				251E514E235A578F00221BA2 /* ColorsGame_subject_4_3.wav */,
+				251E514F235A578F00221BA2 /* ColorsGame_color_8.wav */,
+				251E5150235A578F00221BA2 /* ColorsGame_subject_4_2.wav */,
+				251E5151235A578F00221BA2 /* ColorsGame_subject_6_2.wav */,
+				251E5152235A578F00221BA2 /* ColorsGame_subject_4_1.wav */,
+				251E5153235A578F00221BA2 /* ColorsGame_subject_6_3.wav */,
+				251E5154235A578F00221BA2 /* ColorsGame_subject_1_2.wav */,
+				251E5155235A579000221BA2 /* ColorsGame_subject_3_1.wav */,
+				251E5156235A579000221BA2 /* ColorsGame_subject_1_3.wav */,
+				251E5157235A579000221BA2 /* ColorsGame_subject_1_1.wav */,
+				251E5158235A579000221BA2 /* ColorsGame_subject_3_3.wav */,
+				251E5159235A579000221BA2 /* ColorsGame_subject_3_2.wav */,
+				251E515A235A579000221BA2 /* ColorsGame_subject_7_2.wav */,
+				251E515B235A579000221BA2 /* ColorsGame_subject_7_3.wav */,
+				251E515C235A579000221BA2 /* ColorsGame_subject_5_1.wav */,
+				251E515D235A579000221BA2 /* ColorsGame_subject_5_3.wav */,
+				251E515E235A579000221BA2 /* ColorsGame_subject_7_1.wav */,
+				251E515F235A579000221BA2 /* ColorsGame_subject_5_2.wav */,
+			);
+			path = "Sounds thing colour";
+			sourceTree = "<group>";
+		};
+		251E5160235A579000221BA2 /* Emotions */ = {
+			isa = PBXGroup;
+			children = (
+				251E5161235A579000221BA2 /* ColorsGame_sad_3.wav */,
+				251E5162235A579000221BA2 /* ColorsGame_sad_2.wav */,
+				251E5163235A579000221BA2 /* ColorsGame_sad_1.wav */,
+				251E5164235A579000221BA2 /* ColorsGame_sad_4.wav */,
+				251E5165235A579000221BA2 /* ColorsGame_fun_1.wav */,
+				251E5166235A579000221BA2 /* ColorsGame_fun_3.wav */,
+				251E5167235A579000221BA2 /* ColorsGame_fun_2.wav */,
+				251E5168235A579000221BA2 /* ColorsGame_fun_6.wav */,
+				251E5169235A579000221BA2 /* ColorsGame_fun_5.wav */,
+				251E516A235A579000221BA2 /* ColorsGame_fun_4.wav */,
+			);
+			path = Emotions;
+			sourceTree = "<group>";
+		};
 		8BFE56BA8D2FDC0505E1093F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2076,6 +2240,8 @@
 		CA7197192340ECAB005A729A /* ColorsGame */ = {
 			isa = PBXGroup;
 			children = (
+				251E5160235A579000221BA2 /* Emotions */,
+				251E513B235A578F00221BA2 /* Sounds thing colour */,
 				CA652CDB2353510200291E4D /* happy_green_1.json */,
 				CA652CE12353510300291E4D /* happy_green_2.json */,
 				CA652CE42353510300291E4D /* happy_red_1.json */,
@@ -3288,6 +3454,7 @@
 				CAC6F71D22A81BC000756AE2 /* click_button_1.mp3 in Resources */,
 				CA5CB166213F095F000CB3D5 /* krya.json in Resources */,
 				CA5100E722F6EACF00821C25 /* alphavite_6.wav in Resources */,
+				251E5185235A579000221BA2 /* ColorsGame_subject_1_3.wav in Resources */,
 				CADD14B823107F7C00AE920A /* cloud_main.json in Resources */,
 				CA51E1C522FEC8C60028DF63 /* start_Pick.json in Resources */,
 				CA5100BE22F6EACF00821C25 /* alphavite_22.wav in Resources */,
@@ -3295,12 +3462,16 @@
 				CAD21047231700DC006F2F08 /* MontserratAlternates-Italic.ttf in Resources */,
 				CAF961F622995FF3006E3046 /* animal_34.mp3 in Resources */,
 				CA5100C322F6EACF00821C25 /* alphavite_23_word_2.wav in Resources */,
+				251E5195235A579100221BA2 /* ColorsGame_fun_2.wav in Resources */,
 				CA4C28C621451D9200CA264D /* VideoCollectionViewCell.xib in Resources */,
 				1163619B2303E456000D2C82 /* Monster.storyboard in Resources */,
 				CA992D36212FF1EF008BFC8D /* Auth.storyboard in Resources */,
+				251E517A235A579000221BA2 /* ColorsGame_subject_2_2.wav in Resources */,
+				251E517B235A579000221BA2 /* ColorsGame_subject_2_1.wav in Resources */,
 				CA5100D022F6EACF00821C25 /* alphavite_9_word_1.wav in Resources */,
 				CA5100C022F6EACF00821C25 /* alphavite_13_word_2.wav in Resources */,
 				CA763633226B53B200168AB1 /* downloadCover.png in Resources */,
+				251E519A235A583C00221BA2 /* ColorsGame_color_9.wav in Resources */,
 				CAC6F72D22A81BC000756AE2 /* sad_1.wav in Resources */,
 				CAF961CF22995FF3006E3046 /* animal_29.mp3 in Resources */,
 				CAF961C222995FF3006E3046 /* animal_10.mp3 in Resources */,
@@ -3308,6 +3479,7 @@
 				CA5100CC22F6EACF00821C25 /* alphavite_1_word_2.wav in Resources */,
 				CA5100AF22F6EACF00821C25 /* alphavite_24.wav in Resources */,
 				CA4C28D02147DFDB00CA264D /* music.json in Resources */,
+				251E5173235A579000221BA2 /* ColorsGame_color_4.wav in Resources */,
 				CAF961E222995FF3006E3046 /* animal_26.mp3 in Resources */,
 				CA0053C2213BD46900AA187F /* MainlCollectionViewCell.xib in Resources */,
 				CA04863B22A845A60017B8A2 /* Round_1.json in Resources */,
@@ -3318,7 +3490,9 @@
 				CA433FFA224FA8E700B0788E /* TrackCollectionViewCell.xib in Resources */,
 				CA9AA3D3218469E100019CA7 /* FavCollectionViewCell.xib in Resources */,
 				CAC6F72A22A81BC000756AE2 /* ready_r_7.wav in Resources */,
+				251E518B235A579000221BA2 /* ColorsGame_subject_5_1.wav in Resources */,
 				11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */,
+				251E5190235A579100221BA2 /* ColorsGame_sad_2.wav in Resources */,
 				CA5100CE22F6EACF00821C25 /* alphavite_26_word_1.wav in Resources */,
 				CA5100AE22F6EACF00821C25 /* alphavite_18.wav in Resources */,
 				CA5100DD22F6EACF00821C25 /* alphavite_12_word_2.wav in Resources */,
@@ -3333,17 +3507,22 @@
 				CAF961EE22995FF3006E3046 /* animal_7.mp3 in Resources */,
 				CAC6F72522A81BC000756AE2 /* fun_2.wav in Resources */,
 				CA5100B122F6EACF00821C25 /* alphavite_31.wav in Resources */,
+				251E518E235A579000221BA2 /* ColorsGame_subject_5_2.wav in Resources */,
+				251E517E235A579000221BA2 /* ColorsGame_color_8.wav in Resources */,
 				CADD14AF2309C6E500AE920A /* Pick_introduce.mp4 in Resources */,
 				CA5100FB22F6EACF00821C25 /* alphavite_28.wav in Resources */,
 				CA5100DB22F6EACF00821C25 /* alphavite_7_word_1.wav in Resources */,
 				CA5100BC22F6EACF00821C25 /* alphavite_1_1.wav in Resources */,
 				CA5100B822F6EACF00821C25 /* alphavite_21.wav in Resources */,
 				CA5100C922F6EACF00821C25 /* alphavite_19_word_2.wav in Resources */,
+				251E516E235A579000221BA2 /* ColorsGame_subject_8_1.wav in Resources */,
 				CAD2103F231700DC006F2F08 /* MontserratAlternates-LightItalic.ttf in Resources */,
 				112860B6232BA6E30002852A /* monster_menu.mp3 in Resources */,
 				CAF961F522995FF3006E3046 /* animal_20.mp3 in Resources */,
 				CAC6F73222A81BC000756AE2 /* fun_7.mp3 in Resources */,
+				251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */,
 				CAC6F75122A81D1300756AE2 /* Firework_1.json in Resources */,
+				251E518A235A579000221BA2 /* ColorsGame_subject_7_3.wav in Resources */,
 				CAC91013215D359900E62F01 /* AchieveCollectionViewCell.xib in Resources */,
 				CAF961E822995FF3006E3046 /* animal_33.mp3 in Resources */,
 				CA04863C22A845A60017B8A2 /* Round_8.json in Resources */,
@@ -3353,6 +3532,8 @@
 				CAF9620B22995FF3006E3046 /* animal_47.mp3 in Resources */,
 				CA5100A622F6EACF00821C25 /* alphavite_3_word_1.wav in Resources */,
 				CAD21040231700DC006F2F08 /* MontserratAlternates-SemiBold.ttf in Resources */,
+				251E518D235A579000221BA2 /* ColorsGame_subject_7_1.wav in Resources */,
+				251E5174235A579000221BA2 /* ColorsGame_subject_8_3.wav in Resources */,
 				CA52F372223DA1360058194E /* PlaylistCollectionViewCell.xib in Resources */,
 				CA652CEC2353510300291E4D /* sad_red_2.json in Resources */,
 				CAD21044231700DC006F2F08 /* MontserratAlternates-ExtraBoldItalic.ttf in Resources */,
@@ -3360,14 +3541,18 @@
 				CAF9620122995FF3006E3046 /* animal_23.mp3 in Resources */,
 				CAF961CD22995FF3006E3046 /* animal_11.mp3 in Resources */,
 				CAC6F71E22A81BC000756AE2 /* click_button_2.mp3 in Resources */,
+				251E516F235A579000221BA2 /* ColorsGame_color_6.wav in Resources */,
 				CADB3D7A21F7AD4D009467B8 /* day_sound.mp3 in Resources */,
 				CAF961E422995FF3006E3046 /* animal_4.mp3 in Resources */,
+				251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */,
 				CA5100F222F6EACF00821C25 /* alphavite_10_word_2.wav in Resources */,
 				CA2A911A22022C2600CD77FD /* push_level_up.mp3 in Resources */,
 				CAC2D4EF2114D2E100945003 /* LaunchScreen.storyboard in Resources */,
 				CA5100D422F6EACF00821C25 /* alphavite_9_word_2.wav in Resources */,
+				251E517D235A579000221BA2 /* ColorsGame_subject_4_3.wav in Resources */,
 				CAF961F722995FF3006E3046 /* animal_2.mp3 in Resources */,
 				CAC6F73122A81BC000756AE2 /* fun_5.mp3 in Resources */,
+				251E516D235A579000221BA2 /* ColorsGame_subject_10_3.wav in Resources */,
 				CADB3D7621F7AD4D009467B8 /* swipe_sound.wav in Resources */,
 				CAF961E122995FF3006E3046 /* animal_32.mp3 in Resources */,
 				CA1AB64222F188B5003A2584 /* Alphavite.storyboard in Resources */,
@@ -3379,6 +3564,7 @@
 				CA04863D22A845A60017B8A2 /* Round_5.json in Resources */,
 				CA5100F922F6EACF00821C25 /* alphavite_22_word_2.wav in Resources */,
 				CA8EA70B2141363B00159451 /* RazdelCollectionViewCell.xib in Resources */,
+				251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */,
 				CAF9621722996022006E3046 /* scene-1.mp4 in Resources */,
 				CA5100E822F6EACF00821C25 /* alphavite_7.wav in Resources */,
 				CAAF1EF22174E7E100460F58 /* Dog_finish.json in Resources */,
@@ -3416,8 +3602,10 @@
 				CAF961F022995FF3006E3046 /* animal_6.mp3 in Resources */,
 				CA5100F822F6EACF00821C25 /* alphavite_15_word_2.wav in Resources */,
 				CA5100C122F6EACF00821C25 /* alphavite_24_word_2.wav in Resources */,
+				251E5196235A579100221BA2 /* ColorsGame_fun_6.wav in Resources */,
 				CA5100AA22F6EACF00821C25 /* alphavite_32.wav in Resources */,
 				CA5100AC22F6EACF00821C25 /* alphavite_16_word_2.wav in Resources */,
+				251E517C235A579000221BA2 /* ColorsGame_subject_6_1.wav in Resources */,
 				CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */,
 				CA5100DC22F6EACF00821C25 /* alphavite_1.wav in Resources */,
 				CAF961C122995FF3006E3046 /* animal_12.mp3 in Resources */,
@@ -3426,14 +3614,18 @@
 				CA5100E622F6EACF00821C25 /* alphavite_2_word_2.wav in Resources */,
 				CA04864422A845A60017B8A2 /* Round_3.json in Resources */,
 				CAF94CCF2160BECF000E8183 /* Welcome.storyboard in Resources */,
+				251E5188235A579000221BA2 /* ColorsGame_subject_3_2.wav in Resources */,
 				CAD16DE32147E23000A82DBB /* Numeral.json in Resources */,
 				CAC6F73322A81BC000756AE2 /* fun_6.mp3 in Resources */,
 				CAA7325F21315456006276B4 /* Alerts.storyboard in Resources */,
 				CA5100EF22F6EACF00821C25 /* alphavite_5_word_2.wav in Resources */,
 				CAD2105223170C69006F2F08 /* alphabetPickMain.wav in Resources */,
+				251E5172235A579000221BA2 /* ColorsGame_color_5.wav in Resources */,
+				251E5194235A579100221BA2 /* ColorsGame_fun_3.wav in Resources */,
 				CA4C28CE2147DFDB00CA264D /* box.json in Resources */,
 				CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */,
 				CAF9620A22995FF3006E3046 /* animal_46.mp3 in Resources */,
+				251E5178235A579000221BA2 /* ColorsGame_subject_2_3.wav in Resources */,
 				CA5100F322F6EACF00821C25 /* alphavite_11.wav in Resources */,
 				CAD21043231700DC006F2F08 /* MontserratAlternates-ExtraBold.ttf in Resources */,
 				CA5CB168213F0966000CB3D5 /* Sue.json in Resources */,
@@ -3441,6 +3633,7 @@
 				CAD16DE92147E29400A82DBB /* Candy.json in Resources */,
 				CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */,
 				CA652CEB2353510300291E4D /* happy_green_2.json in Resources */,
+				251E5176235A579000221BA2 /* ColorsGame_color_3.wav in Resources */,
 				CA5100B622F6EACF00821C25 /* alphavite_1_2.wav in Resources */,
 				CA5100D522F6EACF00821C25 /* alphavite_4_word_1.wav in Resources */,
 				CAE6792D23511A0C00CBCDB3 /* ColorsGameStatView.xib in Resources */,
@@ -3448,26 +3641,34 @@
 				CA52DF242290683400458EE5 /* appetite.ttf in Resources */,
 				CAC6F72122A81BC000756AE2 /* ready_r_10.wav in Resources */,
 				CADD14AD2309887300AE920A /* end_Pick.json in Resources */,
+				251E5193235A579100221BA2 /* ColorsGame_fun_1.wav in Resources */,
 				CAAF1EF42174E7E100460F58 /* Dog_start.json in Resources */,
 				CADB3D7721F7AD4D009467B8 /* night_sound.wav in Resources */,
 				CA5100B722F6EACF00821C25 /* alphavite_6_word_2.wav in Resources */,
 				CA5100C622F6EACF00821C25 /* alphavite_32_word_1.wav in Resources */,
+				251E5184235A579000221BA2 /* ColorsGame_subject_3_1.wav in Resources */,
 				CAD21042231700DC006F2F08 /* MontserratAlternates-ExtraLight.ttf in Resources */,
 				CA14997B216F7511008FBEE9 /* FavTableViewCell.xib in Resources */,
 				CAFF984623251FDD00003076 /* ColorsGame.storyboard in Resources */,
 				CADD14B623107F7C00AE920A /* happy_Cloud_2.json in Resources */,
+				251E517F235A579000221BA2 /* ColorsGame_subject_4_2.wav in Resources */,
 				CAD21041231700DC006F2F08 /* MontserratAlternates-SemiBoldItalic.ttf in Resources */,
 				CAF961EA22995FF3006E3046 /* animal_31.mp3 in Resources */,
 				CA51010322F6EACF00821C25 /* alphavite_16.wav in Resources */,
 				CAC6F75022A81D1300756AE2 /* Firework_3.json in Resources */,
 				CA5100E422F6EACF00821C25 /* alphavite_17_word_2.wav in Resources */,
+				251E5180235A579000221BA2 /* ColorsGame_subject_6_2.wav in Resources */,
 				CA5100F422F6EACF00821C25 /* alphavite_10.wav in Resources */,
 				CA5100F622F6EACF00821C25 /* alphavite_8_word_2.wav in Resources */,
 				CAC6F72B22A81BC000756AE2 /* ready_r_9.wav in Resources */,
 				CAF961DD22995FF3006E3046 /* animal_9.mp3 in Resources */,
+				251E5179235A579000221BA2 /* ColorsGame_color_10.wav in Resources */,
 				11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */,
+				251E5181235A579000221BA2 /* ColorsGame_subject_4_1.wav in Resources */,
+				251E5171235A579000221BA2 /* ColorsGame_subject_8_2.wav in Resources */,
 				CAC6F72F22A81BC000756AE2 /* sad_2.wav in Resources */,
 				CA5100BB22F6EACF00821C25 /* alphavite_24_word_1.wav in Resources */,
+				251E518F235A579000221BA2 /* ColorsGame_sad_3.wav in Resources */,
 				CA5100EB22F6EACF00821C25 /* alphavite_27_word_1.wav in Resources */,
 				CA5100DA22F6EACF00821C25 /* alphavite_25_word_1.wav in Resources */,
 				CA51010022F6EACF00821C25 /* alphavite_15_word_1.wav in Resources */,
@@ -3475,6 +3676,7 @@
 				CA5100FE22F6EACF00821C25 /* alphavite_33_word_1.wav in Resources */,
 				CAA88455213820D200E27F7A /* Profile.storyboard in Resources */,
 				CA5100E522F6EACF00821C25 /* alphavite_31_word_2.wav in Resources */,
+				251E5189235A579000221BA2 /* ColorsGame_subject_7_2.wav in Resources */,
 				CA5100B022F6EACF00821C25 /* alphavite_30.wav in Resources */,
 				CA5100D922F6EACF00821C25 /* alphavite_12_word_1.wav in Resources */,
 				CAF961E922995FF3006E3046 /* animal_25.mp3 in Resources */,
@@ -3482,6 +3684,7 @@
 				CA8EA7202141568900159451 /* LoadingCollectionViewCell.xib in Resources */,
 				CA5100DE22F6EACF00821C25 /* alphavite_25_word_2.wav in Resources */,
 				CA5100B522F6EACF00821C25 /* alphavite_16_word_1.wav in Resources */,
+				251E5198235A579100221BA2 /* ColorsGame_fun_4.wav in Resources */,
 				CA2A91162202293800CD77FD /* push_button_sound.wav in Resources */,
 				CAF961D522995FF3006E3046 /* animal_14.mp3 in Resources */,
 				CA04863E22A845A60017B8A2 /* Round_9.json in Resources */,
@@ -3492,20 +3695,24 @@
 				CAD2104A231700DC006F2F08 /* MontserratAlternates-Medium.ttf in Resources */,
 				11BA249E230AE99700A9EA15 /* MonsterCollectionViewCell.xib in Resources */,
 				CA5100E322F6EACF00821C25 /* alphavite_20_word_2.wav in Resources */,
+				251E519E235A624A00221BA2 /* ColorsGame_subject_9_3.wav in Resources */,
 				CAAF1F1121771E4300460F58 /* Shade_close.json in Resources */,
 				CAC6F71C22A81BC000756AE2 /* after_announce_round_n.wav in Resources */,
 				CA61D875229AD7E700E3D603 /* AnimalCollectionViewCell.xib in Resources */,
 				CA5100E222F6EACF00821C25 /* alphavite_4.wav in Resources */,
 				CA5100AD22F6EACF00821C25 /* alphavite_3_word_2.wav in Resources */,
+				251E5192235A579100221BA2 /* ColorsGame_sad_4.wav in Resources */,
 				CA652CE62353510300291E4D /* happy_red_2.json in Resources */,
 				CAC6F72922A81BC000756AE2 /* fun_1.wav in Resources */,
 				CAF961D922995FF3006E3046 /* animal_8.mp3 in Resources */,
 				CAD2105423170C69006F2F08 /* pickDriveTo.wav in Resources */,
 				CA52DF20229050F400458EE5 /* Pacifico Regular.ttf in Resources */,
 				CAAF1EF62174E7E100460F58 /* Dog_progress.json in Resources */,
+				251E5175235A579000221BA2 /* ColorsGame_color_1.wav in Resources */,
 				CA09978F21A572E20051F41D /* Common.storyboard in Resources */,
 				CAC6F73022A81BC000756AE2 /* fun_4.mp3 in Resources */,
 				CA5100CF22F6EACF00821C25 /* alphavite_11_word_1.wav in Resources */,
+				251E5170235A579000221BA2 /* ColorsGame_color_7.wav in Resources */,
 				CA04864222A845A60017B8A2 /* Round_2.json in Resources */,
 				CA992D38212FF218008BFC8D /* Play.storyboard in Resources */,
 				CA652CED2353510300291E4D /* main_red.json in Resources */,
@@ -3519,6 +3726,7 @@
 				CAF9621522996022006E3046 /* scene-2.mp4 in Resources */,
 				11CF6B90232A071A00F8E529 /* monsterOpenCard.wav in Resources */,
 				CA2A911822022AD500CD77FD /* swipe_card_sound.wav in Resources */,
+				251E5186235A579000221BA2 /* ColorsGame_subject_1_1.wav in Resources */,
 				CA1041532262A259005D62DE /* SearchMusicCollectionViewCell.xib in Resources */,
 				CA5100A922F6EACF00821C25 /* alphavite_26.wav in Resources */,
 				CA5100BF22F6EACF00821C25 /* alphavite_23.wav in Resources */,
@@ -3539,6 +3747,8 @@
 				CAC6F72822A81BC000756AE2 /* this_is_animal.wav in Resources */,
 				CA5100A822F6EACF00821C25 /* alphavite_27.wav in Resources */,
 				CA5100EE22F6EACF00821C25 /* alphavite_13.wav in Resources */,
+				251E5177235A579000221BA2 /* ColorsGame_color_2.wav in Resources */,
+				251E5191235A579100221BA2 /* ColorsGame_sad_1.wav in Resources */,
 				CA5100C422F6EACF00821C25 /* alphavite_19_word_1.wav in Resources */,
 				CA5100F122F6EACF00821C25 /* alphavite_27_word_2.wav in Resources */,
 				CADD14B923107F7C00AE920A /* sad_Cloud.json in Resources */,
@@ -3549,6 +3759,7 @@
 				CA5100B322F6EACF00821C25 /* alphavite_19.wav in Resources */,
 				CAC6F72E22A81BC000756AE2 /* sad_3.wav in Resources */,
 				CAC0989422FF47FD00EFB01E /* AlphaviteStatView.xib in Resources */,
+				251E518C235A579000221BA2 /* ColorsGame_subject_5_3.wav in Resources */,
 				CA5100EA22F6EACF00821C25 /* alphavite_17_word_1.wav in Resources */,
 				CA5100CB22F6EACF00821C25 /* alphavite_8.wav in Resources */,
 				CA5100D822F6EACF00821C25 /* alphavite_2.wav in Resources */,
@@ -3558,12 +3769,14 @@
 				CAF9620222995FF3006E3046 /* animal_1.mp3 in Resources */,
 				CA51010122F6EACF00821C25 /* alphavite_22_word_1.wav in Resources */,
 				CAC6F74F22A81D1300756AE2 /* Firework_2.json in Resources */,
+				251E5182235A579000221BA2 /* ColorsGame_subject_6_3.wav in Resources */,
 				CAC6F72422A81BC000756AE2 /* fun_3.wav in Resources */,
 				CA04863F22A845A60017B8A2 /* Round_10.json in Resources */,
 				CADD14B523107F7C00AE920A /* happy_Cloud_1.json in Resources */,
 				CA5100FC22F6EACF00821C25 /* alphavite_29.wav in Resources */,
 				CA5100A722F6EACF00821C25 /* alphavite_33.wav in Resources */,
 				CA04864022A845A60017B8A2 /* Round_6.json in Resources */,
+				251E5187235A579000221BA2 /* ColorsGame_subject_3_3.wav in Resources */,
 				CA5100BD22F6EACF00821C25 /* alphavite_6_word_1.wav in Resources */,
 				CAF961CB22995FF3006E3046 /* animal_39.mp3 in Resources */,
 				CAF889DB21A6975800A245A7 /* GoogleService-Info.plist in Resources */,
@@ -3580,9 +3793,12 @@
 				CA04864322A845A60017B8A2 /* Round_7.json in Resources */,
 				11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */,
 				CAD21048231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */,
+				251E5183235A579000221BA2 /* ColorsGame_subject_1_2.wav in Resources */,
 				CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */,
 				CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */,
+				251E5197235A579100221BA2 /* ColorsGame_fun_5.wav in Resources */,
 				CA5100F522F6EACF00821C25 /* alphavite_5_word_1.wav in Resources */,
+				251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */,
 				CADB3D7521F7AD4D009467B8 /* swipe_drill_sound.wav in Resources */,
 				CA5100D122F6EACF00821C25 /* alphavite_4_word_2.wav in Resources */,
 				CAC6F71F22A81BC000756AE2 /* ready_r_3.wav in Resources */,

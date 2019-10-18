@@ -14,7 +14,7 @@ import UIKit
 
 enum ColorsMaster {
 
-    enum Colors: String {
+    enum Colors: String, CaseIterable {
         case white = "white"
         case black = "black"
 
@@ -26,6 +26,8 @@ enum ColorsMaster {
         case blue = "blue"
         case violet = "violet"
 
+        // case brown = "brown"
+        
         var name: String {
             switch self {
                 case .white:
@@ -50,25 +52,28 @@ enum ColorsMaster {
         }
         var sound: String {
             switch self {
-                case .white:
-                    return ""
-                case .black:
-                    return ""
                 case .red:
-                    return ""
-                case .orange:
-                    return ""
-                case .yellow:
-                    return ""
-                case .green:
-                    return ""
-                case .lightBlue:
-                    return ""
+                    return "ColorsGame_color_1"
                 case .blue:
-                    return ""
+                    return "ColorsGame_color_2"
+                case .green:
+                    return "ColorsGame_color_3"
+                case .yellow:
+                    return "ColorsGame_color_4"
+                case .white:
+                    return "ColorsGame_color_5"
+                case .black:
+                    return "ColorsGame_color_6"
+                case .orange:
+                    return "ColorsGame_color_7"
+                case .lightBlue:
+                    return "ColorsGame_color_8"
                 case .violet:
-                    return ""
+                    return "ColorsGame_color_9"
             }
+        }
+        var soundUrl: URL {
+            URL(fileURLWithPath: Bundle.main.path(forResource: sound, ofType: "wav")!)
         }
     }
 
@@ -79,17 +84,41 @@ enum ColorsMaster {
     ]
 
     static let Pack: [Colors: [String]] = [
-        Colors.white: ["animal_1", "animal_2"],
-        Colors.black: ["animal_3", "animal_4"],
-        Colors.red: ["animal_5", "animal_6"],
-        Colors.orange: ["animal_7", "animal_8"],
-        Colors.yellow: ["animal_9", "animal_10"],
-        Colors.green: ["animal_11", "animal_12"],
-        Colors.lightBlue: ["animal_13", "animal_14"],
-        Colors.blue: ["animal_15", "animal_16"],
-        Colors.violet: ["animal_17", "animal_18"]
+        Colors.red: ["ColorsGame_subject_1_1", "ColorsGame_subject_1_2", "ColorsGame_subject_1_3"],
+        Colors.blue: ["ColorsGame_subject_2_1", "ColorsGame_subject_2_2", "ColorsGame_subject_2_3"],
+        Colors.green: ["ColorsGame_subject_3_1", "ColorsGame_subject_3_2", "ColorsGame_subject_3_3"],
+        Colors.yellow: ["ColorsGame_subject_4_1", "ColorsGame_subject_4_2", "ColorsGame_subject_4_3"],
+        Colors.white: ["ColorsGame_subject_5_1", "ColorsGame_subject_5_2", "ColorsGame_subject_5_3"],
+        Colors.black: ["ColorsGame_subject_6_1", "ColorsGame_subject_6_2", "ColorsGame_subject_6_3"],
+        Colors.orange: ["ColorsGame_subject_7_1", "ColorsGame_subject_7_2", "ColorsGame_subject_7_3"],
+        Colors.lightBlue: ["ColorsGame_subject_8_1", "ColorsGame_subject_8_2", "ColorsGame_subject_8_3"],
+        Colors.violet: ["ColorsGame_subject_9_1", "ColorsGame_subject_9_2", "ColorsGame_subject_9_3"]
     ]
-
+    
+    enum EmotionalsSad: String, CaseIterable {
+        case sadOne = "ColorsGame_sad_1"
+        case sadTwo = "ColorsGame_sad_2"
+        case sadThree = "ColorsGame_sad_3"
+        case sadFour = "ColorsGame_sad_4"
+        
+        var url: URL {
+            URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
+        }
+    }
+    
+    enum EmotionalsHappy: String, CaseIterable {
+        case happyOne = "ColorsGame_fun_1"
+        case happyTwo = "ColorsGame_fun_2"
+        case happyThree = "ColorsGame_fun_3"
+        case happyFour = "ColorsGame_fun_4"
+        case happyFive = "ColorsGame_fun_5"
+        case happySix = "ColorsGame_fun_6"
+        
+        var url: URL {
+            URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
+        }
+    }
+    
     enum RedAnimation: String {
         case main = "main_red"
         case happy = "happy_red_1"
