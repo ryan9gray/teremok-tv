@@ -65,6 +65,7 @@ class ColorsChoiceViewController: GameViewController {
     }
 
     private let imageFillter = ImageFillter()
+    private var currentColor: ColorsMaster.Colors = .black
 
     private var right: GameModel.Option = .left
 
@@ -110,12 +111,12 @@ class ColorsChoiceViewController: GameViewController {
         displayChoice(color: color.value, wrong: gameHelper.randomColor(from: color.value), image: UIImage(named: color.key))
         playSounds(color.value.soundUrl)
     }
-
+    
     private func displayChoice(color: ColorsMaster.Colors, wrong: ColorsMaster.Colors, image: UIImage?) {
         reset()
         right = GameModel.Option(rawValue: Int.random(in: 0...1))!
         currentImage = image
-
+        currentColor = color
         switch right {
             case .left:
                 leftView.setGradient(color)
@@ -181,7 +182,7 @@ class ColorsChoiceViewController: GameViewController {
             }
         }
 
-        //output.result(AlphaviteMaster.Statistic(char: currentChar, seconds: Int(seconds), isRight: isRight))
+        output.result(AlphaviteMaster.Statistic(char: currentColor.rawValue, seconds: Int(seconds), isRight: isRight))
     }
 
     private func monstersReaction(isHappy: Bool, completion: @escaping (Bool) -> Void) {
