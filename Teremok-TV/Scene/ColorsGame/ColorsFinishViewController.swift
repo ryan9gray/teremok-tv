@@ -44,7 +44,7 @@ class ColorsFinishViewController: GameViewController {
         titleLabel.textColor = .white
         titleLabel.strokeSize = 12.0
         titleLabel.strokePosition = .center
-        titleLabel.gradientColors = Style.Gradients.green.value
+        titleLabel.gradientColors = ColorsMaster.Colors.violet.value
         
         pointsLabel.textColor = UIColor.Alphavite.greenOne
         greyLabel.textColor = UIColor.Alphavite.grey
@@ -57,7 +57,7 @@ class ColorsFinishViewController: GameViewController {
 
     private func presentResult(isGood: Bool) {
         self.isGood = isGood
-        playButton.gradientColors = isGood ? Style.Gradients.red.value : Style.Gradients.green.value
+        playButton.gradientColors = isGood ? ColorsMaster.Colors.violet.value : ColorsMaster.Colors.green.value
         buttonTitleLabel.text = isGood ? "Далее" : "Заново"
         playButton.setImage(isGood ? UIImage(named: "ic-alphavitePlay") : UIImage(named: "ic-alphaviteRepeat"), for: .normal)
     }

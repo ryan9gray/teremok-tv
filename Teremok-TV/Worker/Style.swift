@@ -116,7 +116,7 @@ extension Style.Gradients {
                 return [UIColor.Button.lightGray, .white]
             case .blueBorder:
                 return [UIColor.Alphavite.blueOne, .white]
-                case .lightBlue:
+            case .lightBlue:
                 return []
             }
 
