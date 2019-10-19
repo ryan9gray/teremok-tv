@@ -84,7 +84,7 @@ class ColorsChoiceViewController: GameViewController {
         progressBar.isHidden = !input.isHard
         pointsView.isHidden = !input.isHard
         if input.isHard {
-            pointsView.gradientColors = Style.Gradients.orange.value
+            pointsView.gradientColors = Style.Gradients.yellow.value
         }
         setAnimation()
         nextColor()

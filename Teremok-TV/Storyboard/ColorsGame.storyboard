@@ -8,9 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Foo.ttf">
-            <string>Foo-Regular</string>
-        </array>
         <array key="MontserratAlternates-ExtraBold.ttf">
             <string>MontserratAlternates-ExtraBold</string>
         </array>
@@ -100,7 +97,7 @@
                                     <constraint firstAttribute="width" constant="280" id="WgK-pr-9RJ"/>
                                     <constraint firstAttribute="height" constant="40" id="z5H-C2-9Fv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="NeSkidComicaBDID120055769" family="NeSkid (Comica BD) ID120055769" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="0.31597970549999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -355,11 +352,11 @@
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Далее" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lae-Nk-jjs">
-                                <rect key="frame" x="416" y="280" width="64" height="24"/>
+                                <rect key="frame" x="422.5" y="280" width="51" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="X9A-DG-EkG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="NeSkidComicaBDID120055769" family="NeSkid (Comica BD) ID120055769" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="0.2140131106" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -380,7 +377,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 из 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF0-5j-OVF">
                                                 <rect key="frame" x="201" y="14.5" width="69" height="21"/>
                                                 <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="17"/>
-                                                <color key="textColor" red="0.1843137255" green="0.63921568630000003" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.38823529410000002" green="0.29411764709999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -403,7 +400,7 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.1843137255" green="0.63921568630000003" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.96470588235294119" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>

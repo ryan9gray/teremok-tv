@@ -18,6 +18,7 @@ class ColorsTeachingViewController: GameViewController {
     @IBOutlet private var colorContainer: ColorGameContainer!
     @IBOutlet var objectContainer: DesignableView!
     @IBOutlet private var imageContainer: UIImageView!
+    private var needPlay = true
 
     @IBAction private func startTap(_ sender: Any) {
         output.startChoice()
@@ -37,15 +38,14 @@ class ColorsTeachingViewController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLabel.textColor = UIColor.Alphavite.blueTwo
+        titleLabel.textColor = UIColor.white
         titleLabel.strokeSize = 12.0
         titleLabel.strokePosition = .center
-        titleLabel.gradientColors = [ UIColor.white ]
+        titleLabel.gradientColors = ColorsMaster.Colors.violet.value
 
         start()
     }
 
-    var needPlay = true
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
@@ -56,6 +56,7 @@ class ColorsTeachingViewController: GameViewController {
     func start() {
         nextChar()
     }
+    
     private func nextChar() {
         guard let color = input.colors.popLast() else {
             finish()
