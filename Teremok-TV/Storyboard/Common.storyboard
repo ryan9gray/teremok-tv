@@ -176,7 +176,7 @@
                                     <constraint firstAttribute="width" constant="44" id="NcB-Wp-usV"/>
                                     <constraint firstAttribute="height" constant="44" id="dAo-nw-1zX"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="8" minY="7" maxX="4" maxY="0.0"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="4" maxX="4" maxY="0.0"/>
                                 <state key="normal" image="ic-alphavitePlay"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="indent">

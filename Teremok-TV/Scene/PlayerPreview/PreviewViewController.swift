@@ -16,7 +16,6 @@ import Trackable
 
 protocol PreviewDisplayLogic: CommonDisplayLogic {
     func playVideo(url: URL)
-    func displayData(items: [Preview.StreamItem])
     func displayRecomendate(items: [PreviewModel])
     var isOffline: Bool { get set }
 
@@ -79,7 +78,6 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
         masterRouter?.popChild()
     }
     
-    var streams: [Preview.StreamItem] = []
     var recommendations: [PreviewModel] = []
     var isOffline = false
     
@@ -121,11 +119,7 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
         let cells = [PreviewCollectionViewCell.self, LoadingCollectionViewCell.self]
         collectionView.register(cells: cells)
     }
-
-    func displayData(items: [Preview.StreamItem]){
-        streams = items
-    }
-
+    
     func setupControls(){
         playerVC.fullOverlay.downloadButton.isSelected = router?.dataStore?.videoModel?.downloadMe ?? false
         playerVC.fullOverlay.heartButton.isSelected = router?.dataStore?.videoModel?.likedMe ?? false

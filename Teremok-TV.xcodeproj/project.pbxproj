@@ -86,6 +86,7 @@
 		251E519E235A624A00221BA2 /* ColorsGame_subject_9_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519B235A624900221BA2 /* ColorsGame_subject_9_3.wav */; };
 		251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */; };
 		251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */; };
+		251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
 		CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */; };
@@ -887,6 +888,7 @@
 		251E519B235A624900221BA2 /* ColorsGame_subject_9_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_3.wav; sourceTree = "<group>"; };
 		251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_1.wav; sourceTree = "<group>"; };
 		251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_2.wav; sourceTree = "<group>"; };
+		251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neskid-comica-bd.ttf"; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
@@ -2155,6 +2157,7 @@
 				CAD210272315BACF006F2F08 /* IstokWeb-Italic.ttf */,
 				CAD210292315BAD0006F2F08 /* IstokWeb-Regular.ttf */,
 				CAAD25EB22F5A464005CFCD2 /* Foo.ttf */,
+				251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */,
 				CAAD25EA22F5A463005CFCD2 /* Glober Black.otf */,
 				CA56D0C52302A424006298C5 /* ariblk.ttf */,
 				CA1AB64D22F1ABA6003A2584 /* Shnobel-Regular.otf */,
@@ -3659,6 +3662,7 @@
 				CA5100E422F6EACF00821C25 /* alphavite_17_word_2.wav in Resources */,
 				251E5180235A579000221BA2 /* ColorsGame_subject_6_2.wav in Resources */,
 				CA5100F422F6EACF00821C25 /* alphavite_10.wav in Resources */,
+				251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */,
 				CA5100F622F6EACF00821C25 /* alphavite_8_word_2.wav in Resources */,
 				CAC6F72B22A81BC000756AE2 /* ready_r_9.wav in Resources */,
 				CAF961DD22995FF3006E3046 /* animal_9.mp3 in Resources */,

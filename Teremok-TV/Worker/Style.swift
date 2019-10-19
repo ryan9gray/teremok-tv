@@ -82,6 +82,13 @@ enum Style {
                 return UIFont.systemFont(ofSize: size, weight: .regular)
             }
         }
+        static func colorsGameMain(size: CGFloat) -> UIFont {
+            if let font = UIFont(name: "NeSkid (Comica BD) ID120055769-Regular", size: size) {
+                return font
+            } else {
+                return UIFont.systemFont(ofSize: size, weight: .regular)
+            }
+        }
     }
 }
 
