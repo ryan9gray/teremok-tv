@@ -208,13 +208,11 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
     }
     
     func presentChild(viewController: AbstracViewController){
-
         UIView.transition(with: viewController.view, duration: 0.5, options: .transitionCrossDissolve, animations: {
             // Add Child View as Subview
             self.viewController?.view.insertSubview(viewController.view, aboveSubview: (self.viewController?.backgroundView)!)
         }, completion: nil)
         
-        viewController.view.frame = viewController.view.bounds
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.didMove(toParent: viewController)
     }

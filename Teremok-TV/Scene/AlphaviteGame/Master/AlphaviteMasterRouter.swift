@@ -95,7 +95,6 @@ class AlphaviteMasterRouter: AlphaviteMasterRoutingLogic, AlphaviteMasterDataPas
             self.viewController?.view.insertSubview(viewController.view, at: 1)
         }, completion: nil)
 
-        viewController.view.frame = viewController.view.bounds
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.didMove(toParent: viewController)
     }

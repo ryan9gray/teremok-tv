@@ -95,8 +95,6 @@ class ColorsMasterRouter: ColorsMasterRoutingLogic, ColorsMasterDataPassing {
         UIView.transition(with: viewController.view, duration: 0.5, options: .transitionCrossDissolve, animations: {
             self.viewController?.view.insertSubview(viewController.view, at: 1)
         }, completion: nil)
-
-        viewController.view.frame = viewController.view.bounds
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.didMove(toParent: viewController)
     }
