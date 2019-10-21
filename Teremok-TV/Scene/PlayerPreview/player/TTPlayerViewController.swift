@@ -66,7 +66,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func toOffline(its: Bool){
-    
         downloadButton.isHidden = its
         heartButton.isHidden = its
     }
@@ -316,6 +315,7 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             timeObserver = nil
         }
     }
+
     deinit {
         print("TTPlayerViewController deinit")
         stopTimer()
@@ -324,7 +324,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         removePlayerItemObservers()
         removePlayerNotifations()
     }
-    
 
     @objc func playerEnd(){
         delegate?.avPlayerOverlay(self, endPlay: player)
@@ -339,16 +338,15 @@ extension TTPlayerViewController {
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackLikelyToKeepUp), options: options, context: &playerItemContext)
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackBufferFull), options: options, context: &playerItemContext)
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.playbackBufferEmpty), options: options, context: &playerItemContext)
-
-
     }
+
     internal func addPlayerNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.playerEnd), name: .AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
         NotificationCenter.default.addObserver(self, selector: .applicationWillEnterForeground, name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: .applicationDidEnterBackground, name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
+
     internal func removePlayerItemObservers() {
-        
         playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.status))
         playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.loadedTimeRanges))
         playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.playbackBufferEmpty))

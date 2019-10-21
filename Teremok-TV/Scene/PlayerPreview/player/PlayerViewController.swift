@@ -11,7 +11,6 @@ import AVFoundation
 import AVKit
 
 class PlayerViewController: AVPlayerViewController {
-
     var contentURL : URL? {
         didSet{
             setVideoBack()

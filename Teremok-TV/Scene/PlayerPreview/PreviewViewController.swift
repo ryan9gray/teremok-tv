@@ -23,7 +23,6 @@ protocol PreviewDisplayLogic: CommonDisplayLogic {
 
 class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     var activityView: LottieHUD?
-    
     var interactor: PreviewBusinessLogic?
     var router: (PreviewRoutingLogic & PreviewDataPassing & CommonRoutingLogic)?
 
@@ -158,7 +157,6 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
 
 extension PreviewViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //self.router?.navigateToPreview(number: indexPath.row)
         track(
             Events.VideoFlow.RecommendationTap,
             trackedProperties: [Keys.Identifier ~>> router?.dataStore?.videoItem?.recommendations?[indexPath.row].id ?? 0]
