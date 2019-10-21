@@ -70,7 +70,17 @@ class ColorsMasterViewController: GameMasterViewController, ColorsMasterDisplayL
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        router?.navigateMain()
+            interactor?.onDemand { [weak self] success in
+            DispatchQueue.main.async {
+                if success {
+                    self?.router?.navigateMain()
+                } else {
+                    self?.present(errorString: "Игра загружается, попробуйте позже") {
+                        self?.dismiss(animated: true)
+                    }
+                }
+            }
+        }
     }
 
     deinit {

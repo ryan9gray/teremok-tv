@@ -72,7 +72,6 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
         super.viewDidLoad()
 
         interactor?.onDemand { [weak self] success in
-            DispatchQueue.main.async {
             if success {
                 self?.router?.navigateMain()
             } else {
@@ -80,7 +79,7 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
                     self?.dismiss(animated: true)
                 }
             }
-        }
+        
         }
         do {
             //Preparation to play

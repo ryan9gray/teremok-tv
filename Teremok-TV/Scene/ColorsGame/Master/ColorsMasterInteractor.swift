@@ -13,7 +13,7 @@
 import UIKit
 
 protocol ColorsMasterBusinessLogic {
-    
+    func onDemand(completion: @escaping (Bool) -> Void)
 }
 
 protocol ColorsMasterDataStore {
@@ -23,6 +23,18 @@ protocol ColorsMasterDataStore {
 class ColorsMasterInteractor: ColorsMasterBusinessLogic, ColorsMasterDataStore {
     var presenter: ColorsMasterPresentationLogic?
 
+    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.colorsGameImage.rawValue, OnDemandLoader.Tags.Prefetch.colorsGameSounds.rawValue]))
 
-
+    func onDemand(completion: @escaping (Bool) -> Void) {
+        bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
+        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+            if available {
+                completion(true)
+              } else {
+                self.bundleResourceRequest.beginAccessingResources { error in
+                    completion(error == nil)
+                }
+              }
+        }
+    }
 }

@@ -36,42 +36,42 @@
 		11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8C232A071A00F8E529 /* monsterRight.wav */; };
 		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceMonsters, ); }; };
 		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
-		251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */; };
-		251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */; };
-		251E516D235A579000221BA2 /* ColorsGame_subject_10_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */; };
-		251E516E235A579000221BA2 /* ColorsGame_subject_8_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513F235A578F00221BA2 /* ColorsGame_subject_8_1.wav */; };
-		251E516F235A579000221BA2 /* ColorsGame_color_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5140235A578F00221BA2 /* ColorsGame_color_6.wav */; };
-		251E5170235A579000221BA2 /* ColorsGame_color_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5141235A578F00221BA2 /* ColorsGame_color_7.wav */; };
-		251E5171235A579000221BA2 /* ColorsGame_subject_8_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5142235A578F00221BA2 /* ColorsGame_subject_8_2.wav */; };
-		251E5172235A579000221BA2 /* ColorsGame_color_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5143235A578F00221BA2 /* ColorsGame_color_5.wav */; };
-		251E5173235A579000221BA2 /* ColorsGame_color_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5144235A578F00221BA2 /* ColorsGame_color_4.wav */; };
-		251E5174235A579000221BA2 /* ColorsGame_subject_8_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5145235A578F00221BA2 /* ColorsGame_subject_8_3.wav */; };
-		251E5175235A579000221BA2 /* ColorsGame_color_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5146235A578F00221BA2 /* ColorsGame_color_1.wav */; };
-		251E5176235A579000221BA2 /* ColorsGame_color_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5147235A578F00221BA2 /* ColorsGame_color_3.wav */; };
-		251E5177235A579000221BA2 /* ColorsGame_color_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5148235A578F00221BA2 /* ColorsGame_color_2.wav */; };
-		251E5178235A579000221BA2 /* ColorsGame_subject_2_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5149235A578F00221BA2 /* ColorsGame_subject_2_3.wav */; };
-		251E5179235A579000221BA2 /* ColorsGame_color_10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514A235A578F00221BA2 /* ColorsGame_color_10.wav */; };
-		251E517A235A579000221BA2 /* ColorsGame_subject_2_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514B235A578F00221BA2 /* ColorsGame_subject_2_2.wav */; };
-		251E517B235A579000221BA2 /* ColorsGame_subject_2_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514C235A578F00221BA2 /* ColorsGame_subject_2_1.wav */; };
-		251E517C235A579000221BA2 /* ColorsGame_subject_6_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514D235A578F00221BA2 /* ColorsGame_subject_6_1.wav */; };
-		251E517D235A579000221BA2 /* ColorsGame_subject_4_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514E235A578F00221BA2 /* ColorsGame_subject_4_3.wav */; };
-		251E517E235A579000221BA2 /* ColorsGame_color_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514F235A578F00221BA2 /* ColorsGame_color_8.wav */; };
-		251E517F235A579000221BA2 /* ColorsGame_subject_4_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5150235A578F00221BA2 /* ColorsGame_subject_4_2.wav */; };
-		251E5180235A579000221BA2 /* ColorsGame_subject_6_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5151235A578F00221BA2 /* ColorsGame_subject_6_2.wav */; };
-		251E5181235A579000221BA2 /* ColorsGame_subject_4_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5152235A578F00221BA2 /* ColorsGame_subject_4_1.wav */; };
-		251E5182235A579000221BA2 /* ColorsGame_subject_6_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5153235A578F00221BA2 /* ColorsGame_subject_6_3.wav */; };
-		251E5183235A579000221BA2 /* ColorsGame_subject_1_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5154235A578F00221BA2 /* ColorsGame_subject_1_2.wav */; };
-		251E5184235A579000221BA2 /* ColorsGame_subject_3_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5155235A579000221BA2 /* ColorsGame_subject_3_1.wav */; };
-		251E5185235A579000221BA2 /* ColorsGame_subject_1_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5156235A579000221BA2 /* ColorsGame_subject_1_3.wav */; };
-		251E5186235A579000221BA2 /* ColorsGame_subject_1_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5157235A579000221BA2 /* ColorsGame_subject_1_1.wav */; };
-		251E5187235A579000221BA2 /* ColorsGame_subject_3_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5158235A579000221BA2 /* ColorsGame_subject_3_3.wav */; };
-		251E5188235A579000221BA2 /* ColorsGame_subject_3_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5159235A579000221BA2 /* ColorsGame_subject_3_2.wav */; };
-		251E5189235A579000221BA2 /* ColorsGame_subject_7_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515A235A579000221BA2 /* ColorsGame_subject_7_2.wav */; };
-		251E518A235A579000221BA2 /* ColorsGame_subject_7_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515B235A579000221BA2 /* ColorsGame_subject_7_3.wav */; };
-		251E518B235A579000221BA2 /* ColorsGame_subject_5_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515C235A579000221BA2 /* ColorsGame_subject_5_1.wav */; };
-		251E518C235A579000221BA2 /* ColorsGame_subject_5_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515D235A579000221BA2 /* ColorsGame_subject_5_3.wav */; };
-		251E518D235A579000221BA2 /* ColorsGame_subject_7_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515E235A579000221BA2 /* ColorsGame_subject_7_1.wav */; };
-		251E518E235A579000221BA2 /* ColorsGame_subject_5_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515F235A579000221BA2 /* ColorsGame_subject_5_2.wav */; };
+		251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E516D235A579000221BA2 /* ColorsGame_subject_10_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E516E235A579000221BA2 /* ColorsGame_subject_8_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513F235A578F00221BA2 /* ColorsGame_subject_8_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E516F235A579000221BA2 /* ColorsGame_color_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5140235A578F00221BA2 /* ColorsGame_color_6.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5170235A579000221BA2 /* ColorsGame_color_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5141235A578F00221BA2 /* ColorsGame_color_7.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5171235A579000221BA2 /* ColorsGame_subject_8_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5142235A578F00221BA2 /* ColorsGame_subject_8_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5172235A579000221BA2 /* ColorsGame_color_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5143235A578F00221BA2 /* ColorsGame_color_5.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5173235A579000221BA2 /* ColorsGame_color_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5144235A578F00221BA2 /* ColorsGame_color_4.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5174235A579000221BA2 /* ColorsGame_subject_8_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5145235A578F00221BA2 /* ColorsGame_subject_8_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5175235A579000221BA2 /* ColorsGame_color_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5146235A578F00221BA2 /* ColorsGame_color_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5176235A579000221BA2 /* ColorsGame_color_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5147235A578F00221BA2 /* ColorsGame_color_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5177235A579000221BA2 /* ColorsGame_color_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5148235A578F00221BA2 /* ColorsGame_color_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5178235A579000221BA2 /* ColorsGame_subject_2_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5149235A578F00221BA2 /* ColorsGame_subject_2_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5179235A579000221BA2 /* ColorsGame_color_10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514A235A578F00221BA2 /* ColorsGame_color_10.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517A235A579000221BA2 /* ColorsGame_subject_2_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514B235A578F00221BA2 /* ColorsGame_subject_2_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517B235A579000221BA2 /* ColorsGame_subject_2_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514C235A578F00221BA2 /* ColorsGame_subject_2_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517C235A579000221BA2 /* ColorsGame_subject_6_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514D235A578F00221BA2 /* ColorsGame_subject_6_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517D235A579000221BA2 /* ColorsGame_subject_4_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514E235A578F00221BA2 /* ColorsGame_subject_4_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517E235A579000221BA2 /* ColorsGame_color_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514F235A578F00221BA2 /* ColorsGame_color_8.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517F235A579000221BA2 /* ColorsGame_subject_4_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5150235A578F00221BA2 /* ColorsGame_subject_4_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5180235A579000221BA2 /* ColorsGame_subject_6_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5151235A578F00221BA2 /* ColorsGame_subject_6_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5181235A579000221BA2 /* ColorsGame_subject_4_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5152235A578F00221BA2 /* ColorsGame_subject_4_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5182235A579000221BA2 /* ColorsGame_subject_6_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5153235A578F00221BA2 /* ColorsGame_subject_6_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5183235A579000221BA2 /* ColorsGame_subject_1_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5154235A578F00221BA2 /* ColorsGame_subject_1_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5184235A579000221BA2 /* ColorsGame_subject_3_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5155235A579000221BA2 /* ColorsGame_subject_3_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5185235A579000221BA2 /* ColorsGame_subject_1_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5156235A579000221BA2 /* ColorsGame_subject_1_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5186235A579000221BA2 /* ColorsGame_subject_1_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5157235A579000221BA2 /* ColorsGame_subject_1_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5187235A579000221BA2 /* ColorsGame_subject_3_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5158235A579000221BA2 /* ColorsGame_subject_3_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5188235A579000221BA2 /* ColorsGame_subject_3_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5159235A579000221BA2 /* ColorsGame_subject_3_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5189235A579000221BA2 /* ColorsGame_subject_7_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515A235A579000221BA2 /* ColorsGame_subject_7_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518A235A579000221BA2 /* ColorsGame_subject_7_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515B235A579000221BA2 /* ColorsGame_subject_7_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518B235A579000221BA2 /* ColorsGame_subject_5_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515C235A579000221BA2 /* ColorsGame_subject_5_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518C235A579000221BA2 /* ColorsGame_subject_5_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515D235A579000221BA2 /* ColorsGame_subject_5_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518D235A579000221BA2 /* ColorsGame_subject_7_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515E235A579000221BA2 /* ColorsGame_subject_7_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518E235A579000221BA2 /* ColorsGame_subject_5_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515F235A579000221BA2 /* ColorsGame_subject_5_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E518F235A579000221BA2 /* ColorsGame_sad_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5161235A579000221BA2 /* ColorsGame_sad_3.wav */; };
 		251E5190235A579100221BA2 /* ColorsGame_sad_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5162235A579000221BA2 /* ColorsGame_sad_2.wav */; };
 		251E5191235A579100221BA2 /* ColorsGame_sad_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5163235A579000221BA2 /* ColorsGame_sad_1.wav */; };
@@ -82,10 +82,10 @@
 		251E5196235A579100221BA2 /* ColorsGame_fun_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5168235A579000221BA2 /* ColorsGame_fun_6.wav */; };
 		251E5197235A579100221BA2 /* ColorsGame_fun_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5169235A579000221BA2 /* ColorsGame_fun_5.wav */; };
 		251E5198235A579100221BA2 /* ColorsGame_fun_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E516A235A579000221BA2 /* ColorsGame_fun_4.wav */; };
-		251E519A235A583C00221BA2 /* ColorsGame_color_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5199235A583C00221BA2 /* ColorsGame_color_9.wav */; };
-		251E519E235A624A00221BA2 /* ColorsGame_subject_9_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519B235A624900221BA2 /* ColorsGame_subject_9_3.wav */; };
-		251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */; };
-		251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */; };
+		251E519A235A583C00221BA2 /* ColorsGame_color_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5199235A583C00221BA2 /* ColorsGame_color_9.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E519E235A624A00221BA2 /* ColorsGame_subject_9_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519B235A624900221BA2 /* ColorsGame_subject_9_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
@@ -3385,6 +3385,8 @@
 					AlphabetSounds,
 					AnimalsImage,
 					AnimalsSounds,
+					ColorsGameImage,
+					ColorsGameSounds,
 					IntroduceAlphabet,
 					IntroduceAnimals,
 					IntroduceMonsters,
@@ -4537,7 +4539,7 @@
 				);
 				MARKETING_VERSION = 1.7.0;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4567,7 +4569,7 @@
 				);
 				MARKETING_VERSION = 1.7.0;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4660,7 +4662,7 @@
 				);
 				MARKETING_VERSION = 1.7.0;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

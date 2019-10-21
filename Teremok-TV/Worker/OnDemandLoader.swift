@@ -25,6 +25,9 @@ class OnDemandLoader {
             case animalsImage = "AnimalsImage"
             case animalsSounds = "AnimalsSounds"
             case monstersImage = "MonstersImage"
+            case colorsGameImage = "ColorsGameImage"
+            case colorsGameSounds = "ColorsGameSounds"
+
         }
         enum Initial: String, CaseIterable {
             case onBoarding = "OnBoarding"

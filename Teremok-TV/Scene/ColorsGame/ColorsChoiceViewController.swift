@@ -109,7 +109,7 @@ class ColorsChoiceViewController: GameViewController {
         }
         input.colors.removeValue(forKey: color.key)
         displayChoice(color: color.value, wrong: gameHelper.randomColor(from: color.value), image: UIImage(named: color.key))
-        playSounds(color.value.soundUrl)
+        playSounds(gameHelper.getSounds(name: color.key))
     }
     
     private func displayChoice(color: ColorsMaster.Colors, wrong: ColorsMaster.Colors, image: UIImage?) {
