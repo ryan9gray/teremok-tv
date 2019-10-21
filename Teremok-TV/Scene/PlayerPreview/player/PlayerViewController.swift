@@ -95,13 +95,8 @@ class PlayerViewController: AVPlayerViewController {
         }
         player?.allowsExternalPlayback = false
         player?.actionAtItemEnd = .none
-        fullOverlay.playerLayer = AVPlayerLayer(player: player)
-        fullOverlay.playerLayer.frame = fullOverlay.view.layer.bounds
-        fullOverlay.playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         fullOverlay.startedPlaying()
     }
-
-
     
     deinit {
         print("PlayerViewController deinit")

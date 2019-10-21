@@ -54,12 +54,7 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     var totalDuration : TimeInterval = 0.0
     var currentDuration : TimeInterval = 0.0
 
-    var player: AVPlayer? {
-        didSet{
-            
-        }
-    }
-    var playerLayer: AVPlayerLayer!
+    var player: AVPlayer?
     @IBOutlet private var hud: UIActivityIndicatorView!
     
     
@@ -208,7 +203,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         doubleTapGesture.delegate = self
         view.addGestureRecognizer(doubleTapGesture)
         singleTapGesture.require(toFail: doubleTapGesture)
-        
     }
     
     @objc open func onSingleTapGesture(_ gesture: UITapGestureRecognizer) {
@@ -323,12 +317,12 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     deinit {
+        print("TTPlayerViewController deinit")
         stopTimer()
         delegate = nil
         removePlayerObservers()
         removePlayerItemObservers()
         removePlayerNotifations()
-        player = nil
     }
     
 

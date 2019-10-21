@@ -153,7 +153,6 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
         playerVC.willMove(toParent: nil)
         playerVC.view.removeFromSuperview()
         playerVC.removeFromParent()
-        playerVC = nil
     }
 }
 
