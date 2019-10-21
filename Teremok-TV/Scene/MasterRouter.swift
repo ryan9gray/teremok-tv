@@ -77,6 +77,7 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
             openMonster: navigateToMonster,
             openColors: navigateToColors
         )
+        vc.modalPresentationStyle = .fullScreen
         viewController?.present(vc, animated: true, completion: nil)
     }
 
@@ -86,6 +87,7 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
             openSettings: navigateToSettings,
             openAuthorization: navigateToReg
         )
+        vc.modalPresentationStyle = .fullScreen
         viewController?.present(vc, animated: true, completion: nil)
     }
 
@@ -95,19 +97,22 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
             openSettings: navigateToSettings,
             openAuthorization: navigateToReg
         )
+        vc.modalPresentationStyle = .fullScreen
         viewController?.present(vc, animated: true, completion: nil)
     }
 
     func navigateToMusic() {
         let music = MusicMasterViewController.instantiate(fromStoryboard: .music)
         music.output = MusicMasterViewController.Output(openSettings: navigateToSettings, openAuthorization: navigateToReg)
+        music.modalPresentationStyle = .fullScreen
         viewController?.present(music, animated: true, completion: nil)
     }
 
     func navigateToAnimals() {
-        let animals = AnimalsMasterViewController.instantiate(fromStoryboard: .animals)
-        animals.output = AnimalsMasterViewController.Output(openSettings: navigateToSettings, openAuthorization: navigateToReg)
-        viewController?.present(animals, animated: true, completion: nil)
+        let vc = AnimalsMasterViewController.instantiate(fromStoryboard: .animals)
+        vc.output = AnimalsMasterViewController.Output(openSettings: navigateToSettings, openAuthorization: navigateToReg)
+        vc.modalPresentationStyle = .fullScreen
+        viewController?.present(vc, animated: true, completion: nil)
     }
 
     func navigateToMonster() {
@@ -116,6 +121,7 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
             openSettings: navigateToSettings,
             openAuthorization: navigateToReg
         )
+        vc.modalPresentationStyle = .fullScreen
         viewController?.present(vc, animated: true, completion: nil)
     }
 
