@@ -83,9 +83,19 @@ class PlaylistsViewController: MusicViewController, PlaylistsDisplayLogic {
         NotificationCenter.default.addObserver(self, selector: #selector(setSelected), name: .SwichTrack, object: nil)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if let type = master?.type,
+            case .online(idx: let idx, playlist: let response) = type,
+            router?.dataStore?.albumId == response.id  {
+            collectionView.selectItem(at: IndexPath(row: idx, section: 0), animated: true, scrollPosition: .top)
+        }
+    }
+
     func displayPlaylist(_ playlist: Playlist.Item) {
         guard !playlist.tracks.isEmpty else {
-            self.present(errorString: "К сожалению, по вашему запросу ничего не найдено.") {
+            present(errorString: "К сожалению, по вашему запросу ничего не найдено.") {
                 self.masterRouter?.popChild()
             }
             return
@@ -94,14 +104,6 @@ class PlaylistsViewController: MusicViewController, PlaylistsDisplayLogic {
         self.playlist = playlist
         setImage(url: playlist.imageUrl)
         albumLbl.text = playlist.albumTitle
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            if let type = self.master?.type,
-                case .online(idx: let idx, playlist: let response) = type,
-                self.router?.dataStore?.albumId == response.id  {
-                self.collectionView.selectItem(at: IndexPath(row: idx, section: 0), animated: true, scrollPosition: .top)
-            }
-        }
     }
 
     func setImage(url: String) {
