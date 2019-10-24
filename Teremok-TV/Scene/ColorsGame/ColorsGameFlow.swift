@@ -19,8 +19,15 @@ class ColorsGameFlow  {
     var game: Game!
 
     private var isHard: Bool = false
+    private var checkIntro: Bool = true
 
     func startFlow() {
+        if checkIntro, !LocalStore.colorsGameIntroduce {
+            checkIntro = false
+            showIntroduce()
+            return
+        }
+
         game = Game()
         randomRound()
     }
@@ -106,9 +113,9 @@ class ColorsGameFlow  {
 
     private func showIntroduce() {
         let controller = IntroduceVideoViewController.instantiate(fromStoryboard: .common)
-        controller.video = .alphavite
+        controller.video = .colorsGame
         master?.router?.introduceController(viewController: controller, completion: { finish in
-            LocalStore.alphaviteIntroduce = finish
+            LocalStore.colorsGameIntroduce = finish
             self.startFlow()
         })
     }

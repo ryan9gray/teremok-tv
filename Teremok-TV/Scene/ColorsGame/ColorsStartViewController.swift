@@ -15,6 +15,7 @@ class ColorsStartViewController: GameViewController {
     @IBOutlet private var brushView: UIView!
     private var animationView: AnimationView = AnimationView(name: "brushAnimation")
     private let imageFillter = ImageFillter()
+    private var audioPlayer: AVAudioPlayer?
 
     @IBAction private func startTap(_ sender: Any) {
         //buttonPlayer?.play()
@@ -53,6 +54,21 @@ class ColorsStartViewController: GameViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        guard let mainSound = Bundle.main.path(forResource: ColorsMaster.Sound.main.rawValue, ofType: "wav")
+        else {
+            master?.present(errorString: "Игра загружается! Это может занять 1-2 минуты. Спасибо", completion: {
+                self.masterRouter?.dismiss()
+            })
+            return
+        }
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: mainSound))
+            audioPlayer?.prepareToPlay()
+        } catch {
+            print("no file)")
+        }
+        audioPlayer?.play()
         animationView.play()
     }
 

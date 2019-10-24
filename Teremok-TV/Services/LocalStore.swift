@@ -25,6 +25,7 @@ struct LocalStore {
     fileprivate static let animalsDifficultyKey = "animalsDifficultyKey"
     fileprivate static let alphaviteDifficultyKey = "alphaviteDifficultyKey"
     fileprivate static let colorsDifficultyKey = "colorsDifficultyKey"
+    fileprivate static let colorsGameIntroduceKey = "colorsGameIntroduceKey"
 
     fileprivate static let monsterIntroduceKey = "monsterIntroduceKey"
     
@@ -36,7 +37,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: animalsDifficultyKey)
-            userDefaults.synchronize()
         }
     }
 
@@ -46,7 +46,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: alphaviteDifficultyKey)
-            userDefaults.synchronize()
         }
     }
 
@@ -56,7 +55,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: colorsDifficultyKey)
-            userDefaults.synchronize()
         }
     }
 
@@ -66,7 +64,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: rateVersionKey)
-            userDefaults.synchronize()
         }
     }
 
@@ -77,7 +74,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: appOpenedCoundKey)
-            userDefaults.synchronize()
         }
     }
 
@@ -87,7 +83,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: "alphabetTip")
-            userDefaults.synchronize()
         }
     }
 
@@ -97,7 +92,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: "onBoarding")
-            userDefaults.synchronize()
         }
     }
 
@@ -107,7 +101,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: "animalsTip")
-            userDefaults.synchronize()
         }
     }
     
@@ -117,7 +110,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: "monsterTip")
-            userDefaults.synchronize()
         }
     }
 
@@ -127,7 +119,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: "monsterFreeGames")
-            userDefaults.synchronize()
         }
     }
     
@@ -137,7 +128,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: analiticsKey)
-            userDefaults.synchronize()
         }
     }
 
@@ -158,7 +148,6 @@ struct LocalStore {
     static func migration() -> Bool {
         if userDefaults.bool(forKey: migrationKey) {
             userDefaults.set(true, forKey: migrationKey)
-            userDefaults.synchronize()
             return false
         }
         else{
@@ -168,12 +157,10 @@ struct LocalStore {
 
     static func setfirstLaunch(){
         userDefaults.set(true, forKey: firstLaunchKey)
-        userDefaults.synchronize()
     }
     
     static func logout() {
         userDefaults.removeObject(forKey: accessTokenKey)
-        userDefaults.synchronize()
         //userDefaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
     }
 
@@ -184,7 +171,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: animalFirstIntroduce)
-            userDefaults.synchronize()
         }
     }
     static var secondAnimalsIntroduce: Bool {
@@ -193,7 +179,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: animalSecondIntroduce)
-            userDefaults.synchronize()
         }
     }
 
@@ -203,7 +188,6 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: alphaviteIntroduceKey)
-            userDefaults.synchronize()
         }
     }
     
@@ -213,7 +197,14 @@ struct LocalStore {
         }
         set {
             userDefaults.set(newValue, forKey: monsterIntroduceKey)
-            userDefaults.synchronize()
+        }
+    }
+    static var colorsGameIntroduce: Bool {
+        get {
+            return userDefaults.bool(forKey: colorsGameIntroduceKey)
+        }
+        set {
+            userDefaults.set(newValue, forKey: colorsGameIntroduceKey)
         }
     }
 }

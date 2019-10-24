@@ -17,6 +17,7 @@ class OnDemandLoader {
             case introduceAlphabet = "IntroduceAlphabet"
             case introduceAnimals = "IntroduceAnimals"
             case introduceMonsters = "IntroduceMonsters"
+            case introduceColorsGame = "IntroduceColorsGame"
         }
 
         enum Prefetch: String, CaseIterable {
@@ -70,6 +71,9 @@ class OnDemandLoader {
         if !LocalStore.monsterIntroduce {
             files.append(Tags.OnDemand.introduceMonsters.rawValue)
         }
+        if !LocalStore.colorsGameIntroduce {
+              files.append(Tags.OnDemand.introduceColorsGame.rawValue)
+          }
         if !LocalStore.secondAnimalsIntroduce, !LocalStore.firstAnimalsIntroduce {
             files.append(Tags.OnDemand.introduceAnimals.rawValue)
         }

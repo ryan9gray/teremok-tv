@@ -81,5 +81,6 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
         case start = "scene-2"
         case alphavite = "Pick_introduce"
         case monster = "monster_game_introduce"
+        case colorsGame = "colorsGame_introduce"
     }
 }

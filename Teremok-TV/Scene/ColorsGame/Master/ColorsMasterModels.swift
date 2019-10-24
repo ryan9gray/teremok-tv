@@ -133,6 +133,9 @@ enum ColorsMaster {
         case sad = "sad_green_1"
         case sadTwo = "sad_green_2"
     }
+    enum Sound: String {
+        case main = "colorsGameMain"
+    }
 }
 
 extension ColorsMaster.Colors {
