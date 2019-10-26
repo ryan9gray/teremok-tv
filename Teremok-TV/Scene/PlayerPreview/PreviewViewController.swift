@@ -61,16 +61,7 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     // MARK: Routing
 
     var playerVC: PlayerViewController!
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "playerSeg" {
-            if let container = segue.destination as? PlayerViewController {
-                playerVC = container
-                playerVC.fullOverlay.delegate = self
-            }
-        }
-    }
-    
+
     // MARK: View lifecycle
     
     @IBAction func backClick(_ sender: Any) {

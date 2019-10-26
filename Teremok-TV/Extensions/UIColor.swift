@@ -42,13 +42,16 @@ extension UIColor {
         static let redTwo                      = UIColor(hex: "FF0F0F")
 
         static let blueOne                      = UIColor(hex: "4FA4F3")
-        static let blueTwo                      = UIColor(hex: "015DB3")
+        static let blueTwo                      = UIColor(hex: "02499D")
         
-        static let lightBlueOne                      = UIColor(hex: "00E0FF")
-        static let lightBlueTwo                      = UIColor(hex: "0094FF")
+        static let lightBlueOne                      = UIColor(hex: "00FFF0")
+        static let lightBlueTwo                      = UIColor(hex: "00A3FF")
 
         static let yellowOne                      = UIColor(hex: "FFF62B")
         static let yellowTwo                      = UIColor(hex: "FFBF2B")
+
+        static let brownOne                      = UIColor(hex: "CA6807")
+        static let brownTwo                      = UIColor(hex: "733B03")
     }
 
     enum Alphavite {

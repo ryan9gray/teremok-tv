@@ -102,12 +102,11 @@ class AlphaviteCharsViewController: GameViewController {
                 self.imageContainer.alpha = 0.0
                 self.imageContainer.isHidden = true
                 self.stackView.layoutIfNeeded()
+        }, completion: { _ in
+            self.playSounds(self.gameHelper.getSounds(name: name)) { [weak self] in
+                self?.nextImage(char)
             }
-        )
-
-        playSounds(gameHelper.getSounds(name: name)) { [weak self] in
-            self?.nextImage(char)
-        }
+        })
     }
 
     private func nextImage(_ char: String) {

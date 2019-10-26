@@ -33,7 +33,9 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var playerSlider: TTPlayerSlider!
     @IBOutlet var bottomView: UIView!
     var isFullScreen = false
-    open fileprivate(set) var playerItem : AVPlayerItem?
+    
+    weak open fileprivate(set) var playerItem : AVPlayerItem?
+    weak var player: AVPlayer?
 
     fileprivate var timer : Timer = {
         let time = Timer()
@@ -54,7 +56,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     var totalDuration : TimeInterval = 0.0
     var currentDuration : TimeInterval = 0.0
 
-    var player: AVPlayer?
     @IBOutlet private var hud: UIActivityIndicatorView!
     
     
@@ -100,8 +101,16 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.clipsToBounds = true
         setUI()
         isPremium = Profile.current?.premium ?? false
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        view.layer.cornerRadius = isFullScreen ? 0 : 12
     }
 
     var isPremium = false
@@ -365,4 +374,9 @@ extension TTPlayerViewController {
     @objc internal func applicationWillEnterForeground(_ notification: Notification) {
         play()
     }
+}
+
+extension Selector {
+    static let applicationWillEnterForeground = #selector(TTPlayerViewController.applicationWillEnterForeground(_:))
+    static let applicationDidEnterBackground = #selector(TTPlayerViewController.applicationDidEnterBackground(_:))
 }

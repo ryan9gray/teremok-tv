@@ -74,12 +74,13 @@ class ColorsTeachingViewController: GameViewController {
                 self.objectContainer.alpha = 0.0
                 self.objectContainer.isHidden = true
                 self.stackView.layoutIfNeeded()
+        }, completion: {_ in
+            self.playSounds(color.soundUrl) { [weak self] in
+                  self?.nextImage(color)
             }
-        )
+        })
 
-        playSounds(color.soundUrl) { [weak self] in
-            self?.nextImage(color)
-        }
+
     }
 
     private func nextImage(_ color: ColorsMaster.Colors) {

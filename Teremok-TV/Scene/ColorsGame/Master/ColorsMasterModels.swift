@@ -93,6 +93,7 @@ enum ColorsMaster {
         Colors.orange: ["ColorsGame_subject_7_1", "ColorsGame_subject_7_2", "ColorsGame_subject_7_3"],
         Colors.lightBlue: ["ColorsGame_subject_8_1", "ColorsGame_subject_8_2", "ColorsGame_subject_8_3"],
         Colors.violet: ["ColorsGame_subject_9_1", "ColorsGame_subject_9_2", "ColorsGame_subject_9_3"]
+        //Colors.brown: ["ColorsGame_subject_10_1", "ColorsGame_subject_10_2", "ColorsGame_subject_10_3"]
     ]
     
     enum EmotionalsSad: String, CaseIterable {
@@ -160,6 +161,8 @@ extension ColorsMaster.Colors {
                     return [UIColor.ColorsGame.lightBlueOne, UIColor.ColorsGame.lightBlueTwo]
                 case .violet:
                     return [UIColor.ColorsGame.violetOne, UIColor.ColorsGame.violetTwo]
+                //case .brown:
+                    //return [UIColor.ColorsGame.brownOne, UIColor.ColorsGame.brownTwo]
             }
         }
     }
