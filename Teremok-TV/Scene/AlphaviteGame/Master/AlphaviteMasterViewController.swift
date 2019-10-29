@@ -85,7 +85,6 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
         catch {
             // report for an error
         }
-        displayProfile()
     }
 
     // MARK: Do something

@@ -11,7 +11,6 @@ import UIKit
 class GameMasterViewController: UIViewController {
     @IBOutlet var backgroundView: UIImageView!
     @IBOutlet var homeBtn: KeyButton!
-    @IBOutlet var avatarButton: AvatarButton!
     let startTime = Date()
 
     var output: Output!
@@ -23,7 +22,6 @@ class GameMasterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        displayProfile()
     }
 
     func openSettings() {
@@ -37,16 +35,4 @@ class GameMasterViewController: UIViewController {
             self.output.openAuthorization()
         }
     }
-
-    func displayProfile() {
-        guard let childs = Profile.current?.childs else {
-            avatarButton.isHidden = true
-            return
-        }
-
-        if let avatar = childs.first(where: {$0.current ?? false})?.pic {
-            avatarButton.setAvatar(linktoLoad: avatar)
-        }
-    }
-
 }

@@ -85,7 +85,14 @@ struct LocalStore {
             userDefaults.set(newValue, forKey: "alphabetTip")
         }
     }
-
+    static var colorsGameTip: Int {
+        get {
+            return userDefaults.integer(forKey: "colorsGameTip")
+        }
+        set {
+            userDefaults.set(newValue, forKey: "colorsGameTip")
+        }
+    }
     static var onBoarding: Bool {
         get {
             return userDefaults.bool(forKey: "onBoarding")

@@ -79,6 +79,20 @@ class ColorsStartViewController: GameStartViewController {
         }
         audioPlayer?.play()
         animationView.play()
+        showTips()
+    }
+
+    func showTips() {
+        if !avatarButton.isHidden, LocalStore.colorsGameTip < 3 {
+            LocalStore.alphabetTip += 1
+            var preferences = EasyTipView.Preferences()
+            preferences.drawing.font = Style.Font.istokWeb(size: 16)
+            preferences.drawing.foregroundColor = UIColor.View.titleText
+            preferences.drawing.backgroundColor = .white
+            preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
+            tipView = EasyTipView(text: "Здесь можно посмотреть статистику", preferences: preferences, delegate: self)
+            tipView?.show(animated: true, forView: avatarButton, withinSuperview: view)
+        }
     }
 
     private func setAnimation() {

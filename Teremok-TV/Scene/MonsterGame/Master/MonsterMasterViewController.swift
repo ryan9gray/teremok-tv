@@ -73,7 +73,6 @@ class MonsterMasterViewController: GameMasterViewController, MonsterMasterDispla
              }
          }
          }
-        displayProfile()
     }
 
     deinit {

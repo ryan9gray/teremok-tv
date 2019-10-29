@@ -73,17 +73,21 @@ class AnimalsMainViewController: GameStartViewController, AnimalsMainDisplayLogi
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        showTips()
+    }
+    
+    func showTips() {
         if !avatarButton.isHidden, LocalStore.animalsTip < 3 {
-            LocalStore.animalsTip += 1
+            LocalStore.alphabetTip += 1
             var preferences = EasyTipView.Preferences()
             preferences.drawing.font = Style.Font.istokWeb(size: 16)
             preferences.drawing.foregroundColor = UIColor.View.titleText
             preferences.drawing.backgroundColor = .white
             preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
             tipView = EasyTipView(text: "Здесь можно посмотреть статистику", preferences: preferences, delegate: self)
+            tipView?.show(animated: true, forView: avatarButton, withinSuperview: view)
         }
     }
-
     func showInfo() {
         let text = "Развивающая игра «Жила-была Царевна: Животные» даст возможность вашему малышу учить по 50 новых животных ежемесячно (ежемесячное обновление библиотеки животных). Интерфейс игры спроектирован таким образом, чтобы вместе с наименования животных ваш ребёнок мог учить и буквы. Еженедельная статистика в игре вам позволит оценивать прогресс в обучении вашего ребёнка. Надеемся, что игра понравится вашему малышу и вы сможете легко и весело давать ему новые знания вместе с нами!"
 
