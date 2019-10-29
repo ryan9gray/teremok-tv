@@ -25,6 +25,7 @@ protocol GameParentRouting: CommonRoutingLogic {
     func navigateMain()
 
     func dismiss()
+    func subscribeForNavigation(_ callback: @escaping  (_ available: Bool) -> Void) -> Subscription
 
     // for anmimals костыль
     func startFlow(_ idx: Int)

@@ -35,6 +35,10 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     func dismiss() {
         viewController?.dismiss(animated: true)
     }
+    private let navigationSubscriptions = Subscriptions<Bool>()
+    func subscribeForNavigation(_ callback: @escaping  (_ available: Bool) -> Void) -> Subscription {
+        navigationSubscriptions.add(callback)
+    }
     func introduceController<T: GameViewController>(viewController: T, completion: @escaping (Bool) -> Void)
         where T: IntroduceViewController {
         viewController.setAction { finish in
@@ -56,8 +60,16 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     var moduleRouter: MasterModuleDisplayLogic? {
         return viewController
     }
-    var childControllersStack = Stack<GameViewController>()
-    var modalChildVC: GameViewController?
+    var modalChildVC: GameViewController? {
+        didSet {
+            navigationSubscriptions.fire(canPop())
+        }
+    }
+    var childControllersStack = Stack<GameViewController>() {
+        didSet {
+            navigationSubscriptions.fire(canPop())
+        }
+    }
     
     func pushChild(_ vc: GameViewController){
         remove()

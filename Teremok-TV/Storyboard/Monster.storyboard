@@ -172,8 +172,7 @@
                                     <constraint firstAttribute="width" constant="50" id="2dD-DY-kmT"/>
                                     <constraint firstAttribute="height" constant="50" id="3fq-RD-o5R"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="ic-alphHome"/>
+                                <state key="normal" image="icHomeShadow"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="indent">
                                         <real key="value" value="5"/>
@@ -526,6 +525,7 @@
         <image name="ic-alphHome" width="31" height="29"/>
         <image name="ic-monsterBack" width="667" height="375"/>
         <image name="ic-monstergameTitle" width="423" height="158"/>
+        <image name="icHomeShadow" width="50" height="50"/>
         <image name="icPlayBlue" width="61" height="65"/>
         <image name="icUtka" width="29" height="35"/>
         <image name="monster_10_stat" width="202" height="226"/>

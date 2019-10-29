@@ -61,20 +61,25 @@ class ColorsMasterViewController: GameMasterViewController, ColorsMasterDisplayL
         }
     }
     // MARK: View lifecycle
+    private var navigationSubscription: Subscription?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-            interactor?.onDemand { [weak self] success in
-            DispatchQueue.main.async {
-                if success {
-                    self?.router?.navigateMain()
-                } else {
-                    self?.present(errorString: "Игра загружается, попробуйте позже") {
-                        self?.dismiss(animated: true)
-                    }
+        navigationSubscription = router?.subscribeForNavigation { [weak self] canPop in
+            self?.homeBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "icHomePurpl"), for: .normal)
+        }
+
+        interactor?.onDemand { [weak self] success in
+        DispatchQueue.main.async {
+            if success {
+                self?.router?.navigateMain()
+            } else {
+                self?.present(errorString: "Игра загружается, попробуйте позже") {
+                    self?.dismiss(animated: true)
                 }
             }
+        }
         }
     }
 

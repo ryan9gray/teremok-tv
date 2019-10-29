@@ -36,7 +36,10 @@ class ColorsMasterRouter: ColorsMasterRoutingLogic, ColorsMasterDataPassing {
     func navigateMain() {
         pushChild(viewControllerClass: ColorsStartViewController.self, storyboard: .colors)
     }
-
+    private let navigationSubscriptions = Subscriptions<Bool>()
+    func subscribeForNavigation(_ callback: @escaping  (_ available: Bool) -> Void) -> Subscription {
+        navigationSubscriptions.add(callback)
+    }
     /**
      Clean hierarchy
      */
@@ -54,8 +57,16 @@ class ColorsMasterRouter: ColorsMasterRoutingLogic, ColorsMasterDataPassing {
     var moduleRouter: MasterModuleDisplayLogic? {
         return viewController
     }
-    var childControllersStack = Stack<GameViewController>()
-    var modalChildVC: GameViewController?
+    var modalChildVC: GameViewController? {
+        didSet {
+            navigationSubscriptions.fire(canPop())
+        }
+    }
+    var childControllersStack = Stack<GameViewController>() {
+        didSet {
+            navigationSubscriptions.fire(canPop())
+        }
+    }
 
     func pushChild(_ vc: GameViewController){
         remove()

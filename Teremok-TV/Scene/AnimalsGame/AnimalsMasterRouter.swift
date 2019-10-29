@@ -14,7 +14,8 @@ import UIKit
 
 
 protocol AnimalsMasterRoutingLogic: GameParentRouting {
-    
+    func subscribeForNavigation(_ callback: @escaping  (_ available: Bool) -> Void) -> Subscription
+
 }
 
 protocol AnimalsMasterDataPassing {
@@ -26,6 +27,12 @@ class AnimalsMasterRouter: AnimalsMasterRoutingLogic, AnimalsMasterDataPassing {
 
     var dataStore: AnimalsMasterDataStore?
     var modalControllersQueue = Queue<UIViewController>()
+
+    private let navigationSubscriptions = Subscriptions<Bool>()
+
+    func subscribeForNavigation(_ callback: @escaping  (_ available: Bool) -> Void) -> Subscription {
+        navigationSubscriptions.add(callback)
+    }
 
     var isEasy: Bool {
         return dataStore?.isEasy ?? true
@@ -68,8 +75,16 @@ class AnimalsMasterRouter: AnimalsMasterRoutingLogic, AnimalsMasterDataPassing {
     var moduleRouter: MasterModuleDisplayLogic? {
         return viewController
     }
-    var modalChildVC: GameViewController?
-    var childControllersStack = Stack<GameViewController>()
+    var modalChildVC: GameViewController? {
+        didSet {
+            navigationSubscriptions.fire(canPop())
+        }
+    }
+    var childControllersStack = Stack<GameViewController>() {
+        didSet {
+            navigationSubscriptions.fire(canPop())
+        }
+    }
 
     func pushChild(_ vc: GameViewController){
         remove()

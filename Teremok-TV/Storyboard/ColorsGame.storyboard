@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorGameBack" translatesAutoresizingMaskIntoConstraints="NO" id="w4w-e9-b2I">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <rect key="frame" x="0.0" y="0.0" width="896.00000000000023" height="414"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYA-2S-ObB" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
                                 <rect key="frame" x="30" y="20" width="50" height="50"/>
@@ -36,7 +36,6 @@
                                     <constraint firstAttribute="height" constant="50" id="rFA-OW-DXn"/>
                                     <constraint firstAttribute="width" constant="50" id="yWX-Pm-03y"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="icHomePurpl"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="indent">
@@ -930,7 +929,7 @@
         <image name="ic-alphavitePlay" width="70" height="80"/>
         <image name="icBrush" width="175" height="180"/>
         <image name="icDifficultColorsGame" width="150" height="60"/>
-        <image name="icHomePurpl" width="31" height="29"/>
+        <image name="icHomePurpl" width="50" height="50"/>
         <image name="icMarkColorGame" width="125" height="125"/>
         <image name="icUtka" width="29" height="35"/>
     </resources>

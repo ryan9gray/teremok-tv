@@ -57,6 +57,7 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
     @IBOutlet var backgroundView: UIImageView!
     @IBOutlet private var backNavBtn: KeyButton!
     private let startTime = Date()
+    private var navigationSubscription: Subscription?
 
     @IBAction func backClick(_ sender: UIButton) {
         if (router?.canPop())! {
@@ -73,6 +74,10 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationSubscription = router?.subscribeForNavigation { [weak self] canPop in
+            self?.backNavBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "ic-alphHome"), for: .normal)
+        }
+        
         interactor?.onDemand { [weak self] success in
             DispatchQueue.main.async {
             if success {

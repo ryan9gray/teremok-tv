@@ -75,9 +75,9 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       //if ServiceConfiguration.activeConfiguration() == .prod  {
+       if ServiceConfiguration.activeConfiguration() == .prod  {
             audioPlayer?.play()
-        //}
+        }
     }
 
     override func viewDidDisappear(_ animated: Bool) {

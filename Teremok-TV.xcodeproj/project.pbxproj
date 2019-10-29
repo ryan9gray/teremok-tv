@@ -90,6 +90,9 @@
 		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
 		25493D9923684F9A0006FE18 /* snowstorm_blizzard_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9723684F9A0006FE18 /* snowstorm_blizzard_1.mp3 */; };
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
+		25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EF92368E4A90033D9CA /* Subscription.swift */; };
+		25C43EFD2368E4A90033D9CA /* SimpleSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */; };
+		25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFB2368E4A90033D9CA /* Subscriptions.swift */; };
 		25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9187236237B800D339C7 /* colorsGameMain.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		25DA918A236237B800D339C7 /* colorsGame_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceColorsGame, ); }; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
@@ -897,6 +900,9 @@
 		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
 		25493D9723684F9A0006FE18 /* snowstorm_blizzard_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snowstorm_blizzard_1.mp3; sourceTree = "<group>"; };
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
+		25C43EF92368E4A90033D9CA /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSubscription.swift; sourceTree = "<group>"; };
+		25C43EFB2368E4A90033D9CA /* Subscriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
 		25DA9187236237B800D339C7 /* colorsGameMain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = colorsGameMain.wav; sourceTree = "<group>"; };
 		25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorsGame_introduce.mp4; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1765,6 +1771,16 @@
 			path = Emotions;
 			sourceTree = "<group>";
 		};
+		25C43EF82368E4A90033D9CA /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				25C43EF92368E4A90033D9CA /* Subscription.swift */,
+				25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */,
+				25C43EFB2368E4A90033D9CA /* Subscriptions.swift */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
 		8BFE56BA8D2FDC0505E1093F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2607,6 +2623,7 @@
 		CAC2D4F82115A68200945003 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				25C43EF82368E4A90033D9CA /* Subscription */,
 				CAE1C41A211DACE10058C9C6 /* Data Storage  */,
 				CAC2D4F92115A68200945003 /* Network */,
 				CAC2D5072115A68200945003 /* Service */,
@@ -3973,6 +3990,7 @@
 				CAA445602157BF4F0023E340 /* CustomError.swift in Sources */,
 				CAFF985D232531A900003076 /* ColorsChoiceViewController.swift in Sources */,
 				CAE1C46E211DC8CA0058C9C6 /* AuthRouter.swift in Sources */,
+				25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */,
 				CA4C28C82145202A00CA264D /* SerialsService.swift in Sources */,
 				CAA6FDAE224BED99008C2F87 /* MusicMainCommand.swift in Sources */,
 				CA1C37AE214E5A7C00C8006D /* MasterRouter.swift in Sources */,
@@ -3986,6 +4004,7 @@
 				CA0053D4213BF7CA00AA187F /* UITableView.swift in Sources */,
 				CAF96231229970F7006E3046 /* AnimalsStatisticInteractor.swift in Sources */,
 				CAC0988E22FF12A800EFB01E /* UIKitExtensions.swift in Sources */,
+				25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */,
 				CAE1C433211DACE10058C9C6 /* AppLaunchInfoDefaults.swift in Sources */,
 				CA49E491212D330900711324 /* DeviceInfo.swift in Sources */,
 				111187F6231E8D6E00EBEFC0 /* MonsterService.swift in Sources */,
@@ -4160,6 +4179,7 @@
 				E76CD1A723326BE20094E29A /* OnDemandLoader.swift in Sources */,
 				CADB3D7C21F7B64E009467B8 /* BackgroundMediaWorker.swift in Sources */,
 				CA8EA70A2141363B00159451 /* RazdelCollectionViewCell.swift in Sources */,
+				25C43EFD2368E4A90033D9CA /* SimpleSubscription.swift in Sources */,
 				CAB08AFE2140512A002840E3 /* RazdCommand.swift in Sources */,
 				CA51E1CB22FECDC10028DF63 /* GameParentRouting.swift in Sources */,
 				CA49E4A4212D5A9200711324 /* MainInteractor.swift in Sources */,
