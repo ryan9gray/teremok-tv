@@ -55,7 +55,7 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
 
     // MARK: View lifecycle
     @IBOutlet var backgroundView: UIImageView!
-    @IBOutlet private var backNavBtn: TTAbstractMainButton!
+    @IBOutlet private var backNavBtn: KeyButton!
     private let startTime = Date()
 
     @IBAction func backClick(_ sender: UIButton) {

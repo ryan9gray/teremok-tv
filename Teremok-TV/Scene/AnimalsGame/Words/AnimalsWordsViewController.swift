@@ -17,8 +17,10 @@ class AnimalsWordsViewController: GameViewController {
     @IBOutlet private var collectionView: UICollectionView!
     @IBOutlet private var startButton: TTAbstractMainButton!
     private var audioPlayer: AVAudioPlayer?
+    private var needStop: Bool = false
 
     @IBAction func startClick(_ sender: Any) {
+        needStop = true
         output.startChoice()
     }
 
@@ -38,6 +40,13 @@ class AnimalsWordsViewController: GameViewController {
 
         prepareUI()
         displayAnimals(input.animals)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+
+        audioPlayer?.pause()
     }
 
     private func prepareUI(){
@@ -80,6 +89,7 @@ class AnimalsWordsViewController: GameViewController {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) { [weak self] in
             guard let self = self else { return }
+            guard !self.needStop else { return }
 
             if self.indexAnimals < (self.animals.count - 1) {
                 self.indexAnimals += 1
