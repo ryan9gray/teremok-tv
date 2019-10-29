@@ -87,6 +87,8 @@
 		251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */; };
+		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
+		25493D9923684F9A0006FE18 /* snowstorm_blizzard_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9723684F9A0006FE18 /* snowstorm_blizzard_1.mp3 */; };
 		25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9187236237B800D339C7 /* colorsGameMain.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		25DA918A236237B800D339C7 /* colorsGame_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceColorsGame, ); }; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
@@ -891,6 +893,8 @@
 		251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_1.wav; sourceTree = "<group>"; };
 		251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_2.wav; sourceTree = "<group>"; };
 		251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neskid-comica-bd.ttf"; sourceTree = "<group>"; };
+		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
+		25493D9723684F9A0006FE18 /* snowstorm_blizzard_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snowstorm_blizzard_1.mp3; sourceTree = "<group>"; };
 		25DA9187236237B800D339C7 /* colorsGameMain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = colorsGameMain.wav; sourceTree = "<group>"; };
 		25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorsGame_introduce.mp4; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2868,6 +2872,8 @@
 		CADB3D6E21F7AD4D009467B8 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				25493D9723684F9A0006FE18 /* snowstorm_blizzard_1.mp3 */,
+				25493D9623684F9A0006FE18 /* steps-in-snow.wav */,
 				CA2A911922022C2600CD77FD /* push_level_up.mp3 */,
 				CA2A911722022AD500CD77FD /* swipe_card_sound.wav */,
 				CA2A91152202293800CD77FD /* push_button_sound.wav */,
@@ -3527,6 +3533,7 @@
 				CA5100B822F6EACF00821C25 /* alphavite_21.wav in Resources */,
 				CA5100C922F6EACF00821C25 /* alphavite_19_word_2.wav in Resources */,
 				251E516E235A579000221BA2 /* ColorsGame_subject_8_1.wav in Resources */,
+				25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */,
 				CAD2103F231700DC006F2F08 /* MontserratAlternates-LightItalic.ttf in Resources */,
 				112860B6232BA6E30002852A /* monster_menu.mp3 in Resources */,
 				CAF961F522995FF3006E3046 /* animal_20.mp3 in Resources */,
@@ -3804,6 +3811,7 @@
 				CAF961FC22995FF3006E3046 /* animal_3.mp3 in Resources */,
 				CA652CEA2353510300291E4D /* main_green.json in Resources */,
 				CA04864322A845A60017B8A2 /* Round_7.json in Resources */,
+				25493D9923684F9A0006FE18 /* snowstorm_blizzard_1.mp3 in Resources */,
 				11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */,
 				CAD21048231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */,
 				251E5183235A579000221BA2 /* ColorsGame_subject_1_2.wav in Resources */,
