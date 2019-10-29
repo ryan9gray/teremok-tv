@@ -74,7 +74,10 @@ class OnDemandLoader {
         if !LocalStore.colorsGameIntroduce {
               files.append(Tags.OnDemand.introduceColorsGame.rawValue)
           }
-        if !LocalStore.secondAnimalsIntroduce, !LocalStore.firstAnimalsIntroduce {
+        if !LocalStore.firstAnimalsIntroduce {
+            files.append(Tags.OnDemand.introduceAnimals.rawValue)
+        }
+        if !LocalStore.secondAnimalsIntroduce {
             files.append(Tags.OnDemand.introduceAnimals.rawValue)
         }
         if !LocalStore.onBoarding {

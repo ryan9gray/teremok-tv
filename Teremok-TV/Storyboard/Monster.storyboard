@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uqq-Wf-7b4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uqq-Wf-7b4">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,11 +65,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxw-L6-xM0" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="732" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Vg4-aE-By1"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icUtka"/>
+                                <connections>
+                                    <action selector="avatarClick:" destination="acf-Iw-onH" eventType="touchUpInside" id="csR-UH-VhW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IpB-fd-Usu" firstAttribute="top" secondItem="dAm-zr-cyt" secondAttribute="top" id="5Tp-rV-Ft9"/>
                             <constraint firstItem="0Uu-aj-Jud" firstAttribute="leading" secondItem="dAm-zr-cyt" secondAttribute="leading" constant="140" id="5Vo-W5-RCy"/>
+                            <constraint firstItem="jxw-L6-xM0" firstAttribute="width" secondItem="jxw-L6-xM0" secondAttribute="height" multiplier="1:1" id="B6F-T6-Y0W"/>
                             <constraint firstItem="yF5-Eg-NHN" firstAttribute="top" secondItem="dAm-zr-cyt" secondAttribute="top" constant="140" id="CVe-9n-3wT"/>
                             <constraint firstAttribute="bottom" secondItem="IpB-fd-Usu" secondAttribute="bottom" id="Cpx-6v-l9L"/>
                             <constraint firstItem="0Uu-aj-Jud" firstAttribute="centerX" secondItem="eKl-vP-Hld" secondAttribute="centerX" id="G6I-l6-AfI"/>
@@ -77,11 +89,14 @@
                             <constraint firstItem="yF5-Eg-NHN" firstAttribute="centerX" secondItem="eKl-vP-Hld" secondAttribute="centerX" id="RPK-Xb-WL8"/>
                             <constraint firstAttribute="trailing" secondItem="IpB-fd-Usu" secondAttribute="trailing" id="a6n-uH-IHY"/>
                             <constraint firstItem="dAm-zr-cyt" firstAttribute="bottom" secondItem="0Uu-aj-Jud" secondAttribute="bottom" constant="30" id="aRx-YS-nog"/>
+                            <constraint firstItem="jxw-L6-xM0" firstAttribute="top" secondItem="dAm-zr-cyt" secondAttribute="top" constant="20" id="joq-YI-OCW"/>
                             <constraint firstItem="IpB-fd-Usu" firstAttribute="leading" secondItem="eKl-vP-Hld" secondAttribute="leading" id="v6E-R4-JRL"/>
+                            <constraint firstAttribute="trailing" secondItem="jxw-L6-xM0" secondAttribute="trailing" constant="30" id="z5f-Wb-5Ry"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dAm-zr-cyt"/>
                     </view>
                     <connections>
+                        <outlet property="avatarButton" destination="jxw-L6-xM0" id="1fZ-3D-NiS"/>
                         <outlet property="startEasy" destination="BnZ-j2-3RP" id="BTR-EC-Cu0"/>
                         <outlet property="startHard" destination="WVa-Zu-gHs" id="MYa-00-PfL"/>
                         <outlet property="startMedium" destination="4nO-Pv-Co7" id="pph-bp-1gx"/>
@@ -168,34 +183,19 @@
                                     <action selector="homeClick:" destination="uqq-Wf-7b4" eventType="touchUpInside" id="rcU-44-YrN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wE-wZ-2Ow" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="742" y="20" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="TOf-6K-AIJ"/>
-                                </constraints>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="icUtka"/>
-                                <connections>
-                                    <action selector="avatarClick:" destination="uqq-Wf-7b4" eventType="touchUpInside" id="EMV-ws-UpR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0wE-wZ-2Ow" firstAttribute="top" secondItem="3hc-F9-1gZ" secondAttribute="top" constant="20" id="4lM-Qi-tE3"/>
-                            <constraint firstAttribute="trailing" secondItem="0wE-wZ-2Ow" secondAttribute="trailing" constant="20" id="6Cm-AO-8DN"/>
                             <constraint firstItem="9W5-9i-4S5" firstAttribute="leading" secondItem="czV-1v-uky" secondAttribute="leading" id="FKn-z9-oCx"/>
                             <constraint firstItem="ySG-71-GXL" firstAttribute="leading" secondItem="czV-1v-uky" secondAttribute="leading" constant="30" id="JsG-d7-IQS"/>
                             <constraint firstItem="9W5-9i-4S5" firstAttribute="top" secondItem="czV-1v-uky" secondAttribute="top" id="MMW-uL-fHr"/>
                             <constraint firstAttribute="bottom" secondItem="9W5-9i-4S5" secondAttribute="bottom" id="RgF-mD-v9L"/>
                             <constraint firstAttribute="trailing" secondItem="9W5-9i-4S5" secondAttribute="trailing" id="qBR-vp-jsl"/>
-                            <constraint firstItem="0wE-wZ-2Ow" firstAttribute="width" secondItem="0wE-wZ-2Ow" secondAttribute="height" multiplier="1:1" id="ySa-K0-Nqu"/>
                             <constraint firstItem="ySG-71-GXL" firstAttribute="top" secondItem="3hc-F9-1gZ" secondAttribute="top" constant="20" id="zuT-ij-1t1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3hc-F9-1gZ"/>
                     </view>
                     <connections>
-                        <outlet property="avatarButton" destination="0wE-wZ-2Ow" id="k7W-D9-X7f"/>
                         <outlet property="backgroundView" destination="9W5-9i-4S5" id="sC5-PC-oy3"/>
                         <outlet property="homeBtn" destination="ySG-71-GXL" id="i4v-x4-Grh"/>
                     </connections>
@@ -361,9 +361,6 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="icUtka"/>
-                                <connections>
-                                    <action selector="avatarClick:" destination="uqq-Wf-7b4" eventType="touchUpInside" id="ffE-H0-avn"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-rd-j2j">
                                 <rect key="frame" x="233.66666666666663" y="199.66666666666666" width="345" height="2"/>

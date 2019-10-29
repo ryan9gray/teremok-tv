@@ -7,20 +7,23 @@
 //
 
 import UIKit
-import AVFoundation
+import AVKit
 
-class MonsterStartViewController: GameViewController {
+class MonsterStartViewController: GameStartViewController {
     @IBOutlet private var startEasy: KeyButton!
     @IBOutlet private var startMedium: KeyButton!
     @IBOutlet private var startHard: KeyButton!
-    
     private var buttonPlayer: AVAudioPlayer?
-    private var bgMusicPlayer: AVAudioPlayer?
+    private var audioPlayer: AVAudioPlayer?
 
     @IBAction func startGame(_ sender: UIButton) {
         buttonPlayer?.play()
         masterRouter?.startFlow(sender.tag)
     }
+
+    @IBAction func avatarClick(_ sender: Any) {
+        masterRouter?.openStatistic()
+     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +33,8 @@ class MonsterStartViewController: GameViewController {
         let menuMusic = URL(fileURLWithPath: Bundle.main.path(forResource: "monster_menu", ofType: "mp3")!)
 
         do {
-            bgMusicPlayer = try AVAudioPlayer(contentsOf: menuMusic)
-            bgMusicPlayer?.prepareToPlay()
+            audioPlayer = try AVAudioPlayer(contentsOf: menuMusic)
+            audioPlayer?.prepareToPlay()
         } catch {
             print("no file)")
         }
@@ -45,13 +48,24 @@ class MonsterStartViewController: GameViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        bgMusicPlayer?.play()
+
+        audioPlayer?.play()
+
+        if !avatarButton.isHidden, LocalStore.monsterTip < 3 {
+           LocalStore.monsterTip += 1
+           var preferences = EasyTipView.Preferences()
+           preferences.drawing.font = Style.Font.istokWeb(size: 16)
+           preferences.drawing.foregroundColor = UIColor.View.titleText
+           preferences.drawing.backgroundColor = .white
+           preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
+           tipView = EasyTipView(text: "Здесь можно посмотреть статистику", preferences: preferences, delegate: self)
+           tipView?.show(animated: true, forView: avatarButton, withinSuperview: view)
+        }
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
+     override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-        bgMusicPlayer?.stop()
+        audioPlayer?.pause()
     }
 }

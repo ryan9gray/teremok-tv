@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MonsterMasterRoutingLogic: GameParentRouting {
-    func openStatistic()
+
 }
 
 protocol MonsterMasterDataPassing {
@@ -35,13 +35,20 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     func dismiss() {
         viewController?.dismiss(animated: true)
     }
+    func introduceController<T: GameViewController>(viewController: T, completion: @escaping (Bool) -> Void)
+        where T: IntroduceViewController {
+        viewController.setAction { finish in
+            completion(finish)
+        }
+        viewController.modalPresentationStyle = .fullScreen
+        self.viewController?.present(viewController, animated: true, completion: nil)
+    }
     /**
      Clean hierarchy
      */
     func startFlow(_ idx: Int) {
         guard let controller = viewController else { return }
         
-        controller.tipView?.dismiss()
         let flow = MonsterGameFlow(master: controller)
         flow.startFlow(difficulty: idx)
     }

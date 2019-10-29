@@ -47,7 +47,6 @@ class ColorsMasterRouter: ColorsMasterRoutingLogic, ColorsMasterDataPassing {
     func startFlow(_ idx: Int) {
         guard let controller = viewController else { return }
 
-        controller.tipView?.dismiss()
         let flow = ColorsGameFlow(master: controller)
         flow.startFlow()
     }
@@ -97,6 +96,15 @@ class ColorsMasterRouter: ColorsMasterRoutingLogic, ColorsMasterDataPassing {
         }, completion: nil)
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.didMove(toParent: viewController)
+    }
+
+    func introduceController<T: GameViewController>(viewController: T, completion: @escaping (Bool) -> Void)
+        where T: IntroduceViewController {
+        viewController.setAction { finish in
+            completion(finish)
+        }
+        viewController.modalPresentationStyle = .fullScreen
+        self.viewController?.present(viewController, animated: true, completion: nil)
     }
 
     func presentNextChild<T: GameViewController>(viewController: T){

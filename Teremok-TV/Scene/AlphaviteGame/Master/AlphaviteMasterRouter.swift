@@ -46,7 +46,6 @@ class AlphaviteMasterRouter: AlphaviteMasterRoutingLogic, AlphaviteMasterDataPas
     func startFlow(_ idx: Int) {
         guard let controller = viewController else { return }
 
-        controller.tipView?.dismiss()
         let flow = AlphaviteGameFlow(master: controller)
         flow.startFlow()
     }
@@ -57,6 +56,15 @@ class AlphaviteMasterRouter: AlphaviteMasterRoutingLogic, AlphaviteMasterDataPas
     var childControllersStack = Stack<GameViewController>()
     var modalChildVC: GameViewController?
 
+    func introduceController<T: GameViewController>(viewController: T, completion: @escaping (Bool) -> Void)
+        where T: IntroduceViewController {
+        viewController.setAction { finish in
+            completion(finish)
+        }
+        viewController.modalPresentationStyle = .fullScreen
+        self.viewController?.present(viewController, animated: true, completion: nil)
+    }
+    
     func pushChild(_ vc: GameViewController){
         remove()
         childControllersStack.toEmpty()

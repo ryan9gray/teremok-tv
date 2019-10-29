@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Lottie
 
-class ColorsStartViewController: GameViewController {
+class ColorsStartViewController: GameStartViewController {
     @IBOutlet private var startButton: KeyButton!
     @IBOutlet private var brushView: UIView!
     private var animationView: AnimationView = AnimationView(name: "brushAnimation")
@@ -24,6 +24,9 @@ class ColorsStartViewController: GameViewController {
     
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var hardButton: UIButton!
+    @IBAction func avatarClick(_ sender: Any) {
+        masterRouter?.openStatistic()
+    }
     
     @IBAction func difficultTap(_ sender: UIButton) {
         setDifficults(isHard: sender.tag == 88)
@@ -49,6 +52,12 @@ class ColorsStartViewController: GameViewController {
         hardButton.setBackgroundImage(UIImage(named: "icDifficultColorsGame"), for: .selected)
         hardButton.setBackgroundImage(imageFillter.monochrome(UIImage(named: "icDifficultColorsGame")), for: .normal)
         setDifficults(isHard: LocalStore.colorsIsHard)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        audioPlayer?.pause()
     }
 
     override func viewDidAppear(_ animated: Bool) {

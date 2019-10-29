@@ -31,6 +31,21 @@ class AnimalsMasterRouter: AnimalsMasterRoutingLogic, AnimalsMasterDataPassing {
         return dataStore?.isEasy ?? true
     }
     // Parent
+    func introduceController<T: GameViewController>(viewController: T, completion: @escaping (Bool) -> Void)
+        where T: IntroduceViewController {
+        viewController.setAction { finish in
+            completion(finish)
+        }
+        viewController.modalPresentationStyle = .fullScreen
+        self.viewController?.present(viewController, animated: true, completion: nil)
+    }
+
+    func openStatistic() {
+        let controller = AnimalsStatisticViewController.instantiate(fromStoryboard: .animals)
+        guard var dataStore = controller.router?.dataStore else { return }
+        dataStore.isEasy = !LocalStore.animalsIsHard
+        presentNextChild(viewController: controller)
+    }
 
     func navigateMain() {
         pushChild(viewControllerClass: AnimalsMainViewController.self, storyboard: .animals)

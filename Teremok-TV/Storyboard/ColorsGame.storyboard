@@ -47,34 +47,19 @@
                                     <action selector="homeClick:" destination="oxA-kS-hqY" eventType="touchUpInside" id="OPa-gf-1YS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6J-Ge-CH7" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="826" y="20" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="9Rx-M4-EOa"/>
-                                </constraints>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="icUtka"/>
-                                <connections>
-                                    <action selector="avatarClick:" destination="oxA-kS-hqY" eventType="touchUpInside" id="RDp-f0-jZ0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="q6J-Ge-CH7" secondAttribute="trailing" constant="20" id="1SG-zm-FOE"/>
                             <constraint firstItem="w4w-e9-b2I" firstAttribute="top" secondItem="5vf-Of-5R6" secondAttribute="top" id="4M7-bx-lEB"/>
                             <constraint firstAttribute="trailing" secondItem="w4w-e9-b2I" secondAttribute="trailing" id="Mxg-H8-Z2c"/>
-                            <constraint firstItem="q6J-Ge-CH7" firstAttribute="top" secondItem="Zbt-j7-EGZ" secondAttribute="top" constant="20" id="OBo-CH-nOd"/>
                             <constraint firstItem="w4w-e9-b2I" firstAttribute="leading" secondItem="5vf-Of-5R6" secondAttribute="leading" id="VT9-w7-RuZ"/>
-                            <constraint firstItem="dYA-2S-ObB" firstAttribute="top" secondItem="Zbt-j7-EGZ" secondAttribute="top" constant="20" id="Wdj-uy-wbB"/>
+                            <constraint firstItem="dYA-2S-ObB" firstAttribute="top" secondItem="5vf-Of-5R6" secondAttribute="top" constant="20" id="Wdj-uy-wbB"/>
                             <constraint firstItem="dYA-2S-ObB" firstAttribute="leading" secondItem="5vf-Of-5R6" secondAttribute="leading" constant="30" id="h6t-J2-Jax"/>
-                            <constraint firstItem="q6J-Ge-CH7" firstAttribute="width" secondItem="q6J-Ge-CH7" secondAttribute="height" multiplier="1:1" id="l99-pn-YqG"/>
                             <constraint firstAttribute="bottom" secondItem="w4w-e9-b2I" secondAttribute="bottom" id="ze9-Qg-OCM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zbt-j7-EGZ"/>
                     </view>
                     <connections>
-                        <outlet property="avatarButton" destination="q6J-Ge-CH7" id="hQu-Fr-tyc"/>
                         <outlet property="backgroundView" destination="w4w-e9-b2I" id="iC4-za-kQ6"/>
                         <outlet property="homeBtn" destination="dYA-2S-ObB" id="9rW-Z0-Rct"/>
                     </connections>
@@ -292,21 +277,36 @@
                                     <constraint firstAttribute="height" constant="60" id="WO1-zz-ug9"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgt-YT-EnK" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="816" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="msj-os-ysu"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icUtka"/>
+                                <connections>
+                                    <action selector="avatarClick:" destination="SH1-KP-pWk" eventType="touchUpInside" id="umk-2m-kPS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="c0O-jz-IMz" firstAttribute="centerX" secondItem="ptf-sM-dwg" secondAttribute="centerX" id="4Bb-I7-h0r"/>
                             <constraint firstItem="n1i-oi-oIF" firstAttribute="centerX" secondItem="ptf-sM-dwg" secondAttribute="centerX" id="8Tn-zr-imN"/>
+                            <constraint firstItem="mgt-YT-EnK" firstAttribute="width" secondItem="mgt-YT-EnK" secondAttribute="height" multiplier="1:1" id="9Lr-6G-zYC"/>
                             <constraint firstItem="Q3W-vx-GD8" firstAttribute="top" secondItem="C8o-Hd-arP" secondAttribute="top" id="AAv-Db-ifn"/>
                             <constraint firstItem="n1i-oi-oIF" firstAttribute="top" secondItem="Q3W-vx-GD8" secondAttribute="bottom" constant="14" id="NIC-hW-FFD"/>
                             <constraint firstItem="C8o-Hd-arP" firstAttribute="trailing" secondItem="Q3W-vx-GD8" secondAttribute="trailing" constant="100" id="ZoU-ca-Giv"/>
                             <constraint firstItem="C8o-Hd-arP" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="c0O-jz-IMz" secondAttribute="bottom" constant="4" id="bnt-Ix-78D"/>
+                            <constraint firstItem="mgt-YT-EnK" firstAttribute="top" secondItem="C8o-Hd-arP" secondAttribute="top" constant="20" id="cg5-cM-m2V"/>
                             <constraint firstItem="c0O-jz-IMz" firstAttribute="top" secondItem="n1i-oi-oIF" secondAttribute="bottom" constant="10" id="dKR-Px-l2Y"/>
                             <constraint firstItem="Q3W-vx-GD8" firstAttribute="leading" secondItem="C8o-Hd-arP" secondAttribute="leading" constant="100" id="wJg-L4-3Ws"/>
+                            <constraint firstAttribute="trailing" secondItem="mgt-YT-EnK" secondAttribute="trailing" constant="30" id="xMN-7F-tb8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C8o-Hd-arP"/>
                     </view>
                     <connections>
+                        <outlet property="avatarButton" destination="mgt-YT-EnK" id="0Zi-3N-54Y"/>
                         <outlet property="brushView" destination="Q3W-vx-GD8" id="hh9-LG-1Qd"/>
                         <outlet property="easyButton" destination="dhz-jJ-yZZ" id="7gN-az-joi"/>
                         <outlet property="hardButton" destination="InP-iB-Ask" id="gjZ-cb-lAL"/>

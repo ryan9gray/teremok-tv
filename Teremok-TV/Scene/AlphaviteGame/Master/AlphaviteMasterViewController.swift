@@ -55,11 +55,6 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
 
     // MARK: View lifecycle
 
-    @IBAction func avatarClick(_ sender: Any) {
-        tipView?.dismiss()
-        router?.openStatistic()
-    }
-
     @IBAction private func homeClick(_ sender: Any) {
         if router?.canPop() ?? false {
             router?.popChild()
@@ -72,6 +67,7 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
         super.viewDidLoad()
 
         interactor?.onDemand { [weak self] success in
+            DispatchQueue.main.async {
             if success {
                 self?.router?.navigateMain()
             } else {
@@ -79,7 +75,7 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
                     self?.dismiss(animated: true)
                 }
             }
-        
+            }
         }
         do {
             //Preparation to play
@@ -90,21 +86,6 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
             // report for an error
         }
         displayProfile()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        if !avatarButton.isHidden, LocalStore.alphabetTip < 3 {
-            LocalStore.alphabetTip += 1
-            var preferences = EasyTipView.Preferences()
-            preferences.drawing.font = Style.Font.istokWeb(size: 16)
-            preferences.drawing.foregroundColor = UIColor.View.titleText
-            preferences.drawing.backgroundColor = .white
-            preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
-            tipView = EasyTipView(text: "Здесь можно посмотреть статистику", preferences: preferences, delegate: self)
-            tipView?.show(animated: true, forView: avatarButton, withinSuperview: view)
-        }
     }
 
     // MARK: Do something

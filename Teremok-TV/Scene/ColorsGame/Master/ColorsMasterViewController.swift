@@ -53,11 +53,6 @@ class ColorsMasterViewController: GameMasterViewController, ColorsMasterDisplayL
         router.dataStore = interactor
     }
 
-    @IBAction func avatarClick(_ sender: Any) {
-        tipView?.dismiss()
-        router?.openStatistic()
-    }
-
     @IBAction private func homeClick(_ sender: Any) {
         if router?.canPop() ?? false {
             router?.popChild()

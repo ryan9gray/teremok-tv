@@ -13,7 +13,6 @@ class GameMasterViewController: UIViewController {
     @IBOutlet var homeBtn: KeyButton!
     @IBOutlet var avatarButton: AvatarButton!
     let startTime = Date()
-    var tipView: EasyTipView?
 
     var output: Output!
 

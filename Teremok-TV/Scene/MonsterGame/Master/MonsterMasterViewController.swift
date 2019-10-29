@@ -51,11 +51,6 @@ class MonsterMasterViewController: GameMasterViewController, MonsterMasterDispla
     
     // MARK: View lifecycle
 
-    @IBAction func avatarClick(_ sender: Any) {
-        tipView?.dismiss()
-        router?.openStatistic()
-    }
-    
     @IBAction private func homeClick(_ sender: Any) {
         if router?.canPop() ?? false {
             router?.popChild()
@@ -79,21 +74,6 @@ class MonsterMasterViewController: GameMasterViewController, MonsterMasterDispla
          }
          }
         displayProfile()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if !avatarButton.isHidden, LocalStore.monsterTip < 3 {
-            LocalStore.monsterTip += 1
-            var preferences = EasyTipView.Preferences()
-            preferences.drawing.font = Style.Font.istokWeb(size: 16)
-            preferences.drawing.foregroundColor = UIColor.View.titleText
-            preferences.drawing.backgroundColor = .white
-            preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
-            tipView = EasyTipView(text: "Здесь можно посмотреть статистику", preferences: preferences, delegate: self)
-            tipView?.show(animated: true, forView: avatarButton, withinSuperview: view)
-        }
     }
 
     deinit {
