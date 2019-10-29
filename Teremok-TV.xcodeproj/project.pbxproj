@@ -89,6 +89,7 @@
 		251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */; };
 		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
 		25493D9923684F9A0006FE18 /* snowstorm_blizzard_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9723684F9A0006FE18 /* snowstorm_blizzard_1.mp3 */; };
+		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
 		25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9187236237B800D339C7 /* colorsGameMain.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		25DA918A236237B800D339C7 /* colorsGame_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceColorsGame, ); }; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
@@ -895,6 +896,7 @@
 		251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neskid-comica-bd.ttf"; sourceTree = "<group>"; };
 		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
 		25493D9723684F9A0006FE18 /* snowstorm_blizzard_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snowstorm_blizzard_1.mp3; sourceTree = "<group>"; };
+		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
 		25DA9187236237B800D339C7 /* colorsGameMain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = colorsGameMain.wav; sourceTree = "<group>"; };
 		25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorsGame_introduce.mp4; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2077,6 +2079,7 @@
 				CAE3648B22918181003E891D /* AnimalsMainModels.swift */,
 				CAE3648C22918181003E891D /* AnimalsMainViewController.swift */,
 				CAE3648D22918181003E891D /* AnimalsMainInteractor.swift */,
+				25493D9A23685F650006FE18 /* GameStartViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -4201,6 +4204,7 @@
 				CA80481E21416836000A3C5B /* SerialViewController.swift in Sources */,
 				CAF9622C229970F7006E3046 /* AnimalsStatisticPresenter.swift in Sources */,
 				CAF4C108214B054A00954AA8 /* AuthService.swift in Sources */,
+				25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */,
 				11604AD7231F8107001D1C7F /* MonsterStatisticResponse.swift in Sources */,
 				CADE0E442118A33E00CC9871 /* LocalStore.swift in Sources */,
 				CAE1C473211DC9190058C9C6 /* UIWindow.swift in Sources */,
