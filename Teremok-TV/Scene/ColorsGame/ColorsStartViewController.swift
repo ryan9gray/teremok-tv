@@ -84,7 +84,7 @@ class ColorsStartViewController: GameStartViewController {
 
     func showTips() {
         if !avatarButton.isHidden, LocalStore.colorsGameTip < 3 {
-            LocalStore.alphabetTip += 1
+            LocalStore.colorsGameTip += 1
             var preferences = EasyTipView.Preferences()
             preferences.drawing.font = Style.Font.istokWeb(size: 16)
             preferences.drawing.foregroundColor = UIColor.View.titleText

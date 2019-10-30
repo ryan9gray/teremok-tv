@@ -29,7 +29,8 @@
                     <rect key="frame" x="20" y="0.0" width="30" height="30"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="s2l-4h-xNQ" secondAttribute="height" multiplier="1:1" id="A3P-rs-iNH"/>
+                        <constraint firstAttribute="width" constant="30" id="Ukf-Q6-wsl"/>
+                        <constraint firstAttribute="height" constant="30" id="fAq-4w-Pkp"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

@@ -86,6 +86,8 @@ class ColorsGameStatViewController: GameViewController, ColorsGameStatDisplayLog
     }
 
     func showStats(_ model: Input) {
+        rightStackView.subviews.forEach { $0.removeFromSuperview() }
+        leftStackView.subviews.forEach { $0.removeFromSuperview() }
         model.good.forEach { key, value in
             guard let key = key else { return }
             let view = ColorsGameStatView.fromNib()

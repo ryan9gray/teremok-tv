@@ -87,8 +87,8 @@
 		251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */; };
+		253E7E2C2369E5ED003FF569 /* snowstorm_blizzard_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */; };
 		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
-		25493D9923684F9A0006FE18 /* snowstorm_blizzard_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9723684F9A0006FE18 /* snowstorm_blizzard_1.mp3 */; };
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
 		25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EF92368E4A90033D9CA /* Subscription.swift */; };
 		25C43EFD2368E4A90033D9CA /* SimpleSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */; };
@@ -332,7 +332,6 @@
 		CA61D92322A445A900E3D603 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61D92222A445A900E3D603 /* UPCarouselFlowLayout.swift */; };
 		CA62A71E23512B8F0083FD4F /* ColorsGameStatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71823512B8F0083FD4F /* ColorsGameStatPresenter.swift */; };
 		CA62A72023512B8F0083FD4F /* ColorsGameStatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71A23512B8F0083FD4F /* ColorsGameStatRouter.swift */; };
-		CA62A72123512B8F0083FD4F /* ColorsGameStatModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71B23512B8F0083FD4F /* ColorsGameStatModels.swift */; };
 		CA62A72223512B8F0083FD4F /* ColorsGameStatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */; };
 		CA62A72323512B8F0083FD4F /* ColorsGameStatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */; };
 		CA652CE52353510300291E4D /* happy_green_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDB2353510200291E4D /* happy_green_1.json */; };
@@ -897,8 +896,8 @@
 		251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_1.wav; sourceTree = "<group>"; };
 		251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_2.wav; sourceTree = "<group>"; };
 		251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neskid-comica-bd.ttf"; sourceTree = "<group>"; };
+		253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snowstorm_blizzard_1.wav; sourceTree = "<group>"; };
 		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
-		25493D9723684F9A0006FE18 /* snowstorm_blizzard_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snowstorm_blizzard_1.mp3; sourceTree = "<group>"; };
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
 		25C43EF92368E4A90033D9CA /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSubscription.swift; sourceTree = "<group>"; };
@@ -1144,7 +1143,6 @@
 		CA61D92222A445A900E3D603 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		CA62A71823512B8F0083FD4F /* ColorsGameStatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatPresenter.swift; sourceTree = "<group>"; };
 		CA62A71A23512B8F0083FD4F /* ColorsGameStatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatRouter.swift; sourceTree = "<group>"; };
-		CA62A71B23512B8F0083FD4F /* ColorsGameStatModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatModels.swift; sourceTree = "<group>"; };
 		CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatViewController.swift; sourceTree = "<group>"; };
 		CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatInteractor.swift; sourceTree = "<group>"; };
 		CA652CDB2353510200291E4D /* happy_green_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_green_1.json; sourceTree = "<group>"; };
@@ -2221,7 +2219,6 @@
 			children = (
 				CA62A71823512B8F0083FD4F /* ColorsGameStatPresenter.swift */,
 				CA62A71A23512B8F0083FD4F /* ColorsGameStatRouter.swift */,
-				CA62A71B23512B8F0083FD4F /* ColorsGameStatModels.swift */,
 				CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */,
 				CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */,
 			);
@@ -2892,7 +2889,7 @@
 		CADB3D6E21F7AD4D009467B8 /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				25493D9723684F9A0006FE18 /* snowstorm_blizzard_1.mp3 */,
+				253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */,
 				25493D9623684F9A0006FE18 /* steps-in-snow.wav */,
 				CA2A911922022C2600CD77FD /* push_level_up.mp3 */,
 				CA2A911722022AD500CD77FD /* swipe_card_sound.wav */,
@@ -3727,6 +3724,7 @@
 				251E5198235A579100221BA2 /* ColorsGame_fun_4.wav in Resources */,
 				CA2A91162202293800CD77FD /* push_button_sound.wav in Resources */,
 				CAF961D522995FF3006E3046 /* animal_14.mp3 in Resources */,
+				253E7E2C2369E5ED003FF569 /* snowstorm_blizzard_1.wav in Resources */,
 				CA04863E22A845A60017B8A2 /* Round_9.json in Resources */,
 				CA5100C522F6EACF00821C25 /* alphavite_1_word_1.wav in Resources */,
 				CAD21045231700DC006F2F08 /* MontserratAlternates-Thin.ttf in Resources */,
@@ -3831,7 +3829,6 @@
 				CAF961FC22995FF3006E3046 /* animal_3.mp3 in Resources */,
 				CA652CEA2353510300291E4D /* main_green.json in Resources */,
 				CA04864322A845A60017B8A2 /* Round_7.json in Resources */,
-				25493D9923684F9A0006FE18 /* snowstorm_blizzard_1.mp3 in Resources */,
 				11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */,
 				CAD21048231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */,
 				251E5183235A579000221BA2 /* ColorsGame_subject_1_2.wav in Resources */,
@@ -4079,7 +4076,6 @@
 				CAE1C471211DC8CA0058C9C6 /* AuthInteractor.swift in Sources */,
 				CAC2D5322115A68300945003 /* ModalPresentable.swift in Sources */,
 				CA62A71E23512B8F0083FD4F /* ColorsGameStatPresenter.swift in Sources */,
-				CA62A72123512B8F0083FD4F /* ColorsGameStatModels.swift in Sources */,
 				CAC2D5292115A68300945003 /* Collection.swift in Sources */,
 				CAFF984F2325305300003076 /* ColorsMasterPresenter.swift in Sources */,
 				CAE6792B235119F800CBCDB3 /* ColorsGameStatView.swift in Sources */,

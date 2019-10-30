@@ -80,7 +80,7 @@ class AnimalsMainViewController: GameStartViewController, AnimalsMainDisplayLogi
     
     func showTips() {
         if !avatarButton.isHidden, LocalStore.animalsTip < 3 {
-            LocalStore.alphabetTip += 1
+            LocalStore.animalsTip += 1
             var preferences = EasyTipView.Preferences()
             preferences.drawing.font = Style.Font.istokWeb(size: 16)
             preferences.drawing.foregroundColor = UIColor.View.titleText

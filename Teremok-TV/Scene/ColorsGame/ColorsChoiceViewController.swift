@@ -108,22 +108,21 @@ class ColorsChoiceViewController: GameViewController {
             return
         }
         input.colors.removeValue(forKey: color.key)
-        displayChoice(color: color.value, wrong: gameHelper.randomColor(from: color.value), image: UIImage(named: color.key))
-        playSounds(gameHelper.getSounds(name: color.key))
+        displayChoice(color: color, wrong: gameHelper.randomColor(from: color.value), image: UIImage(named: color.key))
     }
     
-    private func displayChoice(color: ColorsMaster.Colors, wrong: ColorsMaster.Colors, image: UIImage?) {
+    private func displayChoice(color: (key: String, value: ColorsMaster.Colors), wrong: ColorsMaster.Colors, image: UIImage?) {
         reset()
         right = GameModel.Option(rawValue: Int.random(in: 0...1))!
         currentImage = image
-        currentColor = color
+        currentColor = color.value
         switch right {
             case .left:
-                leftView.setGradient(color)
+                leftView.setGradient(color.value)
                 rightView.setGradient(wrong)
             case .right:
                 leftView.setGradient(wrong)
-                rightView.setGradient(color)
+                rightView.setGradient(color.value)
         }
         UIView.animate(
             withDuration: 0.5,
@@ -137,6 +136,8 @@ class ColorsChoiceViewController: GameViewController {
                 self.leftView.isHidden = false
                 self.rightView.isHidden = false
                 self.stackView.layoutIfNeeded()
+        }, completion: { _ in
+            self.playSounds(self.gameHelper.getSounds(name: color.key))
         })
         imageContainer.borderColor = UIColor.Alphavite.blueTwo
         imageView.image = imageFillter.monochrome(image)

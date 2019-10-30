@@ -50,7 +50,10 @@ class MonsterStartViewController: GameStartViewController {
         super.viewDidAppear(animated)
 
         audioPlayer?.play()
+        showTips()
+    }
 
+    private func showTips() {
         if !avatarButton.isHidden, LocalStore.monsterTip < 3 {
            LocalStore.monsterTip += 1
            var preferences = EasyTipView.Preferences()
