@@ -26,7 +26,7 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
         // Initialization code
         restoreButton.text = "Восстановить подписку"
         purchaseButton.gradientColors = Style.Gradients.yellow.value
-        labels.forEach { $0.textColor = UIColor.View.Label.titleText }
+        labels.forEach { $0.textColor = UIColor.Label.titleText }
     }
     
     @IBAction private func purchaseTap(_ sender: Any) {
@@ -75,7 +75,7 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
         } else {
             purchaseButton.gradientColors = Style.Gradients.yellow.value
             purchaseButton.setTitle("Оформить", for: .normal)
-            purchaseButton.setTitleColor(UIColor.View.Label.titleText, for: .normal)
+            purchaseButton.setTitleColor(UIColor.Label.titleText, for: .normal)
 
         }
         input.updatePrice(subscription) { [weak self] price in

@@ -14,7 +14,7 @@ class AvatarButton: RoundEdgeButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.borderColor = UIColor.Button.yellowBase
+        self.borderColor = UIColor.View.yellowBase
         self.borderWidth = 5
         self.backgroundColor = .white
         clipsToBounds = true

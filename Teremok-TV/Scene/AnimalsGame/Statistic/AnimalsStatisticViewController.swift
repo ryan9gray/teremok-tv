@@ -81,9 +81,9 @@ class AnimalsStatisticViewController: GameViewController, AnimalsStatisticDispla
         displayProfile()
         view.layoutSubviews()
         
-        speedLabel.textColor = UIColor.View.Label.grass
-        answersLabel.textColor = UIColor.View.Label.orange
-        scoreLabel.textColor = UIColor.View.Label.ocean
+        speedLabel.textColor = UIColor.Label.grass
+        answersLabel.textColor = UIColor.Label.orange
+        scoreLabel.textColor = UIColor.Label.ocean
     }
 
     func displayProfile() {

@@ -170,7 +170,7 @@ class SearchMusicViewController: MusicViewController, SearchMusicDisplayLogic {
 
     func putColourFormattedTextInTextField(autocompleteResult: String, userQuery : String) {
         let colouredString: NSMutableAttributedString = NSMutableAttributedString(string: userQuery + autocompleteResult)
-        colouredString.addAttribute(.foregroundColor, value: UIColor.View.Label.gray, range: NSRange(location: userQuery.count,length:autocompleteResult.count))
+        colouredString.addAttribute(.foregroundColor, value: UIColor.Label.gray, range: NSRange(location: userQuery.count,length:autocompleteResult.count))
         searchFld.attributedText = colouredString
     }
     func moveCaretToEndOfUserQueryPosition(userQuery : String) {

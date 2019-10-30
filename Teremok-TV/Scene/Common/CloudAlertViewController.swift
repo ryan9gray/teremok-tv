@@ -63,7 +63,7 @@ class AgreementViewController: CloudAlertViewController, UITextViewDelegate  {
         super.viewDidLoad()
         checkbox.boxType = .square
         checkbox.markType = .checkmark
-        checkbox.tintColor = UIColor.View.yellow
+        checkbox.tintColor = UIColor.View.yellowBase
         checkbox.checkState = .checked
         setAttrebute()
     }

@@ -34,8 +34,8 @@ class MonsterGameResultsViewController: GameViewController {
         super.viewDidLoad()
         timeLbl.text = "Твое время \(PlayerHelper.stringFromTimeInterval(TimeInterval(input.gameResult.result)))"
         if !input.gameResult.gameWon {
-            timeView.borderColor = UIColor.Button.redThree
-            timeLbl.textColor = UIColor.Button.redThree
+            timeView.borderColor = UIColor.Button.red
+            timeLbl.textColor = UIColor.Button.red
             titleImageView.image = UIImage(named: "playAgain")
             nextBtn.setImage(UIImage(named: "icAgainYellow"), for: .normal)
             nextBtn.gradientColors = Style.Gradients.red.value
@@ -43,7 +43,7 @@ class MonsterGameResultsViewController: GameViewController {
             monstersView.image = UIImage(named: "monstersLose")
         }
         else {
-            timeLbl.textColor = UIColor.View.Label.darkBlue
+            timeLbl.textColor = UIColor.Label.darkBlue
         }
     }
 }

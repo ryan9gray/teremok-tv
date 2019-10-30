@@ -70,11 +70,11 @@ class MonsterStatisticViewController: UIViewController, MonsterStatisticDisplayL
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userName.textColor = UIColor.View.Label.yellow
+        userName.textColor = UIColor.Label.yellow
         thisWeekLbl.textColor = .white
-        thisWeekTime.textColor = UIColor.View.Label.yellow
+        thisWeekTime.textColor = UIColor.Label.yellow
         lastWeekLbl.textColor = .white
-        lastWeekTime.textColor = UIColor.View.Label.yellow
+        lastWeekTime.textColor = UIColor.Label.yellow
         avgTimeLbl.textColor = .white
         statStatus.textColor = .white
         

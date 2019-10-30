@@ -40,7 +40,7 @@ class ResumeRoundViewController: GameViewController {
         let right = input.answers.filter{$0}
         presentResult(isGood: right.count > (input.answers.count - right.count))
         pointsLabel.text = right.count.stringValue
-        pointsLabel.textColor = UIColor.View.Label.orange
+        pointsLabel.textColor = UIColor.Label.orange
     }
 
     private func presentResult(isGood: Bool) {
