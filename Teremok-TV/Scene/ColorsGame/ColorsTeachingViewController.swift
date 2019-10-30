@@ -99,8 +99,12 @@ class ColorsTeachingViewController: GameViewController {
 
             imageContainer.image = UIImage(named: word)
             animateImage()
-            
-            playSounds(gameHelper.getSounds(name: word)) {
+
+            if let path = Bundle.main.path(forResource: word, ofType: "wav") {
+                playSounds(URL(fileURLWithPath: path)) {
+                    getWord()
+                }
+            } else {
                 getWord()
             }
         }

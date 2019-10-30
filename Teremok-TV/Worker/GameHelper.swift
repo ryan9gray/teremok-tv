@@ -15,7 +15,6 @@ struct AlphabetGameHelper {
         return URL(fileURLWithPath: path)
     }
 
-
     func drawCross(_ view: UIView) -> CAShapeLayer {
         let line = CAShapeLayer()
         let linePath = UIBezierPath()
