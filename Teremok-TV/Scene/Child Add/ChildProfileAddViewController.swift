@@ -71,13 +71,8 @@ class ChildProfileAddViewController: AbstracViewController, ChildProfileAddDispl
     
     @IBOutlet private var birthdayTextField: UITextField!
     @IBOutlet private var nameFld: UITextField!
-    var pickerIsVisible = false
-    
-    var sex: Sex = .man {
-        didSet{
-            
-        }
-    }
+    private var pickerIsVisible = false
+    private var sex: Sex = .man
     
     @IBOutlet private var manBtn: UIButton!
     @IBOutlet private var womanBtn: UIButton!
