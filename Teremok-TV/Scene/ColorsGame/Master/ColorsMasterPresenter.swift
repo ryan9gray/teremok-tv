@@ -22,5 +22,5 @@ class ColorsMasterPresenter: ColorsMasterPresentationLogic {
         return viewController
     }
     // MARK: Do something
-    
+
 }
