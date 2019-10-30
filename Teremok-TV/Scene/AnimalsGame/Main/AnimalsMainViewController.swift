@@ -52,6 +52,7 @@ class AnimalsMainViewController: GameStartViewController, AnimalsMainDisplayLogi
     }
 
     // MARK: View lifecycle
+    @IBOutlet private var infoButton: KeyButton!
 
     @IBAction func infoClick(_ sender: Any) {
         showInfo()
@@ -68,8 +69,9 @@ class AnimalsMainViewController: GameStartViewController, AnimalsMainDisplayLogi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        infoButton.gradientColors = [UIColor.AnimalsGame.yellowOne, UIColor.AnimalsGame.yellowTwo]
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 

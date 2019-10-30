@@ -74,8 +74,13 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        backNavBtn.gradientColors = [UIColor.AnimalsGame.grassOne, UIColor.AnimalsGame.grassTwo]
+
         navigationSubscription = router?.subscribeForNavigation { [weak self] canPop in
-            self?.backNavBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "ic-alphHome"), for: .normal)
+            self?.backNavBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "icHomeShadow"), for: .normal)
+            self?.backNavBtn.gradientColors = canPop
+                ? [UIColor.AnimalsGame.coralOne, UIColor.AnimalsGame.coralTwo]
+                : [UIColor.AnimalsGame.grassOne, UIColor.AnimalsGame.grassTwo]
         }
         
         interactor?.onDemand { [weak self] success in

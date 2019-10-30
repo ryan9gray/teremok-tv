@@ -69,7 +69,7 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
         super.viewDidLoad()
 
         navigationSubscription = router?.subscribeForNavigation { [weak self] canPop in
-            self?.homeBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "ic-alphHome"), for: .normal)
+            self?.homeBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "icHomeShadow"), for: .normal)
         }
         interactor?.onDemand { [weak self] success in
             DispatchQueue.main.async {

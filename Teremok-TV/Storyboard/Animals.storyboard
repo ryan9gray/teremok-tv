@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Shnobel-Regular.otf">
+        <array key="Shnobelregular.ttf">
             <string>Shnobel-Regular</string>
         </array>
         <array key="appetite.ttf">
@@ -349,6 +349,7 @@
                     </view>
                     <connections>
                         <outlet property="avatarButton" destination="rsy-RI-5Ry" id="vA6-Oe-zp7"/>
+                        <outlet property="infoButton" destination="F3O-cr-MX0" id="5SX-kI-UNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gc-18-bF8" userLabel="First Responder" sceneMemberID="firstResponder"/>

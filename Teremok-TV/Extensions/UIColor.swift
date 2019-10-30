@@ -98,8 +98,15 @@ extension UIColor {
         static let grey                         = UIColor(hex: "808080")
     }
 
-    enum MonsterGame {
+    enum AnimalsGame {
+        static let grassOne                     = UIColor(hex: "B3DA00")
+        static let grassTwo                     = UIColor(hex: "D9F018")
 
+        static let yellowOne                        = UIColor(hex: "FFB903")
+        static let yellowTwo                        = UIColor(hex: "FFDF5B")
+
+        static let coralOne                        = UIColor(hex: "F45436")
+        static let coralTwo                        = UIColor(hex: "FF8777")
     }
 }
 

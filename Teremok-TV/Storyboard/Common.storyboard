@@ -226,7 +226,7 @@
                                     <constraint firstAttribute="width" constant="50" id="uo8-Mv-ljj"/>
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="ic-alphHome">
+                                <state key="normal" image="icHomeShadow">
                                     <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -381,7 +381,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic-alphHome" width="31" height="29"/>
         <image name="ic-alphavite" width="164" height="144"/>
         <image name="ic-alphavitePlay" width="70" height="80"/>
         <image name="ic-animalgame" width="164" height="144"/>
@@ -389,6 +388,7 @@
         <image name="ic-monsterGame" width="164" height="144"/>
         <image name="icColorsGame" width="140" height="120"/>
         <image name="icCross" width="20" height="20"/>
+        <image name="icHomeShadow" width="50" height="50"/>
         <image name="icTree" width="142" height="176"/>
     </resources>
 </document>
