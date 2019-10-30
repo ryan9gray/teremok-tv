@@ -18,8 +18,6 @@ protocol ChildProfileAddRoutingLogic: CommonRoutingLogic {
 
 protocol ChildProfileAddDataPassing {
     var dataStore: ChildProfileAddDataStore? { get }
-    
-    
 }
 
 class ChildProfileAddRouter: NSObject, ChildProfileAddRoutingLogic, ChildProfileAddDataPassing {
@@ -36,5 +34,4 @@ class ChildProfileAddRouter: NSObject, ChildProfileAddRoutingLogic, ChildProfile
         dataStore.screen = self.viewController?.router?.dataStore?.screen
         viewController?.masterRouter?.presentNextChild(viewController: vc)
     }
-
 }

@@ -15,7 +15,6 @@ import UIKit
 protocol FavPresentationLogic: CommonPresentationLogic {
     func presentFav(_ models: [VideoModel])
     func presentSaved(_ models: [VideoModel])
-    //func presentSave(video: [URL], pic: [URL])
     func presentSaved(models:[Fav.OfflineVideoModel])
 }
 
@@ -28,7 +27,6 @@ class FavPresenter: FavPresentationLogic {
     
     func presentFav(_ models: [VideoModel]){
         var fav: [Fav.Item] = []
-        
         for item in models  {
             let serial = Fav.Item(imageUrl:  URL(string: item.picture ?? "")!)
             fav.append(serial)
@@ -44,7 +42,6 @@ class FavPresenter: FavPresentationLogic {
         }
         viewController?.display(saved: saved)
     }
-    
 
     func presentSaved(models:[Fav.OfflineVideoModel]){
         var saved: [Fav.Item] = []
@@ -61,7 +58,6 @@ class FavPresenter: FavPresentationLogic {
     
     func presentSave(video: [URL], pic: [URL]){
         var saved: [Fav.Item] = []
-        
         if video.count == pic.count {
             for (index, _) in video.enumerated() {
                 let seria = Fav.Item(imageUrl:  pic[index])
@@ -71,8 +67,5 @@ class FavPresenter: FavPresentationLogic {
                 self.viewController?.display(saved: saved)
             }
         }
-        
     }
-    
-    
 }

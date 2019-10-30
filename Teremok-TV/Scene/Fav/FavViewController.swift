@@ -59,7 +59,6 @@ class FavViewController: AbstracViewController, FavDisplayLogic {
 
     var fav: [Fav.Item] = []
     var saved: [Fav.Item] = []
-    
     var cellWidth: CGFloat = 0
     var storedOffsetsFav = [Int: CGFloat]()
     var storedOffsetsSaved = [Int: CGFloat]()
@@ -120,9 +119,7 @@ extension FavViewController: UICollectionViewDelegate {
 }
 
 extension FavViewController: UITableViewDataSource, UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
         if (section == 0 && fav.count > 0) || (section == 1 && saved.count > 0){
             let identifier = String(describing: FavTableViewHeader.self)
             guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: identifier) as? FavTableViewHeader, let favSection = Fav.Section.allCases[safe: section] else { return nil }
@@ -132,23 +129,16 @@ extension FavViewController: UITableViewDataSource, UITableViewDelegate {
         return nil
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-  
-        return UITableView.automaticDimension
+        UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-
-        return 40.0
+        40.0
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-//        if fav.count > 0, saved.count > 0 {
-//            return 2
-//        }
-//        else {
-//            return 1
-//        }
-        return 2
+        2
     }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0, fav.count == 0 {
             return 0
@@ -160,12 +150,11 @@ extension FavViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withCell: FavTableViewCell.self, for: indexPath)
         return cell
     }
+
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
         guard let tableViewCell = cell as? FavTableViewCell else { return }
         tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.section)
         if indexPath.section == 0{
@@ -173,21 +162,19 @@ extension FavViewController: UITableViewDataSource, UITableViewDelegate {
         } else if indexPath.section == 1{
             tableViewCell.collectionViewOffset = storedOffsetsSaved[indexPath.row] ?? 0
         }
-        
     }
+
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
         guard let tableViewCell = cell as? FavTableViewCell else { return }
         if indexPath.section == 0{
             storedOffsetsFav[indexPath.row] = tableViewCell.collectionViewOffset
         } else if indexPath.section == 1{
             storedOffsetsSaved[indexPath.row] = tableViewCell.collectionViewOffset
         }
-        
     }
 }
+
 extension FavViewController: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView.tag {
         case 0:
@@ -199,7 +186,6 @@ extension FavViewController: UICollectionViewDataSource {
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withCell: FavCollectionViewCell.self, for: indexPath)
         cell.delegate = self
         if collectionView.tag == 0 {
@@ -224,8 +210,7 @@ extension FavViewController: UICollectionViewDelegateFlowLayout {
 extension FavViewController: ButtonWithIndexPath {
     
     func clickOn(indexPath: IndexPath) {
-        
-        let yes = UIAlertAction(title: "Удалить", style: .default, handler: { (_) in
+        let yes = UIAlertAction(title: "Удалить", style: .default, handler: { _ in
             switch indexPath.section {
             case 0:
                 self.fav.removeAll()
@@ -238,7 +223,6 @@ extension FavViewController: ButtonWithIndexPath {
             }
         })
         let no = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
-        self.present(title: "Удалить серию?", actions: [yes, no], completion: nil)
-   
+        present(title: "Удалить серию?", actions: [yes, no], completion: nil)
     }
 }

@@ -16,7 +16,6 @@ enum Fav {
     // MARK: Use cases
   
     struct Item {
-        
         //var videoUrl: URL
         var imageUrl: URL
     }

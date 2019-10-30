@@ -110,14 +110,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCar" translatesAutoresizingMaskIntoConstraints="NO" id="31Y-9W-mGx">
-                                <rect key="frame" x="151" y="264" width="130" height="90.000000000000028"/>
+                                <rect key="frame" x="151" y="264" width="130" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="BoP-fD-X2f"/>
                                     <constraint firstAttribute="width" constant="130" id="GEg-YO-ueJ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVt-vr-mvJ">
-                                <rect key="frame" x="116" y="78" width="64" height="40"/>
+                                <rect key="frame" x="116" y="78" width="128" height="80"/>
                                 <state key="normal" image="icCloudBack"/>
                                 <connections>
                                     <action selector="backClick:" destination="ofs-FA-itf" eventType="touchUpInside" id="pYd-Oi-TrF"/>
@@ -330,7 +330,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCar" translatesAutoresizingMaskIntoConstraints="NO" id="CLy-WA-sYL">
-                                <rect key="frame" x="131.66666666666666" y="264" width="129.99999999999997" height="90.000000000000028"/>
+                                <rect key="frame" x="131.66666666666666" y="264" width="129.99999999999997" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="7uA-rJ-UTk"/>
                                     <constraint firstAttribute="height" constant="90" id="hli-fd-qx3"/>
@@ -389,7 +389,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idw-GK-3Qq">
-                                <rect key="frame" x="116" y="78" width="64" height="40"/>
+                                <rect key="frame" x="116" y="78" width="128" height="80"/>
                                 <state key="normal" image="icCloudBack"/>
                                 <connections>
                                     <action selector="backClick:" destination="p05-KD-IjD" eventType="touchUpInside" id="ky8-o0-OeR"/>

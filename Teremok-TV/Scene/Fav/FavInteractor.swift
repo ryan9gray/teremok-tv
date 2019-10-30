@@ -145,5 +145,4 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
             print("Error while delete files \(url): \(error.localizedDescription)")
         }
     }
-    
 }

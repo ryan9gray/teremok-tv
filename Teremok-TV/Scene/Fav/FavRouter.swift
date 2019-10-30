@@ -47,5 +47,4 @@ class FavRouter: NSObject, FavRoutingLogic, FavDataPassing {
         dataStore.model = .offline(idx: number, models: videoModels)
         viewController?.masterRouter?.presentNextChild(viewController: serials)
     }
-
 }

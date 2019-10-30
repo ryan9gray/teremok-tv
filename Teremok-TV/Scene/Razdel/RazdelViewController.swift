@@ -87,7 +87,6 @@ class RazdelViewController: AbstracViewController, RazdelDisplayLogic {
         
         cellWidth = self.view.bounds.width/3.2
         showPreloader()
-        
     }
 
     func displaySerials(_ serials: [RazdelVCModel.SerialItem]){
@@ -118,7 +117,6 @@ extension RazdelViewController: UICollectionViewDelegate {
         if indexPath.row == serials.count-1 {
             self.interactor?.fetchSerials()
         }
-  
     }
 }
 extension RazdelViewController: UICollectionViewDataSource {

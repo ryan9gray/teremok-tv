@@ -369,7 +369,6 @@
 		CA7A8AAF217C691100A8EA15 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7A8AAE217C691100A8EA15 /* Int.swift */; };
 		CA7AAF462170A25000747D4B /* ChildProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF402170A25000747D4B /* ChildProfilePresenter.swift */; };
 		CA7AAF482170A25000747D4B /* ChildProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF422170A25000747D4B /* ChildProfileRouter.swift */; };
-		CA7AAF492170A25000747D4B /* ChildProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF432170A25000747D4B /* ChildProfileModels.swift */; };
 		CA7AAF4A2170A25000747D4B /* ChildProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF442170A25000747D4B /* ChildProfileViewController.swift */; };
 		CA7AAF4B2170A25000747D4B /* ChildProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF452170A25000747D4B /* ChildProfileInteractor.swift */; };
 		CA7AAF4F2170B0E200747D4B /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF4E2170B0E200747D4B /* SearchCommand.swift */; };
@@ -495,7 +494,6 @@
 		CAB5A4502171F18200A00C8E /* ChildsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44A2171F18200A00C8E /* ChildsPresenter.swift */; };
 		CAB5A4512171F18200A00C8E /* ChildsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44B2171F18200A00C8E /* ChildsWorker.swift */; };
 		CAB5A4522171F18200A00C8E /* ChildsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44C2171F18200A00C8E /* ChildsRouter.swift */; };
-		CAB5A4532171F18200A00C8E /* ChildsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44D2171F18200A00C8E /* ChildsModels.swift */; };
 		CAB5A4542171F18200A00C8E /* ChildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44E2171F18200A00C8E /* ChildsViewController.swift */; };
 		CAB5A4552171F18200A00C8E /* ChildsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44F2171F18200A00C8E /* ChildsInteractor.swift */; };
 		CAB5A4572171F2B200A00C8E /* ChildsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A4562171F2B200A00C8E /* ChildsStackView.swift */; };
@@ -653,7 +651,6 @@
 		CAE1C446211DB6B80058C9C6 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C444211DB6B80058C9C6 /* KeychainService.swift */; };
 		CAE1C44F211DC23A0058C9C6 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C449211DC23A0058C9C6 /* RegistrationPresenter.swift */; };
 		CAE1C451211DC23A0058C9C6 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C44B211DC23A0058C9C6 /* RegistrationRouter.swift */; };
-		CAE1C452211DC23A0058C9C6 /* RegistrationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C44C211DC23A0058C9C6 /* RegistrationModels.swift */; };
 		CAE1C453211DC23A0058C9C6 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C44D211DC23A0058C9C6 /* RegistrationViewController.swift */; };
 		CAE1C454211DC23A0058C9C6 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C44E211DC23A0058C9C6 /* RegistrationInteractor.swift */; };
 		CAE1C458211DC5BC0058C9C6 /* CommonRoutingLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C455211DC5BC0058C9C6 /* CommonRoutingLogic.swift */; };
@@ -665,14 +662,12 @@
 		CAE1C465211DC8AC0058C9C6 /* AuthNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C464211DC8AC0058C9C6 /* AuthNavigationViewController.swift */; };
 		CAE1C46C211DC8CA0058C9C6 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C466211DC8CA0058C9C6 /* AuthPresenter.swift */; };
 		CAE1C46E211DC8CA0058C9C6 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C468211DC8CA0058C9C6 /* AuthRouter.swift */; };
-		CAE1C46F211DC8CA0058C9C6 /* AuthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C469211DC8CA0058C9C6 /* AuthModels.swift */; };
 		CAE1C470211DC8CA0058C9C6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C46A211DC8CA0058C9C6 /* AuthViewController.swift */; };
 		CAE1C471211DC8CA0058C9C6 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C46B211DC8CA0058C9C6 /* AuthInteractor.swift */; };
 		CAE1C473211DC9190058C9C6 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C472211DC9190058C9C6 /* UIWindow.swift */; };
 		CAE1C475211DC9F70058C9C6 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C474211DC9F60058C9C6 /* Queue.swift */; };
 		CAE3648E22918181003E891D /* AnimalsMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3648822918181003E891D /* AnimalsMainPresenter.swift */; };
 		CAE3649022918181003E891D /* AnimalsMainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3648A22918181003E891D /* AnimalsMainRouter.swift */; };
-		CAE3649122918181003E891D /* AnimalsMainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3648B22918181003E891D /* AnimalsMainModels.swift */; };
 		CAE3649222918181003E891D /* AnimalsMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3648C22918181003E891D /* AnimalsMainViewController.swift */; };
 		CAE3649322918181003E891D /* AnimalsMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3648D22918181003E891D /* AnimalsMainInteractor.swift */; };
 		CAE3649A2291819D003E891D /* AnimalsRoundsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364942291819D003E891D /* AnimalsRoundsPresenter.swift */; };
@@ -680,7 +675,6 @@
 		CAE3649D2291819D003E891D /* AnimalsRoundsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364972291819D003E891D /* AnimalsRoundsModels.swift */; };
 		CAE3649E2291819D003E891D /* AnimalsRoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364982291819D003E891D /* AnimalsRoundsViewController.swift */; };
 		CAE3649F2291819D003E891D /* AnimalsRoundsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364992291819D003E891D /* AnimalsRoundsInteractor.swift */; };
-		CAE364AA22918378003E891D /* AnimalsWordsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364A422918378003E891D /* AnimalsWordsModels.swift */; };
 		CAE364AB22918378003E891D /* AnimalsWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364A522918378003E891D /* AnimalsWordsViewController.swift */; };
 		CAE538F6212FFFED005F7463 /* AbstracViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE538F5212FFFED005F7463 /* AbstracViewController.swift */; };
 		CAE5A58B22A9AB630034B448 /* AMProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5A58A22A9AB630034B448 /* AMProgressView.swift */; };
@@ -700,7 +694,6 @@
 		CAF4C115214B0C7900954AA8 /* FavInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C10F214B0C7900954AA8 /* FavInteractor.swift */; };
 		CAF4C11D214B8F8800954AA8 /* ChildProfileDonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C117214B8F8800954AA8 /* ChildProfileDonePresenter.swift */; };
 		CAF4C11F214B8F8800954AA8 /* ChildProfileDoneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C119214B8F8800954AA8 /* ChildProfileDoneRouter.swift */; };
-		CAF4C120214B8F8800954AA8 /* ChildProfileDoneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C11A214B8F8800954AA8 /* ChildProfileDoneModels.swift */; };
 		CAF4C121214B8F8800954AA8 /* ChildProfileDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C11B214B8F8800954AA8 /* ChildProfileDoneViewController.swift */; };
 		CAF4C122214B8F8800954AA8 /* ChildProfileDoneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C11C214B8F8800954AA8 /* ChildProfileDoneInteractor.swift */; };
 		CAF61D7B217DFF8300035EE9 /* BackgroundSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF61D7A217DFF8300035EE9 /* BackgroundSession.swift */; };
@@ -708,7 +701,6 @@
 		CAF61D90217E118E00035EE9 /* TTPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF61D86217E118E00035EE9 /* TTPlayerViewController.swift */; };
 		CAF7B18321B6927C00A59F5F /* StorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7B17D21B6927C00A59F5F /* StorePresenter.swift */; };
 		CAF7B18521B6927C00A59F5F /* StoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7B17F21B6927C00A59F5F /* StoreRouter.swift */; };
-		CAF7B18621B6927C00A59F5F /* StoreModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7B18021B6927C00A59F5F /* StoreModels.swift */; };
 		CAF7B18721B6927C00A59F5F /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7B18121B6927C00A59F5F /* StoreViewController.swift */; };
 		CAF7B18821B6927C00A59F5F /* StoreInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7B18221B6927C00A59F5F /* StoreInteractor.swift */; };
 		CAF889DB21A6975800A245A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAF889DA21A6975800A245A7 /* GoogleService-Info.plist */; };
@@ -1180,7 +1172,6 @@
 		CA7A8AAE217C691100A8EA15 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		CA7AAF402170A25000747D4B /* ChildProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfilePresenter.swift; sourceTree = "<group>"; };
 		CA7AAF422170A25000747D4B /* ChildProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileRouter.swift; sourceTree = "<group>"; };
-		CA7AAF432170A25000747D4B /* ChildProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileModels.swift; sourceTree = "<group>"; };
 		CA7AAF442170A25000747D4B /* ChildProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileViewController.swift; sourceTree = "<group>"; };
 		CA7AAF452170A25000747D4B /* ChildProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileInteractor.swift; sourceTree = "<group>"; };
 		CA7AAF4E2170B0E200747D4B /* SearchCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommand.swift; sourceTree = "<group>"; };
@@ -1308,7 +1299,6 @@
 		CAB5A44A2171F18200A00C8E /* ChildsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsPresenter.swift; sourceTree = "<group>"; };
 		CAB5A44B2171F18200A00C8E /* ChildsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsWorker.swift; sourceTree = "<group>"; };
 		CAB5A44C2171F18200A00C8E /* ChildsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsRouter.swift; sourceTree = "<group>"; };
-		CAB5A44D2171F18200A00C8E /* ChildsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsModels.swift; sourceTree = "<group>"; };
 		CAB5A44E2171F18200A00C8E /* ChildsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsViewController.swift; sourceTree = "<group>"; };
 		CAB5A44F2171F18200A00C8E /* ChildsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsInteractor.swift; sourceTree = "<group>"; };
 		CAB5A4562171F2B200A00C8E /* ChildsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsStackView.swift; sourceTree = "<group>"; };
@@ -1469,7 +1459,6 @@
 		CAE1C444211DB6B80058C9C6 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		CAE1C449211DC23A0058C9C6 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		CAE1C44B211DC23A0058C9C6 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
-		CAE1C44C211DC23A0058C9C6 /* RegistrationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModels.swift; sourceTree = "<group>"; };
 		CAE1C44D211DC23A0058C9C6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		CAE1C44E211DC23A0058C9C6 /* RegistrationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInteractor.swift; sourceTree = "<group>"; };
 		CAE1C455211DC5BC0058C9C6 /* CommonRoutingLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonRoutingLogic.swift; sourceTree = "<group>"; };
@@ -1481,14 +1470,12 @@
 		CAE1C464211DC8AC0058C9C6 /* AuthNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigationViewController.swift; sourceTree = "<group>"; };
 		CAE1C466211DC8CA0058C9C6 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		CAE1C468211DC8CA0058C9C6 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
-		CAE1C469211DC8CA0058C9C6 /* AuthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModels.swift; sourceTree = "<group>"; };
 		CAE1C46A211DC8CA0058C9C6 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		CAE1C46B211DC8CA0058C9C6 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
 		CAE1C472211DC9190058C9C6 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		CAE1C474211DC9F60058C9C6 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		CAE3648822918181003E891D /* AnimalsMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsMainPresenter.swift; sourceTree = "<group>"; };
 		CAE3648A22918181003E891D /* AnimalsMainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsMainRouter.swift; sourceTree = "<group>"; };
-		CAE3648B22918181003E891D /* AnimalsMainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsMainModels.swift; sourceTree = "<group>"; };
 		CAE3648C22918181003E891D /* AnimalsMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsMainViewController.swift; sourceTree = "<group>"; };
 		CAE3648D22918181003E891D /* AnimalsMainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsMainInteractor.swift; sourceTree = "<group>"; };
 		CAE364942291819D003E891D /* AnimalsRoundsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRoundsPresenter.swift; sourceTree = "<group>"; };
@@ -1496,7 +1483,6 @@
 		CAE364972291819D003E891D /* AnimalsRoundsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRoundsModels.swift; sourceTree = "<group>"; };
 		CAE364982291819D003E891D /* AnimalsRoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRoundsViewController.swift; sourceTree = "<group>"; };
 		CAE364992291819D003E891D /* AnimalsRoundsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRoundsInteractor.swift; sourceTree = "<group>"; };
-		CAE364A422918378003E891D /* AnimalsWordsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsWordsModels.swift; sourceTree = "<group>"; };
 		CAE364A522918378003E891D /* AnimalsWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsWordsViewController.swift; sourceTree = "<group>"; };
 		CAE538F5212FFFED005F7463 /* AbstracViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstracViewController.swift; sourceTree = "<group>"; };
 		CAE5A58A22A9AB630034B448 /* AMProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMProgressView.swift; sourceTree = "<group>"; };
@@ -1516,7 +1502,6 @@
 		CAF4C10F214B0C7900954AA8 /* FavInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavInteractor.swift; sourceTree = "<group>"; };
 		CAF4C117214B8F8800954AA8 /* ChildProfileDonePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileDonePresenter.swift; sourceTree = "<group>"; };
 		CAF4C119214B8F8800954AA8 /* ChildProfileDoneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileDoneRouter.swift; sourceTree = "<group>"; };
-		CAF4C11A214B8F8800954AA8 /* ChildProfileDoneModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileDoneModels.swift; sourceTree = "<group>"; };
 		CAF4C11B214B8F8800954AA8 /* ChildProfileDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileDoneViewController.swift; sourceTree = "<group>"; };
 		CAF4C11C214B8F8800954AA8 /* ChildProfileDoneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileDoneInteractor.swift; sourceTree = "<group>"; };
 		CAF5AD7D2136BC79006C9ECB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1528,7 +1513,6 @@
 		CAF61D86217E118E00035EE9 /* TTPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTPlayerViewController.swift; sourceTree = "<group>"; };
 		CAF7B17D21B6927C00A59F5F /* StorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePresenter.swift; sourceTree = "<group>"; };
 		CAF7B17F21B6927C00A59F5F /* StoreRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRouter.swift; sourceTree = "<group>"; };
-		CAF7B18021B6927C00A59F5F /* StoreModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModels.swift; sourceTree = "<group>"; };
 		CAF7B18121B6927C00A59F5F /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		CAF7B18221B6927C00A59F5F /* StoreInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInteractor.swift; sourceTree = "<group>"; };
 		CAF889DA21A6975800A245A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -2090,7 +2074,6 @@
 			children = (
 				CAE3648822918181003E891D /* AnimalsMainPresenter.swift */,
 				CAE3648A22918181003E891D /* AnimalsMainRouter.swift */,
-				CAE3648B22918181003E891D /* AnimalsMainModels.swift */,
 				CAE3648C22918181003E891D /* AnimalsMainViewController.swift */,
 				CAE3648D22918181003E891D /* AnimalsMainInteractor.swift */,
 				25493D9A23685F650006FE18 /* GameStartViewController.swift */,
@@ -2556,7 +2539,6 @@
 				CAB5A44A2171F18200A00C8E /* ChildsPresenter.swift */,
 				CAB5A44B2171F18200A00C8E /* ChildsWorker.swift */,
 				CAB5A44C2171F18200A00C8E /* ChildsRouter.swift */,
-				CAB5A44D2171F18200A00C8E /* ChildsModels.swift */,
 				CAB5A44E2171F18200A00C8E /* ChildsViewController.swift */,
 				CAB5A44F2171F18200A00C8E /* ChildsInteractor.swift */,
 			);
@@ -3078,7 +3060,6 @@
 			children = (
 				CAE1C449211DC23A0058C9C6 /* RegistrationPresenter.swift */,
 				CAE1C44B211DC23A0058C9C6 /* RegistrationRouter.swift */,
-				CAE1C44C211DC23A0058C9C6 /* RegistrationModels.swift */,
 				CAE1C44D211DC23A0058C9C6 /* RegistrationViewController.swift */,
 				CAE1C44E211DC23A0058C9C6 /* RegistrationInteractor.swift */,
 			);
@@ -3089,7 +3070,6 @@
 			isa = PBXGroup;
 			children = (
 				CAE1C468211DC8CA0058C9C6 /* AuthRouter.swift */,
-				CAE1C469211DC8CA0058C9C6 /* AuthModels.swift */,
 				CAE1C46A211DC8CA0058C9C6 /* AuthViewController.swift */,
 				CAE1C46B211DC8CA0058C9C6 /* AuthInteractor.swift */,
 				CAE1C466211DC8CA0058C9C6 /* AuthPresenter.swift */,
@@ -3101,7 +3081,6 @@
 			isa = PBXGroup;
 			children = (
 				CAE364A522918378003E891D /* AnimalsWordsViewController.swift */,
-				CAE364A422918378003E891D /* AnimalsWordsModels.swift */,
 			);
 			path = Words;
 			sourceTree = "<group>";
@@ -3157,7 +3136,6 @@
 			children = (
 				CAF4C117214B8F8800954AA8 /* ChildProfileDonePresenter.swift */,
 				CAF4C119214B8F8800954AA8 /* ChildProfileDoneRouter.swift */,
-				CAF4C11A214B8F8800954AA8 /* ChildProfileDoneModels.swift */,
 				CAF4C11B214B8F8800954AA8 /* ChildProfileDoneViewController.swift */,
 				CAF4C11C214B8F8800954AA8 /* ChildProfileDoneInteractor.swift */,
 			);
@@ -3178,7 +3156,6 @@
 			children = (
 				CAF7B17D21B6927C00A59F5F /* StorePresenter.swift */,
 				CAF7B17F21B6927C00A59F5F /* StoreRouter.swift */,
-				CAF7B18021B6927C00A59F5F /* StoreModels.swift */,
 				CAF7B18121B6927C00A59F5F /* StoreViewController.swift */,
 				CAF7B18221B6927C00A59F5F /* StoreInteractor.swift */,
 				CA76362E226A63CD00168AB1 /* SubscriptionCollectionViewCell.swift */,
@@ -3194,7 +3171,6 @@
 			children = (
 				CA7AAF402170A25000747D4B /* ChildProfilePresenter.swift */,
 				CA7AAF422170A25000747D4B /* ChildProfileRouter.swift */,
-				CA7AAF432170A25000747D4B /* ChildProfileModels.swift */,
 				CA7AAF442170A25000747D4B /* ChildProfileViewController.swift */,
 				CA7AAF452170A25000747D4B /* ChildProfileInteractor.swift */,
 			);
@@ -3979,7 +3955,6 @@
 				CA80481021415EC7000A3C5B /* ImageCellProtocol.swift in Sources */,
 				CA52F369223D9FE50058194E /* AlbumPresenter.swift in Sources */,
 				CA8197FE214993C40079D46A /* ContentResponse.swift in Sources */,
-				CAE1C452211DC23A0058C9C6 /* RegistrationModels.swift in Sources */,
 				CA49E48D212D326600711324 /* TerPush+Mapping.swift in Sources */,
 				CA52F36C223D9FE50058194E /* AlbumModels.swift in Sources */,
 				CADD14BB23129A4000AE920A /* TTSegmentedControl.swift in Sources */,
@@ -4025,7 +4000,6 @@
 				CA9A6745213C134000FCB400 /* RazdelRouter.swift in Sources */,
 				CA49E48C212D326600711324 /* TerPushActionType.swift in Sources */,
 				11604ADA231F8330001D1C7F /* MonsterGetStatCommand.swift in Sources */,
-				CAE3649122918181003E891D /* AnimalsMainModels.swift in Sources */,
 				CA8EA71B214145E700159451 /* PreviewPresenter.swift in Sources */,
 				CA62A72223512B8F0083FD4F /* ColorsGameStatViewController.swift in Sources */,
 				CAEEF2422299CB8E00AF5AF6 /* IntroduceVideoViewController.swift in Sources */,
@@ -4106,7 +4080,6 @@
 				CAE1C42D211DACE10058C9C6 /* LogsCacher.swift in Sources */,
 				CA49E4A1212D5A9200711324 /* MainRouter.swift in Sources */,
 				CAE0947F214CF43C0052F283 /* ResetPassViewController.swift in Sources */,
-				CAF4C120214B8F8800954AA8 /* ChildProfileDoneModels.swift in Sources */,
 				CAD90EB322B13636004D74BD /* AnimalsGetStatCommand.swift in Sources */,
 				11BC752523043A1E001B5CC8 /* MonsterMasterRouter.swift in Sources */,
 				CA10414B22629A0B005D62DE /* SearchMusicModels.swift in Sources */,
@@ -4156,7 +4129,6 @@
 				CAC1126521562F5900678D1B /* RequestCacheCleaner.swift in Sources */,
 				CAC1126321562A0400678D1B /* UIButton.swift in Sources */,
 				CAE09480214CF43C0052F283 /* ResetPassInteractor.swift in Sources */,
-				CAE1C46F211DC8CA0058C9C6 /* AuthModels.swift in Sources */,
 				11604ADC231F8494001D1C7F /* MonsterSendStatCommand.swift in Sources */,
 				CAB59FD322F315D800D7CA71 /* AlphaviteMasterInteractor.swift in Sources */,
 				CA62A72323512B8F0083FD4F /* ColorsGameStatInteractor.swift in Sources */,
@@ -4298,7 +4270,6 @@
 				CAC2D51C2115A68200945003 /* SigninResponse.swift in Sources */,
 				CA52DF3822907EC000458EE5 /* AnimalsMasterPresenter.swift in Sources */,
 				CA7E8BA5218200820076E5A0 /* ReachabilityManager.swift in Sources */,
-				CAF7B18621B6927C00A59F5F /* StoreModels.swift in Sources */,
 				CA10414D22629A0B005D62DE /* SearchMusicInteractor.swift in Sources */,
 				CA7AAF5F2170B52500747D4B /* SearchViewController.swift in Sources */,
 				CAF7B18521B6927C00A59F5F /* StoreRouter.swift in Sources */,
@@ -4331,17 +4302,14 @@
 				CA51004022F5F8E600821C25 /* AlphaviteChoiceViewController.swift in Sources */,
 				CA0053D0213BF6FA00AA187F /* UITableViewCell.swift in Sources */,
 				CAD16DEF2147F31E00A82DBB /* AddChildCommand.swift in Sources */,
-				CA7AAF492170A25000747D4B /* ChildProfileModels.swift in Sources */,
 				CAE09484214CF6A10052F283 /* PassCommand.swift in Sources */,
 				CAF61D89217E118E00035EE9 /* PlayerViewController.swift in Sources */,
 				CA9AA3D52184716400019CA7 /* VideoService.swift in Sources */,
-				CAE364AA22918378003E891D /* AnimalsWordsModels.swift in Sources */,
 				CAE1C430211DACE10058C9C6 /* CoreDataStack.swift in Sources */,
 				CAD16DF12147F68400A82DBB /* SwithChildeCommand.swift in Sources */,
 				CA70867923082EA80015851C /* AlphaviteStatisticPresenter.swift in Sources */,
 				CAC2D51B2115A68200945003 /* ApiURLString.swift in Sources */,
 				CAA8845221381D9900E27F7A /* ChildProfileAddInteractor.swift in Sources */,
-				CAB5A4532171F18200A00C8E /* ChildsModels.swift in Sources */,
 				CA52F361223D9CAD0058194E /* PlaylistsViewController.swift in Sources */,
 				CAF7B18821B6927C00A59F5F /* StoreInteractor.swift in Sources */,
 				CA7AAF5D2170B52500747D4B /* SearchRouter.swift in Sources */,
