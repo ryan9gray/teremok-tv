@@ -60,7 +60,7 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
     private var navigationSubscription: Subscription?
 
     @IBAction func backClick(_ sender: UIButton) {
-        if (router?.canPop())! {
+        if router!.canPop() {
             router?.popChild()
         } else {
             dismiss(animated: true, completion: nil)

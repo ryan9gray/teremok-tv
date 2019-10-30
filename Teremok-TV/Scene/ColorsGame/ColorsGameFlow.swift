@@ -137,6 +137,7 @@ class ColorsGameFlow  {
         }
         master?.presentAlertModally(alertController: vc)
     }
+
     class Game {
         var currentColors = Set(ColorsMaster.Colors.allCases)
         var roundColors: [ColorsMaster.Colors] = []

@@ -112,7 +112,7 @@ class ColorsGameStatViewController: GameViewController, ColorsGameStatDisplayLog
         }
         if let name = child.name {
             titleLabel.text = name
-            titleLabel.textColor = UIColor.init(hex: "D08946")
+            titleLabel.textColor = UIColor.ColorsGame.purp
         }
     }
 
