@@ -73,15 +73,16 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
         fetchRazdels()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-       if ServiceConfiguration.activeConfiguration() == .prod  {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       //if ServiceConfiguration.activeConfiguration() == .prod  {
             audioPlayer?.play()
-        }
+        //}
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        
         audioPlayer?.stop()
     }
 
@@ -90,12 +91,13 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
         collectionView.delegate = self
         collectionView.register(cells: [MainlCollectionViewCell.self])
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-        cellWidth = self.view.bounds.width/3.2
+        cellWidth = view.bounds.width/3.2
 
         let backSound = BackgroundMediaWorker.getSound()
 
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: backSound)
+            audioPlayer?.numberOfLoops = 5
         } catch {
             print("no file \(backSound)")
         }
@@ -144,7 +146,7 @@ extension MainViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         didSelectSoundPlay()
-        self.router?.navigateToRazdel(number: indexPath.row)
+        router?.navigateToRazdel(number: indexPath.row)
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
         
@@ -167,7 +169,7 @@ extension MainViewController: UICollectionViewDelegate {
 extension MainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return razdels.count
+        razdels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withCell: MainlCollectionViewCell.self, for: indexPath)
@@ -177,11 +179,10 @@ extension MainViewController: UICollectionViewDataSource {
         cell.addRainbow()
         return cell
     }
-    
 }
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: cellWidth, height: collectionView.bounds.height)
+        CGSize(width: cellWidth, height: collectionView.bounds.height)
     }
 }

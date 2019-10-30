@@ -94,7 +94,6 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
             }
         }
         }
-
         do {
             //Preparation to play
             try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .moviePlayback)
