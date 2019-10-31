@@ -154,7 +154,7 @@ extension ColorsMaster.Colors {
                 case .green:
                     return [UIColor.ColorsGame.greenOne, UIColor.ColorsGame.greenTwo]
                 case .white:
-                    return [.white, .lightGray]
+                    return [.white, .white]
                 case .black:
                     return [.black, UIColor.black.withAlphaComponent(0.8)]
                 case .lightBlue:

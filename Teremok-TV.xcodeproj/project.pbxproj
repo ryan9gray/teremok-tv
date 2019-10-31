@@ -88,6 +88,7 @@
 		251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */; };
 		253E7E2C2369E5ED003FF569 /* snowstorm_blizzard_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */; };
+		253E7E2E236AFA05003FF569 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E7E2D236AFA05003FF569 /* ShadowView.swift */; };
 		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
 		25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EF92368E4A90033D9CA /* Subscription.swift */; };
@@ -889,6 +890,7 @@
 		251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_2.wav; sourceTree = "<group>"; };
 		251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neskid-comica-bd.ttf"; sourceTree = "<group>"; };
 		253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snowstorm_blizzard_1.wav; sourceTree = "<group>"; };
+		253E7E2D236AFA05003FF569 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
 		25C43EF92368E4A90033D9CA /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
@@ -1886,6 +1888,7 @@
 		CA49E496212D59E600711324 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				253E7E2D236AFA05003FF569 /* ShadowView.swift */,
 				CADD14BA23129A4000AE920A /* TTSegmentedControl.swift */,
 				CAC0988A22FF12A700EFB01E /* EasyTipView */,
 				CAAD25EE22F5B2C4005CFCD2 /* StrokeLabel.swift */,
@@ -4198,6 +4201,7 @@
 				CAE1C473211DC9190058C9C6 /* UIWindow.swift in Sources */,
 				CAAF1EE92174E40300460F58 /* LottieHUD.swift in Sources */,
 				CA51E1CF22FED7410028DF63 /* GameModel.swift in Sources */,
+				253E7E2E236AFA05003FF569 /* ShadowView.swift in Sources */,
 				CA61D88022A1D49700E3D603 /* AnimalsGameService.swift in Sources */,
 				11BA249D230AE99700A9EA15 /* MonsterCollectionViewCell.swift in Sources */,
 				CAC0988822FEDCD400EFB01E /* Style.swift in Sources */,
