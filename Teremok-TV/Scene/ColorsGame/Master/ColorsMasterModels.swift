@@ -27,29 +27,7 @@ enum ColorsMaster {
         case violet = "violet"
 
         // case brown = "brown"
-        
-        var name: String {
-            switch self {
-                case .white:
-                    return "Белый"
-                case .black:
-                    return "Черный"
-                case .red:
-                    return "Красный"
-                case .orange:
-                    return "Оранжевый"
-                case .yellow:
-                    return "Желтый"
-                case .green:
-                    return "Зеленый"
-                case .lightBlue:
-                    return "Голубой"
-                case .blue:
-                    return "Синий"
-                case .violet:
-                    return "Фиолетовый"
-            }
-        }
+
         var sound: String {
             switch self {
                 case .red:
@@ -70,6 +48,8 @@ enum ColorsMaster {
                     return "ColorsGame_color_8"
                 case .violet:
                     return "ColorsGame_color_9"
+//                case .brown:
+//                    return "ColorsGame_color_10"
             }
         }
         var soundUrl: URL {

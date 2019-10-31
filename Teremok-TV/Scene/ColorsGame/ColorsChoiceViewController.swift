@@ -53,6 +53,7 @@ class ColorsChoiceViewController: GameViewController {
             guard input.isHard else { return }
             progressBar.setProgress(progress: progress, animated: true)
             if seconds == limit {
+                output.result(AlphaviteMaster.Statistic(char: currentColor.rawValue, seconds: Int(limit), isRight: false))
                 timer.invalidate()
                 nextColor()
             }
@@ -182,7 +183,6 @@ class ColorsChoiceViewController: GameViewController {
                 self.nextColor()
             }
         }
-
         output.result(AlphaviteMaster.Statistic(char: currentColor.rawValue, seconds: Int(seconds), isRight: isRight))
     }
 
