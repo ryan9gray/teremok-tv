@@ -82,18 +82,8 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
             }
             }
         }
-        do {
-            //Preparation to play
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
-        }
+        setupTrackableChain(parent: analytics)
     }
-
-    // MARK: Do something
-
 
     deinit {
         track(
@@ -102,14 +92,6 @@ class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDi
         )
         if ServiceConfiguration.activeConfiguration().logging {
             print("Logger: deinit \(className)")
-        }
-        do {
-            //Preparation to play - Костыль
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
         }
     }
 }

@@ -225,7 +225,6 @@
                                     <constraint firstAttribute="height" constant="50" id="i0x-AE-W9E"/>
                                     <constraint firstAttribute="width" constant="50" id="uo8-Mv-ljj"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="icHomeShadow">
                                     <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>

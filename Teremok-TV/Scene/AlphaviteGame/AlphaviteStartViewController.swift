@@ -29,6 +29,8 @@ class AlphaviteStartViewController: GameStartViewController {
         super.viewDidLoad()
 
         segmentController.itemTitles = [ "Я учу алфавит", "Я знаю алфавит" ]
+        segmentController.selectedTextColor = UIColor.Label.titleText
+        segmentController.defaultTextColor = UIColor.Label.titleText
         segmentController.didSelectItemWith = { (index, title) -> () in
             self.buttonPlayer?.play()
             switch index {

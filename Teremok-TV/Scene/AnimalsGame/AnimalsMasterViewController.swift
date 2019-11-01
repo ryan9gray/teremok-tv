@@ -18,7 +18,7 @@ protocol AnimalsMasterDisplayLogic: MasterModuleDisplayLogic, TrackableClass {
     func setDifficult(isEasy: Bool)
 }
 
-class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
+class AnimalsMasterViewController: GameMasterViewController, AnimalsMasterDisplayLogic {
     var interactor: AnimalsMasterBusinessLogic?
     var router: (AnimalsMasterRoutingLogic & AnimalsMasterDataPassing & CommonRoutingLogic)?
     var activityView: LottieHUD?
@@ -54,9 +54,7 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
     }
 
     // MARK: View lifecycle
-    @IBOutlet var backgroundView: UIImageView!
     @IBOutlet private var backNavBtn: KeyButton!
-    private let startTime = Date()
     private var navigationSubscription: Subscription?
 
     @IBAction func backClick(_ sender: UIButton) {
@@ -94,34 +92,7 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
             }
         }
         }
-        do {
-            //Preparation to play
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
-        }
-
         setupTrackableChain(parent: analytics)
-    }
-
-    func openSettings() {
-        self.dismiss(animated: true) {
-            self.output.openSettings()
-        }
-    }
-    func openAutorization() {
-        self.dismiss(animated: true) {
-            self.output.openAuthorization()
-        }
-    }
-
-    var output: Output!
-
-    struct Output {
-        var openSettings: () -> Void
-        var openAuthorization: () -> Void
     }
 
     deinit {
@@ -131,14 +102,6 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
         )
         if ServiceConfiguration.activeConfiguration().logging {
             print("Logger: deinit \(className)")
-        }
-        do {
-            //Preparation to play - Костыль
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
         }
     }
 }

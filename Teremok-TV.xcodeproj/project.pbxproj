@@ -1655,8 +1655,8 @@
 		11BC751B23042D44001B5CC8 /* MonsterGame */ = {
 			isa = PBXGroup;
 			children = (
-				111187E8231E828800EBEFC0 /* Statistic */,
 				116BEDFB2313B4560043CCEA /* Master */,
+				111187E8231E828800EBEFC0 /* Statistic */,
 				11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */,
 				11BA2493230AB84B00A9EA15 /* MonsterFlow.swift */,
 				11BA2495230AC95D00A9EA15 /* MonsterGameViewController.swift */,
@@ -1807,13 +1807,13 @@
 		CA1AB66322F30CBC003A2584 /* AlphaviteGame */ = {
 			isa = PBXGroup;
 			children = (
+				CAAD25E722F59872005CFCD2 /* Master */,
 				CA70867223082E940015851C /* Stats */,
 				CA51004122F5FFAE00821C25 /* AlphaviteFlow.swift */,
 				CAAD25F022F5DBC1005CFCD2 /* AlphaviteStartViewController.swift */,
 				CAAD25F422F5DC80005CFCD2 /* AlphaviteCharsViewController.swift */,
 				CA51003F22F5F8E600821C25 /* AlphaviteChoiceViewController.swift */,
 				CAAD25F222F5DBEC005CFCD2 /* AlphaviteFinishViewController.swift */,
-				CAAD25E722F59872005CFCD2 /* Master */,
 			);
 			path = AlphaviteGame;
 			sourceTree = "<group>";
@@ -3289,13 +3289,13 @@
 		CAFF984423251F4800003076 /* ColorsGame */ = {
 			isa = PBXGroup;
 			children = (
+				CAFF9855232530C100003076 /* Master */,
 				CA62A72423512B930083FD4F /* Stat */,
 				CAFF9856232530DE00003076 /* ColorsGameFlow.swift */,
 				CAFF98582325313C00003076 /* ColorsStartViewController.swift */,
 				CAFF985A2325318E00003076 /* ColorsTeachingViewController.swift */,
 				CAFF985C232531A900003076 /* ColorsChoiceViewController.swift */,
 				CA7197172340EAB8005A729A /* ColorsFinishViewController.swift */,
-				CAFF9855232530C100003076 /* Master */,
 				CA7197152340E2BB005A729A /* ColorGameContainer.swift */,
 			);
 			path = ColorsGame;

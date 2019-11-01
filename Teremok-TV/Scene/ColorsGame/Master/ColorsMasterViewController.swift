@@ -60,6 +60,7 @@ class ColorsMasterViewController: GameMasterViewController, ColorsMasterDisplayL
             dismiss(animated: true, completion: nil)
         }
     }
+    
     // MARK: View lifecycle
     private var navigationSubscription: Subscription?
 
@@ -81,6 +82,7 @@ class ColorsMasterViewController: GameMasterViewController, ColorsMasterDisplayL
             }
         }
         }
+        setupTrackableChain(parent: analytics)
     }
 
     deinit {
@@ -90,14 +92,6 @@ class ColorsMasterViewController: GameMasterViewController, ColorsMasterDisplayL
         )
         if ServiceConfiguration.activeConfiguration().logging {
             print("Logger: deinit \(className)")
-        }
-        do {
-            //Preparation to play - Костыль
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
         }
     }
 }

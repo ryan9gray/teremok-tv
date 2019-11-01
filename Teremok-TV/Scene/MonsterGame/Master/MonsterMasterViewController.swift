@@ -58,6 +58,7 @@ class MonsterMasterViewController: GameMasterViewController, MonsterMasterDispla
             dismiss(animated: true, completion: nil)
         }
     }
+    
     private var navigationSubscription: Subscription?
 
     override func viewDidLoad() {
@@ -77,6 +78,7 @@ class MonsterMasterViewController: GameMasterViewController, MonsterMasterDispla
              }
          }
          }
+        setupTrackableChain(parent: analytics)
     }
 
     deinit {
@@ -86,14 +88,6 @@ class MonsterMasterViewController: GameMasterViewController, MonsterMasterDispla
         )
         if ServiceConfiguration.activeConfiguration().logging {
             print("Logger: deinit \(className)")
-        }
-        do {
-            //Preparation to play - Костыль
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
         }
     }
 }
