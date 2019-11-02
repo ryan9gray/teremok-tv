@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,21 +20,21 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xV5-lt-tAS">
-                    <rect key="frame" x="70" y="0.0" width="93" height="30"/>
+                    <rect key="frame" x="68" y="0.0" width="95" height="30"/>
                     <fontDescription key="fontDescription" name="MontserratAlternates-Regular" family="Montserrat Alternates" pointSize="18"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-4h-xNQ" customClass="GradientView" customModule="Teremok_TV" customModuleProvider="target">
-                    <rect key="frame" x="20" y="0.0" width="30" height="30"/>
+                    <rect key="frame" x="20" y="1" width="28" height="28"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="Ukf-Q6-wsl"/>
-                        <constraint firstAttribute="height" constant="30" id="fAq-4w-Pkp"/>
+                        <constraint firstAttribute="height" constant="28" id="fAq-4w-Pkp"/>
+                        <constraint firstAttribute="width" secondItem="s2l-4h-xNQ" secondAttribute="height" multiplier="1:1" id="gHR-g0-lHY"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="15"/>
+                            <real key="value" value="14"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
@@ -46,8 +46,8 @@
                 <constraint firstItem="s2l-4h-xNQ" firstAttribute="leading" secondItem="2Vx-nA-MOH" secondAttribute="leading" constant="20" id="WbX-Cb-qvV"/>
                 <constraint firstAttribute="bottom" secondItem="xV5-lt-tAS" secondAttribute="bottom" id="X3o-2d-jed"/>
                 <constraint firstItem="xV5-lt-tAS" firstAttribute="leading" secondItem="s2l-4h-xNQ" secondAttribute="trailing" constant="20" id="iqz-hZ-yJ3"/>
-                <constraint firstItem="s2l-4h-xNQ" firstAttribute="top" secondItem="2Vx-nA-MOH" secondAttribute="top" id="v9n-6H-L08"/>
-                <constraint firstAttribute="bottom" secondItem="s2l-4h-xNQ" secondAttribute="bottom" id="xZq-KO-qIg"/>
+                <constraint firstItem="s2l-4h-xNQ" firstAttribute="top" secondItem="2Vx-nA-MOH" secondAttribute="top" constant="1" id="v9n-6H-L08"/>
+                <constraint firstAttribute="bottom" secondItem="s2l-4h-xNQ" secondAttribute="bottom" constant="1" id="xZq-KO-qIg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="YHh-ED-H1q"/>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -271,6 +271,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="alphaviteTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="vvJ-2T-thh"/>
+                                                    <action selector="touchDownGame:" destination="dlq-k2-hSp" eventType="touchDown" id="Qsw-MW-NDq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lw-K8-tJz" customClass="DesignableButton" customModule="Spring">
@@ -293,6 +294,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="animalsTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="vdu-a3-t3m"/>
+                                                    <action selector="touchDownGame:" destination="dlq-k2-hSp" eventType="touchDown" id="xGA-q1-Orf"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -320,6 +322,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="monsterTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="mpB-B8-cud"/>
+                                                    <action selector="touchDownGame:" destination="dlq-k2-hSp" eventType="touchDown" id="xGh-Wd-9y3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-07-4Xw" customClass="DesignableButton" customModule="Spring">
@@ -342,6 +345,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="colorsTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="VNe-3H-Mv5"/>
+                                                    <action selector="touchDownGame:" destination="dlq-k2-hSp" eventType="touchDown" id="myM-Ew-Mk6"/>
                                                 </connections>
                                             </button>
                                         </subviews>

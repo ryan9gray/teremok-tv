@@ -91,6 +91,7 @@
 		253E7E2E236AFA05003FF569 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E7E2D236AFA05003FF569 /* ShadowView.swift */; };
 		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
+		257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CD281236E21F600BE96A4 /* GCPlayer.swift */; };
 		25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EF92368E4A90033D9CA /* Subscription.swift */; };
 		25C43EFD2368E4A90033D9CA /* SimpleSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */; };
 		25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFB2368E4A90033D9CA /* Subscriptions.swift */; };
@@ -893,6 +894,7 @@
 		253E7E2D236AFA05003FF569 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
+		257CD281236E21F600BE96A4 /* GCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPlayer.swift; sourceTree = "<group>"; };
 		25C43EF92368E4A90033D9CA /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSubscription.swift; sourceTree = "<group>"; };
 		25C43EFB2368E4A90033D9CA /* Subscriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
@@ -3040,6 +3042,7 @@
 				CAA4455A2157BF4F0023E340 /* Error */,
 				CAAF1F042177115100460F58 /* Common_Extensions.swift */,
 				CA8CF70A225E2A3600B217C7 /* PlayerHelper.swift */,
+				257CD281236E21F600BE96A4 /* GCPlayer.swift */,
 				CA61D92222A445A900E3D603 /* UPCarouselFlowLayout.swift */,
 				CAF94CC6215F6D94000E8183 /* CarouselLayout.swift */,
 				CAF94CC2215E80F0000E8183 /* CarouselCollectionViewLayout.swift */,
@@ -4094,6 +4097,7 @@
 				CA1C37AC214E5A7C00C8006D /* MasterPresenter.swift in Sources */,
 				CAE1C441211DB6150058C9C6 /* Date.swift in Sources */,
 				CA52F36E223D9FE50058194E /* AlbumInteractor.swift in Sources */,
+				257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */,
 				CA49E482212D2ED300711324 /* SettingsInteractor.swift in Sources */,
 				CA0ABB772180CC8900523F5B /* ScrollViewAlertViewController.swift in Sources */,
 				CA7AAF4F2170B0E200747D4B /* SearchCommand.swift in Sources */,

@@ -23,6 +23,7 @@ class ColorsChoiceViewController: GameViewController {
     @IBOutlet private var stackView: UIStackView!
     private let gameHelper = AlphabetGameHelper()
     private var audioPlayer: AVAudioPlayer?
+    private var buttonPlayer: AVAudioPlayer?
     @IBOutlet private var redMonsterView: UIView!
     @IBOutlet private var greenMonsterView: UIView!
 
@@ -67,7 +68,6 @@ class ColorsChoiceViewController: GameViewController {
 
     private let imageFillter = ImageFillter()
     private var currentColor: ColorsMaster.Colors = .black
-
     private var right: GameModel.Option = .left
 
     @IBAction private func rightTap(_ sender: Any) {
@@ -149,18 +149,21 @@ class ColorsChoiceViewController: GameViewController {
 
         isDone = true
         isRight = cheack(answer: answer)
+        imageView.image = currentImage
+        imageContainer.borderColor = isRight ? UIColor.Alphavite.greenTwo : UIColor.Alphavite.redTwo
         print(isRight)
         timer.invalidate()
         if isRight {
             view.setState(.access)
             points += 1
+            playButton(.rightAnswer)
             playSounds(ColorsMaster.EmotionalsHappy.allCases.randomElement()!.url)
+
         } else {
             view.setState(.fail)
+            playButton(.wrongAnswer)
             playSounds(ColorsMaster.EmotionalsSad.allCases.randomElement()!.url)
         }
-        imageView.image = currentImage
-        imageContainer.borderColor = isRight ? UIColor.Alphavite.greenTwo : UIColor.Alphavite.redTwo
         UIView.animate(
             withDuration: 0.5,
             delay: 0.0,
@@ -267,5 +270,14 @@ class ColorsChoiceViewController: GameViewController {
             print("no file)")
         }
         audioPlayer?.play()
+    }
+
+    private func playButton(_ sound:  AlphaviteMaster.Sound) {
+        do {
+            buttonPlayer = try AVAudioPlayer(contentsOf: sound.url)
+        } catch {
+            print("no file)")
+        }
+        buttonPlayer?.play()
     }
 }

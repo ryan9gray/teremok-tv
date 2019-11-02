@@ -691,7 +691,7 @@ extension TTSegmentedControl {
         }
         
         itemTitles[atIndex] = title
-        self.setNeedsLayout()
+        setNeedsLayout()
         
     }
     

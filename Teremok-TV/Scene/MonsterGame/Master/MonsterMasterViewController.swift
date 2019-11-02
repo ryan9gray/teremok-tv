@@ -58,7 +58,7 @@ class MonsterMasterViewController: GameMasterViewController, MonsterMasterDispla
             dismiss(animated: true, completion: nil)
         }
     }
-    
+
     private var navigationSubscription: Subscription?
 
     override func viewDidLoad() {

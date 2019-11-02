@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -240,7 +240,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1i-oi-oIF" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="313" y="254" width="270" height="60"/>
+                                <rect key="frame" x="313" y="252" width="270" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="IkG-m4-0OP"/>
                                     <constraint firstAttribute="width" constant="270" id="Vwn-8H-c3o"/>
@@ -261,14 +261,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Q3W-vx-GD8">
-                                <rect key="frame" x="44" y="0.0" width="808" height="240"/>
+                                <rect key="frame" x="44" y="-2" width="808" height="240"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="cRO-Jt-8Q4"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="c0O-jz-IMz">
-                                <rect key="frame" x="296" y="324" width="304" height="60"/>
+                                <rect key="frame" x="296" y="322" width="304" height="60"/>
                                 <subviews>
                                     <button opaque="NO" tag="99" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dhz-jJ-yZZ">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
@@ -321,7 +321,7 @@
                             <constraint firstItem="c0O-jz-IMz" firstAttribute="centerX" secondItem="ptf-sM-dwg" secondAttribute="centerX" id="4Bb-I7-h0r"/>
                             <constraint firstItem="n1i-oi-oIF" firstAttribute="centerX" secondItem="ptf-sM-dwg" secondAttribute="centerX" id="8Tn-zr-imN"/>
                             <constraint firstItem="mgt-YT-EnK" firstAttribute="width" secondItem="mgt-YT-EnK" secondAttribute="height" multiplier="1:1" id="9Lr-6G-zYC"/>
-                            <constraint firstItem="Q3W-vx-GD8" firstAttribute="top" secondItem="C8o-Hd-arP" secondAttribute="top" id="AAv-Db-ifn"/>
+                            <constraint firstItem="Q3W-vx-GD8" firstAttribute="top" secondItem="ptf-sM-dwg" secondAttribute="top" constant="-2" id="AAv-Db-ifn"/>
                             <constraint firstItem="n1i-oi-oIF" firstAttribute="top" secondItem="Q3W-vx-GD8" secondAttribute="bottom" constant="14" id="NIC-hW-FFD"/>
                             <constraint firstItem="C8o-Hd-arP" firstAttribute="trailing" secondItem="Q3W-vx-GD8" secondAttribute="trailing" id="ZoU-ca-Giv"/>
                             <constraint firstItem="C8o-Hd-arP" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="c0O-jz-IMz" secondAttribute="bottom" constant="4" id="bnt-Ix-78D"/>
@@ -382,7 +382,7 @@
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Далее" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lae-Nk-jjs">
-                                <rect key="frame" x="422" y="280" width="52.5" height="24"/>
+                                <rect key="frame" x="422.5" y="280" width="51" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="X9A-DG-EkG"/>
                                 </constraints>
@@ -399,13 +399,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В этой игре ты угадал" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tos-yn-IWN">
-                                                <rect key="frame" x="0.0" y="15" width="204.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="15" width="201" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 из 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF0-5j-OVF">
-                                                <rect key="frame" x="204.5" y="15" width="65.5" height="20"/>
+                                                <rect key="frame" x="201" y="14.5" width="69" height="21"/>
                                                 <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="17"/>
                                                 <color key="textColor" red="0.38823529410000002" green="0.29411764709999999" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
