@@ -17,7 +17,7 @@ class GameStartViewController: GameViewController {
         super.viewDidLoad()
 
 
-        displayProfile()
+        avatarButton.setupCurrent()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -34,18 +34,8 @@ class GameStartViewController: GameViewController {
 
         tipView?.dismiss()
     }
-
-    func displayProfile() {
-        guard let childs = Profile.current?.childs else {
-            avatarButton.isHidden = true
-            return
-        }
-
-        if let avatar = childs.first(where: {$0.current ?? false})?.pic {
-            avatarButton.setAvatar(linktoLoad: avatar)
-        }
-    }
 }
+
 extension GameStartViewController: EasyTipViewDelegate {
     func easyTipViewDidDismiss(_ tipView: EasyTipView) {
         tipView.dismiss()

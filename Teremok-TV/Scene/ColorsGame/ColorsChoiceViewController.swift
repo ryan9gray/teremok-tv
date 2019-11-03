@@ -101,7 +101,7 @@ class ColorsChoiceViewController: GameViewController {
         pointsView.isHidden = !input.isHard
         if input.isHard {
             pointsView.gradientColors = Style.Gradients.yellow.value
-            displayProfile()
+            avatar.setupCurrent()
         }
         setAnimation()
     }
@@ -282,16 +282,5 @@ class ColorsChoiceViewController: GameViewController {
             print("no file)")
         }
         buttonPlayer?.play()
-    }
-
-    func displayProfile() {
-        guard let childs = Profile.current?.childs else {
-            avatar.isHidden = true
-            return
-        }
-
-        if let avatarUrl = childs.first(where: {$0.current ?? false})?.pic {
-            avatar.setAvatar(linktoLoad: avatarUrl)
-        }
     }
 }
