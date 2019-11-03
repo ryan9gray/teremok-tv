@@ -26,6 +26,7 @@ class ColorsChoiceViewController: GameViewController {
     private var buttonPlayer: AVAudioPlayer?
     @IBOutlet private var redMonsterView: UIView!
     @IBOutlet private var greenMonsterView: UIView!
+    @IBOutlet private var avatar: AvatarButton!
 
     var input: Input!
     var output: Output!
@@ -82,12 +83,6 @@ class ColorsChoiceViewController: GameViewController {
         super.viewDidLoad()
 
         setupUI()
-        progressBar.isHidden = !input.isHard
-        pointsView.isHidden = !input.isHard
-        if input.isHard {
-            pointsView.gradientColors = Style.Gradients.yellow.value
-        }
-        setAnimation()
         nextColor()
     }
 
@@ -101,6 +96,14 @@ class ColorsChoiceViewController: GameViewController {
     private func setupUI() {
         pointsLabel.textColor = UIColor.ColorsGame.purp
         pointTitleLabel.textColor = UIColor.ColorsGame.purp
+        avatar.isHidden = !input.isHard
+        progressBar.isHidden = !input.isHard
+        pointsView.isHidden = !input.isHard
+        if input.isHard {
+            pointsView.gradientColors = Style.Gradients.yellow.value
+            displayProfile()
+        }
+        setAnimation()
     }
 
     func nextColor() {
@@ -279,5 +282,16 @@ class ColorsChoiceViewController: GameViewController {
             print("no file)")
         }
         buttonPlayer?.play()
+    }
+
+    func displayProfile() {
+        guard let childs = Profile.current?.childs else {
+            avatar.isHidden = true
+            return
+        }
+
+        if let avatarUrl = childs.first(where: {$0.current ?? false})?.pic {
+            avatar.setAvatar(linktoLoad: avatarUrl)
+        }
     }
 }

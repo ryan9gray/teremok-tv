@@ -218,10 +218,10 @@ open class EasyTipView: UIView {
             public var borderWidth         = CGFloat(0)
             public var borderColor         = UIColor.clear
             public var font                = UIFont.systemFont(ofSize: 15)
-            public var shadowColor         = UIColor.clear
-            public var shadowOffset        = CGSize(width: 0.0, height: 0.0)
-            public var shadowRadius        = CGFloat(0)
-            public var shadowOpacity       = CGFloat(0)
+            public var shadowColor         = UIColor.black
+            public var shadowOffset        = CGSize(width: 3.0, height: 3.0)
+            public var shadowRadius        = CGFloat(5)
+            public var shadowOpacity       = CGFloat(0.5)
         }
         
         public struct Positioning {

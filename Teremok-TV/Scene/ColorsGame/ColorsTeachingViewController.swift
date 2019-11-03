@@ -79,8 +79,6 @@ class ColorsTeachingViewController: GameViewController {
                   self?.nextImage(color)
             }
         })
-
-
     }
 
     private func nextImage(_ color: ColorsMaster.Colors) {
@@ -96,10 +94,9 @@ class ColorsTeachingViewController: GameViewController {
                 nextChar()
                 return
             }
-
+            
             imageContainer.image = UIImage(named: word)
             animateImage()
-
             if let path = Bundle.main.path(forResource: word, ofType: "wav") {
                 playSounds(URL(fileURLWithPath: path)) {
                     getWord()
