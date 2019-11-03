@@ -604,8 +604,8 @@
 		CAD2105323170C69006F2F08 /* pickDriveFrom.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104D23170C68006F2F08 /* pickDriveFrom.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
 		CAD2105423170C69006F2F08 /* pickDriveTo.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104E23170C68006F2F08 /* pickDriveTo.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
 		CAD2105523170C69006F2F08 /* alphabetButton.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104F23170C68006F2F08 /* alphabetButton.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
-		CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105023170C68006F2F08 /* alphabetRight.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
-		CAD2105723170C69006F2F08 /* alphabetWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105123170C68006F2F08 /* alphabetWrong.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105023170C68006F2F08 /* alphabetRight.wav */; };
+		CAD2105723170C69006F2F08 /* alphabetWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105123170C68006F2F08 /* alphabetWrong.wav */; };
 		CAD90EB122AC71AB004D74BD /* AnimalPackDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB022AC71AB004D74BD /* AnimalPackDownloader.swift */; };
 		CAD90EB322B13636004D74BD /* AnimalsGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB222B13636004D74BD /* AnimalsGetStatCommand.swift */; };
 		CAD90EB522B13644004D74BD /* AnimalsSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB422B13644004D74BD /* AnimalsSendStatCommand.swift */; };
