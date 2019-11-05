@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PDU-Ax-ttJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PDU-Ax-ttJ">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -863,25 +863,38 @@
                                     <constraint firstAttribute="width" constant="80" id="h0D-ni-VRb"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzh-gb-2Op" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="742" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="KEP-pl-UVZ"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icUtka"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xjH-sh-1VT" firstAttribute="trailing" secondItem="GTK-de-LHa" secondAttribute="leading" identifier="pickPlace" id="6dK-xW-FoC"/>
                             <constraint firstItem="WfT-nT-KtM" firstAttribute="top" secondItem="Cgv-Z3-5G6" secondAttribute="top" constant="20" id="6zd-F9-pbb"/>
+                            <constraint firstItem="nzh-gb-2Op" firstAttribute="top" secondItem="Juu-3q-K8b" secondAttribute="top" id="DXu-bc-11a"/>
                             <constraint firstItem="Juu-3q-K8b" firstAttribute="top" secondItem="Cgv-Z3-5G6" secondAttribute="top" constant="20" id="Hke-7s-x4f"/>
                             <constraint firstItem="Juu-3q-K8b" firstAttribute="leading" secondItem="EpT-3d-suh" secondAttribute="trailing" constant="2" id="IGX-rx-rNm"/>
                             <constraint firstItem="EpT-3d-suh" firstAttribute="top" secondItem="WfT-nT-KtM" secondAttribute="bottom" id="JwC-qo-H2S"/>
+                            <constraint firstItem="nzh-gb-2Op" firstAttribute="width" secondItem="nzh-gb-2Op" secondAttribute="height" multiplier="1:1" id="Kw5-M3-q3u"/>
                             <constraint firstAttribute="trailing" secondItem="Juu-3q-K8b" secondAttribute="trailing" constant="40" id="XH1-Uo-3Ih"/>
                             <constraint firstAttribute="bottom" secondItem="ldo-eS-MkM" secondAttribute="bottom" constant="40" id="Xjs-Vf-AHU"/>
                             <constraint firstItem="Cgv-Z3-5G6" firstAttribute="bottom" secondItem="xjH-sh-1VT" secondAttribute="bottom" constant="20" id="bKI-Nh-qkb"/>
+                            <constraint firstItem="nzh-gb-2Op" firstAttribute="leading" secondItem="Juu-3q-K8b" secondAttribute="trailing" constant="-30" id="cHB-e4-9DU"/>
                             <constraint firstItem="ldo-eS-MkM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GTK-de-LHa" secondAttribute="leading" constant="10" id="d9I-40-tDy"/>
                             <constraint firstItem="ldo-eS-MkM" firstAttribute="top" secondItem="GTK-de-LHa" secondAttribute="top" constant="50" id="mVc-7R-I3y"/>
                             <constraint firstItem="WfT-nT-KtM" firstAttribute="centerX" secondItem="GTK-de-LHa" secondAttribute="centerX" id="sHD-Ua-swg"/>
                             <constraint firstItem="ldo-eS-MkM" firstAttribute="centerX" secondItem="GTK-de-LHa" secondAttribute="centerX" id="u3t-IQ-B7b"/>
+                            <constraint firstItem="nzh-gb-2Op" firstAttribute="bottom" secondItem="Juu-3q-K8b" secondAttribute="bottom" id="wBW-J6-BTj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cgv-Z3-5G6"/>
                     </view>
                     <connections>
+                        <outlet property="avatar" destination="nzh-gb-2Op" id="cFd-am-lon"/>
                         <outlet property="cloudView" destination="EpT-3d-suh" id="Ide-nb-pJ8"/>
                         <outlet property="firstItem" destination="PnL-Ha-mfW" id="A5d-b4-IRg"/>
                         <outlet property="imageContainer" destination="Y3u-df-QHi" id="54v-Nh-aK9"/>

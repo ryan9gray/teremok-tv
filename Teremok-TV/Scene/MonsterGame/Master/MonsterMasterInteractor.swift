@@ -30,7 +30,7 @@ class MonsterMasterInteractor: MonsterMasterBusinessLogic, MonsterMasterDataStor
                 completion(true)
               } else {
                 self.bundleResourceRequest.beginAccessingResources { error in
-                    completion(error == nil)
+                    completion(false)
                   }
               }
         }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -110,7 +110,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 из 20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="N5U-NS-lGj">
-                                                        <rect key="frame" x="20.666666666666657" y="39.666666666666657" width="108" height="32"/>
+                                                        <rect key="frame" x="33.333333333333321" y="39.666666666666657" width="82.666666666666686" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="ovs-g6-osJ"/>
                                                         </constraints>
@@ -133,7 +133,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="IfI-UL-x6T">
-                                                        <rect key="frame" x="0.0" y="23" width="149.33333333333334" height="76"/>
+                                                        <rect key="frame" x="22.333333333333371" y="23" width="105" height="76"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="76" id="VMN-0Q-kT4"/>
                                                         </constraints>
@@ -155,7 +155,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+27%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na8-ZI-fGo">
-                                                        <rect key="frame" x="36.333333333333314" y="39.666666666666657" width="76" height="32"/>
+                                                        <rect key="frame" x="45.333333333333314" y="39.666666666666657" width="58" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="bPv-ie-Evw"/>
                                                         </constraints>

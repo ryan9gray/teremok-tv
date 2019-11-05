@@ -100,6 +100,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     func getList() -> [URL]?{
         let fileManager = FileManager.default
         let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        documentsURL.startAccessingSecurityScopedResource()
         do {
             let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
             print(fileURLs.debugDescription)

@@ -27,6 +27,7 @@ class AlphaviteChoiceViewController: GameViewController {
     @IBOutlet private var wordLabel: UILabel!
     @IBOutlet private var imageContainer: DesignableView!
     @IBOutlet private var cloudView: UIView!
+    @IBOutlet private var avatar: AvatarButton!
 
     var input: Input!
     var output: Output!
@@ -70,12 +71,6 @@ class AlphaviteChoiceViewController: GameViewController {
         super.viewDidLoad()
 
         setupUI()
-        progressBar.isHidden = !input.isHard
-        pointsView.isHidden = !input.isHard
-        if input.isHard {
-            pointsView.gradientColors = Style.Gradients.orange.value
-        }
-
         nextChar()
         setAnimation()
     }
@@ -99,6 +94,14 @@ class AlphaviteChoiceViewController: GameViewController {
         rightChar.contentMode = .center
         pointsLabel.textColor = .white
         pointTitleLabel.textColor = .white
+
+        avatar.isHidden = !input.isHard
+           progressBar.isHidden = !input.isHard
+           pointsView.isHidden = !input.isHard
+           if input.isHard {
+               pointsView.gradientColors = Style.Gradients.orange.value
+                avatar.setupCurrent()
+           }
     }
 
     private func setWord(_ text: String) {

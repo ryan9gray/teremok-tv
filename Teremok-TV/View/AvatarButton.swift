@@ -19,20 +19,20 @@ class AvatarButton: RoundEdgeButton {
         self.borderWidth = 5
         self.backgroundColor = .white
         clipsToBounds = true
-        self.imageView?.contentMode = .scaleAspectFill
+        imageView?.contentMode = .scaleAspectFill
     }
     
     func setAvatar(_ image: UIImage?){
         if let im = image {
-            self.setImage(im, for: .normal)
+            setImage(im, for: .normal)
         }
-        else{
-            self.setImage(image, for: .normal)
+        else {
+            setImage(image, for: .normal)
         }
     }
 
     func setAvatar(linktoLoad: String){
-        getImage(linktoLoad) { [weak self] (image) in
+        getImage(linktoLoad) { [weak self] image in
             if image != nil {
                 self?.setAvatar(image)
             }

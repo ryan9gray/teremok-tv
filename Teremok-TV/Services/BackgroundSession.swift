@@ -40,7 +40,7 @@ final class BackgroundSession {
     private init() {
         let configuration = URLSessionConfiguration.background(withIdentifier: backgroundIdentifier)
         manager = SessionManager(configuration: configuration)
-
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.done), name: .MusicBadge, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.done), name: .FavBadge, object: nil)
 
@@ -54,13 +54,14 @@ final class BackgroundSession {
                     let video = self.list.filter({ $0.fileName == task.originalRequest!.url!.lastPathComponent }).first
                 else { return }
 
-                var destination = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                var destination = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
                 if video.fileName.split(separator: ".").last == "m4a" {
                     self.createMusicFolder()
                     destination.appendPathComponent("Music")
-                } 
+                }
+
                 destination.appendPathComponent(video.id)
-                try FileManager.default.moveItem(at: location, to: destination)
+                try FileManager.default.copyItem(at: location, to: destination)
             } catch {
                 print("\(error)")
             }
