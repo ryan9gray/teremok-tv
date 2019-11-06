@@ -16,15 +16,7 @@ fileprivate let backgroundIdentifier = "ru.xmedia.teremoktv"
 fileprivate let notificationIdentifier = "teremoktv"
     
 final class BackgroundSession {
-    
-    /// Shared singleton instance of BackgroundSession
-    
     static let shared = BackgroundSession()
-    
-    /// AlamoFire `SessionManager`
-    ///
-    /// This is `private` to keep this app loosely coupled with Alamofire.
-    
     private let manager: SessionManager
 
     /// Save background completion handler, supplied by app delegate
@@ -32,11 +24,7 @@ final class BackgroundSession {
     func saveBackgroundCompletionHandler(_ backgroundCompletionHandler: @escaping () -> Void) {
         manager.backgroundCompletionHandler = backgroundCompletionHandler
     }
-    
-    /// Initialize background session
-    ///
-    /// This is `private` to avoid accidentally instantiating separate instance of this singleton object.
-    
+
     private init() {
         let configuration = URLSessionConfiguration.background(withIdentifier: backgroundIdentifier)
         manager = SessionManager(configuration: configuration)
@@ -44,8 +32,6 @@ final class BackgroundSession {
         NotificationCenter.default.addObserver(self, selector: #selector(self.done), name: .MusicBadge, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.done), name: .FavBadge, object: nil)
 
-        // specify what to do when download is done
-        
         manager.delegate.downloadTaskDidFinishDownloadingToURL = { [weak self] _, task, location in
             guard let self = self else { return }
 
@@ -67,9 +53,8 @@ final class BackgroundSession {
             }
         }
         
-        // specify what to do when background session finishes; i.e. make sure to call saved completion handler
-        // if you don't implement this, it will call the saved `backgroundCompletionHandler` for you
-        
+        /// specify what to do when background session finishes; i.e. make sure to call saved completion handler
+        /// if you don't implement this, it will call the saved `backgroundCompletionHandler` for you
         manager.delegate.sessionDidFinishEventsForBackgroundURLSession = { [weak self] _ in
             self?.manager.backgroundCompletionHandler?()
             self?.manager.backgroundCompletionHandler = nil
@@ -83,9 +68,7 @@ final class BackgroundSession {
             let notification = UNNotificationRequest(identifier: notificationIdentifier, content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(notification)            
         }
-        
-        // specify what to do upon error
-        
+
         manager.delegate.taskDidComplete = { _, task, error in
             guard let filename = task.originalRequest?.url?.lastPathComponent else { return }
             if let error = error {
@@ -101,8 +84,8 @@ final class BackgroundSession {
             }
             NotificationCenter.default.post(name: .UploadProgress, object: 1.0)
 
-            // I might want to post some event to `NotificationCenter`
-            // so app UI can be updated, if it's in foreground
+            /// I might want to post some event to `NotificationCenter`
+            /// so app UI can be updated, if it's in foreground
         }
     }
 
