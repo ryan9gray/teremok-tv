@@ -44,6 +44,7 @@ class OnDemandLoader {
     func loadOnDemandAssets(completion: @escaping (Result<Bool>) -> Void) {
         bundleResourceRequest.endAccessingResources()
         bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
+        Bundle.main.setPreservationPriority(0.8, forTags: Set(getTags))
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             if available {
                 completion(.success(true))
