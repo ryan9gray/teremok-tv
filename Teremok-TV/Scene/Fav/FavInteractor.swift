@@ -75,7 +75,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                         ids.append(numIds)
                     }
                     let pngUrl = savedPics.filter({$0.deletingPathExtension().lastPathComponent == id}).first
-                    let offlineVideoModel = Fav.OfflineVideoModel(id: id, videoUrl: videoUrl, imageUrl: pngUrl)
+                    let offlineVideoModel = Fav.OfflineVideoModel(id: id, videoUrl: videoUrl, image: .url(pngUrl))
                     self.offlineVideos.append(offlineVideoModel)
                 }
                 self.presenter?.presentSaved(models: self.offlineVideos)
@@ -129,9 +129,16 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     func removeModel(_ video: Fav.OfflineVideoModel) {
         deleteFrom(url: video.videoUrl)
 
-        if let urlImage = video.imageUrl{
-            deleteFrom(url: urlImage)
+        switch video.image {
+            case .url(let url):
+                if let urlImage = url {
+                    deleteFrom(url: urlImage)
+                }
+            case .data(_):
+                break
+
         }
+
         fetchSaved()
     }
 

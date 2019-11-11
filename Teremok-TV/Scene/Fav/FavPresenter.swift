@@ -25,8 +25,8 @@ class FavPresenter: FavPresentationLogic {
     
     func presentFav(_ models: [VideoModel]) {
         var fav: [Fav.Item] = []
-        for item in models  {
-            let serial = Fav.Item(imageUrl: URL(string: item.picture ?? ""))
+        for item in models {
+            let serial = Fav.Item(image: .url(URL(string: item.picture ?? "")))
             fav.append(serial)
         }
         viewController?.display(fav: fav)
@@ -35,9 +35,8 @@ class FavPresenter: FavPresentationLogic {
     func presentSaved(models:[Fav.OfflineVideoModel]) {
         var saved: [Fav.Item] = []
         models.forEach { model in
-            let seria = Fav.Item(imageUrl: model.imageUrl)
+            let seria = Fav.Item(image: model.image)
             saved.append(seria)
-            
         }
         DispatchQueue.main.async {
             self.viewController?.display(saved: saved)

@@ -14,15 +14,19 @@ import UIKit
 
 enum Fav {
     // MARK: Use cases
-  
+
+    enum ImageType {
+        case url(URL?)
+        case data(Data?)
+    }
     struct Item {
-        var imageUrl: URL?
+        var image: ImageType
     }
     
     struct OfflineVideoModel {
         var id: String
         var videoUrl: URL
-        var imageUrl: URL?
+        var image: ImageType
     }
     
     enum Section: CaseIterable {
