@@ -4,6 +4,7 @@
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
+		<string>ru.xmedia.teremoktv.hlsBackground</string>
 		<string>ru.xmedia.teremoktv.background</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>

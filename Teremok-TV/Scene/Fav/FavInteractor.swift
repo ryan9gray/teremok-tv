@@ -56,6 +56,11 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
             }
         }
     }
+
+    func fetchHLS() {
+        let assets = HLSAssets.fromDefaults()
+
+    }
     
     func fetchSaved() {
         if let list = getList() {

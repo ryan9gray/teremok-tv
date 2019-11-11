@@ -90,9 +90,7 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
             self.presenter?.present(errorString: "Не получилось добавить в скачанное", completion: nil)
             return
         }
-        videoService.downloadVideo(item: item) { (finish) in
-            completion(finish)
-        }
+        videoService.downloadVideo(item: item)
     }
 
     func addToFav(idx: Int){
@@ -106,7 +104,7 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
     
     func response(videos: VideoResponse){
         guard let items = videos.items else { return }
-        
+
         self.nextShift = videos.startItemIdInNextPage
         self.hasMore = items.count > 0
         self.videoItems.append(contentsOf: items)

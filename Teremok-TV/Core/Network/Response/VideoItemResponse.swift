@@ -36,7 +36,6 @@ final class VideoItemModel: Mappable {
 
 
 final class VideoModel: Mappable {
-    
     var id: Int?
     var name: String?
     var description: String?
@@ -67,12 +66,10 @@ final class VideoModel: Mappable {
         viewedMe   <- map["viewedMe"]
         downloadMe   <- map["downloadMe"]
         downloadLink   <- map["downloadLink"]
-
     }
 }
 
 final class SeriesResponse: Mappable {
-    
     var id: Int?
     var name: String?
     
@@ -84,7 +81,6 @@ final class SeriesResponse: Mappable {
     }
 }
 final class StreamResponse: Mappable {
-    
     var quality: String?
     var link: String?
     

@@ -36,6 +36,8 @@
 		11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8C232A071A00F8E529 /* monsterRight.wav */; };
 		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceMonsters, ); }; };
 		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
+		251A04442379E667001644D4 /* HLSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251A04432379E667001644D4 /* HLSService.swift */; };
+		251A04472379E6F8001644D4 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251A04452379E6F8001644D4 /* Stream.swift */; };
 		251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E516D235A579000221BA2 /* ColorsGame_subject_10_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
@@ -839,6 +841,8 @@
 		11CF6B8C232A071A00F8E529 /* monsterRight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterRight.wav; sourceTree = "<group>"; };
 		11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = monster_game_introduce.mp4; sourceTree = "<group>"; };
 		11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameResultsViewController.swift; sourceTree = "<group>"; };
+		251A04432379E667001644D4 /* HLSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSService.swift; sourceTree = "<group>"; };
+		251A04452379E6F8001644D4 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_1.wav; sourceTree = "<group>"; };
 		251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_2.wav; sourceTree = "<group>"; };
 		251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_3.wav; sourceTree = "<group>"; };
@@ -2892,8 +2896,9 @@
 		CADE0E4021189BE800CC9871 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CADE0E432118A33E00CC9871 /* LocalStore.swift */,
+				251A04432379E667001644D4 /* HLSService.swift */,
 				CAF61D7A217DFF8300035EE9 /* BackgroundSession.swift */,
+				CADE0E432118A33E00CC9871 /* LocalStore.swift */,
 				CA57897A226FA76500F05A5A /* StoreReviewHelper.swift */,
 				CAD90EB022AC71AB004D74BD /* AnimalPackDownloader.swift */,
 				CA10413F22625787005D62DE /* MusicLoaderService.swift */,
@@ -2965,6 +2970,7 @@
 		CAE1C43A211DB5960058C9C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				251A04452379E6F8001644D4 /* Stream.swift */,
 				CAC91014215D4CDC00E62F01 /* PreviewModel.swift */,
 				CAF94CD02160C106000E8183 /* AnimationModel.swift */,
 				CAA732BB21318C21006276B4 /* Profile.swift */,
@@ -4177,6 +4183,7 @@
 				CAE1C42B211DACE10058C9C6 /* CacherType.swift in Sources */,
 				CA433FF4224F94D700B0788E /* MusicSearchCommand.swift in Sources */,
 				CAA6FDB0224BF2A3008C2F87 /* MusicResponse.swift in Sources */,
+				251A04442379E667001644D4 /* HLSService.swift in Sources */,
 				CABAE9CD22C3EE820093FC5A /* OnboardingViewController.swift in Sources */,
 				CAAFD14B2348F06A005E086C /* ColorsGameService.swift in Sources */,
 				CAEEF2402299C9FD00AF5AF6 /* RoundPresentViewController.swift in Sources */,
@@ -4292,6 +4299,7 @@
 				CA9A6748213C134000FCB400 /* RazdelInteractor.swift in Sources */,
 				CAC2D52D2115A68300945003 /* String.swift in Sources */,
 				CAA884682139222C00E27F7A /* CacheableCommand.swift in Sources */,
+				251A04472379E6F8001644D4 /* Stream.swift in Sources */,
 				CAFF984823252D3E00003076 /* ImageFillter.swift in Sources */,
 				CAE3649022918181003E891D /* AnimalsMainRouter.swift in Sources */,
 				CA52F351223D2DF40058194E /* MusicMasterRouter.swift in Sources */,

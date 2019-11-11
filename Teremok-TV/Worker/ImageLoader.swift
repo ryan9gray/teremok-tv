@@ -28,6 +28,11 @@ struct ImageLoader {
             }
         }
     }
+    func dataFrom(url: URL, comletion: @escaping (Data?) -> Void) {
+        Alamofire.request(url).responseImage { response in
+            comletion(response.result.value?.pngData())
+        }
+    }
     
     func saveImageToDocumentDirectory(image: UIImage, name: String) {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!

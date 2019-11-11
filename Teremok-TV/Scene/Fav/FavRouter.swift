@@ -38,6 +38,7 @@ class FavRouter: NSObject, FavRoutingLogic, FavDataPassing {
         dataStore.razdId = 0
         viewController?.masterRouter?.presentNextChild(viewController: serials)
     }
+
     func navigateToSavedPreview(number: Int){
         let serials = PreviewViewController.instantiate(fromStoryboard: .play)
         guard var dataStore = serials.router?.dataStore else { return }

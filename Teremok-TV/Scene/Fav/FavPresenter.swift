@@ -45,12 +45,19 @@ class FavPresenter: FavPresentationLogic {
 
     func presentSaved(models:[Fav.OfflineVideoModel]){
         var saved: [Fav.Item] = []
-        
+        let assets = HLSAssets.fromDefaults().assets
+
         models.forEach { (model) in
             let seria = Fav.Item(imageUrl:  model.imageUrl ?? URL(fileURLWithPath: ""))
             saved.append(seria)
-            
         }
+//        assets?.forEach{ stream in
+//            if let imageData = stream.art {
+//                let seria = Fav.Item(imageUrl:  UIImage(data: imageData))
+//                saved.append(seria)
+//            }
+//        }
+
         DispatchQueue.main.async {
             self.viewController?.display(saved: saved)
         }
