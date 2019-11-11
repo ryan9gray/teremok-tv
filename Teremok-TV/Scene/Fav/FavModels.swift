@@ -16,7 +16,7 @@ enum Fav {
     // MARK: Use cases
   
     struct Item {
-        var imageUrl: URL
+        var imageUrl: URL?
     }
     
     struct OfflineVideoModel {

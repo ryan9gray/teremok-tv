@@ -28,7 +28,8 @@ class FavCollectionViewCell: PreviewImageCollectionViewCell {
         // Initialization code
     }
     
-    func configure(url: URL) {
+    func configure(url: URL?) {
+        guard let url = url else { return }
         linktoLoad = url.absoluteString
     }
 
