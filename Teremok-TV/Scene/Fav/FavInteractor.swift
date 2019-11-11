@@ -115,7 +115,10 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         return nil
     }
     
-    
+    func deleteHlsVideo(idx: Int) {
+
+    }
+
     func deleteLocalVideo(idx: Int) {
         guard let video = offlineVideos[safe:idx], let id = Int(video.id)  else { return }
 

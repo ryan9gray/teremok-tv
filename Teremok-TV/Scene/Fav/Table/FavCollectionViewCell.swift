@@ -14,10 +14,7 @@ protocol ButtonWithIndexPath: class {
 }
 
 class FavCollectionViewCell: PreviewImageCollectionViewCell {
-    
-    
     var ip: IndexPath?
-    
     weak var delegate: ButtonWithIndexPath?
     
     @IBAction func trashClick(_ sender: Any) {
@@ -31,9 +28,14 @@ class FavCollectionViewCell: PreviewImageCollectionViewCell {
         // Initialization code
     }
     
-    func configure(url: URL){
-        
-        self.linktoLoad = url.absoluteString
+    func configure(url: URL) {
+        linktoLoad = url.absoluteString
+    }
+
+    func configure(data: Data?) {
+        guard let data = data, let image = UIImage.init(data: data) else { return }
+
+        imageView.image = image
     }
 }
 

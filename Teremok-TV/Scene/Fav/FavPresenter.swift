@@ -43,7 +43,7 @@ class FavPresenter: FavPresentationLogic {
         viewController?.display(saved: saved)
     }
 
-    func presentSaved(models:[Fav.OfflineVideoModel]){
+    func presentSaved(models:[Fav.OfflineVideoModel]) {
         var saved: [Fav.Item] = []
         let assets = HLSAssets.fromDefaults().assets
 
