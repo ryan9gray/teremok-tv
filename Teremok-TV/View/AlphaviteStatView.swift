@@ -16,7 +16,7 @@ class AlphaviteStatView: UIView {
         super.awakeFromNib()
         
         charLabel.textColor = .white
-        countLabel.textColor = UIColor.Alphavite.Button.grey
+        countLabel.textColor = UIColor.Alphavite.grey
     }
 
     func set(char: String, count: String) {

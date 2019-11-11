@@ -52,18 +52,6 @@ class ChildsViewController: AbstracViewController, ChildsDisplayLogic {
         router.viewController = viewController
         router.dataStore = interactor
     }
-
-    // MARK: Routing
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-
     @IBOutlet private var firstChild: ChildView!
     @IBOutlet private var secondChild: ChildView!
     @IBOutlet private var thirdChild: ChildView!
@@ -76,7 +64,6 @@ class ChildsViewController: AbstracViewController, ChildsDisplayLogic {
     }
 
     func prepareUI(){
-        
         firstChild.delegate = self
         secondChild.delegate = self
         thirdChild.delegate = self
@@ -95,7 +82,6 @@ class ChildsViewController: AbstracViewController, ChildsDisplayLogic {
     }
     
     func setAvatars(childs: [Child]){
-        
         firstChild.setChild(childs.first)
         firstChild.isHidden = false
         secondChild.setChild(childs.second)
@@ -108,12 +94,10 @@ class ChildsViewController: AbstracViewController, ChildsDisplayLogic {
     }
     
     func displayChildProfile(model: GetProfileResponse){
-        
         router?.navigateToChild(model)
     }
-    
-
 }
+
 extension ChildsViewController: ChildsStackProtocol {
     func plusKids() {
         plusClick()
@@ -125,15 +109,11 @@ extension ChildsViewController: ChildsStackProtocol {
         }
         interactor?.switchChild(id: id)
     }
-    
-    
 }
 
 class ChildView: UIView {
-    
     @IBOutlet private var avatarChild: AvatarButton!
     @IBOutlet private var nameLbl: UILabel!
-    
     weak var delegate: ChildsStackProtocol?
 
     var child: Child?
@@ -154,8 +134,6 @@ class ChildView: UIView {
         }
         else {
             avatarChild.setAvatar(#imageLiteral(resourceName: "icPlus"))
-
         }
     }
-    
 }

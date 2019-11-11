@@ -27,6 +27,7 @@ class AlphaviteChoiceViewController: GameViewController {
     @IBOutlet private var wordLabel: UILabel!
     @IBOutlet private var imageContainer: DesignableView!
     @IBOutlet private var cloudView: UIView!
+    @IBOutlet private var avatar: AvatarButton!
 
     var input: Input!
     var output: Output!
@@ -46,7 +47,7 @@ class AlphaviteChoiceViewController: GameViewController {
     private var pickPlayer: AVAudioPlayer?
 
     private var timer = Timer()
-    private let limit: CGFloat = 30.0
+    private let limit: CGFloat = 10.0
     private var progress: CGFloat {
         return seconds / limit
     }
@@ -57,6 +58,7 @@ class AlphaviteChoiceViewController: GameViewController {
             guard input.isHard else { return }
             progressBar.setProgress(progress: progress, animated: true)
             if seconds == limit {
+                output.result(AlphaviteMaster.Statistic(char: currentChar, seconds: Int(seconds), isRight: false))
                 timer.invalidate()
                 nextChar()
             }
@@ -69,19 +71,13 @@ class AlphaviteChoiceViewController: GameViewController {
         super.viewDidLoad()
 
         setupUI()
-        progressBar.isHidden = !input.isHard
-        pointsView.isHidden = !input.isHard
-        if input.isHard {
-            pointsView.gradientColors = Style.Gradients.orange.value
-        }
-
         nextChar()
         setAnimation()
     }
 
     private func setupUI() {
         wordLabel.textColor = .white
-        leftChar.textColor = UIColor.Alphavite.Button.blueOne
+        leftChar.textColor = UIColor.Alphavite.blueOne
         leftChar.strokeSize = 26.0
         leftChar.strokeColor = .white
         leftChar.strokePosition = .center
@@ -89,7 +85,7 @@ class AlphaviteChoiceViewController: GameViewController {
         leftChar.textAlignment = .center
         leftChar.contentMode = .center
 
-        rightChar.textColor = UIColor.Alphavite.Button.blueOne
+        rightChar.textColor = UIColor.Alphavite.blueOne
         rightChar.strokeSize = 26.0
         rightChar.strokeColor = .white
         rightChar.strokePosition = .center
@@ -98,6 +94,14 @@ class AlphaviteChoiceViewController: GameViewController {
         rightChar.contentMode = .center
         pointsLabel.textColor = .white
         pointTitleLabel.textColor = .white
+
+        avatar.isHidden = !input.isHard
+           progressBar.isHidden = !input.isHard
+           pointsView.isHidden = !input.isHard
+           if input.isHard {
+               pointsView.gradientColors = Style.Gradients.orange.value
+                avatar.setupCurrent()
+           }
     }
 
     private func setWord(_ text: String) {
@@ -109,6 +113,7 @@ class AlphaviteChoiceViewController: GameViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+
         timer.invalidate()
         audioPlayer?.stop()
     }
@@ -164,11 +169,10 @@ class AlphaviteChoiceViewController: GameViewController {
                 self.secondItem.alpha = 1.0
                 self.firstItem.isHidden = false
                 self.secondItem.isHidden = false
-                self.stackView.layoutIfNeeded()
                 self.wordLabel.isHidden = true
                 self.stackView.layoutIfNeeded()
         })
-        imageContainer.borderColor = UIColor.Alphavite.Button.blueTwo
+        imageContainer.borderColor = UIColor.Alphavite.blueTwo
         imageView.image = image
     }
 
@@ -187,7 +191,7 @@ class AlphaviteChoiceViewController: GameViewController {
             playSounds(AlphaviteMaster.Sound.wrongAnswer.url)
             view.layer.addSublayer(cross)
         }
-        imageContainer.borderColor = isRight ? UIColor.Alphavite.Button.greenTwo : UIColor.Alphavite.Button.redTwo
+        imageContainer.borderColor = isRight ? UIColor.Alphavite.greenTwo : UIColor.Alphavite.redTwo
         UIView.animate(
             withDuration: 0.5,
             delay: 0.0,
@@ -196,13 +200,14 @@ class AlphaviteChoiceViewController: GameViewController {
             options: [],
             animations: {
                 self.wordLabel.isHidden = false
+                guard self.isRight else { return }
                 switch answer {
-                case .left:
-                    self.secondItem.alpha = 0.0
-                    self.secondItem.isHidden = true
-                case .right:
-                    self.firstItem.alpha = 0.0
-                    self.firstItem.isHidden = true
+                    case .left:
+                        self.secondItem.alpha = 0.0
+                        self.secondItem.isHidden = true
+                    case .right:
+                        self.firstItem.alpha = 0.0
+                        self.firstItem.isHidden = true
                 }
                 self.stackView.layoutIfNeeded()
         }) { _ in
@@ -275,7 +280,7 @@ class AlphaviteChoiceViewController: GameViewController {
             guard let self = self else { return }
 
             self.pickPlayer?.stop()
-            self.pickReaction(isHappy: self.cheack(answer: side), complition: { _ in
+            self.pickReaction(isHappy: self.cheack(answer: side), completion: { _ in
                 self.hidePick(side: side, completion: completion)
             })
         })
@@ -309,7 +314,7 @@ class AlphaviteChoiceViewController: GameViewController {
         })
     }
 
-    private func pickReaction(isHappy: Bool, complition: @escaping (Bool) -> Void) {
+    private func pickReaction(isHappy: Bool, completion: @escaping (Bool) -> Void) {
         if isHappy {
             playSounds(AlphaviteMaster.Sound.jump.url)
         }
@@ -317,7 +322,7 @@ class AlphaviteChoiceViewController: GameViewController {
         pickAnimationView.animation = Animation.named(namePick.rawValue)
         pickAnimationView.loopMode = .playOnce
         pickAnimationView.animationSpeed = 1.5
-        pickAnimationView.play(completion: complition)
+        pickAnimationView.play(completion: completion)
 
         let nameCloud: AlphaviteMaster.CloudAnimations = isHappy
             ? (Bool.random() ? .happyTwo : .happyOne)

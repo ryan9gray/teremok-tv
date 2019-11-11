@@ -18,5 +18,4 @@ enum Search {
     struct Tag {
         var imageLink = ""
     }
-    
 }

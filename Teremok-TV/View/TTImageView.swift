@@ -13,7 +13,7 @@ class TTImageView: UIImageView {
 
     // MARK: - Properties
     
-    @IBInspectable public var borderColor: UIColor = UIColor.Button.yellowBase {
+    @IBInspectable public var borderColor: UIColor = UIColor.View.yellowBase {
         didSet {
             layer.borderColor = borderColor.cgColor
         }

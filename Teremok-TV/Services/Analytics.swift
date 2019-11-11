@@ -109,6 +109,7 @@ enum Events {
         case AnimalFlow
         case AlphabetFlow
         case MonsterFlow
+        case ColorsFlow
 
         case MusicFlow
         case Razdel

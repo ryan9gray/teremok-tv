@@ -18,7 +18,7 @@ protocol AnimalsMasterDisplayLogic: MasterModuleDisplayLogic, TrackableClass {
     func setDifficult(isEasy: Bool)
 }
 
-class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
+class AnimalsMasterViewController: GameMasterViewController, AnimalsMasterDisplayLogic {
     var interactor: AnimalsMasterBusinessLogic?
     var router: (AnimalsMasterRoutingLogic & AnimalsMasterDataPassing & CommonRoutingLogic)?
     var activityView: LottieHUD?
@@ -54,12 +54,11 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
     }
 
     // MARK: View lifecycle
-    @IBOutlet var backgroundView: UIImageView!
-    @IBOutlet private var backNavBtn: TTAbstractMainButton!
-    private let startTime = Date()
+    @IBOutlet private var backNavBtn: KeyButton!
+    private var navigationSubscription: Subscription?
 
     @IBAction func backClick(_ sender: UIButton) {
-        if (router?.canPop())! {
+        if router!.canPop() {
             router?.popChild()
         } else {
             dismiss(animated: true, completion: nil)
@@ -73,6 +72,15 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        backNavBtn.gradientColors = [UIColor.AnimalsGame.grassOne, UIColor.AnimalsGame.grassTwo]
+
+        navigationSubscription = router?.subscribeForNavigation { [weak self] canPop in
+            self?.backNavBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "icHomeShadow"), for: .normal)
+            self?.backNavBtn.gradientColors = canPop
+                ? [UIColor.AnimalsGame.coralOne, UIColor.AnimalsGame.coralTwo]
+                : [UIColor.AnimalsGame.grassOne, UIColor.AnimalsGame.grassTwo]
+        }
+        
         interactor?.onDemand { [weak self] success in
             DispatchQueue.main.async {
             if success {
@@ -84,35 +92,7 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
             }
         }
         }
-
-        do {
-            //Preparation to play
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
-        }
-
         setupTrackableChain(parent: analytics)
-    }
-
-    func openSettings() {
-        self.dismiss(animated: true) {
-            self.output.openSettings()
-        }
-    }
-    func openAutorization() {
-        self.dismiss(animated: true) {
-            self.output.openAuthorization()
-        }
-    }
-
-    var output: Output!
-
-    struct Output {
-        var openSettings: () -> Void
-        var openAuthorization: () -> Void
     }
 
     deinit {
@@ -122,14 +102,6 @@ class AnimalsMasterViewController: UIViewController, AnimalsMasterDisplayLogic {
         )
         if ServiceConfiguration.activeConfiguration().logging {
             print("Logger: deinit \(className)")
-        }
-        do {
-            //Preparation to play - Костыль
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
         }
     }
 }

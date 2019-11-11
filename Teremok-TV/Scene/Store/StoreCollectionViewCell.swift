@@ -23,7 +23,7 @@ class StoreCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         super.awakeFromNib()
 
         setLinks()
-        titleLabel.textColor = UIColor.View.Label.titleText
+        titleLabel.textColor = UIColor.Label.titleText
     }
 
     func configure(action: @escaping () -> Void) {
@@ -40,10 +40,10 @@ class StoreCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         attributedString.addAttribute(.link, value: URL(string: "http://api.teremok.tv/static/agreement.html")!, range: foundRange)
         foundRange = attributedString.mutableString.range(of: "Политикой конфиденциальности")
         attributedString.addAttribute(.link, value: URL(string: "http://xmediadigital.ru/privacy")!, range: foundRange)
-        let attributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 14)!, NSAttributedString.Key.foregroundColor : UIColor.View.Label.titleText]
+        let attributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 14)!, NSAttributedString.Key.foregroundColor : UIColor.Label.titleText]
         attributedString.addAttributes(attributes, range: NSRange(location: 0, length: str.length))
         linksTxtView.attributedText = attributedString
-        linksTxtView.linkTextAttributes = [.foregroundColor : UIColor.View.yellow]
+        linksTxtView.linkTextAttributes = [.foregroundColor : UIColor.View.yellowBase]
     }
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {

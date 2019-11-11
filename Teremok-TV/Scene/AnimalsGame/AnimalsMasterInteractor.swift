@@ -38,7 +38,8 @@ class AnimalsMasterInteractor: AnimalsMasterBusinessLogic, AnimalsMasterDataStor
                 completion(true)
               } else {
                 self.bundleResourceRequest.beginAccessingResources { error in
-                    completion(error == nil)
+                    NotificationCenter.default.post(name: .UploadProgress, object: self.bundleResourceRequest.progress.fractionCompleted)
+                    completion(false)
                   }
               }
         }

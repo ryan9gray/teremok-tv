@@ -29,15 +29,9 @@ class PreviewPresenter: PreviewPresentationLogic {
     func presentVideo(_ model: VideoItemModel){
 
         presentRecomendet(model)
-        var previews: [Preview.StreamItem] = []
-        
-        model.streams?.forEach({ (stream) in
-            previews.append(Preview.StreamItem.init(link: stream.link ?? "", quality: stream.quality ?? ""))
-        })
-        if let firstLink = previews.first?.link {
+        if let firstLink = model.stream {
             presentVideo(link: firstLink)
         }
-        viewController?.displayData(items: previews)
     }
     
     func presentVideo(link: String){

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Spring
+import AVFoundation
 
 class GamesListViewController: AbstracViewController {
     var output: Output!
@@ -15,13 +17,20 @@ class GamesListViewController: AbstracViewController {
         var openAnimals: () -> Void
         var openAlphavite: () -> Void
         var openMonster: () -> Void
+        var openColors: () -> Void
     }
-
+    @IBOutlet var buttons: [DesignableButton]!
+    
     @IBOutlet private var titleLabel: StrokeLabel!
     @IBOutlet private var homeBtn: KeyButton!
+    private var buttonPlayer: AVAudioPlayer?
 
     @IBAction private func homeClick(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func touchDownGame(_ sender: Any) {
+        buttonPlayer?.play()
     }
 
     @IBAction func animalsTap(_ sender: Any) {
@@ -41,6 +50,11 @@ class GamesListViewController: AbstracViewController {
             self.output.openMonster()
         }
     }
+    @IBAction func colorsTap(_ sender: Any) {
+        self.dismiss(animated: true) {
+            self.output.openColors()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +65,18 @@ class GamesListViewController: AbstracViewController {
         titleLabel.strokeSize = 12.0
         titleLabel.strokePosition = .center
         titleLabel.gradientColors = Style.Gradients.blue.value
+
+        do {
+              buttonPlayer = try AVAudioPlayer(contentsOf: MonsterMaster.Sound.main.url)
+              buttonPlayer?.prepareToPlay()
+          } catch {
+              print("no file)")
+          }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        buttons.forEach { $0.animate() }
+    }
 }

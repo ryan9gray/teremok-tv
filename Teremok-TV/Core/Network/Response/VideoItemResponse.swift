@@ -17,7 +17,7 @@ final class VideoItemModel: Mappable {
     
     var copyrighter: CopyrighterResponse?
     var recommendations: [VideoModel]?
-    var streams: [StreamResponse]?
+    var stream: String?
     var nextItem: Int?
 
     // Mappable
@@ -29,7 +29,7 @@ final class VideoItemModel: Mappable {
         premium     <- map["premium"]
         copyrighter     <- map["copyrighter"]
         recommendations     <- map["recommendations"]
-        streams     <- map["streams"]
+        stream     <- map["stream"]
         nextItem   <- map["nextItem"]
     }
 }

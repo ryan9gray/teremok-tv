@@ -94,7 +94,6 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
       router?.navigareToStore()
     }
 
-
     @IBAction func logoutClick(_ sender: Any) {
         interactor?.logout()
         masterRouter?.logout()
@@ -159,7 +158,6 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
     }
 
     func displayProfile(_ profile: Profile) {
-        
         let emeil = profile.email ?? ""
         profileTitle.text = "Электронная почта аккаунта " + emeil
 

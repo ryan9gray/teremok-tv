@@ -22,6 +22,7 @@ enum Style {
         case green
         case lightGray
         case blueBorder
+        case lightBlue
     }
 
     enum TextAttributes {
@@ -41,7 +42,7 @@ enum Style {
         ]
         static let alphabetWord: [NSAttributedString.Key: Any] = [
             .font: Font.istokWeb(size: 24.0),
-            .foregroundColor: UIColor.Alphavite.Button.blueTwo,
+            .foregroundColor: UIColor.Alphavite.blueTwo,
         ]
     }
 
@@ -81,9 +82,13 @@ enum Style {
                 return UIFont.systemFont(ofSize: size, weight: .regular)
             }
         }
-    }
-
-    enum Button {
+        static func colorsGameMain(size: CGFloat) -> UIFont {
+            if let font = UIFont(name: "NeSkid (Comica BD) ID120055769-Regular", size: size) {
+                return font
+            } else {
+                return UIFont.systemFont(ofSize: size, weight: .regular)
+            }
+        }
     }
 }
 
@@ -92,26 +97,29 @@ extension Style.Gradients {
         get {
             switch self {
             case .beige:
-                return [UIColor.white, UIColor.Button.beige]
+                return [.white, UIColor.Button.beige]
             case .yellow:
                 return [UIColor.Button.yellowOne, UIColor.Button.yellowTwo]
             case .orange:
-                return [UIColor.Alphavite.Button.orangeOne, UIColor.Alphavite.Button.orangeTwo]
+                return [UIColor.Alphavite.orangeOne, UIColor.Alphavite.orangeTwo]
             case .brown:
-                return [UIColor.Alphavite.Button.brownOne, UIColor.Alphavite.Button.brownTwo]
+                return [UIColor.Alphavite.brownOne, UIColor.Alphavite.brownTwo]
             case .alphavitePlay:
-                return [UIColor.Alphavite.Button.playOne, UIColor.Alphavite.Button.playTwo]
+                return [UIColor.Alphavite.playOne, UIColor.Alphavite.playTwo]
             case .blue:
-                return [UIColor.Alphavite.Button.blueOne, UIColor.Alphavite.Button.blueTwo]
+                return [UIColor.Alphavite.blueOne, UIColor.Alphavite.blueTwo]
             case .red:
-                return [UIColor.Alphavite.Button.redOne, UIColor.Alphavite.Button.redTwo]
+                return [UIColor.Alphavite.redOne, UIColor.Alphavite.redTwo]
             case .green:
-                return [UIColor.Alphavite.Button.greenOne, UIColor.Alphavite.Button.greenTwo]
+                return [UIColor.Alphavite.greenOne, UIColor.Alphavite.greenTwo]
             case .lightGray:
-                return [UIColor.Button.lightGray, UIColor.white]
+                return [UIColor.Button.lightGray, .white]
             case .blueBorder:
-                return [UIColor.Alphavite.Button.blueOne, UIColor.white]
+                return [UIColor.Alphavite.blueOne, .white]
+            case .lightBlue:
+                return []
             }
+
         }
     }
 }

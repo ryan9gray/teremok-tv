@@ -13,7 +13,6 @@
 import UIKit
 
 protocol AnimalsMainRoutingLogic: CommonRoutingLogic {
-    func navigateToStatistic()
     func navigateToStart()
 }
 
@@ -26,13 +25,6 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
     var dataStore: AnimalsMainDataStore?
     var modalControllersQueue = Queue<UIViewController>()
     var checkIntro: Bool = true
-
-    func navigateToStatistic() {
-        let controller = AnimalsStatisticViewController.instantiate(fromStoryboard: .animals)
-        guard var dataStore = controller.router?.dataStore else { return }
-        dataStore.isEasy = !LocalStore.animalsIsHard
-        viewController?.masterRouter?.presentNextChild(viewController: controller)
-    }
 
     func navigateToStart() {
         if checkIntro, !LocalStore.firstAnimalsIntroduce {
@@ -51,6 +43,8 @@ class AnimalsMainRouter: AnimalsMainRoutingLogic, AnimalsMainDataPassing {
             LocalStore.firstAnimalsIntroduce = finish
             self?.navigateToStart()
         }
-        viewController?.masterRouter?.presentNextChild(viewController: controller)
+        controller.modalPresentationStyle = .fullScreen
+        self.viewController?.present(controller, animated: true, completion: nil)
+        //viewController?.masterRouter?.presentNextChild(viewController: controller)
     }
 }

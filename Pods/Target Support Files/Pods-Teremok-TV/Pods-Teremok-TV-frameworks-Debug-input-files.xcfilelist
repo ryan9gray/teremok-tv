@@ -7,7 +7,6 @@ ${BUILT_PRODUCTS_DIR}/InfiniteScrolling/InfiniteScrolling.framework
 ${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework
 ${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework
 ${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
-${PODS_ROOT}/Reveal-SDK/RevealServer/iOS/RevealServer.framework
 ${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework
 ${BUILT_PRODUCTS_DIR}/Spring/Spring.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

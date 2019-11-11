@@ -15,8 +15,6 @@ import UserNotifications
 extension AppDelegate {
 
     func configureUserNotifications(_ application: UIApplication, launchNotification: Any?) {
-        //
-        
         UNUserNotificationCenter.current().delegate = self
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
@@ -163,6 +161,4 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         self.didReceiveRemoteNotification(UIApplication.shared, userInfo: userInfo)
         
     }
-    
 }
-

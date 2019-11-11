@@ -37,7 +37,9 @@ class RoundPresentViewController: GameViewController, IntroduceViewController, A
 
     func playSound(round: Int) {
         guard let path = Bundle.main.path(forResource: sounds[round], ofType: "wav") else {
-            action?(false)
+            dismiss(animated: true) {
+                self.action?(false)
+            }
             return
         }
         let url = URL(fileURLWithPath: path)
@@ -54,7 +56,9 @@ class RoundPresentViewController: GameViewController, IntroduceViewController, A
 
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("end playing")
-        action?(true)
+        dismiss(animated: true) {
+            self.action?(true)
+        }
     }
 
     let animations = [

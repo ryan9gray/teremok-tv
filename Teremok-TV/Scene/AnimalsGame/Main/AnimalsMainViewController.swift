@@ -16,14 +16,13 @@ protocol AnimalsMainDisplayLogic: CommonDisplayLogic {
     
 }
 
-class AnimalsMainViewController: GameViewController, AnimalsMainDisplayLogic {
+class AnimalsMainViewController: GameStartViewController, AnimalsMainDisplayLogic {
     var interactor: AnimalsMainBusinessLogic?
     var router: (AnimalsMainRoutingLogic & AnimalsMainDataPassing & CommonRoutingLogic)?
     var modallyControllerRoutingLogic: CommonRoutingLogic? {
         get { return router }
     }
     var activityView: LottieHUD?
-    var tipView: EasyTipView?
 
     // MARK: Object lifecycle
 
@@ -53,26 +52,33 @@ class AnimalsMainViewController: GameViewController, AnimalsMainDisplayLogic {
     }
 
     // MARK: View lifecycle
-    @IBOutlet private var avatarButton: AvatarButton!
+    @IBOutlet private var infoButton: KeyButton!
 
     @IBAction func infoClick(_ sender: Any) {
         showInfo()
     }
     
     @IBAction func avatarClick(_ sender: Any) {
-        router?.navigateToStatistic()
+        masterRouter?.openStatistic()
     }
 
     @IBAction func startClick(_ sender: Any) {
         router?.navigateToStart()
     }
 
-    var tipNeedShow = true
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        infoButton.gradientColors = [UIColor.AnimalsGame.yellowOne, UIColor.AnimalsGame.yellowTwo]
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
-        displayProfile()
+        showTips()
+    }
+    
+    func showTips() {
         if !avatarButton.isHidden, LocalStore.animalsTip < 3 {
             LocalStore.animalsTip += 1
             var preferences = EasyTipView.Preferences()
@@ -81,43 +87,13 @@ class AnimalsMainViewController: GameViewController, AnimalsMainDisplayLogic {
             preferences.drawing.backgroundColor = .white
             preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
             tipView = EasyTipView(text: "Здесь можно посмотреть статистику", preferences: preferences, delegate: self)
-        }
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        if tipNeedShow {
-            tipNeedShow = false
             tipView?.show(animated: true, forView: avatarButton, withinSuperview: view)
         }
     }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-
-        tipView?.dismiss()
-    }
-
+    
     func showInfo() {
         let text = "Развивающая игра «Жила-была Царевна: Животные» даст возможность вашему малышу учить по 50 новых животных ежемесячно (ежемесячное обновление библиотеки животных). Интерфейс игры спроектирован таким образом, чтобы вместе с наименования животных ваш ребёнок мог учить и буквы. Еженедельная статистика в игре вам позволит оценивать прогресс в обучении вашего ребёнка. Надеемся, что игра понравится вашему малышу и вы сможете легко и весело давать ему новые знания вместе с нами!"
 
         presentCloud(title: "Здравствуйте!", subtitle: text, completion: nil)
-    }
-
-    func displayProfile(){
-        guard let childs = Profile.current?.childs else {
-            avatarButton.isHidden = true
-            return
-        }
-
-        if let avatar = childs.first(where: {$0.current ?? false})?.pic {
-            avatarButton.setAvatar(linktoLoad: avatar)
-        }
-    }
-}
-extension AnimalsMainViewController: EasyTipViewDelegate {
-    func easyTipViewDidDismiss(_ tipView: EasyTipView) {
-        tipView.dismiss()
     }
 }

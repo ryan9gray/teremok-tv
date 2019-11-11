@@ -56,18 +56,6 @@ class ChildProfileViewController: AbstracViewController, ChildProfileDisplayLogi
         router.viewController = viewController
         router.dataStore = interactor
     }
-
-    // MARK: Routing
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-
     // MARK: View lifecycle
 
     @IBOutlet private var collectionView: UICollectionView!
@@ -81,7 +69,6 @@ class ChildProfileViewController: AbstracViewController, ChildProfileDisplayLogi
     }
     @IBAction func pancilClick(_ sender: Any) {
         router?.reductProfile()
-
     }
     
     @IBOutlet private var headerLbl: UILabel!
@@ -98,15 +85,15 @@ class ChildProfileViewController: AbstracViewController, ChildProfileDisplayLogi
     }
     
     func displayFavorites(items: [PreviewModel]){
-        
-        self.favorites = items
+        favorites = items
         collectionView.reloadData()
     }
+
     func displayAchieves(_ items: String){
         achCountLbl.text = items
     }
+
     func displayProfile(){
-        
         guard let child = Profile.currentChild else { return }
         displayChild(child)
     }
@@ -114,47 +101,28 @@ class ChildProfileViewController: AbstracViewController, ChildProfileDisplayLogi
     func displayChild(_ child: Child){
         avatar.setAvatar(linktoLoad: child.pic ?? "")
         nameLbl.text = child.name ?? "-"
-        
     }
-
-    // MARK: Do something
-
 }
+
 extension ChildProfileViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        self.router?.navigateToPreview(number: indexPath.row)
+        router?.navigateToPreview(number: indexPath.row)
     }
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
-    }
-    
 }
 extension ChildProfileViewController: UICollectionViewDataSource {
-
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         headerLbl.isHidden = favorites.count == 0
         return favorites.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withCell: PreviewCollectionViewCell.self, for: indexPath)
         cell.configure(item: favorites[indexPath.row])
-        
         return cell
     }
-    
 }
+
 extension ChildProfileViewController: UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: cellWidth, height: collectionView.bounds.height)
     }

@@ -41,7 +41,7 @@ class DescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setScrollIndicatorColor(color: UIColor.View.yellow)
+        setScrollIndicatorColor(color: UIColor.View.yellowBase)
         // Do any additional setup after loading the view.
     }
     func setScrollIndicatorColor(color: UIColor) {

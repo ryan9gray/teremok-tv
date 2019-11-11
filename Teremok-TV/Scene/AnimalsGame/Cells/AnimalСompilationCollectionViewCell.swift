@@ -15,7 +15,7 @@ class AnimalСompilationCollectionViewCell: PreviewImageCollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        titleLabel.textColor = UIColor.View.Label.orange
+        titleLabel.textColor = UIColor.Label.orange
     }
 
     func configuration(name: String, pack: Int, link: String) {

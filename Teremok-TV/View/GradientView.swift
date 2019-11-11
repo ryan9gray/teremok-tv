@@ -12,7 +12,8 @@ import UIKit
 class GradientView: UIView {
     var gradientColors : [UIColor] = Style.Gradients.yellow.value {
         didSet {
-            layoutSubviews()
+            gradientLayer.colors = gradientColors.map { $0.cgColor }
+            setNeedsLayout()
         }
     }
     @IBInspectable var cornerRadius: CGFloat {

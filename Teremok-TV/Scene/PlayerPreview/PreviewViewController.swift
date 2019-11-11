@@ -16,7 +16,6 @@ import Trackable
 
 protocol PreviewDisplayLogic: CommonDisplayLogic {
     func playVideo(url: URL)
-    func displayData(items: [Preview.StreamItem])
     func displayRecomendate(items: [PreviewModel])
     var isOffline: Bool { get set }
 
@@ -24,7 +23,6 @@ protocol PreviewDisplayLogic: CommonDisplayLogic {
 
 class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     var activityView: LottieHUD?
-    
     var interactor: PreviewBusinessLogic?
     var router: (PreviewRoutingLogic & PreviewDataPassing & CommonRoutingLogic)?
 
@@ -63,23 +61,13 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
     // MARK: Routing
 
     var playerVC: PlayerViewController!
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "playerSeg" {
-            if let container = segue.destination as? PlayerViewController {
-                playerVC = container
-                playerVC.fullOverlay.delegate = self
-            }
-        }
-    }
-    
+
     // MARK: View lifecycle
     
     @IBAction func backClick(_ sender: Any) {
         masterRouter?.popChild()
     }
     
-    var streams: [Preview.StreamItem] = []
     var recommendations: [PreviewModel] = []
     var isOffline = false
     
@@ -121,11 +109,7 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
         let cells = [PreviewCollectionViewCell.self, LoadingCollectionViewCell.self]
         collectionView.register(cells: cells)
     }
-
-    func displayData(items: [Preview.StreamItem]){
-        streams = items
-    }
-
+    
     func setupControls(){
         playerVC.fullOverlay.downloadButton.isSelected = router?.dataStore?.videoModel?.downloadMe ?? false
         playerVC.fullOverlay.heartButton.isSelected = router?.dataStore?.videoModel?.likedMe ?? false
@@ -159,13 +143,11 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
         playerVC.willMove(toParent: nil)
         playerVC.view.removeFromSuperview()
         playerVC.removeFromParent()
-        playerVC = nil
     }
 }
 
 extension PreviewViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //self.router?.navigateToPreview(number: indexPath.row)
         track(
             Events.VideoFlow.RecommendationTap,
             trackedProperties: [Keys.Identifier ~>> router?.dataStore?.videoItem?.recommendations?[indexPath.row].id ?? 0]

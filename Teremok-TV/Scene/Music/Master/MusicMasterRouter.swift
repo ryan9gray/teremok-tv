@@ -88,7 +88,6 @@ class MusicMasterRouter: NSObject, MusicMasterRoutingLogic, MusicMasterDataPassi
             self.viewController?.view.insertSubview(viewController.view, aboveSubview: (self.viewController?.backgroundView)!)
         }, completion: nil)
 
-        viewController.view.frame = viewController.view.bounds
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.didMove(toParent: viewController)
     }

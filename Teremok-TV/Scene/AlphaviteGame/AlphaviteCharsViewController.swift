@@ -38,13 +38,13 @@ class AlphaviteCharsViewController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        wordLabel.textColor = UIColor.Alphavite.Button.blueTwo
-        titleLabel.textColor = UIColor.Alphavite.Button.blueTwo
+        wordLabel.textColor = UIColor.Alphavite.blueTwo
+        titleLabel.textColor = UIColor.Alphavite.blueTwo
         titleLabel.strokeSize = 12.0
         titleLabel.strokePosition = .center
         titleLabel.gradientColors = [ UIColor.white ]
 
-        charLabel.textColor = UIColor.Alphavite.Button.blueOne
+        charLabel.textColor = UIColor.Alphavite.blueOne
         charLabel.strokeSize = 26.0
         charLabel.strokeColor = .white
         charLabel.strokePosition = .center
@@ -102,12 +102,11 @@ class AlphaviteCharsViewController: GameViewController {
                 self.imageContainer.alpha = 0.0
                 self.imageContainer.isHidden = true
                 self.stackView.layoutIfNeeded()
+        }, completion: { _ in
+            self.playSounds(self.gameHelper.getSounds(name: name)) { [weak self] in
+                self?.nextImage(char)
             }
-        )
-
-        playSounds(gameHelper.getSounds(name: name)) { [weak self] in
-            self?.nextImage(char)
-        }
+        })
     }
 
     private func nextImage(_ char: String) {

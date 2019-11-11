@@ -33,7 +33,9 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var playerSlider: TTPlayerSlider!
     @IBOutlet var bottomView: UIView!
     var isFullScreen = false
-    open fileprivate(set) var playerItem : AVPlayerItem?
+    
+    weak open fileprivate(set) var playerItem : AVPlayerItem?
+    weak var player: AVPlayer?
 
     fileprivate var timer : Timer = {
         let time = Timer()
@@ -54,12 +56,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     var totalDuration : TimeInterval = 0.0
     var currentDuration : TimeInterval = 0.0
 
-    var player: AVPlayer? {
-        didSet{
-            
-        }
-    }
-    var playerLayer: AVPlayerLayer!
     @IBOutlet private var hud: UIActivityIndicatorView!
     
     
@@ -71,7 +67,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func toOffline(its: Bool){
-    
         downloadButton.isHidden = its
         heartButton.isHidden = its
     }
@@ -106,8 +101,16 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.clipsToBounds = true
         setUI()
         isPremium = Profile.current?.premium ?? false
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        view.layer.cornerRadius = isFullScreen ? 0 : 12
     }
 
     var isPremium = false
@@ -208,7 +211,6 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
         doubleTapGesture.delegate = self
         view.addGestureRecognizer(doubleTapGesture)
         singleTapGesture.require(toFail: doubleTapGesture)
-        
     }
     
     @objc open func onSingleTapGesture(_ gesture: UITapGestureRecognizer) {
@@ -322,15 +324,15 @@ class TTPlayerViewController: UIViewController, UIGestureRecognizerDelegate {
             timeObserver = nil
         }
     }
+
     deinit {
+        print("TTPlayerViewController deinit")
         stopTimer()
         delegate = nil
         removePlayerObservers()
         removePlayerItemObservers()
         removePlayerNotifations()
-        player = nil
     }
-    
 
     @objc func playerEnd(){
         delegate?.avPlayerOverlay(self, endPlay: player)
@@ -345,16 +347,15 @@ extension TTPlayerViewController {
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackLikelyToKeepUp), options: options, context: &playerItemContext)
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackBufferFull), options: options, context: &playerItemContext)
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.playbackBufferEmpty), options: options, context: &playerItemContext)
-
-
     }
+
     internal func addPlayerNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.playerEnd), name: .AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
         NotificationCenter.default.addObserver(self, selector: .applicationWillEnterForeground, name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: .applicationDidEnterBackground, name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
+
     internal func removePlayerItemObservers() {
-        
         playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.status))
         playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.loadedTimeRanges))
         playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.playbackBufferEmpty))
@@ -373,4 +374,9 @@ extension TTPlayerViewController {
     @objc internal func applicationWillEnterForeground(_ notification: Notification) {
         play()
     }
+}
+
+extension Selector {
+    static let applicationWillEnterForeground = #selector(TTPlayerViewController.applicationWillEnterForeground(_:))
+    static let applicationDidEnterBackground = #selector(TTPlayerViewController.applicationDidEnterBackground(_:))
 }

@@ -14,12 +14,10 @@ import UIKit
 
 enum ChildProfileAdd {
     // MARK: Use cases
-  
     enum Screen {
         case Modify(Child?)
         case Registrate
         case Add
-        
         
         var doneTitle: String {
             switch self {
@@ -32,6 +30,4 @@ enum ChildProfileAdd {
             }
         }
     }
-    
- 
 }

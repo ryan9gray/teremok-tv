@@ -52,18 +52,6 @@ class SerialViewController: AbstracViewController, SerialDisplayLogic {
         router.viewController = viewController
         router.dataStore = interactor
     }
-
-    // MARK: Routing
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-
     // MARK: View lifecycle
 
     @IBOutlet private var collectionView: UICollectionView!
@@ -113,36 +101,25 @@ class SerialViewController: AbstracViewController, SerialDisplayLogic {
         }
         collectionView.reloadData()
     }
-
-    // MARK: Do something
-
 }
+
 extension SerialViewController: UICollectionViewDelegate {
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.router?.navigateToPreview(number: indexPath.row)
+        router?.navigateToPreview(number: indexPath.row)
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
         if indexPath.row == serials.count-1 {
-            self.interactor?.fetchVideos()
+            interactor?.fetchVideos()
         }
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
     }
 }
 extension SerialViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return serials.count + (self.interactor!.hasMore ? 1 : 0)//danger
+        return serials.count + (interactor!.hasMore ? 1 : 0)//danger
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if indexPath.row == serials.count {
             let cell = collectionView.dequeueReusableCell(withCell: LoadingCollectionViewCell.self, for: indexPath)
             return cell
@@ -191,7 +168,6 @@ extension SerialViewController: SerialCellProtocol {
             self.router?.navigateDescription(item: cell.item)
         }
     }
-
 }
 
 extension SerialViewController: DescriptionSerialVCProtocol {
@@ -215,8 +191,5 @@ extension SerialViewController: DescriptionSerialVCProtocol {
         if let vc = sender as? SerialDescriptionViewController, let item = vc.item, let dx = self.serials.firstIndex(of: item) {
             self.router?.navigateToPreview(number: dx)
         }
-    }
-    
-    
-    
+    }  
 }

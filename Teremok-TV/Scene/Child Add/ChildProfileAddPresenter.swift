@@ -42,6 +42,4 @@ class ChildProfileAddPresenter: ChildProfileAddPresentationLogic {
             present(date: date)
         }
     }
-
-    
 }

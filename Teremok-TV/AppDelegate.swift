@@ -59,9 +59,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TrackableClass {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         track(Events.App.terminated)
     }
-    
+    var backgroundSessionCompletionHandler: (() -> Void)?
+
     func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
-        BackgroundSession.shared.saveBackgroundCompletionHandler(completionHandler)
+        backgroundSessionCompletionHandler = completionHandler
     }
 
 

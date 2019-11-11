@@ -40,13 +40,16 @@ class AlphaviteMasterRouter: AlphaviteMasterRoutingLogic, AlphaviteMasterDataPas
     func dismiss() {
         viewController?.dismiss(animated: true)
     }
+    private let navigationSubscriptions = Subscriptions<Bool>()
+    func subscribeForNavigation(_ callback: @escaping  (_ available: Bool) -> Void) -> Subscription {
+        navigationSubscriptions.add(callback)
+    }
     /**
      Clean hierarchy
      */
     func startFlow(_ idx: Int) {
         guard let controller = viewController else { return }
 
-        controller.tipView?.dismiss()
         let flow = AlphaviteGameFlow(master: controller)
         flow.startFlow()
     }
@@ -54,9 +57,26 @@ class AlphaviteMasterRouter: AlphaviteMasterRoutingLogic, AlphaviteMasterDataPas
     var moduleRouter: MasterModuleDisplayLogic? {
         return viewController
     }
-    var childControllersStack = Stack<GameViewController>()
-    var modalChildVC: GameViewController?
+    var modalChildVC: GameViewController? {
+        didSet {
+            navigationSubscriptions.fire(canPop())
+        }
+    }
+    var childControllersStack = Stack<GameViewController>() {
+        didSet {
+            navigationSubscriptions.fire(canPop())
+        }
+    }
 
+    func introduceController<T: GameViewController>(viewController: T, completion: @escaping (Bool) -> Void)
+        where T: IntroduceViewController {
+        viewController.setAction { finish in
+            completion(finish)
+        }
+        viewController.modalPresentationStyle = .fullScreen
+        self.viewController?.present(viewController, animated: true, completion: nil)
+    }
+    
     func pushChild(_ vc: GameViewController){
         remove()
         childControllersStack.toEmpty()
@@ -95,7 +115,6 @@ class AlphaviteMasterRouter: AlphaviteMasterRoutingLogic, AlphaviteMasterDataPas
             self.viewController?.view.insertSubview(viewController.view, at: 1)
         }, completion: nil)
 
-        viewController.view.frame = viewController.view.bounds
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.didMove(toParent: viewController)
     }

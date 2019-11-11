@@ -18,14 +18,13 @@ protocol AlphaviteMasterDisplayLogic: MasterModuleDisplayLogic, TrackableClass {
     
 }
 
-class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLogic {
+class AlphaviteMasterViewController: GameMasterViewController, AlphaviteMasterDisplayLogic {
     var interactor: AlphaviteMasterBusinessLogic?
     var router: (CommonRoutingLogic & AlphaviteMasterRoutingLogic & AlphaviteMasterDataPassing)?
     var modallyControllerRoutingLogic: CommonRoutingLogic? {
         get { return router }
     }
     var activityView: LottieHUD?
-    var tipView: EasyTipView?
 
     // MARK: Object lifecycle
 
@@ -55,15 +54,6 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
     }
 
     // MARK: View lifecycle
-    @IBOutlet var backgroundView: UIImageView!
-    @IBOutlet private var homeBtn: KeyButton!
-    @IBOutlet private var avatarButton: AvatarButton!
-    private let startTime = Date()
-
-    @IBAction func avatarClick(_ sender: Any) {
-        tipView?.dismiss()
-        router?.openStatistic()
-    }
 
     @IBAction private func homeClick(_ sender: Any) {
         if router?.canPop() ?? false {
@@ -73,9 +63,14 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
         }
     }
 
+    private var navigationSubscription: Subscription?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationSubscription = router?.subscribeForNavigation { [weak self] canPop in
+            self?.homeBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "icHomeShadow"), for: .normal)
+        }
         interactor?.onDemand { [weak self] success in
             DispatchQueue.main.async {
             if success {
@@ -85,65 +80,9 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
                     self?.dismiss(animated: true)
                 }
             }
+            }
         }
-        }
-        do {
-            //Preparation to play
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
-        }
-
-        displayProfile()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        if !avatarButton.isHidden, LocalStore.alphabetTip < 3 {
-            LocalStore.alphabetTip += 1
-            var preferences = EasyTipView.Preferences()
-            preferences.drawing.font = Style.Font.istokWeb(size: 16)
-            preferences.drawing.foregroundColor = UIColor.View.titleText
-            preferences.drawing.backgroundColor = .white
-            preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
-            tipView = EasyTipView(text: "Здесь можно посмотреть статистику", preferences: preferences, delegate: self)
-            tipView?.show(animated: true, forView: avatarButton, withinSuperview: view)
-        }
-    }
-
-    // MARK: Do something
-
-    func displayProfile() {
-        guard let childs = Profile.current?.childs else {
-            avatarButton.isHidden = true
-            return
-        }
-
-        if let avatar = childs.first(where: {$0.current ?? false})?.pic {
-            avatarButton.setAvatar(linktoLoad: avatar)
-        }
-    }
-    
-    var output: Output!
-
-    struct Output {
-        var openSettings: () -> Void
-        var openAuthorization: () -> Void
-    }
-    
-    func openSettings() {
-        dismiss(animated: true) {
-            self.output.openSettings()
-        }
-    }
-
-    func openAutorization() {
-        dismiss(animated: true) {
-            self.output.openAuthorization()
-        }
+        setupTrackableChain(parent: analytics)
     }
 
     deinit {
@@ -153,14 +92,6 @@ class AlphaviteMasterViewController: UIViewController, AlphaviteMasterDisplayLog
         )
         if ServiceConfiguration.activeConfiguration().logging {
             print("Logger: deinit \(className)")
-        }
-        do {
-            //Preparation to play - Костыль
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
         }
     }
 }

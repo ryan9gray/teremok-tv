@@ -18,8 +18,8 @@ extension UIToolbar {
         let result = UIToolbar.init(frame: CGRect.init(x: 0.0, y: 0.0, width: 0.0, height: 44.0))
         result.isTranslucent = false
         result.tintColor = UIColor.white
-        result.barTintColor = UIColor.View.yellow
-        result.backgroundColor = UIColor.View.yellow
+        result.barTintColor = UIColor.View.yellowBase
+        result.backgroundColor = UIColor.View.yellowBase
         
         switch style {
         case .done(let responder):

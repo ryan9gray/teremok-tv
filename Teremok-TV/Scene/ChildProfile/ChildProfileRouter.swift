@@ -44,7 +44,5 @@ class ChildProfileRouter: NSObject, ChildProfileRoutingLogic, ChildProfileDataPa
         dataStore.screen = .Modify(viewController?.router?.dataStore?.child)
         //dataStore.child = viewController?.router?.dataStore?.child
         viewController?.masterRouter?.presentNextChild(viewController: addChild)
-    
     }
-
 }

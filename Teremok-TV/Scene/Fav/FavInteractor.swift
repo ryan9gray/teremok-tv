@@ -36,12 +36,12 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     let service: FavProtocol = FavService()
     var actionService: ActionProtocol = ActionService()
 
-    func fetchFav(){
+    func fetchFav() {
         fetchSaved()
         fetchLike()
     }
     
-    func fetchLike(){
+    func fetchLike() {
         service.getFavorites { [weak self] (response) in
             switch response {
             case .success(let result):
@@ -57,12 +57,12 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         }
     }
     
-    func fetchSaved(){
+    func fetchSaved() {
         if let list = getList() {
             DispatchQueue.global().async {
                 self.savedVideos = list.filter({$0.pathExtension == "mp4"}).sorted { $0.lastPathComponent < $1.lastPathComponent }
                 let savedPics = list.filter({$0.pathExtension == "png"}).sorted { $0.lastPathComponent < $1.lastPathComponent }
-                self.offlineVideos.removeAll()
+                self.offlineVideos = []
                 var ids: [Int] = []
                 for videoUrl in self.savedVideos {
                     let id = videoUrl.deletingPathExtension().lastPathComponent
@@ -79,7 +79,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         }
     }
 
-    func unLikeVideo(idx: Int){
+    func unLikeVideo(idx: Int) {
         guard let id = videoModels[safe:idx]?.id else {
             return
         }
@@ -93,11 +93,11 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         }
     }
 
-    func syncDownloads(ids: [Int]){
+    func syncDownloads(ids: [Int]) {
         service.toSyncDownload(id: ids)
     }
     
-    func getList() -> [URL]?{
+    func getList() -> [URL]? {
         let fileManager = FileManager.default
         let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         do {
@@ -111,39 +111,29 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     }
     
     
-    func deleteLocalVideo(idx: Int){
-        self.removeModel(idx: idx)
+    func deleteLocalVideo(idx: Int) {
+        guard let video = offlineVideos[safe:idx], let id = Int(video.id)  else { return }
 
-        guard let idString = offlineVideos[safe:idx]?.id, let id = Int(idString) else {
-            return
-        }
-        actionService.toDownload(with: id) { (response) in
-            switch response {
-            case .success(_ ):
-                break
-            case .failure(let error):
-                print("\(error.localizedDescription)")
-            }
-        }
+        removeModel(video)
+        actionService.toDownload(with: id) { _ in }
     }
-    func removeModel(idx: Int){
-        if let urlVideo = offlineVideos[safe:idx]?.videoUrl{
-            deleteFrom(url: urlVideo)
-        }
-        if let urlImage = offlineVideos[safe:idx]?.imageUrl{
+    
+    func removeModel(_ video: Fav.OfflineVideoModel) {
+        deleteFrom(url: video.videoUrl)
+
+        if let urlImage = video.imageUrl{
             deleteFrom(url: urlImage)
         }
+        fetchSaved()
     }
 
     
-    func deleteFrom(url: URL){
+    func deleteFrom(url: URL) {
         let fileManager = FileManager.default
         do {
             try fileManager.removeItem(at: url)
-            fetchSaved()
         } catch {
             print("Error while delete files \(url): \(error.localizedDescription)")
         }
     }
-    
 }

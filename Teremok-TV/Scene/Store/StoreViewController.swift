@@ -55,7 +55,7 @@ class StoreViewController: AbstracViewController, StoreDisplayLogic, UITextViewD
     // MARK: View lifecycle
 
     @IBOutlet private var collectionView: UICollectionView!
-    let subscriptions: [RegisteredPurchase] = RegisteredPurchase.allValues()
+    let subscriptions: [RegisteredPurchase] = RegisteredPurchase.allCases
 
     let profile = Profile.current
 

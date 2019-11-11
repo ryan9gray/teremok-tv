@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -104,7 +102,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Раздел доступен только для родителей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HJ-ra-8B2">
-                                <rect key="frame" x="209.66666666666663" y="93.666666666666686" width="393" height="24"/>
+                                <rect key="frame" x="209.66666666666663" y="93.666666666666671" width="393" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -178,7 +176,7 @@
                                     <constraint firstAttribute="width" constant="44" id="NcB-Wp-usV"/>
                                     <constraint firstAttribute="height" constant="44" id="dAo-nw-1zX"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="8" minY="7" maxX="4" maxY="0.0"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="4" maxX="4" maxY="0.0"/>
                                 <state key="normal" image="ic-alphavitePlay"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="indent">
@@ -227,87 +225,13 @@
                                     <constraint firstAttribute="height" constant="50" id="i0x-AE-W9E"/>
                                     <constraint firstAttribute="width" constant="50" id="uo8-Mv-ljj"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" image="ic-alphHome">
+                                <state key="normal" image="icHomeShadow">
                                     <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="homeClick:" destination="dlq-k2-hSp" eventType="touchUpInside" id="04N-JB-nKu"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fZ0-ea-DYs">
-                                <rect key="frame" x="90" y="80" width="632" height="255"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io8-Rk-iyX" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="8" y="28.333333333333314" width="198.66666666666666" height="170.33333333333337"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Io8-Rk-iyX" secondAttribute="height" multiplier="7:6" id="OB4-M1-Upe"/>
-                                        </constraints>
-                                        <state key="normal" image="ic-alphavite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                <real key="value" value="0.20000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="alphaviteTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="vvJ-2T-thh"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lw-K8-tJz" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="216.66666666666669" y="28.333333333333314" width="198.66666666666669" height="170.33333333333337"/>
-                                        <state key="normal" image="ic-animalgame"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                <real key="value" value="0.20000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="animalsTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="vdu-a3-t3m"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8b-ps-329" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="425.33333333333343" y="28.333333333333314" width="198.66666666666669" height="170.33333333333337"/>
-                                        <state key="normal" image="ic-monsterGame"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                <real key="value" value="0.20000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="monsterTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="mpB-B8-cud"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="X8b-ps-329" firstAttribute="width" secondItem="X8b-ps-329" secondAttribute="height" multiplier="7:6" id="6Sa-dJ-KOY"/>
-                                    <constraint firstItem="6Lw-K8-tJz" firstAttribute="width" secondItem="6Lw-K8-tJz" secondAttribute="height" multiplier="7:6" id="OJu-PA-PaQ"/>
-                                </constraints>
-                                <edgeInsets key="layoutMargins" top="-20" left="8" bottom="8" right="8"/>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВЫБЕРИТЕ ИГРУ:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e87-rn-cs2" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
                                 <rect key="frame" x="266" y="20" width="280" height="40"/>
                                 <constraints>
@@ -320,27 +244,138 @@
                                 <color key="shadowColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="0.31597970549999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="BlV-GB-GHh">
+                                <rect key="frame" x="217.66666666666666" y="78" width="376.66666666666674" height="287"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G6Z-Uf-GBl">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="287"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io8-Rk-iyX" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="143.66666666666666"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Io8-Rk-iyX" secondAttribute="height" multiplier="7:6" id="OB4-M1-Upe"/>
+                                                </constraints>
+                                                <state key="normal" image="ic-alphavite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                        <real key="value" value="0.20000000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="alphaviteTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="vvJ-2T-thh"/>
+                                                    <action selector="touchDownGame:" destination="dlq-k2-hSp" eventType="touchDown" id="Qsw-MW-NDq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lw-K8-tJz" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="143.66666666666663" width="167.33333333333334" height="143.33333333333337"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="6Lw-K8-tJz" secondAttribute="height" multiplier="7:6" id="HZS-VR-bDF"/>
+                                                </constraints>
+                                                <state key="normal" image="ic-animalgame"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                        <real key="value" value="0.20000000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="animalsTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="vdu-a3-t3m"/>
+                                                    <action selector="touchDownGame:" destination="dlq-k2-hSp" eventType="touchDown" id="xGA-q1-Orf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8U3-J0-FUn">
+                                        <rect key="frame" x="209.33333333333331" y="0.0" width="167.33333333333331" height="287"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8b-ps-329" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="143.66666666666666"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="X8b-ps-329" secondAttribute="height" multiplier="7:6" id="LfS-NS-Svk"/>
+                                                </constraints>
+                                                <state key="normal" image="ic-monsterGame"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                        <real key="value" value="0.20000000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="monsterTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="mpB-B8-cud"/>
+                                                    <action selector="touchDownGame:" destination="dlq-k2-hSp" eventType="touchDown" id="xGh-Wd-9y3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6d-07-4Xw" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="143.66666666666663" width="167.33333333333334" height="143.33333333333337"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="L6d-07-4Xw" secondAttribute="height" multiplier="7:6" id="twi-Wx-YcX"/>
+                                                </constraints>
+                                                <state key="normal" image="icColorsGame"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                        <real key="value" value="0.20000000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorsTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="VNe-3H-Mv5"/>
+                                                    <action selector="touchDownGame:" destination="dlq-k2-hSp" eventType="touchDown" id="myM-Ew-Mk6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BlV-GB-GHh" secondAttribute="bottom" constant="10" id="0ut-5q-9P9"/>
                             <constraint firstItem="e87-rn-cs2" firstAttribute="centerX" secondItem="0bu-gf-cTd" secondAttribute="centerX" id="2Np-iJ-l34"/>
                             <constraint firstItem="P5E-ex-N9F" firstAttribute="top" secondItem="0bu-gf-cTd" secondAttribute="top" constant="20" id="9DR-nu-4iX"/>
                             <constraint firstItem="LFa-oO-QAy" firstAttribute="leading" secondItem="0bu-gf-cTd" secondAttribute="leading" id="GYg-sq-vOd"/>
                             <constraint firstItem="P5E-ex-N9F" firstAttribute="leading" secondItem="0bu-gf-cTd" secondAttribute="leading" constant="30" id="LU5-Zf-Sup"/>
-                            <constraint firstAttribute="trailing" secondItem="fZ0-ea-DYs" secondAttribute="trailing" constant="90" id="Q03-54-5r6"/>
-                            <constraint firstAttribute="bottom" secondItem="fZ0-ea-DYs" secondAttribute="bottom" constant="40" id="RXi-bI-1un"/>
-                            <constraint firstItem="fZ0-ea-DYs" firstAttribute="top" secondItem="0bu-gf-cTd" secondAttribute="top" constant="80" id="Uey-Ny-hZz"/>
+                            <constraint firstItem="BlV-GB-GHh" firstAttribute="centerX" secondItem="0bu-gf-cTd" secondAttribute="centerX" id="Msh-OT-5yu"/>
                             <constraint firstItem="e87-rn-cs2" firstAttribute="top" secondItem="7MP-Ta-Cxx" secondAttribute="top" constant="20" id="Ujt-T4-c4y"/>
                             <constraint firstItem="LFa-oO-QAy" firstAttribute="top" secondItem="0bu-gf-cTd" secondAttribute="top" id="bbz-7y-bO8"/>
-                            <constraint firstItem="fZ0-ea-DYs" firstAttribute="leading" secondItem="0bu-gf-cTd" secondAttribute="leading" constant="90" id="dvH-3J-83l"/>
                             <constraint firstAttribute="trailing" secondItem="LFa-oO-QAy" secondAttribute="trailing" id="fTu-lt-HBK"/>
                             <constraint firstAttribute="bottom" secondItem="LFa-oO-QAy" secondAttribute="bottom" id="t11-8v-Y1r"/>
+                            <constraint firstItem="BlV-GB-GHh" firstAttribute="top" secondItem="e87-rn-cs2" secondAttribute="bottom" constant="18" id="zXB-Mb-5eD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7MP-Ta-Cxx"/>
                     </view>
                     <connections>
                         <outlet property="homeBtn" destination="P5E-ex-N9F" id="4gs-qN-A6S"/>
                         <outlet property="titleLabel" destination="e87-rn-cs2" id="bA3-M4-tKY"/>
+                        <outletCollection property="buttons" destination="Io8-Rk-iyX" collectionClass="NSMutableArray" id="bTo-ry-948"/>
+                        <outletCollection property="buttons" destination="X8b-ps-329" collectionClass="NSMutableArray" id="cfV-DA-SLc"/>
+                        <outletCollection property="buttons" destination="6Lw-K8-tJz" collectionClass="NSMutableArray" id="wnf-z7-Lkd"/>
+                        <outletCollection property="buttons" destination="L6d-07-4Xw" collectionClass="NSMutableArray" id="piM-VN-AX5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uk0-KN-ZMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -349,13 +384,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic-alphHome" width="31" height="29"/>
         <image name="ic-alphavite" width="164" height="144"/>
-        <image name="ic-alphavitePlay" width="68" height="73"/>
+        <image name="ic-alphavitePlay" width="70" height="80"/>
         <image name="ic-animalgame" width="164" height="144"/>
         <image name="ic-gamesBack" width="667" height="375"/>
         <image name="ic-monsterGame" width="164" height="144"/>
+        <image name="icColorsGame" width="140" height="120"/>
         <image name="icCross" width="20" height="20"/>
+        <image name="icHomeShadow" width="50" height="50"/>
         <image name="icTree" width="142" height="176"/>
     </resources>
 </document>

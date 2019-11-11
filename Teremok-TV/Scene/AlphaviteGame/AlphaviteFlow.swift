@@ -18,8 +18,8 @@ class AlphaviteGameFlow  {
     }
 
     private var isHard: Bool = false
-    var game: Game!
     private var checkIntro: Bool = true
+    var game: Game!
 
     func startFlow() {
         if checkIntro, !LocalStore.alphaviteIntroduce {

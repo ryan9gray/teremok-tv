@@ -44,8 +44,8 @@ class AlphaviteFinishViewController: GameViewController {
         titleLabel.strokeSize = 12.0
         titleLabel.strokePosition = .center
         titleLabel.gradientColors = Style.Gradients.green.value
-        pointsLabel.textColor = UIColor.Alphavite.Button.greenOne
-        greyLabel.textColor = UIColor.Alphavite.Button.grey
+        pointsLabel.textColor = UIColor.Alphavite.greenOne
+        greyLabel.textColor = UIColor.Alphavite.grey
         buttonTitleLabel.textColor = .white
 
         let right = input.answers.filter{$0}
@@ -58,10 +58,6 @@ class AlphaviteFinishViewController: GameViewController {
         playButton.gradientColors = isGood ? Style.Gradients.red.value : Style.Gradients.green.value
         buttonTitleLabel.text = isGood ? "Далее" : "Заново"
         playButton.setImage(isGood ? UIImage(named: "ic-alphavitePlay") : UIImage(named: "ic-alphaviteRepeat"), for: .normal)
-    }
-
-    enum AlphaviteFinishView {
-
     }
 }
 

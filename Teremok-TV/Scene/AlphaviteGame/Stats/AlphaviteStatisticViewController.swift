@@ -75,8 +75,8 @@ class AlphaviteStatisticViewController: GameViewController, AlphaviteStatisticDi
 
         activityView = LottieHUD()
         displayProfile()
-        goodTitleLabel.textColor = UIColor.Alphavite.Button.greenTwo
-        badTitleLabel.textColor = UIColor.Alphavite.Button.redTwo
+        goodTitleLabel.textColor = UIColor.Alphavite.greenTwo
+        badTitleLabel.textColor = UIColor.Alphavite.redTwo
         leftGradientView.gradientColors = Style.Gradients.green.value
         rightGradientView.gradientColors = Style.Gradients.red.value
 
@@ -85,15 +85,15 @@ class AlphaviteStatisticViewController: GameViewController, AlphaviteStatisticDi
     }
 
     func showStats(_ model: Input) {
-        model.good.keys.sorted().forEach { char in
+        model.good.forEach { key, value in
             let view = AlphaviteStatView.fromNib()
-            view.set(char: char, count: model.good[char]!)
+            view.set(char: key, count: value)
             NSLayoutConstraint.fixHeight(view: view, constant: 30.0)
             leftStackView.addArrangedSubview(view)
         }
-        model.bad.keys.sorted().forEach { char in
+        model.bad.forEach { key, value in
             let view = AlphaviteStatView.fromNib()
-            view.set(char: char, count: model.bad[char]!)
+            view.set(char: key, count: value)
             NSLayoutConstraint.fixHeight(view: view, constant: 30.0)
             rightStackView.addArrangedSubview(view)
         }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MonsterMasterRoutingLogic: GameParentRouting {
-    func openStatistic()
+
 }
 
 protocol MonsterMasterDataPassing {
@@ -35,13 +35,24 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     func dismiss() {
         viewController?.dismiss(animated: true)
     }
+    private let navigationSubscriptions = Subscriptions<Bool>()
+    func subscribeForNavigation(_ callback: @escaping  (_ available: Bool) -> Void) -> Subscription {
+        navigationSubscriptions.add(callback)
+    }
+    func introduceController<T: GameViewController>(viewController: T, completion: @escaping (Bool) -> Void)
+        where T: IntroduceViewController {
+        viewController.setAction { finish in
+            completion(finish)
+        }
+        viewController.modalPresentationStyle = .fullScreen
+        self.viewController?.present(viewController, animated: true, completion: nil)
+    }
     /**
      Clean hierarchy
      */
     func startFlow(_ idx: Int) {
         guard let controller = viewController else { return }
         
-        controller.tipView?.dismiss()
         let flow = MonsterGameFlow(master: controller)
         flow.startFlow(difficulty: idx)
     }
@@ -49,8 +60,16 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
     var moduleRouter: MasterModuleDisplayLogic? {
         return viewController
     }
-    var childControllersStack = Stack<GameViewController>()
-    var modalChildVC: GameViewController?
+    var modalChildVC: GameViewController? {
+        didSet {
+            navigationSubscriptions.fire(canPop())
+        }
+    }
+    var childControllersStack = Stack<GameViewController>() {
+        didSet {
+            navigationSubscriptions.fire(canPop())
+        }
+    }
     
     func pushChild(_ vc: GameViewController){
         remove()
@@ -90,7 +109,6 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
             self.viewController?.view.insertSubview(viewController.view, at: 1)
         }, completion: nil)
         
-        viewController.view.frame = viewController.view.bounds
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.didMove(toParent: viewController)
     }

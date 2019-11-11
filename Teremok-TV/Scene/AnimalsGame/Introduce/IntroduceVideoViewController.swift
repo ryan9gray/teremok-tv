@@ -19,7 +19,9 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
     private var avPlayerLayer: AVPlayerLayer!
 
     @IBAction private func nextClick(_ sender: Any) {
-        action?(true)
+        dismiss(animated: true) {
+            self.action?(true)
+        }
     }
 
     override func viewDidLoad() {
@@ -51,7 +53,9 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
         guard
             let moviePath = Bundle.main.path(forResource: video.rawValue, ofType: "mp4")
         else {
-            action?(false)
+            dismiss(animated: true) {
+                self.action?(false)
+            }
             return
         }
 
@@ -69,7 +73,9 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
     }
 
     @objc func playerEnd() {
-        action?(true)
+        dismiss(animated: true) {
+            self.action?(true)
+        }
     }
 
     deinit {
@@ -81,5 +87,6 @@ class IntroduceVideoViewController: GameViewController, IntroduceViewController 
         case start = "scene-2"
         case alphavite = "Pick_introduce"
         case monster = "monster_game_introduce"
+        case colorsGame = "colorsGame_introduce"
     }
 }

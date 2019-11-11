@@ -11,7 +11,6 @@ import AVFoundation
 import AVKit
 
 class PlayerViewController: AVPlayerViewController {
-
     var contentURL : URL? {
         didSet{
             setVideoBack()
@@ -22,27 +21,26 @@ class PlayerViewController: AVPlayerViewController {
     
     override var player: AVPlayer? {
         didSet {
-            guard let newPlayer = self.player else {
+            guard let newPlayer = player else {
                 return
             }
-            self.fullOverlay.setPlayer(newPlayer)
+            fullOverlay.setPlayer(newPlayer)
         }
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        overlaySetup()
+        fullOverlay = TTPlayerViewController.instantiate(fromStoryboard: .play)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         showsPlaybackControls = false
-        addPlayerNotifications()
         addChild(fullOverlay)
         view.addSubview(fullOverlay.view)
-        fullOverlay.view.frame = self.view.bounds
+        fullOverlay.view.frame = view.bounds
         fullOverlay.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         fullOverlay.didMove(toParent: self)
     }
@@ -58,18 +56,15 @@ class PlayerViewController: AVPlayerViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+
         UIApplication.shared.endReceivingRemoteControlEvents()
-        self.resignFirstResponder()
+        resignFirstResponder()
     }
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
 
         view.layer.cornerRadius = fullOverlay.isFullScreen ? 0 : 12
-    }
-
-    func overlaySetup(){
-        fullOverlay = TTPlayerViewController.instantiate(fromStoryboard: .play)
     }
 
     func setVideoBack(){
@@ -95,13 +90,8 @@ class PlayerViewController: AVPlayerViewController {
         }
         player?.allowsExternalPlayback = false
         player?.actionAtItemEnd = .none
-        fullOverlay.playerLayer = AVPlayerLayer(player: player)
-        fullOverlay.playerLayer.frame = fullOverlay.view.layer.bounds
-        fullOverlay.playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         fullOverlay.startedPlaying()
     }
-
-
     
     deinit {
         print("PlayerViewController deinit")
@@ -113,35 +103,6 @@ class PlayerViewController: AVPlayerViewController {
         catch {
             // report for an error
         }
-        removePlayerNotifations()
         fullOverlay.removeFromParent()
-        fullOverlay = nil
     }
-}
-extension PlayerViewController {
-    
-    @objc internal func applicationDidEnterBackground(_ notification: Notification) {
-
-    }
-    @objc internal func applicationWillEnterForeground(_ notification: Notification) {
-    }
-    @objc internal func playerItemDidPlayToEnd(_ notification: Notification) {
-        print("playerItemDidPlayToEnd")
-    }
-    internal func addPlayerNotifications() {
-        //NotificationCenter.default.addObserver(self, selector: .playerItemDidPlayToEndTime, name: .AVPlayerItemDidPlayToEndTime, object: nil)
-        NotificationCenter.default.addObserver(self, selector: .applicationWillEnterForeground, name: UIApplication.willEnterForegroundNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: .applicationDidEnterBackground, name: UIApplication.didEnterBackgroundNotification, object: nil)
-    }
-    internal func removePlayerNotifations() {
-        //NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
-    }
-    
-}
-
-extension Selector {
-    static let applicationWillEnterForeground = #selector(PlayerViewController.applicationWillEnterForeground(_:))
-    static let applicationDidEnterBackground = #selector(PlayerViewController.applicationDidEnterBackground(_:))
 }

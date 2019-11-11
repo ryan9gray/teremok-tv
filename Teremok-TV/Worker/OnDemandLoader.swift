@@ -13,20 +13,24 @@ class OnDemandLoader {
 
     enum Tags {
 
-        enum OnDemand: String {
+        enum OnDemand: String, CaseIterable {
             case introduceAlphabet = "IntroduceAlphabet"
             case introduceAnimals = "IntroduceAnimals"
             case introduceMonsters = "IntroduceMonsters"
+            case introduceColorsGame = "IntroduceColorsGame"
         }
 
-        enum Prefetch: String {
+        enum Prefetch: String, CaseIterable {
             case alphabetSounds = "AlphabetSounds"
             case alphabetImages = "AlphabetImages"
             case animalsImage = "AnimalsImage"
             case animalsSounds = "AnimalsSounds"
             case monstersImage = "MonstersImage"
+            case colorsGameImage = "ColorsGameImage"
+            case colorsGameSounds = "ColorsGameSounds"
+
         }
-        enum Initial: String {
+        enum Initial: String, CaseIterable {
             case onBoarding = "OnBoarding"
         }
     }
@@ -34,12 +38,13 @@ class OnDemandLoader {
     lazy private var bundleResourceRequest = NSBundleResourceRequest(tags: Set(getTags + introducongGames))
 
     private var getTags: [String] {
-        return Tags.Prefetch.allValues().map { $0.rawValue }
+        return Tags.Prefetch.allCases.map { $0.rawValue }
     }
 
     func loadOnDemandAssets(completion: @escaping (Result<Bool>) -> Void) {
         bundleResourceRequest.endAccessingResources()
         bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
+        Bundle.main.setPreservationPriority(0.8, forTags: Set(getTags))
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             if available {
                 completion(.success(true))
@@ -67,7 +72,13 @@ class OnDemandLoader {
         if !LocalStore.monsterIntroduce {
             files.append(Tags.OnDemand.introduceMonsters.rawValue)
         }
-        if !LocalStore.secondAnimalsIntroduce, !LocalStore.firstAnimalsIntroduce {
+        if !LocalStore.colorsGameIntroduce {
+              files.append(Tags.OnDemand.introduceColorsGame.rawValue)
+          }
+        if !LocalStore.firstAnimalsIntroduce {
+            files.append(Tags.OnDemand.introduceAnimals.rawValue)
+        }
+        if !LocalStore.secondAnimalsIntroduce {
             files.append(Tags.OnDemand.introduceAnimals.rawValue)
         }
         if !LocalStore.onBoarding {

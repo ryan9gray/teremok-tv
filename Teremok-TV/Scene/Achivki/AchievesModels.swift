@@ -16,14 +16,10 @@ enum Achieves {
     // MARK: Use cases
   
     struct Achievement {
-
         var title: String
         var subtitle: String
         var imageLink: String
         var progress: Int
         var target: Int
-
     }
 }
-
-

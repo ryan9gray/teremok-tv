@@ -75,14 +75,14 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        characterLabel.textColor = UIColor.View.Label.orange
+        characterLabel.textColor = UIColor.Label.orange
         animalLabel.textColor = .white
         animationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         animationView.contentMode = .scaleAspectFill
         animationView.clipsToBounds = false
         animationView.loopMode = .playOnce
         animationView.animationSpeed = 1.0
-        pointLabel.textColor = UIColor.View.Label.orange
+        pointLabel.textColor = UIColor.Label.orange
         progressBar.isHidden = !input.isHard
         pointsView.isHidden = !input.isHard
         if input.isHard {

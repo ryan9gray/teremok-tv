@@ -27,16 +27,12 @@ protocol ChildProfileAddDataStore {
 }
 
 final class ChildProfileAddInteractor: ChildProfileAddBusinessLogic, ChildProfileAddDataStore {
-    
     var screen: ChildProfileAdd.Screen?
     var child: Child?
-
     var password: String?
     var email: String?
-    
     var presenter: ChildProfileAddPresentationLogic?
 
-    
     let authService: RegProtocol = RegService()
     let childService: ChildProtocol = ChildService()
     
@@ -167,5 +163,4 @@ final class ChildProfileAddInteractor: ChildProfileAddBusinessLogic, ChildProfil
         }
         self.synchronizedRequestErrors.removeAll()
     }
-    
 }

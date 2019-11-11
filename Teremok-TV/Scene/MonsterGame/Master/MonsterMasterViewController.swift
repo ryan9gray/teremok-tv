@@ -14,44 +14,13 @@ protocol MonsterMasterDisplayLogic: MasterModuleDisplayLogic, TrackableClass {
     
 }
 
-class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
+class MonsterMasterViewController: GameMasterViewController, MonsterMasterDisplayLogic {
     var interactor: MonsterMasterBusinessLogic?
     var router: (CommonRoutingLogic & MonsterMasterRoutingLogic & MonsterMasterDataPassing)?
     var modallyControllerRoutingLogic: CommonRoutingLogic? {
         get { return router }
     }
     var activityView: LottieHUD?
-    var tipView: EasyTipView?
-    
-    func displayProfile() {
-        guard let childs = Profile.current?.childs else {
-            avatarButton.isHidden = true
-            return
-        }
-        
-        if let avatar = childs.first(where: {$0.current ?? false})?.pic {
-            avatarButton.setAvatar(linktoLoad: avatar)
-        }
-    }
-    
-    var output: Output!
-    
-    struct Output {
-        var openSettings: () -> Void
-        var openAuthorization: () -> Void
-    }
-
-    func openSettings() {
-        dismiss(animated: true) {
-            self.output.openSettings()
-        }
-    }
-
-    func openAutorization() {
-        dismiss(animated: true) {
-            self.output.openAuthorization()
-        }
-    }
     
     // MARK: Object lifecycle
     
@@ -81,16 +50,7 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
     }
     
     // MARK: View lifecycle
-    @IBOutlet var backgroundView: UIImageView!
-    @IBOutlet private var homeBtn: KeyButton!
-    @IBOutlet private var avatarButton: AvatarButton!
-    private let startTime = Date()
-    
-    @IBAction func avatarClick(_ sender: Any) {
-        tipView?.dismiss()
-        router?.openStatistic()
-    }
-    
+
     @IBAction private func homeClick(_ sender: Any) {
         if router?.canPop() ?? false {
             router?.popChild()
@@ -99,9 +59,14 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
         }
     }
 
+    private var navigationSubscription: Subscription?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        navigationSubscription = router?.subscribeForNavigation { [weak self] canPop in
+            self?.homeBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "icHomeShadow"), for: .normal)
+        }
         interactor?.onDemand { [weak self] success in
              DispatchQueue.main.async {
              if success {
@@ -113,22 +78,7 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
              }
          }
          }
-        displayProfile()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if !avatarButton.isHidden, LocalStore.monsterTip < 3 {
-            LocalStore.monsterTip += 1
-            var preferences = EasyTipView.Preferences()
-            preferences.drawing.font = Style.Font.istokWeb(size: 16)
-            preferences.drawing.foregroundColor = UIColor.View.titleText
-            preferences.drawing.backgroundColor = .white
-            preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
-            tipView = EasyTipView(text: "Здесь можно посмотреть статистику", preferences: preferences, delegate: self)
-            tipView?.show(animated: true, forView: avatarButton, withinSuperview: view)
-        }
+        setupTrackableChain(parent: analytics)
     }
 
     deinit {
@@ -138,14 +88,6 @@ class MonsterMasterViewController: UIViewController, MonsterMasterDisplayLogic {
         )
         if ServiceConfiguration.activeConfiguration().logging {
             print("Logger: deinit \(className)")
-        }
-        do {
-            //Preparation to play - Костыль
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
         }
     }
 }

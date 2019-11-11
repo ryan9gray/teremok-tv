@@ -9,12 +9,16 @@
 import UIKit
 import AVFoundation
 
-class AlphaviteStartViewController: GameViewController {
+class AlphaviteStartViewController: GameStartViewController {
     @IBOutlet private var startButton: KeyButton!
 
     @IBAction private func startTap(_ sender: Any) {
         buttonPlayer?.play()
         masterRouter?.startFlow(0)
+    }
+
+    @IBAction func avatarClick(_ sender: Any) {
+        masterRouter?.openStatistic()
     }
 
     @IBOutlet private var segmentController: TTSegmentedControl!
@@ -24,8 +28,9 @@ class AlphaviteStartViewController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         segmentController.itemTitles = [ "Я учу алфавит", "Я знаю алфавит" ]
+        segmentController.selectedTextColor = UIColor.Label.titleText
+        segmentController.defaultTextColor = UIColor.Label.titleText
         segmentController.didSelectItemWith = { (index, title) -> () in
             self.buttonPlayer?.play()
             switch index {
@@ -65,11 +70,25 @@ class AlphaviteStartViewController: GameViewController {
         } catch {
             print("no file)")
         }
+        showTips()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    func showTips() {
+        if !avatarButton.isHidden, LocalStore.alphabetTip < 3 {
+            LocalStore.alphabetTip += 1
+            var preferences = EasyTipView.Preferences()
+            preferences.drawing.font = Style.Font.istokWeb(size: 16)
+            preferences.drawing.foregroundColor = UIColor.View.titleText
+            preferences.drawing.backgroundColor = .white
+            preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
+            tipView = EasyTipView(text: "Здесь можно посмотреть статистику", preferences: preferences, delegate: self)
+            tipView?.show(animated: true, forView: avatarButton, withinSuperview: view)
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-        audioPlayer?.stop()
+        audioPlayer?.pause()
     }
 }

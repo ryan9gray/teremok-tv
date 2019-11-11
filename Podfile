@@ -10,8 +10,6 @@ pod 'AlamofireImage'
 pod 'SwiftyJSON'
 pod 'ObjectMapper'
 
-pod 'Reveal-SDK', :configurations => ['Debug']
-
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 pod 'IQKeyboardManagerSwift', '~> 6.0'
 pod 'InfiniteScrolling'

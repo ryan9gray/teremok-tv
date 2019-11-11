@@ -53,18 +53,9 @@ class ChildProfileDoneViewController: AbstracViewController, ChildProfileDoneDis
 
     // MARK: Routing
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
     @IBOutlet private var nameLbl: UILabel!
     @IBOutlet private var ageAndSexLbl: UILabel!
     @IBOutlet private var titleLbl: UILabel!
-    
     @IBOutlet private var addChildBtn: UIButton!
     
     @IBAction func addChildClick(_ sender: Any) {
@@ -93,5 +84,4 @@ class ChildProfileDoneViewController: AbstracViewController, ChildProfileDoneDis
             avatarBtn.setAvatar(linktoLoad: link)
         }
     }
-
 }

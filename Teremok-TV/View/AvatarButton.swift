@@ -11,27 +11,28 @@ import AlamofireImage
 import Alamofire
 
 class AvatarButton: RoundEdgeButton {
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.borderColor = UIColor.Button.yellowBase
+
+        self.borderColor = UIColor.View.yellowBase
         self.borderWidth = 5
         self.backgroundColor = .white
         clipsToBounds = true
-        self.imageView?.contentMode = .scaleAspectFill
+        imageView?.contentMode = .scaleAspectFill
     }
     
     func setAvatar(_ image: UIImage?){
         if let im = image {
-            self.setImage(im, for: .normal)
+            setImage(im, for: .normal)
         }
-        else{
-            self.setImage(image, for: .normal)
+        else {
+            setImage(image, for: .normal)
         }
     }
+
     func setAvatar(linktoLoad: String){
-        
-        getImage(linktoLoad) { [weak self] (image) in
+        getImage(linktoLoad) { [weak self] image in
             if image != nil {
                 self?.setAvatar(image)
             }
@@ -40,6 +41,7 @@ class AvatarButton: RoundEdgeButton {
             }
         }
     }
+
     func getImage(_ url:String,handler: @escaping (UIImage?)->Void) {
         print(url)
         Alamofire.request(url, method: .get).responseImage { response in
@@ -48,6 +50,17 @@ class AvatarButton: RoundEdgeButton {
             } else {
                 handler(nil)
             }
+        }
+    }
+
+    func setupCurrent() {
+        guard let childs = Profile.current?.childs else {
+            isHidden = true
+            return
+        }
+
+        if let avatarUrl = childs.first(where: {$0.current ?? false})?.pic {
+            setAvatar(linktoLoad: avatarUrl)
         }
     }
 }

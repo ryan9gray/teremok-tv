@@ -71,13 +71,8 @@ class ChildProfileAddViewController: AbstracViewController, ChildProfileAddDispl
     
     @IBOutlet private var birthdayTextField: UITextField!
     @IBOutlet private var nameFld: UITextField!
-    var pickerIsVisible = false
-    
-    var sex: Sex = .man {
-        didSet{
-            
-        }
-    }
+    private var pickerIsVisible = false
+    private var sex: Sex = .man
     
     @IBOutlet private var manBtn: UIButton!
     @IBOutlet private var womanBtn: UIButton!
@@ -125,8 +120,6 @@ class ChildProfileAddViewController: AbstracViewController, ChildProfileAddDispl
         birthdayTextField.inputAccessoryView = UIToolbar.inputAccessoryWith(style: .done(birthdayTextField))
         birthdayTextField.inputView = birthdayDatePicker
     }
-    
-
 
     @IBAction func saveClick(_ sender: Any) {
         save()
@@ -158,11 +151,9 @@ class ChildProfileAddViewController: AbstracViewController, ChildProfileAddDispl
     }
     
     func reverseHidden() {
-        pickerIsVisible = !pickerIsVisible
-        if !pickerIsVisible {
-            
-        }
+        pickerIsVisible.toggle()
     }
+
     @objc func datePickerValueChanged(_ datePicker: UIDatePicker) {
         interactor?.choosed(birthday: datePicker.date)
     }
@@ -175,10 +166,8 @@ class ChildProfileAddViewController: AbstracViewController, ChildProfileAddDispl
     }
     
     // MARK: Collection
-
     
     var infiniteScrollingBehaviour: InfiniteScrollingBehaviour!
-
     
     var avatarImages: [Avatar] = Avatar.basicAvatars {
         didSet{
@@ -197,7 +186,7 @@ class ChildProfileAddViewController: AbstracViewController, ChildProfileAddDispl
             self.view.layoutIfNeeded()
         }
     }
-    var avatarImage: UIImage?
+    private var avatarImage: UIImage?
     
     func setAvatar(_ im: UIImage?){
         avatarImage = im
@@ -234,11 +223,9 @@ class ChildProfileAddViewController: AbstracViewController, ChildProfileAddDispl
 
 extension ChildProfileAddViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-
-        return true
+        true
     }
     func updateValueLabel(value: String?) {
-        
         birthdayTextField.text = value
     }
 
@@ -254,7 +241,6 @@ extension ChildProfileAddViewController: InfiniteScrollingBehaviourDelegate {
         if let avatar = data as? Avatar {
             cell.avatarImageView.image = avatar.image
         }
-        
         return cell
     }
 
@@ -281,5 +267,4 @@ extension ChildProfileAddViewController: UIImagePickerControllerDelegate, UINavi
         }
         picker.dismiss(animated: true, completion: nil)
     }
-    
 }

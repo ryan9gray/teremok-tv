@@ -36,6 +36,67 @@
 		11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8C232A071A00F8E529 /* monsterRight.wav */; };
 		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceMonsters, ); }; };
 		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
+		251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E516D235A579000221BA2 /* ColorsGame_subject_10_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E516E235A579000221BA2 /* ColorsGame_subject_8_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513F235A578F00221BA2 /* ColorsGame_subject_8_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E516F235A579000221BA2 /* ColorsGame_color_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5140235A578F00221BA2 /* ColorsGame_color_6.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5170235A579000221BA2 /* ColorsGame_color_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5141235A578F00221BA2 /* ColorsGame_color_7.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5171235A579000221BA2 /* ColorsGame_subject_8_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5142235A578F00221BA2 /* ColorsGame_subject_8_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5172235A579000221BA2 /* ColorsGame_color_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5143235A578F00221BA2 /* ColorsGame_color_5.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5173235A579000221BA2 /* ColorsGame_color_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5144235A578F00221BA2 /* ColorsGame_color_4.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5174235A579000221BA2 /* ColorsGame_subject_8_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5145235A578F00221BA2 /* ColorsGame_subject_8_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5175235A579000221BA2 /* ColorsGame_color_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5146235A578F00221BA2 /* ColorsGame_color_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5176235A579000221BA2 /* ColorsGame_color_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5147235A578F00221BA2 /* ColorsGame_color_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5177235A579000221BA2 /* ColorsGame_color_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5148235A578F00221BA2 /* ColorsGame_color_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5178235A579000221BA2 /* ColorsGame_subject_2_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5149235A578F00221BA2 /* ColorsGame_subject_2_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5179235A579000221BA2 /* ColorsGame_color_10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514A235A578F00221BA2 /* ColorsGame_color_10.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517A235A579000221BA2 /* ColorsGame_subject_2_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514B235A578F00221BA2 /* ColorsGame_subject_2_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517B235A579000221BA2 /* ColorsGame_subject_2_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514C235A578F00221BA2 /* ColorsGame_subject_2_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517C235A579000221BA2 /* ColorsGame_subject_6_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514D235A578F00221BA2 /* ColorsGame_subject_6_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517D235A579000221BA2 /* ColorsGame_subject_4_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514E235A578F00221BA2 /* ColorsGame_subject_4_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517E235A579000221BA2 /* ColorsGame_color_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E514F235A578F00221BA2 /* ColorsGame_color_8.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E517F235A579000221BA2 /* ColorsGame_subject_4_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5150235A578F00221BA2 /* ColorsGame_subject_4_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5180235A579000221BA2 /* ColorsGame_subject_6_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5151235A578F00221BA2 /* ColorsGame_subject_6_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5181235A579000221BA2 /* ColorsGame_subject_4_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5152235A578F00221BA2 /* ColorsGame_subject_4_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5182235A579000221BA2 /* ColorsGame_subject_6_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5153235A578F00221BA2 /* ColorsGame_subject_6_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5183235A579000221BA2 /* ColorsGame_subject_1_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5154235A578F00221BA2 /* ColorsGame_subject_1_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5184235A579000221BA2 /* ColorsGame_subject_3_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5155235A579000221BA2 /* ColorsGame_subject_3_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5185235A579000221BA2 /* ColorsGame_subject_1_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5156235A579000221BA2 /* ColorsGame_subject_1_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5186235A579000221BA2 /* ColorsGame_subject_1_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5157235A579000221BA2 /* ColorsGame_subject_1_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5187235A579000221BA2 /* ColorsGame_subject_3_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5158235A579000221BA2 /* ColorsGame_subject_3_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5188235A579000221BA2 /* ColorsGame_subject_3_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5159235A579000221BA2 /* ColorsGame_subject_3_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E5189235A579000221BA2 /* ColorsGame_subject_7_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515A235A579000221BA2 /* ColorsGame_subject_7_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518A235A579000221BA2 /* ColorsGame_subject_7_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515B235A579000221BA2 /* ColorsGame_subject_7_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518B235A579000221BA2 /* ColorsGame_subject_5_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515C235A579000221BA2 /* ColorsGame_subject_5_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518C235A579000221BA2 /* ColorsGame_subject_5_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515D235A579000221BA2 /* ColorsGame_subject_5_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518D235A579000221BA2 /* ColorsGame_subject_7_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515E235A579000221BA2 /* ColorsGame_subject_7_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518E235A579000221BA2 /* ColorsGame_subject_5_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E515F235A579000221BA2 /* ColorsGame_subject_5_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E518F235A579000221BA2 /* ColorsGame_sad_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5161235A579000221BA2 /* ColorsGame_sad_3.wav */; };
+		251E5190235A579100221BA2 /* ColorsGame_sad_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5162235A579000221BA2 /* ColorsGame_sad_2.wav */; };
+		251E5191235A579100221BA2 /* ColorsGame_sad_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5163235A579000221BA2 /* ColorsGame_sad_1.wav */; };
+		251E5192235A579100221BA2 /* ColorsGame_sad_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5164235A579000221BA2 /* ColorsGame_sad_4.wav */; };
+		251E5193235A579100221BA2 /* ColorsGame_fun_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5165235A579000221BA2 /* ColorsGame_fun_1.wav */; };
+		251E5194235A579100221BA2 /* ColorsGame_fun_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5166235A579000221BA2 /* ColorsGame_fun_3.wav */; };
+		251E5195235A579100221BA2 /* ColorsGame_fun_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5167235A579000221BA2 /* ColorsGame_fun_2.wav */; };
+		251E5196235A579100221BA2 /* ColorsGame_fun_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5168235A579000221BA2 /* ColorsGame_fun_6.wav */; };
+		251E5197235A579100221BA2 /* ColorsGame_fun_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5169235A579000221BA2 /* ColorsGame_fun_5.wav */; };
+		251E5198235A579100221BA2 /* ColorsGame_fun_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E516A235A579000221BA2 /* ColorsGame_fun_4.wav */; };
+		251E519A235A583C00221BA2 /* ColorsGame_color_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E5199235A583C00221BA2 /* ColorsGame_color_9.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E519E235A624A00221BA2 /* ColorsGame_subject_9_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519B235A624900221BA2 /* ColorsGame_subject_9_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */; };
+		253E7E2C2369E5ED003FF569 /* snowstorm_blizzard_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */; };
+		253E7E2E236AFA05003FF569 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E7E2D236AFA05003FF569 /* ShadowView.swift */; };
+		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
+		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
+		257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CD281236E21F600BE96A4 /* GCPlayer.swift */; };
+		25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EF92368E4A90033D9CA /* Subscription.swift */; };
+		25C43EFD2368E4A90033D9CA /* SimpleSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */; };
+		25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFB2368E4A90033D9CA /* Subscriptions.swift */; };
+		25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9187236237B800D339C7 /* colorsGameMain.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
+		25DA918A236237B800D339C7 /* colorsGame_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceColorsGame, ); }; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
 		CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */; };
@@ -271,6 +332,20 @@
 		CA61D87E22A1D33700E3D603 /* AnimalsPackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61D87D22A1D33700E3D603 /* AnimalsPackResponse.swift */; };
 		CA61D88022A1D49700E3D603 /* AnimalsGameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61D87F22A1D49700E3D603 /* AnimalsGameService.swift */; };
 		CA61D92322A445A900E3D603 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61D92222A445A900E3D603 /* UPCarouselFlowLayout.swift */; };
+		CA62A71E23512B8F0083FD4F /* ColorsGameStatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71823512B8F0083FD4F /* ColorsGameStatPresenter.swift */; };
+		CA62A72023512B8F0083FD4F /* ColorsGameStatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71A23512B8F0083FD4F /* ColorsGameStatRouter.swift */; };
+		CA62A72223512B8F0083FD4F /* ColorsGameStatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */; };
+		CA62A72323512B8F0083FD4F /* ColorsGameStatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */; };
+		CA652CE52353510300291E4D /* happy_green_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDB2353510200291E4D /* happy_green_1.json */; };
+		CA652CE62353510300291E4D /* happy_red_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDC2353510200291E4D /* happy_red_2.json */; };
+		CA652CE72353510300291E4D /* sad_red_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDD2353510200291E4D /* sad_red_1.json */; };
+		CA652CE82353510300291E4D /* sad_green_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDE2353510200291E4D /* sad_green_1.json */; };
+		CA652CE92353510300291E4D /* sad_green_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CDF2353510200291E4D /* sad_green_2.json */; };
+		CA652CEA2353510300291E4D /* main_green.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CE02353510200291E4D /* main_green.json */; };
+		CA652CEB2353510300291E4D /* happy_green_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CE12353510300291E4D /* happy_green_2.json */; };
+		CA652CEC2353510300291E4D /* sad_red_2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CE22353510300291E4D /* sad_red_2.json */; };
+		CA652CED2353510300291E4D /* main_red.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CE32353510300291E4D /* main_red.json */; };
+		CA652CEE2353510300291E4D /* happy_red_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CA652CE42353510300291E4D /* happy_red_1.json */; };
 		CA6CB8D52196F6B700429089 /* SubscriptionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CB8D42196F6B700429089 /* SubscriptionCommand.swift */; };
 		CA6CB8D72196F7C300429089 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6CB8D62196F7C300429089 /* PurchaseService.swift */; };
 		CA6F0C8F2158C3E90031C135 /* EditChildCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F0C8E2158C3E90031C135 /* EditChildCommand.swift */; };
@@ -279,6 +354,9 @@
 		CA70867B23082EA80015851C /* AlphaviteStatisticRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70867523082EA80015851C /* AlphaviteStatisticRouter.swift */; };
 		CA70867D23082EA80015851C /* AlphaviteStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70867723082EA80015851C /* AlphaviteStatisticViewController.swift */; };
 		CA70867E23082EA80015851C /* AlphaviteStatisticInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70867823082EA80015851C /* AlphaviteStatisticInteractor.swift */; };
+		CA7197162340E2BB005A729A /* ColorGameContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7197152340E2BB005A729A /* ColorGameContainer.swift */; };
+		CA7197182340EAB8005A729A /* ColorsFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7197172340EAB8005A729A /* ColorsFinishViewController.swift */; };
+		CA71971B2340ECAB005A729A /* brushAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = CA71971A2340ECAB005A729A /* brushAnimation.json */; };
 		CA76362A226A5FDF00168AB1 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA763628226A5FDF00168AB1 /* StoreCollectionViewCell.swift */; };
 		CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA763629226A5FDF00168AB1 /* StoreCollectionViewCell.xib */; };
 		CA76362D226A617900168AB1 /* RoundCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA76362C226A617900168AB1 /* RoundCornerView.swift */; };
@@ -293,7 +371,6 @@
 		CA7A8AAF217C691100A8EA15 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7A8AAE217C691100A8EA15 /* Int.swift */; };
 		CA7AAF462170A25000747D4B /* ChildProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF402170A25000747D4B /* ChildProfilePresenter.swift */; };
 		CA7AAF482170A25000747D4B /* ChildProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF422170A25000747D4B /* ChildProfileRouter.swift */; };
-		CA7AAF492170A25000747D4B /* ChildProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF432170A25000747D4B /* ChildProfileModels.swift */; };
 		CA7AAF4A2170A25000747D4B /* ChildProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF442170A25000747D4B /* ChildProfileViewController.swift */; };
 		CA7AAF4B2170A25000747D4B /* ChildProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF452170A25000747D4B /* ChildProfileInteractor.swift */; };
 		CA7AAF4F2170B0E200747D4B /* SearchCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AAF4E2170B0E200747D4B /* SearchCommand.swift */; };
@@ -341,7 +418,6 @@
 		CA91027922FF5E7E00140D5A /* AlphabetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91027822FF5E7E00140D5A /* AlphabetService.swift */; };
 		CA91027C22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91027B22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift */; };
 		CA91027E22FF606A00140D5A /* AlphabetGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91027D22FF606A00140D5A /* AlphabetGetStatCommand.swift */; };
-		CA91028022FF607900140D5A /* AlphabetSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91027F22FF607900140D5A /* AlphabetSendStatCommand.swift */; };
 		CA992D36212FF1EF008BFC8D /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA992D35212FF1EE008BFC8D /* Auth.storyboard */; };
 		CA992D38212FF218008BFC8D /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA992D37212FF218008BFC8D /* Play.storyboard */; };
 		CA9A6743213C134000FCB400 /* RazdelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A673D213C134000FCB400 /* RazdelPresenter.swift */; };
@@ -402,6 +478,8 @@
 		CAAF1F1021771E4300460F58 /* Shade_open.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAF1F0A21771E4300460F58 /* Shade_open.json */; };
 		CAAF1F1121771E4300460F58 /* Shade_close.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAF1F0B21771E4300460F58 /* Shade_close.json */; };
 		CAAF1F1221771E4300460F58 /* Shade.json in Resources */ = {isa = PBXBuildFile; fileRef = CAAF1F0C21771E4300460F58 /* Shade.json */; };
+		CAAFD1492348EFB6005E086C /* colorsGameGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAFD1482348EFB6005E086C /* colorsGameGetStatCommand.swift */; };
+		CAAFD14B2348F06A005E086C /* ColorsGameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAFD14A2348F06A005E086C /* ColorsGameService.swift */; };
 		CAB08AFC21400B8C002840E3 /* VideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB08AFB21400B8C002840E3 /* VideoResponse.swift */; };
 		CAB08AFE2140512A002840E3 /* RazdCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB08AFD2140512A002840E3 /* RazdCommand.swift */; };
 		CAB08B002140513C002840E3 /* VideosCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB08AFF2140513C002840E3 /* VideosCommand.swift */; };
@@ -418,7 +496,6 @@
 		CAB5A4502171F18200A00C8E /* ChildsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44A2171F18200A00C8E /* ChildsPresenter.swift */; };
 		CAB5A4512171F18200A00C8E /* ChildsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44B2171F18200A00C8E /* ChildsWorker.swift */; };
 		CAB5A4522171F18200A00C8E /* ChildsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44C2171F18200A00C8E /* ChildsRouter.swift */; };
-		CAB5A4532171F18200A00C8E /* ChildsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44D2171F18200A00C8E /* ChildsModels.swift */; };
 		CAB5A4542171F18200A00C8E /* ChildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44E2171F18200A00C8E /* ChildsViewController.swift */; };
 		CAB5A4552171F18200A00C8E /* ChildsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44F2171F18200A00C8E /* ChildsInteractor.swift */; };
 		CAB5A4572171F2B200A00C8E /* ChildsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A4562171F2B200A00C8E /* ChildsStackView.swift */; };
@@ -456,7 +533,6 @@
 		CAC2D52E2115A68300945003 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5112115A68200945003 /* UIViewController.swift */; };
 		CAC2D52F2115A68300945003 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5122115A68200945003 /* UIFont.swift */; };
 		CAC2D5302115A68300945003 /* UIToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5132115A68200945003 /* UIToolbar.swift */; };
-		CAC2D5312115A68300945003 /* ATTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5152115A68200945003 /* ATTextFieldViewModel.swift */; };
 		CAC2D5322115A68300945003 /* ModalPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5162115A68200945003 /* ModalPresentable.swift */; };
 		CAC6F71C22A81BC000756AE2 /* after_announce_round_n.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAC6F70422A81BC000756AE2 /* after_announce_round_n.wav */; };
 		CAC6F71D22A81BC000756AE2 /* click_button_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAC6F70522A81BC000756AE2 /* click_button_1.mp3 */; };
@@ -528,8 +604,8 @@
 		CAD2105323170C69006F2F08 /* pickDriveFrom.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104D23170C68006F2F08 /* pickDriveFrom.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
 		CAD2105423170C69006F2F08 /* pickDriveTo.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104E23170C68006F2F08 /* pickDriveTo.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
 		CAD2105523170C69006F2F08 /* alphabetButton.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2104F23170C68006F2F08 /* alphabetButton.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
-		CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105023170C68006F2F08 /* alphabetRight.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
-		CAD2105723170C69006F2F08 /* alphabetWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105123170C68006F2F08 /* alphabetWrong.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
+		CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105023170C68006F2F08 /* alphabetRight.wav */; };
+		CAD2105723170C69006F2F08 /* alphabetWrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAD2105123170C68006F2F08 /* alphabetWrong.wav */; };
 		CAD90EB122AC71AB004D74BD /* AnimalPackDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB022AC71AB004D74BD /* AnimalPackDownloader.swift */; };
 		CAD90EB322B13636004D74BD /* AnimalsGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB222B13636004D74BD /* AnimalsGetStatCommand.swift */; };
 		CAD90EB522B13644004D74BD /* AnimalsSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD90EB422B13644004D74BD /* AnimalsSendStatCommand.swift */; };
@@ -577,7 +653,6 @@
 		CAE1C446211DB6B80058C9C6 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C444211DB6B80058C9C6 /* KeychainService.swift */; };
 		CAE1C44F211DC23A0058C9C6 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C449211DC23A0058C9C6 /* RegistrationPresenter.swift */; };
 		CAE1C451211DC23A0058C9C6 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C44B211DC23A0058C9C6 /* RegistrationRouter.swift */; };
-		CAE1C452211DC23A0058C9C6 /* RegistrationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C44C211DC23A0058C9C6 /* RegistrationModels.swift */; };
 		CAE1C453211DC23A0058C9C6 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C44D211DC23A0058C9C6 /* RegistrationViewController.swift */; };
 		CAE1C454211DC23A0058C9C6 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C44E211DC23A0058C9C6 /* RegistrationInteractor.swift */; };
 		CAE1C458211DC5BC0058C9C6 /* CommonRoutingLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C455211DC5BC0058C9C6 /* CommonRoutingLogic.swift */; };
@@ -589,14 +664,12 @@
 		CAE1C465211DC8AC0058C9C6 /* AuthNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C464211DC8AC0058C9C6 /* AuthNavigationViewController.swift */; };
 		CAE1C46C211DC8CA0058C9C6 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C466211DC8CA0058C9C6 /* AuthPresenter.swift */; };
 		CAE1C46E211DC8CA0058C9C6 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C468211DC8CA0058C9C6 /* AuthRouter.swift */; };
-		CAE1C46F211DC8CA0058C9C6 /* AuthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C469211DC8CA0058C9C6 /* AuthModels.swift */; };
 		CAE1C470211DC8CA0058C9C6 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C46A211DC8CA0058C9C6 /* AuthViewController.swift */; };
 		CAE1C471211DC8CA0058C9C6 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C46B211DC8CA0058C9C6 /* AuthInteractor.swift */; };
 		CAE1C473211DC9190058C9C6 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C472211DC9190058C9C6 /* UIWindow.swift */; };
 		CAE1C475211DC9F70058C9C6 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C474211DC9F60058C9C6 /* Queue.swift */; };
 		CAE3648E22918181003E891D /* AnimalsMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3648822918181003E891D /* AnimalsMainPresenter.swift */; };
 		CAE3649022918181003E891D /* AnimalsMainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3648A22918181003E891D /* AnimalsMainRouter.swift */; };
-		CAE3649122918181003E891D /* AnimalsMainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3648B22918181003E891D /* AnimalsMainModels.swift */; };
 		CAE3649222918181003E891D /* AnimalsMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3648C22918181003E891D /* AnimalsMainViewController.swift */; };
 		CAE3649322918181003E891D /* AnimalsMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3648D22918181003E891D /* AnimalsMainInteractor.swift */; };
 		CAE3649A2291819D003E891D /* AnimalsRoundsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364942291819D003E891D /* AnimalsRoundsPresenter.swift */; };
@@ -604,10 +677,11 @@
 		CAE3649D2291819D003E891D /* AnimalsRoundsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364972291819D003E891D /* AnimalsRoundsModels.swift */; };
 		CAE3649E2291819D003E891D /* AnimalsRoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364982291819D003E891D /* AnimalsRoundsViewController.swift */; };
 		CAE3649F2291819D003E891D /* AnimalsRoundsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364992291819D003E891D /* AnimalsRoundsInteractor.swift */; };
-		CAE364AA22918378003E891D /* AnimalsWordsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364A422918378003E891D /* AnimalsWordsModels.swift */; };
 		CAE364AB22918378003E891D /* AnimalsWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE364A522918378003E891D /* AnimalsWordsViewController.swift */; };
 		CAE538F6212FFFED005F7463 /* AbstracViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE538F5212FFFED005F7463 /* AbstracViewController.swift */; };
 		CAE5A58B22A9AB630034B448 /* AMProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5A58A22A9AB630034B448 /* AMProgressView.swift */; };
+		CAE6792B235119F800CBCDB3 /* ColorsGameStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE6792A235119F800CBCDB3 /* ColorsGameStatView.swift */; };
+		CAE6792D23511A0C00CBCDB3 /* ColorsGameStatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE6792C23511A0B00CBCDB3 /* ColorsGameStatView.xib */; };
 		CAEBC712212D858F00730891 /* UIRoundedButtonWithGradientAndShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEBC711212D858F00730891 /* UIRoundedButtonWithGradientAndShadow.swift */; };
 		CAEEF22F2299C0F900AF5AF6 /* ChoiceAnimalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF2292299C0F900AF5AF6 /* ChoiceAnimalModels.swift */; };
 		CAEEF2302299C0F900AF5AF6 /* ChoiceAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEEF22A2299C0F900AF5AF6 /* ChoiceAnimalViewController.swift */; };
@@ -622,7 +696,6 @@
 		CAF4C115214B0C7900954AA8 /* FavInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C10F214B0C7900954AA8 /* FavInteractor.swift */; };
 		CAF4C11D214B8F8800954AA8 /* ChildProfileDonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C117214B8F8800954AA8 /* ChildProfileDonePresenter.swift */; };
 		CAF4C11F214B8F8800954AA8 /* ChildProfileDoneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C119214B8F8800954AA8 /* ChildProfileDoneRouter.swift */; };
-		CAF4C120214B8F8800954AA8 /* ChildProfileDoneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C11A214B8F8800954AA8 /* ChildProfileDoneModels.swift */; };
 		CAF4C121214B8F8800954AA8 /* ChildProfileDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C11B214B8F8800954AA8 /* ChildProfileDoneViewController.swift */; };
 		CAF4C122214B8F8800954AA8 /* ChildProfileDoneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4C11C214B8F8800954AA8 /* ChildProfileDoneInteractor.swift */; };
 		CAF61D7B217DFF8300035EE9 /* BackgroundSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF61D7A217DFF8300035EE9 /* BackgroundSession.swift */; };
@@ -630,7 +703,6 @@
 		CAF61D90217E118E00035EE9 /* TTPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF61D86217E118E00035EE9 /* TTPlayerViewController.swift */; };
 		CAF7B18321B6927C00A59F5F /* StorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7B17D21B6927C00A59F5F /* StorePresenter.swift */; };
 		CAF7B18521B6927C00A59F5F /* StoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7B17F21B6927C00A59F5F /* StoreRouter.swift */; };
-		CAF7B18621B6927C00A59F5F /* StoreModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7B18021B6927C00A59F5F /* StoreModels.swift */; };
 		CAF7B18721B6927C00A59F5F /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7B18121B6927C00A59F5F /* StoreViewController.swift */; };
 		CAF7B18821B6927C00A59F5F /* StoreInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF7B18221B6927C00A59F5F /* StoreInteractor.swift */; };
 		CAF889DB21A6975800A245A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAF889DA21A6975800A245A7 /* GoogleService-Info.plist */; };
@@ -698,6 +770,18 @@
 		CAF9AB9A22ABCC4E006DFB5F /* ResumeRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9AB9922ABCC4E006DFB5F /* ResumeRoundViewController.swift */; };
 		CAF9AB9C22ABD137006DFB5F /* AnimalsGameFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9AB9B22ABD136006DFB5F /* AnimalsGameFlow.swift */; };
 		CAFF98432323CEFA00003076 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF98422323CEFA00003076 /* Result.swift */; };
+		CAFF984623251FDD00003076 /* ColorsGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFF984523251FDD00003076 /* ColorsGame.storyboard */; };
+		CAFF984823252D3E00003076 /* ImageFillter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984723252D3E00003076 /* ImageFillter.swift */; };
+		CAFF984F2325305300003076 /* ColorsMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF98492325305300003076 /* ColorsMasterPresenter.swift */; };
+		CAFF98512325305300003076 /* ColorsMasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984B2325305300003076 /* ColorsMasterRouter.swift */; };
+		CAFF98522325305300003076 /* ColorsMasterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984C2325305300003076 /* ColorsMasterModels.swift */; };
+		CAFF98532325305300003076 /* ColorsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984D2325305300003076 /* ColorsMasterViewController.swift */; };
+		CAFF98542325305300003076 /* ColorsMasterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF984E2325305300003076 /* ColorsMasterInteractor.swift */; };
+		CAFF9857232530DE00003076 /* ColorsGameFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF9856232530DE00003076 /* ColorsGameFlow.swift */; };
+		CAFF98592325313C00003076 /* ColorsStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF98582325313C00003076 /* ColorsStartViewController.swift */; };
+		CAFF985B2325318E00003076 /* ColorsTeachingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF985A2325318E00003076 /* ColorsTeachingViewController.swift */; };
+		CAFF985D232531A900003076 /* ColorsChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF985C232531A900003076 /* ColorsChoiceViewController.swift */; };
+		CAFF985F2325342600003076 /* GameMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF985E2325342600003076 /* GameMasterViewController.swift */; };
 		E76CD1A723326BE20094E29A /* OnDemandLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76CD1A623326BE20094E29A /* OnDemandLoader.swift */; };
 /* End PBXBuildFile section */
 
@@ -755,6 +839,67 @@
 		11CF6B8C232A071A00F8E529 /* monsterRight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterRight.wav; sourceTree = "<group>"; };
 		11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = monster_game_introduce.mp4; sourceTree = "<group>"; };
 		11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameResultsViewController.swift; sourceTree = "<group>"; };
+		251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_1.wav; sourceTree = "<group>"; };
+		251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_2.wav; sourceTree = "<group>"; };
+		251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_3.wav; sourceTree = "<group>"; };
+		251E513F235A578F00221BA2 /* ColorsGame_subject_8_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_8_1.wav; sourceTree = "<group>"; };
+		251E5140235A578F00221BA2 /* ColorsGame_color_6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_6.wav; sourceTree = "<group>"; };
+		251E5141235A578F00221BA2 /* ColorsGame_color_7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_7.wav; sourceTree = "<group>"; };
+		251E5142235A578F00221BA2 /* ColorsGame_subject_8_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_8_2.wav; sourceTree = "<group>"; };
+		251E5143235A578F00221BA2 /* ColorsGame_color_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_5.wav; sourceTree = "<group>"; };
+		251E5144235A578F00221BA2 /* ColorsGame_color_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_4.wav; sourceTree = "<group>"; };
+		251E5145235A578F00221BA2 /* ColorsGame_subject_8_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_8_3.wav; sourceTree = "<group>"; };
+		251E5146235A578F00221BA2 /* ColorsGame_color_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_1.wav; sourceTree = "<group>"; };
+		251E5147235A578F00221BA2 /* ColorsGame_color_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_3.wav; sourceTree = "<group>"; };
+		251E5148235A578F00221BA2 /* ColorsGame_color_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_2.wav; sourceTree = "<group>"; };
+		251E5149235A578F00221BA2 /* ColorsGame_subject_2_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_2_3.wav; sourceTree = "<group>"; };
+		251E514A235A578F00221BA2 /* ColorsGame_color_10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_10.wav; sourceTree = "<group>"; };
+		251E514B235A578F00221BA2 /* ColorsGame_subject_2_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_2_2.wav; sourceTree = "<group>"; };
+		251E514C235A578F00221BA2 /* ColorsGame_subject_2_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_2_1.wav; sourceTree = "<group>"; };
+		251E514D235A578F00221BA2 /* ColorsGame_subject_6_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_6_1.wav; sourceTree = "<group>"; };
+		251E514E235A578F00221BA2 /* ColorsGame_subject_4_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_4_3.wav; sourceTree = "<group>"; };
+		251E514F235A578F00221BA2 /* ColorsGame_color_8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_8.wav; sourceTree = "<group>"; };
+		251E5150235A578F00221BA2 /* ColorsGame_subject_4_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_4_2.wav; sourceTree = "<group>"; };
+		251E5151235A578F00221BA2 /* ColorsGame_subject_6_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_6_2.wav; sourceTree = "<group>"; };
+		251E5152235A578F00221BA2 /* ColorsGame_subject_4_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_4_1.wav; sourceTree = "<group>"; };
+		251E5153235A578F00221BA2 /* ColorsGame_subject_6_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_6_3.wav; sourceTree = "<group>"; };
+		251E5154235A578F00221BA2 /* ColorsGame_subject_1_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_1_2.wav; sourceTree = "<group>"; };
+		251E5155235A579000221BA2 /* ColorsGame_subject_3_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_3_1.wav; sourceTree = "<group>"; };
+		251E5156235A579000221BA2 /* ColorsGame_subject_1_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_1_3.wav; sourceTree = "<group>"; };
+		251E5157235A579000221BA2 /* ColorsGame_subject_1_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_1_1.wav; sourceTree = "<group>"; };
+		251E5158235A579000221BA2 /* ColorsGame_subject_3_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_3_3.wav; sourceTree = "<group>"; };
+		251E5159235A579000221BA2 /* ColorsGame_subject_3_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_3_2.wav; sourceTree = "<group>"; };
+		251E515A235A579000221BA2 /* ColorsGame_subject_7_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_7_2.wav; sourceTree = "<group>"; };
+		251E515B235A579000221BA2 /* ColorsGame_subject_7_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_7_3.wav; sourceTree = "<group>"; };
+		251E515C235A579000221BA2 /* ColorsGame_subject_5_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_5_1.wav; sourceTree = "<group>"; };
+		251E515D235A579000221BA2 /* ColorsGame_subject_5_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_5_3.wav; sourceTree = "<group>"; };
+		251E515E235A579000221BA2 /* ColorsGame_subject_7_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_7_1.wav; sourceTree = "<group>"; };
+		251E515F235A579000221BA2 /* ColorsGame_subject_5_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_5_2.wav; sourceTree = "<group>"; };
+		251E5161235A579000221BA2 /* ColorsGame_sad_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_sad_3.wav; sourceTree = "<group>"; };
+		251E5162235A579000221BA2 /* ColorsGame_sad_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_sad_2.wav; sourceTree = "<group>"; };
+		251E5163235A579000221BA2 /* ColorsGame_sad_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_sad_1.wav; sourceTree = "<group>"; };
+		251E5164235A579000221BA2 /* ColorsGame_sad_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_sad_4.wav; sourceTree = "<group>"; };
+		251E5165235A579000221BA2 /* ColorsGame_fun_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_1.wav; sourceTree = "<group>"; };
+		251E5166235A579000221BA2 /* ColorsGame_fun_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_3.wav; sourceTree = "<group>"; };
+		251E5167235A579000221BA2 /* ColorsGame_fun_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_2.wav; sourceTree = "<group>"; };
+		251E5168235A579000221BA2 /* ColorsGame_fun_6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_6.wav; sourceTree = "<group>"; };
+		251E5169235A579000221BA2 /* ColorsGame_fun_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_5.wav; sourceTree = "<group>"; };
+		251E516A235A579000221BA2 /* ColorsGame_fun_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_fun_4.wav; sourceTree = "<group>"; };
+		251E5199235A583C00221BA2 /* ColorsGame_color_9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_color_9.wav; sourceTree = "<group>"; };
+		251E519B235A624900221BA2 /* ColorsGame_subject_9_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_3.wav; sourceTree = "<group>"; };
+		251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_1.wav; sourceTree = "<group>"; };
+		251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_2.wav; sourceTree = "<group>"; };
+		251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neskid-comica-bd.ttf"; sourceTree = "<group>"; };
+		253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snowstorm_blizzard_1.wav; sourceTree = "<group>"; };
+		253E7E2D236AFA05003FF569 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
+		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
+		257CD281236E21F600BE96A4 /* GCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPlayer.swift; sourceTree = "<group>"; };
+		25C43EF92368E4A90033D9CA /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSubscription.swift; sourceTree = "<group>"; };
+		25C43EFB2368E4A90033D9CA /* Subscriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
+		25DA9187236237B800D339C7 /* colorsGameMain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = colorsGameMain.wav; sourceTree = "<group>"; };
+		25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorsGame_introduce.mp4; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
@@ -992,6 +1137,20 @@
 		CA61D87D22A1D33700E3D603 /* AnimalsPackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsPackResponse.swift; sourceTree = "<group>"; };
 		CA61D87F22A1D49700E3D603 /* AnimalsGameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsGameService.swift; sourceTree = "<group>"; };
 		CA61D92222A445A900E3D603 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		CA62A71823512B8F0083FD4F /* ColorsGameStatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatPresenter.swift; sourceTree = "<group>"; };
+		CA62A71A23512B8F0083FD4F /* ColorsGameStatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatRouter.swift; sourceTree = "<group>"; };
+		CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatViewController.swift; sourceTree = "<group>"; };
+		CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatInteractor.swift; sourceTree = "<group>"; };
+		CA652CDB2353510200291E4D /* happy_green_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_green_1.json; sourceTree = "<group>"; };
+		CA652CDC2353510200291E4D /* happy_red_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_red_2.json; sourceTree = "<group>"; };
+		CA652CDD2353510200291E4D /* sad_red_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_red_1.json; sourceTree = "<group>"; };
+		CA652CDE2353510200291E4D /* sad_green_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_green_1.json; sourceTree = "<group>"; };
+		CA652CDF2353510200291E4D /* sad_green_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_green_2.json; sourceTree = "<group>"; };
+		CA652CE02353510200291E4D /* main_green.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main_green.json; sourceTree = "<group>"; };
+		CA652CE12353510300291E4D /* happy_green_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_green_2.json; sourceTree = "<group>"; };
+		CA652CE22353510300291E4D /* sad_red_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad_red_2.json; sourceTree = "<group>"; };
+		CA652CE32353510300291E4D /* main_red.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main_red.json; sourceTree = "<group>"; };
+		CA652CE42353510300291E4D /* happy_red_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy_red_1.json; sourceTree = "<group>"; };
 		CA6CB8D42196F6B700429089 /* SubscriptionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCommand.swift; sourceTree = "<group>"; };
 		CA6CB8D62196F7C300429089 /* PurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
 		CA6F0C8E2158C3E90031C135 /* EditChildCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChildCommand.swift; sourceTree = "<group>"; };
@@ -1000,6 +1159,9 @@
 		CA70867523082EA80015851C /* AlphaviteStatisticRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatisticRouter.swift; sourceTree = "<group>"; };
 		CA70867723082EA80015851C /* AlphaviteStatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatisticViewController.swift; sourceTree = "<group>"; };
 		CA70867823082EA80015851C /* AlphaviteStatisticInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatisticInteractor.swift; sourceTree = "<group>"; };
+		CA7197152340E2BB005A729A /* ColorGameContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGameContainer.swift; sourceTree = "<group>"; };
+		CA7197172340EAB8005A729A /* ColorsFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsFinishViewController.swift; sourceTree = "<group>"; };
+		CA71971A2340ECAB005A729A /* brushAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brushAnimation.json; sourceTree = "<group>"; };
 		CA763628226A5FDF00168AB1 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA763629226A5FDF00168AB1 /* StoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCollectionViewCell.xib; sourceTree = "<group>"; };
 		CA76362C226A617900168AB1 /* RoundCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerView.swift; sourceTree = "<group>"; };
@@ -1014,7 +1176,6 @@
 		CA7A8AAE217C691100A8EA15 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		CA7AAF402170A25000747D4B /* ChildProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfilePresenter.swift; sourceTree = "<group>"; };
 		CA7AAF422170A25000747D4B /* ChildProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileRouter.swift; sourceTree = "<group>"; };
-		CA7AAF432170A25000747D4B /* ChildProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileModels.swift; sourceTree = "<group>"; };
 		CA7AAF442170A25000747D4B /* ChildProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileViewController.swift; sourceTree = "<group>"; };
 		CA7AAF452170A25000747D4B /* ChildProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileInteractor.swift; sourceTree = "<group>"; };
 		CA7AAF4E2170B0E200747D4B /* SearchCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommand.swift; sourceTree = "<group>"; };
@@ -1062,7 +1223,6 @@
 		CA91027822FF5E7E00140D5A /* AlphabetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetService.swift; sourceTree = "<group>"; };
 		CA91027B22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatisticResponse.swift; sourceTree = "<group>"; };
 		CA91027D22FF606A00140D5A /* AlphabetGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetGetStatCommand.swift; sourceTree = "<group>"; };
-		CA91027F22FF607900140D5A /* AlphabetSendStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetSendStatCommand.swift; sourceTree = "<group>"; };
 		CA992D35212FF1EE008BFC8D /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		CA992D37212FF218008BFC8D /* Play.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
 		CA9A673D213C134000FCB400 /* RazdelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazdelPresenter.swift; sourceTree = "<group>"; };
@@ -1125,6 +1285,8 @@
 		CAAF1F0A21771E4300460F58 /* Shade_open.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shade_open.json; sourceTree = "<group>"; };
 		CAAF1F0B21771E4300460F58 /* Shade_close.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shade_close.json; sourceTree = "<group>"; };
 		CAAF1F0C21771E4300460F58 /* Shade.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Shade.json; sourceTree = "<group>"; };
+		CAAFD1482348EFB6005E086C /* colorsGameGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorsGameGetStatCommand.swift; sourceTree = "<group>"; };
+		CAAFD14A2348F06A005E086C /* ColorsGameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameService.swift; sourceTree = "<group>"; };
 		CAB08AFB21400B8C002840E3 /* VideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResponse.swift; sourceTree = "<group>"; };
 		CAB08AFD2140512A002840E3 /* RazdCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazdCommand.swift; sourceTree = "<group>"; };
 		CAB08AFF2140513C002840E3 /* VideosCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosCommand.swift; sourceTree = "<group>"; };
@@ -1141,7 +1303,6 @@
 		CAB5A44A2171F18200A00C8E /* ChildsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsPresenter.swift; sourceTree = "<group>"; };
 		CAB5A44B2171F18200A00C8E /* ChildsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsWorker.swift; sourceTree = "<group>"; };
 		CAB5A44C2171F18200A00C8E /* ChildsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsRouter.swift; sourceTree = "<group>"; };
-		CAB5A44D2171F18200A00C8E /* ChildsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsModels.swift; sourceTree = "<group>"; };
 		CAB5A44E2171F18200A00C8E /* ChildsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsViewController.swift; sourceTree = "<group>"; };
 		CAB5A44F2171F18200A00C8E /* ChildsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsInteractor.swift; sourceTree = "<group>"; };
 		CAB5A4562171F2B200A00C8E /* ChildsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsStackView.swift; sourceTree = "<group>"; };
@@ -1181,7 +1342,6 @@
 		CAC2D5112115A68200945003 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CAC2D5122115A68200945003 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		CAC2D5132115A68200945003 /* UIToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIToolbar.swift; sourceTree = "<group>"; };
-		CAC2D5152115A68200945003 /* ATTextFieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATTextFieldViewModel.swift; sourceTree = "<group>"; };
 		CAC2D5162115A68200945003 /* ModalPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentable.swift; sourceTree = "<group>"; };
 		CAC2D5342115A7FB00945003 /* HeaderObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeaderObj.h; path = "../../Teremok-TV/Teremok-TV/HeaderObj.h"; sourceTree = "<group>"; };
 		CAC6F70422A81BC000756AE2 /* after_announce_round_n.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = after_announce_round_n.wav; sourceTree = "<group>"; };
@@ -1303,7 +1463,6 @@
 		CAE1C444211DB6B80058C9C6 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		CAE1C449211DC23A0058C9C6 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		CAE1C44B211DC23A0058C9C6 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
-		CAE1C44C211DC23A0058C9C6 /* RegistrationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModels.swift; sourceTree = "<group>"; };
 		CAE1C44D211DC23A0058C9C6 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		CAE1C44E211DC23A0058C9C6 /* RegistrationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInteractor.swift; sourceTree = "<group>"; };
 		CAE1C455211DC5BC0058C9C6 /* CommonRoutingLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonRoutingLogic.swift; sourceTree = "<group>"; };
@@ -1315,14 +1474,12 @@
 		CAE1C464211DC8AC0058C9C6 /* AuthNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigationViewController.swift; sourceTree = "<group>"; };
 		CAE1C466211DC8CA0058C9C6 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		CAE1C468211DC8CA0058C9C6 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
-		CAE1C469211DC8CA0058C9C6 /* AuthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModels.swift; sourceTree = "<group>"; };
 		CAE1C46A211DC8CA0058C9C6 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		CAE1C46B211DC8CA0058C9C6 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
 		CAE1C472211DC9190058C9C6 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		CAE1C474211DC9F60058C9C6 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		CAE3648822918181003E891D /* AnimalsMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsMainPresenter.swift; sourceTree = "<group>"; };
 		CAE3648A22918181003E891D /* AnimalsMainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsMainRouter.swift; sourceTree = "<group>"; };
-		CAE3648B22918181003E891D /* AnimalsMainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsMainModels.swift; sourceTree = "<group>"; };
 		CAE3648C22918181003E891D /* AnimalsMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsMainViewController.swift; sourceTree = "<group>"; };
 		CAE3648D22918181003E891D /* AnimalsMainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsMainInteractor.swift; sourceTree = "<group>"; };
 		CAE364942291819D003E891D /* AnimalsRoundsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRoundsPresenter.swift; sourceTree = "<group>"; };
@@ -1330,10 +1487,11 @@
 		CAE364972291819D003E891D /* AnimalsRoundsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRoundsModels.swift; sourceTree = "<group>"; };
 		CAE364982291819D003E891D /* AnimalsRoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRoundsViewController.swift; sourceTree = "<group>"; };
 		CAE364992291819D003E891D /* AnimalsRoundsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRoundsInteractor.swift; sourceTree = "<group>"; };
-		CAE364A422918378003E891D /* AnimalsWordsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsWordsModels.swift; sourceTree = "<group>"; };
 		CAE364A522918378003E891D /* AnimalsWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsWordsViewController.swift; sourceTree = "<group>"; };
 		CAE538F5212FFFED005F7463 /* AbstracViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstracViewController.swift; sourceTree = "<group>"; };
 		CAE5A58A22A9AB630034B448 /* AMProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMProgressView.swift; sourceTree = "<group>"; };
+		CAE6792A235119F800CBCDB3 /* ColorsGameStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameStatView.swift; sourceTree = "<group>"; };
+		CAE6792C23511A0B00CBCDB3 /* ColorsGameStatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsGameStatView.xib; sourceTree = "<group>"; };
 		CAEBC711212D858F00730891 /* UIRoundedButtonWithGradientAndShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedButtonWithGradientAndShadow.swift; sourceTree = "<group>"; };
 		CAEEF2292299C0F900AF5AF6 /* ChoiceAnimalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceAnimalModels.swift; sourceTree = "<group>"; };
 		CAEEF22A2299C0F900AF5AF6 /* ChoiceAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceAnimalViewController.swift; sourceTree = "<group>"; };
@@ -1348,7 +1506,6 @@
 		CAF4C10F214B0C7900954AA8 /* FavInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavInteractor.swift; sourceTree = "<group>"; };
 		CAF4C117214B8F8800954AA8 /* ChildProfileDonePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileDonePresenter.swift; sourceTree = "<group>"; };
 		CAF4C119214B8F8800954AA8 /* ChildProfileDoneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileDoneRouter.swift; sourceTree = "<group>"; };
-		CAF4C11A214B8F8800954AA8 /* ChildProfileDoneModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileDoneModels.swift; sourceTree = "<group>"; };
 		CAF4C11B214B8F8800954AA8 /* ChildProfileDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileDoneViewController.swift; sourceTree = "<group>"; };
 		CAF4C11C214B8F8800954AA8 /* ChildProfileDoneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileDoneInteractor.swift; sourceTree = "<group>"; };
 		CAF5AD7D2136BC79006C9ECB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1360,7 +1517,6 @@
 		CAF61D86217E118E00035EE9 /* TTPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTPlayerViewController.swift; sourceTree = "<group>"; };
 		CAF7B17D21B6927C00A59F5F /* StorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePresenter.swift; sourceTree = "<group>"; };
 		CAF7B17F21B6927C00A59F5F /* StoreRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRouter.swift; sourceTree = "<group>"; };
-		CAF7B18021B6927C00A59F5F /* StoreModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModels.swift; sourceTree = "<group>"; };
 		CAF7B18121B6927C00A59F5F /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		CAF7B18221B6927C00A59F5F /* StoreInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInteractor.swift; sourceTree = "<group>"; };
 		CAF889DA21A6975800A245A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -1429,6 +1585,18 @@
 		CAF9AB9B22ABD136006DFB5F /* AnimalsGameFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsGameFlow.swift; sourceTree = "<group>"; };
 		CAFF983D2323C1E900003076 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		CAFF98422323CEFA00003076 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CAFF984523251FDD00003076 /* ColorsGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorsGame.storyboard; sourceTree = "<group>"; };
+		CAFF984723252D3E00003076 /* ImageFillter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFillter.swift; sourceTree = "<group>"; };
+		CAFF98492325305300003076 /* ColorsMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsMasterPresenter.swift; sourceTree = "<group>"; };
+		CAFF984B2325305300003076 /* ColorsMasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsMasterRouter.swift; sourceTree = "<group>"; };
+		CAFF984C2325305300003076 /* ColorsMasterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsMasterModels.swift; sourceTree = "<group>"; };
+		CAFF984D2325305300003076 /* ColorsMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsMasterViewController.swift; sourceTree = "<group>"; };
+		CAFF984E2325305300003076 /* ColorsMasterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsMasterInteractor.swift; sourceTree = "<group>"; };
+		CAFF9856232530DE00003076 /* ColorsGameFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGameFlow.swift; sourceTree = "<group>"; };
+		CAFF98582325313C00003076 /* ColorsStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsStartViewController.swift; sourceTree = "<group>"; };
+		CAFF985A2325318E00003076 /* ColorsTeachingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTeachingViewController.swift; sourceTree = "<group>"; };
+		CAFF985C232531A900003076 /* ColorsChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsChoiceViewController.swift; sourceTree = "<group>"; };
+		CAFF985E2325342600003076 /* GameMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMasterViewController.swift; sourceTree = "<group>"; };
 		CD8F4E30A715216C15EAB110 /* Pods-Teremok-TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.debug.xcconfig"; sourceTree = "<group>"; };
 		E76CD1A623326BE20094E29A /* OnDemandLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDemandLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1489,8 +1657,8 @@
 		11BC751B23042D44001B5CC8 /* MonsterGame */ = {
 			isa = PBXGroup;
 			children = (
-				111187E8231E828800EBEFC0 /* Statistic */,
 				116BEDFB2313B4560043CCEA /* Master */,
+				111187E8231E828800EBEFC0 /* Statistic */,
 				11BC751E23042E06001B5CC8 /* MonsterStartViewController.swift */,
 				11BA2493230AB84B00A9EA15 /* MonsterFlow.swift */,
 				11BA2495230AC95D00A9EA15 /* MonsterGameViewController.swift */,
@@ -1523,6 +1691,80 @@
 				11CF6B87232A071A00F8E529 /* monsterWrong.wav */,
 			);
 			path = sounds;
+			sourceTree = "<group>";
+		};
+		251E513B235A578F00221BA2 /* Sounds thing colour */ = {
+			isa = PBXGroup;
+			children = (
+				251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */,
+				251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */,
+				251E519B235A624900221BA2 /* ColorsGame_subject_9_3.wav */,
+				251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */,
+				251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */,
+				251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */,
+				251E5199235A583C00221BA2 /* ColorsGame_color_9.wav */,
+				251E513F235A578F00221BA2 /* ColorsGame_subject_8_1.wav */,
+				251E5140235A578F00221BA2 /* ColorsGame_color_6.wav */,
+				251E5141235A578F00221BA2 /* ColorsGame_color_7.wav */,
+				251E5142235A578F00221BA2 /* ColorsGame_subject_8_2.wav */,
+				251E5143235A578F00221BA2 /* ColorsGame_color_5.wav */,
+				251E5144235A578F00221BA2 /* ColorsGame_color_4.wav */,
+				251E5145235A578F00221BA2 /* ColorsGame_subject_8_3.wav */,
+				251E5146235A578F00221BA2 /* ColorsGame_color_1.wav */,
+				251E5147235A578F00221BA2 /* ColorsGame_color_3.wav */,
+				251E5148235A578F00221BA2 /* ColorsGame_color_2.wav */,
+				251E5149235A578F00221BA2 /* ColorsGame_subject_2_3.wav */,
+				251E514A235A578F00221BA2 /* ColorsGame_color_10.wav */,
+				251E514B235A578F00221BA2 /* ColorsGame_subject_2_2.wav */,
+				251E514C235A578F00221BA2 /* ColorsGame_subject_2_1.wav */,
+				251E514D235A578F00221BA2 /* ColorsGame_subject_6_1.wav */,
+				251E514E235A578F00221BA2 /* ColorsGame_subject_4_3.wav */,
+				251E514F235A578F00221BA2 /* ColorsGame_color_8.wav */,
+				251E5150235A578F00221BA2 /* ColorsGame_subject_4_2.wav */,
+				251E5151235A578F00221BA2 /* ColorsGame_subject_6_2.wav */,
+				251E5152235A578F00221BA2 /* ColorsGame_subject_4_1.wav */,
+				251E5153235A578F00221BA2 /* ColorsGame_subject_6_3.wav */,
+				251E5154235A578F00221BA2 /* ColorsGame_subject_1_2.wav */,
+				251E5155235A579000221BA2 /* ColorsGame_subject_3_1.wav */,
+				251E5156235A579000221BA2 /* ColorsGame_subject_1_3.wav */,
+				251E5157235A579000221BA2 /* ColorsGame_subject_1_1.wav */,
+				251E5158235A579000221BA2 /* ColorsGame_subject_3_3.wav */,
+				251E5159235A579000221BA2 /* ColorsGame_subject_3_2.wav */,
+				251E515A235A579000221BA2 /* ColorsGame_subject_7_2.wav */,
+				251E515B235A579000221BA2 /* ColorsGame_subject_7_3.wav */,
+				251E515C235A579000221BA2 /* ColorsGame_subject_5_1.wav */,
+				251E515D235A579000221BA2 /* ColorsGame_subject_5_3.wav */,
+				251E515E235A579000221BA2 /* ColorsGame_subject_7_1.wav */,
+				251E515F235A579000221BA2 /* ColorsGame_subject_5_2.wav */,
+			);
+			path = "Sounds thing colour";
+			sourceTree = "<group>";
+		};
+		251E5160235A579000221BA2 /* Emotions */ = {
+			isa = PBXGroup;
+			children = (
+				251E5161235A579000221BA2 /* ColorsGame_sad_3.wav */,
+				251E5162235A579000221BA2 /* ColorsGame_sad_2.wav */,
+				251E5163235A579000221BA2 /* ColorsGame_sad_1.wav */,
+				251E5164235A579000221BA2 /* ColorsGame_sad_4.wav */,
+				251E5165235A579000221BA2 /* ColorsGame_fun_1.wav */,
+				251E5166235A579000221BA2 /* ColorsGame_fun_3.wav */,
+				251E5167235A579000221BA2 /* ColorsGame_fun_2.wav */,
+				251E5168235A579000221BA2 /* ColorsGame_fun_6.wav */,
+				251E5169235A579000221BA2 /* ColorsGame_fun_5.wav */,
+				251E516A235A579000221BA2 /* ColorsGame_fun_4.wav */,
+			);
+			path = Emotions;
+			sourceTree = "<group>";
+		};
+		25C43EF82368E4A90033D9CA /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				25C43EF92368E4A90033D9CA /* Subscription.swift */,
+				25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */,
+				25C43EFB2368E4A90033D9CA /* Subscriptions.swift */,
+			);
+			path = Subscription;
 			sourceTree = "<group>";
 		};
 		8BFE56BA8D2FDC0505E1093F /* Pods */ = {
@@ -1648,6 +1890,7 @@
 		CA49E496212D59E600711324 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				253E7E2D236AFA05003FF569 /* ShadowView.swift */,
 				CADD14BA23129A4000AE920A /* TTSegmentedControl.swift */,
 				CAC0988A22FF12A700EFB01E /* EasyTipView */,
 				CAAD25EE22F5B2C4005CFCD2 /* StrokeLabel.swift */,
@@ -1667,6 +1910,8 @@
 				CA19C46922F5E3BD0011E4DF /* AlphaviteControl.swift */,
 				CAA73260213163A5006276B4 /* TTImageView.swift */,
 				CAF4C105214AF31700954AA8 /* InputView.swift */,
+				CAE6792A235119F800CBCDB3 /* ColorsGameStatView.swift */,
+				CAE6792C23511A0B00CBCDB3 /* ColorsGameStatView.xib */,
 				CAC0989122FF47ED00EFB01E /* AlphaviteStatView.swift */,
 				CAC0989322FF47FD00EFB01E /* AlphaviteStatView.xib */,
 			);
@@ -1834,9 +2079,9 @@
 			children = (
 				CAE3648822918181003E891D /* AnimalsMainPresenter.swift */,
 				CAE3648A22918181003E891D /* AnimalsMainRouter.swift */,
-				CAE3648B22918181003E891D /* AnimalsMainModels.swift */,
 				CAE3648C22918181003E891D /* AnimalsMainViewController.swift */,
 				CAE3648D22918181003E891D /* AnimalsMainInteractor.swift */,
+				25493D9A23685F650006FE18 /* GameStartViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1925,6 +2170,7 @@
 				CAD210272315BACF006F2F08 /* IstokWeb-Italic.ttf */,
 				CAD210292315BAD0006F2F08 /* IstokWeb-Regular.ttf */,
 				CAAD25EB22F5A464005CFCD2 /* Foo.ttf */,
+				251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */,
 				CAAD25EA22F5A463005CFCD2 /* Glober Black.otf */,
 				CA56D0C52302A424006298C5 /* ariblk.ttf */,
 				CA1AB64D22F1ABA6003A2584 /* Shnobel-Regular.otf */,
@@ -1956,9 +2202,21 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		CA62A72423512B930083FD4F /* Stat */ = {
+			isa = PBXGroup;
+			children = (
+				CA62A71823512B8F0083FD4F /* ColorsGameStatPresenter.swift */,
+				CA62A71A23512B8F0083FD4F /* ColorsGameStatRouter.swift */,
+				CA62A71C23512B8F0083FD4F /* ColorsGameStatViewController.swift */,
+				CA62A71D23512B8F0083FD4F /* ColorsGameStatInteractor.swift */,
+			);
+			path = Stat;
+			sourceTree = "<group>";
+		};
 		CA70271E21396F1400629260 /* ServiceCommand */ = {
 			isa = PBXGroup;
 			children = (
+				CAAFD14A2348F06A005E086C /* ColorsGameService.swift */,
 				111187F5231E8D6E00EBEFC0 /* MonsterService.swift */,
 				CA91027822FF5E7E00140D5A /* AlphabetService.swift */,
 				CA61D87F22A1D49700E3D603 /* AnimalsGameService.swift */,
@@ -1992,6 +2250,28 @@
 				CA70867823082EA80015851C /* AlphaviteStatisticInteractor.swift */,
 			);
 			path = Stats;
+			sourceTree = "<group>";
+		};
+		CA7197192340ECAB005A729A /* ColorsGame */ = {
+			isa = PBXGroup;
+			children = (
+				25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */,
+				25DA9187236237B800D339C7 /* colorsGameMain.wav */,
+				251E5160235A579000221BA2 /* Emotions */,
+				251E513B235A578F00221BA2 /* Sounds thing colour */,
+				CA652CDB2353510200291E4D /* happy_green_1.json */,
+				CA652CE12353510300291E4D /* happy_green_2.json */,
+				CA652CE42353510300291E4D /* happy_red_1.json */,
+				CA652CDC2353510200291E4D /* happy_red_2.json */,
+				CA652CE02353510200291E4D /* main_green.json */,
+				CA652CE32353510300291E4D /* main_red.json */,
+				CA652CDE2353510200291E4D /* sad_green_1.json */,
+				CA652CDF2353510200291E4D /* sad_green_2.json */,
+				CA652CDD2353510200291E4D /* sad_red_1.json */,
+				CA652CE22353510300291E4D /* sad_red_2.json */,
+				CA71971A2340ECAB005A729A /* brushAnimation.json */,
+			);
+			path = ColorsGame;
 			sourceTree = "<group>";
 		};
 		CA763634226BD76100168AB1 /* OfflinePlaylist */ = {
@@ -2043,6 +2323,7 @@
 				CA09979021A573490051F41D /* SecurityCodeViewController.swift */,
 				CA0ABB762180CC8900523F5B /* ScrollViewAlertViewController.swift */,
 				CA82C12C2132B4360020272E /* CloudAlertViewController.swift */,
+				CAFF985E2325342600003076 /* GameMasterViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2072,7 +2353,6 @@
 			isa = PBXGroup;
 			children = (
 				CA91027D22FF606A00140D5A /* AlphabetGetStatCommand.swift */,
-				CA91027F22FF607900140D5A /* AlphabetSendStatCommand.swift */,
 			);
 			path = Alphavite;
 			sourceTree = "<group>";
@@ -2085,6 +2365,7 @@
 				CA1AB64122F188B5003A2584 /* Alphavite.storyboard */,
 				CA992D35212FF1EE008BFC8D /* Auth.storyboard */,
 				CA992D37212FF218008BFC8D /* Play.storyboard */,
+				CAFF984523251FDD00003076 /* ColorsGame.storyboard */,
 				CA52DF272290701500458EE5 /* Animals.storyboard */,
 				CAA4455021577F760023E340 /* Main.storyboard */,
 				CAA88454213820D200E27F7A /* Profile.storyboard */,
@@ -2249,13 +2530,20 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		CAAFD1472348EF4E005E086C /* ColorsGame */ = {
+			isa = PBXGroup;
+			children = (
+				CAAFD1482348EFB6005E086C /* colorsGameGetStatCommand.swift */,
+			);
+			path = ColorsGame;
+			sourceTree = "<group>";
+		};
 		CAB5A4492171F16700A00C8E /* Childs */ = {
 			isa = PBXGroup;
 			children = (
 				CAB5A44A2171F18200A00C8E /* ChildsPresenter.swift */,
 				CAB5A44B2171F18200A00C8E /* ChildsWorker.swift */,
 				CAB5A44C2171F18200A00C8E /* ChildsRouter.swift */,
-				CAB5A44D2171F18200A00C8E /* ChildsModels.swift */,
 				CAB5A44E2171F18200A00C8E /* ChildsViewController.swift */,
 				CAB5A44F2171F18200A00C8E /* ChildsInteractor.swift */,
 			);
@@ -2319,6 +2607,7 @@
 		CAC2D4F82115A68200945003 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				25C43EF82368E4A90033D9CA /* Subscription */,
 				CAE1C41A211DACE10058C9C6 /* Data Storage  */,
 				CAC2D4F92115A68200945003 /* Network */,
 				CAC2D5072115A68200945003 /* Service */,
@@ -2372,6 +2661,7 @@
 		CAC2D5012115A68200945003 /* Command */ = {
 			isa = PBXGroup;
 			children = (
+				CAAFD1472348EF4E005E086C /* ColorsGame */,
 				11604AD8231F830B001D1C7F /* Monster */,
 				CA91027A22FF5EDB00140D5A /* Alphavite */,
 				CA1AB63E22ECC266003A2584 /* Analytic */,
@@ -2440,7 +2730,6 @@
 				CAE1C457211DC5BC0058C9C6 /* CommonPresentationLogic.swift */,
 				CAC2D5162115A68200945003 /* ModalPresentable.swift */,
 				CAE1C455211DC5BC0058C9C6 /* CommonRoutingLogic.swift */,
-				CAC2D5152115A68200945003 /* ATTextFieldViewModel.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -2587,6 +2876,8 @@
 		CADB3D6E21F7AD4D009467B8 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */,
+				25493D9623684F9A0006FE18 /* steps-in-snow.wav */,
 				CA2A911922022C2600CD77FD /* push_level_up.mp3 */,
 				CA2A911722022AD500CD77FD /* swipe_card_sound.wav */,
 				CA2A91152202293800CD77FD /* push_button_sound.wav */,
@@ -2703,8 +2994,9 @@
 		CAE1C447211DC2070058C9C6 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				11BC751B23042D44001B5CC8 /* MonsterGame */,
+				CAFF984423251F4800003076 /* ColorsGame */,
 				CA1AB66322F30CBC003A2584 /* AlphaviteGame */,
+				11BC751B23042D44001B5CC8 /* MonsterGame */,
 				CA52DF292290782200458EE5 /* AnimalsGame */,
 				CA52F347223D2A950058194E /* Music */,
 				CAE1C448211DC22B0058C9C6 /* Access */,
@@ -2750,6 +3042,7 @@
 				CAA4455A2157BF4F0023E340 /* Error */,
 				CAAF1F042177115100460F58 /* Common_Extensions.swift */,
 				CA8CF70A225E2A3600B217C7 /* PlayerHelper.swift */,
+				257CD281236E21F600BE96A4 /* GCPlayer.swift */,
 				CA61D92222A445A900E3D603 /* UPCarouselFlowLayout.swift */,
 				CAF94CC6215F6D94000E8183 /* CarouselLayout.swift */,
 				CAF94CC2215E80F0000E8183 /* CarouselCollectionViewLayout.swift */,
@@ -2762,6 +3055,7 @@
 				CAE1C474211DC9F60058C9C6 /* Queue.swift */,
 				CA0053B7213AF3E600AA187F /* Stack.swift */,
 				CA51E1CC22FED1790028DF63 /* GameHelper.swift */,
+				CAFF984723252D3E00003076 /* ImageFillter.swift */,
 				CAC0988722FEDCD400EFB01E /* Style.swift */,
 			);
 			path = Worker;
@@ -2772,7 +3066,6 @@
 			children = (
 				CAE1C449211DC23A0058C9C6 /* RegistrationPresenter.swift */,
 				CAE1C44B211DC23A0058C9C6 /* RegistrationRouter.swift */,
-				CAE1C44C211DC23A0058C9C6 /* RegistrationModels.swift */,
 				CAE1C44D211DC23A0058C9C6 /* RegistrationViewController.swift */,
 				CAE1C44E211DC23A0058C9C6 /* RegistrationInteractor.swift */,
 			);
@@ -2783,7 +3076,6 @@
 			isa = PBXGroup;
 			children = (
 				CAE1C468211DC8CA0058C9C6 /* AuthRouter.swift */,
-				CAE1C469211DC8CA0058C9C6 /* AuthModels.swift */,
 				CAE1C46A211DC8CA0058C9C6 /* AuthViewController.swift */,
 				CAE1C46B211DC8CA0058C9C6 /* AuthInteractor.swift */,
 				CAE1C466211DC8CA0058C9C6 /* AuthPresenter.swift */,
@@ -2795,7 +3087,6 @@
 			isa = PBXGroup;
 			children = (
 				CAE364A522918378003E891D /* AnimalsWordsViewController.swift */,
-				CAE364A422918378003E891D /* AnimalsWordsModels.swift */,
 			);
 			path = Words;
 			sourceTree = "<group>";
@@ -2851,7 +3142,6 @@
 			children = (
 				CAF4C117214B8F8800954AA8 /* ChildProfileDonePresenter.swift */,
 				CAF4C119214B8F8800954AA8 /* ChildProfileDoneRouter.swift */,
-				CAF4C11A214B8F8800954AA8 /* ChildProfileDoneModels.swift */,
 				CAF4C11B214B8F8800954AA8 /* ChildProfileDoneViewController.swift */,
 				CAF4C11C214B8F8800954AA8 /* ChildProfileDoneInteractor.swift */,
 			);
@@ -2872,7 +3162,6 @@
 			children = (
 				CAF7B17D21B6927C00A59F5F /* StorePresenter.swift */,
 				CAF7B17F21B6927C00A59F5F /* StoreRouter.swift */,
-				CAF7B18021B6927C00A59F5F /* StoreModels.swift */,
 				CAF7B18121B6927C00A59F5F /* StoreViewController.swift */,
 				CAF7B18221B6927C00A59F5F /* StoreInteractor.swift */,
 				CA76362E226A63CD00168AB1 /* SubscriptionCollectionViewCell.swift */,
@@ -2888,7 +3177,6 @@
 			children = (
 				CA7AAF402170A25000747D4B /* ChildProfilePresenter.swift */,
 				CA7AAF422170A25000747D4B /* ChildProfileRouter.swift */,
-				CA7AAF432170A25000747D4B /* ChildProfileModels.swift */,
 				CA7AAF442170A25000747D4B /* ChildProfileViewController.swift */,
 				CA7AAF452170A25000747D4B /* ChildProfileInteractor.swift */,
 			);
@@ -2898,6 +3186,7 @@
 		CAF9614F22995FAC006E3046 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				CA7197192340ECAB005A729A /* ColorsGame */,
 				CAF9615022995FF2006E3046 /* Animals */,
 				11CF6B84232A069D00F8E529 /* Monster */,
 				CA51004522F6EA5A00821C25 /* Alphavite */,
@@ -3000,6 +3289,33 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		CAFF984423251F4800003076 /* ColorsGame */ = {
+			isa = PBXGroup;
+			children = (
+				CAFF9855232530C100003076 /* Master */,
+				CA62A72423512B930083FD4F /* Stat */,
+				CAFF9856232530DE00003076 /* ColorsGameFlow.swift */,
+				CAFF98582325313C00003076 /* ColorsStartViewController.swift */,
+				CAFF985A2325318E00003076 /* ColorsTeachingViewController.swift */,
+				CAFF985C232531A900003076 /* ColorsChoiceViewController.swift */,
+				CA7197172340EAB8005A729A /* ColorsFinishViewController.swift */,
+				CA7197152340E2BB005A729A /* ColorGameContainer.swift */,
+			);
+			path = ColorsGame;
+			sourceTree = "<group>";
+		};
+		CAFF9855232530C100003076 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				CAFF98492325305300003076 /* ColorsMasterPresenter.swift */,
+				CAFF984B2325305300003076 /* ColorsMasterRouter.swift */,
+				CAFF984C2325305300003076 /* ColorsMasterModels.swift */,
+				CAFF984D2325305300003076 /* ColorsMasterViewController.swift */,
+				CAFF984E2325305300003076 /* ColorsMasterInteractor.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
 		E020040F967E0FFC10C3033D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3056,6 +3372,7 @@
 				3791F6C709284A28AF0D8A1B /* [CP] Embed Pods Frameworks */,
 				CA51010522FB478E00821C25 /* Fabric */,
 				CAAAFB6A22E3549B0006BD60 /* Embed Frameworks */,
+				CAE9037A2358E087006E73B4 /* Reveal */,
 			);
 			buildRules = (
 			);
@@ -3078,8 +3395,11 @@
 					AlphabetSounds,
 					AnimalsImage,
 					AnimalsSounds,
+					ColorsGameImage,
+					ColorsGameSounds,
 					IntroduceAlphabet,
 					IntroduceAnimals,
+					IntroduceColorsGame,
 					IntroduceMonsters,
 					MonstersImage,
 					OnBoarding,
@@ -3150,6 +3470,7 @@
 				CAC6F71D22A81BC000756AE2 /* click_button_1.mp3 in Resources */,
 				CA5CB166213F095F000CB3D5 /* krya.json in Resources */,
 				CA5100E722F6EACF00821C25 /* alphavite_6.wav in Resources */,
+				251E5185235A579000221BA2 /* ColorsGame_subject_1_3.wav in Resources */,
 				CADD14B823107F7C00AE920A /* cloud_main.json in Resources */,
 				CA51E1C522FEC8C60028DF63 /* start_Pick.json in Resources */,
 				CA5100BE22F6EACF00821C25 /* alphavite_22.wav in Resources */,
@@ -3157,12 +3478,16 @@
 				CAD21047231700DC006F2F08 /* MontserratAlternates-Italic.ttf in Resources */,
 				CAF961F622995FF3006E3046 /* animal_34.mp3 in Resources */,
 				CA5100C322F6EACF00821C25 /* alphavite_23_word_2.wav in Resources */,
+				251E5195235A579100221BA2 /* ColorsGame_fun_2.wav in Resources */,
 				CA4C28C621451D9200CA264D /* VideoCollectionViewCell.xib in Resources */,
 				1163619B2303E456000D2C82 /* Monster.storyboard in Resources */,
 				CA992D36212FF1EF008BFC8D /* Auth.storyboard in Resources */,
+				251E517A235A579000221BA2 /* ColorsGame_subject_2_2.wav in Resources */,
+				251E517B235A579000221BA2 /* ColorsGame_subject_2_1.wav in Resources */,
 				CA5100D022F6EACF00821C25 /* alphavite_9_word_1.wav in Resources */,
 				CA5100C022F6EACF00821C25 /* alphavite_13_word_2.wav in Resources */,
 				CA763633226B53B200168AB1 /* downloadCover.png in Resources */,
+				251E519A235A583C00221BA2 /* ColorsGame_color_9.wav in Resources */,
 				CAC6F72D22A81BC000756AE2 /* sad_1.wav in Resources */,
 				CAF961CF22995FF3006E3046 /* animal_29.mp3 in Resources */,
 				CAF961C222995FF3006E3046 /* animal_10.mp3 in Resources */,
@@ -3170,6 +3495,7 @@
 				CA5100CC22F6EACF00821C25 /* alphavite_1_word_2.wav in Resources */,
 				CA5100AF22F6EACF00821C25 /* alphavite_24.wav in Resources */,
 				CA4C28D02147DFDB00CA264D /* music.json in Resources */,
+				251E5173235A579000221BA2 /* ColorsGame_color_4.wav in Resources */,
 				CAF961E222995FF3006E3046 /* animal_26.mp3 in Resources */,
 				CA0053C2213BD46900AA187F /* MainlCollectionViewCell.xib in Resources */,
 				CA04863B22A845A60017B8A2 /* Round_1.json in Resources */,
@@ -3180,7 +3506,9 @@
 				CA433FFA224FA8E700B0788E /* TrackCollectionViewCell.xib in Resources */,
 				CA9AA3D3218469E100019CA7 /* FavCollectionViewCell.xib in Resources */,
 				CAC6F72A22A81BC000756AE2 /* ready_r_7.wav in Resources */,
+				251E518B235A579000221BA2 /* ColorsGame_subject_5_1.wav in Resources */,
 				11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */,
+				251E5190235A579100221BA2 /* ColorsGame_sad_2.wav in Resources */,
 				CA5100CE22F6EACF00821C25 /* alphavite_26_word_1.wav in Resources */,
 				CA5100AE22F6EACF00821C25 /* alphavite_18.wav in Resources */,
 				CA5100DD22F6EACF00821C25 /* alphavite_12_word_2.wav in Resources */,
@@ -3195,38 +3523,53 @@
 				CAF961EE22995FF3006E3046 /* animal_7.mp3 in Resources */,
 				CAC6F72522A81BC000756AE2 /* fun_2.wav in Resources */,
 				CA5100B122F6EACF00821C25 /* alphavite_31.wav in Resources */,
+				251E518E235A579000221BA2 /* ColorsGame_subject_5_2.wav in Resources */,
+				251E517E235A579000221BA2 /* ColorsGame_color_8.wav in Resources */,
 				CADD14AF2309C6E500AE920A /* Pick_introduce.mp4 in Resources */,
 				CA5100FB22F6EACF00821C25 /* alphavite_28.wav in Resources */,
 				CA5100DB22F6EACF00821C25 /* alphavite_7_word_1.wav in Resources */,
 				CA5100BC22F6EACF00821C25 /* alphavite_1_1.wav in Resources */,
 				CA5100B822F6EACF00821C25 /* alphavite_21.wav in Resources */,
 				CA5100C922F6EACF00821C25 /* alphavite_19_word_2.wav in Resources */,
+				251E516E235A579000221BA2 /* ColorsGame_subject_8_1.wav in Resources */,
+				25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */,
 				CAD2103F231700DC006F2F08 /* MontserratAlternates-LightItalic.ttf in Resources */,
 				112860B6232BA6E30002852A /* monster_menu.mp3 in Resources */,
 				CAF961F522995FF3006E3046 /* animal_20.mp3 in Resources */,
 				CAC6F73222A81BC000756AE2 /* fun_7.mp3 in Resources */,
+				251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */,
 				CAC6F75122A81D1300756AE2 /* Firework_1.json in Resources */,
+				251E518A235A579000221BA2 /* ColorsGame_subject_7_3.wav in Resources */,
 				CAC91013215D359900E62F01 /* AchieveCollectionViewCell.xib in Resources */,
 				CAF961E822995FF3006E3046 /* animal_33.mp3 in Resources */,
 				CA04863C22A845A60017B8A2 /* Round_8.json in Resources */,
 				CA5100ED22F6EACF00821C25 /* alphavite_12.wav in Resources */,
 				CA56D0C62302A424006298C5 /* ariblk.ttf in Resources */,
+				CA652CE72353510300291E4D /* sad_red_1.json in Resources */,
 				CAF9620B22995FF3006E3046 /* animal_47.mp3 in Resources */,
 				CA5100A622F6EACF00821C25 /* alphavite_3_word_1.wav in Resources */,
 				CAD21040231700DC006F2F08 /* MontserratAlternates-SemiBold.ttf in Resources */,
+				251E518D235A579000221BA2 /* ColorsGame_subject_7_1.wav in Resources */,
+				251E5174235A579000221BA2 /* ColorsGame_subject_8_3.wav in Resources */,
 				CA52F372223DA1360058194E /* PlaylistCollectionViewCell.xib in Resources */,
+				CA652CEC2353510300291E4D /* sad_red_2.json in Resources */,
 				CAD21044231700DC006F2F08 /* MontserratAlternates-ExtraBoldItalic.ttf in Resources */,
+				CA652CEE2353510300291E4D /* happy_red_1.json in Resources */,
 				CAF9620122995FF3006E3046 /* animal_23.mp3 in Resources */,
 				CAF961CD22995FF3006E3046 /* animal_11.mp3 in Resources */,
 				CAC6F71E22A81BC000756AE2 /* click_button_2.mp3 in Resources */,
+				251E516F235A579000221BA2 /* ColorsGame_color_6.wav in Resources */,
 				CADB3D7A21F7AD4D009467B8 /* day_sound.mp3 in Resources */,
 				CAF961E422995FF3006E3046 /* animal_4.mp3 in Resources */,
+				251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */,
 				CA5100F222F6EACF00821C25 /* alphavite_10_word_2.wav in Resources */,
 				CA2A911A22022C2600CD77FD /* push_level_up.mp3 in Resources */,
 				CAC2D4EF2114D2E100945003 /* LaunchScreen.storyboard in Resources */,
 				CA5100D422F6EACF00821C25 /* alphavite_9_word_2.wav in Resources */,
+				251E517D235A579000221BA2 /* ColorsGame_subject_4_3.wav in Resources */,
 				CAF961F722995FF3006E3046 /* animal_2.mp3 in Resources */,
 				CAC6F73122A81BC000756AE2 /* fun_5.mp3 in Resources */,
+				251E516D235A579000221BA2 /* ColorsGame_subject_10_3.wav in Resources */,
 				CADB3D7621F7AD4D009467B8 /* swipe_sound.wav in Resources */,
 				CAF961E122995FF3006E3046 /* animal_32.mp3 in Resources */,
 				CA1AB64222F188B5003A2584 /* Alphavite.storyboard in Resources */,
@@ -3238,6 +3581,7 @@
 				CA04863D22A845A60017B8A2 /* Round_5.json in Resources */,
 				CA5100F922F6EACF00821C25 /* alphavite_22_word_2.wav in Resources */,
 				CA8EA70B2141363B00159451 /* RazdelCollectionViewCell.xib in Resources */,
+				251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */,
 				CAF9621722996022006E3046 /* scene-1.mp4 in Resources */,
 				CA5100E822F6EACF00821C25 /* alphavite_7.wav in Resources */,
 				CAAF1EF22174E7E100460F58 /* Dog_finish.json in Resources */,
@@ -3250,7 +3594,9 @@
 				CA5100F722F6EACF00821C25 /* alphavite_18_word_1.wav in Resources */,
 				CA4C28CF2147DFDB00CA264D /* Color.json in Resources */,
 				CA5CB164213F0957000CB3D5 /* flip.json in Resources */,
+				CA652CE82353510300291E4D /* sad_green_1.json in Resources */,
 				CA5100EC22F6EACF00821C25 /* alphavite_10_word_1.wav in Resources */,
+				CA652CE52353510300291E4D /* happy_green_1.json in Resources */,
 				CAD2105523170C69006F2F08 /* alphabetButton.wav in Resources */,
 				CAF961C322995FF3006E3046 /* animal_38.mp3 in Resources */,
 				CAF961E722995FF3006E3046 /* animal_27.mp3 in Resources */,
@@ -3261,6 +3607,7 @@
 				CAF961D622995FF3006E3046 /* animal_28.mp3 in Resources */,
 				CAA4455721578FC50023E340 /* AvatarCollectionViewCell.xib in Resources */,
 				CAF9620C22995FF3006E3046 /* animal_43.mp3 in Resources */,
+				CA652CE92353510300291E4D /* sad_green_2.json in Resources */,
 				CA5100D322F6EACF00821C25 /* alphavite_11_word_2.wav in Resources */,
 				CAF961F322995FF3006E3046 /* animal_30.mp3 in Resources */,
 				CAC2D4EC2114D2E100945003 /* Assets.xcassets in Resources */,
@@ -3272,8 +3619,10 @@
 				CAF961F022995FF3006E3046 /* animal_6.mp3 in Resources */,
 				CA5100F822F6EACF00821C25 /* alphavite_15_word_2.wav in Resources */,
 				CA5100C122F6EACF00821C25 /* alphavite_24_word_2.wav in Resources */,
+				251E5196235A579100221BA2 /* ColorsGame_fun_6.wav in Resources */,
 				CA5100AA22F6EACF00821C25 /* alphavite_32.wav in Resources */,
 				CA5100AC22F6EACF00821C25 /* alphavite_16_word_2.wav in Resources */,
+				251E517C235A579000221BA2 /* ColorsGame_subject_6_1.wav in Resources */,
 				CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */,
 				CA5100DC22F6EACF00821C25 /* alphavite_1.wav in Resources */,
 				CAF961C122995FF3006E3046 /* animal_12.mp3 in Resources */,
@@ -3282,45 +3631,63 @@
 				CA5100E622F6EACF00821C25 /* alphavite_2_word_2.wav in Resources */,
 				CA04864422A845A60017B8A2 /* Round_3.json in Resources */,
 				CAF94CCF2160BECF000E8183 /* Welcome.storyboard in Resources */,
+				251E5188235A579000221BA2 /* ColorsGame_subject_3_2.wav in Resources */,
 				CAD16DE32147E23000A82DBB /* Numeral.json in Resources */,
 				CAC6F73322A81BC000756AE2 /* fun_6.mp3 in Resources */,
 				CAA7325F21315456006276B4 /* Alerts.storyboard in Resources */,
 				CA5100EF22F6EACF00821C25 /* alphavite_5_word_2.wav in Resources */,
 				CAD2105223170C69006F2F08 /* alphabetPickMain.wav in Resources */,
+				251E5172235A579000221BA2 /* ColorsGame_color_5.wav in Resources */,
+				251E5194235A579100221BA2 /* ColorsGame_fun_3.wav in Resources */,
 				CA4C28CE2147DFDB00CA264D /* box.json in Resources */,
 				CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */,
 				CAF9620A22995FF3006E3046 /* animal_46.mp3 in Resources */,
+				251E5178235A579000221BA2 /* ColorsGame_subject_2_3.wav in Resources */,
 				CA5100F322F6EACF00821C25 /* alphavite_11.wav in Resources */,
 				CAD21043231700DC006F2F08 /* MontserratAlternates-ExtraBold.ttf in Resources */,
 				CA5CB168213F0966000CB3D5 /* Sue.json in Resources */,
 				CAF9621022995FF3006E3046 /* animal_41.mp3 in Resources */,
+				25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */,
 				CAD16DE92147E29400A82DBB /* Candy.json in Resources */,
 				CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */,
+				CA652CEB2353510300291E4D /* happy_green_2.json in Resources */,
+				251E5176235A579000221BA2 /* ColorsGame_color_3.wav in Resources */,
 				CA5100B622F6EACF00821C25 /* alphavite_1_2.wav in Resources */,
 				CA5100D522F6EACF00821C25 /* alphavite_4_word_1.wav in Resources */,
+				CAE6792D23511A0C00CBCDB3 /* ColorsGameStatView.xib in Resources */,
 				CAF961B922995FF3006E3046 /* animal_48.mp3 in Resources */,
 				CA52DF242290683400458EE5 /* appetite.ttf in Resources */,
 				CAC6F72122A81BC000756AE2 /* ready_r_10.wav in Resources */,
 				CADD14AD2309887300AE920A /* end_Pick.json in Resources */,
+				251E5193235A579100221BA2 /* ColorsGame_fun_1.wav in Resources */,
 				CAAF1EF42174E7E100460F58 /* Dog_start.json in Resources */,
 				CADB3D7721F7AD4D009467B8 /* night_sound.wav in Resources */,
 				CA5100B722F6EACF00821C25 /* alphavite_6_word_2.wav in Resources */,
 				CA5100C622F6EACF00821C25 /* alphavite_32_word_1.wav in Resources */,
+				251E5184235A579000221BA2 /* ColorsGame_subject_3_1.wav in Resources */,
 				CAD21042231700DC006F2F08 /* MontserratAlternates-ExtraLight.ttf in Resources */,
 				CA14997B216F7511008FBEE9 /* FavTableViewCell.xib in Resources */,
+				CAFF984623251FDD00003076 /* ColorsGame.storyboard in Resources */,
 				CADD14B623107F7C00AE920A /* happy_Cloud_2.json in Resources */,
+				251E517F235A579000221BA2 /* ColorsGame_subject_4_2.wav in Resources */,
 				CAD21041231700DC006F2F08 /* MontserratAlternates-SemiBoldItalic.ttf in Resources */,
 				CAF961EA22995FF3006E3046 /* animal_31.mp3 in Resources */,
 				CA51010322F6EACF00821C25 /* alphavite_16.wav in Resources */,
 				CAC6F75022A81D1300756AE2 /* Firework_3.json in Resources */,
 				CA5100E422F6EACF00821C25 /* alphavite_17_word_2.wav in Resources */,
+				251E5180235A579000221BA2 /* ColorsGame_subject_6_2.wav in Resources */,
 				CA5100F422F6EACF00821C25 /* alphavite_10.wav in Resources */,
+				251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */,
 				CA5100F622F6EACF00821C25 /* alphavite_8_word_2.wav in Resources */,
 				CAC6F72B22A81BC000756AE2 /* ready_r_9.wav in Resources */,
 				CAF961DD22995FF3006E3046 /* animal_9.mp3 in Resources */,
+				251E5179235A579000221BA2 /* ColorsGame_color_10.wav in Resources */,
 				11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */,
+				251E5181235A579000221BA2 /* ColorsGame_subject_4_1.wav in Resources */,
+				251E5171235A579000221BA2 /* ColorsGame_subject_8_2.wav in Resources */,
 				CAC6F72F22A81BC000756AE2 /* sad_2.wav in Resources */,
 				CA5100BB22F6EACF00821C25 /* alphavite_24_word_1.wav in Resources */,
+				251E518F235A579000221BA2 /* ColorsGame_sad_3.wav in Resources */,
 				CA5100EB22F6EACF00821C25 /* alphavite_27_word_1.wav in Resources */,
 				CA5100DA22F6EACF00821C25 /* alphavite_25_word_1.wav in Resources */,
 				CA51010022F6EACF00821C25 /* alphavite_15_word_1.wav in Resources */,
@@ -3328,6 +3695,7 @@
 				CA5100FE22F6EACF00821C25 /* alphavite_33_word_1.wav in Resources */,
 				CAA88455213820D200E27F7A /* Profile.storyboard in Resources */,
 				CA5100E522F6EACF00821C25 /* alphavite_31_word_2.wav in Resources */,
+				251E5189235A579000221BA2 /* ColorsGame_subject_7_2.wav in Resources */,
 				CA5100B022F6EACF00821C25 /* alphavite_30.wav in Resources */,
 				CA5100D922F6EACF00821C25 /* alphavite_12_word_1.wav in Resources */,
 				CAF961E922995FF3006E3046 /* animal_25.mp3 in Resources */,
@@ -3335,8 +3703,10 @@
 				CA8EA7202141568900159451 /* LoadingCollectionViewCell.xib in Resources */,
 				CA5100DE22F6EACF00821C25 /* alphavite_25_word_2.wav in Resources */,
 				CA5100B522F6EACF00821C25 /* alphavite_16_word_1.wav in Resources */,
+				251E5198235A579100221BA2 /* ColorsGame_fun_4.wav in Resources */,
 				CA2A91162202293800CD77FD /* push_button_sound.wav in Resources */,
 				CAF961D522995FF3006E3046 /* animal_14.mp3 in Resources */,
+				253E7E2C2369E5ED003FF569 /* snowstorm_blizzard_1.wav in Resources */,
 				CA04863E22A845A60017B8A2 /* Round_9.json in Resources */,
 				CA5100C522F6EACF00821C25 /* alphavite_1_word_1.wav in Resources */,
 				CAD21045231700DC006F2F08 /* MontserratAlternates-Thin.ttf in Resources */,
@@ -3345,21 +3715,27 @@
 				CAD2104A231700DC006F2F08 /* MontserratAlternates-Medium.ttf in Resources */,
 				11BA249E230AE99700A9EA15 /* MonsterCollectionViewCell.xib in Resources */,
 				CA5100E322F6EACF00821C25 /* alphavite_20_word_2.wav in Resources */,
+				251E519E235A624A00221BA2 /* ColorsGame_subject_9_3.wav in Resources */,
 				CAAF1F1121771E4300460F58 /* Shade_close.json in Resources */,
 				CAC6F71C22A81BC000756AE2 /* after_announce_round_n.wav in Resources */,
 				CA61D875229AD7E700E3D603 /* AnimalCollectionViewCell.xib in Resources */,
 				CA5100E222F6EACF00821C25 /* alphavite_4.wav in Resources */,
 				CA5100AD22F6EACF00821C25 /* alphavite_3_word_2.wav in Resources */,
+				251E5192235A579100221BA2 /* ColorsGame_sad_4.wav in Resources */,
+				CA652CE62353510300291E4D /* happy_red_2.json in Resources */,
 				CAC6F72922A81BC000756AE2 /* fun_1.wav in Resources */,
 				CAF961D922995FF3006E3046 /* animal_8.mp3 in Resources */,
 				CAD2105423170C69006F2F08 /* pickDriveTo.wav in Resources */,
 				CA52DF20229050F400458EE5 /* Pacifico Regular.ttf in Resources */,
 				CAAF1EF62174E7E100460F58 /* Dog_progress.json in Resources */,
+				251E5175235A579000221BA2 /* ColorsGame_color_1.wav in Resources */,
 				CA09978F21A572E20051F41D /* Common.storyboard in Resources */,
 				CAC6F73022A81BC000756AE2 /* fun_4.mp3 in Resources */,
 				CA5100CF22F6EACF00821C25 /* alphavite_11_word_1.wav in Resources */,
+				251E5170235A579000221BA2 /* ColorsGame_color_7.wav in Resources */,
 				CA04864222A845A60017B8A2 /* Round_2.json in Resources */,
 				CA992D38212FF218008BFC8D /* Play.storyboard in Resources */,
+				CA652CED2353510300291E4D /* main_red.json in Resources */,
 				CA5100E022F6EACF00821C25 /* alphavite_2_word_1.wav in Resources */,
 				CAD2102C2315BAD0006F2F08 /* IstokWeb-Bold.ttf in Resources */,
 				11CF6B8D232A071A00F8E529 /* monsterCloseCards.wav in Resources */,
@@ -3370,6 +3746,7 @@
 				CAF9621522996022006E3046 /* scene-2.mp4 in Resources */,
 				11CF6B90232A071A00F8E529 /* monsterOpenCard.wav in Resources */,
 				CA2A911822022AD500CD77FD /* swipe_card_sound.wav in Resources */,
+				251E5186235A579000221BA2 /* ColorsGame_subject_1_1.wav in Resources */,
 				CA1041532262A259005D62DE /* SearchMusicCollectionViewCell.xib in Resources */,
 				CA5100A922F6EACF00821C25 /* alphavite_26.wav in Resources */,
 				CA5100BF22F6EACF00821C25 /* alphavite_23.wav in Resources */,
@@ -3390,6 +3767,8 @@
 				CAC6F72822A81BC000756AE2 /* this_is_animal.wav in Resources */,
 				CA5100A822F6EACF00821C25 /* alphavite_27.wav in Resources */,
 				CA5100EE22F6EACF00821C25 /* alphavite_13.wav in Resources */,
+				251E5177235A579000221BA2 /* ColorsGame_color_2.wav in Resources */,
+				251E5191235A579100221BA2 /* ColorsGame_sad_1.wav in Resources */,
 				CA5100C422F6EACF00821C25 /* alphavite_19_word_1.wav in Resources */,
 				CA5100F122F6EACF00821C25 /* alphavite_27_word_2.wav in Resources */,
 				CADD14B923107F7C00AE920A /* sad_Cloud.json in Resources */,
@@ -3400,20 +3779,24 @@
 				CA5100B322F6EACF00821C25 /* alphavite_19.wav in Resources */,
 				CAC6F72E22A81BC000756AE2 /* sad_3.wav in Resources */,
 				CAC0989422FF47FD00EFB01E /* AlphaviteStatView.xib in Resources */,
+				251E518C235A579000221BA2 /* ColorsGame_subject_5_3.wav in Resources */,
 				CA5100EA22F6EACF00821C25 /* alphavite_17_word_1.wav in Resources */,
 				CA5100CB22F6EACF00821C25 /* alphavite_8.wav in Resources */,
 				CA5100D822F6EACF00821C25 /* alphavite_2.wav in Resources */,
 				CA5100CD22F6EACF00821C25 /* alphavite_32_word_2.wav in Resources */,
 				CAC6F72722A81BC000756AE2 /* ready_r_6.wav in Resources */,
+				CA71971B2340ECAB005A729A /* brushAnimation.json in Resources */,
 				CAF9620222995FF3006E3046 /* animal_1.mp3 in Resources */,
 				CA51010122F6EACF00821C25 /* alphavite_22_word_1.wav in Resources */,
 				CAC6F74F22A81D1300756AE2 /* Firework_2.json in Resources */,
+				251E5182235A579000221BA2 /* ColorsGame_subject_6_3.wav in Resources */,
 				CAC6F72422A81BC000756AE2 /* fun_3.wav in Resources */,
 				CA04863F22A845A60017B8A2 /* Round_10.json in Resources */,
 				CADD14B523107F7C00AE920A /* happy_Cloud_1.json in Resources */,
 				CA5100FC22F6EACF00821C25 /* alphavite_29.wav in Resources */,
 				CA5100A722F6EACF00821C25 /* alphavite_33.wav in Resources */,
 				CA04864022A845A60017B8A2 /* Round_6.json in Resources */,
+				251E5187235A579000221BA2 /* ColorsGame_subject_3_3.wav in Resources */,
 				CA5100BD22F6EACF00821C25 /* alphavite_6_word_1.wav in Resources */,
 				CAF961CB22995FF3006E3046 /* animal_39.mp3 in Resources */,
 				CAF889DB21A6975800A245A7 /* GoogleService-Info.plist in Resources */,
@@ -3426,17 +3809,22 @@
 				CA04864122A845A60017B8A2 /* Round_4.json in Resources */,
 				CA52DF282290701500458EE5 /* Animals.storyboard in Resources */,
 				CAF961FC22995FF3006E3046 /* animal_3.mp3 in Resources */,
+				CA652CEA2353510300291E4D /* main_green.json in Resources */,
 				CA04864322A845A60017B8A2 /* Round_7.json in Resources */,
 				11CF6B92232A071A00F8E529 /* monsterCloseAll.wav in Resources */,
 				CAD21048231700DC006F2F08 /* MontserratAlternates-ExtraLightItalic.ttf in Resources */,
+				251E5183235A579000221BA2 /* ColorsGame_subject_1_2.wav in Resources */,
 				CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */,
 				CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */,
+				251E5197235A579100221BA2 /* ColorsGame_fun_5.wav in Resources */,
 				CA5100F522F6EACF00821C25 /* alphavite_5_word_1.wav in Resources */,
+				251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */,
 				CADB3D7521F7AD4D009467B8 /* swipe_drill_sound.wav in Resources */,
 				CA5100D122F6EACF00821C25 /* alphavite_4_word_2.wav in Resources */,
 				CAC6F71F22A81BC000756AE2 /* ready_r_3.wav in Resources */,
 				11CF6B8F232A071A00F8E529 /* monsterPickMain.wav in Resources */,
 				CA5100B422F6EACF00821C25 /* alphavite_21_word_1.wav in Resources */,
+				25DA918A236237B800D339C7 /* colorsGame_introduce.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3496,6 +3884,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" cd5f653f2ce23b8699ba88154c0747e64765b937 d28af70431e924f1f151ba2aeb75e8c6370cf738cbde07f6b05006cfc7255098\n";
 		};
+		CAE9037A2358E087006E73B4 /* Reveal */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Reveal;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nREVEAL_APP_PATH=$(mdfind kMDItemCFBundleIdentifier=\"com.ittybittyapps.Reveal2\" | head -n 1)\nBUILD_SCRIPT_PATH=\"${REVEAL_APP_PATH}/Contents/SharedSupport/Scripts/reveal_server_build_phase.sh\"\nif [ \"${REVEAL_APP_PATH}\" -a -e \"${BUILD_SCRIPT_PATH}\" ]; then\n    \"${BUILD_SCRIPT_PATH}\"\nelse\n    echo \"Reveal Server not loaded: Cannot find a compatible Reveal app.\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -3518,6 +3924,7 @@
 				CAC2D51F2115A68200945003 /* BasicCommand.swift in Sources */,
 				CAB08B022140515B002840E3 /* VideoItemsCommand.swift in Sources */,
 				CA8EA70E21413F0800159451 /* PreviewCollectionViewCell.swift in Sources */,
+				CAFF985B2325318E00003076 /* ColorsTeachingViewController.swift in Sources */,
 				CAB59FD022F315D800D7CA71 /* AlphaviteMasterRouter.swift in Sources */,
 				CA80481A21416836000A3C5B /* SerialPresenter.swift in Sources */,
 				CA52F362223D9CAD0058194E /* PlaylistsInteractor.swift in Sources */,
@@ -3554,13 +3961,14 @@
 				CA80481021415EC7000A3C5B /* ImageCellProtocol.swift in Sources */,
 				CA52F369223D9FE50058194E /* AlbumPresenter.swift in Sources */,
 				CA8197FE214993C40079D46A /* ContentResponse.swift in Sources */,
-				CAE1C452211DC23A0058C9C6 /* RegistrationModels.swift in Sources */,
 				CA49E48D212D326600711324 /* TerPush+Mapping.swift in Sources */,
 				CA52F36C223D9FE50058194E /* AlbumModels.swift in Sources */,
 				CADD14BB23129A4000AE920A /* TTSegmentedControl.swift in Sources */,
 				CAAD25F522F5DC80005CFCD2 /* AlphaviteCharsViewController.swift in Sources */,
 				CAA445602157BF4F0023E340 /* CustomError.swift in Sources */,
+				CAFF985D232531A900003076 /* ColorsChoiceViewController.swift in Sources */,
 				CAE1C46E211DC8CA0058C9C6 /* AuthRouter.swift in Sources */,
+				25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */,
 				CA4C28C82145202A00CA264D /* SerialsService.swift in Sources */,
 				CAA6FDAE224BED99008C2F87 /* MusicMainCommand.swift in Sources */,
 				CA1C37AE214E5A7C00C8006D /* MasterRouter.swift in Sources */,
@@ -3574,6 +3982,7 @@
 				CA0053D4213BF7CA00AA187F /* UITableView.swift in Sources */,
 				CAF96231229970F7006E3046 /* AnimalsStatisticInteractor.swift in Sources */,
 				CAC0988E22FF12A800EFB01E /* UIKitExtensions.swift in Sources */,
+				25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */,
 				CAE1C433211DACE10058C9C6 /* AppLaunchInfoDefaults.swift in Sources */,
 				CA49E491212D330900711324 /* DeviceInfo.swift in Sources */,
 				111187F6231E8D6E00EBEFC0 /* MonsterService.swift in Sources */,
@@ -3597,8 +4006,8 @@
 				CA9A6745213C134000FCB400 /* RazdelRouter.swift in Sources */,
 				CA49E48C212D326600711324 /* TerPushActionType.swift in Sources */,
 				11604ADA231F8330001D1C7F /* MonsterGetStatCommand.swift in Sources */,
-				CAE3649122918181003E891D /* AnimalsMainModels.swift in Sources */,
 				CA8EA71B214145E700159451 /* PreviewPresenter.swift in Sources */,
+				CA62A72223512B8F0083FD4F /* ColorsGameStatViewController.swift in Sources */,
 				CAEEF2422299CB8E00AF5AF6 /* IntroduceVideoViewController.swift in Sources */,
 				CA433FF9224FA8E700B0788E /* TrackCollectionViewCell.swift in Sources */,
 				CA0053C4213BD92500AA187F /* AppDelegate+Push.swift in Sources */,
@@ -3606,7 +4015,9 @@
 				CA61D92322A445A900E3D603 /* UPCarouselFlowLayout.swift in Sources */,
 				CA49E48B212D326600711324 /* TerPush.swift in Sources */,
 				CAE1C459211DC5BC0058C9C6 /* CommonDisplayLogic.swift in Sources */,
+				CAFF9857232530DE00003076 /* ColorsGameFlow.swift in Sources */,
 				CAB08B06214055F8002840E3 /* VideoItemResponse.swift in Sources */,
+				CAFF98522325305300003076 /* ColorsMasterModels.swift in Sources */,
 				CA7AAF532170B30B00747D4B /* SearchService.swift in Sources */,
 				CAEBC712212D858F00730891 /* UIRoundedButtonWithGradientAndShadow.swift in Sources */,
 				CAF4C11D214B8F8800954AA8 /* ChildProfileDonePresenter.swift in Sources */,
@@ -3624,6 +4035,7 @@
 				CA70867D23082EA80015851C /* AlphaviteStatisticViewController.swift in Sources */,
 				CAA4455F2157BF4F0023E340 /* ErrorHandler.swift in Sources */,
 				CA1041522262A259005D62DE /* SearchMusicCollectionViewCell.swift in Sources */,
+				CA62A72023512B8F0083FD4F /* ColorsGameStatRouter.swift in Sources */,
 				CA80481C21416836000A3C5B /* SerialRouter.swift in Sources */,
 				CA763630226A63CD00168AB1 /* SubscriptionCollectionViewCell.swift in Sources */,
 				111187F4231E82D700EBEFC0 /* MonsterStatisticInteractor.swift in Sources */,
@@ -3633,6 +4045,7 @@
 				CA57897B226FA76600F05A5A /* StoreReviewHelper.swift in Sources */,
 				CAB5A4522171F18200A00C8E /* ChildsRouter.swift in Sources */,
 				CA19C46A22F5E3BD0011E4DF /* AlphaviteControl.swift in Sources */,
+				CA7197182340EAB8005A729A /* ColorsFinishViewController.swift in Sources */,
 				CAE09466214BDD810052F283 /* ProfileService.swift in Sources */,
 				CA76362A226A5FDF00168AB1 /* StoreCollectionViewCell.swift in Sources */,
 				CAB08B002140513C002840E3 /* VideosCommand.swift in Sources */,
@@ -3642,10 +4055,15 @@
 				CA52DF3D22907EC000458EE5 /* AnimalsMasterInteractor.swift in Sources */,
 				CAE1C471211DC8CA0058C9C6 /* AuthInteractor.swift in Sources */,
 				CAC2D5322115A68300945003 /* ModalPresentable.swift in Sources */,
+				CA62A71E23512B8F0083FD4F /* ColorsGameStatPresenter.swift in Sources */,
 				CAC2D5292115A68300945003 /* Collection.swift in Sources */,
+				CAFF984F2325305300003076 /* ColorsMasterPresenter.swift in Sources */,
+				CAE6792B235119F800CBCDB3 /* ColorsGameStatView.swift in Sources */,
+				CAAFD1492348EFB6005E086C /* colorsGameGetStatCommand.swift in Sources */,
 				CA49E498212D59F900711324 /* RoundEdgeButton.swift in Sources */,
 				CA896C7422933F2700ECC628 /* AnimalСompilationCollectionViewCell.swift in Sources */,
 				11BC751F23042E06001B5CC8 /* MonsterStartViewController.swift in Sources */,
+				CAFF98512325305300003076 /* ColorsMasterRouter.swift in Sources */,
 				CAC9100C215D31FD00E62F01 /* AchievesRouter.swift in Sources */,
 				CA9A6744213C134000FCB400 /* RazdelService.swift in Sources */,
 				CAB5A4542171F18200A00C8E /* ChildsViewController.swift in Sources */,
@@ -3656,10 +4074,10 @@
 				CAE1C42A211DACE10058C9C6 /* AppCacher.swift in Sources */,
 				CA7AAF482170A25000747D4B /* ChildProfileRouter.swift in Sources */,
 				CA51E1CD22FED1790028DF63 /* GameHelper.swift in Sources */,
-				CAC2D5312115A68300945003 /* ATTextFieldViewModel.swift in Sources */,
 				CAADDF1A21A43A4F00C02D8C /* CommonWebViewController.swift in Sources */,
 				CA51004222F5FFAE00821C25 /* AlphaviteFlow.swift in Sources */,
 				CA61D874229AD7E700E3D603 /* AnimalCollectionViewCell.swift in Sources */,
+				CAFF98542325305300003076 /* ColorsMasterInteractor.swift in Sources */,
 				CAC2D51D2115A68200945003 /* BackendError.swift in Sources */,
 				CA8197FC214992430079D46A /* ContentCommands.swift in Sources */,
 				CAE3648E22918181003E891D /* AnimalsMainPresenter.swift in Sources */,
@@ -3668,7 +4086,6 @@
 				CAE1C42D211DACE10058C9C6 /* LogsCacher.swift in Sources */,
 				CA49E4A1212D5A9200711324 /* MainRouter.swift in Sources */,
 				CAE0947F214CF43C0052F283 /* ResetPassViewController.swift in Sources */,
-				CAF4C120214B8F8800954AA8 /* ChildProfileDoneModels.swift in Sources */,
 				CAD90EB322B13636004D74BD /* AnimalsGetStatCommand.swift in Sources */,
 				11BC752523043A1E001B5CC8 /* MonsterMasterRouter.swift in Sources */,
 				CA10414B22629A0B005D62DE /* SearchMusicModels.swift in Sources */,
@@ -3680,6 +4097,7 @@
 				CA1C37AC214E5A7C00C8006D /* MasterPresenter.swift in Sources */,
 				CAE1C441211DB6150058C9C6 /* Date.swift in Sources */,
 				CA52F36E223D9FE50058194E /* AlbumInteractor.swift in Sources */,
+				257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */,
 				CA49E482212D2ED300711324 /* SettingsInteractor.swift in Sources */,
 				CA0ABB772180CC8900523F5B /* ScrollViewAlertViewController.swift in Sources */,
 				CA7AAF4F2170B0E200747D4B /* SearchCommand.swift in Sources */,
@@ -3704,6 +4122,8 @@
 				CAE1C42F211DACE10058C9C6 /* SqliteCacher+MappableCacherType.swift in Sources */,
 				CA10414822629A0B005D62DE /* SearchMusicPresenter.swift in Sources */,
 				CA0053D2213BF72D00AA187F /* UICollectioView.swift in Sources */,
+				CA7197162340E2BB005A729A /* ColorGameContainer.swift in Sources */,
+				CAFF98532325305300003076 /* ColorsMasterViewController.swift in Sources */,
 				CAA8844F21381D9900E27F7A /* ChildProfileAddRouter.swift in Sources */,
 				CA7AAF602170B52500747D4B /* SearchInteractor.swift in Sources */,
 				CAE3649322918181003E891D /* AnimalsMainInteractor.swift in Sources */,
@@ -3716,9 +4136,9 @@
 				CAC1126521562F5900678D1B /* RequestCacheCleaner.swift in Sources */,
 				CAC1126321562A0400678D1B /* UIButton.swift in Sources */,
 				CAE09480214CF43C0052F283 /* ResetPassInteractor.swift in Sources */,
-				CAE1C46F211DC8CA0058C9C6 /* AuthModels.swift in Sources */,
 				11604ADC231F8494001D1C7F /* MonsterSendStatCommand.swift in Sources */,
 				CAB59FD322F315D800D7CA71 /* AlphaviteMasterInteractor.swift in Sources */,
+				CA62A72323512B8F0083FD4F /* ColorsGameStatInteractor.swift in Sources */,
 				CAF61D90217E118E00035EE9 /* TTPlayerViewController.swift in Sources */,
 				CA314FF02222A95D00B59797 /* StoreResponse.swift in Sources */,
 				CAB59FD222F315D800D7CA71 /* AlphaviteMasterViewController.swift in Sources */,
@@ -3734,6 +4154,7 @@
 				E76CD1A723326BE20094E29A /* OnDemandLoader.swift in Sources */,
 				CADB3D7C21F7B64E009467B8 /* BackgroundMediaWorker.swift in Sources */,
 				CA8EA70A2141363B00159451 /* RazdelCollectionViewCell.swift in Sources */,
+				25C43EFD2368E4A90033D9CA /* SimpleSubscription.swift in Sources */,
 				CAB08AFE2140512A002840E3 /* RazdCommand.swift in Sources */,
 				CA51E1CB22FECDC10028DF63 /* GameParentRouting.swift in Sources */,
 				CA49E4A4212D5A9200711324 /* MainInteractor.swift in Sources */,
@@ -3746,7 +4167,6 @@
 				11246D62231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift in Sources */,
 				CA8CF70D225EBE1900B217C7 /* MusicActionService.swift in Sources */,
 				CA4C28C521451D9200CA264D /* VideoCollectionViewCell.swift in Sources */,
-				CA91028022FF607900140D5A /* AlphabetSendStatCommand.swift in Sources */,
 				CAA732BE21318D0B006276B4 /* MainContentResponse.swift in Sources */,
 				CA8EA71F2141568900159451 /* LoadingCollectionViewCell.swift in Sources */,
 				CA49E49F212D5A9200711324 /* MainPresenter.swift in Sources */,
@@ -3758,6 +4178,7 @@
 				CA433FF4224F94D700B0788E /* MusicSearchCommand.swift in Sources */,
 				CAA6FDB0224BF2A3008C2F87 /* MusicResponse.swift in Sources */,
 				CABAE9CD22C3EE820093FC5A /* OnboardingViewController.swift in Sources */,
+				CAAFD14B2348F06A005E086C /* ColorsGameService.swift in Sources */,
 				CAEEF2402299C9FD00AF5AF6 /* RoundPresentViewController.swift in Sources */,
 				CAE1C453211DC23A0058C9C6 /* RegistrationViewController.swift in Sources */,
 				CA8A005F215A9E0C00CA879E /* Clouds.swift in Sources */,
@@ -3778,11 +4199,13 @@
 				CA80481E21416836000A3C5B /* SerialViewController.swift in Sources */,
 				CAF9622C229970F7006E3046 /* AnimalsStatisticPresenter.swift in Sources */,
 				CAF4C108214B054A00954AA8 /* AuthService.swift in Sources */,
+				25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */,
 				11604AD7231F8107001D1C7F /* MonsterStatisticResponse.swift in Sources */,
 				CADE0E442118A33E00CC9871 /* LocalStore.swift in Sources */,
 				CAE1C473211DC9190058C9C6 /* UIWindow.swift in Sources */,
 				CAAF1EE92174E40300460F58 /* LottieHUD.swift in Sources */,
 				CA51E1CF22FED7410028DF63 /* GameModel.swift in Sources */,
+				253E7E2E236AFA05003FF569 /* ShadowView.swift in Sources */,
 				CA61D88022A1D49700E3D603 /* AnimalsGameService.swift in Sources */,
 				11BA249D230AE99700A9EA15 /* MonsterCollectionViewCell.swift in Sources */,
 				CAC0988822FEDCD400EFB01E /* Style.swift in Sources */,
@@ -3803,6 +4226,7 @@
 				111187F3231E82D700EBEFC0 /* MonsterStatisticViewController.swift in Sources */,
 				CAB5A4572171F2B200A00C8E /* ChildsStackView.swift in Sources */,
 				CAF7B18321B6927C00A59F5F /* StorePresenter.swift in Sources */,
+				CAFF985F2325342600003076 /* GameMasterViewController.swift in Sources */,
 				CAF4C106214AF31700954AA8 /* InputView.swift in Sources */,
 				CAC9100A215D31FD00E62F01 /* AchievesPresenter.swift in Sources */,
 				CA1AB66522F30CE4003A2584 /* GamesListViewController.swift in Sources */,
@@ -3838,6 +4262,7 @@
 				CAC2D5252115A68200945003 /* APIMethod.swift in Sources */,
 				CAB5A4512171F18200A00C8E /* ChildsWorker.swift in Sources */,
 				CAE1C429211DACE10058C9C6 /* SqliteCacher+ExirableCacherType.swift in Sources */,
+				CAFF98592325313C00003076 /* ColorsStartViewController.swift in Sources */,
 				CA49E47F212D2ED300711324 /* SettingsRouter.swift in Sources */,
 				CAC2D52A2115A68300945003 /* UIColor.swift in Sources */,
 				CAC1126721563A9900678D1B /* ChildService.swift in Sources */,
@@ -3853,7 +4278,6 @@
 				CAC2D51C2115A68200945003 /* SigninResponse.swift in Sources */,
 				CA52DF3822907EC000458EE5 /* AnimalsMasterPresenter.swift in Sources */,
 				CA7E8BA5218200820076E5A0 /* ReachabilityManager.swift in Sources */,
-				CAF7B18621B6927C00A59F5F /* StoreModels.swift in Sources */,
 				CA10414D22629A0B005D62DE /* SearchMusicInteractor.swift in Sources */,
 				CA7AAF5F2170B52500747D4B /* SearchViewController.swift in Sources */,
 				CAF7B18521B6927C00A59F5F /* StoreRouter.swift in Sources */,
@@ -3868,6 +4292,7 @@
 				CA9A6748213C134000FCB400 /* RazdelInteractor.swift in Sources */,
 				CAC2D52D2115A68300945003 /* String.swift in Sources */,
 				CAA884682139222C00E27F7A /* CacheableCommand.swift in Sources */,
+				CAFF984823252D3E00003076 /* ImageFillter.swift in Sources */,
 				CAE3649022918181003E891D /* AnimalsMainRouter.swift in Sources */,
 				CA52F351223D2DF40058194E /* MusicMasterRouter.swift in Sources */,
 				CA52DF3C22907EC000458EE5 /* AnimalsMasterViewController.swift in Sources */,
@@ -3885,17 +4310,14 @@
 				CA51004022F5F8E600821C25 /* AlphaviteChoiceViewController.swift in Sources */,
 				CA0053D0213BF6FA00AA187F /* UITableViewCell.swift in Sources */,
 				CAD16DEF2147F31E00A82DBB /* AddChildCommand.swift in Sources */,
-				CA7AAF492170A25000747D4B /* ChildProfileModels.swift in Sources */,
 				CAE09484214CF6A10052F283 /* PassCommand.swift in Sources */,
 				CAF61D89217E118E00035EE9 /* PlayerViewController.swift in Sources */,
 				CA9AA3D52184716400019CA7 /* VideoService.swift in Sources */,
-				CAE364AA22918378003E891D /* AnimalsWordsModels.swift in Sources */,
 				CAE1C430211DACE10058C9C6 /* CoreDataStack.swift in Sources */,
 				CAD16DF12147F68400A82DBB /* SwithChildeCommand.swift in Sources */,
 				CA70867923082EA80015851C /* AlphaviteStatisticPresenter.swift in Sources */,
 				CAC2D51B2115A68200945003 /* ApiURLString.swift in Sources */,
 				CAA8845221381D9900E27F7A /* ChildProfileAddInteractor.swift in Sources */,
-				CAB5A4532171F18200A00C8E /* ChildsModels.swift in Sources */,
 				CA52F361223D9CAD0058194E /* PlaylistsViewController.swift in Sources */,
 				CAF7B18821B6927C00A59F5F /* StoreInteractor.swift in Sources */,
 				CA7AAF5D2170B52500747D4B /* SearchRouter.swift in Sources */,
@@ -4117,19 +4539,19 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
-				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.8;
+				MARKETING_VERSION = 1.7.0;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4148,18 +4570,18 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
-				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.8;
+				MARKETING_VERSION = 1.7.0;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4240,19 +4662,19 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
-				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.8;
+				MARKETING_VERSION = 1.7.0;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
