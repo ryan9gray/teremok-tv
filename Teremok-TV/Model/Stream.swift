@@ -1,20 +1,21 @@
 
 import Foundation
 
-struct Stream: Hashable, Codable {
+class Stream: DefaultsObject {
     let url: URL
     let name: String
     let art: Data?
     let id: Int
 
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
-        hasher.combine(url)
+    public init(url: URL, name: String, art: Data?, id: Int) {
+        self.url = url
+        self.name = name
+        self.art = art
+        self.id = id
+    }
+
+    @objc required convenience init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
-extension Stream: Equatable {
-    static func ==(lhs: Stream, rhs: Stream) -> Bool {
-        return (lhs.name == rhs.name) && (lhs.url == rhs.url)
-    }
-}

@@ -81,7 +81,7 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         guard let video = list.first(where: { $0.url == asset.url }) else { return }
 
         let streams = HLSAssets.fromDefaults()
-        streams.assets?.append(video)
+        streams.streams.append(video)
         streams.saveToDefaults()
         NotificationCenter.default.post(name: .FavBadge, object: video.name, userInfo: ["Fav": 1])
         NotificationCenter.default.post(name: .UploadProgress, object: 1.0)
