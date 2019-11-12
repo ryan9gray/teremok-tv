@@ -58,7 +58,9 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     }
     
     private func download(_ video: Stream) {
-        let asset = AVURLAsset(url: video.url)
+        guard let url = video.url else { return }
+
+        let asset = AVURLAsset(url: url)
         let downloadTask = downloadSession.makeAssetDownloadTask(
             asset: asset,
             assetTitle: video.name,

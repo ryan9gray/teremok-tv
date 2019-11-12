@@ -57,6 +57,8 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         }
     }
 
+    var hlsStreams: [Stream] = []
+
     func fetchSaved() {
         if let list = getList() {
             DispatchQueue.global().async {
@@ -74,10 +76,11 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                     self.offlineVideos.append(offlineVideoModel)
                 }
 
-                let assets = HLSAssets.fromDefaults().streams
-                assets.forEach { asset in
+                self.hlsStreams = HLSAssets.fromDefaults().streams
+                self.hlsStreams.forEach { asset in
+                    guard let url = asset.url else { return }
                     self.offlineVideos.append(
-                        Fav.OfflineVideoModel(id: asset.id.stringValue, videoUrl: asset.url, image: .data(asset.art))
+                        Fav.OfflineVideoModel(id: asset.id.stringValue, videoUrl: url, image: .data(asset.art))
                     )
                 }
                 self.presenter?.presentSaved(models: self.offlineVideos)
@@ -116,16 +119,18 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         }
         return nil
     }
-    
-    func deleteHlsVideo(idx: Int) {
-
-    }
 
     func deleteLocalVideo(idx: Int) {
-        guard let video = offlineVideos[safe:idx], let id = Int(video.id)  else { return }
+        if idx > (savedVideos.count - 1) {
+            let stream = HLSAssets.fromDefaults()
+            let assetIndex = stream.streams.firstIndex(of: hlsStreams[idx-(offlineVideos.count - 1)])!
+            stream.streams.remove(at: assetIndex)
+            stream.saveToDefaults()
 
-        removeModel(video)
-        actionService.toDownload(with: id) { _ in }
+        } else if let video = offlineVideos[safe: idx] {
+            removeModel(video)
+        }
+        fetchSaved()
     }
     
     func removeModel(_ video: Fav.OfflineVideoModel) {
@@ -138,7 +143,6 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
             case .data(_):
                 break
         }
-        fetchSaved()
     }
 
     func deleteFrom(url: URL) {
