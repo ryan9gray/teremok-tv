@@ -120,7 +120,7 @@ extension FavViewController: UICollectionViewDelegate {
 
 extension FavViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if (section == 0 && fav.count > 0) || (section == 1 && saved.count > 0){
+        if (section == 0 && !fav.isEmpty) || (section == 1 && !saved.isEmpty){
             let identifier = String(describing: FavTableViewHeader.self)
             guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: identifier) as? FavTableViewHeader, let favSection = Fav.Section.allCases[safe: section] else { return nil }
             header.configure(image: favSection.image, title: favSection.name)

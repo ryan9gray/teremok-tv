@@ -112,7 +112,7 @@ extension ChildProfileViewController: UICollectionViewDelegate {
 }
 extension ChildProfileViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        headerLbl.isHidden = favorites.count == 0
+        headerLbl.isHidden = favorites.isEmpty
         return favorites.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

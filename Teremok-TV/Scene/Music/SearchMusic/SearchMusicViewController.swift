@@ -115,7 +115,7 @@ class SearchMusicViewController: MusicViewController, SearchMusicDisplayLogic {
         var subString = (textField.text!.capitalized as NSString).replacingCharacters(in: range, with: string) // 2
         subString = formatSubstring(subString: subString)
 
-        if subString.count == 0 { // 3 when a user clears the textField
+        if subString.isEmpty { // 3 when a user clears the textField
             resetValues()
         } else {
             searchAutocompleteEntriesWIthSubstring(substring: subString) //4
