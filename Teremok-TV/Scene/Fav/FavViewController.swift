@@ -189,10 +189,17 @@ extension FavViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withCell: FavCollectionViewCell.self, for: indexPath)
         cell.delegate = self
         if collectionView.tag == 0 {
-            cell.configure(url: fav[indexPath.row].imageUrl)
+            if case .url(let url) = fav[indexPath.row].image {
+                cell.configure(url: url)
+            }
         }
         if collectionView.tag == 1 {
-            cell.configure(url: saved[indexPath.row].imageUrl)
+            switch saved[indexPath.row].image {
+                case .url(let url):
+                    cell.configure(url: url)
+                case .data(let data):
+                    cell.configure(data: data)
+            }
         }
         cell.ip = IndexPath(row: indexPath.row, section: collectionView.tag)
         return cell

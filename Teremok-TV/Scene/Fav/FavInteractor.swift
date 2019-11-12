@@ -57,11 +57,6 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         }
     }
 
-    func fetchHLS() {
-        let assets = HLSAssets.fromDefaults()
-
-    }
-    
     func fetchSaved() {
         if let list = getList() {
             DispatchQueue.global().async {
@@ -75,8 +70,15 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                         ids.append(numIds)
                     }
                     let pngUrl = savedPics.filter({$0.deletingPathExtension().lastPathComponent == id}).first
-                    let offlineVideoModel = Fav.OfflineVideoModel(id: id, videoUrl: videoUrl, imageUrl: pngUrl)
+                    let offlineVideoModel = Fav.OfflineVideoModel(id: id, videoUrl: videoUrl, image: .url(pngUrl))
                     self.offlineVideos.append(offlineVideoModel)
+                }
+
+                let assets = HLSAssets.fromDefaults().streams
+                assets.forEach { asset in
+                    self.offlineVideos.append(
+                        Fav.OfflineVideoModel(id: asset.id.stringValue, videoUrl: asset.url, image: .data(asset.art))
+                    )
                 }
                 self.presenter?.presentSaved(models: self.offlineVideos)
                 self.syncDownloads(ids: ids)
@@ -127,15 +129,18 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     }
     
     func removeModel(_ video: Fav.OfflineVideoModel) {
-        deleteFrom(url: video.videoUrl)
-
-        if let urlImage = video.imageUrl{
-            deleteFrom(url: urlImage)
+        switch video.image {
+            case .url(let url):
+                deleteFrom(url: video.videoUrl)
+                if let urlImage = url {
+                    deleteFrom(url: urlImage)
+                }
+            case .data(_):
+                break
         }
         fetchSaved()
     }
 
-    
     func deleteFrom(url: URL) {
         let fileManager = FileManager.default
         do {

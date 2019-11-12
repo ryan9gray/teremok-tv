@@ -58,8 +58,14 @@ class PreviewPresenter: PreviewPresentationLogic {
         viewController?.isOffline = true
 
         for item in models  {
-            let serial = PreviewModel(title: "", subtitle: "", imageLink: item.imageUrl?.absoluteString ?? "")
-            recom.append(serial)
+            switch item.image {
+                case .url(let url):
+                    let serial = PreviewModel(title: "", subtitle: "", imageLink: url?.absoluteString ?? "")
+                    recom.append(serial)
+                case .data(_):
+                    break
+            }
+
         }
         viewController?.displayRecomendate(items: recom)
     }

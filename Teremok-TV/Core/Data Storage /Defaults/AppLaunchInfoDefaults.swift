@@ -19,7 +19,7 @@ class AppLaunchInfoDefaults: DefaultsObject {
     } 
 }
 class HLSAssets: DefaultsObject {
-    var assets: [Stream]?
+    var streams: [Stream] = []
 
     required override init() {
         super.init()
