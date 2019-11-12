@@ -133,17 +133,17 @@ extension FavViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        40.0
+        10.0
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         2
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0, fav.count == 0 {
+        if section == 0, fav.isEmpty {
             return 0
         }
-        if section == 1, saved.count == 0 {
+        if section == 1, saved.isEmpty {
             return 0
         }
         return 1
@@ -157,18 +157,18 @@ extension FavViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let tableViewCell = cell as? FavTableViewCell else { return }
         tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.section)
-        if indexPath.section == 0{
+        if indexPath.section == 0 {
             tableViewCell.collectionViewOffset = storedOffsetsFav[indexPath.row] ?? 0
-        } else if indexPath.section == 1{
+        } else if indexPath.section == 1 {
             tableViewCell.collectionViewOffset = storedOffsetsSaved[indexPath.row] ?? 0
         }
     }
 
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let tableViewCell = cell as? FavTableViewCell else { return }
-        if indexPath.section == 0{
+        if indexPath.section == 0 {
             storedOffsetsFav[indexPath.row] = tableViewCell.collectionViewOffset
-        } else if indexPath.section == 1{
+        } else if indexPath.section == 1 {
             storedOffsetsSaved[indexPath.row] = tableViewCell.collectionViewOffset
         }
     }
@@ -211,7 +211,7 @@ extension FavViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: cellWidth, height: collectionView.bounds.height)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 4
     }
 }
 extension FavViewController: ButtonWithIndexPath {

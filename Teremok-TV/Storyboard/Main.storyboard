@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFi-IU-E9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFi-IU-E9L">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -810,7 +810,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="0Ky-OI-C3h">
-                                <rect key="frame" x="84" y="47" width="644" height="307"/>
+                                <rect key="frame" x="40" y="47" width="732" height="307"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <sections/>
@@ -822,10 +822,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0Ky-OI-C3h" firstAttribute="leading" secondItem="9kG-YV-I2d" secondAttribute="leading" constant="40" id="TOq-CG-JD2"/>
+                            <constraint firstItem="0Ky-OI-C3h" firstAttribute="leading" secondItem="0bK-mn-dib" secondAttribute="leading" constant="40" id="TOq-CG-JD2"/>
                             <constraint firstItem="0Ky-OI-C3h" firstAttribute="top" secondItem="9kG-YV-I2d" secondAttribute="top" constant="47" id="kLj-KT-1is"/>
                             <constraint firstItem="9kG-YV-I2d" firstAttribute="bottom" secondItem="0Ky-OI-C3h" secondAttribute="bottom" id="kVL-UE-thv"/>
-                            <constraint firstItem="9kG-YV-I2d" firstAttribute="trailing" secondItem="0Ky-OI-C3h" secondAttribute="trailing" constant="40" id="lb4-Ei-w6T"/>
+                            <constraint firstAttribute="trailing" secondItem="0Ky-OI-C3h" secondAttribute="trailing" constant="40" id="lb4-Ei-w6T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9kG-YV-I2d"/>
                     </view>
