@@ -38,7 +38,9 @@ final class BackgroundSession: NSObject, URLSessionDownloadDelegate {
         configuration.isDiscretionary = true
         configuration.allowsCellularAccess = true
         configuration.shouldUseExtendedBackgroundIdleMode = true
-        configuration.waitsForConnectivity = true
+        if #available(iOS 11.0, *) {
+            configuration.waitsForConnectivity = true
+        }
         return URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
     }()
 
