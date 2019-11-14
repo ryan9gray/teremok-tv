@@ -7,7 +7,6 @@
 //
 
 enum GameModel {
-
     enum Option: Int {
         case left = 0
         case right = 1

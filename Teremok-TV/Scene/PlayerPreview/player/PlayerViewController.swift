@@ -72,16 +72,16 @@ class PlayerViewController: AVPlayerViewController {
         //player = AVPlayer(url: url)
         //let testUrl = URL(string: "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8")!
         
-        let playerAsset = AVURLAsset(url: url, options: .none)
+        let playerAsset = AVURLAsset(url: url)
         var playerItem: AVPlayerItem
 
-        if url.absoluteString.hasPrefix("file:///") {
-            let keys = ["tracks", "playable"];
-            playerItem = AVPlayerItem(asset: playerAsset, automaticallyLoadedAssetKeys: keys)
-        }
-        else{
+//        if url.absoluteString.hasPrefix("file:///") {
+//            let keys = ["tracks", "playable"];
+//            playerItem = AVPlayerItem(asset: playerAsset, automaticallyLoadedAssetKeys: keys)
+//        }
+//        else{
             playerItem = AVPlayerItem(asset: playerAsset)
-        }
+        //}
         if player != nil {
             player?.replaceCurrentItem(with: playerItem)
         }

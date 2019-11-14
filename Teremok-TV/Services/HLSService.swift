@@ -33,15 +33,21 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
 
     var list: Set<Stream> = Set()
 
-    private func addToList(video: Stream) {
-        list.insert(video)
-        guard !isDownLoad else { return }
+    func assetDownload(url: URL, name: String, art: Data?, id: Int) {
 
-        download(video)
+        let video: Stream = .init(playListURL: url, name: name, art: art, id: id)
+        addToList(video)
     }
 
-    private func removeFromList(_ video: Stream) {
-        list.remove(video)
+    private func addToList(_ stream: Stream) {
+        list.insert(stream)
+        guard !isDownLoad else { return }
+
+        download(stream)
+    }
+
+    private func removeFromList(_ stream: Stream) {
+        list.remove(stream)
         isDownLoad = false
         guard let next = list.first else { return }
 
@@ -57,48 +63,55 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         }
     }
     
-    private func download(_ video: Stream) {
-        guard let url = video.url else { return }
-
+    private func download(_ stream: Stream) {
+        guard let url = stream.playListURL else { return }
         let asset = AVURLAsset(url: url)
-        let downloadTask = downloadSession.makeAssetDownloadTask(
-            asset: asset,
-            assetTitle: video.name,
-            assetArtworkData: video.art,
-            options: nil
-        )
-        downloadTask?.resume()
+        guard let task =
+            downloadSession.aggregateAssetDownloadTask(
+                with: asset,
+                mediaSelections: [asset.preferredMediaSelection],
+                assetTitle: stream.name ?? "",
+                assetArtworkData: stream.art,
+                options: [AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: 265_000]
+            )
+        else { return }
+        task.taskDescription = stream.name
     }
 
-    func assetDownload(_ videoModel: VideoModel) {
-    }
+    func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
+                       didCompleteFor mediaSelection: AVMediaSelection
+    ) {
+        //let asset = aggregateAssetDownloadTask.urlAsset
+        //guard let video = list.first(where: { $0.playListURL == asset.url }) else { return }
 
-    func assetDownload(url: URL, name: String, art: Data?, id: Int) {
-        let video: Stream = .init(url: url, name: name, art: art, id: id)
-        addToList(video: video)
-    }
-
-    func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didFinishDownloadingTo location: URL) {
-        let asset = assetDownloadTask.urlAsset
-        guard let video = list.first(where: { $0.url == asset.url }) else { return }
-
-        let streams = HLSAssets.fromDefaults()
-        streams.streams.append(video)
-        streams.saveToDefaults()
-        NotificationCenter.default.post(name: .FavBadge, object: video.name, userInfo: ["Fav": 1])
         NotificationCenter.default.post(name: .UploadProgress, object: 1.0)
     }
 
-    func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didLoad timeRange: CMTimeRange, totalTimeRangesLoaded loadedTimeRanges: [NSValue], timeRangeExpectedToLoad: CMTimeRange) {
+    func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
+                    didLoad timeRange: CMTimeRange, totalTimeRangesLoaded loadedTimeRanges: [NSValue],
+                    timeRangeExpectedToLoad: CMTimeRange, for mediaSelection: AVMediaSelection
+    ) {
         var percentComplete = 0.0
         for value in loadedTimeRanges {
-            let loadedTimeRange = value.timeRangeValue
-            percentComplete += loadedTimeRange.duration.seconds / timeRangeExpectedToLoad.duration.seconds
+            let loadedTimeRange: CMTimeRange = value.timeRangeValue
+            percentComplete +=
+                loadedTimeRange.duration.seconds / timeRangeExpectedToLoad.duration.seconds
         }
         print("\(percentComplete)")
         NotificationCenter.default.post(name: .UploadProgress, object: percentComplete)
     }
 
+    func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
+                    willDownloadTo location: URL
+    ) {
+        guard let stream = list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) else { return }
+
+        let asset: Asset = .init(url: location, stream: stream)
+        let streams = HLSAssets.fromDefaults()
+        streams.streams.append(asset)
+        streams.saveToDefaults()
+        NotificationCenter.default.post(name: .FavBadge, object: stream.name, userInfo: ["Fav": 1])
+    }
 //    func restorePendingDownloads() {
 //        // Grab all the pending tasks associated with the downloadSession
 //        downloadSession.getAllTasks { tasksArray in

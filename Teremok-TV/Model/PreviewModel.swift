@@ -9,10 +9,7 @@
 import Foundation
 
 struct PreviewModel {
-    
-    var title: String = ""
-    var subtitle: String = ""
-    var imageLink: String = ""
-
-    
+    let title: String
+    let subtitle: String
+    let imageLink: String
 }

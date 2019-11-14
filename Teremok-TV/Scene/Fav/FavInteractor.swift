@@ -57,7 +57,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         }
     }
 
-    var hlsStreams: [Stream] = []
+    var hlsStreams: [Asset] = []
 
     func fetchSaved() {
         if let list = getList() {
@@ -80,7 +80,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                 self.hlsStreams.forEach { asset in
                     guard let url = asset.url else { return }
                     self.offlineVideos.append(
-                        Fav.OfflineVideoModel(id: asset.id.stringValue, videoUrl: url, image: .data(asset.art))
+                        Fav.OfflineVideoModel(id: asset.stream?.id?.stringValue ?? "", videoUrl: url, image: .data(asset.stream?.art))
                     )
                 }
                 self.presenter?.presentSaved(models: self.offlineVideos)
@@ -124,6 +124,9 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         if idx > (savedVideos.count - 1) {
             let stream = HLSAssets.fromDefaults()
             let assetIndex = stream.streams.firstIndex(of: hlsStreams[idx-(offlineVideos.count - 1)])!
+            if let localFileLocation = stream.streams[assetIndex].url {
+                try? FileManager.default.removeItem(at: localFileLocation)
+            }
             stream.streams.remove(at: assetIndex)
             stream.saveToDefaults()
 
