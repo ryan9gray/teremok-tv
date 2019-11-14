@@ -45,8 +45,21 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
+		<key>cache-teremok.cdnvideo.ru</key>
+		<dict/>
+		<key>NSIncludesSubdomains</key>
+		<true/>
+		<key>NSExceptionAllowsInsecureHTTPLoads</key>
+		<false/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>devstreaming-cdn.apple.com</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<false/>
+			</dict>
 			<key>api.teremok.tv</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>

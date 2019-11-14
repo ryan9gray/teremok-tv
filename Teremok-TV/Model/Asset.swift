@@ -17,15 +17,16 @@ class Asset: DefaultsObject {
 
 
 class Stream: DefaultsObject {
-    var name: String?
-    var id: Int?
+    var name: String? = ""
+    var streamID: Int = 0
     var playListURL: URL?
     var art: Data?
 
-    init(playListURL: URL, name: String = "", art: Data? = nil, id: Int = 0) {
+    init(playListURL: URL, name: String, art: Data?, id: Int) {
         self.name = name
-        self.id = id
+        self.streamID = id
         self.playListURL = playListURL
+        self.art = art
     }
     required override init() {
         super.init()

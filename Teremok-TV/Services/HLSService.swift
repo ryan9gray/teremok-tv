@@ -14,13 +14,12 @@ fileprivate let notificationIdentifier = "teremoktv"
 
 class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     static let shared = HLSDownloadService()
-
     override init() {
         super.init()
         NotificationCenter.default.addObserver(self, selector: #selector(self.done), name: .FavBadge, object: nil)
     }
-
     var isDownLoad = false
+    var list: Set<Stream> = Set()
 
     lazy private var downloadSession: AVAssetDownloadURLSession = {
         let configuration = URLSessionConfiguration.background(withIdentifier: backgroundIdentifier)
@@ -31,10 +30,9 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         )
     }()
 
-    var list: Set<Stream> = Set()
-
     func assetDownload(url: URL, name: String, art: Data?, id: Int) {
-
+        //let exumple = URL(string: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8")!
+        print("\(art == nil)")
         let video: Stream = .init(playListURL: url, name: name, art: art, id: id)
         addToList(video)
     }
@@ -76,14 +74,15 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
             )
         else { return }
         task.taskDescription = stream.name
+        task.resume()
     }
 
     func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
                        didCompleteFor mediaSelection: AVMediaSelection
     ) {
-        //let asset = aggregateAssetDownloadTask.urlAsset
-        //guard let video = list.first(where: { $0.playListURL == asset.url }) else { return }
-
+        guard let video = list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) else { return }
+        aggregateAssetDownloadTask.taskDescription = video.name
+        //aggregateAssetDownloadTask.resume()
         NotificationCenter.default.post(name: .UploadProgress, object: 1.0)
     }
 
@@ -110,19 +109,41 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         let streams = HLSAssets.fromDefaults()
         streams.streams.append(asset)
         streams.saveToDefaults()
+        print("\(location)")
         NotificationCenter.default.post(name: .FavBadge, object: stream.name, userInfo: ["Fav": 1])
     }
-//    func restorePendingDownloads() {
-//        // Grab all the pending tasks associated with the downloadSession
-//        downloadSession.getAllTasks { tasksArray in
-//            // For each task, restore the state in the app
-//            for task in tasksArray {
-//                guard let downloadTask = task as? AVAssetDownloadTask else { break }
-//                // Restore asset, progress indicators, state, etc...
-//                let asset = downloadTask.urlAsset
-//            }
-//        }
-//    }
+
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        guard let task = task as? AVAggregateAssetDownloadTask else { return }
+        if let error = error as NSError? {
+            switch (error.domain, error.code) {
+            case (NSURLErrorDomain, NSURLErrorCancelled):
+                print("\(error)")
+                return
+                let assets = HLSAssets.fromDefaults()
+                guard
+                    let video = list.first(where: { $0.playListURL == task.urlAsset.url }),
+                    let asset = assets.streams.first(where: { $0.url == video.playListURL }),
+                    let assetIndex = assets.streams.firstIndex(of: asset),
+                    let localFileLocation = assets.streams[assetIndex].url
+                else { return }
+
+                do {
+                    try FileManager.default.removeItem(at: localFileLocation)
+                    assets.streams.remove(at: assetIndex)
+                    assets.saveToDefaults()
+                } catch {
+                    print("An error occured trying to delete the contents on disk for : \(error)")
+                }
+
+            case (NSURLErrorDomain, NSURLErrorUnknown):
+                fatalError("Downloading HLS streams is not supported in the simulator.")
+
+            default:
+                fatalError("An unexpected error occured \(error.domain)")
+            }
+        }
+    }
 }
 
 extension Notification.Name {

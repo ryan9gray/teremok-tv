@@ -79,8 +79,9 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                 self.hlsStreams = HLSAssets.fromDefaults().streams
                 self.hlsStreams.forEach { asset in
                     guard let url = asset.url else { return }
+                    print("\(asset.stream?.art == nil)")
                     self.offlineVideos.append(
-                        Fav.OfflineVideoModel(id: asset.stream?.id?.stringValue ?? "", videoUrl: url, image: .data(asset.stream?.art))
+                        Fav.OfflineVideoModel(id: asset.stream?.streamID.stringValue ?? "", videoUrl: url, image: .data(asset.stream?.art))
                     )
                 }
                 self.presenter?.presentSaved(models: self.offlineVideos)

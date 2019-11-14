@@ -19,7 +19,6 @@ class VideoService: VideoServiceProtocol {
     var imageLoader: ImageLoader!
 
     func hlsDownload(url: URL, name: String, art: Data?, id: Int) {
-
         HLSDownloadService.shared.assetDownload(url: url, name: name, art: art, id: id)
     }
 

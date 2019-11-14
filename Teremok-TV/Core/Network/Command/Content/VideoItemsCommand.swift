@@ -22,8 +22,9 @@ class VideoItemCommand: BasicCommand {
         requestObject(success: success, failure: failure)
     }
     override var version: String {
-        return "1.2"
+        return "1.3"
     }
+
     override var method: String {
         return APIMethod.Content.videoItem.methodName
     }

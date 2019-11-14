@@ -29,22 +29,24 @@ protocol SerialDataStore {
 }
 
 class SerialInteractor: SerialBusinessLogic, SerialDataStore {
+    var presenter: SerialPresentationLogic?
+
+    var imageLoader = ImageLoader()
+    let service: SerialsProtocol = SerialsService()
+    var searchService: SearchProtocol = SearchService()
+    var videoService: VideoServiceProtocol = VideoService()
 
     var videoItems: [VideoModel] = []
     var razdelId: Int?
     var screen: Serial.Screen = .catalog
-
-    var presenter: SerialPresentationLogic?
-    
     var nextShift: Int?
     let countSerials = 10
     var hasMore : Bool = true
-    
-    let service: SerialsProtocol = SerialsService()
-    var searchService: SearchProtocol = SearchService()
 
-    var videoService: VideoServiceProtocol = VideoService()
 
+    init() {
+         videoService.imageLoader = imageLoader
+     }
 
     func fetchVideos(){
         switch screen {
@@ -74,7 +76,7 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
     func search(text: String) {
         guard hasMore else { return }
 
-        searchService.getSearch(text: text, itemsOnPage: countSerials, shiftItem: nextShift ?? 0) { [weak self] (result) in
+        searchService.getSearch(text: text, itemsOnPage: countSerials, shiftItem: nextShift ?? 0) { [weak self] result in
             switch result {
             case .success(let response):
                 self?.response(videos: response)
@@ -90,6 +92,18 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
             self.presenter?.present(errorString: "Не получилось добавить в скачанное", completion: nil)
             return
         }
+        guard
+            let urlString = item.downloadLink,
+            let id = item.id,
+            let link =  URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
+            let imageLinkString = item.picture,
+            let pictureURL = URL(string: imageLinkString),
+            let name = item.name
+        else { return }
+
+        imageLoader.dataFrom(url: pictureURL) { [unowned self] art in
+            self.videoService.hlsDownload(url: link, name: name, art: art, id: id)
+        }
         videoService.downloadVideo(item: item)
     }
 
@@ -97,9 +111,7 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
         guard let id = videoItems[safe:idx]?.id else { return }
         presenter?.present(items: videoItems)
 
-        videoService.addToFav(id: id) { _ in
-
-        }
+        videoService.addToFav(id: id) { _ in }
     }
     
     func response(videos: VideoResponse){
