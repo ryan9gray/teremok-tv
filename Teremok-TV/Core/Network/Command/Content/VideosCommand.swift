@@ -21,9 +21,9 @@ class VideosCommand: BasicCommand {
     func execute(success: ((VideoResponse) -> Void)?, failure: ApiCompletionBlock?) {
         requestObject(success: success, failure: failure)
     }
-//    override var version: String {
-//        return "1.1"
-//    }
+    override var version: String {
+        return "1.1"
+    }
 
     override var method: String {
         return APIMethod.Content.videos.methodName
