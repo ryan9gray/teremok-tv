@@ -18,6 +18,7 @@ enum ChoiceAnimal {
     enum PrincesState {
         case happy
         case angry
+        case main
 
         var image : UIImage? {
             switch self {
@@ -25,6 +26,8 @@ enum ChoiceAnimal {
                 return UIImage(named: "icPrincesHappy")
             case .angry:
                 return UIImage(named: "icPrincesAngry")
+            case .main:
+                return UIImage(named: "icPrincesMain")
             }
         }
     }

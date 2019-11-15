@@ -33,6 +33,13 @@ final class BackgroundSession: NSObject, URLSessionDownloadDelegate {
 
     lazy private var downloadsSession: URLSession = {
         let configuration = URLSessionConfiguration.background(withIdentifier: backgroundIdentifier)
+        configuration.sessionSendsLaunchEvents = true
+        configuration.isDiscretionary = true
+        configuration.allowsCellularAccess = true
+        configuration.shouldUseExtendedBackgroundIdleMode = true
+        if #available(iOS 11.0, *) {
+            configuration.waitsForConnectivity = true
+        }
         return URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
     }()
 

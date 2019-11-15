@@ -79,45 +79,24 @@ class AnimalsGameFlow  {
             finishRound()
             return
         }
-        createChoice()
+        presentChoice(animals: Set(pack.roundAnimals))
     }
 
-    private func nextChoice(answer: Bool, time: Int) {
+    private func saveResult(answer: Bool, time: Int) {
         game.answers.append(answer)
         game.roundTime += time
-        startChoice()
     }
 
-    private func createChoice() {
-        let animal = randomChoice()
-        if let image = randomAnimal(from: animal).image {
-            presentChoice(animals: animal, image: image)
-        }
-    }
-
-    private func randomAnimal(from: AnimalsGame.Animal) -> AnimalsGame.Animal {
-        let index = Int.random(in: 0..<pack.allAnimals.count)
-        if pack.allAnimals[index] == from {
-            let newIndex = index < 47 ?  index + 1 : index - 1
-            return pack.allAnimals[newIndex]
-        } else {
-            return pack.allAnimals[index]
-        }
-    }
-
-    private func randomChoice() -> AnimalsGame.Animal {
-        let index = Int.random(in: 0..<pack.roundAnimals.count)
-        let animal = pack.roundAnimals[index]
-        pack.roundAnimals.remove(at: index)
-        return animal
-    }
-
-    private func presentChoice(animals: AnimalsGame.Animal, image: UIImage) {
+    private func presentChoice(animals: Set<AnimalsGame.Animal>) {
         let controller = ChoiceAnimalViewController.instantiate(fromStoryboard: .animals)
-        let points = game.answers.filter{$0}.count
-        controller.input = ChoiceAnimalViewController.Input(animal: animals, wrongImage: image, isHard: isHard, points: points)
+        controller.input = ChoiceAnimalViewController.Input(
+            animals: animals,
+            isHard: isHard,
+            allAnimals: pack.allAnimals
+        )
         controller.output = ChoiceAnimalViewController.Output(
-            nextChoice: nextChoice
+            nextChoice: finishRound,
+            result: saveResult
         )
         master?.router?.presentModalChild(viewController: controller)
     }
