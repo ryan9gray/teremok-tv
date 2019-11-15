@@ -54,12 +54,12 @@ class PreviewInteractor: PreviewBusinessLogic, PreviewDataStore {
             fetchVideo(id: id)
         case .offline(let idx, let offlineVideos):
             oflineIdx = idx
-            presenter?.presentVideo(link: offlineVideos[idx].videoUrl.absoluteString)
+            presenter?.presentVideo(link: offlineVideos[idx].videoUrl)
             presenter?.presentRecomendet(offlineVideos)
         }
     }
     
-    func fetchRecomandation(idx: Int){
+    func fetchRecomandation(idx: Int) {
         guard let model = model else { return }
         switch model {
         case .online:
@@ -67,13 +67,13 @@ class PreviewInteractor: PreviewBusinessLogic, PreviewDataStore {
             fetchVideo(id: id)
         case .offline( _, let offlineVideos):
             oflineIdx = idx
-            presenter?.presentVideo(link: offlineVideos[idx].videoUrl.absoluteString)
+            presenter?.presentVideo(link: offlineVideos[idx].videoUrl)
             presenter?.presentRecomendet(offlineVideos)
             
         }
     }
     
-    func nextItem(){
+    func nextItem() {
         guard let model = model else { return }
         switch model {
         case .online:
@@ -81,7 +81,7 @@ class PreviewInteractor: PreviewBusinessLogic, PreviewDataStore {
             fetchVideo(id: nextId)
         case .offline( _, let offlineVideos):
             oflineIdx += 1
-            guard let url = offlineVideos[safe: oflineIdx]?.videoUrl.absoluteString else { return }
+            guard let url = offlineVideos[safe: oflineIdx]?.videoUrl else { return }
             presenter?.presentVideo(link: url)
         }
     }

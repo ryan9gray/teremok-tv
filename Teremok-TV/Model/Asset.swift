@@ -4,6 +4,7 @@ import Foundation
 class Asset: DefaultsObject {
     var url: URL?
     var stream: Stream?
+    var bookmark: Data?
 
     init(url: URL, stream: Stream) {
         self.url = url

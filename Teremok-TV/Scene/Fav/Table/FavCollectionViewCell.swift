@@ -34,7 +34,7 @@ class FavCollectionViewCell: PreviewImageCollectionViewCell {
     }
 
     func configure(data: Data?) {
-        guard let data = data, let image = UIImage.init(data: data) else { return }
+        guard let data = data, let image = UIImage(data: data) else { return }
 
         imageView.image = image
     }

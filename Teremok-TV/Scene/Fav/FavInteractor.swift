@@ -22,6 +22,7 @@ protocol FavDataStore {
     var videoModels: [VideoModel] { get set }
     var savedVideos: [URL] { get set }
     var offlineVideos: [Fav.OfflineVideoModel] { get set }
+    var hlsStreams: [Asset] { get set }
     func deleteLocalVideo(idx: Int)
 }
 
@@ -75,17 +76,28 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                     let offlineVideoModel = Fav.OfflineVideoModel(id: id, videoUrl: videoUrl, image: .url(pngUrl))
                     self.offlineVideos.append(offlineVideoModel)
                 }
-
-                self.hlsStreams = HLSAssets.fromDefaults().streams
-                self.hlsStreams.forEach { asset in
-                    guard let url = asset.url else { return }
-                    print("\(asset.stream?.art == nil)")
-                    self.offlineVideos.append(
-                        Fav.OfflineVideoModel(id: asset.stream?.streamID.stringValue ?? "", videoUrl: url, image: .data(asset.stream?.art))
-                    )
-                }
+                self.appendHLS()
                 self.presenter?.presentSaved(models: self.offlineVideos)
                 self.syncDownloads(ids: ids)
+            }
+        }
+    }
+
+    func appendHLS() {
+        self.hlsStreams = HLSAssets.fromDefaults().streams
+        for asset in self.hlsStreams {
+            guard let bookmark = asset.bookmark else { return }
+            var bookmarkDataIsStale = false
+            do {
+                let location = try URL(resolvingBookmarkData: bookmark, bookmarkDataIsStale: &bookmarkDataIsStale)
+                if bookmarkDataIsStale {
+                    fatalError("Bookmark data is stale!")
+                }
+                offlineVideos.append(
+                    Fav.OfflineVideoModel(id: asset.stream?.streamID.stringValue ?? "", videoUrl: location, image: .data(asset.stream?.art))
+                )
+            } catch {
+                continue
             }
         }
     }

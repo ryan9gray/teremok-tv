@@ -11,12 +11,11 @@ import AVFoundation
 import AVKit
 
 class PlayerViewController: AVPlayerViewController {
-    var contentURL : URL? {
-        didSet{
+    var playerAsset: AVURLAsset? {
+        didSet {
             setVideoBack()
         }
     }
-    
     var fullOverlay: TTPlayerViewController!
     
     override var player: AVPlayer? {
@@ -68,25 +67,17 @@ class PlayerViewController: AVPlayerViewController {
     }
 
     func setVideoBack(){
-        guard let url = contentURL else { return }
+        guard let playerAsset = playerAsset else { return }
     
-        let playerAsset = AVURLAsset(url: url)
-        var playerItem: AVPlayerItem
-
-        if url.absoluteString.hasPrefix("file:///") {
-            let keys = ["tracks", "playable"];
-            playerItem = AVPlayerItem(asset: playerAsset, automaticallyLoadedAssetKeys: keys)
-        }
-        else{
-            playerItem = AVPlayerItem(asset: playerAsset)
-        }
+        playerAsset.resourceLoader.preloadsEligibleContentKeys = true
+        let playerItem = AVPlayerItem(asset: playerAsset)
         if player != nil {
             player?.replaceCurrentItem(with: playerItem)
         }
         else {
             player = AVPlayer(playerItem: playerItem)
         }
-        player?.allowsExternalPlayback = false
+        player?.allowsExternalPlayback = true
         player?.actionAtItemEnd = .none
         fullOverlay.startedPlaying()
     }

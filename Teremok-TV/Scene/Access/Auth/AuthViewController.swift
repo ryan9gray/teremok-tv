@@ -61,7 +61,13 @@ class AuthViewController: AbstracViewController, AuthDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         prepareUI()
+
+        if ServiceConfiguration.activeConfiguration() == .sandbox {
+            passTxtField.text = "1111111"
+            emailTxtField.text = "dima@geek.ru"
+        }
     }
 
     private func prepareUI(){

@@ -11,11 +11,13 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 protocol PreviewPresentationLogic: CommonPresentationLogic {
-     func presentVideo(_ model: VideoItemModel)
+    func presentVideo(_ model: VideoItemModel)
     func presentRecomendet(_ models: [Fav.OfflineVideoModel])
-    func presentVideo(link: String)
+    func presentVideo(link: URL)
 }
 
 class PreviewPresenter: PreviewPresentationLogic {
@@ -27,47 +29,44 @@ class PreviewPresenter: PreviewPresentationLogic {
     // MARK: Do something
     
     func presentVideo(_ model: VideoItemModel){
-
         presentRecomendet(model)
         if let firstLink = model.stream {
-            presentVideo(link: firstLink)
+            guard
+                let url =  URL(string: firstLink.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+            else { return }
+
+            presentVideo(link: url)
         }
     }
     
-    func presentVideo(link: String){
-        guard !link.isEmpty, let url =  URL(string: link.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) else {
-            return
-        }
-        viewController?.playVideo(url: url)
+    func presentVideo(link: URL) {
+        let asset = AVURLAsset(url: link)
+        //print("fileExists \(try? FileManager.default.fileExists(atPath: asset.url.path))")
+        viewController?.playVideo(playerAsset: asset)
     }
     
     
     func presentRecomendet(_ model: VideoItemModel){
-        
         var recom: [PreviewModel] = []
         
         for item in model.recommendations ?? []  {
-            let serial = PreviewModel(title: item.name ?? "", subtitle: item.description ?? "", imageLink: item.picture ?? "")
+            let serial = PreviewModel(
+                title: item.name ?? "",
+                subtitle: item.description ?? "",
+                imageLink: .url(URL(string: item.picture ?? ""))
+            )
             recom.append(serial)
         }
         viewController?.displayRecomendate(items: recom)
     }
     func presentRecomendet(_ models: [Fav.OfflineVideoModel]){
-        
         var recom: [PreviewModel] = []
         viewController?.isOffline = true
 
         for item in models  {
-            switch item.image {
-                case .url(let url):
-                    let serial = PreviewModel(title: "", subtitle: "", imageLink: url?.absoluteString ?? "")
-                    recom.append(serial)
-                case .data(_):
-                    break
-            }
-
+            let serial = PreviewModel(title: "", subtitle: "", imageLink: item.image)
+            recom.append(serial)
         }
         viewController?.displayRecomendate(items: recom)
     }
-    
 }

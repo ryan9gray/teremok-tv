@@ -89,7 +89,7 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
 
     func downloadVideo(idx: Int, completion : @escaping (_ like : Bool) -> ()){
         guard let item = videoItems[safe: idx] else {
-            self.presenter?.present(errorString: "Не получилось добавить в скачанное", completion: nil)
+            presenter?.present(errorString: "Не получилось добавить в скачанное", completion: nil)
             return
         }
         guard
@@ -104,24 +104,22 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
         imageLoader.dataFrom(url: pictureURL) { [unowned self] art in
             self.videoService.hlsDownload(url: link, name: name, art: art, id: id)
         }
-        videoService.downloadVideo(item: item)
     }
 
     func addToFav(idx: Int){
         guard let id = videoItems[safe:idx]?.id else { return }
+         
         presenter?.present(items: videoItems)
-
         videoService.addToFav(id: id) { _ in }
     }
     
     func response(videos: VideoResponse){
         guard let items = videos.items else { return }
 
-        self.nextShift = videos.startItemIdInNextPage
-        self.hasMore = items.count > 0
-        self.videoItems.append(contentsOf: items)
-        
-        self.presenter?.present(items: items)
+        nextShift = videos.startItemIdInNextPage
+        hasMore = items.count > 0
+        videoItems.append(contentsOf: items)
+        presenter?.present(items: items)
     }
 
 }

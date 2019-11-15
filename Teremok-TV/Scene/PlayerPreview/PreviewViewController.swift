@@ -15,7 +15,7 @@ import AVKit
 import Trackable
 
 protocol PreviewDisplayLogic: CommonDisplayLogic {
-    func playVideo(url: URL)
+    func playVideo(playerAsset: AVURLAsset)
     func displayRecomendate(items: [PreviewModel])
     var isOffline: Bool { get set }
 
@@ -121,15 +121,22 @@ class PreviewViewController: AbstracViewController, PreviewDisplayLogic {
         collectionView.reloadData()
     }
 
-    var currentLink: URL? {
-        didSet{
-            playerVC.contentURL = currentLink
+    var playerAsset: AVURLAsset? {
+        didSet {
+            playerVC.playerAsset = playerAsset
         }
     }
     
-    func playVideo(url: URL){
+    func playVideo(playerAsset: AVURLAsset) {
+//        let playerItem = AVPlayerItem(asset: playerAsset)
+//        let player = AVPlayer(playerItem: playerItem)
+//        let playerViewController = AVPlayerViewController()
+//        playerViewController.player = player
+//        self.present(playerViewController, animated: true) {
+//            playerViewController.player!.play()
+//        }
         setupControls()
-        currentLink = url
+        self.playerAsset = playerAsset
         getName()
     }
 
@@ -162,7 +169,12 @@ extension PreviewViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withCell: PreviewCollectionViewCell.self, for: indexPath)
-        cell.configure(item: recommendations[indexPath.row])
+        switch recommendations[indexPath.row].imageLink {
+            case .data(let data):
+                cell.configure(data: data)
+            case .url(let url):
+                cell.configure(link: url?.absoluteString ?? "")
+        }
         return cell
     }
 }

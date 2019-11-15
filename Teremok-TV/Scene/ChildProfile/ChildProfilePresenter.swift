@@ -33,7 +33,7 @@ class ChildProfilePresenter: ChildProfilePresentationLogic {
         var fav: [PreviewModel] = []
         
         for item in items  {
-            let serial = PreviewModel(title: item.name ?? "", subtitle: item.description ?? "", imageLink: item.picture ?? "")
+            let serial = PreviewModel(title: item.name ?? "", subtitle: item.description ?? "", imageLink: .url(URL(string: item.picture ?? "")))
             fav.append(serial)
         }
         viewController?.displayFavorites(items: fav)

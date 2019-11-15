@@ -82,7 +82,7 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     ) {
         guard let video = list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) else { return }
         aggregateAssetDownloadTask.taskDescription = video.name
-        //aggregateAssetDownloadTask.resume()
+        aggregateAssetDownloadTask.resume()
         NotificationCenter.default.post(name: .UploadProgress, object: 1.0)
     }
 
@@ -100,38 +100,38 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         NotificationCenter.default.post(name: .UploadProgress, object: percentComplete)
     }
 
+    var location: URL?
+
     func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
                     willDownloadTo location: URL
     ) {
         guard let stream = list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) else { return }
-
+        self.location = location
         let asset: Asset = .init(url: location, stream: stream)
-        let streams = HLSAssets.fromDefaults()
-        streams.streams.append(asset)
-        streams.saveToDefaults()
+        let assets = HLSAssets.fromDefaults()
+        assets.streams.append(asset)
+        assets.saveToDefaults()
         print("\(location)")
-        NotificationCenter.default.post(name: .FavBadge, object: stream.name, userInfo: ["Fav": 1])
     }
 
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         guard let task = task as? AVAggregateAssetDownloadTask else { return }
+        let assets = HLSAssets.fromDefaults()
+        guard
+            let asset = assets.streams.first(where: { $0.stream?.playListURL == task.urlAsset.url }),
+            let localFileLocation = asset.url
+        else { return }
+
         if let error = error as NSError? {
             switch (error.domain, error.code) {
             case (NSURLErrorDomain, NSURLErrorCancelled):
                 print("\(error)")
-                return
-                let assets = HLSAssets.fromDefaults()
-                guard
-                    let video = list.first(where: { $0.playListURL == task.urlAsset.url }),
-                    let asset = assets.streams.first(where: { $0.url == video.playListURL }),
-                    let assetIndex = assets.streams.firstIndex(of: asset),
-                    let localFileLocation = assets.streams[assetIndex].url
-                else { return }
-
                 do {
                     try FileManager.default.removeItem(at: localFileLocation)
-                    assets.streams.remove(at: assetIndex)
-                    assets.saveToDefaults()
+                    if let assetIndex = assets.streams.firstIndex(of: asset) {
+                        assets.streams.remove(at: assetIndex)
+                        assets.saveToDefaults()
+                    }
                 } catch {
                     print("An error occured trying to delete the contents on disk for : \(error)")
                 }
@@ -142,7 +142,46 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
             default:
                 fatalError("An unexpected error occured \(error.domain)")
             }
+        } else {
+            do {
+                let bookmark = try localFileLocation.bookmarkData()
+                asset.bookmark = bookmark
+                assets.saveToDefaults()
+            } catch {
+                print("Failed to create bookmarkData for download URL.")
+            }
         }
+        NotificationCenter.default.post(name: .FavBadge, object: asset.stream?.name ?? "", userInfo: ["Fav": 1])
+    }
+    /// Return the display names for the media selection options that are currently selected in the specified group
+    func displayNamesForSelectedMediaOptions(_ mediaSelection: AVMediaSelection) -> String {
+
+        var displayNames = ""
+
+        guard let asset = mediaSelection.asset else {
+            return displayNames
+        }
+
+        // Iterate over every media characteristic in the asset in which a media selection option is available.
+        for mediaCharacteristic in asset.availableMediaCharacteristicsWithMediaSelectionOptions {
+            /*
+             Obtain the AVMediaSelectionGroup object that contains one or more options with the
+             specified media characteristic, then get the media selection option that's currently
+             selected in the specified group.
+             */
+            guard let mediaSelectionGroup =
+                asset.mediaSelectionGroup(forMediaCharacteristic: mediaCharacteristic),
+                let option = mediaSelection.selectedMediaOption(in: mediaSelectionGroup) else { continue }
+
+            // Obtain the display string for the media selection option.
+            if displayNames.isEmpty {
+                displayNames += " " + option.displayName
+            } else {
+                displayNames += ", " + option.displayName
+            }
+        }
+
+        return displayNames
     }
 }
 

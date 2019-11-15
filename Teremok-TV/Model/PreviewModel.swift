@@ -11,5 +11,5 @@ import Foundation
 struct PreviewModel {
     let title: String
     let subtitle: String
-    let imageLink: String
+    let imageLink: Fav.ImageType
 }
