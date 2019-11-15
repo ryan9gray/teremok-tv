@@ -29,6 +29,7 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
     @IBOutlet private var progressBar: AMProgressBar!
     @IBOutlet private var pointsView: UIView!
     @IBOutlet private var pointLabel: UILabel!
+    @IBOutlet private var stackView: UIStackView!
     private var audioPlayer: AVAudioPlayer?
 
     @IBAction func firstClick(_ sender: Any) {
@@ -43,13 +44,13 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
     var output: Output!
 
     struct Input {
-        var animal: AnimalsGame.Animal
-        var wrongImage: UIImage
+        var animals: Set<AnimalsGame.Animal>
         var isHard: Bool
-        var points: Int
+        let allAnimals: [AnimalsGame.Animal]
     }
     struct Output {
-        var nextChoice: (Bool, Int) -> Void
+        var nextChoice:  () -> Void
+        var result: (Bool, Int) -> Void
     }
 
     private var timer = Timer()
@@ -58,15 +59,23 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
         return seconds / limit
     }
 
+    var points: Int = 0 {
+        didSet {
+            pointLabel.text = points.stringValue
+        }
+    }
+
     private var isDone = false
     private var isRight = false
 
     private var seconds: CGFloat = 0.0 {
         didSet {
+            guard input.isHard else { return }
             progressBar.setProgress(progress: progress, animated: true)
             if seconds == limit {
                 timer.invalidate()
-                output.nextChoice(false, Int(seconds))
+                output.result(false, Int(seconds))
+                nextAnimal()
             }
         }
     }
@@ -85,17 +94,61 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
         pointLabel.textColor = UIColor.Label.orange
         progressBar.isHidden = !input.isHard
         pointsView.isHidden = !input.isHard
-        if input.isHard {
-            pointLabel.text = input.points.stringValue
-            fireTimer()
-        }
-        displayChoice(animal: input.animal, image: input.wrongImage)
+        nextAnimal()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         timer.invalidate()
         audioPlayer?.stop()
+    }
+
+    func nextAnimal() {
+        guard let animal = input.animals.randomElement() else {
+            output.nextChoice()
+            return
+        }
+        input.animals.remove(animal)
+        displayChoice(animal: animal, image: randomAnimal(from: animal).image)
+    }
+
+    func displayChoice(animal: AnimalsGame.Animal, image: UIImage?) {
+        reset()
+        princesImageView.image = ChoiceAnimal.PrincesState.happy.image
+        right = GameModel.Option(rawValue: Int.random(in: 0...1))!
+
+        switch right {
+        case .left:
+            firstAnimalImageView.image = animal.image
+            secondAnimalImageView.image = image
+        case .right:
+            secondAnimalImageView.image = animal.image
+            firstAnimalImageView.image = image
+        }
+        firstCloud.image = UIImage(named: "icAnimalCloud")
+        secondCloud.image = UIImage(named: "icAnimalCloud")
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0.0,
+            usingSpringWithDamping: 0.9,
+            initialSpringVelocity: 1,
+            options: [],
+            animations: {
+                self.firstItem.alpha = 1.0
+                self.secondItem.alpha = 1.0
+                self.firstItem.isHidden = false
+                self.secondItem.isHidden = false
+                self.stackView.layoutIfNeeded()
+        })
+        let rusName = animal.name
+        characterLabel.text = String(rusName.first!)
+        animalLabel.text = rusName
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: animal.sound)
+        } catch {
+            print("no file)")
+        }
+        audioPlayer?.play()
     }
 
     func result(view: UIView, answer: GameModel.Option) {
@@ -139,6 +192,7 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
     }
 
     func playAnimation() {
+        animationView.isHidden = false
         let name = ChoiceAnimal.fireworks.randomElement()!
         let av = Animation.named(name)
         animationView.animation = av
@@ -149,6 +203,13 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
         return right == answer
     }
 
+    private func reset() {
+        isDone = false
+        animationView.isHidden = true
+        seconds = 0
+        fireTimer()
+    }
+
     func fireTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
             guard let self = self else { return }
@@ -156,31 +217,22 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
         }
     }
 
-    func displayChoice(animal: AnimalsGame.Animal, image: UIImage) {
-        right = GameModel.Option(rawValue: Int(arc4random_uniform(2)))!
-        switch right {
-        case .left:
-            firstAnimalImageView.image = animal.image
-            secondAnimalImageView.image = image
-        case .right:
-            secondAnimalImageView.image = animal.image
-            firstAnimalImageView.image = image
+    private func randomAnimal(from: AnimalsGame.Animal) -> AnimalsGame.Animal {
+        let all = input.allAnimals
+        let index = Int.random(in: 0..<all.count)
+        if all[index] == from {
+            let newIndex = index < 47 ?  index + 1 : index - 1
+            return all[newIndex]
+        } else {
+            return all[index]
         }
-        let rusName = animal.name
-        characterLabel.text = String(rusName.first!)
-        animalLabel.text = rusName
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: animal.sound)
-        } catch {
-            print("no file)")
-        }
-        audioPlayer?.play()
     }
 
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("end playing")
         if isDone {
-            output.nextChoice(isRight, Int(seconds))
+            output.result(isRight, Int(seconds))
+            nextAnimal()
         }
     }
 }
