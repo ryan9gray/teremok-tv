@@ -101,8 +101,8 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
             let name = item.name
         else { return }
 
-        imageLoader.dataFrom(url: pictureURL) { [unowned self] art in
-            self.videoService.hlsDownload(url: link, name: name, art: art, id: id)
+        imageLoader.dataFrom(url: pictureURL) { [weak self] art in
+            self?.videoService.hlsDownload(url: link, name: name, art: art, id: id)
         }
     }
 

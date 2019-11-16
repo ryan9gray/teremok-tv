@@ -16,7 +16,6 @@ class Asset: DefaultsObject {
     }
 }
 
-
 class Stream: DefaultsObject {
     var name: String? = ""
     var streamID: Int = 0

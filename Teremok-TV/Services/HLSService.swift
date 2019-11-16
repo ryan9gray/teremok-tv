@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 import UIKit
+import ObjectMapper
 
 fileprivate let backgroundIdentifier = "ru.xmedia.teremoktv.hlsBackground"
 fileprivate let notificationIdentifier = "teremoktv"
@@ -20,6 +21,7 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     }
     var isDownLoad = false
     var list: Set<Stream> = Set()
+    let assets: HLSAssets = HLSAssets.fromDefaults()
 
     lazy private var downloadSession: AVAssetDownloadURLSession = {
         let configuration = URLSessionConfiguration.background(withIdentifier: backgroundIdentifier)
@@ -38,6 +40,8 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     }
 
     private func addToList(_ stream: Stream) {
+        guard !assets.streams.contains(where: { $0.stream?.name == stream.name }) else { return }
+
         list.insert(stream)
         guard !isDownLoad else { return }
 
@@ -62,6 +66,7 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     }
     
     private func download(_ stream: Stream) {
+        isDownLoad = true
         guard let url = stream.playListURL else { return }
         let asset = AVURLAsset(url: url)
         guard let task =
@@ -108,15 +113,14 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         guard let stream = list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) else { return }
         self.location = location
         let asset: Asset = .init(url: location, stream: stream)
-        let assets = HLSAssets.fromDefaults()
         assets.streams.append(asset)
         assets.saveToDefaults()
         print("\(location)")
     }
 
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        isDownLoad = false
         guard let task = task as? AVAggregateAssetDownloadTask else { return }
-        let assets = HLSAssets.fromDefaults()
         guard
             let asset = assets.streams.first(where: { $0.stream?.playListURL == task.urlAsset.url }),
             let localFileLocation = asset.url
@@ -135,12 +139,10 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
                 } catch {
                     print("An error occured trying to delete the contents on disk for : \(error)")
                 }
-
             case (NSURLErrorDomain, NSURLErrorUnknown):
-                fatalError("Downloading HLS streams is not supported in the simulator.")
-
+                print("An error occured trying to delete the contents on disk for : \(error)")
             default:
-                fatalError("An unexpected error occured \(error.domain)")
+                print("An error occured trying to delete the contents on disk for : \(error)")
             }
         } else {
             do {

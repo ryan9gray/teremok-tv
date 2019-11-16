@@ -76,7 +76,6 @@ final class Profile: Mappable  {
     var premiumMusic: Bool = false
     var premiumGame: Bool = false
 
-
     required init?(map: Map) { }
     
     func mapping(map: Map) {
@@ -96,8 +95,6 @@ final class Profile: Mappable  {
         let map = Map(mappingType: .fromJSON, JSON: Mapper<ProfileResponse>().toJSON(profileRequest))
         mapping(map: map)
     }
-
-
 }
 
 enum Premium {
@@ -108,14 +105,11 @@ enum Premium {
 }
 
 final class Child: Mappable  {
-
     var name: String?
     var id: String?
     var pic: String?
     var current: Bool?
-    
     var birthdate: Date?
-    /** Пол */
     var sex: Sex?
     
     var birthDateString: String? {
@@ -136,11 +130,9 @@ final class Child: Mappable  {
         id       <- map["id"]
         name     <- map["name"]
         sex     <- map["sex"]
-
         pic     <- map["pic"]
         current     <- map["current"]
         birthdate <- (map["birthdate"], CustomDateFormatTransform(formatString: "dd.MM.yyyy"))
-        
     }
     init(with profile: ChildResponse) {
         let map = Map(mappingType: .fromJSON, JSON: Mapper<ChildResponse>().toJSON(profile))
@@ -149,30 +141,5 @@ final class Child: Mappable  {
     func updateDataWith(_ profileRequest: ChildResponse) {
         let map = Map(mappingType: .fromJSON, JSON: Mapper<ChildResponse>().toJSON(profileRequest))
         mapping(map: map)
-    }
-    
-}
-struct DateModel {
-    var date: String?
-    var formattingDateString: String?
-    
-    init(date: String?, formattingDateString: String?) {
-        self.date = date
-        self.formattingDateString = formattingDateString
-    }
-    
-    init?(date: Date, format: String) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
-        dateFormatter.locale = Locale(identifier: "ru")
-        dateFormatter.timeZone = TimeZone.current
-        
-        let dateString = dateFormatter.string(from: date)
-        self.date = dateString
-        if date.startOfDay == Date().startOfDay {
-            formattingDateString = "Сегодня"
-        } else {
-            formattingDateString = date.short2DateString
-        }
     }
 }

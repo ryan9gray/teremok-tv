@@ -37,6 +37,13 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     let service: FavProtocol = FavService()
     var actionService: ActionProtocol = ActionService()
 
+    init() {
+         NotificationCenter.default.addObserver(self, selector: #selector(self.fetchSaved), name: .FavBadge, object: nil)
+     }
+     deinit {
+         NotificationCenter.default.removeObserver(self, name: .FavBadge, object: nil)
+     }
+
     func fetchFav() {
         fetchSaved()
         fetchLike()
@@ -60,7 +67,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
 
     var hlsStreams: [Asset] = []
 
-    func fetchSaved() {
+    @objc func fetchSaved() {
         if let list = getList() {
             DispatchQueue.global().async {
                 self.savedVideos = list.filter({$0.pathExtension == "mp4"}).sorted { $0.lastPathComponent < $1.lastPathComponent }
@@ -84,8 +91,10 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     }
 
     func appendHLS() {
-        self.hlsStreams = HLSAssets.fromDefaults().streams
-        for asset in self.hlsStreams {
+        let fileManager = FileManager.default
+        let hlsAsset = HLSAssets.fromDefaults()
+        hlsStreams = hlsAsset.streams
+        for (index, asset) in self.hlsStreams.enumerated() {
             guard let bookmark = asset.bookmark else { return }
             var bookmarkDataIsStale = false
             do {
@@ -93,10 +102,19 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                 if bookmarkDataIsStale {
                     fatalError("Bookmark data is stale!")
                 }
+                guard fileManager.fileExists(atPath: location.path) else {
+                    hlsStreams.remove(at: index)
+                    hlsAsset.streams = hlsStreams
+                    hlsAsset.saveToDefaults()
+                    continue
+                }
                 offlineVideos.append(
                     Fav.OfflineVideoModel(id: asset.stream?.streamID.stringValue ?? "", videoUrl: location, image: .data(asset.stream?.art))
                 )
             } catch {
+                hlsStreams.remove(at: index)
+                hlsAsset.streams = hlsStreams
+                hlsAsset.saveToDefaults()
                 continue
             }
         }
