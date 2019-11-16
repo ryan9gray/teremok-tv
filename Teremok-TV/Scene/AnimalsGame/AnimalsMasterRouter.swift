@@ -40,10 +40,10 @@ class AnimalsMasterRouter: AnimalsMasterRoutingLogic, AnimalsMasterDataPassing {
     // Parent
     func introduceController<T: GameViewController>(viewController: T, completion: @escaping (Bool) -> Void)
     where T: IntroduceViewController {
-        childVC?.view.isHidden = true
+        modalChildVC?.view.isHidden = true
         viewController.setAction { [weak self] finish in
-            self?.childVC?.view.isHidden = false
             completion(finish)
+            self?.modalChildVC?.view.isHidden = false
         }
         viewController.modalPresentationStyle = .fullScreen
         self.viewController?.present(viewController, animated: true, completion: nil)
