@@ -38,7 +38,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     var actionService: ActionProtocol = ActionService()
 
     init() {
-         NotificationCenter.default.addObserver(self, selector: #selector(self.fetchSaved), name: .FavBadge, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(self.badge), name: .FavBadge, object: nil)
      }
      deinit {
          NotificationCenter.default.removeObserver(self, name: .FavBadge, object: nil)
@@ -65,9 +65,19 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         }
     }
 
+    @objc func badge(_ notification: Notification) {
+        guard
+            let info = notification.userInfo,
+            let fav = info["Fav"] as? Int,
+            fav > 0
+        else { return }
+
+        fetchSaved()
+    }
+
     var hlsStreams: [Asset] = []
 
-    @objc func fetchSaved() {
+    func fetchSaved() {
         if let list = getList() {
             DispatchQueue.global().async {
                 self.savedVideos = list.filter({$0.pathExtension == "mp4"}).sorted { $0.lastPathComponent < $1.lastPathComponent }

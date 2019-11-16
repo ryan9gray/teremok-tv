@@ -21,7 +21,6 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     }
     var isDownLoad = false
     var list: Set<Stream> = Set()
-    let assets: HLSAssets = HLSAssets.fromDefaults()
 
     lazy private var downloadSession: AVAssetDownloadURLSession = {
         let configuration = URLSessionConfiguration.background(withIdentifier: backgroundIdentifier)
@@ -33,13 +32,12 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     }()
 
     func assetDownload(url: URL, name: String, art: Data?, id: Int) {
-        //let exumple = URL(string: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8")!
-        print("\(art == nil)")
         let video: Stream = .init(playListURL: url, name: name, art: art, id: id)
         addToList(video)
     }
 
     private func addToList(_ stream: Stream) {
+        let assets = HLSAssets.fromDefaults()
         guard !assets.streams.contains(where: { $0.stream?.name == stream.name }) else { return }
 
         list.insert(stream)
@@ -105,21 +103,23 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         NotificationCenter.default.post(name: .UploadProgress, object: percentComplete)
     }
 
-    var location: URL?
-
     func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
                     willDownloadTo location: URL
     ) {
-        guard let stream = list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) else { return }
-        self.location = location
-        let asset: Asset = .init(url: location, stream: stream)
-        assets.streams.append(asset)
-        assets.saveToDefaults()
-        print("\(location)")
+        DispatchQueue.main.async {
+            let assets = HLSAssets.fromDefaults()
+            guard let stream = self.list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) else { return }
+            let asset: Asset = .init(url: location, stream: stream)
+            assets.streams.append(asset)
+            assets.saveToDefaults()
+            print("\(location)")
+        }
     }
 
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        isDownLoad = false
+        DispatchQueue.main.async {
+        let assets = HLSAssets.fromDefaults()
+        self.isDownLoad = false
         guard let task = task as? AVAggregateAssetDownloadTask else { return }
         guard
             let asset = assets.streams.first(where: { $0.stream?.playListURL == task.urlAsset.url }),
@@ -154,6 +154,7 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
             }
         }
         NotificationCenter.default.post(name: .FavBadge, object: asset.stream?.name ?? "", userInfo: ["Fav": 1])
+    }
     }
     /// Return the display names for the media selection options that are currently selected in the specified group
     func displayNamesForSelectedMediaOptions(_ mediaSelection: AVMediaSelection) -> String {
