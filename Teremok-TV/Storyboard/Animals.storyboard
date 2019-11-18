@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Shnobel-Regular.otf">
+        <array key="Shnobelregular.ttf">
             <string>Shnobel-Regular</string>
         </array>
         <array key="appetite.ttf">
@@ -272,7 +272,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPrincesMain" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-RZ-KnF">
-                                <rect key="frame" x="78.333333333333343" y="153.99999999999997" width="260" height="221.00000000000009"/>
+                                <rect key="frame" x="78.333333333333314" y="153.99999999999997" width="260" height="221.00000000000009"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsy-RI-5Ry" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
                                 <rect key="frame" x="728" y="300" width="54" height="54"/>
