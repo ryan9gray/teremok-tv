@@ -31,6 +31,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     var savedVideos: [URL] = []
 
     var offlineVideos: [Fav.OfflineVideoModel] = []
+    var hlsVideos: [Fav.OfflineVideoModel] = []
 
     var presenter: FavPresentationLogic?
 
@@ -45,7 +46,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
      }
 
     func fetchFav() {
-        fetchSaved()
+        fetchAllSaved()
         fetchLike()
     }
     
@@ -72,12 +73,30 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
             fav > 0
         else { return }
 
-        fetchSaved()
+
+        fetchAllSaved()
+    }
+
+    func fetchAllSaved() {
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+        dispatchGroup.enter()
+        fetchLocalSaved {
+            dispatchGroup.leave()
+        }
+        appendHLS {
+            dispatchGroup.leave()
+        }
+        dispatchGroup.notify(queue: .main) {
+            let ids = (self.offlineVideos.map { $0.id } + self.hlsVideos.map { $0.id }).compactMap { Int($0) }
+            self.syncDownloads(ids: ids)
+            self.presenter?.presentSaved(models: self.hlsVideos + self.offlineVideos)
+        }
     }
 
     var hlsStreams: [Asset] = []
 
-    func fetchSaved() {
+    func fetchLocalSaved(completion: @escaping () -> Void) {
         if let list = getList() {
             DispatchQueue.global().async {
                 self.savedVideos = list.filter({$0.pathExtension == "mp4"}).sorted { $0.lastPathComponent < $1.lastPathComponent }
@@ -93,40 +112,49 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                     let offlineVideoModel = Fav.OfflineVideoModel(id: id, videoUrl: videoUrl, image: .url(pngUrl))
                     self.offlineVideos.append(offlineVideoModel)
                 }
-                self.appendHLS()
-                self.presenter?.presentSaved(models: self.offlineVideos)
-                self.syncDownloads(ids: ids)
+                DispatchQueue.main.async {
+                    self.presenter?.presentSaved(models: self.offlineVideos)
+                    self.syncDownloads(ids: ids)
+                    completion()
+                }
             }
         }
     }
 
-    func appendHLS() {
-        let fileManager = FileManager.default
-        let hlsAsset = HLSAssets.fromDefaults()
-        hlsStreams = hlsAsset.streams
-        for (index, asset) in self.hlsStreams.enumerated() {
-            guard let bookmark = asset.bookmark else { return }
-            var bookmarkDataIsStale = false
-            do {
-                let location = try URL(resolvingBookmarkData: bookmark, bookmarkDataIsStale: &bookmarkDataIsStale)
-                if bookmarkDataIsStale {
-                    fatalError("Bookmark data is stale!")
+    func appendHLS(completion: @escaping () -> Void) {
+        DispatchQueue.global().async {
+            self.hlsVideos = []
+            let fileManager = FileManager.default
+                let hlsAsset = HLSAssets.fromDefaults()
+                self.hlsStreams = hlsAsset.streams
+                for (index, asset) in self.hlsStreams.enumerated() {
+                    guard let bookmark = asset.bookmark else { return }
+                    var bookmarkDataIsStale = false
+                    do {
+                        let location = try URL(resolvingBookmarkData: bookmark, bookmarkDataIsStale: &bookmarkDataIsStale)
+                        if bookmarkDataIsStale {
+                            fatalError("Bookmark data is stale!")
+                        }
+                        guard fileManager.fileExists(atPath: location.path) else {
+                            self.hlsStreams.remove(at: index)
+                            hlsAsset.streams = self.hlsStreams
+                            hlsAsset.saveToDefaults()
+                            continue
+                        }
+                        self.hlsVideos.append(
+                            Fav.OfflineVideoModel(id: asset.stream?.streamID.stringValue ?? "", videoUrl: location, image: .data(asset.stream?.art))
+                        )
+                    } catch {
+                        self.hlsStreams.remove(at: index)
+                        hlsAsset.streams = self.hlsStreams
+                        hlsAsset.saveToDefaults()
+                        continue
+                    }
                 }
-                guard fileManager.fileExists(atPath: location.path) else {
-                    hlsStreams.remove(at: index)
-                    hlsAsset.streams = hlsStreams
-                    hlsAsset.saveToDefaults()
-                    continue
+                DispatchQueue.main.async {
+                    self.presenter?.presentSaved(models: self.hlsVideos)
+                    completion()
                 }
-                offlineVideos.append(
-                    Fav.OfflineVideoModel(id: asset.stream?.streamID.stringValue ?? "", videoUrl: location, image: .data(asset.stream?.art))
-                )
-            } catch {
-                hlsStreams.remove(at: index)
-                hlsAsset.streams = hlsStreams
-                hlsAsset.saveToDefaults()
-                continue
-            }
         }
     }
 
@@ -174,7 +202,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
         } else if let video = offlineVideos[safe: idx] {
             removeModel(video)
         }
-        fetchSaved()
+        fetchAllSaved()
     }
     
     func removeModel(_ video: Fav.OfflineVideoModel) {

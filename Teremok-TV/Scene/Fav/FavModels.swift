@@ -13,20 +13,22 @@
 import UIKit
 
 enum Fav {
-    // MARK: Use cases
-
     enum ImageType {
         case url(URL?)
         case data(Data?)
     }
     struct Item {
-        var image: ImageType
+        let image: ImageType
+    }
+
+    struct DownloadModel {
+        var progress: Float
     }
     
     struct OfflineVideoModel {
-        var id: String
-        var videoUrl: URL
-        var image: ImageType
+        let id: String
+        let videoUrl: URL
+        let image: ImageType
     }
     
     enum Section: CaseIterable {
