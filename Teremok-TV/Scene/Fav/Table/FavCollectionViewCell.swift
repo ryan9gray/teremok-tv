@@ -38,5 +38,20 @@ class FavCollectionViewCell: PreviewImageCollectionViewCell {
 
         imageView.image = image
     }
+    
+    func configure(progress: ((Int) -> Void) -> Void) {
+        let downloadView = DownloadFavView.fromNib()
+        contentView.addSubview(downloadView)
+        downloadView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+             downloadView.topAnchor.constraint(equalTo: contentView.topAnchor),
+             downloadView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+             downloadView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+             downloadView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+        ])
+        progress { progress in
+            downloadView.set(progress: progress.stringValue)
+        }
+      }
 }
 

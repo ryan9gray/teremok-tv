@@ -88,8 +88,11 @@ class FavViewController: AbstracViewController, FavDisplayLogic {
         self.fav.append(contentsOf: fav)
         reloadData()
     }
-    
+
+    var currentDownloads:  [Int : ((Int) -> Void) -> Void] = [:]
+
     func display(saved: [Fav.Item]) {
+        currentDownloads = HLSDownloadService.shared.currrentDownloads
         hidePreloader()
         self.saved = saved
         reloadData()
@@ -143,7 +146,7 @@ extension FavViewController: UITableViewDataSource, UITableViewDelegate {
         if section == 0, fav.isEmpty {
             return 0
         }
-        if section == 1, saved.isEmpty {
+        if section == 1, saved.isEmpty, currentDownloads.isEmpty {
             return 0
         }
         return 1
@@ -180,7 +183,7 @@ extension FavViewController: UICollectionViewDataSource {
         case 0:
             return fav.count
         case 1:
-            return saved.count
+            return saved.count + currentDownloads.keys.count
         default:
             return 0
         }
@@ -194,11 +197,18 @@ extension FavViewController: UICollectionViewDataSource {
             }
         }
         if collectionView.tag == 1 {
-            switch saved[indexPath.row].image {
-                case .url(let url):
-                    cell.configure(url: url)
-                case .data(let data):
-                    cell.configure(data: data)
+            let dounloadsCount = currentDownloads.keys.count
+            if dounloadsCount > indexPath.row {
+                if let progress = currentDownloads[0] {
+                    cell.configure(progress: progress)
+                }
+            } else {
+                switch saved[indexPath.row-dounloadsCount].image {
+                    case .url(let url):
+                        cell.configure(url: url)
+                    case .data(let data):
+                        cell.configure(data: data)
+                }
             }
         }
         cell.ip = IndexPath(row: indexPath.row, section: collectionView.tag)

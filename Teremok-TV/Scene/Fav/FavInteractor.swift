@@ -73,7 +73,6 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
             fav > 0
         else { return }
 
-
         fetchAllSaved()
     }
 
@@ -114,12 +113,12 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                 }
                 DispatchQueue.main.async {
                     self.presenter?.presentSaved(models: self.offlineVideos)
-                    self.syncDownloads(ids: ids)
                     completion()
                 }
             }
         }
     }
+
 
     func appendHLS(completion: @escaping () -> Void) {
         DispatchQueue.global().async {
@@ -192,7 +191,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     func deleteLocalVideo(idx: Int) {
         if idx > (savedVideos.count - 1) {
             let stream = HLSAssets.fromDefaults()
-            let assetIndex = stream.streams.firstIndex(of: hlsStreams[idx-(offlineVideos.count - 1)])!
+            let assetIndex = stream.streams.firstIndex(of: hlsStreams[idx-(offlineVideos.count)])!
             if let localFileLocation = stream.streams[assetIndex].url {
                 try? FileManager.default.removeItem(at: localFileLocation)
             }

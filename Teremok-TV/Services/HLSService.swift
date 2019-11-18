@@ -89,6 +89,8 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         NotificationCenter.default.post(name: .UploadProgress, object: 1.0)
     }
 
+    var currrentDownloads: [Int : ((Int) -> Void) -> Void] = [:]
+
     func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
                     didLoad timeRange: CMTimeRange, totalTimeRangesLoaded loadedTimeRanges: [NSValue],
                     timeRangeExpectedToLoad: CMTimeRange, for mediaSelection: AVMediaSelection
@@ -100,6 +102,13 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
                 loadedTimeRange.duration.seconds / timeRangeExpectedToLoad.duration.seconds
         }
         print("\(percentComplete)")
+
+        let percent = Int(percentComplete*100)
+        if let stream = self.list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) {
+            let tyy: ((Int) -> Void) -> Void = { _ in percent}
+            currrentDownloads[0] = tyy
+
+        }
         NotificationCenter.default.post(name: .UploadProgress, object: percentComplete)
     }
 
@@ -108,7 +117,10 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     ) {
         DispatchQueue.main.async {
             let assets = HLSAssets.fromDefaults()
-            guard let stream = self.list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) else { return }
+            guard
+                let stream = self.list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url })
+            else { return }
+
             let asset: Asset = .init(url: location, stream: stream)
             assets.streams.append(asset)
             assets.saveToDefaults()
