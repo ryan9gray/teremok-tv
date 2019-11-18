@@ -88,7 +88,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
             dispatchGroup.leave()
         }
         dispatchGroup.notify(queue: .main) {
-            let ids = (self.offlineVideos.map { $0.id } + self.hlsVideos.map { $0.id }).compactMap { Int($0) }
+            let ids = (self.offlineVideos + self.hlsVideos).compactMap { Int($0.id) }
             self.syncDownloads(ids: ids)
             self.presenter?.presentSaved(models: self.hlsVideos + self.offlineVideos)
         }
