@@ -81,9 +81,9 @@ class OnDemandLoader {
         if !LocalStore.secondAnimalsIntroduce {
             files.append(Tags.OnDemand.introduceAnimals.rawValue)
         }
-        if !LocalStore.onBoarding {
-            files.append(Tags.Initial.onBoarding.rawValue)
-        }
+//        if !LocalStore.onBoarding {
+//            files.append(Tags.Initial.onBoarding.rawValue)
+//        }
         return files
     }
 

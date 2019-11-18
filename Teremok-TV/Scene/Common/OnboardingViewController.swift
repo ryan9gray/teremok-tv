@@ -28,19 +28,20 @@ class OnboardingViewController: UIViewController {
     }
 
     func access() {
-        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
-            if available {
-                DispatchQueue.main.async {
-                self.playVideo()
-                }
-              } else {
-                self.bundleResourceRequest.beginAccessingResources { error in
-                    DispatchQueue.main.async {
-                    self.playVideo()
-                    }
-                  }
-              }
-        }
+        playVideo()
+//        bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
+//            if available {
+//                DispatchQueue.main.async {
+//                self.playVideo()
+//                }
+//              } else {
+//                self.bundleResourceRequest.beginAccessingResources { error in
+//                    DispatchQueue.main.async {
+//                    self.playVideo()
+//                    }
+//                  }
+//              }
+//        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
