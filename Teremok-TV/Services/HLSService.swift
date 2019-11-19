@@ -37,6 +37,8 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         addToList(video)
     }
 
+    var currentStream: Stream?
+
     private func addToList(_ stream: Stream) {
         let assets = HLSAssets.fromDefaults()
         guard !assets.streams.contains(where: { $0.stream?.name == stream.name }) else { return }
@@ -66,6 +68,7 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     
     private func download(_ stream: Stream) {
         isDownLoad = true
+        currentStream = stream
         guard let url = stream.playListURL else { return }
         let asset = AVURLAsset(url: url)
         guard let task =

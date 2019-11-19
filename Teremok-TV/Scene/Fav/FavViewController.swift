@@ -187,8 +187,7 @@ extension FavViewController: UICollectionViewDataSource {
         case 0:
             return fav.count
         case 1:
-            let count = saved.count //+ extraDownload
-            return count
+            return saved.count + extraDownload
         default:
             return 0
         }
@@ -204,7 +203,7 @@ extension FavViewController: UICollectionViewDataSource {
         if collectionView.tag == 1 {
             let haveDownload = HLSDownloadService.shared.isDownLoad
             if haveDownload, indexPath.row == 0 {
-                cell.configureProgress()
+                cell.configureProgress(data: HLSDownloadService.shared.currentStream?.art)
             } else {
                 switch saved[indexPath.row - (haveDownload ? 1 : 0)].image {
                     case .url(let url):

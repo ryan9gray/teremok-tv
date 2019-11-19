@@ -33,17 +33,25 @@ class FavCollectionViewCell: PreviewImageCollectionViewCell {
     func configure(url: URL?) {
         guard let url = url else { return }
         linktoLoad = url.absoluteString
+        imageView.alpha = 1
+        NotificationCenter.default.removeObserver(self, name: .AssetDownloadProgress, object: nil)
     }
 
     func configure(data: Data?) {
         guard let data = data, let image = UIImage(data: data) else { return }
-
+        imageView.alpha = 1
         imageView.image = image
+        NotificationCenter.default.removeObserver(self, name: .AssetDownloadProgress, object: nil)
     }
     
-    func configureProgress() {
+    func configureProgress(data: Data?) {
+        if let data = data, let image = UIImage(data: data) {
+            imageView.image = image
+        } else {
+            imageView.backgroundColor = UIColor.Label.gray
+        }
+        imageView.alpha = 0.7
         countLabel.isHidden = false
-        imageView.backgroundColor = UIColor.Label.gray
 
         NotificationCenter.default.addObserver(self, selector: #selector(handleAssetDownloadProgress(_:)),
                                        name: .AssetDownloadProgress, object: nil)

@@ -21,7 +21,7 @@ protocol FavBusinessLogic {
 protocol FavDataStore {
     var videoModels: [VideoModel] { get set }
     var savedVideos: [URL] { get set }
-    var offlineVideos: [Fav.OfflineVideoModel] { get set }
+    var offlineVideos: [Fav.OfflineVideoModel] { get }
     var hlsStreams: [Asset] { get set }
     func deleteLocalVideo(idx: Int)
 }
@@ -30,7 +30,10 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     var videoModels: [VideoModel] = []
     var savedVideos: [URL] = []
 
-    var offlineVideos: [Fav.OfflineVideoModel] = []
+    var offlineVideos: [Fav.OfflineVideoModel] {
+        localVideos + hlsVideos
+    }
+    var localVideos: [Fav.OfflineVideoModel] = []
     var hlsVideos: [Fav.OfflineVideoModel] = []
 
     var presenter: FavPresentationLogic?
@@ -87,9 +90,9 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
             dispatchGroup.leave()
         }
         dispatchGroup.notify(queue: .main) {
-            let ids = (self.offlineVideos + self.hlsVideos).compactMap { Int($0.id) }
+            let ids = (self.localVideos + self.hlsVideos).compactMap { Int($0.id) }
             self.syncDownloads(ids: ids)
-            self.presenter?.presentSaved(models: self.hlsVideos + self.offlineVideos)
+            self.presenter?.presentSaved(models: self.offlineVideos)
         }
     }
 
@@ -100,7 +103,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
             DispatchQueue.global().async {
                 self.savedVideos = list.filter({$0.pathExtension == "mp4"}).sorted { $0.lastPathComponent < $1.lastPathComponent }
                 let savedPics = list.filter({$0.pathExtension == "png"}).sorted { $0.lastPathComponent < $1.lastPathComponent }
-                self.offlineVideos = []
+                self.localVideos = []
                 var ids: [Int] = []
                 for videoUrl in self.savedVideos {
                     let id = videoUrl.deletingPathExtension().lastPathComponent
@@ -109,10 +112,10 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                     }
                     let pngUrl = savedPics.filter({$0.deletingPathExtension().lastPathComponent == id}).first
                     let offlineVideoModel = Fav.OfflineVideoModel(id: id, videoUrl: videoUrl, image: .url(pngUrl))
-                    self.offlineVideos.append(offlineVideoModel)
+                    self.localVideos.append(offlineVideoModel)
                 }
                 DispatchQueue.main.async {
-                    self.presenter?.presentSaved(models: self.offlineVideos)
+                    self.presenter?.presentSaved(models: self.localVideos)
                     completion()
                 }
             }
@@ -192,14 +195,14 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     func deleteLocalVideo(idx: Int) {
         if idx > (savedVideos.count - 1) {
             let stream = HLSAssets.fromDefaults()
-            let assetIndex = stream.streams.firstIndex(of: hlsStreams[idx-(offlineVideos.count)])!
+            let assetIndex = stream.streams.firstIndex(of: hlsStreams[idx-(localVideos.count)])!
             if let localFileLocation = stream.streams[assetIndex].url {
                 try? FileManager.default.removeItem(at: localFileLocation)
             }
             stream.streams.remove(at: assetIndex)
             stream.saveToDefaults()
 
-        } else if let video = offlineVideos[safe: idx] {
+        } else if let video = localVideos[safe: idx] {
             removeModel(video)
         }
         fetchAllSaved()
