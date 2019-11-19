@@ -39,10 +39,10 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
     var actionService: ActionProtocol = ActionService()
 
     init() {
-         NotificationCenter.default.addObserver(self, selector: #selector(self.badge), name: .FavBadge, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(self.badge), name: .AssetDownloadStateChanged, object: nil)
      }
      deinit {
-         NotificationCenter.default.removeObserver(self, name: .FavBadge, object: nil)
+         NotificationCenter.default.removeObserver(self, name: .AssetDownloadStateChanged, object: nil)
      }
 
     func fetchFav() {
@@ -121,13 +121,14 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
 
 
     func appendHLS(completion: @escaping () -> Void) {
-        DispatchQueue.global().async {
+        DispatchQueue.global(qos: .userInteractive).async {
             self.hlsVideos = []
             let fileManager = FileManager.default
                 let hlsAsset = HLSAssets.fromDefaults()
                 self.hlsStreams = hlsAsset.streams
                 for (index, asset) in self.hlsStreams.enumerated() {
-                    guard let bookmark = asset.bookmark else { return }
+                    guard let bookmark = asset.bookmark else { continue }
+
                     var bookmarkDataIsStale = false
                     do {
                         let location = try URL(resolvingBookmarkData: bookmark, bookmarkDataIsStale: &bookmarkDataIsStale)
@@ -140,6 +141,7 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                             hlsAsset.saveToDefaults()
                             continue
                         }
+
                         self.hlsVideos.append(
                             Fav.OfflineVideoModel(id: asset.stream?.streamID.stringValue ?? "", videoUrl: location, image: .data(asset.stream?.art))
                         )
@@ -147,10 +149,9 @@ class FavInteractor: FavBusinessLogic, FavDataStore {
                         self.hlsStreams.remove(at: index)
                         hlsAsset.streams = self.hlsStreams
                         hlsAsset.saveToDefaults()
-                        continue
                     }
                 }
-                DispatchQueue.main.async {
+                DispatchQueue.main.sync {
                     self.presenter?.presentSaved(models: self.hlsVideos)
                     completion()
                 }

@@ -17,7 +17,8 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     static let shared = HLSDownloadService()
     override init() {
         super.init()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.done), name: .FavBadge, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.done), name: .AssetDownloadStateChanged, object: nil)
+        
     }
     var isDownLoad = false
     var list: Set<Stream> = Set()
@@ -80,16 +81,16 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         task.resume()
     }
 
-    func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
-                       didCompleteFor mediaSelection: AVMediaSelection
+    func urlSession(
+        _ session: URLSession,
+        aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
+        didCompleteFor mediaSelection: AVMediaSelection
     ) {
         guard let video = list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) else { return }
         aggregateAssetDownloadTask.taskDescription = video.name
         aggregateAssetDownloadTask.resume()
         NotificationCenter.default.post(name: .UploadProgress, object: 1.0)
     }
-
-    var currrentDownloads: [Int : ((Int) -> Void) -> Void] = [:]
 
     func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
                     didLoad timeRange: CMTimeRange, totalTimeRangesLoaded loadedTimeRanges: [NSValue],
@@ -102,18 +103,21 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
                 loadedTimeRange.duration.seconds / timeRangeExpectedToLoad.duration.seconds
         }
         print("\(percentComplete)")
-
         let percent = Int(percentComplete*100)
-        if let stream = self.list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) {
-            let tyy: ((Int) -> Void) -> Void = { _ in percent}
-            currrentDownloads[0] = tyy
 
+        if let stream = self.list.first(where: { $0.playListURL == aggregateAssetDownloadTask.urlAsset.url }) {
+            var userInfo = [String: Any]()
+            userInfo["streamID"] = stream.streamID
+            NotificationCenter.default.post(name: .AssetDownloadProgress, object: percent, userInfo: userInfo)
         }
+
         NotificationCenter.default.post(name: .UploadProgress, object: percentComplete)
     }
 
-    func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
-                    willDownloadTo location: URL
+    func urlSession(
+        _ session: URLSession,
+        aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,
+        willDownloadTo location: URL
     ) {
         DispatchQueue.main.async {
             let assets = HLSAssets.fromDefaults()
@@ -125,6 +129,7 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
             assets.streams.append(asset)
             assets.saveToDefaults()
             print("\(location)")
+            NotificationCenter.default.post(name: .FavBadge, object: stream.name ?? "", userInfo: ["Fav": 1])
         }
     }
 
@@ -165,7 +170,7 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
                 print("Failed to create bookmarkData for download URL.")
             }
         }
-        NotificationCenter.default.post(name: .FavBadge, object: asset.stream?.name ?? "", userInfo: ["Fav": 1])
+        NotificationCenter.default.post(name: .AssetDownloadStateChanged, object: asset.stream?.name ?? "", userInfo: ["Fav": 1])
     }
     }
     /// Return the display names for the media selection options that are currently selected in the specified group
@@ -201,12 +206,7 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
 }
 
 extension Notification.Name {
-    /// Notification for when download progress has changed.
     static let AssetDownloadProgress = Notification.Name(rawValue: "AssetDownloadProgressNotification")
 
-    /// Notification for when the download state of an Asset has changed.
     static let AssetDownloadStateChanged = Notification.Name(rawValue: "AssetDownloadStateChangedNotification")
-
-    /// Notification for when AssetPersistenceManager has completely restored its state.
-    static let AssetPersistenceManagerDidRestoreState = Notification.Name(rawValue: "AssetPersistenceManagerDidRestoreStateNotification")
 }

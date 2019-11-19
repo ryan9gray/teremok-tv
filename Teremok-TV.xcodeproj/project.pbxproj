@@ -95,8 +95,6 @@
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
 		257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CD281236E21F600BE96A4 /* GCPlayer.swift */; };
 		25B419E52383480D001BFAED /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B419E42383480D001BFAED /* DisposeBag.swift */; };
-		25B419E723834F34001BFAED /* DownloadFavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B419E623834F34001BFAED /* DownloadFavView.swift */; };
-		25B419E923834F4E001BFAED /* DownloadFavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25B419E823834F4E001BFAED /* DownloadFavView.xib */; };
 		25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EF92368E4A90033D9CA /* Subscription.swift */; };
 		25C43EFD2368E4A90033D9CA /* SimpleSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */; };
 		25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFB2368E4A90033D9CA /* Subscriptions.swift */; };
@@ -903,8 +901,6 @@
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
 		257CD281236E21F600BE96A4 /* GCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPlayer.swift; sourceTree = "<group>"; };
 		25B419E42383480D001BFAED /* DisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
-		25B419E623834F34001BFAED /* DownloadFavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadFavView.swift; sourceTree = "<group>"; };
-		25B419E823834F4E001BFAED /* DownloadFavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadFavView.xib; sourceTree = "<group>"; };
 		25C43EF92368E4A90033D9CA /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSubscription.swift; sourceTree = "<group>"; };
 		25C43EFB2368E4A90033D9CA /* Subscriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
@@ -2874,8 +2870,6 @@
 		CADB3D6221F4829B009467B8 /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				25B419E623834F34001BFAED /* DownloadFavView.swift */,
-				25B419E823834F4E001BFAED /* DownloadFavView.xib */,
 				CA9AA3D0218469E100019CA7 /* FavCollectionViewCell.swift */,
 				CA9AA3D1218469E100019CA7 /* FavCollectionViewCell.xib */,
 				CA252525216F8492001986F5 /* FavTableViewHeader.swift */,
@@ -3665,7 +3659,6 @@
 				25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */,
 				CAD16DE92147E29400A82DBB /* Candy.json in Resources */,
 				CAD2105623170C69006F2F08 /* alphabetRight.wav in Resources */,
-				25B419E923834F4E001BFAED /* DownloadFavView.xib in Resources */,
 				CA652CEB2353510300291E4D /* happy_green_2.json in Resources */,
 				251E5176235A579000221BA2 /* ColorsGame_color_3.wav in Resources */,
 				CA5100B622F6EACF00821C25 /* alphavite_1_2.wav in Resources */,
@@ -4033,7 +4026,6 @@
 				CAE1C459211DC5BC0058C9C6 /* CommonDisplayLogic.swift in Sources */,
 				CAFF9857232530DE00003076 /* ColorsGameFlow.swift in Sources */,
 				CAB08B06214055F8002840E3 /* VideoItemResponse.swift in Sources */,
-				25B419E723834F34001BFAED /* DownloadFavView.swift in Sources */,
 				CAFF98522325305300003076 /* ColorsMasterModels.swift in Sources */,
 				CA7AAF532170B30B00747D4B /* SearchService.swift in Sources */,
 				CAEBC712212D858F00730891 /* UIRoundedButtonWithGradientAndShadow.swift in Sources */,

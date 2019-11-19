@@ -89,10 +89,11 @@ class FavViewController: AbstracViewController, FavDisplayLogic {
         reloadData()
     }
 
-    var currentDownloads:  [Int : ((Int) -> Void) -> Void] = [:]
+    var extraDownload: Int {
+        HLSDownloadService.shared.isDownLoad ? 1 : 0
+    }
 
     func display(saved: [Fav.Item]) {
-        currentDownloads = HLSDownloadService.shared.currrentDownloads
         hidePreloader()
         self.saved = saved
         reloadData()
@@ -112,9 +113,12 @@ extension FavViewController: UICollectionViewDelegate {
 
         switch collectionView.tag {
         case 0:
-            self.router?.navigateToFavPreview(number: indexPath.row)
+            router?.navigateToFavPreview(number: indexPath.row)
         case 1:
-            self.router?.navigateToSavedPreview(number: indexPath.row)
+            if HLSDownloadService.shared.isDownLoad && indexPath.row == 0 {
+                return
+            }
+            router?.navigateToSavedPreview(number: indexPath.row-extraDownload)
         default:
             break
         }
@@ -146,7 +150,7 @@ extension FavViewController: UITableViewDataSource, UITableViewDelegate {
         if section == 0, fav.isEmpty {
             return 0
         }
-        if section == 1, saved.isEmpty, currentDownloads.isEmpty {
+        if section == 1, saved.isEmpty, HLSDownloadService.shared.list.isEmpty {
             return 0
         }
         return 1
@@ -183,7 +187,8 @@ extension FavViewController: UICollectionViewDataSource {
         case 0:
             return fav.count
         case 1:
-            return saved.count + currentDownloads.keys.count
+            let count = saved.count //+ extraDownload
+            return count
         default:
             return 0
         }
@@ -197,13 +202,11 @@ extension FavViewController: UICollectionViewDataSource {
             }
         }
         if collectionView.tag == 1 {
-            let dounloadsCount = currentDownloads.keys.count
-            if dounloadsCount > indexPath.row {
-                if let progress = currentDownloads[0] {
-                    cell.configure(progress: progress)
-                }
+            let haveDownload = HLSDownloadService.shared.isDownLoad
+            if haveDownload, indexPath.row == 0 {
+                cell.configureProgress()
             } else {
-                switch saved[indexPath.row-dounloadsCount].image {
+                switch saved[indexPath.row - (haveDownload ? 1 : 0)].image {
                     case .url(let url):
                         cell.configure(url: url)
                     case .data(let data):
@@ -231,10 +234,10 @@ extension FavViewController: ButtonWithIndexPath {
             switch indexPath.section {
             case 0:
                 self.fav.removeAll()
-                self.interactor?.unLikeVideo(idx: indexPath.row)
+                self.interactor?.unLikeVideo(idx: indexPath.row - self.extraDownload)
             case 1:
                 self.saved.removeAll()
-                self.interactor?.deleteLocalVideo(idx: indexPath.row)
+                self.interactor?.deleteLocalVideo(idx: indexPath.row - self.extraDownload)
             default:
                 break
             }

@@ -16,7 +16,8 @@ protocol ButtonWithIndexPath: class {
 class FavCollectionViewCell: PreviewImageCollectionViewCell {
     var ip: IndexPath?
     weak var delegate: ButtonWithIndexPath?
-    
+    @IBOutlet private var countLabel: UILabel!
+
     @IBAction func trashClick(_ sender: Any) {
         if let ip = self.ip {
             delegate?.clickOn(indexPath: ip)
@@ -25,7 +26,8 @@ class FavCollectionViewCell: PreviewImageCollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        countLabel.isHidden = true
     }
     
     func configure(url: URL?) {
@@ -39,19 +41,24 @@ class FavCollectionViewCell: PreviewImageCollectionViewCell {
         imageView.image = image
     }
     
-    func configure(progress: ((Int) -> Void) -> Void) {
-        let downloadView = DownloadFavView.fromNib()
-        contentView.addSubview(downloadView)
-        downloadView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-             downloadView.topAnchor.constraint(equalTo: contentView.topAnchor),
-             downloadView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-             downloadView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-             downloadView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-        ])
-        progress { progress in
-            downloadView.set(progress: progress.stringValue)
+    func configureProgress() {
+        countLabel.isHidden = false
+        imageView.backgroundColor = UIColor.Label.gray
+
+        NotificationCenter.default.addObserver(self, selector: #selector(handleAssetDownloadProgress(_:)),
+                                       name: .AssetDownloadProgress, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.done), name: .AssetDownloadStateChanged, object: nil)
+
+    }
+
+    @objc func handleAssetDownloadProgress(_ notification: NSNotification) {
+        if let progress = notification.object as? Int {
+            countLabel.text = progress.stringValue + "%"
         }
-      }
+    }
+    @objc func done(_ notification: NSNotification) {
+        //countLabel.isHidden = true
+        countLabel.text = ""
+    }
 }
 
