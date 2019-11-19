@@ -26,7 +26,8 @@ class FavCollectionViewCell: PreviewImageCollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
+        countLabel.textColor = UIColor.Label.titleText
         countLabel.isHidden = true
     }
     
