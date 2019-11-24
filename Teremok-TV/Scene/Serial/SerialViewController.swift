@@ -159,13 +159,13 @@ extension SerialViewController: SerialCellProtocol {
                 }
             })
             let no = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
-            self.present(title: "Скачать серию?", actions: [yes, no], completion: nil)
+            present(title: "Скачать серию?", actions: [yes, no], completion: nil)
         }
     }
     
     func buttonClick(_ sender: Any) {
         if let cell = sender as? VideoCollectionViewCell {
-            self.router?.navigateDescription(item: cell.item)
+            router?.navigateDescription(item: cell.item)
         }
     }
 }

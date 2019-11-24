@@ -61,8 +61,8 @@ class GameViewController: UIViewController {
 protocol IntroduceViewController: class {
     var action: ((Bool) -> Void)? { get set }
     func setAction(_ action: ((Bool) -> Void)?)
-
 }
+
 extension IntroduceViewController where Self: UIViewController {
     func setAction(_ action: ((Bool) -> Void)?) {
         self.action = action

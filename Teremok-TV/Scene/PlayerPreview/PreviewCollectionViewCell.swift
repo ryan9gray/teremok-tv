@@ -15,8 +15,12 @@ class PreviewCollectionViewCell: PreviewImageCollectionViewCell {
         // Initialization code
     }
     
-    func configure(item: PreviewModel){
- 
-        self.linktoLoad = item.imageLink
+    func configure(link: String){
+        self.linktoLoad = link
+    }
+    func configure(data: Data?) {
+        guard let data = data, let image = UIImage(data: data) else { return }
+
+        imageView.image = image
     }
 }

@@ -27,23 +27,22 @@ protocol PreviewDataStore {
 }
 
 class PreviewInteractor: PreviewBusinessLogic, PreviewDataStore {
-
     var model: Preview.ItemType!
     var videoItem: VideoItemModel?
     var videoModel: VideoModel?
-
+    var imageLoader = ImageLoader()
     var razdId: Int?
 
     var presenter: PreviewPresentationLogic?
     let service: PreviewProtocol = PreviewService()
-
     var videoService: VideoServiceProtocol = VideoService()
     var oflineIdx: Int = 0
 
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.playerEnd), name: .AVPlayerItemDidPlayToEndTime, object: nil)
-
+        videoService.imageLoader = imageLoader
     }
+
     @objc func playerEnd(){
         nextItem()
     }
@@ -55,12 +54,12 @@ class PreviewInteractor: PreviewBusinessLogic, PreviewDataStore {
             fetchVideo(id: id)
         case .offline(let idx, let offlineVideos):
             oflineIdx = idx
-            presenter?.presentVideo(link: offlineVideos[idx].videoUrl.absoluteString)
+            presenter?.presentVideo(link: offlineVideos[idx].videoUrl)
             presenter?.presentRecomendet(offlineVideos)
         }
     }
     
-    func fetchRecomandation(idx: Int){
+    func fetchRecomandation(idx: Int) {
         guard let model = model else { return }
         switch model {
         case .online:
@@ -68,13 +67,13 @@ class PreviewInteractor: PreviewBusinessLogic, PreviewDataStore {
             fetchVideo(id: id)
         case .offline( _, let offlineVideos):
             oflineIdx = idx
-            presenter?.presentVideo(link: offlineVideos[idx].videoUrl.absoluteString)
+            presenter?.presentVideo(link: offlineVideos[idx].videoUrl)
             presenter?.presentRecomendet(offlineVideos)
             
         }
     }
     
-    func nextItem(){
+    func nextItem() {
         guard let model = model else { return }
         switch model {
         case .online:
@@ -82,7 +81,7 @@ class PreviewInteractor: PreviewBusinessLogic, PreviewDataStore {
             fetchVideo(id: nextId)
         case .offline( _, let offlineVideos):
             oflineIdx += 1
-            guard let url = offlineVideos[safe: oflineIdx]?.videoUrl.absoluteString else { return }
+            guard let url = offlineVideos[safe: oflineIdx]?.videoUrl else { return }
             presenter?.presentVideo(link: url)
         }
     }
@@ -102,24 +101,32 @@ class PreviewInteractor: PreviewBusinessLogic, PreviewDataStore {
         guard let id = videoModel?.id else {
             return
         }
-        videoService.addToFav(id: id) { _ in
-
-        }
+        videoService.addToFav(id: id) { _ in }
     }
 
     func showVideo(response: VideoItemModel){
-        self.videoItem = response
-        self.videoModel = response.videoItem
+        videoItem = response
+        videoModel = response.videoItem
         presenter?.presentVideo(response)
     }
     
 
     func dowload(){
-        guard let item = videoModel  else {
-            return
-        }
-        videoService.downloadVideo(item: item) { _ in
+        downloadHLS()
+    }
 
+    func downloadHLS() {
+        guard
+            let urlString = videoItem?.stream,
+            let id = videoModel?.id,
+            let link =  URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
+            let imageLinkString = videoModel?.picture,
+            let pictureURL = URL(string: imageLinkString),
+            let name = videoModel?.name
+        else { return }
+
+        imageLoader.dataFrom(url: pictureURL) { [unowned self] art in
+            self.videoService.hlsDownload(url: link, name: name, art: art, id: id)
         }
     }
     

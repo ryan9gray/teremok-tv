@@ -4,6 +4,7 @@
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
+		<string>ru.xmedia.teremoktv.hlsBackground</string>
 		<string>ru.xmedia.teremoktv.background</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
@@ -58,6 +59,27 @@
 				<false/>
 				<key>NSTemporaryExceptionMinimumTLSVersion</key>
 				<string>TLSv1.2</string>
+			</dict>
+			<key>cache-teremok.cdnvideo.ru</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>devstreaming-cdn.apple.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>teremok-vod-hls.cdnvideo.ru</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
 			</dict>
 		</dict>
 	</dict>

@@ -36,6 +36,8 @@
 		11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8C232A071A00F8E529 /* monsterRight.wav */; };
 		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceMonsters, ); }; };
 		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
+		251A04442379E667001644D4 /* HLSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251A04432379E667001644D4 /* HLSService.swift */; };
+		251A04472379E6F8001644D4 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251A04452379E6F8001644D4 /* Asset.swift */; };
 		251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E516D235A579000221BA2 /* ColorsGame_subject_10_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
@@ -92,6 +94,7 @@
 		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
 		257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CD281236E21F600BE96A4 /* GCPlayer.swift */; };
+		25B419E52383480D001BFAED /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B419E42383480D001BFAED /* DisposeBag.swift */; };
 		25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EF92368E4A90033D9CA /* Subscription.swift */; };
 		25C43EFD2368E4A90033D9CA /* SimpleSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */; };
 		25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFB2368E4A90033D9CA /* Subscriptions.swift */; };
@@ -839,6 +842,8 @@
 		11CF6B8C232A071A00F8E529 /* monsterRight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterRight.wav; sourceTree = "<group>"; };
 		11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = monster_game_introduce.mp4; sourceTree = "<group>"; };
 		11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameResultsViewController.swift; sourceTree = "<group>"; };
+		251A04432379E667001644D4 /* HLSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSService.swift; sourceTree = "<group>"; };
+		251A04452379E6F8001644D4 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_1.wav; sourceTree = "<group>"; };
 		251E513D235A578F00221BA2 /* ColorsGame_subject_10_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_2.wav; sourceTree = "<group>"; };
 		251E513E235A578F00221BA2 /* ColorsGame_subject_10_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_3.wav; sourceTree = "<group>"; };
@@ -895,6 +900,7 @@
 		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
 		257CD281236E21F600BE96A4 /* GCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPlayer.swift; sourceTree = "<group>"; };
+		25B419E42383480D001BFAED /* DisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
 		25C43EF92368E4A90033D9CA /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSubscription.swift; sourceTree = "<group>"; };
 		25C43EFB2368E4A90033D9CA /* Subscriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
@@ -1761,6 +1767,7 @@
 			isa = PBXGroup;
 			children = (
 				25C43EF92368E4A90033D9CA /* Subscription.swift */,
+				25B419E42383480D001BFAED /* DisposeBag.swift */,
 				25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */,
 				25C43EFB2368E4A90033D9CA /* Subscriptions.swift */,
 			);
@@ -2892,8 +2899,9 @@
 		CADE0E4021189BE800CC9871 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CADE0E432118A33E00CC9871 /* LocalStore.swift */,
+				251A04432379E667001644D4 /* HLSService.swift */,
 				CAF61D7A217DFF8300035EE9 /* BackgroundSession.swift */,
+				CADE0E432118A33E00CC9871 /* LocalStore.swift */,
 				CA57897A226FA76500F05A5A /* StoreReviewHelper.swift */,
 				CAD90EB022AC71AB004D74BD /* AnimalPackDownloader.swift */,
 				CA10413F22625787005D62DE /* MusicLoaderService.swift */,
@@ -2965,6 +2973,7 @@
 		CAE1C43A211DB5960058C9C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				251A04452379E6F8001644D4 /* Asset.swift */,
 				CAC91014215D4CDC00E62F01 /* PreviewModel.swift */,
 				CAF94CD02160C106000E8183 /* AnimationModel.swift */,
 				CAA732BB21318C21006276B4 /* Profile.swift */,
@@ -3010,12 +3019,12 @@
 				CA49E492212D3D9500711324 /* Main */,
 				CA9A6749213C134400FCB400 /* Razdel */,
 				CA80481321416814000A3C5B /* Serial */,
+				CAF4C109214B0C4900954AA8 /* Fav */,
 				CACD5416213FEC8400B425C4 /* PlayerPreview */,
 				CAF7B17C21B68A7800A59F5F /* Store */,
 				CA49E476212D2EBA00711324 /* Settings */,
 				CA7AAF542170B50F00747D4B /* Search */,
 				CAC91003215D31CF00E62F01 /* Achivki */,
-				CAF4C109214B0C4900954AA8 /* Fav */,
 				CAB5A4492171F16700A00C8E /* Childs */,
 				CAF94CD22160C42D000E8183 /* ChildProfile */,
 				CAA8845321381DA000E27F7A /* Child Add */,
@@ -4168,6 +4177,7 @@
 				CA8CF70D225EBE1900B217C7 /* MusicActionService.swift in Sources */,
 				CA4C28C521451D9200CA264D /* VideoCollectionViewCell.swift in Sources */,
 				CAA732BE21318D0B006276B4 /* MainContentResponse.swift in Sources */,
+				25B419E52383480D001BFAED /* DisposeBag.swift in Sources */,
 				CA8EA71F2141568900159451 /* LoadingCollectionViewCell.swift in Sources */,
 				CA49E49F212D5A9200711324 /* MainPresenter.swift in Sources */,
 				CA52F35F223D9CAD0058194E /* PlaylistsRouter.swift in Sources */,
@@ -4177,6 +4187,7 @@
 				CAE1C42B211DACE10058C9C6 /* CacherType.swift in Sources */,
 				CA433FF4224F94D700B0788E /* MusicSearchCommand.swift in Sources */,
 				CAA6FDB0224BF2A3008C2F87 /* MusicResponse.swift in Sources */,
+				251A04442379E667001644D4 /* HLSService.swift in Sources */,
 				CABAE9CD22C3EE820093FC5A /* OnboardingViewController.swift in Sources */,
 				CAAFD14B2348F06A005E086C /* ColorsGameService.swift in Sources */,
 				CAEEF2402299C9FD00AF5AF6 /* RoundPresentViewController.swift in Sources */,
@@ -4292,6 +4303,7 @@
 				CA9A6748213C134000FCB400 /* RazdelInteractor.swift in Sources */,
 				CAC2D52D2115A68300945003 /* String.swift in Sources */,
 				CAA884682139222C00E27F7A /* CacheableCommand.swift in Sources */,
+				251A04472379E6F8001644D4 /* Asset.swift in Sources */,
 				CAFF984823252D3E00003076 /* ImageFillter.swift in Sources */,
 				CAE3649022918181003E891D /* AnimalsMainRouter.swift in Sources */,
 				CA52F351223D2DF40058194E /* MusicMasterRouter.swift in Sources */,
@@ -4364,7 +4376,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Trackable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4397,7 +4409,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Trackable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4466,7 +4478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -4521,7 +4533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -4539,17 +4551,17 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4570,16 +4582,16 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4644,7 +4656,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -4662,17 +4674,17 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4698,7 +4710,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Trackable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

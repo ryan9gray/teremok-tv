@@ -112,12 +112,17 @@ extension ChildProfileViewController: UICollectionViewDelegate {
 }
 extension ChildProfileViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        headerLbl.isHidden = favorites.count == 0
+        headerLbl.isHidden = favorites.isEmpty
         return favorites.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withCell: PreviewCollectionViewCell.self, for: indexPath)
-        cell.configure(item: favorites[indexPath.row])
+        switch favorites[indexPath.row].imageLink {
+            case .data(let data):
+                cell.configure(data: data)
+            case .url(let url):
+                cell.configure(link: url?.absoluteString ?? "")
+        }
         return cell
     }
 }

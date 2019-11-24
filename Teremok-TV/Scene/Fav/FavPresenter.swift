@@ -14,7 +14,6 @@ import UIKit
 
 protocol FavPresentationLogic: CommonPresentationLogic {
     func presentFav(_ models: [VideoModel])
-    func presentSaved(_ models: [VideoModel])
     func presentSaved(models:[Fav.OfflineVideoModel])
 }
 
@@ -23,49 +22,24 @@ class FavPresenter: FavPresentationLogic {
     var displayModule: CommonDisplayLogic? {
         return viewController
     }
-    // MARK: Do something
     
-    func presentFav(_ models: [VideoModel]){
+    func presentFav(_ models: [VideoModel]) {
         var fav: [Fav.Item] = []
-        for item in models  {
-            let serial = Fav.Item(imageUrl:  URL(string: item.picture ?? "")!)
+        for item in models {
+            let serial = Fav.Item(image: .url(URL(string: item.picture ?? "")))
             fav.append(serial)
         }
         viewController?.display(fav: fav)
     }
-    func presentSaved(_ models: [VideoModel]){
-        var saved: [Fav.Item] = []
-        
-        for item in models  {
-            let serial = Fav.Item(imageUrl:  URL(fileURLWithPath: item.picture ?? ""))
-            saved.append(serial)
-        }
-        viewController?.display(saved: saved)
-    }
 
-    func presentSaved(models:[Fav.OfflineVideoModel]){
+    func presentSaved(models:[Fav.OfflineVideoModel]) {
         var saved: [Fav.Item] = []
-        
-        models.forEach { (model) in
-            let seria = Fav.Item(imageUrl:  model.imageUrl ?? URL(fileURLWithPath: ""))
+        models.forEach { model in
+            let seria = Fav.Item(image: model.image)
             saved.append(seria)
-            
         }
         DispatchQueue.main.async {
             self.viewController?.display(saved: saved)
-        }
-    }
-    
-    func presentSave(video: [URL], pic: [URL]){
-        var saved: [Fav.Item] = []
-        if video.count == pic.count {
-            for (index, _) in video.enumerated() {
-                let seria = Fav.Item(imageUrl:  pic[index])
-                saved.append(seria)
-            }
-            DispatchQueue.main.async {
-                self.viewController?.display(saved: saved)
-            }
         }
     }
 }

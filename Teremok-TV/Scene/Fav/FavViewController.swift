@@ -88,7 +88,11 @@ class FavViewController: AbstracViewController, FavDisplayLogic {
         self.fav.append(contentsOf: fav)
         reloadData()
     }
-    
+
+    var extraDownload: Int {
+        HLSDownloadService.shared.isDownLoad ? 1 : 0
+    }
+
     func display(saved: [Fav.Item]) {
         hidePreloader()
         self.saved = saved
@@ -109,9 +113,12 @@ extension FavViewController: UICollectionViewDelegate {
 
         switch collectionView.tag {
         case 0:
-            self.router?.navigateToFavPreview(number: indexPath.row)
+            router?.navigateToFavPreview(number: indexPath.row)
         case 1:
-            self.router?.navigateToSavedPreview(number: indexPath.row)
+            if HLSDownloadService.shared.isDownLoad && indexPath.row == 0 {
+                return
+            }
+            router?.navigateToSavedPreview(number: indexPath.row-extraDownload)
         default:
             break
         }
@@ -120,7 +127,7 @@ extension FavViewController: UICollectionViewDelegate {
 
 extension FavViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if (section == 0 && fav.count > 0) || (section == 1 && saved.count > 0){
+        if (section == 0 && !fav.isEmpty) || (section == 1 && !saved.isEmpty){
             let identifier = String(describing: FavTableViewHeader.self)
             guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: identifier) as? FavTableViewHeader, let favSection = Fav.Section.allCases[safe: section] else { return nil }
             header.configure(image: favSection.image, title: favSection.name)
@@ -133,17 +140,17 @@ extension FavViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        40.0
+        10.0
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         2
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0, fav.count == 0 {
+        if section == 0, fav.isEmpty {
             return 0
         }
-        if section == 1, saved.count == 0 {
+        if section == 1, saved.isEmpty, HLSDownloadService.shared.list.isEmpty {
             return 0
         }
         return 1
@@ -157,18 +164,18 @@ extension FavViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let tableViewCell = cell as? FavTableViewCell else { return }
         tableViewCell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.section)
-        if indexPath.section == 0{
+        if indexPath.section == 0 {
             tableViewCell.collectionViewOffset = storedOffsetsFav[indexPath.row] ?? 0
-        } else if indexPath.section == 1{
+        } else if indexPath.section == 1 {
             tableViewCell.collectionViewOffset = storedOffsetsSaved[indexPath.row] ?? 0
         }
     }
 
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let tableViewCell = cell as? FavTableViewCell else { return }
-        if indexPath.section == 0{
+        if indexPath.section == 0 {
             storedOffsetsFav[indexPath.row] = tableViewCell.collectionViewOffset
-        } else if indexPath.section == 1{
+        } else if indexPath.section == 1 {
             storedOffsetsSaved[indexPath.row] = tableViewCell.collectionViewOffset
         }
     }
@@ -180,7 +187,7 @@ extension FavViewController: UICollectionViewDataSource {
         case 0:
             return fav.count
         case 1:
-            return saved.count
+            return saved.count + extraDownload
         default:
             return 0
         }
@@ -189,10 +196,22 @@ extension FavViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withCell: FavCollectionViewCell.self, for: indexPath)
         cell.delegate = self
         if collectionView.tag == 0 {
-            cell.configure(url: fav[indexPath.row].imageUrl)
+            if case .url(let url) = fav[indexPath.row].image {
+                cell.configure(url: url)
+            }
         }
         if collectionView.tag == 1 {
-            cell.configure(url: saved[indexPath.row].imageUrl)
+            let haveDownload = HLSDownloadService.shared.isDownLoad
+            if haveDownload, indexPath.row == 0 {
+                cell.configureProgress(data: HLSDownloadService.shared.currentStream?.art)
+            } else {
+                switch saved[indexPath.row - (haveDownload ? 1 : 0)].image {
+                    case .url(let url):
+                        cell.configure(url: url)
+                    case .data(let data):
+                        cell.configure(data: data)
+                }
+            }
         }
         cell.ip = IndexPath(row: indexPath.row, section: collectionView.tag)
         return cell
@@ -204,7 +223,7 @@ extension FavViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: cellWidth, height: collectionView.bounds.height)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 4
     }
 }
 extension FavViewController: ButtonWithIndexPath {
@@ -214,10 +233,10 @@ extension FavViewController: ButtonWithIndexPath {
             switch indexPath.section {
             case 0:
                 self.fav.removeAll()
-                self.interactor?.unLikeVideo(idx: indexPath.row)
+                self.interactor?.unLikeVideo(idx: indexPath.row - self.extraDownload)
             case 1:
                 self.saved.removeAll()
-                self.interactor?.deleteLocalVideo(idx: indexPath.row)
+                self.interactor?.deleteLocalVideo(idx: indexPath.row - self.extraDownload)
             default:
                 break
             }
