@@ -61,10 +61,7 @@ class GamesListViewController: AbstracViewController {
 
         homeBtn.gradientColors = Style.Gradients.brown.value
         titleLabel.attributedText = "ВЫБЕРИТЕ ИГРУ:" <~ Style.TextAttributes.gameList
-        titleLabel.textColor = .white
-        titleLabel.strokeSize = 12.0
-        titleLabel.strokePosition = .center
-        titleLabel.gradientColors = Style.Gradients.blue.value
+        Style.Label.ColorsGameStrokeTitle(titleLabel: titleLabel, gradient: Style.Gradients.blue.value)
 
         do {
               buttonPlayer = try AVAudioPlayer(contentsOf: MonsterMaster.Sound.main.url)

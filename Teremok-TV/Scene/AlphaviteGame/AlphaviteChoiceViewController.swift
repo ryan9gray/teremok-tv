@@ -76,22 +76,21 @@ class AlphaviteChoiceViewController: GameViewController {
     }
 
     private func setupUI() {
-        wordLabel.textColor = .white
-        leftChar.textColor = UIColor.Alphavite.blueOne
-        leftChar.strokeSize = 26.0
-        leftChar.strokeColor = .white
-        leftChar.strokePosition = .center
-        leftChar.gradientColors = [ UIColor.white ]
-        leftChar.textAlignment = .center
-        leftChar.contentMode = .center
 
-        rightChar.textColor = UIColor.Alphavite.blueOne
-        rightChar.strokeSize = 26.0
-        rightChar.strokeColor = .white
-        rightChar.strokePosition = .center
-        rightChar.gradientColors = [ UIColor.white ]
-        rightChar.textAlignment = .center
-        rightChar.contentMode = .center
+        func setupChar(_ label: StrokeLabel) {
+            label.textColor = UIColor.Alphavite.blueOne
+            label.strokeSize = 26.0
+            label.strokeColor = .white
+            label.strokePosition = .center
+            label.gradientColors = [ UIColor.white ]
+            label.textAlignment = .center
+            label.contentMode = .center
+        }
+
+        setupChar(leftChar)
+        setupChar(rightChar)
+
+        wordLabel.textColor = .white
         pointsLabel.textColor = .white
         pointTitleLabel.textColor = .white
 

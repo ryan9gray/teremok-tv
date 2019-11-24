@@ -59,15 +59,14 @@ class AnimalsRoundsViewController: GameViewController, AnimalsRoundsDisplayLogic
             collectionView.reloadData()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         collectionView.delegate = self
-        let cells = [AnimalСompilationCollectionViewCell.self]
-        collectionView.register(cells: cells)
+        collectionView.register(cells: [AnimalСompilationCollectionViewCell.self])
         prepareUI()
         interactor?.getList()
-        
     }
 
     private func prepareUI(){

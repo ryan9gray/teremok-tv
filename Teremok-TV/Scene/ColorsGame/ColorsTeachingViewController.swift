@@ -38,11 +38,7 @@ class ColorsTeachingViewController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLabel.textColor = UIColor.white
-        titleLabel.strokeSize = 12.0
-        titleLabel.strokePosition = .center
-        titleLabel.gradientColors = ColorsMaster.Colors.violet.value
-
+        Style.Label.ColorsGameStrokeTitle(titleLabel: titleLabel, gradient: ColorsMaster.Colors.violet.value)
         start()
     }
 

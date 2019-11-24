@@ -39,10 +39,9 @@ class AlphaviteCharsViewController: GameViewController {
         super.viewDidLoad()
 
         wordLabel.textColor = UIColor.Alphavite.blueTwo
+
+        Style.Label.ColorsGameStrokeTitle(titleLabel: titleLabel, gradient: [ UIColor.white ])
         titleLabel.textColor = UIColor.Alphavite.blueTwo
-        titleLabel.strokeSize = 12.0
-        titleLabel.strokePosition = .center
-        titleLabel.gradientColors = [ UIColor.white ]
 
         charLabel.textColor = UIColor.Alphavite.blueOne
         charLabel.strokeSize = 26.0
