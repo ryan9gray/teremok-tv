@@ -10,13 +10,10 @@ import Foundation
 
 protocol AuthProtocol {
     func toAuth(userEmail: String, userPass: String, completion: @escaping (Result<RegistrResponse>) -> Void)
-
 }
 
 struct AuthService: AuthProtocol {
-    
     func toAuth(userEmail: String, userPass: String, completion: @escaping (Result<RegistrResponse>) -> Void) {
-        
         AuthCommand(userEmail: userEmail, userPass: userPass).execute(success: { (responseObject) in
             completion(.success(responseObject))
         }) { (com, response) in
@@ -25,9 +22,6 @@ struct AuthService: AuthProtocol {
             }
         }
     }
-    
-
-
 }
 
 protocol LogoutProtocol {
@@ -35,7 +29,6 @@ protocol LogoutProtocol {
 }
 
 struct LogoutService: LogoutProtocol {
-    
     func logout(){
         LogoutCommand().execute(success: nil, failure: nil)
     }

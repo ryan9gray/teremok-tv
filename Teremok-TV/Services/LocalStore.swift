@@ -11,46 +11,22 @@ import UIKit
 
 struct LocalStore {
     /// MARK: Access
-    fileprivate static let accessTokenKey = "accessTokenKey"
     fileprivate static let firstLaunchKey = "firstLaunchKey"
-    fileprivate static let pushTokenKey = "pushTokenKey"
-    fileprivate static let migrationKey = "migration"
     fileprivate static let analiticsKey = "analitics"
-
     fileprivate static let userDefaults = UserDefaults.standard
 
-    static func pushToken() -> String? {
-       return userDefaults.string(forKey: pushTokenKey)
-    }
-
     static func firstLaunch() -> Bool {
-       if userDefaults.bool(forKey: firstLaunchKey){
+       if userDefaults.bool(forKey: firstLaunchKey) {
            return false
        }
-       else{
-           return true
-       }
+       else { return true }
     }
 
-    // for later
-    static func migration() -> Bool {
-       if userDefaults.bool(forKey: migrationKey) {
-           userDefaults.set(true, forKey: migrationKey)
-           return false
-       }
-       else{
-           return true
-       }
-    }
-
-    static func setfirstLaunch(){
+    static func setfirstLaunch() {
        userDefaults.set(true, forKey: firstLaunchKey)
     }
 
-    static func logout() {
-       userDefaults.removeObject(forKey: accessTokenKey)
-       //userDefaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
-    }
+    static func logout() { }
 
     @Storage(key: "animalsDifficultyKey", defaultValue: false)
     static var animalsIsHard: Bool
@@ -98,13 +74,13 @@ struct LocalStore {
 
 
     @Storage(key: "alphaviteIntroduceKey", defaultValue: false)
-     static var alphaviteIntroduce: Bool
+    static var alphaviteIntroduce: Bool
 
     @Storage(key: "monsterIntroduceKey", defaultValue: false)
-     static var monsterIntroduce: Bool
+    static var monsterIntroduce: Bool
 
     @Storage(key: "colorsGameIntroduceKey", defaultValue: false)
-     static var colorsGameIntroduce: Bool
+    static var colorsGameIntroduce: Bool
 }
 
 @propertyWrapper

@@ -173,7 +173,7 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
         pushChild(vc)
     }
 
-    func logout(){
+    func logout() {
         viewController?.logout()
         navigateToReg()
     }
