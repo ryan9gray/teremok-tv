@@ -43,7 +43,6 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
         NotificationCenter.default.removeObserver(self, name: .ProfileNeedReload, object: nil)
     }
  
-    
     func getProfile(_ isNewSession: Bool = false) {
         service.getProfile(isNewSession: isNewSession) { [weak self] (result) in
             switch result {
@@ -65,7 +64,7 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
         getProfile()
     }
 
-    func logoutSession(){
+    func logoutSession() {
         keychain?.resetAuthentication()
         keychain?.resetAuthSession()
         LocalStore.logout()

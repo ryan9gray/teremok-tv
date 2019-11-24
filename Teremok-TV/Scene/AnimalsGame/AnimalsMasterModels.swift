@@ -15,9 +15,9 @@ import ObjectMapper
 
 enum AnimalsGame {
     class Animal: Hashable  {
-        var name: String = ""
-        var image: UIImage?
-        var sound: URL
+        let name: String
+        let image: UIImage?
+        let sound: URL
 
         init(name: String, image: UIImage, sound: URL) {
             self.name = name
@@ -63,9 +63,9 @@ enum AnimalsGame {
 
     struct PackAnimal {
         let name: String
-        var image: String
-        var sound: String
-        var id: Int
+        let image: String
+        let sound: String
+        let id: Int
     }
 
     enum Complexity {
@@ -134,5 +134,4 @@ enum AnimalsGame {
         "animal_47": "Журавль",
         "animal_48": "Зубр"
     ]
-  
 }

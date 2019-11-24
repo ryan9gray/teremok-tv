@@ -72,7 +72,6 @@ struct LocalStore {
     @Storage(key: "animalSecondIntroduce", defaultValue: false)
     static var secondAnimalsIntroduce: Bool
 
-
     @Storage(key: "alphaviteIntroduceKey", defaultValue: false)
     static var alphaviteIntroduce: Bool
 
@@ -95,11 +94,9 @@ struct Storage<T> {
 
     var wrappedValue: T {
         get {
-            // Read value from UserDefaults
             return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
         }
         set {
-            // Set value to UserDefaults
             UserDefaults.standard.set(newValue, forKey: key)
         }
     }

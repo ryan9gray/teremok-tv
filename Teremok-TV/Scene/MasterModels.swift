@@ -10,12 +10,6 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
-enum Master {
-
-}
-
 enum GameFlow {
     case Animals
     case Alphabet

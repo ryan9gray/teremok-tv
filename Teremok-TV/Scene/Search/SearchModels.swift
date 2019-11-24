@@ -10,12 +10,9 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
 
 enum Search {
-    // MARK: Use cases
-  
     struct Tag {
-        var imageLink = ""
+        let imageLink: String
     }
 }

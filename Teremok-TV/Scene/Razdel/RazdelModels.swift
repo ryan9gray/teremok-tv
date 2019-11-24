@@ -10,16 +10,11 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 enum RazdelVCModel {
-    // MARK: Use cases
-  
     struct SerialItem: Hashable {
-        var name: String = ""
-        var imageUrl: String = ""
-        var description: String = ""
-
+        let name: String
+        let imageUrl: String
+        let description: String
     }
 
     enum Screen {

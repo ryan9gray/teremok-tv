@@ -10,16 +10,13 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
 
 enum Achieves {
-    // MARK: Use cases
-  
     struct Achievement {
-        var title: String
-        var subtitle: String
-        var imageLink: String
-        var progress: Int
-        var target: Int
+        let title: String
+        let subtitle: String
+        let imageLink: String
+        let progress: Int
+        let target: Int
     }
 }

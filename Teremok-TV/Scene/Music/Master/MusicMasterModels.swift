@@ -12,9 +12,7 @@
 
 import UIKit
 
-enum MusicMaster {
-    // MARK: Use cases
-  
+enum MusicMaster {  
     enum ItemType {
         case online(idx: Int, playlist: MusicPlaylistResponse)
         case offline(idx: Int, models: [OfflineMusicModel])

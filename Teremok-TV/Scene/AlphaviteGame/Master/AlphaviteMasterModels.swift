@@ -94,8 +94,6 @@ enum AlphaviteMaster {
         "alphavite_33_word_1": "Яблоко", "alphavite_33_word_2": "Ястреб"
     ]
 
-
-
     static let Char = [
         "А": "alphavite_1",
         "Б": "alphavite_2",

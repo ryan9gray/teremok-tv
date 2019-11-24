@@ -10,11 +10,7 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 enum SearchMusic {
-    // MARK: Use cases
-
     struct Track {
         let imageUrl: String
         let title: String

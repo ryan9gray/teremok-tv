@@ -13,8 +13,6 @@
 import UIKit
 
 enum ChoiceAnimal {
-    // MARK: Use cases
-  
     enum PrincesState {
         case happy
         case angry
@@ -34,5 +32,4 @@ enum ChoiceAnimal {
     static let fireworks = ["Firework_1", "Firework_2", "Firework_3", "Firework_4"]
     static let sadSounds = ["sad_1", "sad_2", "sad_3"]
     static let funSounds = ["fun_4", "fun_5", "fun_6", "fun_7"]
-
 }

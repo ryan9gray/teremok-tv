@@ -10,11 +10,7 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
-enum Playlist {
-    // MARK: Use cases
-  
+enum Playlist {  
     struct Item {
         let imageUrl: String
         let albumTitle: String

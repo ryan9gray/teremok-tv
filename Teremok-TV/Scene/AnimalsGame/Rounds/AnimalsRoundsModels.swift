@@ -13,9 +13,8 @@
 import UIKit
 
 enum AnimalsRounds {
-    // MARK: Use cases
     struct Item {
-        var name: String = ""
-        var imageUrl: String = ""
+        let name: String
+        let imageUrl: String
     }
 }

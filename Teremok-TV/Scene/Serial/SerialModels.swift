@@ -10,16 +10,11 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 enum Serial {
-    // MARK: Use cases
-  
     struct Item: Hashable {
-      
-        var name: String = ""
-        var imageUrl: String = ""
-        var description: String = ""
+        let name: String
+        let imageUrl: String
+        let description: String
         var isLikeMe: Bool = false
         var isDownload: Bool = false
     }

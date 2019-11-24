@@ -10,14 +10,10 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 enum Album {
-    // MARK: Use cases
-  
     struct Item: Hashable {
-        var name: String = ""
-        var imageUrl: String = ""
-        var description: String = ""
+        let name: String
+        let imageUrl: String
+        let description: String
     }
 }

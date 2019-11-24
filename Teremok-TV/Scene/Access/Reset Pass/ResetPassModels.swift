@@ -10,11 +10,7 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 enum ResetPass {
-    // MARK: Use cases
-  
     enum Screen {
         case Email
         case Pass

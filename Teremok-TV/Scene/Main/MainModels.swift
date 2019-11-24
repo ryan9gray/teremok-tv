@@ -10,11 +10,7 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 enum Main {
-    // MARK: Use cases
-  
     struct RazdelItem {
         var title: String
         var link: String

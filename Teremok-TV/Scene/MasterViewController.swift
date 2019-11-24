@@ -272,7 +272,6 @@ extension MasterViewController: ChildsStackProtocol {
 }
 
 extension MasterViewController: PushRoutable {
-    
     func handle(push: TTPush) -> Bool {
         switch push.action {
         case .achieve:

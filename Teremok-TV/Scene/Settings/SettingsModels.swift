@@ -10,11 +10,7 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
-
 enum Settings {
-    // MARK: Use cases
-  
     enum Promo {
         case inputCode
         case shareCode(_ code: String)

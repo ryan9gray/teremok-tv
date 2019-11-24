@@ -12,12 +12,10 @@
 
 import UIKit
 
-enum Preview {
-    // MARK: Use cases
-  
+enum Preview {  
     struct StreamItem {
-        var link: String = ""
-        var quality: String = ""
+        let link: String
+        let quality: String
     }
 
     enum ItemType {

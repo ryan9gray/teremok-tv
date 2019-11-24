@@ -13,7 +13,6 @@
 import UIKit
 
 enum ChildProfileAdd {
-    // MARK: Use cases
     enum Screen {
         case Modify(Child?)
         case Registrate
