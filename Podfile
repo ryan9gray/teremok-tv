@@ -1,7 +1,6 @@
-
 target 'Teremok-TV' do
 
-platform:ios, '10.0'
+platform:ios, '11.0'
 use_frameworks!
 inhibit_all_warnings!
 
@@ -11,7 +10,7 @@ pod 'SwiftyJSON'
 pod 'ObjectMapper'
 
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
-pod 'IQKeyboardManagerSwift', '~> 6.0'
+pod 'IQKeyboardManagerSwift'
 pod 'InfiniteScrolling'
 pod 'lottie-ios' #animation
 pod 'M13Checkbox'
