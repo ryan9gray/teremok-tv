@@ -32,7 +32,7 @@ final class BackgroundSession: NSObject, URLSessionDownloadDelegate {
     }
 
     lazy private var downloadsSession: URLSession = {
-        let configuration = URLSessionConfiguration.background(withIdentifier: backgroundIdentifier)
+        let configuration = URLSessionConfiguration.default
         configuration.sessionSendsLaunchEvents = true
         configuration.isDiscretionary = true
         configuration.allowsCellularAccess = true
