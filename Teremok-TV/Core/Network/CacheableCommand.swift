@@ -1,10 +1,3 @@
-//
-//  CacheableCommand.swift
-//  RZD
-//
-//  Created by Mikhail Tishin on 15/01/2017.
-//  Copyright © 2017 tt. All rights reserved.
-//
 
 import SwiftyJSON
 

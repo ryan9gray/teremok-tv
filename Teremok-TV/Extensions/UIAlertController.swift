@@ -1,10 +1,4 @@
-//
-//  UIAlertController.swift
-//  gu
-//
-//  Created by Artem Kirillov on 04.08.17.
-//  Copyright © 2017 tt. All rights reserved.
-//
+
 
 import UIKit
 

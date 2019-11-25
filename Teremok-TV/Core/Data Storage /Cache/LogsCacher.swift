@@ -1,10 +1,3 @@
-//
-//  LogsCacher.swift
-//  gu
-//
-//  Created by user on 21/02/2018.
-//  Copyright © 2018 tt. All rights reserved.
-//
 
 import Foundation
 import SQLite

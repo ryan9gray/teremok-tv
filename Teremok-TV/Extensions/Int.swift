@@ -1,10 +1,4 @@
-//
-//  Int.swift
-//  Teremok-TV
-//
-//  Created by R9G on 21/10/2018.
-//  Copyright © 2018 xmedia. All rights reserved.
-//
+
 
 import UIKit
 

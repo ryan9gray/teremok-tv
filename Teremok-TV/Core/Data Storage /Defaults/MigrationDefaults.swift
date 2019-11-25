@@ -1,10 +1,4 @@
-//
-//  MigrationDefaults.swift
-//  gu
-//
-//  Created by NRokudaime on 07.09.17.
-//  Copyright © 2017 tt. All rights reserved.
-//
+
 
 import Foundation
 class MigrationDefaults {

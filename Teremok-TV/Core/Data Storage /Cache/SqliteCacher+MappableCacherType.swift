@@ -1,10 +1,3 @@
-//
-//  SqliteCacher+MappableCacherType.swift
-//  RZD
-//
-//  Created by Mikhail Tishin on 04/02/2017.
-//  Copyright © 2017 tt. All rights reserved.
-//
 
 import ObjectMapper
 import SQLite

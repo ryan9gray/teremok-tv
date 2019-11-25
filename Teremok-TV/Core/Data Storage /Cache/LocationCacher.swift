@@ -1,10 +1,3 @@
-//
-//  LocationCacher.swift
-//  gu
-//
-//  Created by Maxim Shelepyuk on 03/11/2017.
-//  Copyright © 2017 tt. All rights reserved.
-//
 
 import Foundation
 import ObjectMapper

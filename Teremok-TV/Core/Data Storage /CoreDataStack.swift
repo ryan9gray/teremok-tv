@@ -1,10 +1,3 @@
-//
-//  LCCoreDataStack.swift
-//  gu
-//
-//  Created by tikhonov on 10/9/16.
-//  Copyright © 2016 tikhonov. All rights reserved.
-//
 
 import Foundation
 import CoreData

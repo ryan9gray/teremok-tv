@@ -1,10 +1,3 @@
-//
-//  UIWindow.swift
-//  gu
-//
-//  Created by Антонов Владислав Андреевич on 19.06.17.
-//  Copyright © 2017 tt. All rights reserved.
-//
 
 import UIKit
 

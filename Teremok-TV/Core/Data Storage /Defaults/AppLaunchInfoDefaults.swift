@@ -1,10 +1,3 @@
-//
-//  AppLaunchInfoDefaults.swift
-//  gu
-//
-//  Created by klementev on 09/07/2018.
-//  Copyright © 2018 tt. All rights reserved.
-//
 
 import Foundation
 

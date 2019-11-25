@@ -1,10 +1,4 @@
-//
-//  AppUpdateDefaults.swift
-//  gu
-//
-//  Created by Армен Алумян on 22.01.2018.
-//  Copyright © 2018 tt. All rights reserved.
-//
+
 import Foundation
 
 @objcMembers

@@ -22,6 +22,7 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
     }
     var isDownLoad = false
     var list: Set<Stream> = Set()
+    var currentStream: Stream?
 
     lazy private var downloadSession: AVAssetDownloadURLSession = {
         let configuration = URLSessionConfiguration.background(withIdentifier: backgroundIdentifier)
@@ -36,8 +37,6 @@ class HLSDownloadService: NSObject, AVAssetDownloadDelegate {
         let video: Stream = .init(playListURL: url, name: name, art: art, id: id)
         addToList(video)
     }
-
-    var currentStream: Stream?
 
     private func addToList(_ stream: Stream) {
         let assets = HLSAssets.fromDefaults()

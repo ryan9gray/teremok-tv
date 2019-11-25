@@ -574,7 +574,6 @@
 		CAC91012215D359900E62F01 /* AchieveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC91010215D359900E62F01 /* AchieveCollectionViewCell.swift */; };
 		CAC91013215D359900E62F01 /* AchieveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC91011215D359900E62F01 /* AchieveCollectionViewCell.xib */; };
 		CAC91015215D4CDC00E62F01 /* PreviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC91014215D4CDC00E62F01 /* PreviewModel.swift */; };
-		CACD540F213FBA0C00B425C4 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACD540E213FBA0C00B425C4 /* Timer.swift */; };
 		CAD16DE32147E23000A82DBB /* Numeral.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD16DE22147E23000A82DBB /* Numeral.json */; };
 		CAD16DE72147E29400A82DBB /* Animal.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD16DE42147E29300A82DBB /* Animal.json */; };
 		CAD16DE82147E29400A82DBB /* unicorn.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD16DE52147E29300A82DBB /* unicorn.json */; };
@@ -1387,7 +1386,6 @@
 		CAC91010215D359900E62F01 /* AchieveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchieveCollectionViewCell.swift; sourceTree = "<group>"; };
 		CAC91011215D359900E62F01 /* AchieveCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchieveCollectionViewCell.xib; sourceTree = "<group>"; };
 		CAC91014215D4CDC00E62F01 /* PreviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewModel.swift; sourceTree = "<group>"; };
-		CACD540E213FBA0C00B425C4 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		CAD16DE22147E23000A82DBB /* Numeral.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Numeral.json; sourceTree = "<group>"; };
 		CAD16DE42147E29300A82DBB /* Animal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animal.json; sourceTree = "<group>"; };
 		CAD16DE52147E29300A82DBB /* unicorn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = unicorn.json; sourceTree = "<group>"; };
@@ -2698,7 +2696,6 @@
 				CA0053CF213BF6FA00AA187F /* UITableViewCell.swift */,
 				CA0053D1213BF72C00AA187F /* UICollectioView.swift */,
 				CA0053D3213BF7C900AA187F /* UITableView.swift */,
-				CACD540E213FBA0C00B425C4 /* Timer.swift */,
 				CAE1C472211DC9190058C9C6 /* UIWindow.swift */,
 				CAE1C45F211DC7B90058C9C6 /* UIApplication.swift */,
 				CAC2D5112115A68200945003 /* UIViewController.swift */,
@@ -4172,7 +4169,6 @@
 				CA7AAF462170A25000747D4B /* ChildProfilePresenter.swift in Sources */,
 				CA76363D226BD7A500168AB1 /* OfflinePlaylistRouter.swift in Sources */,
 				CA52F36D223D9FE50058194E /* AlbumViewController.swift in Sources */,
-				CACD540F213FBA0C00B425C4 /* Timer.swift in Sources */,
 				11246D62231CEF5F00941D0C /* MonsterGameCollectionViewLayout.swift in Sources */,
 				CA8CF70D225EBE1900B217C7 /* MusicActionService.swift in Sources */,
 				CA4C28C521451D9200CA264D /* VideoCollectionViewCell.swift in Sources */,
