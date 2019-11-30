@@ -644,7 +644,6 @@
 		CAE1C42E211DACE10058C9C6 /* SqliteCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C421211DACE10058C9C6 /* SqliteCacher.swift */; };
 		CAE1C42F211DACE10058C9C6 /* SqliteCacher+MappableCacherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C422211DACE10058C9C6 /* SqliteCacher+MappableCacherType.swift */; };
 		CAE1C430211DACE10058C9C6 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C423211DACE10058C9C6 /* CoreDataStack.swift */; };
-		CAE1C432211DACE10058C9C6 /* MigrationDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C426211DACE10058C9C6 /* MigrationDefaults.swift */; };
 		CAE1C433211DACE10058C9C6 /* AppLaunchInfoDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C427211DACE10058C9C6 /* AppLaunchInfoDefaults.swift */; };
 		CAE1C434211DACE10058C9C6 /* AppUpdateDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C428211DACE10058C9C6 /* AppUpdateDefaults.swift */; };
 		CAE1C437211DAEA90058C9C6 /* DefaultsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C436211DAEA90058C9C6 /* DefaultsObject.swift */; };
@@ -1456,7 +1455,6 @@
 		CAE1C421211DACE10058C9C6 /* SqliteCacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteCacher.swift; sourceTree = "<group>"; };
 		CAE1C422211DACE10058C9C6 /* SqliteCacher+MappableCacherType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SqliteCacher+MappableCacherType.swift"; sourceTree = "<group>"; };
 		CAE1C423211DACE10058C9C6 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		CAE1C426211DACE10058C9C6 /* MigrationDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MigrationDefaults.swift; sourceTree = "<group>"; };
 		CAE1C427211DACE10058C9C6 /* AppLaunchInfoDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLaunchInfoDefaults.swift; sourceTree = "<group>"; };
 		CAE1C428211DACE10058C9C6 /* AppUpdateDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUpdateDefaults.swift; sourceTree = "<group>"; };
 		CAE1C436211DAEA90058C9C6 /* DefaultsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsObject.swift; sourceTree = "<group>"; };
@@ -2952,7 +2950,6 @@
 		CAE1C424211DACE10058C9C6 /* Defaults */ = {
 			isa = PBXGroup;
 			children = (
-				CAE1C426211DACE10058C9C6 /* MigrationDefaults.swift */,
 				CAE1C427211DACE10058C9C6 /* AppLaunchInfoDefaults.swift */,
 				CAE1C428211DACE10058C9C6 /* AppUpdateDefaults.swift */,
 			);
@@ -4004,7 +4001,6 @@
 				CA49E481212D2ED300711324 /* SettingsViewController.swift in Sources */,
 				CA9A6747213C134000FCB400 /* RazdelViewController.swift in Sources */,
 				CAE09482214CF62C0052F283 /* ResetPassService.swift in Sources */,
-				CAE1C432211DACE10058C9C6 /* MigrationDefaults.swift in Sources */,
 				CAF94CC7215F6D94000E8183 /* CarouselLayout.swift in Sources */,
 				11BA2489230551A700A9EA15 /* MonsterMasterPresenter.swift in Sources */,
 				CAA73261213163A5006276B4 /* TTImageView.swift in Sources */,

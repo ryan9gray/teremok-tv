@@ -79,7 +79,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TrackableClass {
         configureAppLaunchesInfo()
         completeIAPTransactions()
         updateTokenIfNeeded()
-        configureAuthMigration()
         setupTrackableChain(parent: analytics)
     }
 
@@ -121,40 +120,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TrackableClass {
         if keychain.lastRequestToken != currentToken {
             keychain.saveLastRequestToken(token: currentToken)
             updateCloudTokenOnService()
-        }
-    }
-    
-    fileprivate func configureAuthMigration() {
-        let migrationDefaults = MigrationDefaults()
-        
-        if migrationDefaults.firstLaunch {
-            //Сброс сессии при первом запуске
-            let keychain: KeychainService = MainKeychainService()
-            keychain.resetAuthSession()
-            keychain.resetPhoneSession()
-            // Обновление последнего используемого токена
-            let currentToken = ServiceConfiguration.activeConfiguration().token
-            keychain.saveLastRequestToken(token: currentToken)
-            //Попытка подтянуть сессию из старой версии приложения
-            if !migrationDefaults.sessionKeeped {
-                let sessionKey = "sessionId"
-                let tokenKey = "deviceToken"
-                if let oldSession = UserDefaults.standard.string(forKey: sessionKey) {
-                    let keychain: KeychainService = MainKeychainService()
-                    keychain.saveAuthSession(session: oldSession)
-                    UserDefaults.standard.setValue("", forKey: sessionKey)
-                    UserDefaults.standard.synchronize()
-                }
-                
-                // Попытка подтянуть старый облачный токен
-                if let oldCloudToken = UserDefaults.standard.string(forKey: tokenKey) {
-                    UserDefaults.standard.set(oldCloudToken, forKey: "pushToken")
-                    UserDefaults.standard.synchronize()
-                    updateCloudTokenOnService()
-                }
-                migrationDefaults.sessionKeeped = true
-            }
-            migrationDefaults.firstLaunch = false
         }
     }
 }
