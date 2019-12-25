@@ -105,7 +105,7 @@ class ChildProfileAddViewController: AbstracViewController, ChildProfileAddDispl
         
         prepareUI()
         //showPreloader()
-        self.interactor?.fillChild()
+        interactor?.fillChild()
     }
     
     private func prepareUI(){
@@ -261,7 +261,6 @@ extension ChildProfileAddViewController: InfiniteScrollingBehaviourDelegate {
 extension ChildProfileAddViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
         if let image = info[.originalImage] as? UIImage {
             optimazeAvatar(image.fixOrientation())
         }

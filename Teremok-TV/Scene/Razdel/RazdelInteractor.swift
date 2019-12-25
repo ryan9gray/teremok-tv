@@ -37,7 +37,7 @@ class RazdelInteractor: RazdelBusinessLogic, RazdelDataStore {
     var nextShift: Int?
     let countSerials = 10
     
-    var hasMore : Bool = true
+    var hasMore: Bool = true
 
     func fetchSerials() {
         switch screen {

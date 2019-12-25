@@ -42,8 +42,7 @@ class AvatarButton: RoundEdgeButton {
         }
     }
 
-    func getImage(_ url:String,handler: @escaping (UIImage?)->Void) {
-        print(url)
+    func getImage(_ url: String, handler: @escaping (UIImage?) -> Void) {
         Alamofire.request(url, method: .get).responseImage { response in
             if let data = response.result.value {
                 handler(data)
@@ -59,7 +58,7 @@ class AvatarButton: RoundEdgeButton {
             return
         }
 
-        if let avatarUrl = childs.first(where: {$0.current ?? false})?.pic {
+        if let avatarUrl = childs.first(where: { $0.current ?? false} )?.pic {
             setAvatar(linktoLoad: avatarUrl)
         }
     }

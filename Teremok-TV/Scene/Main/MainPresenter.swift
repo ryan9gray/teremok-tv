@@ -17,7 +17,6 @@ protocol MainPresentationLogic: CommonPresentationLogic {
 }
 
 class MainPresenter: MainPresentationLogic {
-    
     var displayModule: CommonDisplayLogic? {
         return viewController
     }

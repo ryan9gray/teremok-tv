@@ -31,11 +31,11 @@ final class GetProfileResponse: Mappable {
     }
 }
 final class ProfileResponse: Mappable {
-    
     var id: Int?
     var email: String?
-    var premium: Bool = false
-    var childs: [ChildResponse]?
+    var childs: [ChildResponse] = []
+	var needRegistrate: Bool = true
+	var premium: Bool = false
     var premiumMusic: Bool = false
     var premiumGame: Bool = false
 

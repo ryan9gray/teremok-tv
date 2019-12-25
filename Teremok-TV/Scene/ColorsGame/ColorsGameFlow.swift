@@ -91,7 +91,6 @@ class ColorsGameFlow  {
 
     private func saveResult(statistic: AlphaviteMaster.Statistic) {
         game.statistic.append(statistic)
-
     }
 
     private func finishRound() {

@@ -18,11 +18,10 @@ protocol ChildProfileDoneDisplayLogic: CommonDisplayLogic {
 
 class ChildProfileDoneViewController: AbstracViewController, ChildProfileDoneDisplayLogic {
     var activityView: LottieHUD?
-    
     var interactor: ChildProfileDoneBusinessLogic?
     var router: (NSObjectProtocol & ChildProfileDoneRoutingLogic & ChildProfileDoneDataPassing & CommonRoutingLogic)?
     var modallyControllerRoutingLogic: CommonRoutingLogic? {
-        get { return router }
+        get { router }
     }
     // MARK: Object lifecycle
 
@@ -59,19 +58,21 @@ class ChildProfileDoneViewController: AbstracViewController, ChildProfileDoneDis
     @IBOutlet private var addChildBtn: UIButton!
     
     @IBAction func addChildClick(_ sender: Any) {
+        guard (Profile.current?.childs.count ?? 1) < 3 else { return }
+        
         router?.navigateToAddChild()
     }
     
     @IBOutlet private var avatarBtn: AvatarButton!
     @IBAction func doneClick(_ sender: Any) {
-        self.router?.routToMain()
+        router?.routToMain()
     }
     // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.interactor?.fectchData()
+        interactor?.fectchData()
     }
     
     // MARK: Do something

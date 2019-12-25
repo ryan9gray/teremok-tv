@@ -22,6 +22,7 @@ class SerialPresenter: SerialPresentationLogic {
     var displayModule: CommonDisplayLogic? {
         return viewController
     }
+
     // MARK: Do something
     func present(items: [VideoModel]){
         

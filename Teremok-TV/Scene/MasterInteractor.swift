@@ -74,9 +74,9 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
     }
     
     func identifySession() {
-        if let session = keychain?.authSession, !session.isEmpty {
+        //if let session = keychain?.authSession, !session.isEmpty {
             getProfile(true)
-        }
+        //}
 //        else {
 //            presenter?.presentAuthScreen()
 //        }

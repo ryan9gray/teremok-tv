@@ -11,7 +11,6 @@
 //
 
 import UIKit
-import AVFoundation
 import AVKit
 
 protocol PreviewPresentationLogic: CommonPresentationLogic {

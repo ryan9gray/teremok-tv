@@ -386,8 +386,8 @@ class MusicMasterViewController: UIViewController, MusicMasterDisplayLogic {
             heartBtn.isSelected = track?.inFavorites ?? false
             showMediaInfo(name: track?.name ?? "", artist: track?.album?.name ?? "")
         }
-
     }
+    
     @objc func playTrack() {
         player?.play()
         playButton.setImage(#imageLiteral(resourceName: "icPause48"), for: .normal)

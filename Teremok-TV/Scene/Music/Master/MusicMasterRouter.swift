@@ -65,7 +65,7 @@ class MusicMasterRouter: NSObject, MusicMasterRoutingLogic, MusicMasterDataPassi
             childControllersStack.push(value)
         }
         get {
-            return childControllersStack.top
+            childControllersStack.top
         }
     }
 

@@ -11,9 +11,9 @@ extension Collection {
 
 extension Collection {
     /// Returns the element at the specified index iff it is within bounds, otherwise nil.
-    subscript (safe index: Index) -> Iterator.Element? {
-        return indices.contains(index) ? self[index] : nil
-    }
+//    subscript (safe index: Index) -> Iterator.Element? {
+//        return indices.contains(index) ? self[index] : nil
+//    }
     var second: Element? {
         // Is the collection empty?
         guard self.startIndex != self.endIndex else { return nil } // Get the second index
@@ -23,6 +23,11 @@ extension Collection {
         return self[index]
     }
 
+}
+extension Collection where Indices.Iterator.Element == Index {
+   public subscript(safe index: Index) -> Iterator.Element? {
+     return (startIndex <= index && index < endIndex) ? self[index] : nil
+   }
 }
 extension RawRepresentable where Self: Hashable {
     
