@@ -37,7 +37,7 @@ final class Profile: Mappable  {
     }
 
     static var isAuthorized: Bool {
-		return current?.needAuthorize ?? false
+		return !(current?.needAuthorize ?? true)
     }
 
 	var needAuthorize: Bool = true
