@@ -44,6 +44,8 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
     }
  
     func getProfile(_ isNewSession: Bool = false) {
+		guard Profile.current == nil else { return }
+		
         service.getProfile(isNewSession: isNewSession) { [weak self] (result) in
             switch result {
             case .success(let response):

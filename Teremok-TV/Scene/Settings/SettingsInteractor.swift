@@ -43,9 +43,9 @@ class SettingsInteractor: SettingsBusinessLogic, SettingsDataStore {
     func fetchData(){
         getProfile()
 
-        DispatchQueue.global(qos: .utility).async {
-            //self.getPromo()
-        }
+//        DispatchQueue.global(qos: .utility).async {
+//            self.getPromo()
+//        }
 //        if let profile = Profile.current {
 //            self.presenter?.presentProfile(profile)
 //        }

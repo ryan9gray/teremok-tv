@@ -48,13 +48,12 @@ class ChildsStackView: UIStackView {
         firstChild.isHidden = true
         secondChild.isHidden = true
         thirdChild.isHidden = true
-        plusChild.isHidden = true
-        
+		plusChild.isHidden = childs.count >= 3
+
         self.childs = childs
         if let first = childs.first {
             firstChild.setAvatar(linktoLoad: first.pic ?? "")
             firstChild.isHidden = false
-            plusChild.isHidden = false
         }
         if let second = childs.second {
             secondChild.setAvatar(linktoLoad: second.pic ?? "")
@@ -62,8 +61,7 @@ class ChildsStackView: UIStackView {
             if let thChild = childs[safe: 2]  {
                 thirdChild.setAvatar(linktoLoad: thChild.pic ?? "")
                 thirdChild.isHidden = false
-                plusChild.isHidden = true
-            }
+			}
         }
     }
     
