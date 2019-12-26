@@ -69,7 +69,7 @@ class StoreViewController: AbstracViewController, StoreDisplayLogic, UITextViewD
 			SubscriptionCollectionViewCell.self,
 			StoreCollectionViewCell.self,
 			LoadingCollectionViewCell.self,
-			SubscriptionPromoTableViewCell.self
+			SubscriptionPromoCollectionViewCell.self
 		]
         collectionView.register(cells: cells)
         collectionView.reloadData()

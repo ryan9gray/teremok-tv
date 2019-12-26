@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SubscriptionPromoTableViewCell: UICollectionViewCell {
+class SubscriptionPromoCollectionViewCell: UICollectionViewCell {
 	@IBOutlet private var restoreButton: UnderlinedLabel!
 	@IBOutlet private var purchaseButton: UIRoundedButtonWithGradientAndShadow!
 	@IBOutlet private var priceLabel: UILabel!

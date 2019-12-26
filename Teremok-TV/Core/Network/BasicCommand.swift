@@ -96,7 +96,6 @@ class BasicCommand {
             UIApplication.shared.isNetworkActivityIndicatorVisible = true
         }
         let request = getRequestWithParameters(parameters: parameters)
-        
         var loggingData: String
         if let httpBody = request.request?.httpBody,
             let formattedData = String(data: httpBody, encoding: .utf8) {
@@ -164,7 +163,7 @@ class BasicCommand {
                     "app_version": "\(version) (\(build))"]
         
         mutableParameters["api_key"] = info
-        let request = Alamofire.SessionManager.default.request(urlString,
+		let request = BasicCommand.alamoFireManager.request(urlString,
                                                                method: httpMethod,
                                                                parameters: mutableParameters,
                                                                encoding: parameterEncoding,
@@ -273,4 +272,13 @@ class BasicCommand {
         }
     }
 
+}
+extension BasicCommand {
+	private static var alamoFireManager: SessionManager = {
+		let configuration = URLSessionConfiguration.default
+		configuration.timeoutIntervalForRequest = 10
+		configuration.timeoutIntervalForResource = 10
+		let alamoFireManager = Alamofire.SessionManager(configuration: configuration)
+		return alamoFireManager
+	}()
 }
