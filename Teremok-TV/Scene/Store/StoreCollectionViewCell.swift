@@ -23,6 +23,7 @@ class StoreCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         super.awakeFromNib()
 
         setLinks()
+		mainLabel.textColor = UIColor.Label.titleText
         titleLabel.textColor = UIColor.Label.titleText
     }
 

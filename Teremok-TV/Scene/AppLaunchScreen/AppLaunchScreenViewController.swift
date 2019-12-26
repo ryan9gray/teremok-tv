@@ -15,7 +15,9 @@ import Lottie
 
 class AppLaunchScreenViewController: UIViewController {
     private var animationView: AnimationView!
-    
+	let service: ProfileProtocol = ProfileService()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +26,7 @@ class AppLaunchScreenViewController: UIViewController {
 //            dismiss(animated: true, completion: nil)
 //            return
 //        }
-
+		getProfile()
         animationView = AnimationView(name: AppLaunchScreen.Animation.finish.rawValue)
         animationView.frame = view.bounds
         animationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -36,7 +38,39 @@ class AppLaunchScreenViewController: UIViewController {
     }
     
     // MARK: Do something
-    
+
+	func getProfile(_ isNewSession: Bool = false) {
+		service.getProfile(isNewSession: isNewSession) { [weak self] (result) in
+			switch result {
+				case .success(let response):
+					if let profileResp = response.profile {
+						let profile = Profile(with: profileResp)
+						AppCacher.mappable.saveObject(profile)
+						Profile.current = profile
+				}
+				case .failure(_): break
+			}
+			self?.haveProfile = true
+		}
+	}
+
+	var haveProfile: Bool = false {
+		didSet {
+			exit()
+		}
+	}
+	var animationFinished: Bool = false {
+		didSet {
+			exit()
+		}
+	}
+
+	func exit() {
+		guard haveProfile, animationFinished else { return }
+
+		finish()
+	}
+
     func start() {
         animationView.animation = Animation.named(AppLaunchScreen.Animation.finish.rawValue)
         animationView.play(completion: { _ in
@@ -51,9 +85,10 @@ class AppLaunchScreenViewController: UIViewController {
         animationView.animationSpeed = 1.0
         animationView.play()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.finish()
+            self.animationFinished = true
         }
     }
+
     func finish() {
         animationView.animation = Animation.named(AppLaunchScreen.Animation.finish.rawValue)
         animationView.loopMode = .playOnce

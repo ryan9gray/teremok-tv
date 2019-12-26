@@ -36,7 +36,6 @@ struct ProfileService: ProfileProtocol {
     }
 
     func switchChild(with id: String, completion: @escaping (Result<GetProfileResponse>) -> Void) {
-        
         SwitchChildCommand(childId: id).execute(success: { (responseObject) in
             completion(.success(responseObject))
         }) { (com, response) in

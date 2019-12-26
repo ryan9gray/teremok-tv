@@ -173,7 +173,7 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
         }
         subscribeTitle.text = subscribeTitleText
 
-        let isAuth = Profile.current != nil
+        let isAuth = Profile.isAuthorized
         setMode(isAuth: isAuth)
         childStack.setAvatars(childs: profile.childs)
     }
@@ -184,7 +184,6 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
         logoutBtn.isHidden = !isAuth
         profileTitle.isHidden = !isAuth
     }
-
 }
 
 extension SettingsViewController: ChildsStackProtocol {
@@ -199,6 +198,4 @@ extension SettingsViewController: ChildsStackProtocol {
     func childClick(_ child: Child) {
         router?.routToChild(child)
     }
-    
-    
 }

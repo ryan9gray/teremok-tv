@@ -37,8 +37,10 @@ final class Profile: Mappable  {
     }
 
     static var isAuthorized: Bool {
-        return current != nil
+		return current?.needAuthorize ?? false
     }
+
+	var needAuthorize: Bool = true
 
     static var subscribe: String {
         if let profile = Profile.current {
@@ -85,6 +87,7 @@ final class Profile: Mappable  {
         premium     <- map["premium"]
         premiumMusic     <- map["premiumMusic"]
         premiumGame     <- map["premiumGame"]
+		needAuthorize     <- map["needAuthorize"]
     }
     
     init(with profile: ProfileResponse) {

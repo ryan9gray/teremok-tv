@@ -95,6 +95,10 @@
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
 		257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CD281236E21F600BE96A4 /* GCPlayer.swift */; };
 		25B419E52383480D001BFAED /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B419E42383480D001BFAED /* DisposeBag.swift */; };
+		25C412DF23B39C7000B0A9EA /* FreePremiumAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412DE23B39C7000B0A9EA /* FreePremiumAlertViewController.swift */; };
+		25C412E123B3A52200B0A9EA /* PromoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412E023B3A52200B0A9EA /* PromoWorker.swift */; };
+		25C412E423B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412E223B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift */; };
+		25C412E523B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25C412E323B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib */; };
 		25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EF92368E4A90033D9CA /* Subscription.swift */; };
 		25C43EFD2368E4A90033D9CA /* SimpleSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */; };
 		25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFB2368E4A90033D9CA /* Subscriptions.swift */; };
@@ -899,6 +903,10 @@
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
 		257CD281236E21F600BE96A4 /* GCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPlayer.swift; sourceTree = "<group>"; };
 		25B419E42383480D001BFAED /* DisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
+		25C412DE23B39C7000B0A9EA /* FreePremiumAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreePremiumAlertViewController.swift; sourceTree = "<group>"; };
+		25C412E023B3A52200B0A9EA /* PromoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoWorker.swift; sourceTree = "<group>"; };
+		25C412E223B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPromoTableViewCell.swift; sourceTree = "<group>"; };
+		25C412E323B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionPromoCollectionViewCell.xib; sourceTree = "<group>"; };
 		25C43EF92368E4A90033D9CA /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSubscription.swift; sourceTree = "<group>"; };
 		25C43EFB2368E4A90033D9CA /* Subscriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
@@ -2326,6 +2334,7 @@
 				CA09979021A573490051F41D /* SecurityCodeViewController.swift */,
 				CA0ABB762180CC8900523F5B /* ScrollViewAlertViewController.swift */,
 				CA82C12C2132B4360020272E /* CloudAlertViewController.swift */,
+				25C412DE23B39C7000B0A9EA /* FreePremiumAlertViewController.swift */,
 				CAFF985E2325342600003076 /* GameMasterViewController.swift */,
 			);
 			path = Common;
@@ -3060,6 +3069,7 @@
 				CA51E1CC22FED1790028DF63 /* GameHelper.swift */,
 				CAFF984723252D3E00003076 /* ImageFillter.swift */,
 				CAC0988722FEDCD400EFB01E /* Style.swift */,
+				25C412E023B3A52200B0A9EA /* PromoWorker.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -3167,6 +3177,8 @@
 				CAF7B17F21B6927C00A59F5F /* StoreRouter.swift */,
 				CAF7B18121B6927C00A59F5F /* StoreViewController.swift */,
 				CAF7B18221B6927C00A59F5F /* StoreInteractor.swift */,
+				25C412E223B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift */,
+				25C412E323B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib */,
 				CA76362E226A63CD00168AB1 /* SubscriptionCollectionViewCell.swift */,
 				CA76362F226A63CD00168AB1 /* SubscriptionCollectionViewCell.xib */,
 				CA763628226A5FDF00168AB1 /* StoreCollectionViewCell.swift */,
@@ -3641,6 +3653,7 @@
 				CA5100EF22F6EACF00821C25 /* alphavite_5_word_2.wav in Resources */,
 				CAD2105223170C69006F2F08 /* alphabetPickMain.wav in Resources */,
 				251E5172235A579000221BA2 /* ColorsGame_color_5.wav in Resources */,
+				25C412E523B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib in Resources */,
 				251E5194235A579100221BA2 /* ColorsGame_fun_3.wav in Resources */,
 				CA4C28CE2147DFDB00CA264D /* box.json in Resources */,
 				CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */,
@@ -3965,6 +3978,7 @@
 				CA52F369223D9FE50058194E /* AlbumPresenter.swift in Sources */,
 				CA8197FE214993C40079D46A /* ContentResponse.swift in Sources */,
 				CA49E48D212D326600711324 /* TerPush+Mapping.swift in Sources */,
+				25C412E123B3A52200B0A9EA /* PromoWorker.swift in Sources */,
 				CA52F36C223D9FE50058194E /* AlbumModels.swift in Sources */,
 				CADD14BB23129A4000AE920A /* TTSegmentedControl.swift in Sources */,
 				CAAD25F522F5DC80005CFCD2 /* AlphaviteCharsViewController.swift in Sources */,
@@ -4087,6 +4101,7 @@
 				CAF4C110214B0C7900954AA8 /* FavPresenter.swift in Sources */,
 				CAE1C42D211DACE10058C9C6 /* LogsCacher.swift in Sources */,
 				CA49E4A1212D5A9200711324 /* MainRouter.swift in Sources */,
+				25C412E423B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift in Sources */,
 				CAE0947F214CF43C0052F283 /* ResetPassViewController.swift in Sources */,
 				CAD90EB322B13636004D74BD /* AnimalsGetStatCommand.swift in Sources */,
 				11BC752523043A1E001B5CC8 /* MonsterMasterRouter.swift in Sources */,
@@ -4179,6 +4194,7 @@
 				CAE1C42B211DACE10058C9C6 /* CacherType.swift in Sources */,
 				CA433FF4224F94D700B0788E /* MusicSearchCommand.swift in Sources */,
 				CAA6FDB0224BF2A3008C2F87 /* MusicResponse.swift in Sources */,
+				25C412DF23B39C7000B0A9EA /* FreePremiumAlertViewController.swift in Sources */,
 				251A04442379E667001644D4 /* HLSService.swift in Sources */,
 				CABAE9CD22C3EE820093FC5A /* OnboardingViewController.swift in Sources */,
 				CAAFD14B2348F06A005E086C /* ColorsGameService.swift in Sources */,

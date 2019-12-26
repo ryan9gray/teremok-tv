@@ -27,6 +27,9 @@ struct LocalStore {
 
     static func logout() { }
 
+	@Storage(userDefaults: userDefaults, key: "promo6MonthTimer", defaultValue: 0)
+	static var promo6MonthTimer: Int
+
 	@Storage(userDefaults: userDefaults, key: "animalsDifficultyKey", defaultValue: false)
     static var animalsIsHard: Bool
 

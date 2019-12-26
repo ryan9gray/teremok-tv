@@ -65,13 +65,16 @@ class StoreViewController: AbstracViewController, StoreDisplayLogic, UITextViewD
         activityView = LottieHUD()
         collectionView.delegate = self
         collectionView.dataSource = self
-        let cells = [SubscriptionCollectionViewCell.self, StoreCollectionViewCell.self, LoadingCollectionViewCell.self]
+		let cells = [
+			SubscriptionCollectionViewCell.self,
+			StoreCollectionViewCell.self,
+			LoadingCollectionViewCell.self,
+			SubscriptionPromoTableViewCell.self
+		]
         collectionView.register(cells: cells)
         collectionView.reloadData()
         setupTrackableChain(parent: analytics)
     }
-
-    // MARK: Do something
 
     func restoreClick() {
         showPreloader()
