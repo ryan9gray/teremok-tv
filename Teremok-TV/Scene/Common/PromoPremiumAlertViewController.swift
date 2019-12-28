@@ -23,7 +23,7 @@ class PromoPremiumAlertViewController: UIViewController {
 	}
 
 	@IBAction func fonClick(_ sender: Any) {
-		self.dismiss(animated: true, completion: nil)
+		dismiss(animated: true, completion: nil)
 	}
 
 

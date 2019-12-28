@@ -25,7 +25,7 @@ class GradientView: UIView {
         }
     }
     private var gradientLayer = CAGradientLayer()
-    private var vector: GradientOrientation = .topLeftBottomRight
+	var vector: GradientOrientation = .topLeftBottomRight
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -39,7 +39,6 @@ class GradientView: UIView {
 
         //style and insert layer if not already inserted
         if gradientLayer.superlayer == nil {
-
             gradientLayer.startPoint = vector.startPoint
             gradientLayer.endPoint = vector.endPoint
             gradientLayer.colors = gradientColors.map { $0.cgColor }

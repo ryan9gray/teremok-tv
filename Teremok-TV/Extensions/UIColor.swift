@@ -22,6 +22,8 @@ extension UIColor {
         static let gray                 =  #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)   //999999
         static let grass                =  #colorLiteral(red: 0.1333333333, green: 0.6431372549, blue: 0.4, alpha: 1)   //22A466
         static let ocean                =  #colorLiteral(red: 0.1647058824, green: 0.8117647059, blue: 0.9960784314, alpha: 1)   //2ACFFE
+		static let red                	= UIColor(hex: "E74C1E")
+
     }
 
     enum View {

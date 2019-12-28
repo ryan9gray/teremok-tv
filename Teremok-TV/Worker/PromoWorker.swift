@@ -9,16 +9,20 @@
 import Foundation
 
 struct PromoWorker {
-	func setData() {
+	static func setData() {
 		LocalStore.promo6MonthTimer = CLong(Date().addingTimeInterval(360).timeIntervalSince1970)
 	}
 
-	var getCurrentTime: Date {
+	static var getCurrentDate: Date {
 		Date(timeIntervalSince1970: TimeInterval(LocalStore.promo6MonthTimer))
 	}
 
-	var havePromo: Bool {
-		getCurrentTime.dateByAddingHours(1) < Date()
+	static var getCurrentTime: TimeInterval {
+		getCurrentDate.timeIntervalSince1970 - Date().timeIntervalSince1970
+	}
+
+	static var havePromo: Bool {
+		getCurrentDate.dateByAddingHours(1) < Date()
 	}
 
 	static func checkPremiumChange() {

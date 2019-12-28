@@ -18,7 +18,8 @@ class SubscriptionPromoCollectionViewCell: UICollectionViewCell {
 	@IBOutlet private var heartView: UIView!
 	@IBOutlet private var musicView: UIView!
 	@IBOutlet private var gameView: UIView!
-
+	@IBOutlet private var hourseView: PromoTimeView!
+	@IBOutlet private var minuteView: PromoTimeView!
 	@IBOutlet private var labels: [UILabel]!
 
 	override func awakeFromNib() {
@@ -28,7 +29,7 @@ class SubscriptionPromoCollectionViewCell: UICollectionViewCell {
 		purchaseButton.gradientColors = Style.Gradients.yellow.value
 		labels.forEach { $0.textColor = UIColor.Label.titleText }
 		titleLabel.textColor = UIColor.Label.titleText
-		priceLabel.textColor = UIColor.Label.titleText
+		priceLabel.textColor = UIColor.Label.red
 	}
 
 	@IBAction private func purchaseTap(_ sender: Any) {
@@ -50,5 +51,35 @@ class SubscriptionPromoCollectionViewCell: UICollectionViewCell {
 		let restoreAction: () -> Void
 		let purchaseAction: () -> Void
 	}
-	
+
+	func setTimer() {
+		let time = PromoWorker.getCurrentDate
+		hourseView.set(time: time.hour().stringValue, title: "часов")
+		minuteView.set(time: time.minute().stringValue, title: "минут")
+	}
+
+	func configurate(sub: RegisteredPurchase, input: Input, have: Bool = false) {
+		self.input = input
+		subscription = sub
+		switch sub {
+			case .promo3month:
+				titleLabel.text = "Интеллектум на 3 месяца"
+			default: break
+		}
+		priceLabel.isHidden = have
+		restoreButton.isHidden = have
+		if have {
+			purchaseButton.gradientColors = Style.Gradients.green.value
+			purchaseButton.setTitle("Оформлена", for: .normal)
+			purchaseButton.setTitleColor(.white, for: .normal)
+		} else {
+			purchaseButton.gradientColors = Style.Gradients.yellow.value
+			purchaseButton.setTitle("Оформить", for: .normal)
+			purchaseButton.setTitleColor(UIColor.Label.titleText, for: .normal)
+
+		}
+		input.updatePrice(subscription) { [weak self] price in
+			self?.priceLabel.text = "\(price) / 3 мес"
+		}
+	}
 }

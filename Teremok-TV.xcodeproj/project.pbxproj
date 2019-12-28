@@ -93,6 +93,8 @@
 		253E7E2E236AFA05003FF569 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E7E2D236AFA05003FF569 /* ShadowView.swift */; };
 		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
+		257C1BAB23B7DC3D0051572B /* PromoTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C1BAA23B7DC3D0051572B /* PromoTimeView.swift */; };
+		257C1BAD23B7DC490051572B /* PromoTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257C1BAC23B7DC490051572B /* PromoTimeView.xib */; };
 		257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CD281236E21F600BE96A4 /* GCPlayer.swift */; };
 		25B419E52383480D001BFAED /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B419E42383480D001BFAED /* DisposeBag.swift */; };
 		25C412DF23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412DE23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift */; };
@@ -901,6 +903,8 @@
 		253E7E2D236AFA05003FF569 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
+		257C1BAA23B7DC3D0051572B /* PromoTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTimeView.swift; sourceTree = "<group>"; };
+		257C1BAC23B7DC490051572B /* PromoTimeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoTimeView.xib; sourceTree = "<group>"; };
 		257CD281236E21F600BE96A4 /* GCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPlayer.swift; sourceTree = "<group>"; };
 		25B419E42383480D001BFAED /* DisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
 		25C412DE23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoPremiumAlertViewController.swift; sourceTree = "<group>"; };
@@ -1765,6 +1769,15 @@
 				251E516A235A579000221BA2 /* ColorsGame_fun_4.wav */,
 			);
 			path = Emotions;
+			sourceTree = "<group>";
+		};
+		257C1BA923B7DBAA0051572B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				257C1BAA23B7DC3D0051572B /* PromoTimeView.swift */,
+				257C1BAC23B7DC490051572B /* PromoTimeView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		25C43EF82368E4A90033D9CA /* Subscription */ = {
@@ -3173,6 +3186,7 @@
 		CAF7B17C21B68A7800A59F5F /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				257C1BA923B7DBAA0051572B /* View */,
 				CAF7B17D21B6927C00A59F5F /* StorePresenter.swift */,
 				CAF7B17F21B6927C00A59F5F /* StoreRouter.swift */,
 				CAF7B18121B6927C00A59F5F /* StoreViewController.swift */,
@@ -3551,6 +3565,7 @@
 				CAD2103F231700DC006F2F08 /* MontserratAlternates-LightItalic.ttf in Resources */,
 				112860B6232BA6E30002852A /* monster_menu.mp3 in Resources */,
 				CAF961F522995FF3006E3046 /* animal_20.mp3 in Resources */,
+				257C1BAD23B7DC490051572B /* PromoTimeView.xib in Resources */,
 				CAC6F73222A81BC000756AE2 /* fun_7.mp3 in Resources */,
 				251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */,
 				CAC6F75122A81D1300756AE2 /* Firework_1.json in Resources */,
@@ -4118,6 +4133,7 @@
 				CA49E482212D2ED300711324 /* SettingsInteractor.swift in Sources */,
 				CA0ABB772180CC8900523F5B /* ScrollViewAlertViewController.swift in Sources */,
 				CA7AAF4F2170B0E200747D4B /* SearchCommand.swift in Sources */,
+				257C1BAB23B7DC3D0051572B /* PromoTimeView.swift in Sources */,
 				CAB59FD122F315D800D7CA71 /* AlphaviteMasterModels.swift in Sources */,
 				CA52F354223D2DF40058194E /* MusicMasterInteractor.swift in Sources */,
 				11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */,
