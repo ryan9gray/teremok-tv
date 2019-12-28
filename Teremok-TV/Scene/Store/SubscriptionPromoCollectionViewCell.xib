@@ -24,6 +24,9 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqk-qB-m8g" customClass="RoundCornerView" customModule="Teremok_TV" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="578" height="336"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icPromoTape" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-VH-Orm">
+                                <rect key="frame" x="382" y="0.0" width="196" height="196"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Интеллектум на 3 месяца" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="gqL-zm-ysu">
                                 <rect key="frame" x="175" y="0.0" width="228.5" height="22.5"/>
                                 <constraints>
@@ -226,32 +229,43 @@
                                     <action selector="restoreTap:" destination="tmE-wU-aex" eventType="touchUpInside" id="Wda-9O-ZEd"/>
                                 </connections>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icPromoTape" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-VH-Orm">
-                                <rect key="frame" x="382" y="0.0" width="196" height="196"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="XnZ-KM-DAA">
-                                <rect key="frame" x="461" y="260" width="92" height="44"/>
+                                <rect key="frame" x="509" y="260" width="44" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jjn-tB-9KB" customClass="PromoTimeView" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hyV-Fi-bsE">
+                                                <rect key="frame" x="5" y="0.0" width="33" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vd1-JR-LTm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="минут" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fue-8k-gKf">
+                                                        <rect key="frame" x="0.0" y="30" width="33" height="10"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="ZuX-ho-Fpe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="6dl-ef-SMb"/>
                                             <constraint firstAttribute="height" constant="44" id="Dbb-wL-f4E"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kn6-nk-rDN" customClass="PromoTimeView" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="48" y="0.0" width="44" height="44"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="Ayp-8U-OpP"/>
-                                            <constraint firstAttribute="height" constant="44" id="QTt-rI-QtF"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="До конца акции" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jJ-Ao-tfD">
-                                <rect key="frame" x="459" y="315.5" width="96.5" height="14.5"/>
+                                <rect key="frame" x="483" y="315.5" width="96.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -296,12 +310,11 @@
                 <outlet property="downloadView" destination="tsv-p4-KKj" id="nhk-0T-yF5"/>
                 <outlet property="gameView" destination="dgM-aC-Wi0" id="gJM-n3-f9h"/>
                 <outlet property="heartView" destination="15x-dR-CVb" id="lPg-jD-uAv"/>
-                <outlet property="hourseView" destination="Jjn-tB-9KB" id="nP6-w1-kOS"/>
-                <outlet property="minuteView" destination="Kn6-nk-rDN" id="OI3-t0-u0b"/>
                 <outlet property="musicView" destination="bZh-Gf-hSo" id="JXo-Bf-T5E"/>
                 <outlet property="priceLabel" destination="5SG-Hv-zAf" id="OA5-5v-Cdw"/>
                 <outlet property="purchaseButton" destination="PGT-j0-AZV" id="f4u-gZ-9wx"/>
                 <outlet property="restoreButton" destination="i8O-Zt-2qc" id="OFs-ej-hmG"/>
+                <outlet property="timerStackView" destination="XnZ-KM-DAA" id="ePk-3W-azk"/>
                 <outlet property="titleLabel" destination="gqL-zm-ysu" id="PW0-5r-0Tk"/>
                 <outletCollection property="labels" destination="jHP-Zd-Pfa" collectionClass="NSMutableArray" id="qrB-nS-4hX"/>
                 <outletCollection property="labels" destination="ps3-FM-5B4" collectionClass="NSMutableArray" id="rp1-QU-2Sh"/>

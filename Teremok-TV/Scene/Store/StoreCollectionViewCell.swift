@@ -13,7 +13,7 @@ class StoreCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
     @IBOutlet private var linksTxtView: UITextView!
     @IBOutlet private var titleLabel: UILabel!
 
-    private var action: (() -> Void)?
+	var action: (() -> Void)?
 
     @IBAction private func arrowTap(_ sender: Any) {
         action?()
@@ -25,10 +25,6 @@ class StoreCollectionViewCell: UICollectionViewCell, UITextViewDelegate {
         setLinks()
 		mainLabel.textColor = UIColor.Label.titleText
         titleLabel.textColor = UIColor.Label.titleText
-    }
-
-    func configure(action: @escaping () -> Void) {
-        self.action = action
     }
 
     func setLinks() {

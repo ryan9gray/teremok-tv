@@ -16,8 +16,6 @@ class PromoTimeView: GradientView {
 		super.awakeFromNib()
 
 		vector = .vertical
-		timeLabel.textColor = .white
-		titleLabel.textColor = .white
 		cornerRadius = 2.0
 	}
 
@@ -26,8 +24,12 @@ class PromoTimeView: GradientView {
 		
 	}
 
-	func set(time: String, title: String) {
+	func set(title: String) {
 		titleLabel.text = title
+		timeLabel.textColor = .white
+		titleLabel.textColor = .white
+	}
+	func set(time: String) {
 		timeLabel.text = time
 	}
 }

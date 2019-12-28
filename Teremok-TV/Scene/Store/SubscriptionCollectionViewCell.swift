@@ -40,7 +40,6 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
 
     var output: Output!
     var input: Input!
-    var subscription: RegisteredPurchase!
 
     struct Input {
         var updatePrice: (_ sub: RegisteredPurchase, _ completion: @escaping (String) -> Void) -> Void
@@ -51,9 +50,7 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
         let purchaseAction: () -> Void
     }
     
-    func configurate(sub: RegisteredPurchase, input: Input, have: Bool = false) {
-        self.input = input
-        subscription = sub
+    func configurate(sub: RegisteredPurchase, have: Bool = false) {
         switch sub {
 			case .game:
 				gameView.isHidden = false
@@ -82,8 +79,11 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
             purchaseButton.setTitleColor(UIColor.Label.titleText, for: .normal)
 
         }
-        input.updatePrice(subscription) { [weak self] price in
+        input.updatePrice(sub) { [weak self] price in
             self?.priceLabel.text = "\(price) / мес"
         }
     }
+	deinit {
+		print("deinit SubscriptionCollectionViewCell")
+	}
 }

@@ -33,17 +33,18 @@ class GradientView: UIView {
         layer.masksToBounds = true
         layer.cornerRadius = cornerRadius
 
-        //fill view with gradient layer
-
-        gradientLayer.frame = self.bounds
+        gradientLayer.frame = bounds
 
         //style and insert layer if not already inserted
         if gradientLayer.superlayer == nil {
             gradientLayer.startPoint = vector.startPoint
             gradientLayer.endPoint = vector.endPoint
             gradientLayer.colors = gradientColors.map { $0.cgColor }
-            gradientLayer.locations = [0.0, 1.0]
-
+			if gradientColors.count == 3 {
+				gradientLayer.locations = [0.0, 0.5, 1.0]
+			} else {
+            	gradientLayer.locations = [0.0, 1.0]
+			}
             layer.insertSublayer(gradientLayer, at: 0)
         }
     }
