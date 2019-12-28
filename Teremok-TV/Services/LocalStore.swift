@@ -30,6 +30,26 @@ struct LocalStore {
 	@Storage(userDefaults: userDefaults, key: "promo6MonthTimer", defaultValue: 0)
 	static var promo6MonthTimer: Int
 
+	@Storage(userDefaults: userDefaults, key: "needShowPromo", defaultValue: false)
+	static var needShowPromo: Bool
+
+	@Storage(userDefaults: userDefaults, key: "lastPremiumState", defaultValue: false)
+	static var lastPremiumState: Bool
+
+	@Storage(userDefaults: userDefaults, key: "onBoarding", defaultValue: false)
+	static var onBoarding: Bool
+
+	@Storage(userDefaults: userDefaults, key: "rateVersion", defaultValue: "")
+	static var lastRateVersion: String
+
+	@Storage(userDefaults: userDefaults, key: "analitics", defaultValue: 0.0)
+	static var analiticsLastSend: Double
+
+	// in current version
+	@Storage(userDefaults: userDefaults, key: "appOpenedCound", defaultValue: 0)
+	static var appOpenedCount: Int
+
+	// MARK: Games
 	@Storage(userDefaults: userDefaults, key: "animalsDifficultyKey", defaultValue: false)
     static var animalsIsHard: Bool
 
@@ -38,16 +58,6 @@ struct LocalStore {
 
     @Storage(userDefaults: userDefaults, key: "colorsDifficultyKey", defaultValue: false)
     static var colorsIsHard: Bool
-
-    @Storage(userDefaults: userDefaults, key: "onBoarding", defaultValue: false)
-    static var onBoarding: Bool
-
-    @Storage(userDefaults: userDefaults, key: "rateVersion", defaultValue: "")
-    static var lastRateVersion: String
-
-    // in current version
-    @Storage(userDefaults: userDefaults, key: "appOpenedCound", defaultValue: 0)
-    static var appOpenedCount: Int
 
     @Storage(userDefaults: userDefaults, key: "monsterTip", defaultValue: 0)
     static var monsterTip: Int
@@ -63,9 +73,6 @@ struct LocalStore {
 
     @Storage(userDefaults: userDefaults, key: "monsterFreeGames", defaultValue: 0)
     static var monsterFreeGames: Int
-
-    @Storage(userDefaults: userDefaults, key: "analitics", defaultValue: 0.0)
-    static var analiticsLastSend: Double
 
     // MARK: Introduce Video
     @Storage(userDefaults: userDefaults, key: "animalFirstIntroduce", defaultValue: false)

@@ -55,19 +55,21 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
         self.input = input
         subscription = sub
         switch sub {
-        case .game:
-            gameView.isHidden = false
-            musicView.isHidden = false
-            titleLabel.text = "Интеллектум"
-        case .music:
-            gameView.isHidden = true
-            musicView.isHidden = false
-            titleLabel.text = "Дети Супер +"
-        case .video:
-            gameView.isHidden = true
-            musicView.isHidden = true
-            titleLabel.text = "Дети +"
-        }
+			case .game:
+				gameView.isHidden = false
+				musicView.isHidden = false
+				titleLabel.text = "Интеллектум"
+			case .music:
+				gameView.isHidden = true
+				musicView.isHidden = false
+				titleLabel.text = "Дети Супер +"
+			case .video:
+				gameView.isHidden = true
+				musicView.isHidden = true
+				titleLabel.text = "Дети +"
+			case .promo3month:
+				break
+		}
         priceLabel.isHidden = have
         restoreButton.isHidden = have
         if have {

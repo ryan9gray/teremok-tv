@@ -39,7 +39,7 @@ class AppLaunchScreenViewController: UIViewController {
     
     // MARK: Do something
 
-	func getProfile(_ isNewSession: Bool = false) {
+	func getProfile(_ isNewSession: Bool = true) {
 		service.getProfile(isNewSession: isNewSession) { [weak self] (result) in
 			switch result {
 				case .success(let response):

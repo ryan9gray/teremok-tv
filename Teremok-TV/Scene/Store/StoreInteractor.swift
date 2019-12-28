@@ -25,7 +25,6 @@ protocol StoreDataStore {
 
 class StoreInteractor: StoreBusinessLogic, StoreDataStore {
     var presenter: StorePresentationLogic?
-
     let purchaseService: PurchaseProtocol = PurchaseService()
     let storeService: SwiftyStorePorotocol = SwiftyStoreHelper()
 

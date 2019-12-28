@@ -31,21 +31,16 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
         return MainKeychainService()
     }()
 
-    var rateService = StoreReviewHelper()
-    
     init() {
         NetworkManager.shared.startNetworkReachabilityObserver()
         NotificationCenter.default.addObserver(self, selector: #selector(profileDidChanged(_:)), name: .ProfileNeedReload, object: nil)
-        rateService.checkAndAskForReview()
+        StoreReviewHelper.checkAndAskForReview()
     }
-    
     deinit {
         NotificationCenter.default.removeObserver(self, name: .ProfileNeedReload, object: nil)
     }
  
     func getProfile(_ isNewSession: Bool = false) {
-		guard Profile.current == nil else { return }
-		
         service.getProfile(isNewSession: isNewSession) { [weak self] (result) in
             switch result {
             case .success(let response):
@@ -76,12 +71,9 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
     }
     
     func identifySession() {
-        //if let session = keychain?.authSession, !session.isEmpty {
-            getProfile(true)
-        //}
-//        else {
-//            presenter?.presentAuthScreen()
-//        }
+		if Profile.current == nil{
+			getProfile(true)
+		}
         presenter?.presentMain()
     }
 }

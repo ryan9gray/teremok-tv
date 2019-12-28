@@ -129,6 +129,9 @@ extension Date {
     func dateByAddingDays(_ days: Int) -> Date {
         return dateByAdding(component: .day, value: days)
     }
+	func dateByAddingHours(_ days: Int) -> Date {
+		return dateByAdding(component: .hour, value: days)
+	}
     
     private func dateByAdding(component: NSCalendar.Unit, value: Int) -> Date {
         return (Calendar.current as NSCalendar).date(

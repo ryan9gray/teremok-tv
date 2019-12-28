@@ -55,7 +55,7 @@ class StoreViewController: AbstracViewController, StoreDisplayLogic, UITextViewD
     // MARK: View lifecycle
 
     @IBOutlet private var collectionView: UICollectionView!
-    let subscriptions: [RegisteredPurchase] = RegisteredPurchase.allCases
+	let subscriptions: [RegisteredPurchase] = [.game, .music, .video]
 
     let profile = Profile.current
 
@@ -101,10 +101,10 @@ class StoreViewController: AbstracViewController, StoreDisplayLogic, UITextViewD
 extension StoreViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+		4
     }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withCell: StoreCollectionViewCell.self, for: indexPath)
             cell.configure {
@@ -131,7 +131,6 @@ extension StoreViewController: UICollectionViewDataSource {
 
 }
 extension StoreViewController: UICollectionViewDelegateFlowLayout {
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = collectionView.bounds.height
         if indexPath.row == 0 {

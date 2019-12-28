@@ -9,12 +9,22 @@
 import Foundation
 
 struct PromoWorker {
-
 	func setData() {
 		LocalStore.promo6MonthTimer = CLong(Date().addingTimeInterval(360).timeIntervalSince1970)
 	}
 
-	func getCurrentTime() -> Date {
-		return Date(timeIntervalSince1970: TimeInterval(LocalStore.promo6MonthTimer))
+	var getCurrentTime: Date {
+		Date(timeIntervalSince1970: TimeInterval(LocalStore.promo6MonthTimer))
+	}
+
+	var havePromo: Bool {
+		getCurrentTime.dateByAddingHours(1) < Date()
+	}
+
+	static func checkPremiumChange() {
+		guard !Profile.havePremium, LocalStore.lastPremiumState != Profile.havePremium else { return }
+
+		LocalStore.needShowPromo = true
+		LocalStore.lastPremiumState = false
 	}
 }

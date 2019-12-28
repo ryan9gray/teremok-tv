@@ -28,6 +28,7 @@ final class Profile: Mappable  {
     
     static var current: Profile? = AppCacher.mappable.getObject(of: Profile.self) {
         didSet {
+			PromoWorker.checkPremiumChange()
             NotificationCenter.default.post(name: NSNotification.Name.ProfileDidChanged, object: current)
         }
     }
@@ -39,7 +40,9 @@ final class Profile: Mappable  {
     static var isAuthorized: Bool {
 		return !(current?.needAuthorize ?? true)
     }
-
+	static var havePremium: Bool {
+		return current?.premium ?? false
+	}
 	var needAuthorize: Bool = true
 
     static var subscribe: String {

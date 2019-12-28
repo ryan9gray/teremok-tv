@@ -95,7 +95,7 @@
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
 		257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CD281236E21F600BE96A4 /* GCPlayer.swift */; };
 		25B419E52383480D001BFAED /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B419E42383480D001BFAED /* DisposeBag.swift */; };
-		25C412DF23B39C7000B0A9EA /* FreePremiumAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412DE23B39C7000B0A9EA /* FreePremiumAlertViewController.swift */; };
+		25C412DF23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412DE23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift */; };
 		25C412E123B3A52200B0A9EA /* PromoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412E023B3A52200B0A9EA /* PromoWorker.swift */; };
 		25C412E423B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412E223B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift */; };
 		25C412E523B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25C412E323B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib */; };
@@ -903,7 +903,7 @@
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
 		257CD281236E21F600BE96A4 /* GCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPlayer.swift; sourceTree = "<group>"; };
 		25B419E42383480D001BFAED /* DisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
-		25C412DE23B39C7000B0A9EA /* FreePremiumAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreePremiumAlertViewController.swift; sourceTree = "<group>"; };
+		25C412DE23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoPremiumAlertViewController.swift; sourceTree = "<group>"; };
 		25C412E023B3A52200B0A9EA /* PromoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoWorker.swift; sourceTree = "<group>"; };
 		25C412E223B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPromoTableViewCell.swift; sourceTree = "<group>"; };
 		25C412E323B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionPromoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -2334,7 +2334,7 @@
 				CA09979021A573490051F41D /* SecurityCodeViewController.swift */,
 				CA0ABB762180CC8900523F5B /* ScrollViewAlertViewController.swift */,
 				CA82C12C2132B4360020272E /* CloudAlertViewController.swift */,
-				25C412DE23B39C7000B0A9EA /* FreePremiumAlertViewController.swift */,
+				25C412DE23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift */,
 				CAFF985E2325342600003076 /* GameMasterViewController.swift */,
 			);
 			path = Common;
@@ -4194,7 +4194,7 @@
 				CAE1C42B211DACE10058C9C6 /* CacherType.swift in Sources */,
 				CA433FF4224F94D700B0788E /* MusicSearchCommand.swift in Sources */,
 				CAA6FDB0224BF2A3008C2F87 /* MusicResponse.swift in Sources */,
-				25C412DF23B39C7000B0A9EA /* FreePremiumAlertViewController.swift in Sources */,
+				25C412DF23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift in Sources */,
 				251A04442379E667001644D4 /* HLSService.swift in Sources */,
 				CABAE9CD22C3EE820093FC5A /* OnboardingViewController.swift in Sources */,
 				CAAFD14B2348F06A005E086C /* ColorsGameService.swift in Sources */,
