@@ -122,7 +122,6 @@ extension StoreViewController: UICollectionViewDataSource {
             return cell
         } else {
 			let subscription = subscriptions[(indexPath.row - 1)]
-
 			switch subscription {
 				case .promo3month:
 					let cell = collectionView.dequeueReusableCell(withCell: SubscriptionPromoCollectionViewCell.self, for: indexPath)
@@ -174,6 +173,6 @@ extension StoreViewController: UICollectionViewDelegateFlowLayout {
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+		20
     }
 }

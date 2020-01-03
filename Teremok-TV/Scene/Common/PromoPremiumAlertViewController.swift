@@ -13,7 +13,10 @@ class PromoPremiumAlertViewController: UIViewController {
 	@IBOutlet private var descriptionLabel: UILabel!
 	@IBOutlet private var alertView: DesignableView!
 	@IBOutlet private var choseButton: UIRoundedButtonWithGradientAndShadow!
+	@IBOutlet private var daysCountLabel: UILabel!
+	@IBOutlet private var daysLabel: UILabel!
 
+	@IBOutlet private var labels: [UILabel]!
 	var action: (() -> Void)?
 
 	@IBAction func choseClick(_ sender: Any) {
@@ -30,11 +33,10 @@ class PromoPremiumAlertViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-//		titleLabel.text = alert.title
-//		descriptionLabel.text = alert.subtitle
-//		if let buttonTitle = alert.buttonTitle {
-//			doneBtn.setTitle(buttonTitle, for: .normal)
-//		}
+		labels.forEach { $0.textColor = UIColor.Label.titleText }
+		choseButton.gradientColors = Style.Gradients.yellow.value
+		daysCountLabel.textColor = UIColor.Label.redPromo
+		daysLabel.textColor = UIColor.Label.redPromo
 		setText()
 	}
 	

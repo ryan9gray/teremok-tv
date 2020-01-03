@@ -78,7 +78,7 @@ class AlphaviteStartViewController: GameStartViewController {
             LocalStore.alphabetTip += 1
             var preferences = EasyTipView.Preferences()
             preferences.drawing.font = Style.Font.istokWeb(size: 16)
-            preferences.drawing.foregroundColor = UIColor.View.titleText
+            preferences.drawing.foregroundColor = UIColor.Base.darkBlue
             preferences.drawing.backgroundColor = .white
             preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.right
             tipView = EasyTipView(text: "Здесь можно посмотреть статистику", preferences: preferences, delegate: self)
