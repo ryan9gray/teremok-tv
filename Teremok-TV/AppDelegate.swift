@@ -16,11 +16,9 @@ import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, TrackableClass {
-
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
         configureApp()
         configureUserNotifications(application, launchNotification: launchOptions?[UIApplication.LaunchOptionsKey.remoteNotification])
 

@@ -64,6 +64,7 @@ final class Profile: Mappable  {
     var id: Int?
     var email: String?
     var childs: [Child] = []
+	var untilPremiumTimeInterval: Int = 6600000
 
     func currentPremium() -> Premium {
         if premiumGame {
@@ -91,6 +92,7 @@ final class Profile: Mappable  {
         premiumMusic     <- map["premiumMusic"]
         premiumGame     <- map["premiumGame"]
 		needAuthorize     <- map["needAuthorize"]
+		untilPremiumTimeInterval     <- map["untilPremiumTimeInterval"]
     }
     
     init(with profile: ProfileResponse) {
