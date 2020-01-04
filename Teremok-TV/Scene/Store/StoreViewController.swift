@@ -70,7 +70,6 @@ class StoreViewController: AbstracViewController, StoreDisplayLogic, UITextViewD
         super.viewDidLoad()
 
 		PromoWorker.setDate()
-
         activityView = LottieHUD()
         collectionView.delegate = self
         collectionView.dataSource = self

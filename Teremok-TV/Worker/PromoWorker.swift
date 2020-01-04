@@ -10,7 +10,7 @@ import Foundation
 
 struct PromoWorker {
 	static func setDate() {
-		LocalStore.promo6MonthTimer = Int(Date().timeIntervalSince1970 - 360)
+		LocalStore.promo6MonthTimer = Int(Date().addingTimeInterval(3600).timeIntervalSince1970)
 	}
 
 	static var getCurrentDate: Date {
@@ -18,8 +18,11 @@ struct PromoWorker {
 	}
 
 	static var havePromo: Bool {
-		true
-		//getCurrentDate.dateByAddingHours(1) < Date()
+		if LocalStore.needShowPromo {
+			setDate()
+			LocalStore.needShowPromo = false
+		}
+		return LocalStore.promo6MonthTimer > Int(Date().timeIntervalSince1970)
 	}
 
 	static func checkPremiumChange() {

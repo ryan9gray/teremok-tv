@@ -68,18 +68,17 @@ class SubscriptionPromoCollectionViewCell: UICollectionViewCell {
 		let purchaseAction: () -> Void
 	}
 
-	private func setTimer(minute: Int, second: Int) {
-		secondsView.set(time: timeCount(second))
-		minuteView.set(time: timeCount(minute))
+	private func setTimer(_ time: Int) {
+		secondsView.set(time: timeCount(time % 60))
+		minuteView.set(time: timeCount((time / 60) % 60))
 	}
 
 	private func setupTimer() {
-		let interval = TimeInterval(LocalStore.promo6MonthTimer)
-		var count = interval
+		let interval = LocalStore.promo6MonthTimer - Int(Date().timeIntervalSince1970)
+		var count: Int = interval
 		timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
 			count -= 1
-			let date = Date(timeIntervalSince1970: count)
-			self?.setTimer(minute: date.minute(), second: date.second())
+			self?.setTimer(count)
 		}
 	}
 

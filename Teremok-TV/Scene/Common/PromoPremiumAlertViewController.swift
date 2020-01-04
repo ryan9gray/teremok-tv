@@ -38,6 +38,7 @@ class PromoPremiumAlertViewController: UIViewController {
 		daysCountLabel.textColor = UIColor.Label.redPromo
 		daysLabel.textColor = UIColor.Label.redPromo
 		setText()
+		
 	}
 	
 	func setText() {

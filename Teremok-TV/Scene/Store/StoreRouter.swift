@@ -30,7 +30,6 @@ class StoreRouter: NSObject, StoreRoutingLogic, StoreDataPassing, CommonRoutingL
 
     func navigateAfterPurchase() {
         let settings = SettingsViewController.instantiate(fromStoryboard: .main)
-        settings.needShowPromoCode = true
         viewController?.masterRouter?.pushChild(settings)
     }
 }

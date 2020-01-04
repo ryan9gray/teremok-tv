@@ -107,7 +107,7 @@ class SerialViewController: AbstracViewController, SerialDisplayLogic {
 		if premium {
 			router?.navigateToPreview(number: at)
 		} else {
-
+			router?.openPremiumAlert()
 		}
 	}
 }

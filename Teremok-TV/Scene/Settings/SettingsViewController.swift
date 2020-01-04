@@ -19,8 +19,6 @@ protocol SettingsDisplayLogic: CommonDisplayLogic {
 final class SettingsViewController: AbstracViewController, SettingsDisplayLogic {
     var activityView: LottieHUD?
     
-    var needShowPromoCode = false
-
     var modallyControllerRoutingLogic: CommonRoutingLogic? {
         get { return router }
     }

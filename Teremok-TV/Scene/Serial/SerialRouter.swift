@@ -15,6 +15,7 @@ import UIKit
 protocol SerialRoutingLogic: CommonRoutingLogic {
     func navigateToPreview(number: Int)
     func navigateDescription(item: Serial.Item?)
+	func openPremiumAlert()
 }
 
 protocol SerialDataPassing {
@@ -44,4 +45,13 @@ class SerialRouter: NSObject, SerialRoutingLogic, SerialDataPassing {
         vc.modalTransitionStyle = .crossDissolve
         viewController?.present(vc, animated: true, completion: nil)
     }
+
+	func openPremiumAlert() {
+		let vc = PromoPremiumAlertViewController.instantiate(fromStoryboard: .alerts)
+		vc.modalTransitionStyle = .crossDissolve
+		vc.action = { [unowned self] in
+			self.viewController?.masterRouter?.navigateToStore()
+		}
+		viewController?.present(vc, animated: true, completion: nil)
+	}
 }
