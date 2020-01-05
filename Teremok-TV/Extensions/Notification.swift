@@ -19,6 +19,4 @@ extension Notification.Name {
     public static let MusicBadge = Notification.Name("MusicBadge")
     public static let Internet = Notification.Name("Internet")
     public static let SwichTrack = Notification.Name("SwichTrack")
-
-
 }

@@ -3,7 +3,6 @@ import Foundation
 import UIKit
 
 extension Date {
-    
     static func dateString(from string: String) throws -> String  {
         let outputFormatter = DateFormatter()
         outputFormatter.timeZone = TimeZone.current
@@ -144,7 +143,6 @@ extension Date {
 }
 
 extension Date {
-    
     init(year: Int, month: Int, day: Int) {
         let calendar = Calendar.current
         var dateComponent = DateComponents()

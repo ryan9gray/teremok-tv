@@ -25,7 +25,6 @@ extension UIImage {
     }
 
     convenience init(view: UIView) {
-
         UIGraphicsBeginImageContext(view.frame.size)
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -136,7 +135,6 @@ extension UIImage{
     }
     
     func asyncResizeImageUsingVImage(size: CGSize, completion: @escaping (UIImage?) -> Void) {
-        
         DispatchQueue.global(qos: .userInteractive).async {
             let im = self.resizeImageUsingVImage(size)
             DispatchQueue.main.async {
@@ -146,7 +144,6 @@ extension UIImage{
     }
     
     func fixOrientation() -> UIImage? {
-        
         guard let cgImage = self.cgImage else {
             return nil
         }
@@ -157,22 +154,18 @@ extension UIImage{
         
         let width  = self.size.width
         let height = self.size.height
-        
         var transform = CGAffineTransform.identity
         
         switch self.imageOrientation {
         case .down, .downMirrored:
             transform = transform.translatedBy(x: width, y: height)
             transform = transform.rotated(by: CGFloat.pi)
-            
         case .left, .leftMirrored:
             transform = transform.translatedBy(x: width, y: 0)
             transform = transform.rotated(by: 0.5*CGFloat.pi)
-            
         case .right, .rightMirrored:
             transform = transform.translatedBy(x: 0, y: height)
             transform = transform.rotated(by: -0.5*CGFloat.pi)
-            
         case .up, .upMirrored:
             break
         @unknown default:
@@ -183,11 +176,9 @@ extension UIImage{
         case .upMirrored, .downMirrored:
             transform = transform.translatedBy(x: width, y: 0)
             transform = transform.scaledBy(x: -1, y: 1)
-            
         case .leftMirrored, .rightMirrored:
             transform = transform.translatedBy(x: height, y: 0)
             transform = transform.scaledBy(x: -1, y: 1)
-            
         default:
             break;
         }
@@ -213,11 +204,8 @@ extension UIImage{
         context.concatenate(transform);
         
         switch self.imageOrientation {
-            
         case .left, .leftMirrored, .right, .rightMirrored:
-            // Grr...
             context.draw(cgImage, in: CGRect(x: 0, y: 0, width: height, height: width))
-            
         default:
             context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
         }

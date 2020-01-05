@@ -44,7 +44,6 @@ class FavTableViewHeader: UITableViewHeaderFooterView {
         titleLabel.text = title
         self.imageView.image = image
         
-        titleLabel.font = UIFont.defaultFont(ofSize: 20, for: .bold)
-
+		titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
     }
 }

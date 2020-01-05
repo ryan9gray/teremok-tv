@@ -13,8 +13,8 @@
 import UIKit
 
 protocol ParentRoutingLogic {
-    var childControllersStack: Stack<AbstracViewController> { get set }
-    var childVC: AbstracViewController?  { get set }
+    var childControllersStack: Stack<AbstracViewController> { get }
+    var childVC: AbstracViewController?  { get }
     func canPop() -> Bool
     func pushChild(_ vc: AbstracViewController)
     func pushChild<T: AbstracViewController>(viewControllerClass: T.Type, storyboard: StoryboardWorker)
@@ -125,12 +125,6 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
         viewController?.present(vc, animated: true, completion: nil)
     }
 
-    /// Deprecate
-    func navigateToCatalog(){
-        let serials = RazdelViewController.instantiate(fromStoryboard: .main)
-        pushChild(serials)
-    }
-
     func navigateToAchieves(){
         let vc = AchievesViewController.instantiate(fromStoryboard: .main)
         pushChild(vc)
@@ -191,12 +185,12 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
     }
 
     var childVC: AbstracViewController? {
-        set{
+        set {
             guard let value = newValue else { return }
             childControllersStack.push(value)
         }
-        get{
-            return childControllersStack.top
+        get {
+			childControllersStack.top
         }
     }
 
@@ -215,7 +209,6 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
     
     func presentChild(viewController: AbstracViewController){
         UIView.transition(with: viewController.view, duration: 0.5, options: .transitionCrossDissolve, animations: {
-            // Add Child View as Subview
             self.viewController?.view.insertSubview(viewController.view, aboveSubview: (self.viewController?.backgroundView)!)
         }, completion: nil)
         

@@ -179,25 +179,24 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
 
     @objc func addBadge(_ notification: Notification) {
         DispatchQueue.main.async {
-            //notification.name
-        if let info = notification.userInfo {
-            var bagButton: BadgeButton?
-            var count = 0
-            if let fav = info["Fav"] as? Int {
-                bagButton = self.heartBtn
-                count = fav
-            }
-            if let ach = info["Ach"] as? Int {
-                bagButton = self.achievmentBtn
-                count = ach
-            }
-            guard let btn = bagButton  else { return }
+			if let info = notification.userInfo {
+				var bagButton: BadgeButton?
+				var count = 0
+				if let fav = info["Fav"] as? Int {
+					bagButton = self.heartBtn
+					count = fav
+				}
+				if let ach = info["Ach"] as? Int {
+					bagButton = self.achievmentBtn
+					count = ach
+				}
+				guard let btn = bagButton  else { return }
 
-            btn.tintColor = UIColor.darkGray
-            btn.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
-            btn.addbadgetobutton(badge: count)
-            self.view.layoutIfNeeded()
-        }
+				btn.tintColor = UIColor.darkGray
+				btn.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
+				btn.addbadgetobutton(badge: count)
+				self.view.layoutIfNeeded()
+			}
         }
     }
     
