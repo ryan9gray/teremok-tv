@@ -4573,7 +4573,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.2;
+				MARKETING_VERSION = 1.7.3;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4603,7 +4603,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.2;
+				MARKETING_VERSION = 1.7.3;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4696,7 +4696,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.2;
+				MARKETING_VERSION = 1.7.3;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;

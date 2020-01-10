@@ -93,7 +93,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         //router?.navigateToAnimals()
     }
     @IBAction func touchDown(_ sender: UIButton) {
-        if !isAuth {
+		if !Profile.isAuthorized {
             sender.cancelTracking(with: nil)
             presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегистрироваться") { [weak self] in
                 self?.router?.navigateToReg()
@@ -110,7 +110,6 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         }
     }
 
-    var isAuth = false
     var isOffline = false
     var audioPlayer: AVAudioPlayer?
 
@@ -222,13 +221,11 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     }
 
     func logout(){
-        isAuth = false
         interactor?.logoutSession()
     }
 
     func displayProfile() {
         let profile = Profile.current
-        isAuth = profile != nil
         isPremium = profile?.premium ?? false
         isKidsPlusShow = !isPremium
 

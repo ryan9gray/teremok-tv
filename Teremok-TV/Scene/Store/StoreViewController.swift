@@ -69,7 +69,7 @@ class StoreViewController: AbstracViewController, StoreDisplayLogic, UITextViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		PromoWorker.setDate()
+		//PromoWorker.setDate()
         activityView = LottieHUD()
         collectionView.delegate = self
         collectionView.dataSource = self

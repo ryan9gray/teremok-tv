@@ -64,7 +64,7 @@ class PromoPremiumAlertViewController: UIViewController {
 		case  auth = "Для безопасности детей у нас отсутствует реклама, но мы ежемесячно обновляем игры, пополняем каталог новыми мультфильмами, улучшаем сервисы. К сожалению, для пользователей без тарифа мы вынуждены ограничить использование приложения до 30 просмотров в месяц. Если вы постоянный зритель и довольны нашим сервисом, то вам необходимо оформить тариф подходящий для вашего малыша. Надеемся на понимание с вашей стороны!"
 
 		var attributedText: NSAttributedString {
-			let attributedString = NSMutableAttributedString(string: self.rawValue, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 15.0)])
+			let attributedString = NSMutableAttributedString(string: rawValue, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15.0)])
 			let boldFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0)]
 
 			let boldPartOfString = "мы вынуждены ограничить использование приложения до 30 просмотров в месяц"
@@ -76,8 +76,8 @@ class PromoPremiumAlertViewController: UIViewController {
 					secondBoldPartOfString = "вам необходимо пройти регистрацию и оформить тариф"
 			}
 
-			attributedString.addAttributes(boldFontAttribute, range: NSRange(self.rawValue.range(of: boldPartOfString) ?? self.rawValue.startIndex..<self.rawValue.endIndex, in: self.rawValue))
-			attributedString.addAttributes(boldFontAttribute, range: NSRange(self.rawValue.range(of: secondBoldPartOfString) ?? self.rawValue.startIndex..<self.rawValue.endIndex, in: self.rawValue))
+			attributedString.addAttributes(boldFontAttribute, range: NSRange(rawValue.range(of: boldPartOfString) ?? rawValue.startIndex..<rawValue.endIndex, in: rawValue))
+			attributedString.addAttributes(boldFontAttribute, range: NSRange(rawValue.range(of: secondBoldPartOfString) ?? rawValue.startIndex..<rawValue.endIndex, in: rawValue))
 			return attributedString
 		}
 	}
