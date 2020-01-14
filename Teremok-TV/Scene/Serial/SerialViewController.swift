@@ -103,6 +103,8 @@ class SerialViewController: AbstracViewController, SerialDisplayLogic {
     }
 
 	func watch(at: Int) {
+//		router?.openPremiumAlert()
+//		return
 		if Profile.current?.premium ?? false {
 			router?.navigateToPreview(number: at)
 		} else {

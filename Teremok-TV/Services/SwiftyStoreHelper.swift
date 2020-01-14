@@ -12,7 +12,7 @@ enum RegisteredPurchase : String, CaseIterable {
     case game = "fullSubs"
     case music = "VandM"
     case video = "month"
-	case promo3month = "fullaccessthree"
+	case promo3month = "accessthree"
 
     var premium: Premium {
         switch self {

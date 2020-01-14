@@ -51,9 +51,10 @@ class SettingsInteractor: SettingsBusinessLogic, SettingsDataStore {
     }
     func logout(){
         logoutService.logout()
+		getProfile()
     }
     
-    func getProfile(){
+    func getProfile() {
         service.getProfile { [weak self] (result) in
             switch result {
             case .success(let response):

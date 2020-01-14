@@ -29,6 +29,7 @@ final class Profile: Mappable  {
     static var current: Profile? = AppCacher.mappable.getObject(of: Profile.self) {
         didSet {
 			PromoWorker.checkPremiumChange()
+			LocalStore.lastPremiumState = havePremium
             NotificationCenter.default.post(name: NSNotification.Name.ProfileDidChanged, object: current)
         }
     }

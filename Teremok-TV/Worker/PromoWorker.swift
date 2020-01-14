@@ -29,6 +29,5 @@ struct PromoWorker {
 		guard !Profile.havePremium, LocalStore.lastPremiumState != Profile.havePremium else { return }
 
 		LocalStore.needShowPromo = true
-		LocalStore.lastPremiumState = false
 	}
 }
