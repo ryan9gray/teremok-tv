@@ -63,7 +63,7 @@ class MusicMasterViewController: UIViewController, MusicMasterDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        UILabel.appearance().textColor = UIColor.View.titleText
+        UILabel.appearance().textColor = UIColor.Base.darkBlue
         showMain()
 
         //LockScreen Media control registry

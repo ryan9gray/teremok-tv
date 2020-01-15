@@ -16,36 +16,29 @@ import SwiftyStoreKit
 protocol SettingsBusinessLogic {
     func fetchData()
     func logout()
-    func acivateCode(_ code: String)
 }
 
 protocol SettingsDataStore {
     var isAuth: Bool {get set}
     var isPremium: Bool {get set}
-
 }
 
 class SettingsInteractor: SettingsBusinessLogic, SettingsDataStore {
-    
     var presenter: SettingsPresentationLogic?
-    
     let service: ProfileProtocol = ProfileService()
     let purchaseService: PurchaseProtocol = PurchaseService()
-    
-    lazy var storeService: SwiftyStorePorotocol = SwiftyStoreHelper()
-    
-    lazy var logoutService: LogoutProtocol = LogoutService()
+	let storeService: SwiftyStorePorotocol = SwiftyStoreHelper()
+	let logoutService: LogoutProtocol = LogoutService()
     
     var isAuth: Bool = false
     var isPremium: Bool = false
 
-    
     func fetchData(){
         getProfile()
 
-        DispatchQueue.global(qos: .utility).async {
-            //self.getPromo()
-        }
+//        DispatchQueue.global(qos: .utility).async {
+//            self.getPromo()
+//        }
 //        if let profile = Profile.current {
 //            self.presenter?.presentProfile(profile)
 //        }
@@ -58,9 +51,10 @@ class SettingsInteractor: SettingsBusinessLogic, SettingsDataStore {
     }
     func logout(){
         logoutService.logout()
+		getProfile()
     }
     
-    func getProfile(){
+    func getProfile() {
         service.getProfile { [weak self] (result) in
             switch result {
             case .success(let response):
@@ -75,31 +69,4 @@ class SettingsInteractor: SettingsBusinessLogic, SettingsDataStore {
             }
         }
     }
-
-    func getPromo() {
-        purchaseService.getPromo { [weak self] (result) in
-            switch result {
-            case .success(let response):
-                guard let code = response.promoCode else { return }
-                self?.presenter?.presentPromo(code: code)
-            case .failure(let error):
-               print("\(error.localizedDescription)")
-            }
-        }
-    }
-
-    func acivateCode(_ code: String) {
-        purchaseService.activatePromo(code: code) { [weak self] (result) in
-            switch result {
-            case .success(let response):
-                if let message = response.message {
-                    self?.presenter?.activateState(message)
-                    NotificationCenter.default.post(name: .ProfileNeedReload, object: nil)
-                }
-            case .failure(let error):
-                self?.presenter?.presentError(error: error)
-            }
-        }
-    }
-
 }

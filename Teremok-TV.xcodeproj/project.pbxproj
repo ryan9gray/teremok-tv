@@ -93,8 +93,14 @@
 		253E7E2E236AFA05003FF569 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E7E2D236AFA05003FF569 /* ShadowView.swift */; };
 		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
+		257C1BAB23B7DC3D0051572B /* PromoTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C1BAA23B7DC3D0051572B /* PromoTimeView.swift */; };
+		257C1BAD23B7DC490051572B /* PromoTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257C1BAC23B7DC490051572B /* PromoTimeView.xib */; };
 		257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CD281236E21F600BE96A4 /* GCPlayer.swift */; };
 		25B419E52383480D001BFAED /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B419E42383480D001BFAED /* DisposeBag.swift */; };
+		25C412DF23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412DE23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift */; };
+		25C412E123B3A52200B0A9EA /* PromoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412E023B3A52200B0A9EA /* PromoWorker.swift */; };
+		25C412E423B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C412E223B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift */; };
+		25C412E523B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25C412E323B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib */; };
 		25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EF92368E4A90033D9CA /* Subscription.swift */; };
 		25C43EFD2368E4A90033D9CA /* SimpleSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */; };
 		25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFB2368E4A90033D9CA /* Subscriptions.swift */; };
@@ -502,7 +508,6 @@
 		CAB5A4542171F18200A00C8E /* ChildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44E2171F18200A00C8E /* ChildsViewController.swift */; };
 		CAB5A4552171F18200A00C8E /* ChildsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A44F2171F18200A00C8E /* ChildsInteractor.swift */; };
 		CAB5A4572171F2B200A00C8E /* ChildsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5A4562171F2B200A00C8E /* ChildsStackView.swift */; };
-		CAB653D8215A5C0F00BEB620 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB653D7215A5C0F00BEB620 /* UIBezierPath.swift */; };
 		CABAE9CD22C3EE820093FC5A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAE9CC22C3EE820093FC5A /* OnboardingViewController.swift */; };
 		CABE842223223FF80082E2E4 /* alphabetJump.wav in Resources */ = {isa = PBXBuildFile; fileRef = CABE842123223FF80082E2E4 /* alphabetJump.wav */; settings = {ASSET_TAGS = (AlphabetSounds, ); }; };
 		CAC0988822FEDCD400EFB01E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988722FEDCD400EFB01E /* Style.swift */; };
@@ -510,7 +515,6 @@
 		CAC0988E22FF12A800EFB01E /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0988C22FF12A700EFB01E /* UIKitExtensions.swift */; };
 		CAC0989222FF47ED00EFB01E /* AlphaviteStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC0989122FF47ED00EFB01E /* AlphaviteStatView.swift */; };
 		CAC0989422FF47FD00EFB01E /* AlphaviteStatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC0989322FF47FD00EFB01E /* AlphaviteStatView.xib */; };
-		CAC1126321562A0400678D1B /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1126221562A0400678D1B /* UIButton.swift */; };
 		CAC1126521562F5900678D1B /* RequestCacheCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1126421562F5800678D1B /* RequestCacheCleaner.swift */; };
 		CAC1126721563A9900678D1B /* ChildService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1126621563A9900678D1B /* ChildService.swift */; };
 		CAC2D4E52114D2DF00945003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D4E42114D2DF00945003 /* AppDelegate.swift */; };
@@ -534,7 +538,6 @@
 		CAC2D52C2115A68300945003 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D50F2115A68200945003 /* UITextField.swift */; };
 		CAC2D52D2115A68300945003 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5102115A68200945003 /* String.swift */; };
 		CAC2D52E2115A68300945003 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5112115A68200945003 /* UIViewController.swift */; };
-		CAC2D52F2115A68300945003 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5122115A68200945003 /* UIFont.swift */; };
 		CAC2D5302115A68300945003 /* UIToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5132115A68200945003 /* UIToolbar.swift */; };
 		CAC2D5322115A68300945003 /* ModalPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5162115A68200945003 /* ModalPresentable.swift */; };
 		CAC6F71C22A81BC000756AE2 /* after_announce_round_n.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAC6F70422A81BC000756AE2 /* after_announce_round_n.wav */; };
@@ -897,8 +900,14 @@
 		253E7E2D236AFA05003FF569 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
+		257C1BAA23B7DC3D0051572B /* PromoTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTimeView.swift; sourceTree = "<group>"; };
+		257C1BAC23B7DC490051572B /* PromoTimeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoTimeView.xib; sourceTree = "<group>"; };
 		257CD281236E21F600BE96A4 /* GCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPlayer.swift; sourceTree = "<group>"; };
 		25B419E42383480D001BFAED /* DisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
+		25C412DE23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoPremiumAlertViewController.swift; sourceTree = "<group>"; };
+		25C412E023B3A52200B0A9EA /* PromoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoWorker.swift; sourceTree = "<group>"; };
+		25C412E223B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPromoTableViewCell.swift; sourceTree = "<group>"; };
+		25C412E323B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionPromoCollectionViewCell.xib; sourceTree = "<group>"; };
 		25C43EF92368E4A90033D9CA /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		25C43EFA2368E4A90033D9CA /* SimpleSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSubscription.swift; sourceTree = "<group>"; };
 		25C43EFB2368E4A90033D9CA /* Subscriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
@@ -1310,7 +1319,6 @@
 		CAB5A44E2171F18200A00C8E /* ChildsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsViewController.swift; sourceTree = "<group>"; };
 		CAB5A44F2171F18200A00C8E /* ChildsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsInteractor.swift; sourceTree = "<group>"; };
 		CAB5A4562171F2B200A00C8E /* ChildsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildsStackView.swift; sourceTree = "<group>"; };
-		CAB653D7215A5C0F00BEB620 /* UIBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		CABAE9CC22C3EE820093FC5A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		CABE842123223FF80082E2E4 /* alphabetJump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alphabetJump.wav; sourceTree = "<group>"; };
 		CAC0988722FEDCD400EFB01E /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
@@ -1318,7 +1326,6 @@
 		CAC0988C22FF12A700EFB01E /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		CAC0989122FF47ED00EFB01E /* AlphaviteStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaviteStatView.swift; sourceTree = "<group>"; };
 		CAC0989322FF47FD00EFB01E /* AlphaviteStatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlphaviteStatView.xib; sourceTree = "<group>"; };
-		CAC1126221562A0400678D1B /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		CAC1126421562F5800678D1B /* RequestCacheCleaner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCacheCleaner.swift; sourceTree = "<group>"; };
 		CAC1126621563A9900678D1B /* ChildService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildService.swift; sourceTree = "<group>"; };
 		CAC2D4E12114D2DF00945003 /* Teremok-TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teremok-TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1344,7 +1351,6 @@
 		CAC2D50F2115A68200945003 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		CAC2D5102115A68200945003 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CAC2D5112115A68200945003 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		CAC2D5122115A68200945003 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		CAC2D5132115A68200945003 /* UIToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIToolbar.swift; sourceTree = "<group>"; };
 		CAC2D5162115A68200945003 /* ModalPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentable.swift; sourceTree = "<group>"; };
 		CAC2D5342115A7FB00945003 /* HeaderObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderObj.h; sourceTree = "<group>"; };
@@ -1757,6 +1763,15 @@
 				251E516A235A579000221BA2 /* ColorsGame_fun_4.wav */,
 			);
 			path = Emotions;
+			sourceTree = "<group>";
+		};
+		257C1BA923B7DBAA0051572B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				257C1BAA23B7DC3D0051572B /* PromoTimeView.swift */,
+				257C1BAC23B7DC490051572B /* PromoTimeView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		25C43EF82368E4A90033D9CA /* Subscription */ = {
@@ -2326,6 +2341,7 @@
 				CA09979021A573490051F41D /* SecurityCodeViewController.swift */,
 				CA0ABB762180CC8900523F5B /* ScrollViewAlertViewController.swift */,
 				CA82C12C2132B4360020272E /* CloudAlertViewController.swift */,
+				25C412DE23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift */,
 				CAFF985E2325342600003076 /* GameMasterViewController.swift */,
 			);
 			path = Common;
@@ -2690,14 +2706,12 @@
 		CAC2D50A2115A68200945003 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CAB653D7215A5C0F00BEB620 /* UIBezierPath.swift */,
 				CA0053CF213BF6FA00AA187F /* UITableViewCell.swift */,
 				CA0053D1213BF72C00AA187F /* UICollectioView.swift */,
 				CA0053D3213BF7C900AA187F /* UITableView.swift */,
 				CAE1C472211DC9190058C9C6 /* UIWindow.swift */,
 				CAE1C45F211DC7B90058C9C6 /* UIApplication.swift */,
 				CAC2D5112115A68200945003 /* UIViewController.swift */,
-				CAC1126221562A0400678D1B /* UIButton.swift */,
 				CAE1C45B211DC6550058C9C6 /* UIAlertController.swift */,
 				CA7A8AAE217C691100A8EA15 /* Int.swift */,
 				CA2A911B2205C2B400CD77FD /* UILabel.swift */,
@@ -2711,7 +2725,6 @@
 				CAC2D50E2115A68200945003 /* UIDevice.swift */,
 				CAC2D50F2115A68200945003 /* UITextField.swift */,
 				CAC2D5102115A68200945003 /* String.swift */,
-				CAC2D5122115A68200945003 /* UIFont.swift */,
 				CAC2D5132115A68200945003 /* UIToolbar.swift */,
 				CA0053CA213BDAAF00AA187F /* Notification.swift */,
 			);
@@ -3060,6 +3073,7 @@
 				CA51E1CC22FED1790028DF63 /* GameHelper.swift */,
 				CAFF984723252D3E00003076 /* ImageFillter.swift */,
 				CAC0988722FEDCD400EFB01E /* Style.swift */,
+				25C412E023B3A52200B0A9EA /* PromoWorker.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -3163,10 +3177,13 @@
 		CAF7B17C21B68A7800A59F5F /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				257C1BA923B7DBAA0051572B /* View */,
 				CAF7B17D21B6927C00A59F5F /* StorePresenter.swift */,
 				CAF7B17F21B6927C00A59F5F /* StoreRouter.swift */,
 				CAF7B18121B6927C00A59F5F /* StoreViewController.swift */,
 				CAF7B18221B6927C00A59F5F /* StoreInteractor.swift */,
+				25C412E223B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift */,
+				25C412E323B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib */,
 				CA76362E226A63CD00168AB1 /* SubscriptionCollectionViewCell.swift */,
 				CA76362F226A63CD00168AB1 /* SubscriptionCollectionViewCell.xib */,
 				CA763628226A5FDF00168AB1 /* StoreCollectionViewCell.swift */,
@@ -3539,6 +3556,7 @@
 				CAD2103F231700DC006F2F08 /* MontserratAlternates-LightItalic.ttf in Resources */,
 				112860B6232BA6E30002852A /* monster_menu.mp3 in Resources */,
 				CAF961F522995FF3006E3046 /* animal_20.mp3 in Resources */,
+				257C1BAD23B7DC490051572B /* PromoTimeView.xib in Resources */,
 				CAC6F73222A81BC000756AE2 /* fun_7.mp3 in Resources */,
 				251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */,
 				CAC6F75122A81D1300756AE2 /* Firework_1.json in Resources */,
@@ -3641,6 +3659,7 @@
 				CA5100EF22F6EACF00821C25 /* alphavite_5_word_2.wav in Resources */,
 				CAD2105223170C69006F2F08 /* alphabetPickMain.wav in Resources */,
 				251E5172235A579000221BA2 /* ColorsGame_color_5.wav in Resources */,
+				25C412E523B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib in Resources */,
 				251E5194235A579100221BA2 /* ColorsGame_fun_3.wav in Resources */,
 				CA4C28CE2147DFDB00CA264D /* box.json in Resources */,
 				CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */,
@@ -3946,7 +3965,6 @@
 				CA70867B23082EA80015851C /* AlphaviteStatisticRouter.swift in Sources */,
 				CA49E4A8212D76FA00711324 /* UIView.swift in Sources */,
 				CA10414A22629A0B005D62DE /* SearchMusicRouter.swift in Sources */,
-				CAC2D52F2115A68300945003 /* UIFont.swift in Sources */,
 				CA0053C9213BD9CE00AA187F /* URLMainServices.swift in Sources */,
 				CAAAFB4D22E335670006BD60 /* Analytics.swift in Sources */,
 				CA61D87A22A1D23D00E3D603 /* AnimalsListResponse.swift in Sources */,
@@ -3965,6 +3983,7 @@
 				CA52F369223D9FE50058194E /* AlbumPresenter.swift in Sources */,
 				CA8197FE214993C40079D46A /* ContentResponse.swift in Sources */,
 				CA49E48D212D326600711324 /* TerPush+Mapping.swift in Sources */,
+				25C412E123B3A52200B0A9EA /* PromoWorker.swift in Sources */,
 				CA52F36C223D9FE50058194E /* AlbumModels.swift in Sources */,
 				CADD14BB23129A4000AE920A /* TTSegmentedControl.swift in Sources */,
 				CAAD25F522F5DC80005CFCD2 /* AlphaviteCharsViewController.swift in Sources */,
@@ -4087,6 +4106,7 @@
 				CAF4C110214B0C7900954AA8 /* FavPresenter.swift in Sources */,
 				CAE1C42D211DACE10058C9C6 /* LogsCacher.swift in Sources */,
 				CA49E4A1212D5A9200711324 /* MainRouter.swift in Sources */,
+				25C412E423B5377000B0A9EA /* SubscriptionPromoTableViewCell.swift in Sources */,
 				CAE0947F214CF43C0052F283 /* ResetPassViewController.swift in Sources */,
 				CAD90EB322B13636004D74BD /* AnimalsGetStatCommand.swift in Sources */,
 				11BC752523043A1E001B5CC8 /* MonsterMasterRouter.swift in Sources */,
@@ -4103,6 +4123,7 @@
 				CA49E482212D2ED300711324 /* SettingsInteractor.swift in Sources */,
 				CA0ABB772180CC8900523F5B /* ScrollViewAlertViewController.swift in Sources */,
 				CA7AAF4F2170B0E200747D4B /* SearchCommand.swift in Sources */,
+				257C1BAB23B7DC3D0051572B /* PromoTimeView.swift in Sources */,
 				CAB59FD122F315D800D7CA71 /* AlphaviteMasterModels.swift in Sources */,
 				CA52F354223D2DF40058194E /* MusicMasterInteractor.swift in Sources */,
 				11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */,
@@ -4136,7 +4157,6 @@
 				CAE1C42E211DACE10058C9C6 /* SqliteCacher.swift in Sources */,
 				CA8EA7112141444A00159451 /* ButtonCellProtocol.swift in Sources */,
 				CAC1126521562F5900678D1B /* RequestCacheCleaner.swift in Sources */,
-				CAC1126321562A0400678D1B /* UIButton.swift in Sources */,
 				CAE09480214CF43C0052F283 /* ResetPassInteractor.swift in Sources */,
 				11604ADC231F8494001D1C7F /* MonsterSendStatCommand.swift in Sources */,
 				CAB59FD322F315D800D7CA71 /* AlphaviteMasterInteractor.swift in Sources */,
@@ -4179,13 +4199,13 @@
 				CAE1C42B211DACE10058C9C6 /* CacherType.swift in Sources */,
 				CA433FF4224F94D700B0788E /* MusicSearchCommand.swift in Sources */,
 				CAA6FDB0224BF2A3008C2F87 /* MusicResponse.swift in Sources */,
+				25C412DF23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift in Sources */,
 				251A04442379E667001644D4 /* HLSService.swift in Sources */,
 				CABAE9CD22C3EE820093FC5A /* OnboardingViewController.swift in Sources */,
 				CAAFD14B2348F06A005E086C /* ColorsGameService.swift in Sources */,
 				CAEEF2402299C9FD00AF5AF6 /* RoundPresentViewController.swift in Sources */,
 				CAE1C453211DC23A0058C9C6 /* RegistrationViewController.swift in Sources */,
 				CA8A005F215A9E0C00CA879E /* Clouds.swift in Sources */,
-				CAB653D8215A5C0F00BEB620 /* UIBezierPath.swift in Sources */,
 				CAE1C46C211DC8CA0058C9C6 /* AuthPresenter.swift in Sources */,
 				CA7A8AAF217C691100A8EA15 /* Int.swift in Sources */,
 				CAE1C437211DAEA90058C9C6 /* DefaultsObject.swift in Sources */,
@@ -4543,7 +4563,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -4553,7 +4573,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.2;
+				MARKETING_VERSION = 1.7.4;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4574,7 +4594,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
@@ -4583,7 +4603,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.2;
+				MARKETING_VERSION = 1.7.4;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4666,7 +4686,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -4676,7 +4696,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.2;
+				MARKETING_VERSION = 1.7.4;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;

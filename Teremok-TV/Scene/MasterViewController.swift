@@ -93,7 +93,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         //router?.navigateToAnimals()
     }
     @IBAction func touchDown(_ sender: UIButton) {
-        if !isAuth {
+		if !Profile.isAuthorized {
             sender.cancelTracking(with: nil)
             presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегистрироваться") { [weak self] in
                 self?.router?.navigateToReg()
@@ -110,7 +110,6 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         }
     }
 
-    var isAuth = false
     var isOffline = false
     var audioPlayer: AVAudioPlayer?
 
@@ -179,25 +178,24 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
 
     @objc func addBadge(_ notification: Notification) {
         DispatchQueue.main.async {
-            //notification.name
-        if let info = notification.userInfo {
-            var bagButton: BadgeButton?
-            var count = 0
-            if let fav = info["Fav"] as? Int {
-                bagButton = self.heartBtn
-                count = fav
-            }
-            if let ach = info["Ach"] as? Int {
-                bagButton = self.achievmentBtn
-                count = ach
-            }
-            guard let btn = bagButton  else { return }
+			if let info = notification.userInfo {
+				var bagButton: BadgeButton?
+				var count = 0
+				if let fav = info["Fav"] as? Int {
+					bagButton = self.heartBtn
+					count = fav
+				}
+				if let ach = info["Ach"] as? Int {
+					bagButton = self.achievmentBtn
+					count = ach
+				}
+				guard let btn = bagButton  else { return }
 
-            btn.tintColor = UIColor.darkGray
-            btn.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
-            btn.addbadgetobutton(badge: count)
-            self.view.layoutIfNeeded()
-        }
+				btn.tintColor = UIColor.darkGray
+				btn.badgeEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 15)
+				btn.addbadgetobutton(badge: count)
+				self.view.layoutIfNeeded()
+			}
         }
     }
     
@@ -223,13 +221,11 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     }
 
     func logout(){
-        isAuth = false
         interactor?.logoutSession()
     }
 
     func displayProfile() {
         let profile = Profile.current
-        isAuth = profile != nil
         isPremium = profile?.premium ?? false
         isKidsPlusShow = !isPremium
 

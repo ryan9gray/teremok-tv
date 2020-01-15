@@ -29,10 +29,10 @@ struct BackgroundMediaWorker {
             UILabel.appearance().textColor = UIColor.View.orange
         case 17...21:
             background.image = WinterBackgroundImages.evening.image
-            UILabel.appearance().textColor = UIColor.View.titleText
+            UILabel.appearance().textColor = UIColor.Base.darkBlue
         default:
             background.image = WinterBackgroundImages.day.image
-            UILabel.appearance().textColor = UIColor.View.titleText
+            UILabel.appearance().textColor = UIColor.Base.darkBlue
         }
        //background.image = #imageLiteral(resourceName: "ic-background_night")
     }
@@ -43,9 +43,9 @@ struct BackgroundMediaWorker {
         case 0...6, 21...:
             UILabel.appearance().textColor = UIColor.View.orange
         case 17...21:
-            UILabel.appearance().textColor = UIColor.View.titleText
+            UILabel.appearance().textColor = UIColor.Base.darkBlue
         default:
-            UILabel.appearance().textColor = UIColor.View.titleText
+            UILabel.appearance().textColor = UIColor.Base.darkBlue
         }
     }
 

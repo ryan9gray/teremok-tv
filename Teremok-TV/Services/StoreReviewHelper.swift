@@ -11,24 +11,23 @@ import StoreKit
 
 struct StoreReviewHelper {
 
-    func checkAndAskForReview() { // call this whenever appropriate
+   	static func checkAndAskForReview() {
         guard ServiceConfiguration.activeConfiguration() == .prod  else {
             return
         }
-        // this will not be shown everytime. Apple has some internal logic on how to show this.
         let appOpenCount = LocalStore.appOpenedCount
         switch appOpenCount {
         case 30:
-            StoreReviewHelper().requestReview()
+            StoreReviewHelper.requestReview()
         case _ where appOpenCount % 100 == 0 :
-            StoreReviewHelper().requestReview()
+            StoreReviewHelper.requestReview()
         default:
             print("App run count in this version is : \(appOpenCount)")
-            break;
+            break
         }
-
     }
-    fileprivate func requestReview() {
+	
+    fileprivate static func requestReview() {
         if #available(iOS 10.3, *) {
             LocalStore.lastRateVersion = AppInfoWorker.applicationShortVersion
             LocalStore.appOpenedCount = 0

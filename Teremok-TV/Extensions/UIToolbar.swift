@@ -7,7 +7,6 @@ enum UIToolbarInputAccessoryStyle {
 }
 
 extension UIToolbar {
-    //, UIInputViewAudioFeedback
     static func inputAccessoryWith(style: UIToolbarInputAccessoryStyle) -> UIToolbar {
         let result = UIToolbar.init(frame: CGRect.init(x: 0.0, y: 0.0, width: 0.0, height: 44.0))
         result.isTranslucent = false

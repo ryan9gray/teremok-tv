@@ -31,14 +31,11 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
         return MainKeychainService()
     }()
 
-    var rateService = StoreReviewHelper()
-    
     init() {
         NetworkManager.shared.startNetworkReachabilityObserver()
-        NotificationCenter.default.addObserver(self, selector: #selector(profileDidChanged(_:)), name: .ProfileNeedReload, object: nil)
-        rateService.checkAndAskForReview()
+        NotificationCenter.default.addObserver(self, selector: #selector(profileNeedReload), name: .ProfileNeedReload, object: nil)
+        StoreReviewHelper.checkAndAskForReview()
     }
-    
     deinit {
         NotificationCenter.default.removeObserver(self, name: .ProfileNeedReload, object: nil)
     }
@@ -60,7 +57,7 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
         }
     }
     
-    @objc private func profileDidChanged(_ notification: Notification?) {
+    @objc private func profileNeedReload(_ notification: Notification?) {
         getProfile()
     }
 
@@ -71,15 +68,13 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
         profileModel = nil
         AppCacher.mappable.clearAllMappable()
         Profile.current = nil
+		getProfile(true)
     }
     
     func identifySession() {
-        //if let session = keychain?.authSession, !session.isEmpty {
-            getProfile(true)
-        //}
-//        else {
-//            presenter?.presentAuthScreen()
-//        }
+		if Profile.current == nil{
+			getProfile(true)
+		}
         presenter?.presentMain()
     }
 }

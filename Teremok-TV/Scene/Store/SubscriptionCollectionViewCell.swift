@@ -27,6 +27,8 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
         restoreButton.text = "Восстановить подписку"
         purchaseButton.gradientColors = Style.Gradients.yellow.value
         labels.forEach { $0.textColor = UIColor.Label.titleText }
+		titleLabel.textColor = UIColor.Label.titleText
+		priceLabel.textColor = UIColor.Label.titleText
     }
     
     @IBAction private func purchaseTap(_ sender: Any) {
@@ -38,7 +40,6 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
 
     var output: Output!
     var input: Input!
-    var subscription: RegisteredPurchase!
 
     struct Input {
         var updatePrice: (_ sub: RegisteredPurchase, _ completion: @escaping (String) -> Void) -> Void
@@ -49,23 +50,23 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
         let purchaseAction: () -> Void
     }
     
-    func configurate(sub: RegisteredPurchase, input: Input, have: Bool = false) {
-        self.input = input
-        subscription = sub
+    func configurate(sub: RegisteredPurchase, have: Bool = false) {
         switch sub {
-        case .game:
-            gameView.isHidden = false
-            musicView.isHidden = false
-            titleLabel.text = "Интеллектум"
-        case .music:
-            gameView.isHidden = true
-            musicView.isHidden = false
-            titleLabel.text = "Дети Супер +"
-        case .video:
-            gameView.isHidden = true
-            musicView.isHidden = true
-            titleLabel.text = "Дети +"
-        }
+			case .game:
+				gameView.isHidden = false
+				musicView.isHidden = false
+				titleLabel.text = "Интеллектум"
+			case .music:
+				gameView.isHidden = true
+				musicView.isHidden = false
+				titleLabel.text = "Дети Супер +"
+			case .video:
+				gameView.isHidden = true
+				musicView.isHidden = true
+				titleLabel.text = "Дети +"
+			case .promo3month:
+				break
+		}
         priceLabel.isHidden = have
         restoreButton.isHidden = have
         if have {
@@ -78,8 +79,11 @@ class SubscriptionCollectionViewCell: UICollectionViewCell {
             purchaseButton.setTitleColor(UIColor.Label.titleText, for: .normal)
 
         }
-        input.updatePrice(subscription) { [weak self] price in
+        input.updatePrice(sub) { [weak self] price in
             self?.priceLabel.text = "\(price) / мес"
         }
     }
+	deinit {
+		print("deinit SubscriptionCollectionViewCell")
+	}
 }

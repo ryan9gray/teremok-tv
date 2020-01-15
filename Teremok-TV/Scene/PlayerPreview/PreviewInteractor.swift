@@ -131,6 +131,7 @@ class PreviewInteractor: PreviewBusinessLogic, PreviewDataStore {
     }
     
     deinit {
+		NotificationCenter.default.post(name: NSNotification.Name.ProfileNeedReload, object: nil)
         NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
     }
 }

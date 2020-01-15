@@ -28,6 +28,8 @@ final class Profile: Mappable  {
     
     static var current: Profile? = AppCacher.mappable.getObject(of: Profile.self) {
         didSet {
+			PromoWorker.checkPremiumChange()
+			LocalStore.lastPremiumState = havePremium
             NotificationCenter.default.post(name: NSNotification.Name.ProfileDidChanged, object: current)
         }
     }
@@ -37,8 +39,12 @@ final class Profile: Mappable  {
     }
 
     static var isAuthorized: Bool {
-        return current != nil
+		return !(current?.needAuthorize ?? true)
     }
+	static var havePremium: Bool {
+		return current?.premium ?? false
+	}
+	var needAuthorize: Bool = true
 
     static var subscribe: String {
         if let profile = Profile.current {
@@ -59,6 +65,9 @@ final class Profile: Mappable  {
     var id: Int?
     var email: String?
     var childs: [Child] = []
+	var untilPremiumTimeInterval: Int = 0
+	var untilVideoViews: Int = 0
+
 
     func currentPremium() -> Premium {
         if premiumGame {
@@ -85,6 +94,9 @@ final class Profile: Mappable  {
         premium     <- map["premium"]
         premiumMusic     <- map["premiumMusic"]
         premiumGame     <- map["premiumGame"]
+		needAuthorize     <- map["needAuthorize"]
+		untilPremiumTimeInterval     <- map["untilPremiumTimeInterval"]
+		untilVideoViews     <- map["untilVideoViews"]
     }
     
     init(with profile: ProfileResponse) {

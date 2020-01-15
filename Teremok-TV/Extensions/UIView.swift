@@ -15,7 +15,7 @@ extension UIView {
         layer.shadowRadius = 10.0
     }
     func addTxtShadow(){
-        layer.shadowColor = UIColor.View.titleText.cgColor
+        layer.shadowColor = UIColor.Base.darkBlue.cgColor
         layer.shadowRadius = 3.0
         layer.shadowOpacity = 1.0
         layer.shadowOffset = CGSize(width: 4, height: 4)

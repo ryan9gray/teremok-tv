@@ -101,11 +101,21 @@ class SerialViewController: AbstracViewController, SerialDisplayLogic {
         }
         collectionView.reloadData()
     }
+
+	func watch(at: Int) {
+//		router?.openPremiumAlert()
+//		return
+		if Profile.current?.premium ?? false {
+			router?.navigateToPreview(number: at)
+		} else {
+			router?.openPremiumAlert()
+		}
+	}
 }
 
 extension SerialViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        router?.navigateToPreview(number: indexPath.row)
+		watch(at: indexPath.row)
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
         if indexPath.row == serials.count-1 {
@@ -143,8 +153,8 @@ extension SerialViewController: UICollectionViewDelegateFlowLayout {
 extension SerialViewController: SerialCellProtocol {
     func favClick(_ sender: Any) {
         if let cell = sender as? VideoCollectionViewCell, let idx = collectionView.indexPath(for: cell)?.row {
-            self.interactor?.addToFav(idx: idx)
-            self.serials[idx].isLikeMe.toggle()
+            interactor?.addToFav(idx: idx)
+            serials[idx].isLikeMe.toggle()
         }
     }
     
@@ -172,24 +182,24 @@ extension SerialViewController: SerialCellProtocol {
 
 extension SerialViewController: DescriptionSerialVCProtocol {
     func forward(_ sender: Any) {
-        if let vc = sender as? SerialDescriptionViewController, let item = vc.item, let dx = self.serials.firstIndex(of: item), dx != self.serials.endIndex {
-            let nxtDx = self.serials.index(after: dx)
-            vc.item = self.serials[nxtDx]
+        if let vc = sender as? SerialDescriptionViewController, let item = vc.item, let dx = serials.firstIndex(of: item), dx != serials.endIndex {
+            let nxtDx = serials.index(after: dx)
+            vc.item = serials[nxtDx]
             vc.reload()
         }
     }
     
     func previous(_ sender: Any) {
-        if let vc = sender as? SerialDescriptionViewController, let item = vc.item, let dx = self.serials.firstIndex(of: item), dx != self.serials.startIndex {
-            let nxtDx = self.serials.index(before: dx)
-            vc.item = self.serials[nxtDx]
+        if let vc = sender as? SerialDescriptionViewController, let item = vc.item, let dx = serials.firstIndex(of: item), dx != serials.startIndex {
+            let nxtDx = serials.index(before: dx)
+            vc.item = serials[nxtDx]
             vc.reload()
         }
     }
     
     func toWatch(_ sender: Any) {
-        if let vc = sender as? SerialDescriptionViewController, let item = vc.item, let dx = self.serials.firstIndex(of: item) {
-            self.router?.navigateToPreview(number: dx)
+        if let vc = sender as? SerialDescriptionViewController, let item = vc.item, let dx = serials.firstIndex(of: item) {
+			watch(at: dx)
         }
     }  
 }

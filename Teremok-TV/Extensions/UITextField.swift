@@ -24,7 +24,6 @@ extension UITextField {
 }
 
 extension UITextField {
-    
     @IBInspectable var defaultAccessoryView: Bool {
         get {
             return inputAccessoryView?.isKind(of: UIToolbar.self) ?? false

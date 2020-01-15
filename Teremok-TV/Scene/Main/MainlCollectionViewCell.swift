@@ -11,7 +11,6 @@ import Lottie
 import SpriteKit
 
 class MainlCollectionViewCell: UICollectionViewCell, AnimateCellProtocol {
-    
     var animationView: AnimationView?
     var rainbowView: AnimationView?
 

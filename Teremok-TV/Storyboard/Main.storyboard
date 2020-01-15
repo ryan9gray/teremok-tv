@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFi-IU-E9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFi-IU-E9L">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -692,6 +692,7 @@
                             <constraint firstItem="8nD-Pj-X3U" firstAttribute="top" secondItem="Chn-OP-K9t" secondAttribute="top" constant="40" id="Uxf-Ag-gn8"/>
                             <constraint firstAttribute="trailing" secondItem="Vuw-S0-e4u" secondAttribute="trailing" constant="28" id="Zc1-DP-ff5"/>
                             <constraint firstItem="44F-DI-cmG" firstAttribute="centerX" secondItem="1CP-Fn-cIu" secondAttribute="centerX" id="clj-sa-stv"/>
+                            <constraint firstItem="44F-DI-cmG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eBd-tF-Ihc" secondAttribute="trailing" constant="10" id="g7u-p2-h1V"/>
                             <constraint firstItem="eBd-tF-Ihc" firstAttribute="top" secondItem="pYk-Mk-z4c" secondAttribute="bottom" constant="8" id="i7d-oj-aye"/>
                             <constraint firstItem="oUb-4A-L4a" firstAttribute="leading" secondItem="1CP-Fn-cIu" secondAttribute="leading" id="iCx-DS-V6i"/>
                             <constraint firstItem="5Bm-y4-kHR" firstAttribute="leading" secondItem="44F-DI-cmG" secondAttribute="trailing" priority="990" constant="10" id="mQO-q2-2Fb"/>

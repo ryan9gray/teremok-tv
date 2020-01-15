@@ -55,23 +55,34 @@ class StoreViewController: AbstracViewController, StoreDisplayLogic, UITextViewD
     // MARK: View lifecycle
 
     @IBOutlet private var collectionView: UICollectionView!
-    let subscriptions: [RegisteredPurchase] = RegisteredPurchase.allCases
+
+	let havePromo = PromoWorker.havePromo
+
+	let subscriptions: [RegisteredPurchase] = {
+		PromoWorker.havePromo
+			? [.promo3month, .game, .music, .video]
+			: [.game, .music, .video]
+	}()
 
     let profile = Profile.current
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		//PromoWorker.setDate()
         activityView = LottieHUD()
         collectionView.delegate = self
         collectionView.dataSource = self
-        let cells = [SubscriptionCollectionViewCell.self, StoreCollectionViewCell.self, LoadingCollectionViewCell.self]
+		let cells = [
+			SubscriptionCollectionViewCell.self,
+			StoreCollectionViewCell.self,
+			LoadingCollectionViewCell.self,
+			SubscriptionPromoCollectionViewCell.self
+		]
         collectionView.register(cells: cells)
         collectionView.reloadData()
         setupTrackableChain(parent: analytics)
     }
-
-    // MARK: Do something
 
     func restoreClick() {
         showPreloader()
@@ -98,39 +109,61 @@ class StoreViewController: AbstracViewController, StoreDisplayLogic, UITextViewD
 extension StoreViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+		return havePromo ? 5 : 4
     }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withCell: StoreCollectionViewCell.self, for: indexPath)
-            cell.configure {
-                collectionView.scrollToItem(at: IndexPath(row: 1, section: 0), at: .left, animated: true)
+            cell.action = { [weak self] in
+				self?.collectionView.scrollToItem(at: IndexPath(row: 1, section: 0), at: .left, animated: true)
             }
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withCell: SubscriptionCollectionViewCell.self, for: indexPath)
-            let subscription = subscriptions[(indexPath.row - 1)]
-            cell.configurate(
-                sub: subscription,
-                input: SubscriptionCollectionViewCell.Input(updatePrice: interactor!.fetchProduct),
-                have: profile?.currentPremium() == subscription.premium
-            )
-            cell.output = SubscriptionCollectionViewCell.Output(
-                restoreAction: restoreClick,
-                purchaseAction: { [weak self] in
-                    self?.purchase(sub: subscription)
-                }
-            )
-            return cell
+			let subscription = subscriptions[(indexPath.row - 1)]
+			switch subscription {
+				case .promo3month:
+					let cell = collectionView.dequeueReusableCell(withCell: SubscriptionPromoCollectionViewCell.self, for: indexPath)
+					cell.input = SubscriptionPromoCollectionViewCell.Input(updatePrice: interactor!.fetchProduct)
+					cell.output = SubscriptionPromoCollectionViewCell.Output(
+						restoreAction: { [weak self] in
+							self?.restoreClick()
+						},
+						purchaseAction: { [weak self] in
+							self?.purchase(sub: subscription)
+						}
+					)
+					cell.configurate(
+						sub: subscription,
+						have: profile?.currentPremium() == subscription.premium
+					)
+					return cell
+				default:
+					let cell = collectionView.dequeueReusableCell(withCell: SubscriptionCollectionViewCell.self, for: indexPath)
+					cell.input = SubscriptionCollectionViewCell.Input(updatePrice: interactor!.fetchProduct)
+					cell.output = SubscriptionCollectionViewCell.Output(
+						restoreAction: { [weak self] in
+							self?.restoreClick()
+						},
+						purchaseAction: { [weak self] in
+							self?.purchase(sub: subscription)
+						}
+					)
+					cell.configurate(
+						sub: subscription,
+						have: profile?.currentPremium() == subscription.premium
+					)
+					return cell
+			}
         }
     }
-
 }
 extension StoreViewController: UICollectionViewDelegateFlowLayout {
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = collectionView.bounds.height
+		if havePromo, indexPath.row == 1 {
+			return CGSize(width: collectionView.bounds.width * 0.7, height: height)
+		}
         if indexPath.row == 0 {
             return CGSize(width: collectionView.bounds.width * 0.8, height: height)
 
@@ -139,6 +172,6 @@ extension StoreViewController: UICollectionViewDelegateFlowLayout {
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+		20
     }
 }

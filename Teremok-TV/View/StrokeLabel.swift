@@ -213,7 +213,7 @@ class StrokeLabel: UILabel {
         context.scaleBy(x: 1.0, y: -1.0)
         //drawShadow(rect, context: context)
 
-        layer.shadowColor = UIColor.View.titleText.cgColor
+        layer.shadowColor = UIColor.Base.darkBlue.cgColor
         layer.shadowRadius = 3.0
         layer.shadowOpacity = 0.3
         layer.shadowOffset = CGSize(width: 0, height: 4)

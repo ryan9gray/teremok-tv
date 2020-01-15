@@ -4,28 +4,36 @@ import UIKit
 import CoreText
 
 extension UIColor {
-    
+
+	enum Base {
+		static let yellow                   = UIColor(hex: "FFD86B")
+		static let darkBlue                 = UIColor(hex: "2E334D")
+
+	}
     // Palette
     enum Button {
-        static let beige                        =  #colorLiteral(red: 1, green: 0.9450980392, blue: 0.8, alpha: 1)  //FFF1CC
-        static let yellowOne                    =  #colorLiteral(red: 1, green: 0.862745098, blue: 0.2509803922, alpha: 1)  //FFDC40
-        static let yellowTwo                    =  #colorLiteral(red: 1, green: 0.7803921569, blue: 0.08235294118, alpha: 1)  //FFC715
-        static let titleText                    = UIColor(hex: "2E334D")
+        static let beige                        = UIColor(hex: "FFF1CC")
+        static let yellowOne                    = UIColor(hex: "FFD632")
+        static let yellowTwo                    = UIColor(hex: "FFBD14")
+		static let titleText                    = Label.titleText
         static let red                          = UIColor(hex: "E33A3A")
         static let lightGray                    = UIColor(hex: "E2E2E2")
+		static let redOne                    	= UIColor(hex: "FF5F7C")
+		static let redTwo                    	= UIColor(hex: "E33A3A")
     }
     enum Label {
-        static let titleText            =  #colorLiteral(red: 0.2352941176, green: 0.2666666667, blue: 0.3764705882, alpha: 1)   //3C4460
+        static let titleText            =  UIColor(hex: "2E334D")
         static let orange               =  #colorLiteral(red: 0.9921568627, green: 0.431372549, blue: 0.2980392157, alpha: 1)   //FD6E4C
         static let darkBlue             = UIColor(hex: "0058BA")
         static let yellow               = UIColor(hex: "DDFF00")
         static let gray                 =  #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)   //999999
         static let grass                =  #colorLiteral(red: 0.1333333333, green: 0.6431372549, blue: 0.4, alpha: 1)   //22A466
         static let ocean                =  #colorLiteral(red: 0.1647058824, green: 0.8117647059, blue: 0.9960784314, alpha: 1)   //2ACFFE
+		static let red                	= UIColor(hex: "E74C1E")
+		static let redPromo             = UIColor(hex: "F15A48")
     }
 
     enum View {
-        static let titleText                =  #colorLiteral(red: 0.2366027236, green: 0.2647619247, blue: 0.3750775456, alpha: 1)   //2E334D
         static let green                    =  #colorLiteral(red: 0.5960784314, green: 0.8117647059, blue: 0.3490196078, alpha: 1)   //98CF59
         static let orange                   =  #colorLiteral(red: 1, green: 0.6039215686, blue: 0, alpha: 1)   //FF9A00
         static let yellowBase               =  #colorLiteral(red: 1, green: 0.8705882353, blue: 0.4941176471, alpha: 1)   //FFDE7E

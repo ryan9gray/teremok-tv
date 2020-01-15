@@ -34,10 +34,12 @@ final class ProfileResponse: Mappable {
     var id: Int?
     var email: String?
     var childs: [ChildResponse] = []
-	var needRegistrate: Bool = true
+	var needAuthorize: Bool = true
 	var premium: Bool = false
     var premiumMusic: Bool = false
     var premiumGame: Bool = false
+
+	var untilPremiumTimeInterval: Int = 0
 
     init(with profile: Profile) {
         let map = Map(mappingType: .fromJSON, JSON: Mapper<Profile>().toJSON(profile))
@@ -53,6 +55,8 @@ final class ProfileResponse: Mappable {
         childs     <- map["childs"]
         premiumMusic     <- map["premiumMusic"]
         premiumGame     <- map["premiumGame"]
+		needAuthorize     <- map["needAuthorize"]
+		untilPremiumTimeInterval     <- map["untilPremiumTimeInterval"]
     }
 }
 

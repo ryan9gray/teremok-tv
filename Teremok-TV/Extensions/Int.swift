@@ -7,7 +7,6 @@ extension Int {
         return "\(self)"
     }
     
-    
     func stringNumber() -> String {
         switch self {
         case 0: return "Ноль"
