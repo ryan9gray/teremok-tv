@@ -106,7 +106,7 @@ class ColorsMasterRouter: ColorsMasterRoutingLogic, ColorsMasterDataPassing {
             self.viewController?.view.insertSubview(viewController.view, at: 1)
         }, completion: nil)
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        viewController.didMove(toParent: viewController)
+		viewController.didMove(toParent: self.viewController)
     }
 
     func introduceController<T: GameViewController>(viewController: T, completion: @escaping (Bool) -> Void)

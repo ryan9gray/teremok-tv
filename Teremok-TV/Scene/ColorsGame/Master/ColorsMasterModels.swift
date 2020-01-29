@@ -26,7 +26,7 @@ enum ColorsMaster {
         case blue = "blue"
         case violet = "violet"
 
-        // case brown = "brown"
+        case brown = "brown"
 
         var sound: String {
             switch self {
@@ -48,8 +48,8 @@ enum ColorsMaster {
                     return "ColorsGame_color_8"
                 case .violet:
                     return "ColorsGame_color_9"
-//                case .brown:
-//                    return "ColorsGame_color_10"
+                case .brown:
+                    return "ColorsGame_color_10"
             }
         }
         var soundUrl: URL {
@@ -64,16 +64,16 @@ enum ColorsMaster {
     ]
 
     static let Pack: [Colors: [String]] = [
-        Colors.red: ["ColorsGame_subject_1_1", "ColorsGame_subject_1_2", "ColorsGame_subject_1_3"],
-        Colors.blue: ["ColorsGame_subject_2_1", "ColorsGame_subject_2_2", "ColorsGame_subject_2_3"],
-        Colors.green: ["ColorsGame_subject_3_1", "ColorsGame_subject_3_2", "ColorsGame_subject_3_3"],
-        Colors.yellow: ["ColorsGame_subject_4_1", "ColorsGame_subject_4_2", "ColorsGame_subject_4_3"],
-        Colors.white: ["ColorsGame_subject_5_1", "ColorsGame_subject_5_2", "ColorsGame_subject_5_3"],
-        Colors.black: ["ColorsGame_subject_6_1", "ColorsGame_subject_6_2", "ColorsGame_subject_6_3"],
-        Colors.orange: ["ColorsGame_subject_7_1", "ColorsGame_subject_7_2", "ColorsGame_subject_7_3"],
-        Colors.lightBlue: ["ColorsGame_subject_8_1", "ColorsGame_subject_8_2", "ColorsGame_subject_8_3"],
-        Colors.violet: ["ColorsGame_subject_9_1", "ColorsGame_subject_9_2", "ColorsGame_subject_9_3"]
-        //Colors.brown: ["ColorsGame_subject_10_1", "ColorsGame_subject_10_2", "ColorsGame_subject_10_3"]
+        Colors.red: ["ColorsGame_subject_1_1", "ColorsGame_subject_1_2", "ColorsGame_subject_1_3", "ColorsGame_subject_1_4"],
+        Colors.blue: ["ColorsGame_subject_2_1", "ColorsGame_subject_2_2", "ColorsGame_subject_2_3", "ColorsGame_subject_2_4"],
+        Colors.green: ["ColorsGame_subject_3_1", "ColorsGame_subject_3_2", "ColorsGame_subject_3_3", "ColorsGame_subject_3_4"],
+        Colors.yellow: ["ColorsGame_subject_4_1", "ColorsGame_subject_4_2", "ColorsGame_subject_4_3", "ColorsGame_subject_4_4"],
+        Colors.white: ["ColorsGame_subject_5_1", "ColorsGame_subject_5_2", "ColorsGame_subject_5_3", "ColorsGame_subject_5_4"],
+        Colors.black: ["ColorsGame_subject_6_1", "ColorsGame_subject_6_2", "ColorsGame_subject_6_3", "ColorsGame_subject_6_4"],
+        Colors.orange: ["ColorsGame_subject_7_1", "ColorsGame_subject_7_2", "ColorsGame_subject_7_3", "ColorsGame_subject_7_4"],
+        Colors.lightBlue: ["ColorsGame_subject_8_1", "ColorsGame_subject_8_2", "ColorsGame_subject_8_3", "ColorsGame_subject_8_4"],
+        Colors.violet: ["ColorsGame_subject_9_1", "ColorsGame_subject_9_2", "ColorsGame_subject_9_3", "ColorsGame_subject_9_4"],
+        Colors.brown: ["ColorsGame_subject_10_1", "ColorsGame_subject_10_2", "ColorsGame_subject_10_3", "ColorsGame_subject_10_4"]
     ]
     
     enum EmotionalsSad: String, CaseIterable {
@@ -141,8 +141,8 @@ extension ColorsMaster.Colors {
                     return [UIColor.ColorsGame.lightBlueOne, UIColor.ColorsGame.lightBlueTwo]
                 case .violet:
                     return [UIColor.ColorsGame.violetOne, UIColor.ColorsGame.violetTwo]
-                //case .brown:
-                    //return [UIColor.ColorsGame.brownOne, UIColor.ColorsGame.brownTwo]
+                case .brown:
+                    return [UIColor.ColorsGame.brownOne, UIColor.ColorsGame.brownTwo]
             }
         }
     }

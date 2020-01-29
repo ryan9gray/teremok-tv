@@ -6,10 +6,6 @@
 // License: MIT, https://github.com/eugeneego/legacy/blob/master/LICENSE
 //
 
-#if canImport(UIKit)
-
-#if !os(watchOS)
-
 import UIKit
 
 open class ShadowView: UIView {
@@ -83,7 +79,3 @@ open class ShadowView: UIView {
         layer.shadowPath = path.cgPath
     }
 }
-
-#endif
-
-#endif

@@ -19,19 +19,26 @@ protocol AnimateCellProtocol {
     func pauseAnimation()
     var linktoLoad: String { get set }
     func setAnimation(file: String)
-    
+	var source: MainlCollectionViewCell.AnimaionSource { get set }
 }
 
 extension AnimateCellProtocol where Self: MainlCollectionViewCell {
     
-    func setAnimation(){
+    func setAnimation() {
         //guard animationView == nil else { return }
         if animationView != nil  {
             animationView?.removeFromSuperview()
             animationView = nil
         }
-        guard linktoLoad != "", let url = URL(string: linktoLoad) else { return }
-        let av = AnimationView(url: url, closure: { _ in })
+		let av: AnimationView
+		switch source {
+			case .link:
+				guard linktoLoad != "", let url = URL(string: linktoLoad) else { return }
+				av = AnimationView(url: url, closure: { _ in })
+			case .local:
+				av = AnimationView(name: linktoLoad)
+		}
+
         animationView = av
         av.clipsToBounds = false
         av.frame = containerAnimation.bounds

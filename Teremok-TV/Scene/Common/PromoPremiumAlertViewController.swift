@@ -41,11 +41,7 @@ class PromoPremiumAlertViewController: UIViewController {
 	}
 	
 	func setText() {
-		if Profile.isAuthorized {
-			descriptionLabel.attributedText = DescriptionText.auth.attributedText
-		} else{
-			descriptionLabel.attributedText = DescriptionText.notAuth.attributedText
-		}
+		descriptionLabel.attributedText = DescriptionText.all.attributedText
 		let days = (Profile.current?.untilPremiumTimeInterval ?? 0) / 86400
 		daysCountLabel.text = days.stringValue
 	}
@@ -60,23 +56,15 @@ class PromoPremiumAlertViewController: UIViewController {
 	enum DescriptionText: String {
 		case notAuth = "Для безопасности детей у нас отсутствует реклама, но мы ежемесячно обновляем игры, пополняем каталог новыми мультфильмами, улучшаем сервисы. К сожалению, для пользователей без тарифа мы вынуждены ограничить использование приложения до 30 просмотров в месяц. Если вы постоянный зритель и довольны нашим сервисом, то вам необходимо пройти регистрацию и оформить тариф подходящий для вашего малыша. Надеемся на понимание с вашей стороны!"
 
-		case  auth = "Для безопасности детей у нас отсутствует реклама, но мы ежемесячно обновляем игры, пополняем каталог новыми мультфильмами, улучшаем сервисы. К сожалению, для пользователей без тарифа мы вынуждены ограничить использование приложения до 30 просмотров в месяц. Если вы постоянный зритель и довольны нашим сервисом, то вам необходимо оформить тариф подходящий для вашего малыша. Надеемся на понимание с вашей стороны!"
+		case auth = "Для безопасности детей у нас отсутствует реклама, но мы ежемесячно обновляем игры, пополняем каталог новыми мультфильмами, улучшаем сервисы. К сожалению, для пользователей без тарифа мы вынуждены ограничить использование приложения до 30 просмотров в месяц. Если вы постоянный зритель и довольны нашим сервисом, то вам необходимо оформить тариф подходящий для вашего малыша. Надеемся на понимание с вашей стороны!"
+
+		case all = "У нас отсутствует реклама в приложении, но мы обновляем игры, пополняем каталог мультфильмов, улучшаем сервисы. Для развития «Теремок-ТВ» мы вынуждены ввести лимит в 30 просмотров/месяц для зрителей без тарифа. Если вы довольны сервисом, то вы можете оформить подходящий вашему малышу тариф. В течение 1 часа для вас — скидка в 20%."
 
 		var attributedText: NSAttributedString {
 			let attributedString = NSMutableAttributedString(string: rawValue, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15.0)])
 			let boldFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0)]
-
-			let boldPartOfString = "мы вынуждены ограничить использование приложения до 30 просмотров в месяц"
-			let secondBoldPartOfString: String
-			switch self {
-				case .auth:
-					secondBoldPartOfString = "вам необходимо оформить тариф"
-				case .notAuth:
-					secondBoldPartOfString = "вам необходимо пройти регистрацию и оформить тариф"
-			}
-
+			let boldPartOfString = "В течение 1 часа для вас — скидка в 20%."
 			attributedString.addAttributes(boldFontAttribute, range: NSRange(rawValue.range(of: boldPartOfString) ?? rawValue.startIndex..<rawValue.endIndex, in: rawValue))
-			attributedString.addAttributes(boldFontAttribute, range: NSRange(rawValue.range(of: secondBoldPartOfString) ?? rawValue.startIndex..<rawValue.endIndex, in: rawValue))
 			return attributedString
 		}
 	}

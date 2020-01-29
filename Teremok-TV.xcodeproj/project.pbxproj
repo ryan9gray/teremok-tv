@@ -91,8 +91,20 @@
 		251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */; };
 		253E7E2C2369E5ED003FF569 /* snowstorm_blizzard_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */; };
 		253E7E2E236AFA05003FF569 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E7E2D236AFA05003FF569 /* ShadowView.swift */; };
+		2546D8E323E1CFE20063EF0B /* ColorCube.json in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E223E1CFE20063EF0B /* ColorCube.json */; };
+		2546D8E523E225220063EF0B /* ColorsGame_subject_9_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E423E225220063EF0B /* ColorsGame_subject_9_4.wav */; };
+		2546D8E723E2254E0063EF0B /* ColorsGame_subject_10_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E623E2254E0063EF0B /* ColorsGame_subject_10_4.wav */; };
+		2546D8F023E225710063EF0B /* ColorsGame_subject_2_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E823E225700063EF0B /* ColorsGame_subject_2_4.wav */; };
+		2546D8F123E225710063EF0B /* ColorsGame_subject_7_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E923E225700063EF0B /* ColorsGame_subject_7_4.wav */; };
+		2546D8F223E225710063EF0B /* ColorsGame_subject_8_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8EA23E225700063EF0B /* ColorsGame_subject_8_4.wav */; };
+		2546D8F323E225710063EF0B /* ColorsGame_subject_1_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8EB23E225700063EF0B /* ColorsGame_subject_1_4.wav */; };
+		2546D8F423E225710063EF0B /* ColorsGame_subject_4_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8EC23E225700063EF0B /* ColorsGame_subject_4_4.wav */; };
+		2546D8F523E225710063EF0B /* ColorsGame_subject_5_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8ED23E225700063EF0B /* ColorsGame_subject_5_4.wav */; };
+		2546D8F623E225710063EF0B /* ColorsGame_subject_6_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8EE23E225700063EF0B /* ColorsGame_subject_6_4.wav */; };
+		2546D8F723E225710063EF0B /* ColorsGame_subject_3_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8EF23E225700063EF0B /* ColorsGame_subject_3_4.wav */; };
 		25493D9823684F9A0006FE18 /* steps-in-snow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25493D9623684F9A0006FE18 /* steps-in-snow.wav */; };
 		25493D9B23685F650006FE18 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25493D9A23685F650006FE18 /* GameStartViewController.swift */; };
+		254BAACD23D85C1900A6D50C /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254BAACC23D85C1900A6D50C /* ServiceResponse.swift */; };
 		257C1BAB23B7DC3D0051572B /* PromoTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C1BAA23B7DC3D0051572B /* PromoTimeView.swift */; };
 		257C1BAD23B7DC490051572B /* PromoTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257C1BAC23B7DC490051572B /* PromoTimeView.xib */; };
 		257CD282236E21F600BE96A4 /* GCPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CD281236E21F600BE96A4 /* GCPlayer.swift */; };
@@ -898,8 +910,20 @@
 		251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neskid-comica-bd.ttf"; sourceTree = "<group>"; };
 		253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snowstorm_blizzard_1.wav; sourceTree = "<group>"; };
 		253E7E2D236AFA05003FF569 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		2546D8E223E1CFE20063EF0B /* ColorCube.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ColorCube.json; sourceTree = "<group>"; };
+		2546D8E423E225220063EF0B /* ColorsGame_subject_9_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_4.wav; sourceTree = "<group>"; };
+		2546D8E623E2254E0063EF0B /* ColorsGame_subject_10_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_4.wav; sourceTree = "<group>"; };
+		2546D8E823E225700063EF0B /* ColorsGame_subject_2_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_2_4.wav; sourceTree = "<group>"; };
+		2546D8E923E225700063EF0B /* ColorsGame_subject_7_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_7_4.wav; sourceTree = "<group>"; };
+		2546D8EA23E225700063EF0B /* ColorsGame_subject_8_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_8_4.wav; sourceTree = "<group>"; };
+		2546D8EB23E225700063EF0B /* ColorsGame_subject_1_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_1_4.wav; sourceTree = "<group>"; };
+		2546D8EC23E225700063EF0B /* ColorsGame_subject_4_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_4_4.wav; sourceTree = "<group>"; };
+		2546D8ED23E225700063EF0B /* ColorsGame_subject_5_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_5_4.wav; sourceTree = "<group>"; };
+		2546D8EE23E225700063EF0B /* ColorsGame_subject_6_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_6_4.wav; sourceTree = "<group>"; };
+		2546D8EF23E225700063EF0B /* ColorsGame_subject_3_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_3_4.wav; sourceTree = "<group>"; };
 		25493D9623684F9A0006FE18 /* steps-in-snow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "steps-in-snow.wav"; sourceTree = "<group>"; };
 		25493D9A23685F650006FE18 /* GameStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
+		254BAACC23D85C1900A6D50C /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
 		257C1BAA23B7DC3D0051572B /* PromoTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTimeView.swift; sourceTree = "<group>"; };
 		257C1BAC23B7DC490051572B /* PromoTimeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoTimeView.xib; sourceTree = "<group>"; };
 		257CD281236E21F600BE96A4 /* GCPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCPlayer.swift; sourceTree = "<group>"; };
@@ -1725,6 +1749,16 @@
 				251E514A235A578F00221BA2 /* ColorsGame_color_10.wav */,
 				251E514B235A578F00221BA2 /* ColorsGame_subject_2_2.wav */,
 				251E514C235A578F00221BA2 /* ColorsGame_subject_2_1.wav */,
+				2546D8EB23E225700063EF0B /* ColorsGame_subject_1_4.wav */,
+				2546D8E823E225700063EF0B /* ColorsGame_subject_2_4.wav */,
+				2546D8EF23E225700063EF0B /* ColorsGame_subject_3_4.wav */,
+				2546D8EC23E225700063EF0B /* ColorsGame_subject_4_4.wav */,
+				2546D8ED23E225700063EF0B /* ColorsGame_subject_5_4.wav */,
+				2546D8EE23E225700063EF0B /* ColorsGame_subject_6_4.wav */,
+				2546D8E923E225700063EF0B /* ColorsGame_subject_7_4.wav */,
+				2546D8EA23E225700063EF0B /* ColorsGame_subject_8_4.wav */,
+				2546D8E423E225220063EF0B /* ColorsGame_subject_9_4.wav */,
+				2546D8E623E2254E0063EF0B /* ColorsGame_subject_10_4.wav */,
 				251E514D235A578F00221BA2 /* ColorsGame_subject_6_1.wav */,
 				251E514E235A578F00221BA2 /* ColorsGame_subject_4_3.wav */,
 				251E514F235A578F00221BA2 /* ColorsGame_color_8.wav */,
@@ -2737,6 +2771,7 @@
 				CA51E1CA22FECDC10028DF63 /* GameParentRouting.swift */,
 				CA49E483212D320B00711324 /* PushRoutable.swift */,
 				CAA530A521AAB1CF009A5AF2 /* PushTransferRoutingLogic.swift */,
+				254BAACC23D85C1900A6D50C /* ServiceResponse.swift */,
 				CA80480F21415EC6000A3C5B /* ImageCellProtocol.swift */,
 				CA4C28BF21450D9300CA264D /* AnimateCellProtocol.swift */,
 				CA8EA7102141444A00159451 /* ButtonCellProtocol.swift */,
@@ -2853,6 +2888,7 @@
 				CAAF1EEA2174E7E100460F58 /* Dog_preloader */,
 				CAD16DEA2147E69100A82DBB /* rainbow.json */,
 				CAD16DE42147E29300A82DBB /* Animal.json */,
+				2546D8E223E1CFE20063EF0B /* ColorCube.json */,
 				CAD16DE62147E29400A82DBB /* Candy.json */,
 				CAD16DE52147E29300A82DBB /* unicorn.json */,
 				CAD16DE22147E23000A82DBB /* Numeral.json */,
@@ -3504,6 +3540,7 @@
 				CA992D36212FF1EF008BFC8D /* Auth.storyboard in Resources */,
 				251E517A235A579000221BA2 /* ColorsGame_subject_2_2.wav in Resources */,
 				251E517B235A579000221BA2 /* ColorsGame_subject_2_1.wav in Resources */,
+				2546D8F623E225710063EF0B /* ColorsGame_subject_6_4.wav in Resources */,
 				CA5100D022F6EACF00821C25 /* alphavite_9_word_1.wav in Resources */,
 				CA5100C022F6EACF00821C25 /* alphavite_13_word_2.wav in Resources */,
 				CA763633226B53B200168AB1 /* downloadCover.png in Resources */,
@@ -3521,6 +3558,7 @@
 				CA04863B22A845A60017B8A2 /* Round_1.json in Resources */,
 				CADD14AB2309683400AE920A /* happy_Pick.json in Resources */,
 				CAD16DEB2147E69100A82DBB /* rainbow.json in Resources */,
+				2546D8E323E1CFE20063EF0B /* ColorCube.json in Resources */,
 				CAF961FE22995FF3006E3046 /* animal_21.mp3 in Resources */,
 				CA5100D222F6EACF00821C25 /* alphavite_26_word_2.wav in Resources */,
 				CA433FFA224FA8E700B0788E /* TrackCollectionViewCell.xib in Resources */,
@@ -3647,6 +3685,7 @@
 				CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */,
 				CA5100DC22F6EACF00821C25 /* alphavite_1.wav in Resources */,
 				CAF961C122995FF3006E3046 /* animal_12.mp3 in Resources */,
+				2546D8F023E225710063EF0B /* ColorsGame_subject_2_4.wav in Resources */,
 				CAC6F72C22A81BC000756AE2 /* ready_r_8.wav in Resources */,
 				CAF9620722995FF3006E3046 /* animal_36.mp3 in Resources */,
 				CA5100E622F6EACF00821C25 /* alphavite_2_word_2.wav in Resources */,
@@ -3666,6 +3705,7 @@
 				CAF9620A22995FF3006E3046 /* animal_46.mp3 in Resources */,
 				251E5178235A579000221BA2 /* ColorsGame_subject_2_3.wav in Resources */,
 				CA5100F322F6EACF00821C25 /* alphavite_11.wav in Resources */,
+				2546D8F323E225710063EF0B /* ColorsGame_subject_1_4.wav in Resources */,
 				CAD21043231700DC006F2F08 /* MontserratAlternates-ExtraBold.ttf in Resources */,
 				CA5CB168213F0966000CB3D5 /* Sue.json in Resources */,
 				CAF9621022995FF3006E3046 /* animal_41.mp3 in Resources */,
@@ -3675,6 +3715,7 @@
 				CA652CEB2353510300291E4D /* happy_green_2.json in Resources */,
 				251E5176235A579000221BA2 /* ColorsGame_color_3.wav in Resources */,
 				CA5100B622F6EACF00821C25 /* alphavite_1_2.wav in Resources */,
+				2546D8E523E225220063EF0B /* ColorsGame_subject_9_4.wav in Resources */,
 				CA5100D522F6EACF00821C25 /* alphavite_4_word_1.wav in Resources */,
 				CAE6792D23511A0C00CBCDB3 /* ColorsGameStatView.xib in Resources */,
 				CAF961B922995FF3006E3046 /* animal_48.mp3 in Resources */,
@@ -3711,6 +3752,7 @@
 				CA5100BB22F6EACF00821C25 /* alphavite_24_word_1.wav in Resources */,
 				251E518F235A579000221BA2 /* ColorsGame_sad_3.wav in Resources */,
 				CA5100EB22F6EACF00821C25 /* alphavite_27_word_1.wav in Resources */,
+				2546D8F723E225710063EF0B /* ColorsGame_subject_3_4.wav in Resources */,
 				CA5100DA22F6EACF00821C25 /* alphavite_25_word_1.wav in Resources */,
 				CA51010022F6EACF00821C25 /* alphavite_15_word_1.wav in Resources */,
 				CA5100FD22F6EACF00821C25 /* alphavite_15.wav in Resources */,
@@ -3729,6 +3771,7 @@
 				CA2A91162202293800CD77FD /* push_button_sound.wav in Resources */,
 				CAF961D522995FF3006E3046 /* animal_14.mp3 in Resources */,
 				253E7E2C2369E5ED003FF569 /* snowstorm_blizzard_1.wav in Resources */,
+				2546D8F123E225710063EF0B /* ColorsGame_subject_7_4.wav in Resources */,
 				CA04863E22A845A60017B8A2 /* Round_9.json in Resources */,
 				CA5100C522F6EACF00821C25 /* alphavite_1_word_1.wav in Resources */,
 				CAD21045231700DC006F2F08 /* MontserratAlternates-Thin.ttf in Resources */,
@@ -3737,6 +3780,7 @@
 				CAD2104A231700DC006F2F08 /* MontserratAlternates-Medium.ttf in Resources */,
 				11BA249E230AE99700A9EA15 /* MonsterCollectionViewCell.xib in Resources */,
 				CA5100E322F6EACF00821C25 /* alphavite_20_word_2.wav in Resources */,
+				2546D8F423E225710063EF0B /* ColorsGame_subject_4_4.wav in Resources */,
 				251E519E235A624A00221BA2 /* ColorsGame_subject_9_3.wav in Resources */,
 				CAAF1F1121771E4300460F58 /* Shade_close.json in Resources */,
 				CAC6F71C22A81BC000756AE2 /* after_announce_round_n.wav in Resources */,
@@ -3798,11 +3842,13 @@
 				CAD2102A2315BAD0006F2F08 /* IstokWeb-BoldItalic.ttf in Resources */,
 				CA7AAF662170C35300747D4B /* SearchCharacterCollectionViewCell.xib in Resources */,
 				CA763631226A63CD00168AB1 /* SubscriptionCollectionViewCell.xib in Resources */,
+				2546D8F523E225710063EF0B /* ColorsGame_subject_5_4.wav in Resources */,
 				CA5100B322F6EACF00821C25 /* alphavite_19.wav in Resources */,
 				CAC6F72E22A81BC000756AE2 /* sad_3.wav in Resources */,
 				CAC0989422FF47FD00EFB01E /* AlphaviteStatView.xib in Resources */,
 				251E518C235A579000221BA2 /* ColorsGame_subject_5_3.wav in Resources */,
 				CA5100EA22F6EACF00821C25 /* alphavite_17_word_1.wav in Resources */,
+				2546D8E723E2254E0063EF0B /* ColorsGame_subject_10_4.wav in Resources */,
 				CA5100CB22F6EACF00821C25 /* alphavite_8.wav in Resources */,
 				CA5100D822F6EACF00821C25 /* alphavite_2.wav in Resources */,
 				CA5100CD22F6EACF00821C25 /* alphavite_32_word_2.wav in Resources */,
@@ -3825,6 +3871,7 @@
 				CAD21049231700DC006F2F08 /* MontserratAlternates-ThinItalic.ttf in Resources */,
 				CAD2105723170C69006F2F08 /* alphabetWrong.wav in Resources */,
 				CAD16DE82147E29400A82DBB /* unicorn.json in Resources */,
+				2546D8F223E225710063EF0B /* ColorsGame_subject_8_4.wav in Resources */,
 				CAD21046231700DC006F2F08 /* MontserratAlternates-MediumItalic.ttf in Resources */,
 				CAF961BA22995FF3006E3046 /* animal_13.mp3 in Resources */,
 				CAF961D022995FF3006E3046 /* animal_15.mp3 in Resources */,
@@ -4008,6 +4055,7 @@
 				CAE1C433211DACE10058C9C6 /* AppLaunchInfoDefaults.swift in Sources */,
 				CA49E491212D330900711324 /* DeviceInfo.swift in Sources */,
 				111187F6231E8D6E00EBEFC0 /* MonsterService.swift in Sources */,
+				254BAACD23D85C1900A6D50C /* ServiceResponse.swift in Sources */,
 				CAA530A621AAB1CF009A5AF2 /* PushTransferRoutingLogic.swift in Sources */,
 				CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */,
 				CA49E4A3212D5A9200711324 /* MainViewController.swift in Sources */,
@@ -4573,7 +4621,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.4;
+				MARKETING_VERSION = 1.7.7;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4603,7 +4651,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.4;
+				MARKETING_VERSION = 1.7.7;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4696,7 +4744,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.4;
+				MARKETING_VERSION = 1.7.7;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;

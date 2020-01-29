@@ -55,8 +55,6 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     }
 
     @IBOutlet private var collectionView: UICollectionView!
-
-    let animation: [String] = ["Numeral", "unicorn", "Color","box","music", "Animal", "Candy"]
     
     var razdels: [Main.RazdelItem] = []
     
@@ -146,7 +144,11 @@ extension MainViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         didSelectSoundPlay()
-        router?.navigateToRazdel(number: indexPath.row)
+		if indexPath.section == 0 {
+			router?.navigateToGameList()
+		} else {
+        	router?.navigateToRazdel(number: indexPath.row)
+		}
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
         
@@ -167,14 +169,21 @@ extension MainViewController: UICollectionViewDelegate {
 }
 
 extension MainViewController: UICollectionViewDataSource {
-    
+	func numberOfSections(in collectionView: UICollectionView) -> Int {
+		2
+	}
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        razdels.count
+		section == 0 ? 1 : razdels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withCell: MainlCollectionViewCell.self, for: indexPath)
-        let razdel = razdels[indexPath.row]
-        cell.configurate(title: razdel.title, image: Cloud.clouds.randomElement(), link: razdel.link)
+		if indexPath.section == 0 {
+			cell.configurate(title: "Развивающие игры", image: Cloud.clouds.randomElement(), animation: "ColorCube")
+		} else {
+			let razdel = razdels[indexPath.row]
+			cell.configurate(title: razdel.title, image: Cloud.clouds.randomElement(), link: razdel.link)
+		}
+
         cell.setAnimation()
         cell.addRainbow()
         return cell

@@ -41,7 +41,7 @@ extension AppDelegate {
             break
         default:
             if let controller = UIApplication.topCommonRouterLogicController() as? PushRoutable  {
-                if controller.handle(push: push){
+                if controller.handle(push: push) {
                     return true
                 }
             }

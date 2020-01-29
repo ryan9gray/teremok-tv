@@ -89,7 +89,7 @@ class MusicMasterRouter: NSObject, MusicMasterRoutingLogic, MusicMasterDataPassi
         }, completion: nil)
 
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        viewController.didMove(toParent: viewController)
+		viewController.didMove(toParent: self.viewController)
     }
 
     func remove(){

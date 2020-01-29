@@ -93,7 +93,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         //router?.navigateToAnimals()
     }
     @IBAction func touchDown(_ sender: UIButton) {
-		if !Profile.isAuthorized {
+		if !Profile.isAuthorized, !(Profile.current?.premium ?? false) {
             sender.cancelTracking(with: nil)
             presentCloud(title: "", subtitle: Main.Messages.auth, button: "Зарегистрироваться") { [weak self] in
                 self?.router?.navigateToReg()

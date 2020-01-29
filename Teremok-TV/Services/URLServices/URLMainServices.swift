@@ -9,7 +9,6 @@
 import UIKit
 
 class URLMainServices: URLServices {
-    
     func open(link: AppURL) -> Bool {
         if let url = URL(string: link.rawValue), UIApplication.shared.canOpenURL(url) {
             return open(url: url)
@@ -31,23 +30,17 @@ class URLMainServices: URLServices {
         if UIApplication.shared.canOpenURL(url) {
             let stringURL = url.absoluteString
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                if #available(iOS 10.0, *) {
-                    let urlCopy = URL(string: stringURL)!
-                    UIApplication.shared.open(urlCopy, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: { (finish) in
-                        let a = finish
-                        if a {
-                            print("yeeee")
-                        } else {
-                            print("niiiie")
-                        }
-                    })
-//                    UIApplication.shared.open(urlCopy)
-                } else {
-                    let urlCopy = URL(string: stringURL)!
-                    UIApplication.shared.openURL(urlCopy)
-                }
+				let urlCopy = URL(string: stringURL)!
+				UIApplication.shared.open(urlCopy, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: { (finish) in
+					let a = finish
+					if a {
+						print("yeeee")
+					} else {
+						print("niiiie")
+					}
+				})
+//                  UIApplication.shared.open(urlCopy)
             }
-
             return true
         } else {
             return false

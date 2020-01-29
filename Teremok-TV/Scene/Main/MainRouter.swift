@@ -14,6 +14,7 @@ import UIKit
 
 protocol MainRoutingLogic: CommonRoutingLogic {
     func navigateToRazdel(number: Int)
+	func navigateToGameList()
 }
 
 protocol MainDataPassing {
@@ -49,4 +50,7 @@ class MainRouter: NSObject, MainRoutingLogic, MainDataPassing {
         dataStore.screen = .razdel(razdelId)
         viewController?.masterRouter?.presentNextChild(viewController: serials)
     }
+	func navigateToGameList() {
+		viewController?.masterRouter?.navigateToGameList()
+	}
 }

@@ -20,6 +20,13 @@ class MainlCollectionViewCell: UICollectionViewCell, AnimateCellProtocol {
     @IBOutlet private var cloudImageView: UIImageView!
     var linktoLoad: String = ""
 
+	var source: AnimaionSource = .link
+
+	enum AnimaionSource {
+		case link
+		case local
+	}
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -30,4 +37,10 @@ class MainlCollectionViewCell: UICollectionViewCell, AnimateCellProtocol {
         cloudImageView.image = image
         linktoLoad = link
     }
+	func configurate(title: String, image: UIImage?, animation: String) {
+		source = .local
+		titleLbl.text = title
+		cloudImageView.image = image
+		linktoLoad = animation
+	}
 }

@@ -28,6 +28,7 @@ protocol MasterRoutingLogic: CommonRoutingLogic, ParentRoutingLogic {
     func logout()
     func navigateToSettings()
     func navigateToStore()
+	func navigateToGameList()
 }
 
 protocol MasterVCRoutingLogic: MasterRoutingLogic {
@@ -213,7 +214,7 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
         }, completion: nil)
         
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        viewController.didMove(toParent: viewController)
+		viewController.didMove(toParent: self.viewController)
     }
     
     func remove(){

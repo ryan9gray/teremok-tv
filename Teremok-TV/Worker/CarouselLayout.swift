@@ -64,11 +64,13 @@ class CarouselLayout: UICollectionViewLayout {
         updateInsets()
         guard cachedItemsAttributes.isEmpty else { return }
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-        let itemsCount = collectionView.numberOfItems(inSection: 0)
-        for item in 0..<itemsCount {
-            let indexPath = IndexPath(item: item, section: 0)
-            cachedItemsAttributes[indexPath] = createAttributesForItem(at: indexPath)
-        }
+		for section in 0...collectionView.numberOfSections-1 {
+			let itemsCount = collectionView.numberOfItems(inSection: section)
+			for item in 0..<itemsCount {
+				let indexPath = IndexPath(item: item, section: section)
+				cachedItemsAttributes[indexPath] = createAttributesForItem(at: indexPath)
+			}
+		}
     }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
@@ -109,9 +111,19 @@ class CarouselLayout: UICollectionViewLayout {
     private func createAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
         guard let collectionView = collectionView else { return nil }
+		let originX: CGFloat
+		if indexPath.section > 0 {
+			var count = 0
+			for section in 0...indexPath.section-1 {
+				count += collectionView.numberOfItems(inSection: section)
+			}
+			originX = CGFloat(indexPath.row + count)
+		} else {
+			originX = CGFloat(indexPath.item)
+		}
         attributes.frame.size = itemSize
         attributes.frame.origin.y = (collectionView.bounds.height - itemSize.height) / 2
-		attributes.frame.origin.x = CGFloat(indexPath.item) * (itemSize.width + spacing)
+		attributes.frame.origin.x = originX * (itemSize.width + spacing)
         return attributes
     }
     

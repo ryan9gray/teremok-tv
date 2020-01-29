@@ -110,7 +110,7 @@ class MonsterMasterRouter: MonsterMasterRoutingLogic, MonsterMasterDataPassing {
         }, completion: nil)
         
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        viewController.didMove(toParent: viewController)
+		viewController.didMove(toParent: self.viewController)
     }
     
     func presentNextChild<T: GameViewController>(viewController: T){
