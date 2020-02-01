@@ -55,7 +55,7 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     }
 
     @IBOutlet private var collectionView: UICollectionView!
-    
+
     var razdels: [Main.RazdelItem] = []
     
     var cellWidth: CGFloat = 0

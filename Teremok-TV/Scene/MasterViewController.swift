@@ -60,6 +60,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     @IBOutlet private var homeBtn: TTAbstractMainButton!
     @IBOutlet private var musicBtn: TTAbstractMainButton!
     @IBOutlet private var animalsBtn: TTAbstractMainButton!
+	@IBOutlet private var leftButtonStackView: UIStackView!
 
     @IBAction func kidsPlusClick(_ sender: UIButton) {
         selectButton(sender)
@@ -146,11 +147,12 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: .ProfileDidChanged, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.uploadDidProgress(_:)), name: .UploadProgress, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.addBadge), name: .AchievmentBadge, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.addBadge), name: .FavBadge, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.offline), name: .Internet, object: nil)
+		let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(updateProfile), name: .ProfileDidChanged, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.uploadDidProgress(_:)), name: .UploadProgress, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.addBadge), name: .AchievmentBadge, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.addBadge), name: .FavBadge, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.offline), name: .Internet, object: nil)
 
         let buttonSound = URL(fileURLWithPath: Bundle.main.path(forResource: "push_button_sound", ofType: "wav")!)
         do {
@@ -160,10 +162,13 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         }
         prepareUI()
         interactor?.identifySession()
+
+		addEnvolve()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
     }
 
     @objc func offline(_ notification: Notification) {
@@ -173,8 +178,22 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
                 presentCloud(title: "Offline", subtitle: "Отсутствует подключение к Интернету или слишком слабый сигнал. Вам доступны только сохраненные на телефон мультфильмы.", completion: nil)
             }
         }
-
     }
+
+	var envolveButton: AnimatedAbstractButton?
+	func addEnvolve() {
+		let envolveButton = AnimatedAbstractButton()
+		NSLayoutConstraint.fixWidth(view: envolveButton, constant: 46)
+		NSLayoutConstraint.fixHeight(view: envolveButton, constant: 46)
+		envolveButton.addTarget(self, action: #selector(envolveTap), for: .touchUpInside)
+		leftButtonStackView.addArrangedSubview(envolveButton)
+		leftButtonStackView.addSubview(envolveButton)
+
+		self.envolveButton = envolveButton
+	}
+	@objc func envolveTap() {
+		router?.openEnvolveAlert()
+	}
 
     @objc func addBadge(_ notification: Notification) {
         DispatchQueue.main.async {

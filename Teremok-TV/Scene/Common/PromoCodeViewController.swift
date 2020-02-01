@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 class PromoCodeViewController: UIViewController {
 	var action: (() -> Void)?
 	@IBOutlet private var labels: [UILabel]!
@@ -20,7 +21,22 @@ class PromoCodeViewController: UIViewController {
 	@IBAction func fonClick(_ sender: Any) {
 		dismiss(animated: true, completion: nil)
 	}
-	
+
+	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+		setup()
+	}
+
+	required init?(coder: NSCoder) {
+		super.init(coder: coder)
+		setup()
+	}
+
+	func setup() {
+		modalTransitionStyle = .crossDissolve
+		modalPresentationStyle = .overCurrentContext
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -69,14 +85,13 @@ class SendPromoCodeViewController: PromoCodeViewController {
 
 		firstStepLabel.attributedText = DescriptionText.first.attributedText
 		secondStepLabel.attributedText = DescriptionText.second.attributedText
-		disclaimerLabel.attributedText = "*Важно! " <~ Style.TextAttributes.smallRed + "Ссылка и промо-код  действительна только для iPhone и iPad" <~ Style.TextAttributes.small
+		disclaimerLabel.attributedText = "*Важно! " <~ Style.TextAttributes.smallBoldRed + "Ссылка и промо-код  действительна только для iPhone и iPad" <~ Style.TextAttributes.small
 	}
 
 	enum DescriptionText: String {
 		case first = "Отправьте ссылку на наше приложение и  подарочный промо-код подругам с маленькими детьми в общий чат или по отдельности каждой подруге. Нажмите кнопку «Отправить подарок», выберите мессенджер и контакты/чаты."
 
 		case second = "Как только подарочный промо-код на 30 бесплатных дней активирует 2 ваших подруги, вы автоматически получите бесплатный доступ!"
-
 
 		var attributedText: NSAttributedString {
 			let attributedString = NSMutableAttributedString(string: rawValue, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 11.0)])
@@ -109,7 +124,8 @@ class OneMorePromoCodeViewController: PromoCodeViewController {
 
 		firstStepLabel.attributedText = DescriptionText.first.attributedText
 		secondStepLabel.attributedText = DescriptionText.second.attributedText
-		disclaimerLabel.attributedText = "*Важно! " <~ Style.TextAttributes.smallRed + "Ссылка и промо-код  действительна только для iPhone и iPad" <~ Style.TextAttributes.small
+		disclaimerLabel.attributedText = "*Важно! " <~ Style.TextAttributes.smallBoldRed
+			+ "Ссылка и промо-код  действительна только для iPhone и iPad" <~ Style.TextAttributes.small
 	}
 
 	enum DescriptionText: String {
@@ -137,6 +153,20 @@ class OneMorePromoCodeViewController: PromoCodeViewController {
 class ActivatedPromoCodeViewController: UIViewController {
 	@IBAction func fonClick(_ sender: Any) {
 		dismiss(animated: true, completion: nil)
+	}
+	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+		setup()
+	}
+
+	required init?(coder: NSCoder) {
+		super.init(coder: coder)
+		setup()
+	}
+
+	func setup() {
+		modalTransitionStyle = .crossDissolve
+		modalPresentationStyle = .overCurrentContext
 	}
 
 	override func viewDidLoad() {

@@ -46,10 +46,10 @@ enum Style {
         ]
 		static let small: [NSAttributedString.Key: Any] = [
 			.font: UIFont.systemFont(ofSize: 10, weight: .regular),
-			.foregroundColor: UIColor.Alphavite.blueTwo,
+			.foregroundColor: UIColor.Base.darkBlue,
 		]
-		static let smallRed: [NSAttributedString.Key: Any] = [
-			.font: UIFont.systemFont(ofSize: 10, weight: .regular),
+		static let smallBoldRed: [NSAttributedString.Key: Any] = [
+			.font: UIFont.systemFont(ofSize: 10, weight: .bold),
 			.foregroundColor: UIColor.Alphavite.redOne,
 		]
     }
@@ -136,7 +136,6 @@ extension Style.Gradients {
             case .lightBlue:
                 return []
             }
-
         }
     }
 }

@@ -14,6 +14,7 @@ import UIKit
 
 protocol SettingsDisplayLogic: CommonDisplayLogic {
     func displayProfile(_ profile: Profile)
+	func setPromoCode(code: String)
 }
 
 final class SettingsViewController: AbstracViewController, SettingsDisplayLogic {
@@ -128,6 +129,61 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
         logoutBtn.isHidden = !isAuth
         profileTitle.isHidden = !isAuth
     }
+
+	// MARK: PromoCode
+
+	var promoState: Settings.Promo = .inputCode
+	var needShowPromoCode = false
+
+	@IBAction func promoClick(_ sender: Any) {
+		switch promoState {
+			case .inputCode:
+				let vc = InputAlertViewController.instantiate(fromStoryboard: .alerts)
+				vc.model = AlertModel(title: "Введите промокод", subtitle: "АКТИВИРОВАТЬ")
+				vc.modalTransitionStyle = .crossDissolve
+				vc.modalPresentationStyle = .overCurrentContext
+				vc.complition = code
+				presentAlertModally(alertController: vc)
+			case .shareCode(let code):
+				showPromocode(code)
+		}
+	}
+
+	func showPromocode(_ code: String) {
+		let vc = CloudAlertViewController.instantiate(fromStoryboard: .alerts)
+		vc.model = AlertModel(title: "Поздравляем!", subtitle: "Вы получили от «Теремок-ТВ» промо-код для друга на бесплатное использование подписки «Дети +». Порадуйте своих друзей, отправьте, пожалуйста, этот код одному из ваших друзей, у кого есть маленькие дети. Код \(code)", buttonTitle: "Поделиться")
+		vc.modalTransitionStyle = .crossDissolve
+		vc.modalPresentationStyle = .overCurrentContext
+		vc.complition = { [weak self] in
+			self?.shareCode(code)
+		}
+		presentAlertModally(alertController: vc)
+	}
+
+	func shareCode(_ code: String) {
+		let sharedString = "Дорогой друг, дарю тебе и твоему малышу промо-код на 30 дней бесплатного использования приложения с обучающими мультфильмами - «Теремок-ТВ». Промо-код - " + code
+			+ "\nСкачать приложение - https://itunes.apple.com/ru/app//id1421920317?l=en&mt=8"
+		let vc = UIActivityViewController(activityItems: [sharedString], applicationActivities: [])
+		vc.excludedActivityTypes = [UIActivity.ActivityType.mail, UIActivity.ActivityType.postToFacebook]
+		if let wPPC = vc.popoverPresentationController {
+			wPPC.barButtonItem = self.navigationItem.rightBarButtonItem
+		}
+		present(vc, animated: true)
+	}
+
+	func code(_ code: String) {
+		guard !code.isEmpty else { return }
+		interactor?.acivateCode(code)
+	}
+	func setPromoCode(code: String) {
+		DispatchQueue.main.async {
+			self.promoCode.setTitle("Поделиться промокодом", for: .normal)
+			self.promoState = .shareCode(code)
+			if self.needShowPromoCode {
+				self.showPromocode(code)
+			}
+		}
+	}
 }
 
 extension SettingsViewController: ChildsStackProtocol {

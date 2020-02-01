@@ -980,7 +980,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У нас подарок для вашего малыша и детей ваших подруг" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="gI2-nh-DEb">
-                                        <rect key="frame" x="20" y="20" width="599" height="20"/>
+                                        <rect key="frame" x="20" y="20" width="599" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="7wh-zM-Ha2"/>
                                         </constraints>
@@ -1112,6 +1112,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -1129,11 +1132,12 @@
                         <viewLayoutGuide key="safeArea" id="rVU-6J-eGz"/>
                     </view>
                     <connections>
-                        <outlet property="choseButton" destination="LTs-se-6BD" id="DYc-lf-9Ro"/>
                         <outlet property="firstFeatureLabel" destination="r4t-YJ-drc" id="vkX-2Z-cfp"/>
                         <outlet property="thirdFeatureLabel" destination="WFZ-pk-TbF" id="SMV-Cg-u8U"/>
                         <outletCollection property="labels" destination="gI2-nh-DEb" collectionClass="NSMutableArray" id="eHV-Md-dAc"/>
                         <outletCollection property="labels" destination="unR-vS-hht" collectionClass="NSMutableArray" id="t8v-ef-AFk"/>
+                        <outletCollection property="labels" destination="r4t-YJ-drc" collectionClass="NSMutableArray" id="iAP-6c-cTi"/>
+                        <outletCollection property="labels" destination="WFZ-pk-TbF" collectionClass="NSMutableArray" id="WHS-LG-e8e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R85-iY-gqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1202,9 +1206,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="379" height="84"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o70-QR-0EK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15.5" height="27"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="27"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="15.5" id="Ba1-af-ajj"/>
+                                                            <constraint firstAttribute="width" constant="20" id="Ba1-af-ajj"/>
                                                             <constraint firstAttribute="height" constant="27" id="fi2-tG-alV"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="22"/>
@@ -1212,7 +1216,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="BAQ-BK-t86">
-                                                        <rect key="frame" x="19.5" y="0.0" width="359.5" height="84"/>
+                                                        <rect key="frame" x="24" y="0.0" width="355" height="84"/>
                                                         <string key="text">Отправьте ссылку на наше приложение 
 и  подарочный промо-код подругам с маленькими детьми в общий чат или по отдельности каждой подруге. Нажмите кнопку «Отправить подарок», выберите мессенджер и контакты/чаты.</string>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -1234,9 +1238,9 @@
                                                 <rect key="frame" x="0.0" y="101" width="379" height="82"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wO-yD-kj7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15.5" height="27"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="27"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="15.5" id="9Ys-Ms-O8T"/>
+                                                            <constraint firstAttribute="width" constant="20" id="9Ys-Ms-O8T"/>
                                                             <constraint firstAttribute="height" constant="27" id="phW-GW-2bo"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="22"/>
@@ -1244,7 +1248,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как только подарочный промо-код на 30 бесплатных дней активирует 2 ваших подруги, вы автоматически получите бесплатный доступ!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="QXK-Ne-qXL">
-                                                        <rect key="frame" x="19.5" y="0.0" width="359.5" height="82"/>
+                                                        <rect key="frame" x="24" y="0.0" width="355" height="82"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1314,6 +1318,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -1331,11 +1338,13 @@
                         <viewLayoutGuide key="safeArea" id="mm5-Sv-9X8"/>
                     </view>
                     <connections>
-                        <outlet property="choseButton" destination="d1o-d8-hcf" id="06l-tn-cOv"/>
                         <outlet property="disclaimerLabel" destination="KFb-xt-AH5" id="XJg-9q-P9m"/>
                         <outlet property="firstStepLabel" destination="BAQ-BK-t86" id="kp8-Mf-FJt"/>
                         <outlet property="secondStepLabel" destination="QXK-Ne-qXL" id="3Kn-Gb-jxb"/>
                         <outletCollection property="labels" destination="CwM-p0-thD" collectionClass="NSMutableArray" id="5LB-tb-42q"/>
+                        <outletCollection property="labels" destination="BAQ-BK-t86" collectionClass="NSMutableArray" id="PHQ-Ek-k9w"/>
+                        <outletCollection property="labels" destination="QXK-Ne-qXL" collectionClass="NSMutableArray" id="hYr-TN-es4"/>
+                        <outletCollection property="labels" destination="KFb-xt-AH5" collectionClass="NSMutableArray" id="iDO-Wm-v7k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GO4-TG-rZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1513,6 +1522,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -1598,9 +1610,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="379" height="84"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LF-EK-AfZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15.5" height="27"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="27"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="15.5" id="ex4-vB-r3o"/>
+                                                            <constraint firstAttribute="width" constant="20" id="ex4-vB-r3o"/>
                                                             <constraint firstAttribute="height" constant="27" id="lIZ-ng-9xV"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="22"/>
@@ -1608,7 +1620,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="7sR-EJ-zVv">
-                                                        <rect key="frame" x="19.5" y="0.0" width="359.5" height="84"/>
+                                                        <rect key="frame" x="24" y="0.0" width="355" height="84"/>
                                                         <string key="text">Ссылку на наше приложение и подарочный промо-код отправьте подругам с маленькими детьми. Нажмите кнопку «Отправить подарок» и выберите мессенджер и контакты/чаты.</string>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1629,17 +1641,17 @@
                                                 <rect key="frame" x="0.0" y="101" width="379" height="84"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcO-ie-ptd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15.5" height="27"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="27"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="27" id="ThI-Yi-UdG"/>
-                                                            <constraint firstAttribute="width" constant="15.5" id="f4A-0v-bZe"/>
+                                                            <constraint firstAttribute="width" constant="20" id="f4A-0v-bZe"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="22"/>
                                                         <color key="textColor" red="1" green="0.84705882349999995" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="x9Y-Rj-VFh">
-                                                        <rect key="frame" x="19.5" y="0.0" width="359.5" height="84"/>
+                                                        <rect key="frame" x="24" y="0.0" width="355" height="84"/>
                                                         <string key="text">Как только подарочный промо-код на 30 бесплатных дней активирует 2 ваших подруги, вы автоматически получите бесплатный доступ ко всем функциям!</string>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1713,6 +1725,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -1730,7 +1745,6 @@
                         <viewLayoutGuide key="safeArea" id="MfE-1T-TPK"/>
                     </view>
                     <connections>
-                        <outlet property="choseButton" destination="XVk-5P-JHy" id="pGj-E1-FbO"/>
                         <outlet property="disclaimerLabel" destination="Xgk-Qw-n2H" id="fxR-nq-P9Z"/>
                         <outlet property="firstStepLabel" destination="7sR-EJ-zVv" id="OpC-fV-dGg"/>
                         <outlet property="secondStepLabel" destination="x9Y-Rj-VFh" id="oaz-Wx-bUe"/>

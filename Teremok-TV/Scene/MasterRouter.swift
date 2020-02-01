@@ -41,6 +41,7 @@ protocol MasterVCRoutingLogic: MasterRoutingLogic {
     func navigateToMusic()
     func navigateToGameList()
     func navigateToAnimals()
+	func openEnvolveAlert()
 }
 
 protocol MasterDataPassing {
@@ -58,6 +59,14 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
         pushChild(viewControllerClass: MainViewController.self, storyboard: .main)
     }
 
+	func openEnvolveAlert() {
+		let vc = SendPromoCodeViewController.instantiate(fromStoryboard: .alerts)
+		vc.action = { [unowned self] in
+			self.navigateToSettings()
+		}
+		viewController?.present(vc, animated: true, completion: nil)
+	}
+	
     func navigateToAddChild(){
         let vc = ChildProfileAddViewController.instantiate(fromStoryboard: .autorization)
         guard var dataStore = vc.router?.dataStore else { return }

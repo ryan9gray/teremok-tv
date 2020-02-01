@@ -8,7 +8,6 @@
 
 import UIKit
 import Lottie
-import SpriteKit
 
 class MainlCollectionViewCell: UICollectionViewCell, AnimateCellProtocol {
     var animationView: AnimationView?
