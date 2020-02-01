@@ -91,6 +91,7 @@
 		251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */; };
 		253E7E2C2369E5ED003FF569 /* snowstorm_blizzard_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */; };
 		253E7E2E236AFA05003FF569 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E7E2D236AFA05003FF569 /* ShadowView.swift */; };
+		25460FD523E5CA8E00284676 /* PromoCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25460FD423E5CA8E00284676 /* PromoCodeViewController.swift */; };
 		2546D8E323E1CFE20063EF0B /* ColorCube.json in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E223E1CFE20063EF0B /* ColorCube.json */; };
 		2546D8E523E225220063EF0B /* ColorsGame_subject_9_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E423E225220063EF0B /* ColorsGame_subject_9_4.wav */; };
 		2546D8E723E2254E0063EF0B /* ColorsGame_subject_10_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E623E2254E0063EF0B /* ColorsGame_subject_10_4.wav */; };
@@ -910,6 +911,7 @@
 		251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neskid-comica-bd.ttf"; sourceTree = "<group>"; };
 		253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snowstorm_blizzard_1.wav; sourceTree = "<group>"; };
 		253E7E2D236AFA05003FF569 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		25460FD423E5CA8E00284676 /* PromoCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeViewController.swift; sourceTree = "<group>"; };
 		2546D8E223E1CFE20063EF0B /* ColorCube.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ColorCube.json; sourceTree = "<group>"; };
 		2546D8E423E225220063EF0B /* ColorsGame_subject_9_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_4.wav; sourceTree = "<group>"; };
 		2546D8E623E2254E0063EF0B /* ColorsGame_subject_10_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_4.wav; sourceTree = "<group>"; };
@@ -2376,6 +2378,7 @@
 				CA0ABB762180CC8900523F5B /* ScrollViewAlertViewController.swift */,
 				CA82C12C2132B4360020272E /* CloudAlertViewController.swift */,
 				25C412DE23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift */,
+				25460FD423E5CA8E00284676 /* PromoCodeViewController.swift */,
 				CAFF985E2325342600003076 /* GameMasterViewController.swift */,
 			);
 			path = Common;
@@ -4301,6 +4304,7 @@
 				CAF4C106214AF31700954AA8 /* InputView.swift in Sources */,
 				CAC9100A215D31FD00E62F01 /* AchievesPresenter.swift in Sources */,
 				CA1AB66522F30CE4003A2584 /* GamesListViewController.swift in Sources */,
+				25460FD523E5CA8E00284676 /* PromoCodeViewController.swift in Sources */,
 				CA52F352223D2DF40058194E /* MusicMasterModels.swift in Sources */,
 				CAB5A4502171F18200A00C8E /* ChildsPresenter.swift in Sources */,
 				CAF9622F229970F7006E3046 /* AnimalsStatisticModels.swift in Sources */,

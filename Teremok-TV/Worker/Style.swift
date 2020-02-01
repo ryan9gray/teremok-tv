@@ -44,6 +44,7 @@ enum Style {
             .font: Font.istokWeb(size: 24.0),
             .foregroundColor: UIColor.Alphavite.blueTwo,
         ]
+
     }
 
     enum Font {
@@ -154,6 +155,12 @@ func <~<T: Applicable>(object: T.Applicant, applicable: T) -> T.Applicant {
 
 func <~ (string: String, attributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
     return NSAttributedString(string: string, attributes: attributes)
+}
+
+func + (left: NSAttributedString, right: NSAttributedString) -> NSAttributedString {
+	let result = NSMutableAttributedString(attributedString: left)
+	result.append(right)
+	return result
 }
 
 @discardableResult
