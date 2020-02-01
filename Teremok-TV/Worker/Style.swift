@@ -44,7 +44,14 @@ enum Style {
             .font: Font.istokWeb(size: 24.0),
             .foregroundColor: UIColor.Alphavite.blueTwo,
         ]
-
+		static let small: [NSAttributedString.Key: Any] = [
+			.font: UIFont.systemFont(ofSize: 10, weight: .regular),
+			.foregroundColor: UIColor.Alphavite.blueTwo,
+		]
+		static let smallRed: [NSAttributedString.Key: Any] = [
+			.font: UIFont.systemFont(ofSize: 10, weight: .regular),
+			.foregroundColor: UIColor.Alphavite.redOne,
+		]
     }
 
     enum Font {
