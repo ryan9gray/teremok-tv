@@ -39,13 +39,13 @@ class ColorsGameFlow  {
         } else {
            game.roundColors = []
            for _ in 0..<3 {
-               let char = game.currentColors.randomElement()!
-               game.roundColors.append(char)
-               game.currentColors.remove(char)
-           }
-           guard !game.currentColors.isEmpty else {
-               finishGame()
-               return
+				if let char = game.currentColors.randomElement() {
+				   game.roundColors.append(char)
+				   game.currentColors.remove(char)
+				} else {
+					finishGame()
+					return
+				}
            }
         }
         game.round += 1
@@ -75,7 +75,6 @@ class ColorsGameFlow  {
         )
         master?.router?.presentModalChild(viewController: controller)
     }
-
 
     private func nextRound() {
         if game.round == 1, !(Profile.current?.premiumGame ?? false) {

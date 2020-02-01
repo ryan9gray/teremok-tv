@@ -178,7 +178,7 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withCell: MainlCollectionViewCell.self, for: indexPath)
 		if indexPath.section == 0 {
-			cell.configurate(title: "Развивающие игры", image: Cloud.clouds.randomElement(), animation: "ColorCube")
+			cell.configurate(title: "Алфавит, цвета, мемориз, животные", image: Cloud.clouds.randomElement(), animation: "ColorCube")
 		} else {
 			let razdel = razdels[indexPath.row]
 			cell.configurate(title: razdel.title, image: Cloud.clouds.randomElement(), link: razdel.link)
