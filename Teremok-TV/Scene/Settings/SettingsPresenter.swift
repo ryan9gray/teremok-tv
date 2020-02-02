@@ -14,9 +14,7 @@ import UIKit
 
 protocol SettingsPresentationLogic: CommonPresentationLogic {
     func presentProfile(_ model: Profile)
-    func activateState(_ state: String)
-	func presentPromo(code: String)
-
+	func activatedPromo()
 }
 
 class SettingsPresenter: SettingsPresentationLogic {
@@ -31,10 +29,7 @@ class SettingsPresenter: SettingsPresentationLogic {
         viewController?.displayProfile(model)
     }
 
-    func activateState(_ state: String) {
-        present(errorString: state)
+    func activatedPromo() {
+		viewController?.displayPromoCodeActvated()
     }
-	func presentPromo(code: String){
-		viewController?.setPromoCode(code: code)
-	}
 }

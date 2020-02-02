@@ -1551,7 +1551,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQa-AQ-4W4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1581" y="3843"/>
+            <point key="canvasLocation" x="-1581" y="4536"/>
         </scene>
         <!--One More Promo Code View Controller-->
         <scene sceneID="umb-nU-6u0">
@@ -1748,13 +1748,14 @@
                         <outlet property="disclaimerLabel" destination="Xgk-Qw-n2H" id="fxR-nq-P9Z"/>
                         <outlet property="firstStepLabel" destination="7sR-EJ-zVv" id="OpC-fV-dGg"/>
                         <outlet property="secondStepLabel" destination="x9Y-Rj-VFh" id="oaz-Wx-bUe"/>
+                        <outlet property="titleLabelLabel" destination="xyp-e4-ppj" id="kyY-ib-rM6"/>
                         <outletCollection property="labels" destination="xyp-e4-ppj" collectionClass="NSMutableArray" id="13V-rQ-npb"/>
                         <outletCollection property="labels" destination="cGg-6g-dZw" collectionClass="NSMutableArray" id="5ER-e7-DTb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hT4-GX-DgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1581.0267857142856" y="4556.521739130435"/>
+            <point key="canvasLocation" x="-1581" y="3828"/>
         </scene>
     </scenes>
     <resources>

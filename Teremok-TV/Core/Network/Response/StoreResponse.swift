@@ -21,13 +21,11 @@ final class PromoCodeResponse: Mappable {
 }
 
 final class ActivateCodeResponse: Mappable {
-    var state: String?
-    var message: String?
+    var promoCode: String?
 
     required init?(map: Map) {}
 
     func mapping(map: Map) {
-        state       <- map["state"]
-        message       <- map["message"]
+        promoCode       <- map["promoCode"]
     }
 }

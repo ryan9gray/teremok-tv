@@ -163,7 +163,9 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
         prepareUI()
         interactor?.identifySession()
 
-		addEnvolve()
+		//if PromoCodeWorker.havePromoCode {
+			addEnvolve()
+		//}
     }
 
     override func viewDidAppear(_ animated: Bool) {

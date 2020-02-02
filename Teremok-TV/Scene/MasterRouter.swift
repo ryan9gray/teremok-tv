@@ -59,14 +59,45 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
         pushChild(viewControllerClass: MainViewController.self, storyboard: .main)
     }
 
+	func shareCode(_ code: String) {
+		let firstActivityItem = "Дорогой друг, дарю тебе и твоему малышу промо-код на 30 дней бесплатного использования приложения с обучающими мультфильмами - «Теремок-ТВ». Промо-код - "
+			+ code
+			+ "\nhttps://itunes.apple.com/ru/app//id1421920317?l=en&mt=8"
+		let vc = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: [])
+		vc.excludedActivityTypes = [.mail, .postToFacebook, .assignToContact, .copyToPasteboard, .message]
+		viewController?.present(vc, animated: true)
+	}
+
 	func openEnvolveAlert() {
+		if PromoCodeWorker.wasActivated {
+			//guard let code = Profile.current?.promo?.promoCode else { return }
+			let code = "code"
+
+			let vc = OneMorePromoCodeViewController.instantiate(fromStoryboard: .alerts)
+			vc.action = { [unowned self] in
+				self.shareCode(code)
+			}
+			viewController?.present(vc, animated: true, completion: nil)
+		} else {
+			let vc = GetPromoCodeViewController.instantiate(fromStoryboard: .alerts)
+			vc.action = { [unowned self] in
+				self.promoCodeAlert()
+			}
+			viewController?.present(vc, animated: true, completion: nil)
+		}
+	}
+
+	func promoCodeAlert() {
+		//guard let code = Profile.current?.promo?.promoCode else { return }
+		let code = "code"
+
 		let vc = SendPromoCodeViewController.instantiate(fromStoryboard: .alerts)
 		vc.action = { [unowned self] in
-			self.navigateToSettings()
+			self.shareCode(code)
 		}
 		viewController?.present(vc, animated: true, completion: nil)
 	}
-	
+
     func navigateToAddChild(){
         let vc = ChildProfileAddViewController.instantiate(fromStoryboard: .autorization)
         guard var dataStore = vc.router?.dataStore else { return }

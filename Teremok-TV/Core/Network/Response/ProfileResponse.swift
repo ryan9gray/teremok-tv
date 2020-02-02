@@ -39,6 +39,8 @@ final class ProfileResponse: Mappable {
     var premiumMusic: Bool = false
     var premiumGame: Bool = false
 
+	var promo: PromoCodeModel?
+
 	var untilPremiumTimeInterval: Int = 0
 
     init(with profile: Profile) {
@@ -57,7 +59,25 @@ final class ProfileResponse: Mappable {
         premiumGame     <- map["premiumGame"]
 		needAuthorize     <- map["needAuthorize"]
 		untilPremiumTimeInterval     <- map["untilPremiumTimeInterval"]
+		promo     <- map["promo"]
     }
+}
+final class PromoCodeModel: Mappable {
+	var promoCode: String?
+	var needActivate: Int = 3
+	var canActivate: Bool = false
+
+	var activatedPromocodes: Int = 0
+
+	// Mappable
+	required init?(map: Map) { }
+
+	func mapping(map: Map) {
+		promoCode     <- map["promoCode"]
+		needActivate     <- map["needActivate"]
+		canActivate     <- map["canActivate"]
+		activatedPromocodes     <- map["activatedPromocodes"]
+	}
 }
 
 final class Statistic: Mappable {

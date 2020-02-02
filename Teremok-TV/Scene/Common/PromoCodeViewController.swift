@@ -118,10 +118,12 @@ class OneMorePromoCodeViewController: PromoCodeViewController {
 	@IBOutlet private var disclaimerLabel: UILabel!
 	@IBOutlet private var firstStepLabel: UILabel!
 	@IBOutlet private var secondStepLabel: UILabel!
+	@IBOutlet private var titleLabelLabel: UILabel!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		titleLabelLabel.text = "1 промо-код активирован, остался еще \(PromoCodeWorker.activated) и вы получите бесплатный доступ"
 		firstStepLabel.attributedText = DescriptionText.first.attributedText
 		secondStepLabel.attributedText = DescriptionText.second.attributedText
 		disclaimerLabel.attributedText = "*Важно! " <~ Style.TextAttributes.smallBoldRed

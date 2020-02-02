@@ -23,6 +23,9 @@ class ActivatePromoCodeCommand: BasicCommand {
     override var method: String {
         return APIMethod.Purchase.activatePromoCode.methodName
     }
+	override var version: String {
+		return "1.1"
+	}
 
     override var parameters: [String : Any] {
         return ["promoCode": promoCode]
