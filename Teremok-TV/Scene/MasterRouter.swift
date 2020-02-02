@@ -40,7 +40,6 @@ protocol MasterVCRoutingLogic: MasterRoutingLogic {
     func navigateToAddChild()
     func navigateToMusic()
     func navigateToGameList()
-    func navigateToAnimals()
 	func openEnvolveAlert()
 }
 
