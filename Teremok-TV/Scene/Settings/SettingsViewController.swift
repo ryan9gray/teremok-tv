@@ -100,7 +100,7 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
             interactor?.fetchData()
         }
 
-		promoCode.isHidden = false//!PromoCodeWorker.canActivate
+		promoCode.isHidden = !PromoCodeWorker.canActivate
     }
     // MARK: Do something
 

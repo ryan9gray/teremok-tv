@@ -123,7 +123,7 @@ class OneMorePromoCodeViewController: PromoCodeViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		titleLabelLabel.text = "1 промо-код активирован, остался еще \(PromoCodeWorker.activated) и вы получите бесплатный доступ"
+		titleLabelLabel.text = "Необходимо активировать ещё \(PromoCodeWorker.activated) промо-код и вы получите бесплатно доступ к премиум аккаунту"
 		firstStepLabel.attributedText = DescriptionText.first.attributedText
 		secondStepLabel.attributedText = DescriptionText.second.attributedText
 		disclaimerLabel.attributedText = "*Важно! " <~ Style.TextAttributes.smallBoldRed
