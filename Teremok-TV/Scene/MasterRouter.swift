@@ -59,9 +59,21 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
     }
 
 	func shareCode(_ code: String) {
-		let firstActivityItem = "Дорогой друг, дарю тебе и твоему малышу промо-код на 30 дней бесплатного использования приложения с обучающими мультфильмами - «Теремок-ТВ». Промо-код - "
-			+ code
-			+ "\nhttps://itunes.apple.com/ru/app//id1421920317?l=en&mt=8"
+		let firstActivityItem = """
+			Привет!
+			У меня для тебя и твоего малыша подарок — бесплатный доступ к развивающему приложению для IOS «Теремок-ТВ».
+
+			Что там?
+			Развивающие игры - Алфавит, Цвета, Животные и Мемориз. 2000 серий обучающих мультфильмов без рекламы — «Профессор Почемушкин», «Малышарики», «Кротик и Панда», «Ангел Бейби» и др., возможность составлять каталог своих любимых мультфильмов и смотреть их без интернета.
+
+			Что нужно?
+			Скопировать/записать промо-код — \(code)
+			Установить приложение «Теремок-ТВ» и ввести промо-код в разделе «Настройки» (кнопка в левом нижнем углу экрана)
+
+			Торопись! Кол-во подарочных промо-кодов ограничено.
+
+			Приложение ты можешь скачать по ссылке - https://apps.apple.com/app/apple-store/id1421920317?pt=643604&ct=mess_promo&mt=8
+		"""
 		let vc = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: [])
 		vc.excludedActivityTypes = [.mail, .postToFacebook, .assignToContact, .copyToPasteboard, .message]
 		viewController?.present(vc, animated: true)
@@ -69,8 +81,7 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
 
 	func openEnvolveAlert() {
 		if PromoCodeWorker.wasActivated {
-			//guard let code = Profile.current?.promo?.promoCode else { return }
-			let code = "code"
+			guard let code = Profile.current?.promo?.promoCode else { return }
 
 			let vc = OneMorePromoCodeViewController.instantiate(fromStoryboard: .alerts)
 			vc.action = { [unowned self] in
@@ -87,8 +98,7 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
 	}
 
 	func promoCodeAlert() {
-		//guard let code = Profile.current?.promo?.promoCode else { return }
-		let code = "code"
+		guard let code = Profile.current?.promo?.promoCode else { return }
 
 		let vc = SendPromoCodeViewController.instantiate(fromStoryboard: .alerts)
 		vc.action = { [unowned self] in

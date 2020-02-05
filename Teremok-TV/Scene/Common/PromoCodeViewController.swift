@@ -89,26 +89,21 @@ class SendPromoCodeViewController: PromoCodeViewController {
 	}
 
 	enum DescriptionText: String {
-		case first = "Отправьте ссылку на наше приложение и  подарочный промо-код подругам с маленькими детьми в общий чат или по отдельности каждой подруге. Нажмите кнопку «Отправить подарок», выберите мессенджер и контакты/чаты."
+		case first = "Отправьте ссылку на наше приложение и  подарочный промо-код подругам с маленькими детьми в общий чат или по отдельности каждой подруге."
 
 		case second = "Как только подарочный промо-код на 30 бесплатных дней активирует 2 ваших подруги, вы автоматически получите бесплатный доступ!"
 
 		var attributedText: NSAttributedString {
-			let attributedString = NSMutableAttributedString(string: rawValue, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 11.0)])
-			let boldFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 11.0)]
+			let attributedString = NSMutableAttributedString(string: rawValue, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13.0)])
+			let boldFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 13.0)]
 			let boldPartOfString: String
-			var secondBold: String?
 			switch self {
 				case .first:
 				boldPartOfString = "Отправьте ссылку"
-				secondBold = "«Отправить подарок»"
 				case .second:
 				boldPartOfString = "вы автоматически получите бесплатный доступ!"
 			}
 			attributedString.addAttributes(boldFontAttribute, range: NSRange(rawValue.range(of: boldPartOfString) ?? rawValue.startIndex..<rawValue.endIndex, in: rawValue))
-			if let bold = secondBold {
-				attributedString.addAttributes(boldFontAttribute, range: NSRange(rawValue.range(of: bold) ?? rawValue.startIndex..<rawValue.endIndex, in: rawValue))
-			}
 			return attributedString
 		}
 	}
@@ -122,8 +117,12 @@ class OneMorePromoCodeViewController: PromoCodeViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		if Profile.current?.promo?.needActivate == 0 {
+			titleLabelLabel.text = "Ура! 2 кода активировали ваши подруги с малышами. У вас премиум доступ. Но вы можете еще порадовать подруг с детьми и отправить им ссылку с промо-кодом."
+		} else {
+			titleLabelLabel.text = "Необходимо активировать ещё \(Profile.current?.promo?.needActivate ?? 0) промо-код и вы получите бесплатно доступ к премиум аккаунту"
+		}
 
-		titleLabelLabel.text = "Необходимо активировать ещё \(PromoCodeWorker.activated) промо-код и вы получите бесплатно доступ к премиум аккаунту"
 		firstStepLabel.attributedText = DescriptionText.first.attributedText
 		secondStepLabel.attributedText = DescriptionText.second.attributedText
 		disclaimerLabel.attributedText = "*Важно! " <~ Style.TextAttributes.smallBoldRed
@@ -131,14 +130,14 @@ class OneMorePromoCodeViewController: PromoCodeViewController {
 	}
 
 	enum DescriptionText: String {
-		case first = "Ссылку на наше приложение и подарочный промо-код отправьте подругам с маленькими детьми. Нажмите кнопку «Отправить подарок» и выберите мессенджер и контакты/чаты."
+		case first = "Ссылку на наше приложение и подарочный промо-код отправьте подругам с маленькими детьми."
 
 		case second = "Как только подарочный промо-код на 30 бесплатных дней активирует 2 ваших подруги, вы автоматически получите бесплатный доступ ко всем функциям!"
 
 
 		var attributedText: NSAttributedString {
-			let attributedString = NSMutableAttributedString(string: rawValue, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 11.0)])
-			let boldFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 11.0)]
+			let attributedString = NSMutableAttributedString(string: rawValue, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13.0)])
+			let boldFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 13.0)]
 			let boldPartOfString: String
 			switch self {
 				case .first:
@@ -153,6 +152,8 @@ class OneMorePromoCodeViewController: PromoCodeViewController {
 }
 
 class ActivatedPromoCodeViewController: UIViewController {
+	@IBOutlet private var labels: [UILabel]!
+
 	@IBAction func fonClick(_ sender: Any) {
 		dismiss(animated: true, completion: nil)
 	}
@@ -174,7 +175,7 @@ class ActivatedPromoCodeViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		// Do any additional setup after loading the view.
+		labels.forEach { $0.textColor = UIColor.Label.titleText }
 	}
 
 }

@@ -99,6 +99,7 @@ final class Profile: Mappable  {
 		needAuthorize     <- map["needAuthorize"]
 		untilPremiumTimeInterval     <- map["untilPremiumTimeInterval"]
 		untilVideoViews     <- map["untilVideoViews"]
+		promo     <- map["Promo"]
     }
     
     init(with profile: ProfileResponse) {

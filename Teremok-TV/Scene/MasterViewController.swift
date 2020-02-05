@@ -167,10 +167,18 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-		if PromoCodeWorker.havePromoCode {
+		if PromoCodeWorker.havePromoCode, envolveButton == nil {
 			addEnvolve()
+			showPromoCodeAlertIfNeed()
 		}
     }
+
+	func showPromoCodeAlertIfNeed() {
+		guard LocalStore.promoCodeAlertCounter < 2 else { return }
+
+		LocalStore.promoCodeAlertCounter += 1
+		router?.openEnvolveAlert()
+	}
 
     @objc func offline(_ notification: Notification) {
         if let offline = notification.object as? Bool {

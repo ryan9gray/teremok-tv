@@ -89,6 +89,11 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
         prepareUI()
     }
 
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+
+	}
+	
     private func prepareUI(){
         activityView = LottieHUD()
         registrationBtn.gradientColors = Style.Gradients.beige.value

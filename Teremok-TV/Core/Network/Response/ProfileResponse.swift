@@ -59,7 +59,7 @@ final class ProfileResponse: Mappable {
         premiumGame     <- map["premiumGame"]
 		needAuthorize     <- map["needAuthorize"]
 		untilPremiumTimeInterval     <- map["untilPremiumTimeInterval"]
-		promo     <- map["promo"]
+		promo     <- map["Promo"]
     }
 }
 final class PromoCodeModel: Mappable {

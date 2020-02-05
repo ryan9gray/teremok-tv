@@ -54,3 +54,8 @@ public extension UIView {
         return loadNib(name: name ?? String(describing: self), bundle: bundle ?? Bundle(for: self), owner: owner, options: options)
     }
 }
+extension UIView {
+	func superview<T>(of type: T.Type) -> T? {
+		return superview as? T ?? superview.flatMap { $0.superview(of: type) }
+	}
+}
