@@ -48,7 +48,7 @@ final class Profile: Mappable  {
 
     static var subscribe: String {
         if let profile = Profile.current {
-            switch profile.currentPremium() {
+            switch profile.currentPremium {
                 case .game:
                     return "У Вас подписка «Интеллектум»"
                 case .music:
@@ -68,8 +68,10 @@ final class Profile: Mappable  {
 	var untilPremiumTimeInterval: Int = 0
 	var untilVideoViews: Int = 0
 
+	var promo: PromoCodeModel?
 
-    func currentPremium() -> Premium {
+
+	var currentPremium: Premium {
         if premiumGame {
             return .game
         } else if premiumMusic {
@@ -97,6 +99,7 @@ final class Profile: Mappable  {
 		needAuthorize     <- map["needAuthorize"]
 		untilPremiumTimeInterval     <- map["untilPremiumTimeInterval"]
 		untilVideoViews     <- map["untilVideoViews"]
+		promo     <- map["Promo"]
     }
     
     init(with profile: ProfileResponse) {

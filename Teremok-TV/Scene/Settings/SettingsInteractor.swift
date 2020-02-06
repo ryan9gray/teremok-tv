@@ -16,6 +16,7 @@ import SwiftyStoreKit
 protocol SettingsBusinessLogic {
     func fetchData()
     func logout()
+	func acivateCode(_ code: String)
 }
 
 protocol SettingsDataStore {
@@ -69,4 +70,16 @@ class SettingsInteractor: SettingsBusinessLogic, SettingsDataStore {
             }
         }
     }
+
+	func acivateCode(_ code: String) {
+		purchaseService.activatePromo(code: code) { [weak self] (result) in
+			switch result {
+				case .success:
+					self?.presenter?.activatedPromo()
+					NotificationCenter.default.post(name: .ProfileNeedReload, object: nil)
+				case .failure(let error):
+					self?.presenter?.presentError(error: error)
+			}
+		}
+	}
 }

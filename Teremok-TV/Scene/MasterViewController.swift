@@ -60,6 +60,7 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     @IBOutlet private var homeBtn: TTAbstractMainButton!
     @IBOutlet private var musicBtn: TTAbstractMainButton!
     @IBOutlet private var animalsBtn: TTAbstractMainButton!
+	@IBOutlet private var leftButtonStackView: UIStackView!
 
     @IBAction func kidsPlusClick(_ sender: UIButton) {
         selectButton(sender)
@@ -90,7 +91,6 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     }
     @IBAction func gameClick(_ sender: UIButton) {
         router?.navigateToGameList()
-        //router?.navigateToAnimals()
     }
     @IBAction func touchDown(_ sender: UIButton) {
 		if !Profile.isAuthorized, !(Profile.current?.premium ?? false) {
@@ -146,11 +146,13 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(updateProfile), name: .ProfileDidChanged, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.uploadDidProgress(_:)), name: .UploadProgress, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.addBadge), name: .AchievmentBadge, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.addBadge), name: .FavBadge, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.offline), name: .Internet, object: nil)
+		let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(updateProfile), name: .ProfileDidChanged, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.uploadDidProgress(_:)), name: .UploadProgress, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.addBadge), name: .AchievmentBadge, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.addBadge), name: .FavBadge, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(self.offline), name: .Internet, object: nil)
+		notificationCenter.addObserver(self, selector: #selector(self.playEnvelop), name: UIApplication.willEnterForegroundNotification, object: nil)
 
         let buttonSound = URL(fileURLWithPath: Bundle.main.path(forResource: "push_button_sound", ofType: "wav")!)
         do {
@@ -164,7 +166,19 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+		if PromoCodeWorker.havePromoCode, envolveButton == nil {
+			addEnvolve()
+			showPromoCodeAlertIfNeed()
+		}
     }
+
+	func showPromoCodeAlertIfNeed() {
+		guard LocalStore.promoCodeAlertCounter < 2 else { return }
+
+		LocalStore.promoCodeAlertCounter += 1
+		router?.openEnvolveAlert()
+	}
 
     @objc func offline(_ notification: Notification) {
         if let offline = notification.object as? Bool {
@@ -173,8 +187,24 @@ final class MasterViewController: UIViewController, MasterDisplayLogic, CAAnimat
                 presentCloud(title: "Offline", subtitle: "Отсутствует подключение к Интернету или слишком слабый сигнал. Вам доступны только сохраненные на телефон мультфильмы.", completion: nil)
             }
         }
-
     }
+
+	var envolveButton: AnimatedAbstractButton?
+	func addEnvolve() {
+		animalsBtn.isHidden = true
+		let envolveButton = AnimatedAbstractButton()
+		NSLayoutConstraint.fixWidth(view: envolveButton, constant: 46)
+		NSLayoutConstraint.fixHeight(view: envolveButton, constant: 46)
+		envolveButton.addTarget(self, action: #selector(envolveTap), for: .touchUpInside)
+		leftButtonStackView.addArrangedSubview(envolveButton)
+		self.envolveButton = envolveButton
+	}
+	@objc func envolveTap() {
+		router?.openEnvolveAlert()
+	}
+	@objc func playEnvelop() {
+		envolveButton?.play()
+	}
 
     @objc func addBadge(_ notification: Notification) {
         DispatchQueue.main.async {

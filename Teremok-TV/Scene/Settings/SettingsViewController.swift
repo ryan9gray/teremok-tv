@@ -14,6 +14,7 @@ import UIKit
 
 protocol SettingsDisplayLogic: CommonDisplayLogic {
     func displayProfile(_ profile: Profile)
+	func displayPromoCodeActvated()
 }
 
 final class SettingsViewController: AbstracViewController, SettingsDisplayLogic {
@@ -88,6 +89,11 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
         prepareUI()
     }
 
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+
+	}
+	
     private func prepareUI(){
         activityView = LottieHUD()
         registrationBtn.gradientColors = Style.Gradients.beige.value
@@ -98,6 +104,8 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
         if isAuth {
             interactor?.fetchData()
         }
+
+		promoCode.isHidden = !PromoCodeWorker.canActivate
     }
     // MARK: Do something
 
@@ -128,6 +136,27 @@ final class SettingsViewController: AbstracViewController, SettingsDisplayLogic 
         logoutBtn.isHidden = !isAuth
         profileTitle.isHidden = !isAuth
     }
+
+	// MARK: PromoCode
+
+	@IBAction func promoClick(_ sender: Any) {
+		let vc = InputAlertViewController.instantiate(fromStoryboard: .alerts)
+		vc.model = AlertModel(title: "Введите промокод", subtitle: "АКТИВИРОВАТЬ")
+		vc.modalTransitionStyle = .crossDissolve
+		vc.modalPresentationStyle = .overCurrentContext
+		vc.complition = code
+		presentAlertModally(alertController: vc)
+	}
+
+	func code(_ code: String) {
+		guard !code.isEmpty else { return }
+
+		interactor?.acivateCode(code)
+	}
+
+	func displayPromoCodeActvated() {
+		router?.showCodeActivated()
+	}
 }
 
 extension SettingsViewController: ChildsStackProtocol {

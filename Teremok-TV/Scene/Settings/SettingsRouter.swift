@@ -17,6 +17,7 @@ protocol SettingsRoutingLogic: CommonRoutingLogic  {
     func routToAuthorization()
     func routToChild(_ child: Child)
     func navigareToStore()
+	func showCodeActivated()
 }
 
 protocol SettingsDataPassing {
@@ -30,23 +31,26 @@ class SettingsRouter: NSObject, SettingsRoutingLogic, SettingsDataPassing, Commo
     var modalControllersQueue = Queue<UIViewController>()
 
     // MARK: Routing
-    func routToChild(_ child: Child){
+    func routToChild(_ child: Child) {
         viewController?.masterRouter?.pushChild(viewControllerClass: ChildsViewController.self, storyboard: .profile)
 
     }
-    func routToRegistration(){
+    func routToRegistration() {
         let vc = RegistrationViewController.instantiate(fromStoryboard: .autorization)
         viewController?.masterRouter?.presentNextChild(viewController: vc)
     }
-    func routToAuthorization(){
+    func routToAuthorization() {
         let vc = AuthViewController.instantiate(fromStoryboard: .autorization)
         viewController?.masterRouter?.presentNextChild(viewController: vc)
     }
     
-    func navigareToStore(){
+    func navigareToStore() {
         let vc = StoreViewController.instantiate(fromStoryboard: .main)
         viewController?.masterRouter?.pushChild(vc)
     }
-    
+	func showCodeActivated() {
+		let vc = ActivatedPromoCodeViewController.instantiate(fromStoryboard: .alerts)
+		viewController?.present(vc, animated: true, completion: nil)
+	}
 
 }

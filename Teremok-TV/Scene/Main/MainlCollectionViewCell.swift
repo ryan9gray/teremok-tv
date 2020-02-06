@@ -8,7 +8,6 @@
 
 import UIKit
 import Lottie
-import SpriteKit
 
 class MainlCollectionViewCell: UICollectionViewCell, AnimateCellProtocol {
     var animationView: AnimationView?
@@ -33,6 +32,7 @@ class MainlCollectionViewCell: UICollectionViewCell, AnimateCellProtocol {
     }
 
     func configurate(title: String, image: UIImage?, link: String) {
+		source = .link
         titleLbl.text = title
         cloudImageView.image = image
         linktoLoad = link

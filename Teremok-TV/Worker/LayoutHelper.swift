@@ -71,3 +71,11 @@ extension UILayoutPriority {
         return UILayoutPriority(left.rawValue - right)
     }
 }
+
+extension NSAttributedString {
+	func highlighting(_ substring: String, using color: UIColor) -> NSAttributedString {
+		let attributedString = NSMutableAttributedString(attributedString: self)
+		attributedString.addAttribute(.foregroundColor, value: color, range: (self.string as NSString).range(of: substring))
+		return attributedString
+	}
+}

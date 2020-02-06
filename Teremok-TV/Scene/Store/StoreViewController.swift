@@ -135,7 +135,7 @@ extension StoreViewController: UICollectionViewDataSource {
 					)
 					cell.configurate(
 						sub: subscription,
-						have: profile?.currentPremium() == subscription.premium
+						have: profile?.currentPremium == subscription.premium
 					)
 					return cell
 				default:
@@ -151,7 +151,7 @@ extension StoreViewController: UICollectionViewDataSource {
 					)
 					cell.configurate(
 						sub: subscription,
-						have: profile?.currentPremium() == subscription.premium
+						have: profile?.currentPremium == subscription.premium
 					)
 					return cell
 			}

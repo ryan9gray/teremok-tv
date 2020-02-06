@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFi-IU-E9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFi-IU-E9L">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -550,10 +550,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-Bn-aZg" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="28" y="298" width="46" height="46"/>
+                                <rect key="frame" x="28" y="290" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wfC-Bn-aZg" secondAttribute="height" multiplier="1:1" id="6dC-bk-bMa"/>
-                                    <constraint firstAttribute="width" constant="46" id="Jjz-QH-k1C"/>
+                                    <constraint firstAttribute="width" constant="54" id="Jjz-QH-k1C"/>
                                 </constraints>
                                 <state key="normal" image="icSettings" backgroundImage="icCircle"/>
                                 <connections>
@@ -718,6 +718,7 @@
                         <outlet property="heartBtn" destination="fAH-8J-gH9" id="TBd-td-iBW"/>
                         <outlet property="homeBtn" destination="CTI-UW-NQM" id="nlT-xf-5fs"/>
                         <outlet property="kidsPlusBtn" destination="Vuw-S0-e4u" id="afI-2J-rXb"/>
+                        <outlet property="leftButtonStackView" destination="eBd-tF-Ihc" id="oBl-Jm-hfX"/>
                         <outlet property="musicBtn" destination="Jq1-I8-9ZH" id="Mod-mj-OH6"/>
                         <outletCollection property="allButtons" destination="A46-8C-pxL" collectionClass="NSMutableArray" id="hBE-Oj-JFc"/>
                         <outletCollection property="allButtons" destination="5Bm-y4-kHR" collectionClass="NSMutableArray" id="UcO-4y-CIi"/>

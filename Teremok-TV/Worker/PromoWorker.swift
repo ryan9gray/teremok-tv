@@ -31,3 +31,18 @@ struct PromoWorker {
 		LocalStore.needShowPromo = true
 	}
 }
+
+struct PromoCodeWorker {
+	static var canActivate: Bool {
+		Profile.current?.promo?.canActivate ?? false
+	}
+	static var havePromoCode: Bool {
+		Profile.current?.promo?.promoCode != nil
+	}
+	static var wasActivated: Bool {
+		(Profile.current?.promo?.activatedPromocodes ?? 0) > 0
+	}
+	static var activated: Int {
+		Profile.current?.promo?.activatedPromocodes ?? 0
+	}
+}

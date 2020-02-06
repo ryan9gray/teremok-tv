@@ -89,8 +89,10 @@
 		251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E51A0235A624A00221BA2 /* ColorsGame_subject_9_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		251E51A2235B2B1A00221BA2 /* neskid-comica-bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */; };
+		2522861123E5E9EA00997ED3 /* Envelope.json in Resources */ = {isa = PBXBuildFile; fileRef = 2522861023E5E9EA00997ED3 /* Envelope.json */; };
 		253E7E2C2369E5ED003FF569 /* snowstorm_blizzard_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */; };
 		253E7E2E236AFA05003FF569 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E7E2D236AFA05003FF569 /* ShadowView.swift */; };
+		25460FD523E5CA8E00284676 /* PromoCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25460FD423E5CA8E00284676 /* PromoCodeViewController.swift */; };
 		2546D8E323E1CFE20063EF0B /* ColorCube.json in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E223E1CFE20063EF0B /* ColorCube.json */; };
 		2546D8E523E225220063EF0B /* ColorsGame_subject_9_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E423E225220063EF0B /* ColorsGame_subject_9_4.wav */; };
 		2546D8E723E2254E0063EF0B /* ColorsGame_subject_10_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2546D8E623E2254E0063EF0B /* ColorsGame_subject_10_4.wav */; };
@@ -908,8 +910,10 @@
 		251E519C235A624900221BA2 /* ColorsGame_subject_9_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_1.wav; sourceTree = "<group>"; };
 		251E519D235A624A00221BA2 /* ColorsGame_subject_9_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_2.wav; sourceTree = "<group>"; };
 		251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neskid-comica-bd.ttf"; sourceTree = "<group>"; };
+		2522861023E5E9EA00997ED3 /* Envelope.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Envelope.json; sourceTree = "<group>"; };
 		253E7E2B2369E5EC003FF569 /* snowstorm_blizzard_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snowstorm_blizzard_1.wav; sourceTree = "<group>"; };
 		253E7E2D236AFA05003FF569 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		25460FD423E5CA8E00284676 /* PromoCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeViewController.swift; sourceTree = "<group>"; };
 		2546D8E223E1CFE20063EF0B /* ColorCube.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ColorCube.json; sourceTree = "<group>"; };
 		2546D8E423E225220063EF0B /* ColorsGame_subject_9_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_9_4.wav; sourceTree = "<group>"; };
 		2546D8E623E2254E0063EF0B /* ColorsGame_subject_10_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_4.wav; sourceTree = "<group>"; };
@@ -1948,11 +1952,11 @@
 				CAAD25EE22F5B2C4005CFCD2 /* StrokeLabel.swift */,
 				CAE5A58A22A9AB630034B448 /* AMProgressView.swift */,
 				CA51004322F617DB00821C25 /* GradientView.swift */,
+				CAC8C4AD2130476A00571C43 /* AbstractButton.swift */,
 				CAB352652180D7D100CF0077 /* ImageBadge.swift */,
 				CA846D23215B54B900241EF5 /* TTPlayerSlider.swift */,
 				CA8EA71C2141567700159451 /* Cell */,
 				CAE538F4212FFFD2005F7463 /* Abstraction */,
-				CAC8C4AD2130476A00571C43 /* AbstractButton.swift */,
 				CAB5A4562171F2B200A00C8E /* ChildsStackView.swift */,
 				CA8A005C215A80C600CA879E /* AvatarButton.swift */,
 				CA49E497212D59F900711324 /* RoundEdgeButton.swift */,
@@ -2376,6 +2380,7 @@
 				CA0ABB762180CC8900523F5B /* ScrollViewAlertViewController.swift */,
 				CA82C12C2132B4360020272E /* CloudAlertViewController.swift */,
 				25C412DE23B39C7000B0A9EA /* PromoPremiumAlertViewController.swift */,
+				25460FD423E5CA8E00284676 /* PromoCodeViewController.swift */,
 				CAFF985E2325342600003076 /* GameMasterViewController.swift */,
 			);
 			path = Common;
@@ -2884,6 +2889,7 @@
 		CAD16DEC2147E69D00A82DBB /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				2522861023E5E9EA00997ED3 /* Envelope.json */,
 				CAAF1F0621771E4300460F58 /* Welcome */,
 				CAAF1EEA2174E7E100460F58 /* Dog_preloader */,
 				CAD16DEA2147E69100A82DBB /* rainbow.json */,
@@ -3874,6 +3880,7 @@
 				2546D8F223E225710063EF0B /* ColorsGame_subject_8_4.wav in Resources */,
 				CAD21046231700DC006F2F08 /* MontserratAlternates-MediumItalic.ttf in Resources */,
 				CAF961BA22995FF3006E3046 /* animal_13.mp3 in Resources */,
+				2522861123E5E9EA00997ED3 /* Envelope.json in Resources */,
 				CAF961D022995FF3006E3046 /* animal_15.mp3 in Resources */,
 				CA04864122A845A60017B8A2 /* Round_4.json in Resources */,
 				CA52DF282290701500458EE5 /* Animals.storyboard in Resources */,
@@ -4301,6 +4308,7 @@
 				CAF4C106214AF31700954AA8 /* InputView.swift in Sources */,
 				CAC9100A215D31FD00E62F01 /* AchievesPresenter.swift in Sources */,
 				CA1AB66522F30CE4003A2584 /* GamesListViewController.swift in Sources */,
+				25460FD523E5CA8E00284676 /* PromoCodeViewController.swift in Sources */,
 				CA52F352223D2DF40058194E /* MusicMasterModels.swift in Sources */,
 				CAB5A4502171F18200A00C8E /* ChildsPresenter.swift in Sources */,
 				CAF9622F229970F7006E3046 /* AnimalsStatisticModels.swift in Sources */,
@@ -4611,7 +4619,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -4621,7 +4629,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.7;
+				MARKETING_VERSION = 1.7.8;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4642,7 +4650,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
@@ -4651,7 +4659,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.7;
+				MARKETING_VERSION = 1.7.8;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
@@ -4734,7 +4742,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -4744,7 +4752,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.7;
+				MARKETING_VERSION = 1.7.8;
 				ON_DEMAND_RESOURCES_INITIAL_INSTALL_TAGS = OnBoarding;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;

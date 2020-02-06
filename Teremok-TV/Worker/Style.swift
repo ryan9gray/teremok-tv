@@ -44,6 +44,14 @@ enum Style {
             .font: Font.istokWeb(size: 24.0),
             .foregroundColor: UIColor.Alphavite.blueTwo,
         ]
+		static let small: [NSAttributedString.Key: Any] = [
+			.font: UIFont.systemFont(ofSize: 10, weight: .regular),
+			.foregroundColor: UIColor.Base.darkBlue,
+		]
+		static let smallBoldRed: [NSAttributedString.Key: Any] = [
+			.font: UIFont.systemFont(ofSize: 10, weight: .bold),
+			.foregroundColor: UIColor.Alphavite.redOne,
+		]
     }
 
     enum Font {
@@ -128,7 +136,6 @@ extension Style.Gradients {
             case .lightBlue:
                 return []
             }
-
         }
     }
 }
@@ -154,6 +161,12 @@ func <~<T: Applicable>(object: T.Applicant, applicable: T) -> T.Applicant {
 
 func <~ (string: String, attributes: [NSAttributedString.Key: Any]) -> NSAttributedString {
     return NSAttributedString(string: string, attributes: attributes)
+}
+
+func + (left: NSAttributedString, right: NSAttributedString) -> NSAttributedString {
+	let result = NSMutableAttributedString(attributedString: left)
+	result.append(right)
+	return result
 }
 
 @discardableResult

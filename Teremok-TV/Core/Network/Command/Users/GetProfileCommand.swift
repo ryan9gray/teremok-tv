@@ -25,7 +25,7 @@ class GetProfileCommand: BasicCommand {
         return APIMethod.Profile.getProfile.methodName
     }
     override var version: String {
-        return "1.2"
+        return "1.3"
     }
     override var parameters: [String : Any] {
         return ["isNewSession": isNewSession]

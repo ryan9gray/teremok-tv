@@ -40,7 +40,7 @@ protocol MasterVCRoutingLogic: MasterRoutingLogic {
     func navigateToAddChild()
     func navigateToMusic()
     func navigateToGameList()
-    func navigateToAnimals()
+	func openEnvolveAlert()
 }
 
 protocol MasterDataPassing {
@@ -57,6 +57,55 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
         viewController?.prepareBackground()
         pushChild(viewControllerClass: MainViewController.self, storyboard: .main)
     }
+
+	func shareCode(_ code: String) {
+		let firstActivityItem = """
+			Привет!
+			У меня для тебя и твоего малыша подарок — бесплатный доступ к развивающему приложению для IOS «Теремок-ТВ».
+
+			Что там?
+			Развивающие игры - Алфавит, Цвета, Животные и Мемориз. 2000 серий обучающих мультфильмов без рекламы — «Профессор Почемушкин», «Малышарики», «Кротик и Панда», «Ангел Бейби» и др., возможность составлять каталог своих любимых мультфильмов и смотреть их без интернета.
+
+			Что нужно?
+			Скопировать/записать промо-код — \(code)
+			Установить приложение «Теремок-ТВ» и ввести промо-код в разделе «Настройки» (кнопка в левом нижнем углу экрана)
+
+			Торопись! Кол-во подарочных промо-кодов ограничено.
+
+			Приложение ты можешь скачать по ссылке - https://apps.apple.com/app/apple-store/id1421920317?pt=643604&ct=mess_promo&mt=8
+		"""
+		let vc = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: [])
+		vc.excludedActivityTypes = [.mail, .postToFacebook, .assignToContact, .copyToPasteboard, .message]
+		viewController?.present(vc, animated: true)
+	}
+
+	func openEnvolveAlert() {
+		if PromoCodeWorker.wasActivated {
+			guard let code = Profile.current?.promo?.promoCode else { return }
+
+			let vc = OneMorePromoCodeViewController.instantiate(fromStoryboard: .alerts)
+			vc.action = { [unowned self] in
+				self.shareCode(code)
+			}
+			viewController?.present(vc, animated: true, completion: nil)
+		} else {
+			let vc = GetPromoCodeViewController.instantiate(fromStoryboard: .alerts)
+			vc.action = { [unowned self] in
+				self.promoCodeAlert()
+			}
+			viewController?.present(vc, animated: true, completion: nil)
+		}
+	}
+
+	func promoCodeAlert() {
+		guard let code = Profile.current?.promo?.promoCode else { return }
+
+		let vc = SendPromoCodeViewController.instantiate(fromStoryboard: .alerts)
+		vc.action = { [unowned self] in
+			self.shareCode(code)
+		}
+		viewController?.present(vc, animated: true, completion: nil)
+	}
 
     func navigateToAddChild(){
         let vc = ChildProfileAddViewController.instantiate(fromStoryboard: .autorization)
