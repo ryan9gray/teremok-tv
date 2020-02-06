@@ -118,7 +118,7 @@ class OneMorePromoCodeViewController: PromoCodeViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		if Profile.current?.promo?.needActivate == 0 {
-			titleLabelLabel.text = "Ура! 2 кода активировали ваши подруги с малышами. У вас премиум доступ. Но вы можете еще порадовать подруг с детьми и отправить им ссылку с промо-кодом."
+			titleLabelLabel.text = "Ура! У вас премиум. Но вы можете порадовать подруг с детьми и отправить им еще подарок"
 		} else {
 			titleLabelLabel.text = "Необходимо активировать ещё \(Profile.current?.promo?.needActivate ?? 0) промо-код и вы получите бесплатно доступ к премиум аккаунту"
 		}
