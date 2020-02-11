@@ -35,6 +35,7 @@ final class MasterInteractor: MasterBusinessLogic, MasterDataStore {
         NetworkManager.shared.startNetworkReachabilityObserver()
         NotificationCenter.default.addObserver(self, selector: #selector(profileNeedReload), name: .ProfileNeedReload, object: nil)
         StoreReviewHelper.checkAndAskForReview()
+		AppIconWorker.checkShedule()
     }
     deinit {
         NotificationCenter.default.removeObserver(self, name: .ProfileNeedReload, object: nil)
