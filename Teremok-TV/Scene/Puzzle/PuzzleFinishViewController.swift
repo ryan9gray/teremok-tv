@@ -16,11 +16,7 @@ class PuzzleFinishViewController: GameViewController {
 	@IBOutlet private var imagewView: UIImageView!
 
 	@IBAction private func playTap(_ sender: Any) {
-		if isGood {
-			output.nextChoice()
-		} else {
-			output.resume()
-		}
+		output.nextChoice()
 	}
 
 	var input: Input!
@@ -28,18 +24,18 @@ class PuzzleFinishViewController: GameViewController {
 
 	struct Output {
 		var nextChoice: () -> Void
-		var resume: () -> Void
 	}
 
 	struct Input {
-		var answers: [Bool]
+		let image: UIImage?
 	}
 
-	var isGood = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		imagewView.image = input.image
+		titleLabel.text = "Молодец! Выбери следующую картинку!"
         // Do any additional setup after loading the view.
     }
 

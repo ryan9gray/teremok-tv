@@ -27,7 +27,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 	var tapCount: Int = 0
 
 	var correctCount = 0
-	var answerAreaAray:[UIView] = []
+	var answerAreaAray: [UIView] = []
 
 
     override func viewDidLoad() {
@@ -63,6 +63,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 		puzzleMaker.generatePuzzles { throwableClosure in
 			do {
 				let puzzleElements = try throwableClosure()
+				var pieces: [UIImageView] = []
 				for row in 0 ..< numRows {
 					for column in 0 ..< numColumns {
 						let index = Int(row*numColumns+column)
@@ -72,35 +73,27 @@ class PuzzlePlaygroundViewController: GameViewController {
 						let position = puzzleElement.position
 						let image = puzzleElement.image
 						
-						let pieces = UIImageView(frame: CGRect(x: position.x, y: position.y, width: image.size.width, height: image.size.height))
-						pieces.contentMode = .scaleAspectFill
-						NSLayoutConstraint.fixWidth(view: pieces, constant: image.size.width)
-						NSLayoutConstraint.fixHeight(view: pieces, constant: image.size.height)
+						let piece = UIImageView(frame: CGRect(x: position.x, y: position.y, width: image.size.width, height: image.size.height))
+						piece.contentMode = .scaleAspectFill
+						NSLayoutConstraint.fixWidth(view: piece, constant: image.size.width)
+						NSLayoutConstraint.fixHeight(view: piece, constant: image.size.height)
 
-						pieces.image = image
-						pieces.tag = num
-						//self.view.addSubview(pieces)
-						self.pieceStackView.addArrangedSubview(pieces)
+						piece.image = image
+						piece.tag = num
+						pieces.append(piece)
 
 						let answerArea = UIView(frame: CGRect(x: 0, y: 0, width: bound.width*0.053, height: bound.width*0.053))
-						answerArea.center = CGPoint(x: pieces.center.x + movePointx, y: pieces.center.y + movePointy)
+						answerArea.center = CGPoint(x: piece.center.x + movePointx, y: piece.center.y + movePointy)
 						answerArea.backgroundColor = UIColor.clear
 						self.answerAreaAray.append(answerArea)
 						self.view.addSubview(answerArea)
 
-						let yoko = Int(arc4random_uniform(UInt32(bound.width*0.7)))
-						let tate = Int(arc4random_uniform(UInt32(bound.height))/3)
-
-						var point:CGPoint = pieces.center
-						point.x = CGFloat(yoko)
-						point.y = CGFloat(tate)
-						pieces.center = CGPoint(x: point.x + bound.width*0.15, y: point.y + bound.height*0.5)
-
 						let movePieces: UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.dragPieces))
-						pieces.addGestureRecognizer(movePieces)
-						pieces.isUserInteractionEnabled = true
+						piece.addGestureRecognizer(movePieces)
+						piece.isUserInteractionEnabled = true
 					}
 				}
+				pieces.shuffled().forEach { self.pieceStackView.addArrangedSubview($0) }
 			} catch let error {
 				debugPrint(error)
 			}
@@ -120,8 +113,6 @@ class PuzzlePlaygroundViewController: GameViewController {
 			center = targetImg.center
 		}
 
-
-		print("center \(center)")
 		func freez() {
 			targetImg.removeFromSuperview()
 			view.addSubview(targetImg)
@@ -136,8 +127,8 @@ class PuzzlePlaygroundViewController: GameViewController {
 				targetImg.isUserInteractionEnabled = false
 				correctCount += 1
 				print(Int(correctCount))
-				if correctCount == input.difficulty.fieldSize^2 {
-					print("Congratulations!")
+				if correctCount == input.difficulty.fieldSize*input.difficulty.fieldSize {
+					output.finish()
 				}
 			} else {
 				if previewView.frame.contains(center) {

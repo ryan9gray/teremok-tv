@@ -78,9 +78,6 @@ public struct PuzzleMaker {
             return
         }
 
-        // We will print execution time
-        let start = Date()
-
         // Any operation related to core graphics might be time consuming, so it should be done asynchronous
         let group = DispatchGroup()
 
@@ -227,9 +224,6 @@ public struct PuzzleMaker {
         // Once everything is done, we can finish whole process
         _ = group.wait(timeout: DispatchTime.distantFuture)
 		mainQueue.async {
-			let executionTime = Date().timeIntervalSince(start)
-			debugPrint("Puzzles generated in: \(executionTime) second(s)")
-
 			DispatchQueue.main.async {
 				if !invalidImageSize {
 					completion({ puzzleElements.compactMap { $0.compactMap { $0 } } })

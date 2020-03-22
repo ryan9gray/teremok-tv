@@ -31,7 +31,7 @@ class PuzzleGameFlow  {
 			},
 			start: startPlay
 		)
-		master?.router?.presentModalChild(viewController: controller)
+		master?.router?.pushChild(controller)//presentModalChild(viewController: controller)
 	}
 
 	func startPlay(image: UIImage?) {
@@ -41,9 +41,24 @@ class PuzzleGameFlow  {
 			difficulty: game.difficulty
 		)
 		controller.output = PuzzlePlaygroundViewController.Output(
-			finish: {}
+			finish: { [weak self] in
+				self?.finishRound(image: image)
+			}
 		)
 		master?.router?.presentModalChild(viewController: controller)
+	}
+
+	private func finishRound(image: UIImage?) {
+		let controller = PuzzleFinishViewController.instantiate(fromStoryboard: .puzzle)
+		controller.input = PuzzleFinishViewController.Input(image: image)
+		controller.output = PuzzleFinishViewController.Output(
+			nextChoice: nextRound
+		)
+		master?.router?.presentModalChild(viewController: controller)
+	}
+
+	private func nextRound() {
+		master?.router?.popChild()
 	}
 	
 	deinit {
