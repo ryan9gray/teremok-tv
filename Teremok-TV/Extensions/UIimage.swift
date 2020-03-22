@@ -95,7 +95,7 @@ extension UIImage {
 }
 extension UIImage{
     
-    func resizeImageUsingVImage(_ newSize:CGSize) -> UIImage? {
+    func resizeImageUsingVImage(_ newSize: CGSize) -> UIImage? {
         var newSizeAspect: CGSize
         let ratio   = max(newSize.width / size.width, newSize.height / size.height)
         let width   = size.width * ratio
