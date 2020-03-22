@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MontserratAlternates-ExtraBold.ttf">
+            <string>MontserratAlternates-ExtraBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Alphavite Master View Controller-->
+        <scene sceneID="Gu5-vr-2SX">
+            <objects>
+                <viewController storyboardIdentifier="AlphaviteMasterViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v8W-UD-Faf" customClass="AlphaviteMasterViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pjs-HN-khP">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-alphaviteBack" translatesAutoresizingMaskIntoConstraints="NO" id="4i5-OT-SEm">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TL-jY-Rbu" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="30" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0fF-6C-D3E"/>
+                                    <constraint firstAttribute="height" constant="50" id="aPC-OZ-GnI"/>
+                                </constraints>
+                                <state key="normal" image="icHomeShadow"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indent">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="homeClick:" destination="v8W-UD-Faf" eventType="touchUpInside" id="1Tv-jN-2c9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4i5-OT-SEm" firstAttribute="top" secondItem="pjs-HN-khP" secondAttribute="top" id="61g-p9-y8Z"/>
+                            <constraint firstItem="4i5-OT-SEm" firstAttribute="leading" secondItem="pjs-HN-khP" secondAttribute="leading" id="Ced-7X-Bdq"/>
+                            <constraint firstAttribute="trailing" secondItem="4i5-OT-SEm" secondAttribute="trailing" id="XWn-f6-G3N"/>
+                            <constraint firstItem="4TL-jY-Rbu" firstAttribute="top" secondItem="cni-AW-NmQ" secondAttribute="top" constant="20" id="gLm-Qq-v92"/>
+                            <constraint firstAttribute="bottom" secondItem="4i5-OT-SEm" secondAttribute="bottom" id="j24-90-1sH"/>
+                            <constraint firstItem="4TL-jY-Rbu" firstAttribute="leading" secondItem="pjs-HN-khP" secondAttribute="leading" constant="30" id="m6B-Jr-CdP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cni-AW-NmQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="4i5-OT-SEm" id="rpP-mx-CcZ"/>
+                        <outlet property="homeBtn" destination="4TL-jY-Rbu" id="ZHN-uL-SJc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VjE-Jh-h4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="-307"/>
+        </scene>
+        <!--Alphavite Start View Controller-->
+        <scene sceneID="3NE-93-MLL">
+            <objects>
+                <viewController storyboardIdentifier="AlphaviteStartViewController" id="8PB-Vw-yJ5" customClass="AlphaviteStartViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yz9-YI-fX7">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GS-Nh-lGy" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="313" y="177" width="270" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="OVO-M2-8LE"/>
+                                    <constraint firstAttribute="height" constant="60" id="nfj-zv-MgT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="24"/>
+                                <size key="titleShadowOffset" width="0.0" height="2"/>
+                                <state key="normal" title="Начать игру!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="0.2995016164" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indent">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startTap:" destination="8PB-Vw-yJ5" eventType="touchUpInside" id="AKT-Lh-7JG"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlw-lj-X3P" customClass="TTSegmentedControl" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="318" y="247" width="260" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Vnf-CC-9BT"/>
+                                    <constraint firstAttribute="width" constant="260" id="oKe-Xc-Qmr"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultTextColor">
+                                        <color key="value" red="0.89019607840000003" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useGradient" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useShadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbShadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="containerBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41b-k6-SsI" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="816" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ANc-AC-34q"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icUtka"/>
+                                <connections>
+                                    <action selector="avatarClick:" destination="8PB-Vw-yJ5" eventType="touchUpInside" id="aex-BQ-yoU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="41b-k6-SsI" firstAttribute="width" secondItem="41b-k6-SsI" secondAttribute="height" multiplier="1:1" id="Tkh-go-ATZ"/>
+                            <constraint firstItem="41b-k6-SsI" firstAttribute="top" secondItem="Td0-Ej-YBv" secondAttribute="top" constant="20" id="VP2-Iz-e4Z"/>
+                            <constraint firstItem="9GS-Nh-lGy" firstAttribute="centerX" secondItem="Yz9-YI-fX7" secondAttribute="centerX" id="Wq6-qy-hcJ"/>
+                            <constraint firstItem="qlw-lj-X3P" firstAttribute="centerX" secondItem="Yz9-YI-fX7" secondAttribute="centerX" id="car-gB-Utw"/>
+                            <constraint firstAttribute="trailing" secondItem="41b-k6-SsI" secondAttribute="trailing" constant="30" id="fAC-re-edf"/>
+                            <constraint firstItem="qlw-lj-X3P" firstAttribute="top" secondItem="9GS-Nh-lGy" secondAttribute="bottom" constant="10" id="iq9-eF-2ph"/>
+                            <constraint firstItem="9GS-Nh-lGy" firstAttribute="centerY" secondItem="Yz9-YI-fX7" secondAttribute="centerY" id="niM-ot-DER"/>
+                            <constraint firstItem="Td0-Ej-YBv" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qlw-lj-X3P" secondAttribute="bottom" constant="4" id="npM-Ka-BkV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Td0-Ej-YBv"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarButton" destination="41b-k6-SsI" id="fzn-LW-aSh"/>
+                        <outlet property="segmentController" destination="qlw-lj-X3P" id="2hc-Pg-Gc1"/>
+                        <outlet property="startButton" destination="9GS-Nh-lGy" id="777-2E-gwh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSt-fP-dJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36.431784107946029" y="469.60000000000002"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-alphaviteBack" width="667" height="375"/>
+        <image name="icHomeShadow" width="50" height="50"/>
+        <image name="icUtka" width="29" height="35"/>
+    </resources>
+</document>

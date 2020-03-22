@@ -36,6 +36,20 @@
 		11CF6B93232A071A00F8E529 /* monsterRight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B8C232A071A00F8E529 /* monsterRight.wav */; };
 		11CF6B95232A226F00F8E529 /* monster_game_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceMonsters, ); }; };
 		11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */; };
+		2519815B2427786B008EC07C /* PuzzleUnitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981532427786A008EC07C /* PuzzleUnitFactory.swift */; };
+		2519815C2427786B008EC07C /* CubicBezierCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981542427786A008EC07C /* CubicBezierCurve.swift */; };
+		2519815D2427786B008EC07C /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981552427786B008EC07C /* Segment.swift */; };
+		2519815E2427786B008EC07C /* PuzzleMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981562427786B008EC07C /* PuzzleMaker.swift */; };
+		2519815F2427786B008EC07C /* UIBezierPath+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981572427786B008EC07C /* UIBezierPath+Extensions.swift */; };
+		251981602427786B008EC07C /* PuzzleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981582427786B008EC07C /* PuzzleElement.swift */; };
+		251981622427786B008EC07C /* PuzzleUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2519815A2427786B008EC07C /* PuzzleUnit.swift */; };
+		251981642427A729008EC07C /* Puzzle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251981632427A729008EC07C /* Puzzle.storyboard */; };
+		2519816C2427A7BA008EC07C /* PuzzleMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981662427A7BA008EC07C /* PuzzleMasterPresenter.swift */; };
+		2519816E2427A7BA008EC07C /* PuzzleMasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981682427A7BA008EC07C /* PuzzleMasterRouter.swift */; };
+		2519816F2427A7BA008EC07C /* PuzzleMasterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981692427A7BA008EC07C /* PuzzleMasterModels.swift */; };
+		251981702427A7BA008EC07C /* PuzzleMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2519816A2427A7BA008EC07C /* PuzzleMasterViewController.swift */; };
+		251981712427A7BA008EC07C /* PuzzleMasterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2519816B2427A7BA008EC07C /* PuzzleMasterInteractor.swift */; };
+		251981732427A7E5008EC07C /* PuzzleFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981722427A7E5008EC07C /* PuzzleFlow.swift */; };
 		251A04442379E667001644D4 /* HLSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251A04432379E667001644D4 /* HLSService.swift */; };
 		251A04472379E6F8001644D4 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251A04452379E6F8001644D4 /* Asset.swift */; };
 		251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
@@ -862,6 +876,20 @@
 		11CF6B8C232A071A00F8E529 /* monsterRight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monsterRight.wav; sourceTree = "<group>"; };
 		11CF6B94232A226F00F8E529 /* monster_game_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = monster_game_introduce.mp4; sourceTree = "<group>"; };
 		11DD42FF23192EEE00E97352 /* MonsterGameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameResultsViewController.swift; sourceTree = "<group>"; };
+		251981532427786A008EC07C /* PuzzleUnitFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleUnitFactory.swift; sourceTree = "<group>"; };
+		251981542427786A008EC07C /* CubicBezierCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicBezierCurve.swift; sourceTree = "<group>"; };
+		251981552427786B008EC07C /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
+		251981562427786B008EC07C /* PuzzleMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleMaker.swift; sourceTree = "<group>"; };
+		251981572427786B008EC07C /* UIBezierPath+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Extensions.swift"; sourceTree = "<group>"; };
+		251981582427786B008EC07C /* PuzzleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleElement.swift; sourceTree = "<group>"; };
+		2519815A2427786B008EC07C /* PuzzleUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleUnit.swift; sourceTree = "<group>"; };
+		251981632427A729008EC07C /* Puzzle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Puzzle.storyboard; sourceTree = "<group>"; };
+		251981662427A7BA008EC07C /* PuzzleMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleMasterPresenter.swift; sourceTree = "<group>"; };
+		251981682427A7BA008EC07C /* PuzzleMasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleMasterRouter.swift; sourceTree = "<group>"; };
+		251981692427A7BA008EC07C /* PuzzleMasterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleMasterModels.swift; sourceTree = "<group>"; };
+		2519816A2427A7BA008EC07C /* PuzzleMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleMasterViewController.swift; sourceTree = "<group>"; };
+		2519816B2427A7BA008EC07C /* PuzzleMasterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleMasterInteractor.swift; sourceTree = "<group>"; };
+		251981722427A7E5008EC07C /* PuzzleFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleFlow.swift; sourceTree = "<group>"; };
 		251A04432379E667001644D4 /* HLSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSService.swift; sourceTree = "<group>"; };
 		251A04452379E6F8001644D4 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_1.wav; sourceTree = "<group>"; };
@@ -1738,6 +1766,42 @@
 			path = sounds;
 			sourceTree = "<group>";
 		};
+		2519814F242765F9008EC07C /* Puzzle */ = {
+			isa = PBXGroup;
+			children = (
+				251981722427A7E5008EC07C /* PuzzleFlow.swift */,
+				251981652427A7A2008EC07C /* Master */,
+				2519815224277825008EC07C /* PuzzleMaker */,
+			);
+			path = Puzzle;
+			sourceTree = "<group>";
+		};
+		2519815224277825008EC07C /* PuzzleMaker */ = {
+			isa = PBXGroup;
+			children = (
+				251981542427786A008EC07C /* CubicBezierCurve.swift */,
+				251981582427786B008EC07C /* PuzzleElement.swift */,
+				251981562427786B008EC07C /* PuzzleMaker.swift */,
+				2519815A2427786B008EC07C /* PuzzleUnit.swift */,
+				251981532427786A008EC07C /* PuzzleUnitFactory.swift */,
+				251981552427786B008EC07C /* Segment.swift */,
+				251981572427786B008EC07C /* UIBezierPath+Extensions.swift */,
+			);
+			path = PuzzleMaker;
+			sourceTree = "<group>";
+		};
+		251981652427A7A2008EC07C /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				251981662427A7BA008EC07C /* PuzzleMasterPresenter.swift */,
+				251981682427A7BA008EC07C /* PuzzleMasterRouter.swift */,
+				251981692427A7BA008EC07C /* PuzzleMasterModels.swift */,
+				2519816A2427A7BA008EC07C /* PuzzleMasterViewController.swift */,
+				2519816B2427A7BA008EC07C /* PuzzleMasterInteractor.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
 		251E513B235A578F00221BA2 /* Sounds thing colour */ = {
 			isa = PBXGroup;
 			children = (
@@ -2445,6 +2509,7 @@
 				CA992D37212FF218008BFC8D /* Play.storyboard */,
 				CAFF984523251FDD00003076 /* ColorsGame.storyboard */,
 				CA52DF272290701500458EE5 /* Animals.storyboard */,
+				251981632427A729008EC07C /* Puzzle.storyboard */,
 				CAA4455021577F760023E340 /* Main.storyboard */,
 				CAA88454213820D200E27F7A /* Profile.storyboard */,
 				CAA7325E21315456006276B4 /* Alerts.storyboard */,
@@ -3073,6 +3138,7 @@
 		CAE1C447211DC2070058C9C6 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				2519814F242765F9008EC07C /* Puzzle */,
 				CAFF984423251F4800003076 /* ColorsGame */,
 				CA1AB66322F30CBC003A2584 /* AlphaviteGame */,
 				11BC751B23042D44001B5CC8 /* MonsterGame */,
@@ -3711,6 +3777,7 @@
 				251E517C235A579000221BA2 /* ColorsGame_subject_6_1.wav in Resources */,
 				CADD14B723107F7C00AE920A /* sad_Pick.json in Resources */,
 				CA5100DC22F6EACF00821C25 /* alphavite_1.wav in Resources */,
+				251981642427A729008EC07C /* Puzzle.storyboard in Resources */,
 				CAF961C122995FF3006E3046 /* animal_12.mp3 in Resources */,
 				2546D8F023E225710063EF0B /* ColorsGame_subject_2_4.wav in Resources */,
 				CAC6F72C22A81BC000756AE2 /* ready_r_8.wav in Resources */,
@@ -4023,6 +4090,7 @@
 			files = (
 				CAC2D51F2115A68200945003 /* BasicCommand.swift in Sources */,
 				CAB08B022140515B002840E3 /* VideoItemsCommand.swift in Sources */,
+				2519816C2427A7BA008EC07C /* PuzzleMasterPresenter.swift in Sources */,
 				CA8EA70E21413F0800159451 /* PreviewCollectionViewCell.swift in Sources */,
 				CAFF985B2325318E00003076 /* ColorsTeachingViewController.swift in Sources */,
 				CAB59FD022F315D800D7CA71 /* AlphaviteMasterRouter.swift in Sources */,
@@ -4043,6 +4111,7 @@
 				CA70867B23082EA80015851C /* AlphaviteStatisticRouter.swift in Sources */,
 				CA49E4A8212D76FA00711324 /* UIView.swift in Sources */,
 				CA10414A22629A0B005D62DE /* SearchMusicRouter.swift in Sources */,
+				251981702427A7BA008EC07C /* PuzzleMasterViewController.swift in Sources */,
 				CA0053C9213BD9CE00AA187F /* URLMainServices.swift in Sources */,
 				CAAAFB4D22E335670006BD60 /* Analytics.swift in Sources */,
 				CA61D87A22A1D23D00E3D603 /* AnimalsListResponse.swift in Sources */,
@@ -4085,6 +4154,7 @@
 				25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */,
 				CAE1C433211DACE10058C9C6 /* AppLaunchInfoDefaults.swift in Sources */,
 				CA49E491212D330900711324 /* DeviceInfo.swift in Sources */,
+				2519816F2427A7BA008EC07C /* PuzzleMasterModels.swift in Sources */,
 				111187F6231E8D6E00EBEFC0 /* MonsterService.swift in Sources */,
 				254BAACD23D85C1900A6D50C /* ServiceResponse.swift in Sources */,
 				CAA530A621AAB1CF009A5AF2 /* PushTransferRoutingLogic.swift in Sources */,
@@ -4104,6 +4174,8 @@
 				CAA73261213163A5006276B4 /* TTImageView.swift in Sources */,
 				CAAF1F052177115100460F58 /* Common_Extensions.swift in Sources */,
 				CA9A6745213C134000FCB400 /* RazdelRouter.swift in Sources */,
+				2519815C2427786B008EC07C /* CubicBezierCurve.swift in Sources */,
+				251981732427A7E5008EC07C /* PuzzleFlow.swift in Sources */,
 				CA49E48C212D326600711324 /* TerPushActionType.swift in Sources */,
 				11604ADA231F8330001D1C7F /* MonsterGetStatCommand.swift in Sources */,
 				CA8EA71B214145E700159451 /* PreviewPresenter.swift in Sources */,
@@ -4205,6 +4277,7 @@
 				CA7AAF4F2170B0E200747D4B /* SearchCommand.swift in Sources */,
 				257C1BAB23B7DC3D0051572B /* PromoTimeView.swift in Sources */,
 				CAB59FD122F315D800D7CA71 /* AlphaviteMasterModels.swift in Sources */,
+				251981712427A7BA008EC07C /* PuzzleMasterInteractor.swift in Sources */,
 				CA52F354223D2DF40058194E /* MusicMasterInteractor.swift in Sources */,
 				11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */,
 				CAF94CC3215E80F0000E8183 /* CarouselCollectionViewLayout.swift in Sources */,
@@ -4213,6 +4286,7 @@
 				CAC2D5262115A68300945003 /* NetworkService.swift in Sources */,
 				CAE1C45C211DC6550058C9C6 /* UIAlertController.swift in Sources */,
 				CA91027E22FF606A00140D5A /* AlphabetGetStatCommand.swift in Sources */,
+				251981622427786B008EC07C /* PuzzleUnit.swift in Sources */,
 				CA9A6743213C134000FCB400 /* RazdelPresenter.swift in Sources */,
 				CA52F360223D9CAD0058194E /* PlaylistsModels.swift in Sources */,
 				CAE1C42C211DACE10058C9C6 /* LocationCacher.swift in Sources */,
@@ -4335,6 +4409,7 @@
 				CA1AB66522F30CE4003A2584 /* GamesListViewController.swift in Sources */,
 				25460FD523E5CA8E00284676 /* PromoCodeViewController.swift in Sources */,
 				CA52F352223D2DF40058194E /* MusicMasterModels.swift in Sources */,
+				2519815F2427786B008EC07C /* UIBezierPath+Extensions.swift in Sources */,
 				CAB5A4502171F18200A00C8E /* ChildsPresenter.swift in Sources */,
 				CAF9622F229970F7006E3046 /* AnimalsStatisticModels.swift in Sources */,
 				CAE1C470211DC8CA0058C9C6 /* AuthViewController.swift in Sources */,
@@ -4363,6 +4438,8 @@
 				CA76363B226BD7A500168AB1 /* OfflinePlaylistPresenter.swift in Sources */,
 				CAAD25EF22F5B2C4005CFCD2 /* StrokeLabel.swift in Sources */,
 				CAE1C434211DACE10058C9C6 /* AppUpdateDefaults.swift in Sources */,
+				2519815D2427786B008EC07C /* Segment.swift in Sources */,
+				2519815B2427786B008EC07C /* PuzzleUnitFactory.swift in Sources */,
 				CAC2D5252115A68200945003 /* APIMethod.swift in Sources */,
 				CAB5A4512171F18200A00C8E /* ChildsWorker.swift in Sources */,
 				CAE1C429211DACE10058C9C6 /* SqliteCacher+ExirableCacherType.swift in Sources */,
@@ -4409,12 +4486,14 @@
 				CA49E47D212D2ED300711324 /* SettingsPresenter.swift in Sources */,
 				CAF4C114214B0C7900954AA8 /* FavViewController.swift in Sources */,
 				CA9A675A213C1FED00FCB400 /* MainContentService.swift in Sources */,
+				2519815E2427786B008EC07C /* PuzzleMaker.swift in Sources */,
 				CA80481221415F15000A3C5B /* PreviewImageCollectionViewCell.swift in Sources */,
 				CA7AAF5E2170B52500747D4B /* SearchModels.swift in Sources */,
 				CAF4C115214B0C7900954AA8 /* FavInteractor.swift in Sources */,
 				CA51004022F5F8E600821C25 /* AlphaviteChoiceViewController.swift in Sources */,
 				CA0053D0213BF6FA00AA187F /* UITableViewCell.swift in Sources */,
 				CAD16DEF2147F31E00A82DBB /* AddChildCommand.swift in Sources */,
+				251981602427786B008EC07C /* PuzzleElement.swift in Sources */,
 				CAE09484214CF6A10052F283 /* PassCommand.swift in Sources */,
 				CAF61D89217E118E00035EE9 /* PlayerViewController.swift in Sources */,
 				CA9AA3D52184716400019CA7 /* VideoService.swift in Sources */,
@@ -4425,6 +4504,7 @@
 				CAA8845221381D9900E27F7A /* ChildProfileAddInteractor.swift in Sources */,
 				CA52F361223D9CAD0058194E /* PlaylistsViewController.swift in Sources */,
 				CAF7B18821B6927C00A59F5F /* StoreInteractor.swift in Sources */,
+				2519816E2427A7BA008EC07C /* PuzzleMasterRouter.swift in Sources */,
 				CA7AAF5D2170B52500747D4B /* SearchRouter.swift in Sources */,
 				CAC2D5272115A68300945003 /* ServiceConfiguration.swift in Sources */,
 				CAE3649A2291819D003E891D /* AnimalsRoundsPresenter.swift in Sources */,
