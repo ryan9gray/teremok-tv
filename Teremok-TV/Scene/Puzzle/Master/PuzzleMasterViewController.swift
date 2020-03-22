@@ -61,11 +61,16 @@ class PuzzleMasterViewController: GameMasterViewController, PuzzleMasterDisplayL
 			dismiss(animated: true, completion: nil)
 		}
 	}
-	
+	private var navigationSubscription: Subscription?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		router?.navigateMain()
+		navigationSubscription = router?.subscribeForNavigation { [weak self] canPop in
+			self?.homeBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "icHomeShadow"), for: .normal)
+		}
+		setupTrackableChain(parent: analytics)
     }
 
     // MARK: Actions

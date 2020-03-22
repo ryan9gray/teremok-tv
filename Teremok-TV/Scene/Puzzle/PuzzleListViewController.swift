@@ -21,9 +21,15 @@ class PuzzleListViewController: GameViewController {
 	struct Input {
 		var items: [PuzzleMaster.Puzzle]
 	}
+	@IBOutlet private var diffButtons: [KeyButton]!
+	@IBOutlet private var startEasy: KeyButton!
+	@IBOutlet private var startMedium: KeyButton!
+	@IBOutlet private var startHard: KeyButton!
 	@IBOutlet private var collectionView: UICollectionView!
 
 	@IBAction func startGame(_ sender: UIButton) {
+		diffButtons.forEach { $0.setTitleColor(UIColor.white, for: .normal) }
+		sender.setTitleColor(UIColor.Label.darkBlue, for: .normal)
 		output.difficulty(PuzzleGameFlow.Game.Difficulty(rawValue: sender.tag)!)
 	}
 
@@ -35,6 +41,10 @@ class PuzzleListViewController: GameViewController {
     }
 
 	func prepareUI() {
+		startEasy.setTitleColor(UIColor.Label.darkBlue, for: .normal)
+		startEasy.gradientColors = Style.Gradients.green.value
+		startMedium.gradientColors = Style.Gradients.orange.value
+		startHard.gradientColors = Style.Gradients.red.value
 		collectionView.delegate = self
 		collectionView.dataSource = self
 		let cells = [SearchCharacterCollectionViewCell.self, LoadingCollectionViewCell.self]
@@ -74,7 +84,8 @@ extension PuzzleListViewController: UICollectionViewDelegate {
 extension PuzzleListViewController: UICollectionViewDelegateFlowLayout {
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: 110, height: 65)
+		let h = collectionView.frame.height/2 - 10
+		return CGSize(width: h, height: h)
 	}
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 		return 10
