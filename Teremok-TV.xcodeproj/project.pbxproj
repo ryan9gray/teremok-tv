@@ -50,6 +50,10 @@
 		251981702427A7BA008EC07C /* PuzzleMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2519816A2427A7BA008EC07C /* PuzzleMasterViewController.swift */; };
 		251981712427A7BA008EC07C /* PuzzleMasterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2519816B2427A7BA008EC07C /* PuzzleMasterInteractor.swift */; };
 		251981732427A7E5008EC07C /* PuzzleFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981722427A7E5008EC07C /* PuzzleFlow.swift */; };
+		251981752427A9DA008EC07C /* PuzzleStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981742427A9D9008EC07C /* PuzzleStartViewController.swift */; };
+		251981772427A9F1008EC07C /* PuzzleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981762427A9F1008EC07C /* PuzzleListViewController.swift */; };
+		251981792427AA1A008EC07C /* PuzzlePlaygroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251981782427AA1A008EC07C /* PuzzlePlaygroundViewController.swift */; };
+		2519817B2427AA27008EC07C /* PuzzleFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2519817A2427AA27008EC07C /* PuzzleFinishViewController.swift */; };
 		251A04442379E667001644D4 /* HLSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251A04432379E667001644D4 /* HLSService.swift */; };
 		251A04472379E6F8001644D4 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251A04452379E6F8001644D4 /* Asset.swift */; };
 		251E516B235A579000221BA2 /* ColorsGame_subject_10_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
@@ -890,6 +894,10 @@
 		2519816A2427A7BA008EC07C /* PuzzleMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleMasterViewController.swift; sourceTree = "<group>"; };
 		2519816B2427A7BA008EC07C /* PuzzleMasterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleMasterInteractor.swift; sourceTree = "<group>"; };
 		251981722427A7E5008EC07C /* PuzzleFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleFlow.swift; sourceTree = "<group>"; };
+		251981742427A9D9008EC07C /* PuzzleStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleStartViewController.swift; sourceTree = "<group>"; };
+		251981762427A9F1008EC07C /* PuzzleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleListViewController.swift; sourceTree = "<group>"; };
+		251981782427AA1A008EC07C /* PuzzlePlaygroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzlePlaygroundViewController.swift; sourceTree = "<group>"; };
+		2519817A2427AA27008EC07C /* PuzzleFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleFinishViewController.swift; sourceTree = "<group>"; };
 		251A04432379E667001644D4 /* HLSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSService.swift; sourceTree = "<group>"; };
 		251A04452379E6F8001644D4 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		251E513C235A578F00221BA2 /* ColorsGame_subject_10_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ColorsGame_subject_10_1.wav; sourceTree = "<group>"; };
@@ -1770,6 +1778,10 @@
 			isa = PBXGroup;
 			children = (
 				251981722427A7E5008EC07C /* PuzzleFlow.swift */,
+				251981742427A9D9008EC07C /* PuzzleStartViewController.swift */,
+				251981762427A9F1008EC07C /* PuzzleListViewController.swift */,
+				251981782427AA1A008EC07C /* PuzzlePlaygroundViewController.swift */,
+				2519817A2427AA27008EC07C /* PuzzleFinishViewController.swift */,
 				251981652427A7A2008EC07C /* Master */,
 				2519815224277825008EC07C /* PuzzleMaker */,
 			);
@@ -4163,6 +4175,7 @@
 				CAC2D5302115A68300945003 /* UIToolbar.swift in Sources */,
 				CA52DF312290794B00458EE5 /* LayoutHelper.swift in Sources */,
 				CAC91012215D359900E62F01 /* AchieveCollectionViewCell.swift in Sources */,
+				251981752427A9DA008EC07C /* PuzzleStartViewController.swift in Sources */,
 				111187EF231E82D700EBEFC0 /* MonsterStatisticPresenter.swift in Sources */,
 				CA70272021396F3100629260 /* RegService.swift in Sources */,
 				CAE3649C2291819D003E891D /* AnimalsRoundsRouter.swift in Sources */,
@@ -4212,6 +4225,7 @@
 				CA80481C21416836000A3C5B /* SerialRouter.swift in Sources */,
 				CA763630226A63CD00168AB1 /* SubscriptionCollectionViewCell.swift in Sources */,
 				111187F4231E82D700EBEFC0 /* MonsterStatisticInteractor.swift in Sources */,
+				251981792427AA1A008EC07C /* PuzzlePlaygroundViewController.swift in Sources */,
 				CA9AA3D2218469E100019CA7 /* FavCollectionViewCell.swift in Sources */,
 				CA91027C22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift in Sources */,
 				CAD16DF32147F7DC00A82DBB /* GetProfileCommand.swift in Sources */,
@@ -4293,6 +4307,7 @@
 				CADE0E4221189BE800CC9871 /* SwiftyStoreHelper.swift in Sources */,
 				CA6CB8D72196F7C300429089 /* PurchaseService.swift in Sources */,
 				11BA248E230551A700A9EA15 /* MonsterMasterInteractor.swift in Sources */,
+				251981772427A9F1008EC07C /* PuzzleListViewController.swift in Sources */,
 				CAE1C475211DC9F70058C9C6 /* Queue.swift in Sources */,
 				CA433FF6224F9EFA00B0788E /* MusicService.swift in Sources */,
 				CAA8844D21381D9900E27F7A /* ChildProfileAddPresenter.swift in Sources */,
@@ -4413,6 +4428,7 @@
 				CAB5A4502171F18200A00C8E /* ChildsPresenter.swift in Sources */,
 				CAF9622F229970F7006E3046 /* AnimalsStatisticModels.swift in Sources */,
 				CAE1C470211DC8CA0058C9C6 /* AuthViewController.swift in Sources */,
+				2519817B2427AA27008EC07C /* PuzzleFinishViewController.swift in Sources */,
 				CAAD25F122F5DBC1005CFCD2 /* AlphaviteStartViewController.swift in Sources */,
 				CA49E480212D2ED300711324 /* SettingsModels.swift in Sources */,
 				CA49E48E212D326600711324 /* TerPushPayload.swift in Sources */,

@@ -14,5 +14,7 @@ import UIKit
 
 enum PuzzleMaster {
     // MARK: Use cases
-
+	struct Puzzle {
+		let imageLink: String
+	}
 }

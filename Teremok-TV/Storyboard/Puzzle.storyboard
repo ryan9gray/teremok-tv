@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Alphavite Master View Controller-->
+        <!--Puzzle Master View Controller-->
         <scene sceneID="Gu5-vr-2SX">
             <objects>
-                <viewController storyboardIdentifier="AlphaviteMasterViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v8W-UD-Faf" customClass="AlphaviteMasterViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PuzzleMasterViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v8W-UD-Faf" customClass="PuzzleMasterViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pjs-HN-khP">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="26" y="-307"/>
         </scene>
-        <!--Alphavite Start View Controller-->
+        <!--Puzzle Start View Controller-->
         <scene sceneID="3NE-93-MLL">
             <objects>
-                <viewController storyboardIdentifier="AlphaviteStartViewController" id="8PB-Vw-yJ5" customClass="AlphaviteStartViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PuzzleStartViewController" id="8PB-Vw-yJ5" customClass="PuzzleStartViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yz9-YI-fX7">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,6 +151,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSt-fP-dJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="36.431784107946029" y="469.60000000000002"/>
+        </scene>
+        <!--Puzzle Playground View Controller-->
+        <scene sceneID="0Dc-hU-5cd">
+            <objects>
+                <viewController storyboardIdentifier="PuzzlePlaygroundViewController" id="jUP-sU-kpn" customClass="PuzzlePlaygroundViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5fr-pP-074">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZeL-4S-gpE">
+                                <rect key="frame" x="60" y="16" width="361" height="361"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZeL-4S-gpE" secondAttribute="height" multiplier="1:1" id="HeO-pp-bbM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZeL-4S-gpE" firstAttribute="leading" secondItem="u5V-p9-mDs" secondAttribute="leading" constant="16" id="3ay-OP-lX8"/>
+                            <constraint firstItem="u5V-p9-mDs" firstAttribute="bottom" secondItem="ZeL-4S-gpE" secondAttribute="bottom" constant="16" id="H5z-5x-Kmy"/>
+                            <constraint firstItem="ZeL-4S-gpE" firstAttribute="top" secondItem="u5V-p9-mDs" secondAttribute="top" constant="16" id="pZG-tM-5sn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u5V-p9-mDs"/>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="ZeL-4S-gpE" id="tFO-CQ-ec2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qW2-be-qFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="470"/>
+        </scene>
+        <!--Puzzle Finish View Controller-->
+        <scene sceneID="ARB-2P-ABN">
+            <objects>
+                <viewController storyboardIdentifier="PuzzleFinishViewController" id="zi9-fE-Sob" customClass="PuzzleFinishViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hq2-Vv-Rez">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Uln-En-eHS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSJ-sp-fOl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="1197"/>
+        </scene>
+        <!--Puzzle List View Controller-->
+        <scene sceneID="sc5-Vq-Yez">
+            <objects>
+                <viewController storyboardIdentifier="PuzzleListViewController" id="Pv1-iC-ie6" customClass="PuzzleListViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aar-Od-jqq">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h60-zg-L1t">
+                                <rect key="frame" x="60" y="92" width="776" height="230"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XRM-Le-ddc">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h60-zg-L1t" firstAttribute="top" secondItem="2Bt-3y-Yz8" secondAttribute="top" constant="92" id="MKb-uY-p2j"/>
+                            <constraint firstItem="h60-zg-L1t" firstAttribute="leading" secondItem="2Bt-3y-Yz8" secondAttribute="leading" constant="16" id="VM9-Fi-Oiy"/>
+                            <constraint firstItem="2Bt-3y-Yz8" firstAttribute="bottom" secondItem="h60-zg-L1t" secondAttribute="bottom" constant="71" id="phU-0o-nTN"/>
+                            <constraint firstItem="2Bt-3y-Yz8" firstAttribute="trailing" secondItem="h60-zg-L1t" secondAttribute="trailing" constant="16" id="rHK-cs-PJG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Bt-3y-Yz8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfM-2Y-Flx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="1214"/>
         </scene>
     </scenes>
     <resources>

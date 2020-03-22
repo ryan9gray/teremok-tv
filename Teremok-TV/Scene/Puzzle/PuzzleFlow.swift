@@ -18,4 +18,26 @@ class PuzzleGameFlow  {
 	func startFlow() {
 
 	}
+	deinit {
+		print("Logger: GameFlow deinit")
+	}
+
+	class Game {
+		enum Difficulty: Int {
+			case easy = 0
+			case medium = 1
+			case hard = 2
+
+			var fieldSize: Int {
+				switch self {
+					case .easy:
+						return 3
+					case .medium:
+						return 6
+					case .hard:
+						return 9
+				}
+			}
+		}
+	}
 }

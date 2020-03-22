@@ -86,6 +86,7 @@ enum StoryboardWorker: String {
     case alphavite =            "Alphavite"
     case monster =             	"Monster"
     case colors =             	"ColorsGame"
+	case puzzle =             	"Puzzle"
 
     var instance: UIStoryboard {
         return UIStoryboard(name: rawValue, bundle: Bundle.main)

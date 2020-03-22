@@ -71,7 +71,7 @@ public struct PuzzleMaker {
 
      - parameter completion: Throwable closure so you need 'try catch' it. On success it returns [[PuzzleElement]], otherwise handle error. See attached example
      */
-    public func generatePuzzles(_ completion: @escaping (_ throwableClosure: () throws -> [[PuzzleElement?]]) -> Void) {
+    public func generatePuzzles(_ completion: @escaping (_ throwableClosure: () throws -> [[PuzzleElement]]) -> Void) {
         // Number of rows or columns cannot be less than 2
         if numRows < 2 || numColumns < 2 {
             completion { throw PuzzleMakerError.invalidGridSize }
@@ -226,19 +226,17 @@ public struct PuzzleMaker {
 
         // Once everything is done, we can finish whole process
         _ = group.wait(timeout: DispatchTime.distantFuture)
-        mainQueue.async {
-            let executionTime = Date().timeIntervalSince(start)
-            debugPrint("Puzzles generated in: \(executionTime) second(s)")
+		mainQueue.async {
+			let executionTime = Date().timeIntervalSince(start)
+			debugPrint("Puzzles generated in: \(executionTime) second(s)")
 
-            DispatchQueue.main.async {
-                if invalidImageSize {
-                    completion { throw PuzzleMakerError.invalidImageSize }
-                } else if puzzleUnitUnavailable {
-                    completion { throw PuzzleMakerError.puzzleUnitUnavailable }
-                } else {
-                    completion { puzzleElements }
-                }
-            }
-        }
+			DispatchQueue.main.async {
+				if !invalidImageSize {
+					completion({ puzzleElements.compactMap { $0.compactMap { $0 } } })
+				} else {
+					completion({ throw PuzzleMakerError.invalidImageSize })
+				}
+			}
+		}
     }
 }
