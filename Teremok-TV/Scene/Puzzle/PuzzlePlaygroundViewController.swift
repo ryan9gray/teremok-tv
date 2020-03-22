@@ -12,6 +12,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 	@IBOutlet private var previewView: UIImageView!
 	@IBOutlet var scrollView: UIScrollView!
 	@IBOutlet var pieceStackView: UIStackView!
+	@IBOutlet var pieceSecondStackView: UIStackView!
 
 	var input: Input!
 	var output: Output!
@@ -54,6 +55,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 			pieceAray.append(i+1)
 		}
 		pieceStackView.subviews.forEach { $0.removeFromSuperview() }
+		pieceSecondStackView.subviews.forEach { $0.removeFromSuperview() }
 
 		let bound = previewView.bounds.size
 		let movePointx: CGFloat = previewView.frame.origin.x
@@ -93,7 +95,14 @@ class PuzzlePlaygroundViewController: GameViewController {
 						piece.isUserInteractionEnabled = true
 					}
 				}
-				pieces.shuffled().forEach { self.pieceStackView.addArrangedSubview($0) }
+				if numRows > 6 {
+					let splited = pieces.shuffled().split()
+					splited.first?.forEach { self.pieceStackView.addArrangedSubview($0) }
+					splited.second?.forEach { self.pieceSecondStackView.addArrangedSubview($0) }
+				} else {
+					pieces.shuffled().forEach { self.pieceStackView.addArrangedSubview($0) }
+				}
+
 			} catch let error {
 				debugPrint(error)
 			}
