@@ -22,8 +22,6 @@ extension UICollectionView {
             }
         }
     }
-    
-    
 }
 extension UICollectionView {
     var centerPoint : CGPoint {

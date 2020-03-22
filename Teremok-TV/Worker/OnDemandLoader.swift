@@ -30,9 +30,9 @@ class OnDemandLoader {
             case colorsGameSounds = "ColorsGameSounds"
 
         }
-        enum Initial: String, CaseIterable {
-            case onBoarding = "OnBoarding"
-        }
+//        enum Initial: String, CaseIterable {
+//            case onBoarding = "OnBoarding"
+//        }
     }
 
     lazy private var bundleResourceRequest = NSBundleResourceRequest(tags: Set(getTags + introducongGames))
@@ -44,7 +44,7 @@ class OnDemandLoader {
     func loadOnDemandAssets(completion: @escaping (Result<Bool>) -> Void) {
         bundleResourceRequest.endAccessingResources()
         bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
-        Bundle.main.setPreservationPriority(0.8, forTags: Set(getTags))
+        //Bundle.main.setPreservationPriority(0.8, forTags: Set(getTags))
         bundleResourceRequest.conditionallyBeginAccessingResources { [unowned self] available in
             if available {
                 completion(.success(true))
@@ -81,9 +81,6 @@ class OnDemandLoader {
         if !LocalStore.secondAnimalsIntroduce {
             files.append(Tags.OnDemand.introduceAnimals.rawValue)
         }
-//        if !LocalStore.onBoarding {
-//            files.append(Tags.Initial.onBoarding.rawValue)
-//        }
         return files
     }
 

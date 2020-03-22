@@ -36,6 +36,9 @@ struct LocalStore {
 	@Storage(userDefaults: userDefaults, key: "needShowPromo", defaultValue: false)
 	static var needShowPromo: Bool
 
+	@Storage(userDefaults: userDefaults, key: "wasFirstOpenStore", defaultValue: false)
+	static var wasFirstOpenStore: Bool
+
 	@Storage(userDefaults: userDefaults, key: "lastPremiumState", defaultValue: false)
 	static var lastPremiumState: Bool
 

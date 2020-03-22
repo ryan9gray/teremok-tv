@@ -18,9 +18,10 @@ struct PromoWorker {
 	}
 
 	static var havePromo: Bool {
-		if LocalStore.needShowPromo {
+		if LocalStore.needShowPromo || !LocalStore.wasFirstOpenStore {
 			setDate()
 			LocalStore.needShowPromo = false
+			LocalStore.wasFirstOpenStore = true
 		}
 		return LocalStore.promo6MonthTimer > Int(Date().timeIntervalSince1970)
 	}

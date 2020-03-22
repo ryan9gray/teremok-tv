@@ -14,7 +14,7 @@ class OnboardingViewController: UIViewController {
     private var avPlayerLayer: AVPlayerLayer!
     @IBOutlet private var videoBackView: UIView!
 
-    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Initial.onBoarding.rawValue]))
+//    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Initial.onBoarding.rawValue]))
 
     override func viewDidLoad() {
         super.viewDidLoad()
