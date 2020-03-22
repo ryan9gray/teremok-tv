@@ -18,6 +18,9 @@ class PuzzleStartViewController: GameStartViewController {
 		buttonPlayer?.play()
 		masterRouter?.startFlow(0)
 	}
+	@IBAction func avatarClick(_ sender: Any) {
+		masterRouter?.openStatistic()
+	}
 
     override func viewDidLoad() {
         super.viewDidLoad()

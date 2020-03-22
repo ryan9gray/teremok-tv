@@ -18,6 +18,8 @@ class GamesListViewController: AbstracViewController {
         var openAlphavite: () -> Void
         var openMonster: () -> Void
         var openColors: () -> Void
+		var openPuzzle: () -> Void
+
     }
     @IBOutlet var buttons: [DesignableButton]!
     
@@ -38,6 +40,11 @@ class GamesListViewController: AbstracViewController {
             self.output.openAnimals()
         }
     }
+	@IBAction func puzzleTap(_ sender: Any) {
+		self.dismiss(animated: true) {
+			self.output.openPuzzle()
+		}
+	}
 
     @IBAction func alphaviteTap(_ sender: Any) {
         self.dismiss(animated: true) {

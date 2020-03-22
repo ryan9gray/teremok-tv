@@ -19,6 +19,7 @@ class PuzzlePlaygroundViewController: UIViewController {
 	}
 
 	struct Input {
+		var image: UIImage?
 		let difficulty: PuzzleGameFlow.Game.Difficulty
 	}
 	var tapCount: Int = 0
@@ -34,9 +35,14 @@ class PuzzlePlaygroundViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
 
-	func createPuzzle() {
-		var image: UIImage? = UIImage()
+		createPuzzle()
+	}
+
+	private func createPuzzle() {
+		var image: UIImage? = input.image
 
 		let numRows = input.difficulty.fieldSize
 		let numColumns = input.difficulty.fieldSize
@@ -124,11 +130,8 @@ class PuzzlePlaygroundViewController: UIViewController {
 					} else {
 						break
 					}
-
 				}
-
 			}
-
 		} else {
 			let point: CGPoint = sender.translation(in: self.view)
 			let movedPoint: CGPoint = CGPoint(x: sender.view!.center.x + point.x, y: sender.view!.center.y + point.y)
@@ -137,5 +140,11 @@ class PuzzlePlaygroundViewController: UIViewController {
 		}
 	}
 
+	func trimmingImage(_ image: UIImage, trimmingArea: CGRect) -> UIImage {
+		let imgRef = image.cgImage?.cropping(to: trimmingArea)
+		let trimImage = UIImage(cgImage: imgRef!, scale: image.scale, orientation: image.imageOrientation)
 
+		return trimImage
+
+	}
 }
