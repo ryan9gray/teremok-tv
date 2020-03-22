@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PuzzleFinishViewController: UIViewController {
+class PuzzleFinishViewController: GameViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

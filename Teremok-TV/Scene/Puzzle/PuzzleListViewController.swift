@@ -8,40 +8,55 @@
 
 import UIKit
 
-class PuzzleListViewController: UIViewController {
+class PuzzleListViewController: GameViewController {
 	var input: Input!
 	var output: Output!
 
 	struct Output {
-		let startWith: (PuzzleGameFlow.Game.Difficulty) -> Void
+		let difficulty: (PuzzleGameFlow.Game.Difficulty) -> Void
+		let start: (UIImage?) -> Void
+
 	}
 
 	struct Input {
-		var chars: [String]
+		var items: [PuzzleMaster.Puzzle]
 	}
+	@IBOutlet private var collectionView: UICollectionView!
 
-	var items: [PuzzleMaster.Puzzle] = []
+	@IBAction func startGame(_ sender: UIButton) {
+		output.difficulty(PuzzleGameFlow.Game.Difficulty(rawValue: sender.tag)!)
+	}
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        prepareUI()
+		displayTags(items: input.items)
     }
-    
+
+	func prepareUI() {
+		collectionView.delegate = self
+		collectionView.dataSource = self
+		let cells = [SearchCharacterCollectionViewCell.self, LoadingCollectionViewCell.self]
+		collectionView.register(cells: cells)
+	}
+	func displayTags(items: [PuzzleMaster.Puzzle]){
+		collectionView.reloadData()
+	}
 
 }
 extension PuzzleListViewController: UICollectionViewDataSource {
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return items.count //+ (self.interactor!.hasMore ? 1 : 0)
+		return input.items.count //+ (self.interactor!.hasMore ? 1 : 0)
 	}
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		if indexPath.row == items.count {
+		if indexPath.row == input.items.count {
 			let cell = collectionView.dequeueReusableCell(withCell: LoadingCollectionViewCell.self, for: indexPath)
 			return cell
 		}
 		let cell = collectionView.dequeueReusableCell(withCell: SearchCharacterCollectionViewCell.self, for: indexPath)
-		cell.linktoLoad = items[indexPath.row].imageLink
+		cell.linktoLoad = input.items[indexPath.row].imageLink
 		return cell
 	}
 
@@ -49,7 +64,8 @@ extension PuzzleListViewController: UICollectionViewDataSource {
 extension PuzzleListViewController: UICollectionViewDelegate {
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+		let cell = collectionView.cellForItem(at: indexPath) as? SearchCharacterCollectionViewCell
+		output.start(cell?.imageView.image)
 	}
 	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 

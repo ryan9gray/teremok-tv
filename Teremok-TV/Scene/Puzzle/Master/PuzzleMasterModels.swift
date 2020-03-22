@@ -17,4 +17,8 @@ enum PuzzleMaster {
 	struct Puzzle {
 		let imageLink: String
 	}
+
+	static let mock: [Puzzle] = [
+		Puzzle(imageLink: "https://i.pinimg.com/originals/98/6a/c3/986ac391b218a3a9ad750441e8cf1e42.jpg")
+	]
 }

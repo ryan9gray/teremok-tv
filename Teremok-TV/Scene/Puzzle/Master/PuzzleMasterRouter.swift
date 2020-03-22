@@ -30,7 +30,7 @@ class PuzzleMasterRouter: PuzzleMasterRoutingLogic, PuzzleMasterDataPassing {
 
     // MARK: Routing
 	func navigateMain() {
-		pushChild(viewControllerClass: AlphaviteStartViewController.self, storyboard: .alphavite)
+		pushChild(viewControllerClass: PuzzleStartViewController.self, storyboard: .puzzle)
 	}
 
 	func dismiss() {

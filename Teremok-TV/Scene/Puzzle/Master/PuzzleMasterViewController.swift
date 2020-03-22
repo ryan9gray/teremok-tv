@@ -64,7 +64,8 @@ class PuzzleMasterViewController: GameMasterViewController, PuzzleMasterDisplayL
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+		router?.navigateMain()
     }
 
     // MARK: Actions

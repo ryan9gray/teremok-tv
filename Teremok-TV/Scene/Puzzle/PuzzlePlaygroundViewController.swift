@@ -8,8 +8,10 @@
 
 import UIKit
 
-class PuzzlePlaygroundViewController: UIViewController {
+class PuzzlePlaygroundViewController: GameViewController {
 	@IBOutlet private var previewView: UIImageView!
+	@IBOutlet var scrollView: UIScrollView!
+	@IBOutlet var pieceStackView: UIStackView!
 
 	var input: Input!
 	var output: Output!
@@ -19,22 +21,20 @@ class PuzzlePlaygroundViewController: UIViewController {
 	}
 
 	struct Input {
-		var image: UIImage?
+		let image: UIImage?
 		let difficulty: PuzzleGameFlow.Game.Difficulty
 	}
 	var tapCount: Int = 0
 
 	var correctCount = 0
 	var answerAreaAray:[UIView] = []
-	var height: CGFloat = 300
-	let baseImg = UIImageView()
-	let beforeImg = UIImageView()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+	}
+
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
@@ -42,25 +42,21 @@ class PuzzlePlaygroundViewController: UIViewController {
 	}
 
 	private func createPuzzle() {
-		var image: UIImage? = input.image
-
+		let image: UIImage? = input.image!.resizeImageUsingVImage(previewView.frame.size)
+		previewView.image = image
 		let numRows = input.difficulty.fieldSize
 		let numColumns = input.difficulty.fieldSize
 
-		var pieceAray:[Int] = []
+		var pieceAray: [Int] = []
 
 		for i in 0...numColumns*numRows {
 			pieceAray.append(i+1)
 		}
+		pieceStackView.subviews.forEach { $0.removeFromSuperview() }
 
-		// Resize image for given device.
-		UIGraphicsBeginImageContextWithOptions(CGSize(width: baseImg.frame.width, height: baseImg.frame.width), _: false, _: 0.0)
-		image!.draw(in: CGRect(x: 0, y: 0, width: baseImg.frame.width, height: baseImg.frame.width))
-		image = UIGraphicsGetImageFromCurrentImageContext()!
-		UIGraphicsEndImageContext()
-
-		let bound = view.bounds
-		// Make puzzle.
+		let bound = previewView.bounds
+		let movePointx:CGFloat = self.previewView.frame.origin.x
+		let movePointy:CGFloat = self.previewView.frame.origin.y
 		let puzzleMaker = PuzzleMaker(image: image!, numRows: numRows, numColumns: numColumns)
 		puzzleMaker.generatePuzzles { (throwableClosure) in
 			do {
@@ -74,14 +70,15 @@ class PuzzlePlaygroundViewController: UIViewController {
 						let position = puzzleElement.position
 						let image = puzzleElement.image
 						let pieces = UIImageView(frame: CGRect(x: position.x, y: position.y, width: image.size.width, height: image.size.height))
+						//NSLayoutConstraint.fixWidth(view: pieces, constant: image.size.width)
+						//NSLayoutConstraint.fixHeight(view: pieces, constant: image.size.height)
+
 						pieces.image = image
 						pieces.tag = num
 						self.view.addSubview(pieces)
+						//self.pieceStackView.addArrangedSubview(pieces)
 
-						let movePointx:CGFloat = self.baseImg.center.x - self.beforeImg.center.x
-						let movePointy:CGFloat = self.baseImg.center.y - self.beforeImg.center.y
-
-						let answerArea = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width*0.053, height: self.view.frame.width*0.053))
+						let answerArea = UIView(frame: CGRect(x: 0, y: 0, width: self.previewView.frame.width*0.053, height: self.previewView.frame.width*0.053))
 						answerArea.center = CGPoint(x: pieces.center.x + movePointx, y: pieces.center.y + movePointy)
 						answerArea.backgroundColor = UIColor.clear
 						self.answerAreaAray.append(answerArea)
@@ -95,41 +92,37 @@ class PuzzlePlaygroundViewController: UIViewController {
 						point.y = CGFloat(tate)
 						pieces.center = CGPoint(x: point.x + bound.width*0.15, y: point.y + bound.height*0.5)
 
-						let movePieces:UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.dragPieces))
+						let movePieces: UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.dragPieces))
 						pieces.addGestureRecognizer(movePieces)
 						pieces.isUserInteractionEnabled = true
 					}
 				}
-
 			} catch let error {
-
 				debugPrint(error)
 			}
-
 		}
 	}
-
-	@objc func dragPieces(sender: UIPanGestureRecognizer) {
-		view.bringSubviewToFront(sender.view!)
+	@objc
+	func dragPieces(sender:UIPanGestureRecognizer) {
+		self.view.bringSubviewToFront(sender.view!)
 
 		if sender.state == UIGestureRecognizer.State.ended {
-			let targetImg:UIView = sender.view!
+			let targetImg: UIView = sender.view!
 
 			for _ in 0..<answerAreaAray.count {
 
 				let answerView = answerAreaAray[targetImg.tag-1]
 
 				if (answerView.frame.contains(targetImg.center)) {
-
 					targetImg.center = CGPoint(x: answerView.center.x, y: answerView.center.y)
 					targetImg.isUserInteractionEnabled = false
 					correctCount += 1
 					print(Int(correctCount))
-					if correctCount == 16 {
-						print("Congratulations!")
-					} else {
-						break
-					}
+//					if correctCount == input.difficulty.fieldSize^2 {
+//						print("Congratulations!")
+//					} else {
+//						break
+//					}
 				}
 			}
 		} else {
@@ -137,11 +130,58 @@ class PuzzlePlaygroundViewController: UIViewController {
 			let movedPoint: CGPoint = CGPoint(x: sender.view!.center.x + point.x, y: sender.view!.center.y + point.y)
 			sender.view!.center = movedPoint
 			sender.setTranslation(CGPoint.zero, in: self.view)
+			//print(point)
 		}
-	}
 
-	func trimmingImage(_ image: UIImage, trimmingArea: CGRect) -> UIImage {
-		let imgRef = image.cgImage?.cropping(to: trimmingArea)
+	}
+//	@objc func dragPieces(sender: UIPanGestureRecognizer) {
+//		guard let targetImg = sender.view else { return }
+//		targetImg.removeFromSuperview()
+//		view.addSubview(targetImg)
+//		view.bringSubviewToFront(targetImg)
+//		let point: CGPoint = sender.translation(in: view)
+//
+//		print(point)
+//
+//		switch sender.state {
+//			case .began:
+//				break
+//			case .ended:
+////				if !previewView.frame.contains(point) {
+////					pieceStackView.insertArrangedSubview(targetImg, at: 0)
+////					return
+////				} else {
+////					targetImg.removeFromSuperview()
+////					view.addSubview(targetImg)
+////					view.bringSubviewToFront(targetImg)
+////				}
+//				let answerView = answerAreaAray[targetImg.tag-1]
+//
+//				for _ in 0..<answerAreaAray.count {
+//
+//
+//					if (answerView.frame.contains(targetImg.center)) {
+//
+//						targetImg.center = CGPoint(x: answerView.center.x, y: answerView.center.y)
+//						targetImg.isUserInteractionEnabled = false
+//						correctCount += 1
+//						print(Int(correctCount))
+//						if correctCount == input.difficulty.fieldSize^2 {
+//							print("Congratulations!")
+//						} else {
+//							break
+//						}
+//					}
+//			}
+//			default:
+//				let movedPoint: CGPoint = CGPoint(x: sender.view!.center.x + point.x, y: sender.view!.center.y + point.y)
+//				sender.view!.center = movedPoint
+//				sender.setTranslation(CGPoint.zero, in: self.view)
+//		}
+//	}
+
+	func trimmingImage(_ image: UIImage, trimmingSize: CGSize) -> UIImage {
+		let imgRef = image.cgImage?.cropping(to: CGRect(x: 0, y: 0, width: trimmingSize.width, height: trimmingSize.height))
 		let trimImage = UIImage(cgImage: imgRef!, scale: image.scale, orientation: image.imageOrientation)
 
 		return trimImage
