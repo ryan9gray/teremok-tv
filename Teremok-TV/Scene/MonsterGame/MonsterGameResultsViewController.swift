@@ -34,16 +34,18 @@ class MonsterGameResultsViewController: GameViewController {
         super.viewDidLoad()
         timeLbl.text = "Твое время \(PlayerHelper.stringFromTimeInterval(TimeInterval(input.gameResult.result)))"
         if !input.gameResult.gameWon {
-            timeView.borderColor = UIColor.Button.red
-            timeLbl.textColor = UIColor.Button.red
-            titleImageView.image = UIImage(named: "playAgain")
-            nextBtn.setImage(UIImage(named: "icAgainYellow"), for: .normal)
-            nextBtn.gradientColors = Style.Gradients.red.value
+            timeView.borderColor = UIColor.Button.orangeOne
+            timeLbl.textColor = UIColor.Button.orangeOne
+            titleImageView.image = UIImage(named: "dinoGameRepeatGame")
+            nextBtn.setImage(UIImage(named: "icRepeatGame"), for: .normal)
+            nextBtn.gradientColors = Style.Gradients.DinoGame.redReverse.value
             nextBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-            monstersView.image = UIImage(named: "monstersLose")
+            monstersView.image = UIImage(named: "ic-dinoGameLoseBack")
         }
         else {
-            timeLbl.textColor = UIColor.Label.darkBlue
+            timeView.borderColor = UIColor.DinoGame.lightBlueTwo
+            timeLbl.textColor = UIColor.DinoGame.lightBlueTwo
+            nextBtn.gradientColors = Style.Gradients.lightOrange.value
         }
     }
 }

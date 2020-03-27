@@ -15,6 +15,7 @@ enum Style {
         case beige
         case yellow
         case orange
+        case lightOrange
         case brown
         case alphavitePlay
         case blue
@@ -23,6 +24,14 @@ enum Style {
         case lightGray
         case blueBorder
         case lightBlue
+        
+        enum DinoGame {
+            case orange
+            case blue
+            case red
+            case redReverse
+            case green
+        }
     }
 
     enum TextAttributes {
@@ -119,6 +128,8 @@ extension Style.Gradients {
                 return [UIColor.Button.yellowOne, UIColor.Button.yellowTwo]
             case .orange:
                 return [UIColor.Alphavite.orangeOne, UIColor.Alphavite.orangeTwo]
+            case .lightOrange:
+                return [UIColor.Button.orangeOne, UIColor.Button.orangeTwo]
             case .brown:
                 return [UIColor.Alphavite.brownOne, UIColor.Alphavite.brownTwo]
             case .alphavitePlay:
@@ -135,6 +146,25 @@ extension Style.Gradients {
                 return [UIColor.Alphavite.blueOne, .white]
             case .lightBlue:
                 return []
+            }
+        }
+    }
+}
+
+extension Style.Gradients.DinoGame {
+    var value: [UIColor] {
+        get {
+            switch self {
+            case .orange:
+                return [UIColor.DinoGame.lightOrangeOne, UIColor.DinoGame.lightOrangeTwo]
+            case .blue:
+                return [UIColor.DinoGame.lightBlueOne, UIColor.DinoGame.lightBlueTwo]
+            case .red:
+                return [UIColor.DinoGame.darkRedOne, UIColor.DinoGame.darkRedTwo]
+            case .redReverse:
+                return [UIColor.DinoGame.darkRedTwo, UIColor.DinoGame.darkRedOne]
+            case .green:
+                return [UIColor.DinoGame.darkGreenOne, UIColor.DinoGame.darkGreenTwo]
             }
         }
     }

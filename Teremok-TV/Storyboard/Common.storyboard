@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -307,7 +307,8 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="X8b-ps-329" secondAttribute="height" multiplier="7:6" id="LfS-NS-Svk"/>
                                                 </constraints>
-                                                <state key="normal" image="ic-monsterGame"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="-17" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" image="ic-dinoGameIcon"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="force">
@@ -387,8 +388,8 @@
         <image name="ic-alphavite" width="164" height="144"/>
         <image name="ic-alphavitePlay" width="70" height="80"/>
         <image name="ic-animalgame" width="164" height="144"/>
+        <image name="ic-dinoGameIcon" width="140" height="120"/>
         <image name="ic-gamesBack" width="667" height="375"/>
-        <image name="ic-monsterGame" width="164" height="144"/>
         <image name="icColorsGame" width="140" height="120"/>
         <image name="icCross" width="20" height="20"/>
         <image name="icHomeShadow" width="50" height="50"/>

@@ -125,6 +125,7 @@
 		25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFB2368E4A90033D9CA /* Subscriptions.swift */; };
 		25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9187236237B800D339C7 /* colorsGameMain.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		25DA918A236237B800D339C7 /* colorsGame_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceColorsGame, ); }; };
+		73289A6A242B392C00896CA0 /* LapsusPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73289A69242B392C00896CA0 /* LapsusPro-Bold.otf */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
 		CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */; };
@@ -953,6 +954,7 @@
 		25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorsGame_introduce.mp4; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
+		73289A69242B392C00896CA0 /* LapsusPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LapsusPro-Bold.otf"; sourceTree = "<group>"; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
 		CA0053B7213AF3E600AA187F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardShowable.swift; path = "Teremok-TV/Extensions/KeyboardShowable.swift"; sourceTree = SOURCE_ROOT; };
@@ -2226,6 +2228,7 @@
 		CA61D86C229ACBB300E3D603 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				73289A69242B392C00896CA0 /* LapsusPro-Bold.otf */,
 				CAD2103C231700DC006F2F08 /* MontserratAlternates-BoldItalic.ttf */,
 				CAD21034231700DB006F2F08 /* MontserratAlternates-ExtraBold.ttf */,
 				CAD21035231700DB006F2F08 /* MontserratAlternates-ExtraBoldItalic.ttf */,
@@ -3847,6 +3850,7 @@
 				CA5100BF22F6EACF00821C25 /* alphavite_23.wav in Resources */,
 				CAD2103E231700DC006F2F08 /* MontserratAlternates-Regular.ttf in Resources */,
 				CAA4455121577F760023E340 /* Main.storyboard in Resources */,
+				73289A6A242B392C00896CA0 /* LapsusPro-Bold.otf in Resources */,
 				CAC6F74E22A81D1300756AE2 /* Firework_4.json in Resources */,
 				CAAF1F1021771E4300460F58 /* Shade_open.json in Resources */,
 				CA5100DF22F6EACF00821C25 /* alphavite_31_word_1.wav in Resources */,

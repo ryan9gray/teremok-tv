@@ -22,7 +22,7 @@ class MonsterCollectionViewCell: UICollectionViewCell {
     
     func configuration(monster: MonsterMaster.Monster) {
         item = monster
-        backImage.image = UIImage(named: "monsterCellCover")
+        backImage.image = UIImage(named: "dinoGameCellCover")
         frontImage.image = UIImage(named: monster.imageName)
     }
     
