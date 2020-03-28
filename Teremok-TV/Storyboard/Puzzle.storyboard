@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,14 +21,14 @@
             <objects>
                 <viewController storyboardIdentifier="PuzzleMasterViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v8W-UD-Faf" customClass="PuzzleMasterViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pjs-HN-khP">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-alphaviteBack" translatesAutoresizingMaskIntoConstraints="NO" id="4i5-OT-SEm">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TL-jY-Rbu" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="24" y="20" width="50" height="50"/>
+                                <rect key="frame" x="54" y="20" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="0fF-6C-D3E"/>
                                     <constraint firstAttribute="height" constant="50" id="aPC-OZ-GnI"/>
@@ -51,7 +51,7 @@
                             <constraint firstAttribute="trailing" secondItem="4i5-OT-SEm" secondAttribute="trailing" id="XWn-f6-G3N"/>
                             <constraint firstItem="4TL-jY-Rbu" firstAttribute="top" secondItem="q02-M3-bbs" secondAttribute="top" constant="20" id="gLm-Qq-v92"/>
                             <constraint firstAttribute="bottom" secondItem="4i5-OT-SEm" secondAttribute="bottom" id="j24-90-1sH"/>
-                            <constraint firstItem="4TL-jY-Rbu" firstAttribute="leading" secondItem="pjs-HN-khP" secondAttribute="leading" constant="24" id="m6B-Jr-CdP"/>
+                            <constraint firstItem="4TL-jY-Rbu" firstAttribute="leading" secondItem="q02-M3-bbs" secondAttribute="leading" constant="10" id="m6B-Jr-CdP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q02-M3-bbs"/>
                     </view>
@@ -69,11 +69,14 @@
             <objects>
                 <viewController storyboardIdentifier="PuzzleStartViewController" id="8PB-Vw-yJ5" customClass="PuzzleStartViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yz9-YI-fX7">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPuzzleStartBack" translatesAutoresizingMaskIntoConstraints="NO" id="OQX-lt-etL">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GS-Nh-lGy" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="313" y="177" width="270" height="60"/>
+                                <rect key="frame" x="271" y="157.66666666666666" width="270" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="OVO-M2-8LE"/>
                                     <constraint firstAttribute="height" constant="60" id="nfj-zv-MgT"/>
@@ -94,7 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41b-k6-SsI" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="802" y="20" width="50" height="50"/>
+                                <rect key="frame" x="718" y="20" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="ANc-AC-34q"/>
                                 </constraints>
@@ -110,8 +113,12 @@
                             <constraint firstItem="41b-k6-SsI" firstAttribute="width" secondItem="41b-k6-SsI" secondAttribute="height" multiplier="1:1" id="Tkh-go-ATZ"/>
                             <constraint firstItem="41b-k6-SsI" firstAttribute="top" secondItem="7K0-yJ-JjQ" secondAttribute="top" constant="20" id="VP2-Iz-e4Z"/>
                             <constraint firstItem="9GS-Nh-lGy" firstAttribute="centerX" secondItem="7K0-yJ-JjQ" secondAttribute="centerX" id="Wq6-qy-hcJ"/>
+                            <constraint firstAttribute="trailing" secondItem="OQX-lt-etL" secondAttribute="trailing" id="Yrg-Vp-BiE"/>
+                            <constraint firstAttribute="bottom" secondItem="OQX-lt-etL" secondAttribute="bottom" id="eBw-6k-df4"/>
                             <constraint firstItem="7K0-yJ-JjQ" firstAttribute="trailing" secondItem="41b-k6-SsI" secondAttribute="trailing" id="fAC-re-edf"/>
+                            <constraint firstItem="OQX-lt-etL" firstAttribute="top" secondItem="7K0-yJ-JjQ" secondAttribute="top" id="lrx-xq-Qrk"/>
                             <constraint firstItem="9GS-Nh-lGy" firstAttribute="centerY" secondItem="Yz9-YI-fX7" secondAttribute="centerY" id="niM-ot-DER"/>
+                            <constraint firstItem="OQX-lt-etL" firstAttribute="leading" secondItem="Yz9-YI-fX7" secondAttribute="leading" id="qMG-9v-jWx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7K0-yJ-JjQ"/>
                     </view>
@@ -122,32 +129,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSt-fP-dJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36.431784107946029" y="469.60000000000002"/>
+            <point key="canvasLocation" x="36.160714285714285" y="469.56521739130437"/>
         </scene>
         <!--Puzzle Playground View Controller-->
         <scene sceneID="0Dc-hU-5cd">
             <objects>
                 <viewController storyboardIdentifier="PuzzlePlaygroundViewController" id="jUP-sU-kpn" customClass="PuzzlePlaygroundViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5fr-pP-074">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPuzzlePlayBack" translatesAutoresizingMaskIntoConstraints="NO" id="mUc-uG-7oA">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZeL-4S-gpE">
-                                <rect key="frame" x="80" y="16" width="361" height="361"/>
+                                <rect key="frame" x="104" y="24" width="314" height="314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZeL-4S-gpE" secondAttribute="height" multiplier="1:1" id="HeO-pp-bbM"/>
                                 </constraints>
                             </imageView>
                             <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ava-yl-Krb">
-                                <rect key="frame" x="676" y="0.0" width="220" height="414"/>
+                                <rect key="frame" x="655" y="0.0" width="157" height="375"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-WS-mMB">
                                         <rect key="frame" x="20" y="20" width="116" height="50"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-ZG-FdD">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lLY-Gy-d77">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKS-aJ-33U">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVM-z2-sBj">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -155,10 +165,10 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lLY-Gy-d77">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-ZG-FdD">
                                                 <rect key="frame" x="66" y="0.0" width="50" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVM-z2-sBj">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKS-aJ-33U">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -169,22 +179,27 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="dlz-WS-mMB" secondAttribute="bottom" id="UCk-PC-g4Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="dlz-WS-mMB" secondAttribute="trailing" constant="20" symbolic="YES" id="YQq-iA-ygg"/>
+                                    <constraint firstAttribute="trailing" secondItem="dlz-WS-mMB" secondAttribute="trailing" id="YQq-iA-ygg"/>
                                     <constraint firstItem="dlz-WS-mMB" firstAttribute="top" secondItem="Ava-yl-Krb" secondAttribute="top" constant="20" symbolic="YES" id="b9j-Ir-d0h"/>
                                     <constraint firstItem="dlz-WS-mMB" firstAttribute="leading" secondItem="Ava-yl-Krb" secondAttribute="leading" constant="20" symbolic="YES" id="rzp-xK-fgK"/>
-                                    <constraint firstAttribute="width" constant="220" id="wBT-kd-3B2"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ava-yl-Krb" secondAttribute="trailing" id="325-MC-qHW"/>
-                            <constraint firstItem="ZeL-4S-gpE" firstAttribute="leading" secondItem="bOJ-Nj-v97" secondAttribute="leading" constant="36" id="3ay-OP-lX8"/>
+                            <constraint firstItem="ZeL-4S-gpE" firstAttribute="leading" secondItem="bOJ-Nj-v97" secondAttribute="leading" constant="60" id="3ay-OP-lX8"/>
+                            <constraint firstItem="Ava-yl-Krb" firstAttribute="width" secondItem="ZeL-4S-gpE" secondAttribute="width" multiplier="0.5" id="4TS-y6-YO0"/>
+                            <constraint firstItem="mUc-uG-7oA" firstAttribute="top" secondItem="bOJ-Nj-v97" secondAttribute="top" id="CcZ-ha-008"/>
                             <constraint firstItem="bOJ-Nj-v97" firstAttribute="bottom" secondItem="ZeL-4S-gpE" secondAttribute="bottom" constant="16" id="H5z-5x-Kmy"/>
+                            <constraint firstAttribute="trailing" secondItem="mUc-uG-7oA" secondAttribute="trailing" id="cNF-aq-ju8"/>
                             <constraint firstItem="Ava-yl-Krb" firstAttribute="top" secondItem="bOJ-Nj-v97" secondAttribute="top" id="oRO-NG-XCW"/>
-                            <constraint firstItem="ZeL-4S-gpE" firstAttribute="top" secondItem="bOJ-Nj-v97" secondAttribute="top" constant="16" id="pZG-tM-5sn"/>
+                            <constraint firstItem="ZeL-4S-gpE" firstAttribute="top" secondItem="bOJ-Nj-v97" secondAttribute="top" constant="24" id="pZG-tM-5sn"/>
+                            <constraint firstAttribute="bottom" secondItem="mUc-uG-7oA" secondAttribute="bottom" id="upj-HT-XNQ"/>
+                            <constraint firstItem="mUc-uG-7oA" firstAttribute="leading" secondItem="5fr-pP-074" secondAttribute="leading" id="wO4-0N-Rh4"/>
                             <constraint firstAttribute="bottom" secondItem="Ava-yl-Krb" secondAttribute="bottom" id="weF-np-WIb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bOJ-Nj-v97"/>
@@ -198,21 +213,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qW2-be-qFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782.8125" y="469.56521739130437"/>
+            <point key="canvasLocation" x="709" y="443"/>
         </scene>
         <!--Puzzle Finish View Controller-->
         <scene sceneID="ARB-2P-ABN">
             <objects>
                 <viewController storyboardIdentifier="PuzzleFinishViewController" id="zi9-fE-Sob" customClass="PuzzleFinishViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hq2-Vv-Rez">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnF-iJ-4Hr" customClass="DesignableView" customModule="Spring">
-                                <rect key="frame" x="84" y="40" width="313" height="313"/>
+                                <rect key="frame" x="84" y="40" width="274" height="274"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y9m-Pj-jsf">
-                                        <rect key="frame" x="10" y="10" width="293" height="293"/>
+                                        <rect key="frame" x="10" y="10" width="254" height="254"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
@@ -236,7 +251,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f9-js-xFm" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="587" y="139" width="75" height="75"/>
+                                <rect key="frame" x="525.66666666666663" y="139" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="RP4-zL-4iJ"/>
                                     <constraint firstAttribute="height" constant="75" id="WZn-rP-XPU"/>
@@ -253,7 +268,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СЫГРАЕМ ЕЩЕ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwh-nU-zfF" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="437" y="40" width="375" height="79"/>
+                                <rect key="frame" x="398" y="40" width="330" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="HMB-tu-XKR"/>
                                 </constraints>
@@ -294,11 +309,14 @@
             <objects>
                 <viewController storyboardIdentifier="PuzzleListViewController" id="Pv1-iC-ie6" customClass="PuzzleListViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aar-Od-jqq">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPuzzleListBack" translatesAutoresizingMaskIntoConstraints="NO" id="YLv-xJ-2lQ">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h60-zg-L1t">
-                                <rect key="frame" x="60" y="92" width="776" height="252"/>
+                                <rect key="frame" x="60" y="92" width="692" height="213"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XRM-Le-ddc">
                                     <size key="itemSize" width="50" height="50"/>
@@ -309,12 +327,12 @@
                                 <cells/>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wwt-Z0-wr8">
-                                <rect key="frame" x="348" y="352" width="200" height="41"/>
+                                <rect key="frame" x="276" y="313" width="260" height="41"/>
                                 <subviews>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeh-O0-g4b" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="41"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="Hpq-xl-IGm"/>
+                                            <constraint firstAttribute="width" constant="80" id="Hpq-xl-IGm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="3x3">
@@ -325,7 +343,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-0e-LL7" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="70" y="0.0" width="60" height="41"/>
+                                        <rect key="frame" x="90" y="0.0" width="80" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="6x6">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -335,7 +353,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxP-a5-aRr" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="140" y="0.0" width="60" height="41"/>
+                                        <rect key="frame" x="180" y="0.0" width="80" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="9x9">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -350,11 +368,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Wwt-Z0-wr8" firstAttribute="centerX" secondItem="qXD-2F-13Y" secondAttribute="centerX" id="9LA-rh-b9C"/>
-                            <constraint firstItem="qXD-2F-13Y" firstAttribute="bottom" secondItem="Wwt-Z0-wr8" secondAttribute="bottom" id="Bac-5c-HLf"/>
+                            <constraint firstAttribute="bottom" secondItem="Wwt-Z0-wr8" secondAttribute="bottom" constant="21" id="Bac-5c-HLf"/>
                             <constraint firstItem="h60-zg-L1t" firstAttribute="top" secondItem="qXD-2F-13Y" secondAttribute="top" constant="92" id="MKb-uY-p2j"/>
                             <constraint firstItem="h60-zg-L1t" firstAttribute="leading" secondItem="qXD-2F-13Y" secondAttribute="leading" constant="16" id="VM9-Fi-Oiy"/>
+                            <constraint firstItem="YLv-xJ-2lQ" firstAttribute="top" secondItem="qXD-2F-13Y" secondAttribute="top" id="d3d-tD-LGS"/>
+                            <constraint firstAttribute="bottom" secondItem="YLv-xJ-2lQ" secondAttribute="bottom" id="e5L-a4-ucG"/>
                             <constraint firstItem="Wwt-Z0-wr8" firstAttribute="top" secondItem="h60-zg-L1t" secondAttribute="bottom" constant="8" id="ghg-gD-7fy"/>
+                            <constraint firstItem="YLv-xJ-2lQ" firstAttribute="leading" secondItem="Aar-Od-jqq" secondAttribute="leading" id="l0B-4J-aoq"/>
                             <constraint firstItem="qXD-2F-13Y" firstAttribute="trailing" secondItem="h60-zg-L1t" secondAttribute="trailing" constant="16" id="rHK-cs-PJG"/>
+                            <constraint firstAttribute="trailing" secondItem="YLv-xJ-2lQ" secondAttribute="trailing" id="wyO-3k-DmC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qXD-2F-13Y"/>
                     </view>
@@ -370,13 +392,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfM-2Y-Flx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="1214"/>
+            <point key="canvasLocation" x="59.598214285714285" y="1213.0434782608697"/>
         </scene>
     </scenes>
     <resources>
         <image name="ic-alphaviteBack" width="667" height="375"/>
         <image name="ic-alphavitePlay" width="70" height="80"/>
         <image name="icHomeShadow" width="50" height="50"/>
+        <image name="icPuzzleListBack" width="667" height="375"/>
+        <image name="icPuzzlePlayBack" width="667" height="375"/>
+        <image name="icPuzzleStartBack" width="667" height="375"/>
         <image name="icUtka" width="29" height="35"/>
     </resources>
 </document>

@@ -116,7 +116,16 @@ class PuzzlePlaygroundViewController: GameViewController {
 
 		if targetImg.superview is UIStackView {
 			let center2 = scrollView.convert(targetImg.center, to: view)
-			center = CGPoint(x: center2.x+20, y: center2.y+20)
+			print("center2 \(center2)")
+			switch targetImg.superview {
+				case pieceStackView :
+					center = CGPoint(x: center2.x+20, y: center2.y+20)
+				case pieceSecondStackView:
+					center = CGPoint(x: center2.x+70, y: center2.y+20)
+				default:
+					center = center2
+			}
+			print("center \(center)")
 		} else {
 			view.bringSubviewToFront(targetImg)
 			center = targetImg.center
