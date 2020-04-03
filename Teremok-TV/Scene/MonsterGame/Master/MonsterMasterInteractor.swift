@@ -21,7 +21,7 @@ protocol MonsterMasterDataStore {
 
 class MonsterMasterInteractor: MonsterMasterBusinessLogic, MonsterMasterDataStore {
     var presenter: MonsterMasterPresentationLogic?    
-    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.monstersImage.rawValue]))
+    let bundleResourceRequest = NSBundleResourceRequest(tags: Set([OnDemandLoader.Tags.Prefetch.dinosImage.rawValue]))
 
     func onDemand(completion: @escaping (Bool) -> Void) {
         bundleResourceRequest.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
