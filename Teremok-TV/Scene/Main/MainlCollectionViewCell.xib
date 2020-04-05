@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kA-qX-0X4">
-                        <rect key="frame" x="145" y="0.0" width="2" height="287"/>
+                        <rect key="frame" x="145" y="0.0" width="2" height="0.0"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="2" id="BnS-kv-1oL"/>
@@ -29,62 +27,26 @@
                         <nil key="textColor"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwI-GC-CjN">
-                        <rect key="frame" x="10" y="48" width="272" height="128.5"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCloudOne" translatesAutoresizingMaskIntoConstraints="NO" id="qJK-45-TPj">
-                                <rect key="frame" x="0.0" y="0.0" width="272" height="128.5"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUl-gk-EbW">
-                                <rect key="frame" x="27" y="13" width="218" height="102.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="vUl-gk-EbW" firstAttribute="centerY" secondItem="iwI-GC-CjN" secondAttribute="centerY" id="8aj-am-jpb"/>
-                            <constraint firstAttribute="trailing" secondItem="qJK-45-TPj" secondAttribute="trailing" id="Vgy-Oj-HtM"/>
-                            <constraint firstAttribute="bottom" secondItem="qJK-45-TPj" secondAttribute="bottom" id="YBz-Wo-biI"/>
-                            <constraint firstItem="qJK-45-TPj" firstAttribute="top" secondItem="iwI-GC-CjN" secondAttribute="top" id="bIa-Fb-93y"/>
-                            <constraint firstItem="vUl-gk-EbW" firstAttribute="centerX" secondItem="iwI-GC-CjN" secondAttribute="centerX" id="eGW-8q-WGr"/>
-                            <constraint firstItem="qJK-45-TPj" firstAttribute="leading" secondItem="iwI-GC-CjN" secondAttribute="leading" id="eon-FK-42v"/>
-                            <constraint firstItem="vUl-gk-EbW" firstAttribute="width" secondItem="qJK-45-TPj" secondAttribute="width" multiplier="0.8" id="nIi-V1-tNI"/>
-                            <constraint firstItem="vUl-gk-EbW" firstAttribute="height" secondItem="qJK-45-TPj" secondAttribute="height" multiplier="0.8" id="uoC-gm-KRT"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RaU-ZN-6kw">
-                        <rect key="frame" x="0.0" y="176.5" width="292" height="251.5"/>
+                        <rect key="frame" x="0.0" y="-110.5" width="292" height="538.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="iwI-GC-CjN" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="016-XR-C77"/>
                 <constraint firstItem="9kA-qX-0X4" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="6ou-0j-dsV"/>
                 <constraint firstItem="RaU-ZN-6kw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Dit-aW-UA3"/>
-                <constraint firstItem="RaU-ZN-6kw" firstAttribute="top" secondItem="iwI-GC-CjN" secondAttribute="bottom" id="E7e-d3-OMq"/>
                 <constraint firstAttribute="trailing" secondItem="RaU-ZN-6kw" secondAttribute="trailing" id="FHp-DZ-hZ3"/>
-                <constraint firstItem="iwI-GC-CjN" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.3" id="FKD-ry-2zw"/>
-                <constraint firstItem="iwI-GC-CjN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="48" id="WzR-WY-CYO"/>
-                <constraint firstItem="iwI-GC-CjN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="YrL-AT-3bD"/>
                 <constraint firstItem="RaU-ZN-6kw" firstAttribute="top" secondItem="9kA-qX-0X4" secondAttribute="bottom" constant="-110.5" id="cKv-vj-HgV"/>
-                <constraint firstAttribute="trailing" secondItem="iwI-GC-CjN" secondAttribute="trailing" constant="10" id="pIl-wf-ySc"/>
                 <constraint firstItem="9kA-qX-0X4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vWg-vS-6W3"/>
                 <constraint firstAttribute="bottom" secondItem="RaU-ZN-6kw" secondAttribute="bottom" id="xxd-p7-JNx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="292" height="428"/>
             <connections>
-                <outlet property="cloudImageView" destination="qJK-45-TPj" id="35U-kM-Jxu"/>
                 <outlet property="containerAnimation" destination="RaU-ZN-6kw" id="Imo-5c-Dub"/>
-                <outlet property="titleLbl" destination="vUl-gk-EbW" id="4Lc-Zu-FRZ"/>
             </connections>
             <point key="canvasLocation" x="331.19999999999999" y="323.83808095952025"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="icCloudOne" width="147" height="67"/>
-    </resources>
 </document>

@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="TTd-Qr-hMX">
@@ -426,8 +431,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftGarland" translatesAutoresizingMaskIntoConstraints="NO" id="5oA-kg-Gv2">
+                                <rect key="frame" x="0.0" y="75" width="321" height="86.333333333333314"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightGarland" translatesAutoresizingMaskIntoConstraints="NO" id="yFp-cT-CPO">
+                                <rect key="frame" x="491" y="75" width="321" height="86.333333333333314"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="S0k-I5-Nh0">
+                                <rect key="frame" x="291" y="80" width="230" height="54.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="S0k-I5-Nh0" secondAttribute="height" multiplier="21:5" id="I4X-3G-B4J"/>
+                                </constraints>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-ha-28h">
-                                <rect key="frame" x="44" y="20" width="724" height="314"/>
+                                <rect key="frame" x="44" y="154.66666666666663" width="724" height="179.33333333333337"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="UKJ-dO-2kY" customClass="CarouselLayout" customModule="Teremok_TV" customModuleProvider="target"/>
                                 <cells/>
@@ -436,23 +453,48 @@
                                     <outlet property="delegate" destination="skH-zM-2VZ" id="Y5x-Oh-1j8"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЗДЕСЬ ТЕКСТ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrV-39-X8n">
+                                <rect key="frame" x="301" y="82" width="210" height="50.666666666666657"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MeA-ha-28h" firstAttribute="top" secondItem="MdH-rV-e46" secondAttribute="top" constant="20" id="8pA-jW-6kw"/>
+                            <constraint firstItem="S0k-I5-Nh0" firstAttribute="top" secondItem="MdH-rV-e46" secondAttribute="top" constant="80" id="1D7-bb-4Ap"/>
+                            <constraint firstItem="yFp-cT-CPO" firstAttribute="top" secondItem="S0k-I5-Nh0" secondAttribute="top" constant="-5" id="5bO-fY-gHy"/>
                             <constraint firstItem="MdH-rV-e46" firstAttribute="bottom" secondItem="MeA-ha-28h" secondAttribute="bottom" constant="20" id="CdW-Rb-2aA"/>
                             <constraint firstItem="MeA-ha-28h" firstAttribute="leading" secondItem="MdH-rV-e46" secondAttribute="leading" id="Cvh-UQ-nij"/>
+                            <constraint firstItem="CrV-39-X8n" firstAttribute="leading" secondItem="S0k-I5-Nh0" secondAttribute="leading" constant="10" id="DfQ-U4-YZy"/>
+                            <constraint firstItem="S0k-I5-Nh0" firstAttribute="centerX" secondItem="MdH-rV-e46" secondAttribute="centerX" id="Ggc-yX-a8n"/>
+                            <constraint firstItem="S0k-I5-Nh0" firstAttribute="width" secondItem="prU-I2-KoJ" secondAttribute="width" multiplier="0.28335" id="H3L-Kn-yED"/>
+                            <constraint firstItem="CrV-39-X8n" firstAttribute="trailing" secondItem="S0k-I5-Nh0" secondAttribute="trailing" constant="-10" id="JO4-8c-buT"/>
                             <constraint firstItem="MdH-rV-e46" firstAttribute="trailing" secondItem="MeA-ha-28h" secondAttribute="trailing" id="KRc-xE-Tfe"/>
+                            <constraint firstItem="yFp-cT-CPO" firstAttribute="leading" secondItem="S0k-I5-Nh0" secondAttribute="trailing" constant="-30" id="Q4n-a0-vR4"/>
+                            <constraint firstItem="CrV-39-X8n" firstAttribute="top" secondItem="S0k-I5-Nh0" secondAttribute="top" constant="2" id="R1i-Yx-M5g"/>
+                            <constraint firstItem="CrV-39-X8n" firstAttribute="bottom" secondItem="S0k-I5-Nh0" secondAttribute="bottom" constant="-2" id="fcV-Yx-ttI"/>
+                            <constraint firstItem="5oA-kg-Gv2" firstAttribute="top" secondItem="S0k-I5-Nh0" secondAttribute="top" constant="-5" id="gxN-AJ-Akx"/>
+                            <constraint firstItem="5oA-kg-Gv2" firstAttribute="leading" secondItem="prU-I2-KoJ" secondAttribute="leading" id="osr-uw-AVZ"/>
+                            <constraint firstAttribute="trailing" secondItem="yFp-cT-CPO" secondAttribute="trailing" id="ou9-To-0Sv"/>
+                            <constraint firstItem="5oA-kg-Gv2" firstAttribute="height" secondItem="S0k-I5-Nh0" secondAttribute="height" multiplier="1.5777" id="pVw-CH-z7M"/>
+                            <constraint firstItem="S0k-I5-Nh0" firstAttribute="leading" secondItem="5oA-kg-Gv2" secondAttribute="trailing" constant="-30" id="sTH-rl-cmn"/>
+                            <constraint firstItem="yFp-cT-CPO" firstAttribute="height" secondItem="S0k-I5-Nh0" secondAttribute="height" multiplier="1.5777" id="vB7-OU-eW5"/>
+                            <constraint firstItem="MeA-ha-28h" firstAttribute="top" secondItem="S0k-I5-Nh0" secondAttribute="bottom" constant="20" id="vIx-Wj-j15"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MdH-rV-e46"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="MeA-ha-28h" id="vNj-AT-jR7"/>
+                        <outlet property="leftGarlandRightConstraint" destination="sTH-rl-cmn" id="CFF-jc-nTB"/>
+                        <outlet property="rightGarlandLeftConstraint" destination="Q4n-a0-vR4" id="tP9-Gq-cuW"/>
+                        <outlet property="titleBackgroundImage" destination="S0k-I5-Nh0" id="p97-k5-OdJ"/>
+                        <outlet property="titleBackgroundtopConstraint" destination="1D7-bb-4Ap" id="PNh-DY-NfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2f0-Ur-Lq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429.53523238380814" y="-1671.2"/>
+            <point key="canvasLocation" x="429.31034482758622" y="-1671.2"/>
         </scene>
         <!--Master View Controller-->
         <scene sceneID="43E-jT-7ID">
@@ -561,7 +603,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="ZCj-br-U4m" customClass="ChildsStackView" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="592" y="17" width="200" height="54"/>
+                                <rect key="frame" x="664" y="17" width="128" height="54"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTC-rA-kap" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
@@ -628,10 +670,10 @@
                                 <color key="trackTintColor" red="0.99138075113296509" green="0.95762544870376587" blue="0.89802205562591553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44F-DI-cmG" customClass="DesignableButton" customModule="Spring">
-                                <rect key="frame" x="334" y="16.666666666666671" width="144" height="37"/>
+                                <rect key="frame" x="262" y="16.666666666666671" width="288" height="74"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-logo" translatesAutoresizingMaskIntoConstraints="NO" id="KwL-bz-NyR">
-                                        <rect key="frame" x="0.0" y="0.0" width="144" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="74"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -646,7 +688,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bm-y4-kHR" customClass="BadgeButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="488" y="17" width="46" height="46"/>
+                                <rect key="frame" x="560" y="17" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="NIb-wG-AYl"/>
                                     <constraint firstAttribute="width" secondItem="5Bm-y4-kHR" secondAttribute="height" multiplier="1:1" id="eyf-nb-c89"/>
@@ -659,7 +701,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A46-8C-pxL" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="536" y="17" width="46" height="46"/>
+                                <rect key="frame" x="608" y="17" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="Ku9-kt-wT4"/>
                                     <constraint firstAttribute="width" secondItem="A46-8C-pxL" secondAttribute="height" multiplier="1:1" id="dVp-pR-Rzg"/>
@@ -1049,5 +1091,8 @@
         <image name="icSearch" width="24" height="26"/>
         <image name="icSettings" width="26" height="26"/>
         <image name="icUtka" width="29" height="35"/>
+        <image name="leftGarland" width="261" height="85"/>
+        <image name="rightGarland" width="258.33334350585938" height="89.666664123535156"/>
+        <image name="titleBackgroundImage" width="189" height="46"/>
     </resources>
 </document>

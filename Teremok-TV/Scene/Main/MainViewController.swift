@@ -55,7 +55,11 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     }
 
     @IBOutlet private var collectionView: UICollectionView!
-
+    @IBOutlet private var titleBackgroundImage: UIImageView!
+    @IBOutlet private var leftGarlandRightConstraint: NSLayoutConstraint!
+    @IBOutlet private var rightGarlandLeftConstraint: NSLayoutConstraint!
+    @IBOutlet private var titleBackgroundtopConstraint: NSLayoutConstraint!
+    
     var razdels: [Main.RazdelItem] = []
     
     var cellWidth: CGFloat = 0
@@ -76,6 +80,10 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
        if ServiceConfiguration.activeConfiguration() == .prod  {
             audioPlayer?.play()
         }
+        
+        leftGarlandRightConstraint.constant = garlandConstraintsCalculate()
+        rightGarlandLeftConstraint.constant = garlandConstraintsCalculate()
+        titleBackgroundtopConstraint.constant = titleTopConstaraintCalculate()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -138,6 +146,15 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
         guard let indexPath = collectionView.indexPathForItem(at: visiblePoint) else { return }
         (collectionView.cellForItem(at: indexPath) as? MainlCollectionViewCell)?.playRainbow()
     }
+    
+    private func garlandConstraintsCalculate() -> CGFloat {
+        return -titleBackgroundImage.frame.width * 0.14
+    }
+    
+    private func titleTopConstaraintCalculate() -> CGFloat {
+        let constraint = UIScreen.main.bounds.height * 0.214
+        return constraint > 75.0 ? constraint : 75.0
+    }
 }
 
 extension MainViewController: UICollectionViewDelegate {
@@ -178,10 +195,10 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withCell: MainlCollectionViewCell.self, for: indexPath)
 		if indexPath.section == 0 {
-			cell.configurate(title: "Алфавит, цвета, мемориз, животные", image: Cloud.clouds.randomElement(), animation: "ColorCube")
+			cell.configurate(animation: "ColorCube")
 		} else {
 			let razdel = razdels[indexPath.row]
-			cell.configurate(title: razdel.title, image: Cloud.clouds.randomElement(), link: razdel.link)
+			cell.configurate(link: razdel.link)
 		}
 
         cell.setAnimation()

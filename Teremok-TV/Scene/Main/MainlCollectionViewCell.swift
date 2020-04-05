@@ -14,9 +14,7 @@ class MainlCollectionViewCell: UICollectionViewCell, AnimateCellProtocol {
     var rainbowView: AnimationView?
 
     @IBOutlet var containerAnimation: UIView!
-    @IBOutlet private var titleLbl: UILabel!
     
-    @IBOutlet private var cloudImageView: UIImageView!
     var linktoLoad: String = ""
 
 	var source: AnimaionSource = .link
@@ -31,16 +29,12 @@ class MainlCollectionViewCell: UICollectionViewCell, AnimateCellProtocol {
 
     }
 
-    func configurate(title: String, image: UIImage?, link: String) {
+    func configurate(link: String) {
 		source = .link
-        titleLbl.text = title
-        cloudImageView.image = image
         linktoLoad = link
     }
-	func configurate(title: String, image: UIImage?, animation: String) {
+	func configurate(animation: String) {
 		source = .local
-		titleLbl.text = title
-		cloudImageView.image = image
 		linktoLoad = animation
 	}
 }
