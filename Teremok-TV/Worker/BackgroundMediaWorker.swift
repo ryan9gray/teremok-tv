@@ -25,13 +25,13 @@ struct BackgroundMediaWorker {
         hourLocal = hour
         switch hourLocal {
         case 0...6, 21...:
-            background.image = WinterBackgroundImages.night.image
+            background.image = BackgroundImages.night.image
             UILabel.appearance().textColor = UIColor.View.orange
         case 17...21:
-            background.image = WinterBackgroundImages.evening.image
+            background.image = BackgroundImages.evening.image
             UILabel.appearance().textColor = UIColor.Base.darkBlue
         default:
-            background.image = WinterBackgroundImages.day.image
+            background.image = BackgroundImages.day.image
             UILabel.appearance().textColor = UIColor.Base.darkBlue
         }
        //background.image = #imageLiteral(resourceName: "ic-background_night")
