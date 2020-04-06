@@ -63,7 +63,8 @@ class DinoMasterViewController: GameMasterViewController, DinoMasterDisplayLogic
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        homeBtn.gradientColors = Style.Gradients.DinoGame.green.value
+        
         navigationSubscription = router?.subscribeForNavigation { [weak self] canPop in
             self?.homeBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "icHomeShadow"), for: .normal)
         }
