@@ -65,7 +65,7 @@ enum DinoMaster {
         "dino_47",
         "dino_48"
     ]
-    //TO DO: change part of it songs
+    //TO DO: change part of songs
     enum Sound: String {
         case main = "monsterPickMain"
         case button = "push_button_sound"

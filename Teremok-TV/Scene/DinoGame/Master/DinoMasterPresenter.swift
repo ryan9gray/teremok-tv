@@ -7,3 +7,14 @@
 //
 
 import UIKit
+
+protocol DinoMasterPresentationLogic {
+    
+}
+
+class DinoMasterPresenter: DinoMasterPresentationLogic {
+    weak var viewController: DinoMasterDisplayLogic?
+  
+    // MARK: Do something
+    
+}
