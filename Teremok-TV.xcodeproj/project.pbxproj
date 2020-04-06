@@ -137,6 +137,7 @@
 		73764F52243B05AF007117D6 /* DinoGameResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F51243B05AF007117D6 /* DinoGameResultViewController.swift */; };
 		73764F55243B0646007117D6 /* DinoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F53243B0646007117D6 /* DinoCollectionViewCell.swift */; };
 		73764F56243B0646007117D6 /* DinoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73764F54243B0646007117D6 /* DinoCollectionViewCell.xib */; };
+		73764F58243B3B38007117D6 /* LapsusPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73764F57243B3B37007117D6 /* LapsusPro-Bold.otf */; };
 		73C479E6243A6D73004F8802 /* DinoMasterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479E5243A6D73004F8802 /* DinoMasterModels.swift */; };
 		73C479E8243A6EC5004F8802 /* DinoMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479E7243A6EC5004F8802 /* DinoMasterPresenter.swift */; };
 		73C479EA243A70CB004F8802 /* Dino.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C479E9243A70CB004F8802 /* Dino.storyboard */; };
@@ -981,6 +982,7 @@
 		73764F51243B05AF007117D6 /* DinoGameResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoGameResultViewController.swift; sourceTree = "<group>"; };
 		73764F53243B0646007117D6 /* DinoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoCollectionViewCell.swift; sourceTree = "<group>"; };
 		73764F54243B0646007117D6 /* DinoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DinoCollectionViewCell.xib; sourceTree = "<group>"; };
+		73764F57243B3B37007117D6 /* LapsusPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LapsusPro-Bold.otf"; sourceTree = "<group>"; };
 		73C479E5243A6D73004F8802 /* DinoMasterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterModels.swift; sourceTree = "<group>"; };
 		73C479E7243A6EC5004F8802 /* DinoMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterPresenter.swift; sourceTree = "<group>"; };
 		73C479E9243A70CB004F8802 /* Dino.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dino.storyboard; path = ../../../Desktop/Dino.storyboard; sourceTree = "<group>"; };
@@ -2313,6 +2315,7 @@
 				CAD2103A231700DC006F2F08 /* MontserratAlternates-ThinItalic.ttf */,
 				CAD210282315BAD0006F2F08 /* IstokWeb-Bold.ttf */,
 				CAD210262315BACF006F2F08 /* IstokWeb-BoldItalic.ttf */,
+				73764F57243B3B37007117D6 /* LapsusPro-Bold.otf */,
 				CAD210272315BACF006F2F08 /* IstokWeb-Italic.ttf */,
 				CAD210292315BAD0006F2F08 /* IstokWeb-Regular.ttf */,
 				CAAD25EB22F5A464005CFCD2 /* Foo.ttf */,
@@ -3958,6 +3961,7 @@
 				CA5100CD22F6EACF00821C25 /* alphavite_32_word_2.wav in Resources */,
 				CAC6F72722A81BC000756AE2 /* ready_r_6.wav in Resources */,
 				CA71971B2340ECAB005A729A /* brushAnimation.json in Resources */,
+				73764F58243B3B38007117D6 /* LapsusPro-Bold.otf in Resources */,
 				CAF9620222995FF3006E3046 /* animal_1.mp3 in Resources */,
 				CA51010122F6EACF00821C25 /* alphavite_22_word_1.wav in Resources */,
 				CAC6F74F22A81D1300756AE2 /* Firework_2.json in Resources */,
@@ -4744,7 +4748,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.7.10;
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds DinosImage";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4773,7 +4777,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.7.10;
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds DinosImage";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4865,7 +4869,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.7.10;
-				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds DinosImage";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

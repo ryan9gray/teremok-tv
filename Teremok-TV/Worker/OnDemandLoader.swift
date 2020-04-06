@@ -26,7 +26,7 @@ class OnDemandLoader {
             case animalsImage = "AnimalsImage"
             case animalsSounds = "AnimalsSounds"
             case monstersImage = "MonstersImage"
-            case dinoImage = "DinoImage"
+            case dinoImage = "DinosImage"
             case colorsGameImage = "ColorsGameImage"
             case colorsGameSounds = "ColorsGameSounds"
 
