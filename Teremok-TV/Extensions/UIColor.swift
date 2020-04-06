@@ -20,6 +20,8 @@ extension UIColor {
         static let lightGray                    = UIColor(hex: "E2E2E2")
 		static let redOne                    	= UIColor(hex: "FF5F7C")
 		static let redTwo                    	= UIColor(hex: "E33A3A")
+        static let orangeOne                    = UIColor(hex: "FF9457")
+        static let orangeTwo                    = UIColor(hex: "FFB927")
     }
     enum Label {
         static let titleText            =  UIColor(hex: "2E334D")
