@@ -112,6 +112,20 @@ extension UIColor {
         static let coralOne                        = UIColor(hex: "F45436")
         static let coralTwo                        = UIColor(hex: "FF8777")
     }
+    
+    enum DinoGame {
+        static let darkGreenOne                     = UIColor(hex: "45988E")
+        static let darkGreenTwo                     = UIColor(hex: "274D5A")
+        
+        static let darkRedOne                       = UIColor(hex: "C93C43")
+        static let darkRedTwo                       = UIColor(hex: "841717")
+        
+        static let lightBlueOne                     = UIColor(hex: "009DB5")
+        static let lightBlueTwo                     = UIColor(hex: "00D2E8")
+        
+        static let lightOrangeOne                   = UIColor(hex: "FFB32F")
+        static let lightOrangeTwo                   = UIColor(hex: "FF9852")
+    }
 }
 
 extension UIColor {
