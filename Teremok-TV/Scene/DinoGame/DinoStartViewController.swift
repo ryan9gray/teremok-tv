@@ -27,9 +27,9 @@ class DinoStartViewController: GameStartViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        startMedium.gradientColors = Style.Gradients.green.value
-        startHard.gradientColors = Style.Gradients.orange.value
+        startEasy.gradientColors = Style.Gradients.DinoGame.red.value
+        startMedium.gradientColors = Style.Gradients.DinoGame.blue.value
+        startHard.gradientColors = Style.Gradients.DinoGame.orange.value
         let menuMusic = URL(fileURLWithPath: Bundle.main.path(forResource: "monster_menu", ofType: "mp3")!)
 
         do {
