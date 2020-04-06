@@ -24,13 +24,15 @@ extension UIColor {
     enum Label {
         static let titleText            =  UIColor(hex: "2E334D")
         static let orange               =  #colorLiteral(red: 0.9921568627, green: 0.431372549, blue: 0.2980392157, alpha: 1)   //FD6E4C
+        static let peach                = UIColor(hex: "E33A3A")
         static let darkBlue             = UIColor(hex: "0058BA")
         static let yellow               = UIColor(hex: "DDFF00")
         static let gray                 =  #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)   //999999
         static let grass                =  #colorLiteral(red: 0.1333333333, green: 0.6431372549, blue: 0.4, alpha: 1)   //22A466
         static let ocean                =  #colorLiteral(red: 0.1647058824, green: 0.8117647059, blue: 0.9960784314, alpha: 1)   //2ACFFE
-		static let red                	= UIColor(hex: "E74C1E")
-		static let redPromo             = UIColor(hex: "F15A48")
+        static let red                    = UIColor(hex: "E74C1E")
+        static let darkRed              = UIColor(hex: "841717")
+        static let redPromo             = UIColor(hex: "F15A48")
     }
 
     enum View {
