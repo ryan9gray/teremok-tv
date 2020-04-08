@@ -23,6 +23,7 @@ protocol SerialBusinessLogic {
 
 protocol SerialDataStore {
     var razdelId: Int? { get set }
+    var razdelTitle: String? { get set }
     var videoItems: [VideoModel] { get set }
     var screen: Serial.Screen { get set }
 
@@ -38,6 +39,7 @@ class SerialInteractor: SerialBusinessLogic, SerialDataStore {
 
     var videoItems: [VideoModel] = []
     var razdelId: Int?
+    var razdelTitle: String?
     var screen: Serial.Screen = .catalog
     var nextShift: Int?
     let countSerials = 10

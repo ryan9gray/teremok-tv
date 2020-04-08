@@ -12,8 +12,6 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
 
     @IBOutlet private var titleLbl: UILabel!
     
-    @IBOutlet var cloudImageView: UIImageView!
-    
     weak var delegate: SerialCellProtocol?
     var item: Serial.Item?
     @IBOutlet var heartBtn: TTAbstractMainButton!
@@ -31,6 +29,12 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
     @IBAction func burgerClick(_ sender: UIButton) {
         delegate?.buttonClick(self)
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        roundCorners(corners: [.bottomLeft, .bottomRight], radius: 12.0)
+    }
+    
     func toLike(me: Bool){
         heartBtn.isSelected = me
     }

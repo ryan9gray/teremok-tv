@@ -126,6 +126,10 @@
 		25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9187236237B800D339C7 /* colorsGameMain.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		25DA918A236237B800D339C7 /* colorsGame_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceColorsGame, ); }; };
 		7302A88C2438A60800E942A6 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7302A88B2438A60800E942A6 /* OpenSans-Bold.ttf */; };
+		735F47BC243D8DE900BD3788 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47BB243D8DE900BD3788 /* NibLoadable.swift */; };
+		735F47BE243D8F2A00BD3788 /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47BD243D8F2A00BD3788 /* MainTitleView.swift */; };
+		735F47C0243D8F5800BD3788 /* MainTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735F47BF243D8F5800BD3788 /* MainTitleView.xib */; };
+		735F47C4243D9B2A00BD3788 /* AbstractMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47C3243D9B2A00BD3788 /* AbstractMainViewController.swift */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
 		CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */; };
@@ -955,6 +959,10 @@
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
 		7302A88B2438A60800E942A6 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		735F47BB243D8DE900BD3788 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		735F47BD243D8F2A00BD3788 /* MainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleView.swift; sourceTree = "<group>"; };
+		735F47BF243D8F5800BD3788 /* MainTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTitleView.xib; sourceTree = "<group>"; };
+		735F47C3243D9B2A00BD3788 /* AbstractMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractMainViewController.swift; sourceTree = "<group>"; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
 		CA0053B7213AF3E600AA187F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardShowable.swift; path = "Teremok-TV/Extensions/KeyboardShowable.swift"; sourceTree = SOURCE_ROOT; };
@@ -1992,6 +2000,9 @@
 				CAE6792C23511A0B00CBCDB3 /* ColorsGameStatView.xib */,
 				CAC0989122FF47ED00EFB01E /* AlphaviteStatView.swift */,
 				CAC0989322FF47FD00EFB01E /* AlphaviteStatView.xib */,
+				735F47BB243D8DE900BD3788 /* NibLoadable.swift */,
+				735F47BF243D8F5800BD3788 /* MainTitleView.xib */,
+				735F47BD243D8F2A00BD3788 /* MainTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3178,6 +3189,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE538F5212FFFED005F7463 /* AbstracViewController.swift */,
+				735F47C3243D9B2A00BD3788 /* AbstractMainViewController.swift */,
 			);
 			path = Abstraction;
 			sourceTree = "<group>";
@@ -3920,6 +3932,7 @@
 				251E5183235A579000221BA2 /* ColorsGame_subject_1_2.wav in Resources */,
 				CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */,
 				CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */,
+				735F47C0243D8F5800BD3788 /* MainTitleView.xib in Resources */,
 				251E5197235A579100221BA2 /* ColorsGame_fun_5.wav in Resources */,
 				CA5100F522F6EACF00821C25 /* alphavite_5_word_1.wav in Resources */,
 				251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */,
@@ -4088,6 +4101,7 @@
 				CAC0988E22FF12A800EFB01E /* UIKitExtensions.swift in Sources */,
 				25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */,
 				CAE1C433211DACE10058C9C6 /* AppLaunchInfoDefaults.swift in Sources */,
+				735F47BC243D8DE900BD3788 /* NibLoadable.swift in Sources */,
 				CA49E491212D330900711324 /* DeviceInfo.swift in Sources */,
 				111187F6231E8D6E00EBEFC0 /* MonsterService.swift in Sources */,
 				254BAACD23D85C1900A6D50C /* ServiceResponse.swift in Sources */,
@@ -4222,6 +4236,7 @@
 				CAE1C42C211DACE10058C9C6 /* LocationCacher.swift in Sources */,
 				CADE0E4221189BE800CC9871 /* SwiftyStoreHelper.swift in Sources */,
 				CA6CB8D72196F7C300429089 /* PurchaseService.swift in Sources */,
+				735F47BE243D8F2A00BD3788 /* MainTitleView.swift in Sources */,
 				11BA248E230551A700A9EA15 /* MonsterMasterInteractor.swift in Sources */,
 				CAE1C475211DC9F70058C9C6 /* Queue.swift in Sources */,
 				CA433FF6224F9EFA00B0788E /* MusicService.swift in Sources */,
@@ -4395,6 +4410,7 @@
 				CA433FF0224F900C00B0788E /* MusicPlaylistResponse.swift in Sources */,
 				CAE3649F2291819D003E891D /* AnimalsRoundsInteractor.swift in Sources */,
 				CA0053C8213BD9CE00AA187F /* URLServices.swift in Sources */,
+				735F47C4243D9B2A00BD3788 /* AbstractMainViewController.swift in Sources */,
 				CA9AA3CF218467CD00019CA7 /* ImageLoader.swift in Sources */,
 				CAE1C45A211DC5BC0058C9C6 /* CommonPresentationLogic.swift in Sources */,
 				CA9A6748213C134000FCB400 /* RazdelInteractor.swift in Sources */,
