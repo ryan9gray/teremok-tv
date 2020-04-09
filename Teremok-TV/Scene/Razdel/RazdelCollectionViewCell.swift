@@ -13,14 +13,12 @@ final class RazdelCollectionViewCell: PreviewImageCollectionViewCell {
 
     @IBOutlet private var titleLbl: UILabel!
     
-    @IBOutlet var cloudImageView: UIImageView!
-    
     weak var delegate: ButtonCellProtocol?
     var item: RazdelVCModel.SerialItem?
     
-    @IBAction func burgerClick(_ sender: Any) {
-        delegate?.buttonClick(self)
-    }
+//    @IBAction func burgerClick(_ sender: Any) {
+//        delegate?.buttonClick(self)
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

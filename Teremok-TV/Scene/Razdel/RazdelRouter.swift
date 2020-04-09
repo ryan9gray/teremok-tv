@@ -30,8 +30,10 @@ class RazdelRouter: NSObject, RazdelRoutingLogic, RazdelDataPassing {
     func navigateToSerial(number: Int){
         let serials = SerialViewController.instantiate(fromStoryboard: .main)
         guard var dataStore = serials.router?.dataStore else { return }
-        guard let id = viewController?.router?.dataStore?.items[safe: number]?.id else { return }
+        guard let razdel = viewController?.router?.dataStore?.items[safe: number] else { return }
+        guard let id = razdel.id else { return }
         dataStore.screen = .razdel(id)
+        dataStore.razdelTitle = razdel.name ?? ""
         viewController?.masterRouter?.presentNextChild(viewController: serials)
     }
     

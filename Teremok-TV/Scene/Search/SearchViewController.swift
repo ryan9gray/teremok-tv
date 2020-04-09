@@ -13,7 +13,7 @@
 import UIKit
 
 protocol SearchDisplayLogic: CommonDisplayLogic {
-    func displaySerial(id: Int)
+    func displaySerial(id: Int, title: String)
     func displayTags(items: [Search.Tag])
 }
 
@@ -93,9 +93,9 @@ class SearchViewController: AbstracViewController, SearchDisplayLogic {
         collectionView.reloadData()
     }
     
-    func displaySerial(id: Int){
+    func displaySerial(id: Int, title: String){
         hidePreloader()
-        router?.navigateToSerial(id: id)
+        router?.navigateToSerial(id: id, title: title)
     }
 
     @objc func search(term: String){

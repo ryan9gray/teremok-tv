@@ -15,7 +15,7 @@ import UIKit
 protocol SearchPresentationLogic: CommonPresentationLogic {
     
     func presentTags(items: [SearchItemResponse])
-    func presentSerial(id: Int)
+    func presentSerial(id: Int, title: String)
 }
 
 class SearchPresenter: SearchPresentationLogic {
@@ -32,9 +32,9 @@ class SearchPresenter: SearchPresentationLogic {
         
     }
     
-    func presentSerial(id: Int) {
+    func presentSerial(id: Int, title: String) {
         
-        viewController?.displaySerial(id: id)
+        viewController?.displaySerial(id: id, title: title)
     }
     
     weak var viewController: SearchDisplayLogic?

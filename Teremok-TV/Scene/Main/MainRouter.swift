@@ -39,6 +39,7 @@ class MainRouter: NSObject, MainRoutingLogic, MainDataPassing {
         guard var dataStore = serials.router?.dataStore else { return }
         if let id = razdel?.razdId {
             dataStore.razdelId = razdel?.razdId
+            dataStore.razdelTitle = razdel?.name
             dataStore.screen = .razdel(id)
         }
         viewController?.masterRouter?.presentNextChild(viewController: serials)

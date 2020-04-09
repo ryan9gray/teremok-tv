@@ -30,11 +30,6 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
         delegate?.buttonClick(self)
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        roundCorners(corners: [.bottomLeft, .bottomRight], radius: 12.0)
-    }
-    
     func toLike(me: Bool){
         heartBtn.isSelected = me
     }

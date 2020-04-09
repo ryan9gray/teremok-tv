@@ -19,6 +19,7 @@ protocol RazdelBusinessLogic {
 
 protocol RazdelDataStore {
     var razdelId: Int? { get set }
+    var razdelTitle: String? { get set }
     var razdeResponse:RazdelResponse?  { get set }
     var items: [RazdelItemResponse] { get set }
     var screen: RazdelVCModel.Screen { get set }
@@ -32,6 +33,7 @@ class RazdelInteractor: RazdelBusinessLogic, RazdelDataStore {
     let service: RazdelProtocol = RazdelService()
 
     var razdelId: Int?
+    var razdelTitle: String?
     var items: [RazdelItemResponse] = []
     
     var nextShift: Int?

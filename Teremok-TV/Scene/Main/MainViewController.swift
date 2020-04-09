@@ -54,7 +54,8 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
         router.dataStore = interactor
     }
 
-    @IBOutlet weak var mainTitleViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet private var mainTitleViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet private var mainTitleView: MainTitleView!
     @IBOutlet private var collectionView: UICollectionView!
     
     var razdels: [Main.RazdelItem] = []
@@ -90,7 +91,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     private func prepareUI(){
         activityView = LottieHUD()
         collectionView.delegate = self
-        collectionView.register(cells: [MainlCollectionViewCell.self])
+        collectionView.register(cells: [RedesignedMainCollectionViewCell.self])
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         cellWidth = view.bounds.width/3.2
 
@@ -139,7 +140,11 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         
         guard let indexPath = collectionView.indexPathForItem(at: visiblePoint) else { return }
-        (collectionView.cellForItem(at: indexPath) as? MainlCollectionViewCell)?.playRainbow()
+        if indexPath.section == 0 {
+            mainTitleView.configureTitle(title: "Развивающие игры")
+        } else {
+            mainTitleView.configureTitle(title: razdels[indexPath.row].title)
+        }
     }
 }
 
@@ -153,22 +158,22 @@ extension MainViewController: UICollectionViewDelegate {
         	router?.navigateToRazdel(number: indexPath.row)
 		}
     }
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
-        
-        if let razdel = cell as? MainlCollectionViewCell {
-            razdel.playAnimation()
-        }
-        if let centerIdx = collectionView.centerCellIndexPath,
-            let centerCell = collectionView.cellForItem(at: centerIdx) as? MainlCollectionViewCell {
-         centerCell.playRainbow()
-        }
-
-    }
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if let razdel = cell as? MainlCollectionViewCell {
-            razdel.pauseAnimation()
-        }
-    }
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
+//        
+//        if let razdel = cell as? RedesignedMainCollectionViewCell {
+//            razdel.playAnimation()
+//        }
+//        if let centerIdx = collectionView.centerCellIndexPath,
+//            let centerCell = collectionView.cellForItem(at: centerIdx) as? MainlCollectionViewCell {
+//         centerCell.playRainbow()
+//        }
+//
+//    }
+//    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        if let razdel = cell as? RedesignedMainCollectionViewCell {
+//            razdel.pauseAnimation()
+//        }
+//    }
 }
 
 extension MainViewController: UICollectionViewDataSource {
@@ -179,16 +184,14 @@ extension MainViewController: UICollectionViewDataSource {
 		section == 0 ? 1 : razdels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withCell: MainlCollectionViewCell.self, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
+        
 		if indexPath.section == 0 {
-			cell.configurate(animation: "ColorCube")
+			cell.gameRazdelConfigure()
 		} else {
-			let razdel = razdels[indexPath.row]
-			cell.configurate(link: razdel.link)
+			cell.configure(title: razdels[indexPath.row].title)
 		}
 
-        cell.setAnimation()
-        cell.addRainbow()
         return cell
     }
 }
