@@ -78,7 +78,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 
 	func showFirework(puzzle: UIView) {
 		let puzzleFrame = puzzle.frame
-		animationView.frame.size = CGSize(width: puzzleFrame.width+40, height: puzzleFrame.height+40)
+		animationView.frame.size = CGSize(width: puzzleFrame.width*2, height: puzzleFrame.height*2)
 		animationView.center = puzzleFrame.center
 
 		view.bringSubviewToFront(animationView)

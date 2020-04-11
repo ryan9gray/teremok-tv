@@ -32,6 +32,7 @@ class PuzzleGameFlow  {
 		)
 		master?.router?.pushChild(controller)//presentModalChild(viewController: controller)
 	}
+	var puzzles = LocalStore.puzzlesDone
 
 	func startPlay(name: String) {
 		let image = UIImage(named: name)
@@ -42,10 +43,11 @@ class PuzzleGameFlow  {
 		)
 		controller.output = PuzzlePlaygroundViewController.Output(
 			finish: { [weak self] in
-				self?.finishRound(image: image)
-				var puzzles = LocalStore.puzzlesDone
-				puzzles.append(name)
-				LocalStore.puzzlesDone = puzzles
+				guard let self = self else { return }
+
+				self.finishRound(image: image)
+				self.puzzles.append(name)
+				LocalStore.puzzlesDone = self.puzzles
 			}
 		)
 		master?.router?.presentModalChild(viewController: controller)
