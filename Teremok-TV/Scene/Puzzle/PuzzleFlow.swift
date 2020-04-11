@@ -18,13 +18,12 @@ class PuzzleGameFlow  {
 	var game = Game(difficulty: .easy)
 
 	func startFlow() {
-
 		openList()
 	}
 
 	func openList() {
 		let controller = PuzzleListViewController.instantiate(fromStoryboard: .puzzle)
-		controller.input = PuzzleListViewController.Input(items: PuzzleMaster.mock)
+		controller.input = PuzzleListViewController.Input(items: PuzzleMaster.firstPack + PuzzleMaster.secondPack)
 		controller.output = PuzzleListViewController.Output(
 			difficulty: { [weak self] dif in
 				self?.game.difficulty = dif
@@ -34,7 +33,8 @@ class PuzzleGameFlow  {
 		master?.router?.pushChild(controller)//presentModalChild(viewController: controller)
 	}
 
-	func startPlay(image: UIImage?) {
+	func startPlay(name: String) {
+		let image = UIImage(named: name)
 		let controller = PuzzlePlaygroundViewController.instantiate(fromStoryboard: .puzzle)
 		controller.input = PuzzlePlaygroundViewController.Input(
 			image: image,
@@ -43,6 +43,9 @@ class PuzzleGameFlow  {
 		controller.output = PuzzlePlaygroundViewController.Output(
 			finish: { [weak self] in
 				self?.finishRound(image: image)
+				var puzzles = LocalStore.puzzlesDone
+				puzzles.append(name)
+				LocalStore.puzzlesDone = puzzles
 			}
 		)
 		master?.router?.presentModalChild(viewController: controller)

@@ -66,6 +66,7 @@ class PuzzleMasterViewController: GameMasterViewController, PuzzleMasterDisplayL
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		homeBtn.gradientColors = [ UIColor.PuzzleGame.blueOne, UIColor.PuzzleGame.blueTwo ]
 		router?.navigateMain()
 		navigationSubscription = router?.subscribeForNavigation { [weak self] canPop in
 			self?.homeBtn.setImage(canPop ? UIImage(named: "icBackShadow") : UIImage(named: "icHomeShadow"), for: .normal)

@@ -14,13 +14,16 @@ class PuzzleListViewController: GameViewController {
 
 	struct Output {
 		let difficulty: (PuzzleGameFlow.Game.Difficulty) -> Void
-		let start: (UIImage?) -> Void
+		let start: (String) -> Void
 
 	}
 
 	struct Input {
-		var items: [PuzzleMaster.Puzzle]
+		var items: [String]
 	}
+
+	var dones: Set<String> = []
+	
 	@IBOutlet private var diffButtons: [KeyButton]!
 	@IBOutlet private var startEasy: KeyButton!
 	@IBOutlet private var startMedium: KeyButton!
@@ -37,23 +40,25 @@ class PuzzleListViewController: GameViewController {
         super.viewDidLoad()
 
         prepareUI()
-		displayTags(items: input.items)
     }
 
-	func prepareUI() {
-		startEasy.setTitleColor(UIColor.Label.darkBlue, for: .normal)
-		startEasy.gradientColors = Style.Gradients.green.value
-		startMedium.gradientColors = Style.Gradients.orange.value
-		startHard.gradientColors = Style.Gradients.red.value
-		collectionView.delegate = self
-		collectionView.dataSource = self
-		let cells = [SearchCharacterCollectionViewCell.self, LoadingCollectionViewCell.self]
-		collectionView.register(cells: cells)
-	}
-	func displayTags(items: [PuzzleMaster.Puzzle]){
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+
+		dones = Set(LocalStore.puzzlesDone)
 		collectionView.reloadData()
 	}
 
+	func prepareUI() {
+		startEasy.setTitleColor(UIColor.Label.darkBlue, for: .normal)
+		startEasy.gradientColors = [ UIColor.PuzzleGame.greenOne, UIColor.PuzzleGame.greenTwo ]
+		startMedium.gradientColors = [ UIColor.PuzzleGame.orangeOne, UIColor.PuzzleGame.orangeTwo ]
+		startHard.gradientColors = [ UIColor.PuzzleGame.redOne, UIColor.PuzzleGame.redTwo ]
+		collectionView.delegate = self
+		collectionView.dataSource = self
+		let cells = [PuzzleCollectionViewCell.self, LoadingCollectionViewCell.self]
+		collectionView.register(cells: cells)
+	}
 }
 extension PuzzleListViewController: UICollectionViewDataSource {
 
@@ -65,8 +70,10 @@ extension PuzzleListViewController: UICollectionViewDataSource {
 			let cell = collectionView.dequeueReusableCell(withCell: LoadingCollectionViewCell.self, for: indexPath)
 			return cell
 		}
-		let cell = collectionView.dequeueReusableCell(withCell: SearchCharacterCollectionViewCell.self, for: indexPath)
-		cell.linktoLoad = input.items[indexPath.row].imageLink
+		let cell = collectionView.dequeueReusableCell(withCell: PuzzleCollectionViewCell.self, for: indexPath)
+
+		let name = input.items[indexPath.row]
+		cell.setImage(UIImage(named: name), done: dones.contains(name))
 		return cell
 	}
 
@@ -74,8 +81,8 @@ extension PuzzleListViewController: UICollectionViewDataSource {
 extension PuzzleListViewController: UICollectionViewDelegate {
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		let cell = collectionView.cellForItem(at: indexPath) as? SearchCharacterCollectionViewCell
-		output.start(cell?.imageView.image)
+		//let cell = collectionView.cellForItem(at: indexPath) as? PuzzleCollectionViewCell
+		output.start(input.items[indexPath.row])
 	}
 	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 

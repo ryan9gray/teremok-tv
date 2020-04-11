@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import Lottie
 
 class PuzzlePlaygroundViewController: GameViewController {
 	@IBOutlet private var previewView: UIImageView!
-	@IBOutlet var scrollView: UIScrollView!
-	@IBOutlet var pieceStackView: UIStackView!
-	@IBOutlet var pieceSecondStackView: UIStackView!
+	@IBOutlet private var scrollView: UIScrollView!
+	@IBOutlet private var pieceStackView: UIStackView!
+	@IBOutlet private var pieceSecondStackView: UIStackView!
+	@IBOutlet private var restartButton: KeyButton!
+	@IBOutlet private var playButton: KeyButton!
+	@IBOutlet private var previewBackView: UIView!
+	private var animationView: AnimationView = AnimationView()
+
+	@IBAction func restartTap(_ sender: Any) {
+
+	}
+
+	@IBAction func playTap(_ sender: Any) {
+		createPuzzle()
+		playButton.isHidden = true
+		previewView.alpha = 0.2
+	}
 
 	var input: Input!
 	var output: Output!
@@ -34,18 +49,53 @@ class PuzzlePlaygroundViewController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		restartButton.gradientColors = [ UIColor.PuzzleGame.orangeTwo, UIColor.PuzzleGame.orangeTwo ]
+		playButton.gradientColors = [ UIColor.PuzzleGame.greenOne, UIColor.PuzzleGame.greenTwo ]
+
+		previewBackView.layer.borderWidth = 4
+		previewBackView.layer.borderColor = UIColor.PuzzleGame.blueOne.cgColor
+		showPreview()
+		animationView = AnimationView(name: "puzzle_firework")
+		view.addSubview(animationView)
+		animationView.isHidden = true
+		animationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+		animationView.contentMode = .scaleAspectFill
+		animationView.loopMode = .playOnce
+		animationView.animationSpeed = 1.0
 	}
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
-		createPuzzle()
+	}
+
+	func showPreview() {
+		guard let image = input.image?.resizeImageUsingVImage(previewView.frame.size) else { return }
+		previewView.image = image
+		previewView.alpha = 1
+
+	}
+
+	func showFirework(puzzle: UIView) {
+		let puzzleFrame = puzzle.frame
+		animationView.frame.size = CGSize(width: puzzleFrame.width+40, height: puzzleFrame.height+40)
+		animationView.center = puzzleFrame.center
+
+		view.bringSubviewToFront(animationView)
+		animationView.isHidden = false
+		animationView.play { [weak animationView] finish in
+			animationView?.isHidden = true
+		}
+	}
+
+	func restart() {
+		pieceStackView.subviews.forEach { $0.removeFromSuperview() }
+		pieceSecondStackView.subviews.forEach { $0.removeFromSuperview() }
 	}
 
 	private func createPuzzle() {
 		guard let image = input.image?.resizeImageUsingVImage(previewView.frame.size) else { return }
 
-		previewView.image = image
 		let numRows = input.difficulty.fieldSize
 		let numColumns = input.difficulty.fieldSize
 
@@ -145,6 +195,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 				targetImg.isUserInteractionEnabled = false
 				correctCount += 1
 				print(Int(correctCount))
+				showFirework(puzzle: targetImg)
 				if correctCount == input.difficulty.fieldSize*input.difficulty.fieldSize {
 					output.finish()
 				}

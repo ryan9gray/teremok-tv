@@ -18,6 +18,66 @@ enum PuzzleMaster {
 		let imageLink: String
 	}
 
+	static let firstPack: [String] = [
+		"puzzle_1",
+		"puzzle_2",
+		"puzzle_3",
+		"puzzle_4",
+		"puzzle_5",
+		"puzzle_6",
+		"puzzle_7",
+		"puzzle_8",
+		"puzzle_9",
+		"puzzle_10",
+		"puzzle_11",
+		"puzzle_12",
+		"puzzle_13",
+		"puzzle_14",
+		"puzzle_15",
+	]
+
+	static let secondPack: [String] = [
+		"puzzle_16",
+		"puzzle_17",
+		"puzzle_18",
+		"puzzle_19",
+		"puzzle_20",
+		"puzzle_21",
+		"puzzle_22",
+		"puzzle_23",
+		"puzzle_24",
+		"puzzle_25",
+		"puzzle_26",
+		"puzzle_27",
+		"puzzle_28",
+		"puzzle_29",
+		"puzzle_30",
+	]
+
+	static let thirdPack: [String] = [
+		"puzzle_30",
+		"puzzle_31",
+		"puzzle_32",
+		"puzzle_33",
+		"puzzle_34",
+		"puzzle_35",
+		"puzzle_36",
+		"puzzle_37",
+		"puzzle_38",
+		"puzzle_39",
+		"puzzle_40",
+		"puzzle_41",
+		"puzzle_42",
+		"puzzle_43",
+		"puzzle_44",
+		"puzzle_45",
+		"puzzle_46",
+		"puzzle_47",
+		"puzzle_48",
+		"puzzle_49",
+		"puzzle_50",
+	]
+
 	static let mock: [Puzzle] = [
 		Puzzle(imageLink: "https://i.pinimg.com/originals/98/6a/c3/986ac391b218a3a9ad750441e8cf1e42.jpg"),
 		Puzzle(imageLink: "https://i.pinimg.com/564x/a7/84/e9/a784e90418d233e65ebe2cb3639a02da.jpg"),

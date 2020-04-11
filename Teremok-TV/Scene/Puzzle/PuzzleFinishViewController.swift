@@ -11,7 +11,7 @@ import Spring
 
 class PuzzleFinishViewController: GameViewController {
 	@IBOutlet private var playButton: KeyButton!
-	@IBOutlet private var titleLabel: StrokeLabel!
+	@IBOutlet private var titleLabel: UILabel!
 	@IBOutlet private var imageContainer: DesignableView!
 	@IBOutlet private var imagewView: UIImageView!
 
@@ -34,9 +34,10 @@ class PuzzleFinishViewController: GameViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		titleLabel.addTxtShadow()
 		imagewView.image = input.image
 		titleLabel.text = "Молодец! Выбери следующую картинку!"
-        // Do any additional setup after loading the view.
+		playButton.gradientColors = [ UIColor.PuzzleGame.blueOne, UIColor.PuzzleGame.blueTwo ]
     }
 
 }
