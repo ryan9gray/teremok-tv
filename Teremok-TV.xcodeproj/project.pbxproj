@@ -134,6 +134,10 @@
 		735F47C0243D8F5800BD3788 /* MainTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735F47BF243D8F5800BD3788 /* MainTitleView.xib */; };
 		735F47C4243D9B2A00BD3788 /* AbstractMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47C3243D9B2A00BD3788 /* AbstractMainViewController.swift */; };
 		739ABCDB243F3F3F009E7561 /* MainCarouseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ABCDA243F3F3F009E7561 /* MainCarouseLayout.swift */; };
+		73C7CE8824405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */; };
+		73C7CE8A24405DFD0006B9E0 /* ExtendedMainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */; };
+		73C7CE8E244078410006B9E0 /* MoreSerialsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */; };
+		73C7CE8F244078410006B9E0 /* MoreSerialsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
 		CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */; };
@@ -971,6 +975,10 @@
 		735F47BF243D8F5800BD3788 /* MainTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTitleView.xib; sourceTree = "<group>"; };
 		735F47C3243D9B2A00BD3788 /* AbstractMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractMainViewController.swift; sourceTree = "<group>"; };
 		739ABCDA243F3F3F009E7561 /* MainCarouseLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCarouseLayout.swift; sourceTree = "<group>"; };
+		73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedMainCollectionViewCell.swift; sourceTree = "<group>"; };
+		73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtendedMainCollectionViewCell.xib; sourceTree = "<group>"; };
+		73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSerialsCollectionViewCell.swift; sourceTree = "<group>"; };
+		73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreSerialsCollectionViewCell.xib; sourceTree = "<group>"; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
 		CA0053B7213AF3E600AA187F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardShowable.swift; path = "Teremok-TV/Extensions/KeyboardShowable.swift"; sourceTree = SOURCE_ROOT; };
@@ -1979,6 +1987,10 @@
 				CA0053C0213BD46900AA187F /* MainlCollectionViewCell.xib */,
 				7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */,
 				7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */,
+				73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */,
+				73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */,
+				73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */,
+				73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -3743,11 +3755,13 @@
 				2546D8F023E225710063EF0B /* ColorsGame_subject_2_4.wav in Resources */,
 				CAC6F72C22A81BC000756AE2 /* ready_r_8.wav in Resources */,
 				CAF9620722995FF3006E3046 /* animal_36.mp3 in Resources */,
+				73C7CE8F244078410006B9E0 /* MoreSerialsCollectionViewCell.xib in Resources */,
 				CA5100E622F6EACF00821C25 /* alphavite_2_word_2.wav in Resources */,
 				CA04864422A845A60017B8A2 /* Round_3.json in Resources */,
 				CAF94CCF2160BECF000E8183 /* Welcome.storyboard in Resources */,
 				251E5188235A579000221BA2 /* ColorsGame_subject_3_2.wav in Resources */,
 				CAD16DE32147E23000A82DBB /* Numeral.json in Resources */,
+				73C7CE8A24405DFD0006B9E0 /* ExtendedMainCollectionViewCell.xib in Resources */,
 				2549738423F2F76E00519288 /* AppIconAltGreen@2x.png in Resources */,
 				CAC6F73322A81BC000756AE2 /* fun_6.mp3 in Resources */,
 				CAA7325F21315456006276B4 /* Alerts.storyboard in Resources */,
@@ -4239,6 +4253,7 @@
 				CAB59FD122F315D800D7CA71 /* AlphaviteMasterModels.swift in Sources */,
 				CA52F354223D2DF40058194E /* MusicMasterInteractor.swift in Sources */,
 				11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */,
+				73C7CE8824405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift in Sources */,
 				CAF94CC3215E80F0000E8183 /* CarouselCollectionViewLayout.swift in Sources */,
 				CAC2D5242115A68200945003 /* AppInfoWorker.swift in Sources */,
 				CAB59FCE22F315D800D7CA71 /* AlphaviteMasterPresenter.swift in Sources */,
@@ -4254,6 +4269,7 @@
 				11BA248E230551A700A9EA15 /* MonsterMasterInteractor.swift in Sources */,
 				CAE1C475211DC9F70058C9C6 /* Queue.swift in Sources */,
 				CA433FF6224F9EFA00B0788E /* MusicService.swift in Sources */,
+				73C7CE8E244078410006B9E0 /* MoreSerialsCollectionViewCell.swift in Sources */,
 				CAA8844D21381D9900E27F7A /* ChildProfileAddPresenter.swift in Sources */,
 				CAE1C42F211DACE10058C9C6 /* SqliteCacher+MappableCacherType.swift in Sources */,
 				CA10414822629A0B005D62DE /* SearchMusicPresenter.swift in Sources */,
