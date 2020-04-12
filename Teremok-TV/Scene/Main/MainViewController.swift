@@ -59,6 +59,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     @IBOutlet private var collectionView: UICollectionView!
     
     var razdels: [Main.RazdelItem] = []
+    var extendedRazdels = Set<Main.RazdelItem>()
     
     var cellWidth: CGFloat = 0
     var audioPlayer: AVAudioPlayer?
@@ -91,7 +92,8 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     private func prepareUI(){
         activityView = LottieHUD()
         collectionView.delegate = self
-        collectionView.register(cells: [RedesignedMainCollectionViewCell.self])
+        let cells = [RedesignedMainCollectionViewCell.self, ExtendedMainCollectionViewCell.self]
+        collectionView.register(cells: cells)
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         cellWidth = view.bounds.width/3.2
 
@@ -155,25 +157,11 @@ extension MainViewController: UICollectionViewDelegate {
 		if indexPath.section == 0 {
 			router?.navigateToGameList()
 		} else {
-        	router?.navigateToRazdel(number: indexPath.row)
+            extendedRazdels.insert(razdels[indexPath.row])
+            collectionView.reloadItems(at: [indexPath])
+        	//router?.navigateToRazdel(number: indexPath.row)
 		}
     }
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
-//        
-//        if let razdel = cell as? RedesignedMainCollectionViewCell {
-//            razdel.playAnimation()
-//        }
-//        if let centerIdx = collectionView.centerCellIndexPath,
-//            let centerCell = collectionView.cellForItem(at: centerIdx) as? MainlCollectionViewCell {
-//         centerCell.playRainbow()
-//        }
-//
-//    }
-//    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        if let razdel = cell as? RedesignedMainCollectionViewCell {
-//            razdel.pauseAnimation()
-//        }
-//    }
 }
 
 extension MainViewController: UICollectionViewDataSource {
@@ -184,15 +172,22 @@ extension MainViewController: UICollectionViewDataSource {
 		section == 0 ? 1 : razdels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
-        
-		if indexPath.section == 0 {
-			cell.gameRazdelConfigure()
-		} else {
-			cell.configure(title: razdels[indexPath.row].title)
-		}
+        if extendedRazdels.contains(razdels[indexPath.row]) && indexPath.section != 0 {
+            let cell = collectionView.dequeueReusableCell(withCell: ExtendedMainCollectionViewCell.self, for: indexPath)
+            
+            return cell
+            
+        } else {
+            let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
+                   
+            if indexPath.section == 0 {
+                cell.gameRazdelConfigure()
+            } else {
+                cell.configure(title: razdels[indexPath.row].title)
+            }
 
-        return cell
+            return cell
+        }
     }
 }
 extension MainViewController: UICollectionViewDelegateFlowLayout {
