@@ -120,6 +120,14 @@ enum APIMethod {
             return .colorsGame
         }
     }
+    enum DinosaursGame: String, ServiceMethod {
+        case getStat
+        case sendStat
+        
+        var controller: APIController {
+            return .dinosaursGame
+        }
+    }
 }
 
 protocol ServiceMethod {
@@ -165,6 +173,7 @@ enum APIController: String {
     case analytic
     case alphabetGame
     case monstersGame
+    case dinosaursGame
     case colorsGame
 
     var methodType: ServiceMethod.Type {
@@ -179,6 +188,7 @@ enum APIController: String {
             case .analytic: return APIMethod.Analytic.self
             case .alphabetGame: return APIMethod.AlphabetGame.self
             case .monstersGame: return APIMethod.MonstersGame.self
+            case .dinosaursGame: return APIMethod.DinosaursGame.self
             case .colorsGame: return APIMethod.ColorsGame.self
         }
     }

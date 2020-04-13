@@ -18,7 +18,7 @@ protocol DinoStatisticDataStore {
 
 class DinoStatisticInteractor: DinoStatisticBusinessLogic, DinoStatisticDataStore {
     var presenter: DinoStatisticPresentationLogic?
-    let service: MonsterServiceProtocol = MonsterService()
+    let service: DinoServiceProtocol = DinoService()
     
     func fetchStat() {
         service.getStat { [weak self] result in

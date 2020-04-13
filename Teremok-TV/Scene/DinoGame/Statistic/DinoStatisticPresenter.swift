@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DinoStatisticPresentationLogic: CommonPresentationLogic {
-    func presentStat(response: MonsterStatisticResponse)
+    func presentStat(response: DinoStatisticResponse)
 }
 
 class DinoStatisticPresenter: DinoStatisticPresentationLogic {
@@ -19,7 +19,7 @@ class DinoStatisticPresenter: DinoStatisticPresentationLogic {
         return viewController
     }
     
-    func presentStat(response: MonsterStatisticResponse) {
+    func presentStat(response: DinoStatisticResponse) {
         viewController?.showStats(DinoStatisticViewController.Input(stat: response))
     }
 }

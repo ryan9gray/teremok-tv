@@ -10,7 +10,7 @@ import UIKit
 
 class DinoGameFlow {
     weak var master: DinoMasterViewController?
-    private let service: MonsterServiceProtocol = MonsterService()
+    private let service: DinoServiceProtocol = DinoService()
 
     init(master: DinoMasterViewController) {
         self.master = master
@@ -81,7 +81,7 @@ class DinoGameFlow {
             self.openNext(isWon: gameResults.gameWon)
         })
         master?.router?.presentModalChild(viewController: controller)
-        service.sendStat(statistic: MonsterStatisticRequest(round: game.difficulty.rawValue, seconds: result)) { _ in }
+        service.sendStat(statistic: DinoStatisticRequest(round: game.difficulty.rawValue, seconds: result)) { _ in }
     }
     
     private func openNext(isWon: Bool) {

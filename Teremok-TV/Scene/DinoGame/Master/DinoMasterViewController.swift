@@ -84,7 +84,7 @@ class DinoMasterViewController: GameMasterViewController, DinoMasterDisplayLogic
 
     deinit {
         track(
-            Events.Time.MonsterFlow,
+            Events.Time.DinoFlow,
             trackedProperties: [Keys.Timer  ~>> NSDate().timeIntervalSince(startTime)]
         )
         if ServiceConfiguration.activeConfiguration().logging {

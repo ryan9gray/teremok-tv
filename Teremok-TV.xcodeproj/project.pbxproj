@@ -138,6 +138,10 @@
 		73764F55243B0646007117D6 /* DinoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F53243B0646007117D6 /* DinoCollectionViewCell.swift */; };
 		73764F56243B0646007117D6 /* DinoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73764F54243B0646007117D6 /* DinoCollectionViewCell.xib */; };
 		73764F58243B3B38007117D6 /* LapsusPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73764F57243B3B37007117D6 /* LapsusPro-Bold.otf */; };
+		73B154012444952700FD4994 /* DinoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B154002444952700FD4994 /* DinoService.swift */; };
+		73B15403244495D600FD4994 /* DinoStatisticResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B15402244495D600FD4994 /* DinoStatisticResponse.swift */; };
+		73B154062444967700FD4994 /* DinoGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B154052444967700FD4994 /* DinoGetStatCommand.swift */; };
+		73B154082444968700FD4994 /* DinoSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B154072444968700FD4994 /* DinoSendStatCommand.swift */; };
 		73C479E6243A6D73004F8802 /* DinoMasterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479E5243A6D73004F8802 /* DinoMasterModels.swift */; };
 		73C479E8243A6EC5004F8802 /* DinoMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479E7243A6EC5004F8802 /* DinoMasterPresenter.swift */; };
 		73C479EA243A70CB004F8802 /* Dino.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C479E9243A70CB004F8802 /* Dino.storyboard */; };
@@ -983,6 +987,10 @@
 		73764F53243B0646007117D6 /* DinoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoCollectionViewCell.swift; sourceTree = "<group>"; };
 		73764F54243B0646007117D6 /* DinoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DinoCollectionViewCell.xib; sourceTree = "<group>"; };
 		73764F57243B3B37007117D6 /* LapsusPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LapsusPro-Bold.otf"; sourceTree = "<group>"; };
+		73B154002444952700FD4994 /* DinoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoService.swift; sourceTree = "<group>"; };
+		73B15402244495D600FD4994 /* DinoStatisticResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoStatisticResponse.swift; sourceTree = "<group>"; };
+		73B154052444967700FD4994 /* DinoGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoGetStatCommand.swift; sourceTree = "<group>"; };
+		73B154072444968700FD4994 /* DinoSendStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoSendStatCommand.swift; sourceTree = "<group>"; };
 		73C479E5243A6D73004F8802 /* DinoMasterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterModels.swift; sourceTree = "<group>"; };
 		73C479E7243A6EC5004F8802 /* DinoMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterPresenter.swift; sourceTree = "<group>"; };
 		73C479E9243A70CB004F8802 /* Dino.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dino.storyboard; path = ../../../Desktop/Dino.storyboard; sourceTree = "<group>"; };
@@ -1877,6 +1885,15 @@
 			path = Subscription;
 			sourceTree = "<group>";
 		};
+		73B154042444965E00FD4994 /* Dino */ = {
+			isa = PBXGroup;
+			children = (
+				73B154052444967700FD4994 /* DinoGetStatCommand.swift */,
+				73B154072444968700FD4994 /* DinoSendStatCommand.swift */,
+			);
+			path = Dino;
+			sourceTree = "<group>";
+		};
 		73C479E0243A6915004F8802 /* DinoGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -2366,6 +2383,7 @@
 			isa = PBXGroup;
 			children = (
 				CAAFD14A2348F06A005E086C /* ColorsGameService.swift */,
+				73B154002444952700FD4994 /* DinoService.swift */,
 				111187F5231E8D6E00EBEFC0 /* MonsterService.swift */,
 				CA91027822FF5E7E00140D5A /* AlphabetService.swift */,
 				CA61D87F22A1D49700E3D603 /* AnimalsGameService.swift */,
@@ -2791,6 +2809,7 @@
 		CAC2D4FB2115A68200945003 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				73B15402244495D600FD4994 /* DinoStatisticResponse.swift */,
 				11604AD6231F8107001D1C7F /* MonsterStatisticResponse.swift */,
 				CA91027B22FF5F0D00140D5A /* AlphaviteStatisticResponse.swift */,
 				CA7699A022B1393F003ECFC2 /* AnimalsStatResponse.swift */,
@@ -2815,6 +2834,7 @@
 			isa = PBXGroup;
 			children = (
 				CAAFD1472348EF4E005E086C /* ColorsGame */,
+				73B154042444965E00FD4994 /* Dino */,
 				11604AD8231F830B001D1C7F /* Monster */,
 				CA91027A22FF5EDB00140D5A /* Alphavite */,
 				CA1AB63E22ECC266003A2584 /* Analytic */,
@@ -4329,6 +4349,7 @@
 				CAC1126521562F5900678D1B /* RequestCacheCleaner.swift in Sources */,
 				CAE09480214CF43C0052F283 /* ResetPassInteractor.swift in Sources */,
 				11604ADC231F8494001D1C7F /* MonsterSendStatCommand.swift in Sources */,
+				73B15403244495D600FD4994 /* DinoStatisticResponse.swift in Sources */,
 				CAB59FD322F315D800D7CA71 /* AlphaviteMasterInteractor.swift in Sources */,
 				CA62A72323512B8F0083FD4F /* ColorsGameStatInteractor.swift in Sources */,
 				CAF61D90217E118E00035EE9 /* TTPlayerViewController.swift in Sources */,
@@ -4337,6 +4358,7 @@
 				CA149973216F63CB008FBEE9 /* GetFavoritesCommand.swift in Sources */,
 				CA52DF3A22907EC000458EE5 /* AnimalsMasterRouter.swift in Sources */,
 				CA09979121A573490051F41D /* SecurityCodeViewController.swift in Sources */,
+				73B154062444967700FD4994 /* DinoGetStatCommand.swift in Sources */,
 				CA61D87822A1C95D00E3D603 /* ListPacksCommand .swift in Sources */,
 				CA7AAF4B2170A25000747D4B /* ChildProfileInteractor.swift in Sources */,
 				CAEEF2302299C0F900AF5AF6 /* ChoiceAnimalViewController.swift in Sources */,
@@ -4459,6 +4481,7 @@
 				CAC2D5252115A68200945003 /* APIMethod.swift in Sources */,
 				CAB5A4512171F18200A00C8E /* ChildsWorker.swift in Sources */,
 				CAE1C429211DACE10058C9C6 /* SqliteCacher+ExirableCacherType.swift in Sources */,
+				73B154012444952700FD4994 /* DinoService.swift in Sources */,
 				CAFF98592325313C00003076 /* ColorsStartViewController.swift in Sources */,
 				CA49E47F212D2ED300711324 /* SettingsRouter.swift in Sources */,
 				CAC2D52A2115A68300945003 /* UIColor.swift in Sources */,
@@ -4490,6 +4513,7 @@
 				CAC2D52D2115A68300945003 /* String.swift in Sources */,
 				CAA884682139222C00E27F7A /* CacheableCommand.swift in Sources */,
 				251A04472379E6F8001644D4 /* Asset.swift in Sources */,
+				73B154082444968700FD4994 /* DinoSendStatCommand.swift in Sources */,
 				CAFF984823252D3E00003076 /* ImageFillter.swift in Sources */,
 				CAE3649022918181003E891D /* AnimalsMainRouter.swift in Sources */,
 				CA52F351223D2DF40058194E /* MusicMasterRouter.swift in Sources */,

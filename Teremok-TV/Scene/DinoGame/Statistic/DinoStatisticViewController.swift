@@ -43,7 +43,7 @@ class DinoStatisticViewController: UIViewController, DinoStatisticDisplayLogic {
     var activityView: LottieHUD?
 
     struct Input {
-        var stat: MonsterStatisticResponse
+        var stat: DinoStatisticResponse
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
