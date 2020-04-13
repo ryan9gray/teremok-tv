@@ -25,7 +25,7 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let cells = [RazdelCollectionViewCell.self, MoreSerialsCollectionViewCell.self, LoadingCollectionViewCell.self]
+        let cells = [RazdelCollectionViewCell.self, MoreSerialsCollectionViewCell.self, LoadingCollectionViewCell.self, VideoCollectionViewCell.self]
         collectionView.register(cells: cells)
         
         collectionView.delegate = self

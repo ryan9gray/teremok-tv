@@ -59,7 +59,6 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     @IBOutlet private var collectionView: UICollectionView!
     
     var razdels: [Main.RazdelItem] = []
-    var extendedRazdels = Set<Main.RazdelItem>()
     
     var cellWidth: CGFloat = 0
     var audioPlayer: AVAudioPlayer?
@@ -157,9 +156,7 @@ extension MainViewController: UICollectionViewDelegate {
 		if indexPath.section == 0 {
 			router?.navigateToGameList()
 		} else {
-            extendedRazdels.insert(razdels[indexPath.row])
-            collectionView.reloadItems(at: [indexPath])
-        	//router?.navigateToRazdel(number: indexPath.row)
+        	router?.navigateToRazdel(number: indexPath.row)
 		}
     }
 }
@@ -169,25 +166,18 @@ extension MainViewController: UICollectionViewDataSource {
 		2
 	}
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		section == 0 ? 1 : razdels.count
+		return section == 0 ? 1 : razdels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if extendedRazdels.contains(razdels[indexPath.row]) && indexPath.section != 0 {
-            let cell = collectionView.dequeueReusableCell(withCell: ExtendedMainCollectionViewCell.self, for: indexPath)
-            
-            return cell
-            
-        } else {
-            let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
                    
-            if indexPath.section == 0 {
-                cell.gameRazdelConfigure()
-            } else {
-                cell.configure(title: razdels[indexPath.row].title)
-            }
-
-            return cell
+        if indexPath.section == 0 {
+            cell.gameRazdelConfigure()
+        } else {
+            cell.configure(title: razdels[indexPath.row].title)
         }
+
+        return cell
     }
 }
 extension MainViewController: UICollectionViewDelegateFlowLayout {
