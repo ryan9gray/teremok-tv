@@ -16,6 +16,7 @@ import AVFoundation
 
 protocol MainDisplayLogic: CommonDisplayLogic {
     func display(razdels: [Main.RazdelItem])
+    func seriesDisplay(razdelId: Int, show: [RazdelVCModel.SerialItem])
 }
 
 class MainViewController: AbstractMainViewController, MainDisplayLogic {
@@ -59,6 +60,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     @IBOutlet private var collectionView: UICollectionView!
     
     var razdels: [Main.RazdelItem] = []
+    var extendedRazdels: [Main.RazdelItem : [RazdelVCModel.SerialItem]] = [:]
     
     var cellWidth: CGFloat = 0
     var audioPlayer: AVAudioPlayer?
@@ -147,6 +149,13 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
             mainTitleView.configureTitle(title: razdels[indexPath.row].title)
         }
     }
+    
+    func seriesDisplay(razdelId: Int, show: [RazdelVCModel.SerialItem]) {
+        hidePreloader()
+        extendedRazdels[razdels[razdelId]] = show
+        //TO DO: возможно отрефакторить
+        collectionView.reloadItems(at: [IndexPath(row: razdelId, section: 1)])
+    }
 }
 
 extension MainViewController: UICollectionViewDelegate {
@@ -156,7 +165,10 @@ extension MainViewController: UICollectionViewDelegate {
 		if indexPath.section == 0 {
 			router?.navigateToGameList()
 		} else {
-        	router?.navigateToRazdel(number: indexPath.row)
+            if !extendedRazdels.keys.contains(razdels[indexPath.row]) {
+                showPreloader()
+                interactor?.getSeriesRazdelContent(id: indexPath.row)
+            }
 		}
     }
 }
@@ -169,20 +181,35 @@ extension MainViewController: UICollectionViewDataSource {
 		return section == 0 ? 1 : razdels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
-                   
-        if indexPath.section == 0 {
-            cell.gameRazdelConfigure()
+        let razdel = razdels[indexPath.row]
+        if extendedRazdels.keys.contains(razdel) {
+            let cell = collectionView.dequeueReusableCell(withCell: ExtendedMainCollectionViewCell.self, for: indexPath)
+            cell.serials = extendedRazdels[razdel] ?? []
+            cell.razdelNumber = indexPath.row
+            cell.delegate = self
+            return cell
         } else {
-            cell.configure(title: razdels[indexPath.row].title)
-        }
+            let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
+                       
+            if indexPath.section == 0 {
+                cell.gameRazdelConfigure()
+            } else {
+                cell.configure(title: razdels[indexPath.row].title)
+            }
 
-        return cell
+            return cell
+        }
     }
 }
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: cellWidth, height: collectionView.bounds.height)
+    }
+}
+
+extension MainViewController: DidSelectRazdelAt {
+    func goToRazdel(razdel: Int) {
+        self.router?.navigateToRazdel(number: razdel)
     }
 }

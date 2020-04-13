@@ -14,6 +14,7 @@ import UIKit
 
 protocol MainPresentationLogic: CommonPresentationLogic {
     func presentMainRazdels(_ models: [RazdelModel])
+    func presentSeriesRazdel(razdelId: Int, items: [RazdelItemResponse])
 }
 
 class MainPresenter: MainPresentationLogic {
@@ -29,5 +30,16 @@ class MainPresenter: MainPresentationLogic {
         
         let items = models.map { Main.RazdelItem(title: $0.name ?? "", link: $0.animationUrl ?? "") }
         viewController?.display(razdels: items)
+    }
+    
+    func presentSeriesRazdel(razdelId: Int, items: [RazdelItemResponse]){
+        
+        var serials: [RazdelVCModel.SerialItem] = []
+        for item in items {
+            let serial = RazdelVCModel.SerialItem(name: item.name ?? "", imageUrl: item.poster ?? "", description: item.description ?? "")
+            serials.append(serial)
+        }
+        
+        viewController?.seriesDisplay(razdelId: razdelId, show: serials)
     }
 }

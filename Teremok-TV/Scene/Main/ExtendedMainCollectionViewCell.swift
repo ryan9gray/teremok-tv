@@ -16,9 +16,8 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet private var collectionView: UICollectionView!
     
-    var serials: [RazdelVCModel.SerialItem] = []
-    
     //TO DO: отрефакторить это
+    var serials: [RazdelVCModel.SerialItem] = []
     var razdelNumber: Int = 0
     var delegate: DidSelectRazdelAt?
     
@@ -50,7 +49,7 @@ extension ExtendedMainCollectionViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return 2
+            return serials.count
         } else {
             return 1
         }
@@ -59,6 +58,7 @@ extension ExtendedMainCollectionViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withCell: RazdelCollectionViewCell.self, for: indexPath)
+            cell.configure(item: serials[indexPath.row])
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withCell: MoreSerialsCollectionViewCell.self, for: indexPath)
