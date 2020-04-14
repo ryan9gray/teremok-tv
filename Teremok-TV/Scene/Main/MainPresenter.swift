@@ -14,7 +14,7 @@ import UIKit
 
 protocol MainPresentationLogic: CommonPresentationLogic {
     func presentMainRazdels(_ models: [RazdelModel])
-    func presentSeriesRazdel(razdelId: Int, items: [RazdelItemResponse])
+    func presentSeriesRazdel(indexPath: IndexPath, items: [RazdelItemResponse])
 }
 
 class MainPresenter: MainPresentationLogic {
@@ -32,7 +32,7 @@ class MainPresenter: MainPresentationLogic {
         viewController?.display(razdels: items)
     }
     
-    func presentSeriesRazdel(razdelId: Int, items: [RazdelItemResponse]){
+    func presentSeriesRazdel(indexPath: IndexPath, items: [RazdelItemResponse]){
         
         var serials: [RazdelVCModel.SerialItem] = []
         for item in items {
@@ -40,6 +40,6 @@ class MainPresenter: MainPresentationLogic {
             serials.append(serial)
         }
         
-        viewController?.seriesDisplay(razdelId: razdelId, show: serials)
+        viewController?.seriesDisplay(indexPath: indexPath, show: serials)
     }
 }

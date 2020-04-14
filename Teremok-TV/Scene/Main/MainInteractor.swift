@@ -14,7 +14,7 @@ import UIKit
 
 protocol MainBusinessLogic {
     func getMainContent()
-    func getSeriesRazdelContent(id: Int)
+    func getSeriesRazdelContent(razdelId: Int, indexPath: IndexPath)
 }
 
 protocol MainDataStore {
@@ -49,23 +49,23 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
     let countSerials = 3
     
     
-    func getSeriesRazdelContent(id: Int){
+    func getSeriesRazdelContent(razdelId: Int, indexPath: IndexPath){
 
-        service.getSerials(razdId: id, itemsOnPage: countSerials, shiftItem: nextShift ?? 0) {  [weak self] (result) in
+        service.getSerials(razdId: razdelId, itemsOnPage: countSerials, shiftItem: nextShift ?? 0) {  [weak self] (result) in
             switch result {
             case .success(let razdelResponse):
-                self?.response(razdelId: id, serials: razdelResponse)
+                self?.response(indexPath: indexPath, serials: razdelResponse)
             case .failure(let error):
                 self?.presenter?.presentError(error: error)
             }
         }
     }
     
-    func response(razdelId: Int, serials: RazdelResponse){
+    func response(indexPath: IndexPath, serials: RazdelResponse){
         self.razdeResponse = serials
         guard let items = serials.items else { return }
         self.nextShift = serials.startItemIdInNextPage
         self.items.append(contentsOf: items)
-        self.presenter?.presentSeriesRazdel(razdelId: razdelId, items: items)
+        self.presenter?.presentSeriesRazdel(indexPath: indexPath, items: items)
     }
 }

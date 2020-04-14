@@ -16,7 +16,7 @@ import AVFoundation
 
 protocol MainDisplayLogic: CommonDisplayLogic {
     func display(razdels: [Main.RazdelItem])
-    func seriesDisplay(razdelId: Int, show: [RazdelVCModel.SerialItem])
+    func seriesDisplay(indexPath: IndexPath, show: [RazdelVCModel.SerialItem])
 }
 
 class MainViewController: AbstractMainViewController, MainDisplayLogic {
@@ -150,11 +150,11 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
         }
     }
     
-    func seriesDisplay(razdelId: Int, show: [RazdelVCModel.SerialItem]) {
+    func seriesDisplay(indexPath: IndexPath, show: [RazdelVCModel.SerialItem]) {
         hidePreloader()
-        extendedRazdels[razdels[razdelId]] = show
+        extendedRazdels[razdels[indexPath.row]] = show
         //TO DO: возможно отрефакторить
-        collectionView.reloadItems(at: [IndexPath(row: razdelId, section: 1)])
+        collectionView.reloadItems(at: [indexPath])
     }
 }
 
@@ -167,7 +167,8 @@ extension MainViewController: UICollectionViewDelegate {
 		} else {
             if !extendedRazdels.keys.contains(razdels[indexPath.row]) {
                 showPreloader()
-                interactor?.getSeriesRazdelContent(id: indexPath.row)
+                let razdelItem = router?.dataStore?.mainRazdels[safe: indexPath.row]
+                interactor?.getSeriesRazdelContent(razdelId: razdelItem?.razdId ?? 0, indexPath: indexPath)
             }
 		}
     }
