@@ -20,6 +20,7 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
     var serials: [RazdelVCModel.SerialItem] = []
     var razdelNumber: Int = 0
     var delegate: DidSelectRazdelAt?
+    var videosCell: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -57,9 +58,14 @@ extension ExtendedMainCollectionViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withCell: RazdelCollectionViewCell.self, for: indexPath)
-            cell.configure(item: serials[indexPath.row])
-            return cell
+            if videosCell {
+                let cell = collectionView.dequeueReusableCell(withCell: VideoCollectionViewCell.self, for: indexPath)
+                return cell
+            } else {
+                let cell = collectionView.dequeueReusableCell(withCell: RazdelCollectionViewCell.self, for: indexPath)
+                cell.configure(item: serials[indexPath.row])
+                return cell
+            }
         } else {
             let cell = collectionView.dequeueReusableCell(withCell: MoreSerialsCollectionViewCell.self, for: indexPath)
             return cell

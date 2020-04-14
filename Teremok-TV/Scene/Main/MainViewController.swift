@@ -182,11 +182,15 @@ extension MainViewController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let razdel = razdels[indexPath.row]
+        let razdelItem = router?.dataStore?.mainRazdels[safe: indexPath.row]
         if extendedRazdels.keys.contains(razdel) {
             let cell = collectionView.dequeueReusableCell(withCell: ExtendedMainCollectionViewCell.self, for: indexPath)
             cell.serials = extendedRazdels[razdel] ?? []
             cell.razdelNumber = indexPath.row
             cell.delegate = self
+            if let type = razdelItem?.itemType, type == .videos {
+                cell.videosCell = true
+            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
