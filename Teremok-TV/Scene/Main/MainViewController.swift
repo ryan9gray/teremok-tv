@@ -60,7 +60,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     @IBOutlet private var collectionView: UICollectionView!
     
     var razdels: [Main.RazdelItem] = []
-    var extendedRazdels: [Main.RazdelItem : [RazdelVCModel.SerialItem]] = [:]
+    var extendedRazdels: [IndexPath : [RazdelVCModel.SerialItem]] = [:]
     
     var cellWidth: CGFloat = 0
     var audioPlayer: AVAudioPlayer?
@@ -151,8 +151,8 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     }
     
     func seriesDisplay(indexPath: IndexPath, show: [RazdelVCModel.SerialItem]) {
-        hidePreloader()
-        extendedRazdels[razdels[indexPath.row]] = show
+        extendedRazdels[indexPath] = show
+        //extendedRazdels[razdels[indexPath.row]] = show
         //TO DO: возможно отрефакторить
         collectionView.reloadItems(at: [indexPath])
     }
@@ -165,8 +165,7 @@ extension MainViewController: UICollectionViewDelegate {
 		if indexPath.section == 0 {
 			router?.navigateToGameList()
 		} else {
-            if !extendedRazdels.keys.contains(razdels[indexPath.row]) {
-                showPreloader()
+            if !extendedRazdels.keys.contains(indexPath) {
                 let razdelItem = router?.dataStore?.mainRazdels[safe: indexPath.row]
                 interactor?.getSeriesRazdelContent(razdelId: razdelItem?.razdId ?? 0, indexPath: indexPath)
             }
@@ -182,11 +181,10 @@ extension MainViewController: UICollectionViewDataSource {
 		return section == 0 ? 1 : razdels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let razdel = razdels[indexPath.row]
         let razdelItem = router?.dataStore?.mainRazdels[safe: indexPath.row]
-        if extendedRazdels.keys.contains(razdel) {
+        if extendedRazdels.keys.contains(indexPath) {
             let cell = collectionView.dequeueReusableCell(withCell: ExtendedMainCollectionViewCell.self, for: indexPath)
-            cell.serials = extendedRazdels[razdel] ?? []
+            cell.serials = extendedRazdels[indexPath] ?? []
             cell.razdelNumber = indexPath.row
             cell.delegate = self
             if let type = razdelItem?.itemType, type == .videos {
