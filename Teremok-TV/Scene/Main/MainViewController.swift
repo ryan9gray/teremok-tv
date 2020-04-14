@@ -212,6 +212,10 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension MainViewController: DidSelectRazdelAt {
+    func goToSerial(razdel: Int, title: String) {
+        self.router?.navigateToVideos(razdelId: razdel, title: title)
+    }
+    
     func goToRazdel(razdel: Int) {
         self.router?.navigateToRazdel(number: razdel)
     }

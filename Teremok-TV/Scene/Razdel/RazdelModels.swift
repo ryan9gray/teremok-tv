@@ -12,6 +12,7 @@
 
 enum RazdelVCModel {
     struct SerialItem: Hashable {
+        let id: Int
         let name: String
         let imageUrl: String
         let description: String

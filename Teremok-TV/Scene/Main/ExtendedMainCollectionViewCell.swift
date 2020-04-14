@@ -10,6 +10,7 @@ import UIKit
 
 protocol DidSelectRazdelAt {
     func goToRazdel(razdel: Int)
+    func goToSerial(razdel: Int, title: String)
 }
 
 class ExtendedMainCollectionViewCell: UICollectionViewCell {
@@ -36,7 +37,7 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
 extension ExtendedMainCollectionViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            //delegate?.gotoSerial(razdelID: indexPath.row, razdelTitle: "")
+            delegate?.goToSerial(razdel: serials[indexPath.row].id, title: serials[indexPath.row].name)
         } else {
             delegate?.goToRazdel(razdel: razdelNumber)
         }

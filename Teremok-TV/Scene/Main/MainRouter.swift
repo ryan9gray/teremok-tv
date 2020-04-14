@@ -15,6 +15,7 @@ import UIKit
 protocol MainRoutingLogic: CommonRoutingLogic {
     func navigateToRazdel(number: Int)
 	func navigateToGameList()
+    func navigateToVideos(razdelId: Int, title: String)
 }
 
 protocol MainDataPassing {
