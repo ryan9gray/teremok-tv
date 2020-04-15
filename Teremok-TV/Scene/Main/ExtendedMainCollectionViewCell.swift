@@ -11,6 +11,8 @@ import UIKit
 protocol DidSelectRazdelAt {
     func goToRazdel(razdel: Int)
     func goToSerial(razdel: Int, title: String)
+    func addVideoToFavorite(videoId: Int)
+    func downloadVideo(idx: Int)
 }
 
 class ExtendedMainCollectionViewCell: UICollectionViewCell {
@@ -65,6 +67,7 @@ extension ExtendedMainCollectionViewCell: UICollectionViewDataSource {
                 let cell = collectionView.dequeueReusableCell(withCell: VideoCollectionViewCell.self, for: indexPath)
                 if let serials = serials[indexPath.row] as? Serial.Item {
                     cell.configure(item: serials)
+                    cell.delegate = self
                 }
                 return cell
             } else {
@@ -78,5 +81,22 @@ extension ExtendedMainCollectionViewCell: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withCell: MoreSerialsCollectionViewCell.self, for: indexPath)
             return cell
         }
+    }
+}
+
+extension ExtendedMainCollectionViewCell: SerialCellProtocol {
+    func favClick(_ sender: Any) {
+        if let cell = sender as? VideoCollectionViewCell, let idx = collectionView.indexPath(for: cell)?.row {
+            guard let video = serials[idx] as? Serial.Item else { return }
+            delegate?.addVideoToFavorite(videoId: video.id)
+        }
+    }
+    
+    func downloadClick(_ sender: Any) {
+
+    }
+    
+    func buttonClick(_ sender: Any) {
+        
     }
 }

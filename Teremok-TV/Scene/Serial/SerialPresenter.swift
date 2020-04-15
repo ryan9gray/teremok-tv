@@ -27,9 +27,9 @@ class SerialPresenter: SerialPresentationLogic {
     func present(items: [VideoModel]){
         
         var serials: [Serial.Item] = []
-
+//TO DO: отрефакторить это!
         for item in items {
-            let serial = Serial.Item(name: item.name ?? "", imageUrl: item.picture ?? "",description: item.description ?? "", isLikeMe: item.likedMe ?? false, isDownload: item.downloadMe ?? false)
+            let serial = Serial.Item(id: item.id ?? 0, name: item.name ?? "", imageUrl: item.picture ?? "",description: item.description ?? "", isLikeMe: item.likedMe ?? false, isDownload: item.downloadMe ?? false)
             serials.append(serial)
         }        
         viewController?.displaySerials(serials)

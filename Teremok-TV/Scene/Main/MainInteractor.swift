@@ -16,6 +16,7 @@ protocol MainBusinessLogic {
     func getMainContent()
     func getSeriesRazdelContent(razdelId: Int, indexPath: IndexPath)
     func getVideoContent(id: Int, indexPath: IndexPath)
+    func addToFav(videoId: Int)
 }
 
 protocol MainDataStore {
@@ -112,11 +113,8 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
         }
     }
 
-    func addToFav(indexPath: IndexPath, idx: Int){
-        guard let id = videoItems[safe:idx]?.id else { return }
-         
-        presenter?.presentVideo(indexPath: indexPath, items: videoItems)
-        videoService.addToFav(id: id) { _ in }
+    func addToFav(videoId: Int){
+        videoService.addToFav(id: videoId) { _ in }
     }
     
     func videoResponse(indexPath: IndexPath, videos: VideoResponse){

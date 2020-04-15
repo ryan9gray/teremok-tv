@@ -12,6 +12,7 @@
 
 enum Serial {
     struct Item: Hashable, MainContent {
+        let id: Int
         let name: String
         let imageUrl: String
         let description: String
