@@ -15,6 +15,7 @@ import UIKit
 protocol MainBusinessLogic {
     func getMainContent()
     func getSeriesRazdelContent(razdelId: Int, indexPath: IndexPath)
+    func getVideoContent(id: Int, indexPath: IndexPath)
 }
 
 protocol MainDataStore {
@@ -41,12 +42,13 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
         }
     }
     
+    
+    //MARK: Razdel
     var razdeResponse: RazdelResponse?
     let service: RazdelProtocol = RazdelService()
     var items: [RazdelItemResponse] = []
-    
+    //TO DO: Изменить количество подгружаемых разделов
     let countSerials = 3
-    
     
     func getSeriesRazdelContent(razdelId: Int, indexPath: IndexPath){
 
@@ -66,4 +68,62 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
         self.items.append(contentsOf: items)
         self.presenter?.presentSeriesRazdel(indexPath: indexPath, items: items)
     }
+    
+    //MARK: Video
+    var videoItems: [VideoModel] = []
+    
+    var imageLoader = ImageLoader()
+    let serialService: SerialsProtocol = SerialsService()
+    var videoService: VideoServiceProtocol = VideoService()
+
+
+    init() {
+         videoService.imageLoader = imageLoader
+     }
+
+    func getVideoContent(id: Int, indexPath: IndexPath) {
+
+        serialService.getVideos(itemsOnPage: countSerials, shiftItem: 0, seriesId: id) { [weak self] (result) in
+            switch result {
+            case .success(let videos):
+                self?.videoResponse(indexPath: indexPath, videos: videos)
+            case .failure(let error):
+                self?.presenter?.presentError(error: error)
+            }
+        }
+    }
+
+    func downloadVideo(idx: Int, completion : @escaping (_ like : Bool) -> ()){
+        guard let item = videoItems[safe: idx] else {
+            presenter?.present(errorString: "Не получилось добавить в скачанное", completion: nil)
+            return
+        }
+        guard
+            let urlString = item.downloadLink,
+            let id = item.id,
+            let link =  URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
+            let imageLinkString = item.picture,
+            let pictureURL = URL(string: imageLinkString),
+            let name = item.name
+        else { return }
+
+        imageLoader.dataFrom(url: pictureURL) { [weak self] art in
+            self?.videoService.hlsDownload(url: link, name: name, art: art, id: id)
+        }
+    }
+
+    func addToFav(indexPath: IndexPath, idx: Int){
+        guard let id = videoItems[safe:idx]?.id else { return }
+         
+        presenter?.presentVideo(indexPath: indexPath, items: videoItems)
+        videoService.addToFav(id: id) { _ in }
+    }
+    
+    func videoResponse(indexPath: IndexPath, videos: VideoResponse){
+        guard let items = videos.items else { return }
+        
+        videoItems.append(contentsOf: items)
+        presenter?.presentVideo(indexPath: indexPath, items: items)
+    }
+
 }

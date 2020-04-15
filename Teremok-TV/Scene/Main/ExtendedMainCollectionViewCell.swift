@@ -18,7 +18,7 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var collectionView: UICollectionView!
     
     //TO DO: отрефакторить это
-    var serials: [RazdelVCModel.SerialItem] = []
+    var serials: [MainContent] = []
     var razdelNumber: Int = 0
     var delegate: DidSelectRazdelAt?
     var videosCell: Bool = false
@@ -37,7 +37,9 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
 extension ExtendedMainCollectionViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            delegate?.goToSerial(razdel: serials[indexPath.row].id, title: serials[indexPath.row].name)
+            if let serials = serials[indexPath.row] as? RazdelVCModel.SerialItem {
+                delegate?.goToSerial(razdel: serials.id, title: serials.name)
+            }
         } else {
             delegate?.goToRazdel(razdel: razdelNumber)
         }
@@ -61,10 +63,15 @@ extension ExtendedMainCollectionViewCell: UICollectionViewDataSource {
         if indexPath.section == 0 {
             if videosCell {
                 let cell = collectionView.dequeueReusableCell(withCell: VideoCollectionViewCell.self, for: indexPath)
+                if let serials = serials[indexPath.row] as? Serial.Item {
+                    cell.configure(item: serials)
+                }
                 return cell
             } else {
                 let cell = collectionView.dequeueReusableCell(withCell: RazdelCollectionViewCell.self, for: indexPath)
-                cell.configure(item: serials[indexPath.row])
+                if let serials = serials[indexPath.row] as? RazdelVCModel.SerialItem {
+                    cell.configure(item: serials)
+                }
                 return cell
             }
         } else {

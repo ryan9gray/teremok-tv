@@ -16,7 +16,7 @@ import AVFoundation
 
 protocol MainDisplayLogic: CommonDisplayLogic {
     func display(razdels: [Main.RazdelItem])
-    func seriesDisplay(indexPath: IndexPath, show: [RazdelVCModel.SerialItem])
+    func seriesDisplay(indexPath: IndexPath, show: [MainContent])
 }
 
 class MainViewController: AbstractMainViewController, MainDisplayLogic {
@@ -60,7 +60,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     @IBOutlet private var collectionView: UICollectionView!
     
     var razdels: [Main.RazdelItem] = []
-    var extendedRazdels: [IndexPath : [RazdelVCModel.SerialItem]] = [:]
+    var extendedRazdels: [IndexPath : [MainContent]] = [:]
     
     var cellWidth: CGFloat = 0
     var audioPlayer: AVAudioPlayer?
@@ -150,7 +150,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
         }
     }
     
-    func seriesDisplay(indexPath: IndexPath, show: [RazdelVCModel.SerialItem]) {
+    func seriesDisplay(indexPath: IndexPath, show: [MainContent]) {
         extendedRazdels[indexPath] = show
         //extendedRazdels[razdels[indexPath.row]] = show
         //TO DO: возможно отрефакторить
@@ -167,7 +167,11 @@ extension MainViewController: UICollectionViewDelegate {
 		} else {
             if !extendedRazdels.keys.contains(indexPath) {
                 let razdelItem = router?.dataStore?.mainRazdels[safe: indexPath.row]
-                interactor?.getSeriesRazdelContent(razdelId: razdelItem?.razdId ?? 0, indexPath: indexPath)
+                if let type = razdelItem?.itemType, type == .series {
+                    interactor?.getSeriesRazdelContent(razdelId: razdelItem?.razdId ?? 0, indexPath: indexPath)
+                } else {
+                    interactor?.getVideoContent(id: razdelItem?.razdId ?? 0, indexPath: indexPath)
+                }
             }
 		}
     }

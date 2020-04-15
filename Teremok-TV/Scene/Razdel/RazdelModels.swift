@@ -10,8 +10,12 @@
 //  see http://clean-swift.com
 //
 
+protocol MainContent {
+    
+}
+
 enum RazdelVCModel {
-    struct SerialItem: Hashable {
+    struct SerialItem: Hashable, MainContent {
         let id: Int
         let name: String
         let imageUrl: String
