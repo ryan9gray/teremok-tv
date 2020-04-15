@@ -235,4 +235,8 @@ extension MainViewController: DidSelectRazdelAt {
     func goToRazdel(razdel: Int) {
         self.router?.navigateToRazdel(number: razdel)
     }
+    
+    func goToPreview(razdelId: Int, videoId: Int) {
+        self.router?.navigateToPreview(razdelId: razdelId, videoId: videoId)
+    }
 }

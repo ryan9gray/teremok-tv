@@ -11,6 +11,7 @@ import UIKit
 protocol DidSelectRazdelAt {
     func goToRazdel(razdel: Int)
     func goToSerial(razdel: Int, title: String)
+    func goToPreview(razdelId: Int, videoId: Int)
     func addVideoToFavorite(videoId: Int)
     func downloadVideo(video: Serial.Item, completion : @escaping (_ like : Bool) -> ())
     func present(title: String, actions: [UIAlertAction])
@@ -42,6 +43,8 @@ extension ExtendedMainCollectionViewCell: UICollectionViewDelegate {
         if indexPath.section == 0 {
             if let serials = serials[indexPath.row] as? RazdelVCModel.SerialItem {
                 delegate?.goToSerial(razdel: serials.id, title: serials.name)
+            } else if let video = serials[indexPath.row] as? Serial.Item {
+                delegate?.goToPreview(razdelId: razdelNumber, videoId: video.id)
             }
         } else {
             delegate?.goToRazdel(razdel: razdelNumber)

@@ -16,6 +16,7 @@ protocol MainRoutingLogic: CommonRoutingLogic {
     func navigateToRazdel(number: Int)
 	func navigateToGameList()
     func navigateToVideos(razdelId: Int, title: String)
+    func navigateToPreview(razdelId: Int, videoId: Int)
 }
 
 protocol MainDataPassing {
@@ -56,4 +57,11 @@ class MainRouter: NSObject, MainRoutingLogic, MainDataPassing {
 	func navigateToGameList() {
 		viewController?.masterRouter?.navigateToGameList()
 	}
+    func navigateToPreview(razdelId: Int, videoId: Int){
+        let serials = PreviewViewController.instantiate(fromStoryboard: .play)
+        guard var dataStore = serials.router?.dataStore else { return }
+        dataStore.model = .online(id: videoId)
+        dataStore.razdId = razdelId
+        viewController?.masterRouter?.presentNextChild(viewController: serials)
+    }
 }
