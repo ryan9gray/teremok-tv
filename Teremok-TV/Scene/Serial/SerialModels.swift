@@ -18,6 +18,7 @@ enum Serial {
         let description: String
         var isLikeMe: Bool = false
         var isDownload: Bool = false
+        var downloadLink: String?
     }
     
     enum Screen {

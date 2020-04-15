@@ -216,12 +216,16 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension MainViewController: DidSelectRazdelAt {
+    func present(title: String, actions: [UIAlertAction]) {
+        present(title: title, actions: actions, completion: nil)
+    }
+    
     func addVideoToFavorite(videoId: Int) {
         self.interactor?.addToFav(videoId: videoId)
     }
     
-    func downloadVideo(idx: Int) {
-        
+    func downloadVideo(video: Serial.Item, completion: @escaping (Bool) -> ()) {
+        self.interactor?.downloadVideo(video: video, completion: completion)
     }
     
     func goToSerial(razdel: Int, title: String) {

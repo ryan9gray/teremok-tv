@@ -12,7 +12,8 @@ protocol DidSelectRazdelAt {
     func goToRazdel(razdel: Int)
     func goToSerial(razdel: Int, title: String)
     func addVideoToFavorite(videoId: Int)
-    func downloadVideo(idx: Int)
+    func downloadVideo(video: Serial.Item, completion : @escaping (_ like : Bool) -> ())
+    func present(title: String, actions: [UIAlertAction])
 }
 
 class ExtendedMainCollectionViewCell: UICollectionViewCell {
@@ -93,7 +94,19 @@ extension ExtendedMainCollectionViewCell: SerialCellProtocol {
     }
     
     func downloadClick(_ sender: Any) {
-
+        if let cell = sender as? VideoCollectionViewCell, let idx = collectionView.indexPath(for: cell)?.row {
+            guard let video = serials[idx] as? Serial.Item else { return }
+            
+            guard !cell.downloadBtn.isSelected else { return }
+            
+            let yes = UIAlertAction(title: "Скачать", style: .default, handler: { [weak self] (_) in
+                self?.delegate?.downloadVideo(video: video) { action in
+                    cell.downloadBtn.isSelected = action
+                }
+            })
+            let no = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
+            delegate?.present(title: "Скачать серию?", actions: [yes, no])
+        }
     }
     
     func buttonClick(_ sender: Any) {

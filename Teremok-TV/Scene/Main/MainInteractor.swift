@@ -17,6 +17,7 @@ protocol MainBusinessLogic {
     func getSeriesRazdelContent(razdelId: Int, indexPath: IndexPath)
     func getVideoContent(id: Int, indexPath: IndexPath)
     func addToFav(videoId: Int)
+    func downloadVideo(video: Serial.Item, completion : @escaping (_ like : Bool) -> ())
 }
 
 protocol MainDataStore {
@@ -94,20 +95,13 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
         }
     }
 
-    func downloadVideo(idx: Int, completion : @escaping (_ like : Bool) -> ()){
-        guard let item = videoItems[safe: idx] else {
-            presenter?.present(errorString: "Не получилось добавить в скачанное", completion: nil)
-            return
-        }
-        guard
-            let urlString = item.downloadLink,
-            let id = item.id,
-            let link =  URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!),
-            let imageLinkString = item.picture,
-            let pictureURL = URL(string: imageLinkString),
-            let name = item.name
-        else { return }
-
+    func downloadVideo(video: Serial.Item, completion : @escaping (_ like : Bool) -> ()){
+        let id = video.id
+        let name = video.name
+        let imageLinkString = video.imageUrl
+        guard   let pictureURL = URL(string: imageLinkString),
+                let urlString = video.downloadLink,
+                let link =  URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) else { return }
         imageLoader.dataFrom(url: pictureURL) { [weak self] art in
             self?.videoService.hlsDownload(url: link, name: name, art: art, id: id)
         }

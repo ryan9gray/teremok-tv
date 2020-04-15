@@ -49,7 +49,7 @@ class MainPresenter: MainPresentationLogic {
         var serials: [Serial.Item] = []
 
         for item in items {
-            let serial = Serial.Item(id: item.id ?? 0, name: item.name ?? "", imageUrl: item.picture ?? "",description: item.description ?? "", isLikeMe: item.likedMe ?? false, isDownload: item.downloadMe ?? false)
+            let serial = Serial.Item(id: item.id ?? 0, name: item.name ?? "", imageUrl: item.picture ?? "",description: item.description ?? "", isLikeMe: item.likedMe ?? false, isDownload: item.downloadMe ?? false, downloadLink: item.downloadLink)
             serials.append(serial)
         }
         viewController?.seriesDisplay(indexPath: indexPath, show: serials)
