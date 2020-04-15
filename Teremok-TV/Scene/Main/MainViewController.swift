@@ -152,8 +152,6 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     
     func seriesDisplay(indexPath: IndexPath, show: [MainContent]) {
         extendedRazdels[indexPath] = show
-        //extendedRazdels[razdels[indexPath.row]] = show
-        //TO DO: возможно отрефакторить
         collectionView.reloadItems(at: [indexPath])
     }
 }
@@ -237,6 +235,10 @@ extension MainViewController: DidSelectRazdelAt {
     }
     
     func goToPreview(razdelId: Int, videoId: Int) {
-        self.router?.navigateToPreview(razdelId: razdelId, videoId: videoId)
+        if Profile.current?.premium ?? false {
+            self.router?.navigateToPreview(razdelId: razdelId, videoId: videoId)
+        } else {
+            self.router?.openPremiumAlert()
+        }
     }
 }

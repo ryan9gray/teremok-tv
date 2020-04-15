@@ -17,6 +17,7 @@ protocol MainRoutingLogic: CommonRoutingLogic {
 	func navigateToGameList()
     func navigateToVideos(razdelId: Int, title: String)
     func navigateToPreview(razdelId: Int, videoId: Int)
+    func openPremiumAlert()
 }
 
 protocol MainDataPassing {
@@ -63,5 +64,13 @@ class MainRouter: NSObject, MainRoutingLogic, MainDataPassing {
         dataStore.model = .online(id: videoId)
         dataStore.razdId = razdelId
         viewController?.masterRouter?.presentNextChild(viewController: serials)
+    }
+    func openPremiumAlert() {
+        let vc = PromoPremiumAlertViewController.instantiate(fromStoryboard: .alerts)
+        vc.modalTransitionStyle = .crossDissolve
+        vc.action = { [unowned self] in
+            self.viewController?.masterRouter?.navigateToStore()
+        }
+        viewController?.present(vc, animated: true, completion: nil)
     }
 }
