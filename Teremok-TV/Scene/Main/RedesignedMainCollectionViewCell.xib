@@ -83,8 +83,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-EE-oAs">
                         <rect key="frame" x="0.0" y="0.0" width="340" height="190"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s0P-r5-xqo" customClass="PreviewImage" customModule="Teremok_TV" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="340" height="190"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icNowifi" translatesAutoresizingMaskIntoConstraints="NO" id="s0P-r5-xqo" customClass="PreviewImage" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="150"/>
                                 <color key="backgroundColor" red="0.91912621260000005" green="0.95921593900000002" blue="0.99856835600000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="roundCoefficient">
@@ -123,10 +123,10 @@
                         <constraints>
                             <constraint firstItem="Tl5-yq-5q9" firstAttribute="leading" secondItem="BdE-EE-oAs" secondAttribute="leading" id="0gL-BS-ja0"/>
                             <constraint firstItem="s0P-r5-xqo" firstAttribute="top" secondItem="BdE-EE-oAs" secondAttribute="top" id="7VA-AV-fYm"/>
-                            <constraint firstItem="Tl5-yq-5q9" firstAttribute="top" secondItem="s0P-r5-xqo" secondAttribute="bottom" constant="-48" id="BVJ-pv-rcE"/>
+                            <constraint firstItem="Tl5-yq-5q9" firstAttribute="top" secondItem="s0P-r5-xqo" secondAttribute="bottom" constant="-8" id="BVJ-pv-rcE"/>
                             <constraint firstAttribute="bottom" secondItem="Tl5-yq-5q9" secondAttribute="bottom" id="NhU-40-5W1"/>
                             <constraint firstAttribute="trailing" secondItem="Tl5-yq-5q9" secondAttribute="trailing" id="amP-m3-6Z6"/>
-                            <constraint firstAttribute="bottom" secondItem="s0P-r5-xqo" secondAttribute="bottom" id="avj-pB-vc0"/>
+                            <constraint firstAttribute="bottom" secondItem="s0P-r5-xqo" secondAttribute="bottom" constant="40" id="avj-pB-vc0"/>
                             <constraint firstAttribute="trailing" secondItem="s0P-r5-xqo" secondAttribute="trailing" id="m6I-Jl-0jC"/>
                             <constraint firstItem="s0P-r5-xqo" firstAttribute="leading" secondItem="BdE-EE-oAs" secondAttribute="leading" id="uLg-JG-6r1"/>
                         </constraints>
@@ -160,6 +160,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="icNowifi" width="70" height="85"/>
         <image name="moreSerialsImage" width="79" height="49"/>
     </resources>
 </document>

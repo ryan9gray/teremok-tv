@@ -19,6 +19,14 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        thirdImageView.image = nil
+        secondImageView.image = nil
+        mainImageView.image = #imageLiteral(resourceName: "icNowifi")
+        mainImageView.contentMode = .scaleAspectFit
+    }
 
     func configure(title: String, imagesURLs: [String]){
         titleLabel.text = title
@@ -40,6 +48,7 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
         thirdImageView.image = UIImage(named: "gameIcon")
         secondImageView.image = UIImage(named: "gameIcon")
         mainImageView.image = UIImage(named: "gameIcon")
+        mainImageView.contentMode = .scaleAspectFill
     }
     
     private func setImage(imageURL: String, imageView: UIImageView) {
@@ -49,5 +58,6 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
                               filter: nil,
                               imageTransition: .crossDissolve(0.5),
                               completion: nil)
+        imageView.contentMode = .scaleAspectFill
     }
 }
