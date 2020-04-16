@@ -28,8 +28,8 @@ class MainPresenter: MainPresentationLogic {
     // MARK: Do something
     
     func presentMainRazdels(_ models: [RazdelModel]) {
-        
-        let items = models.map { Main.RazdelItem(title: $0.name ?? "", link: $0.animationUrl ?? "") }
+        //TO DO:
+        let items = models.map { Main.RazdelItem(title: $0.name ?? "", link: $0.animationUrl ?? "", topImagesURLs: $0.top?.map {$0.poster ?? ""} ?? []) }
         viewController?.display(razdels: items)
     }
     

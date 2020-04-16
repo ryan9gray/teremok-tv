@@ -199,7 +199,8 @@ extension MainViewController: UICollectionViewDataSource {
             if indexPath.section == 0 {
                 cell.gameRazdelConfigure()
             } else {
-                cell.configure(title: razdels[indexPath.row].title)
+                //TO DO:
+                cell.configure(title: razdels[indexPath.row].title, imagesURLs: razdels[indexPath.row].topImagesURLs)
             }
 
             return cell

@@ -20,6 +20,7 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
     
     @IBAction func heartClick(_ sender: UIButton) {
         sender.isSelected.toggle()
+        heartBtn.backgroundColor = heartBtn.isSelected ? .black : .clear
         delegate?.favClick(self)
     }
     @IBAction func downClick(_ sender: UIButton) {
@@ -44,6 +45,11 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
         self.item = item
         self.titleLbl.text = item.name
         toLike(me: item.isLikeMe)
+        heartBtn.layer.cornerRadius = heartBtn.frame.width / 2
+        //TO DO: change color
+        heartBtn.backgroundColor = heartBtn.isSelected ? .black : .clear
+        let image = item.isDownload ? UIImage(named:"icDownloadGray") : UIImage(named: "icDown")
+        downloadBtn.setImage(image, for: .normal)
         toDownload(me: item.isDownload)
         self.linktoLoad = item.imageUrl
     }

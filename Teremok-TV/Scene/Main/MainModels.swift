@@ -14,6 +14,8 @@ enum Main {
     struct RazdelItem {
         var title: String
         var link: String
+        //TO DO:
+        var topImagesURLs: [String]
     }
 
     enum Messages {
