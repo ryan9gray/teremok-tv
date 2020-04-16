@@ -62,7 +62,7 @@ class SearchInteractor: SearchBusinessLogic, SearchDataStore {
             return
         }
         //TO DO: поменять модель, чтобы получать имя персонажа Пузаков
-        self.presenter?.presentSerial(id: id, title: searchItems[safe: idx]?.pictureUrl ?? "URL")
+        self.presenter?.presentSerial(id: id)
     }
     
     // MARK: Do something

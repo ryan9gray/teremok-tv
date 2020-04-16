@@ -74,8 +74,6 @@ class SerialViewController: AbstractMainViewController, SerialDisplayLogic {
         let cells = [VideoCollectionViewCell.self, LoadingCollectionViewCell.self]
         collectionView.register(cells: cells)
         prepareUI()
-        
-        mainTitleView.configureTitle(title: router?.dataStore?.razdelTitle ?? "")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -97,7 +95,7 @@ class SerialViewController: AbstractMainViewController, SerialDisplayLogic {
         hidePreloader()
 
         self.serials.append(contentsOf: serials)
-        
+        mainTitleView.configureTitle(title: router?.dataStore?.razdelTitle ?? router?.dataStore?.videoItems[0].series?.name ?? "")
         guard !self.serials.isEmpty else {
             self.present(errorString: "К сожалению, по вашему запросу ничего не найдено.") {
                 self.masterRouter?.popChild()

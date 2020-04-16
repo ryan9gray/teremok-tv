@@ -13,7 +13,7 @@
 import UIKit
 
 protocol SearchRoutingLogic: CommonRoutingLogic {
-    func navigateToSerial(id: Int, title: String)
+    func navigateToSerial(id: Int)
     func navigateToRazdel(search: String)
 
 }
@@ -29,11 +29,11 @@ class SearchRouter: NSObject, SearchRoutingLogic, SearchDataPassing {
 
     // MARK: Routing
 
-    func navigateToSerial(id: Int, title: String) {
+    func navigateToSerial(id: Int) {
         let serials = SerialViewController.instantiate(fromStoryboard: .main)
         guard var dataStore = serials.router?.dataStore else { return }
         dataStore.screen = .razdel(id)
-        dataStore.razdelTitle = title
+        //dataStore.razdelTitle = title
         viewController?.masterRouter?.presentNextChild(viewController: serials)
     }
 
@@ -41,7 +41,7 @@ class SearchRouter: NSObject, SearchRoutingLogic, SearchDataPassing {
         let serials = SerialViewController.instantiate(fromStoryboard: .main)
         guard var dataStore = serials.router?.dataStore else { return }
         dataStore.screen = .search(search)
-        dataStore.razdelTitle = search
+        dataStore.razdelTitle = "Результаты поиска"
         viewController?.masterRouter?.presentNextChild(viewController: serials)
     }
 }
