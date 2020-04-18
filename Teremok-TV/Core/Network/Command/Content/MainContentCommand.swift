@@ -22,7 +22,7 @@ class MainContentCommand: CacheableCommand {
     func execute(success: ((MainContentResponse) -> Void)?, failure: ApiCompletionBlock?) {
         requestObject(success: success, failure: failure)
     }
-    //TO DO
+
     override var version: String {
         return "1.1"
     }

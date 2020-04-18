@@ -32,7 +32,6 @@ final class RazdelModel: Mappable {
     var description: String?
     var animationLastUpdate: Date?
     var animationUrl: String?
-    //TO DO
     var top: [RazdelModelTop]?
     
     var itemType: ItemType?
