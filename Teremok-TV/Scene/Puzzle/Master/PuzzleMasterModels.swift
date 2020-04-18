@@ -13,10 +13,7 @@
 import UIKit
 
 enum PuzzleMaster {
-    // MARK: Use cases
-	struct Puzzle {
-		let imageLink: String
-	}
+
 
 	static let firstPack: [String] = [
 		"puzzle_1",
@@ -76,10 +73,5 @@ enum PuzzleMaster {
 		"puzzle_48",
 		"puzzle_49",
 		"puzzle_50",
-	]
-
-	static let mock: [Puzzle] = [
-		Puzzle(imageLink: "https://i.pinimg.com/originals/98/6a/c3/986ac391b218a3a9ad750441e8cf1e42.jpg"),
-		Puzzle(imageLink: "https://i.pinimg.com/564x/a7/84/e9/a784e90418d233e65ebe2cb3639a02da.jpg"),
 	]
 }

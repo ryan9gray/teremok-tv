@@ -27,13 +27,31 @@ class PuzzleStartViewController: GameStartViewController {
         super.viewDidLoad()
 
 		startButton.gradientColors = [ UIColor.PuzzleGame.greenOne, UIColor.PuzzleGame.greenTwo ]
+		do {
+			audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_main", ofType: "wav")!))
+			audioPlayer?.prepareToPlay()
+		} catch {
+			print("no file)")
+		}
+
+		do {
+			buttonPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "push_button_sound", ofType: "wav")!))
+			buttonPlayer?.prepareToPlay()
+		} catch {
+			print("no file)")
+		}
     }
-    
+
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+
+		audioPlayer?.play()
+	}
 
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewDidDisappear(animated)
 
-		audioPlayer?.pause()
+		audioPlayer?.stop()
 	}
 
 }

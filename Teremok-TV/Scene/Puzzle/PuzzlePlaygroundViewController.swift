@@ -8,6 +8,7 @@
 
 import UIKit
 import Lottie
+import AVKit
 
 class PuzzlePlaygroundViewController: GameViewController {
 	@IBOutlet private var previewView: UIImageView!
@@ -18,6 +19,17 @@ class PuzzlePlaygroundViewController: GameViewController {
 	@IBOutlet private var playButton: KeyButton!
 	@IBOutlet private var previewBackView: UIView!
 	private var animationView: AnimationView = AnimationView()
+	private var audioPlayer: AVAudioPlayer?
+	private var buttonPlayer: AVAudioPlayer?
+
+	enum Sound: String {
+		case firework = "puzzle_firework"
+		case wrong = "puzzle_wrong"
+
+		var url: URL {
+			URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
+		}
+	}
 
 	@IBAction func restartTap(_ sender: Any) {
 
@@ -44,6 +56,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 
 	var correctCount = 0
 	var answerAreaAray: [UIView] = []
+	let fireworks: [String] = [ "puzzle_firework_1", "puzzle_firework_2", "puzzle_firework_3" ]
 
 
     override func viewDidLoad() {
@@ -55,34 +68,58 @@ class PuzzlePlaygroundViewController: GameViewController {
 		previewBackView.layer.borderWidth = 4
 		previewBackView.layer.borderColor = UIColor.PuzzleGame.blueOne.cgColor
 		showPreview()
-		animationView = AnimationView(name: "puzzle_firework")
+		animationView = AnimationView(name: fireworks.randomElement()!)
 		view.addSubview(animationView)
 		animationView.isHidden = true
 		animationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 		animationView.contentMode = .scaleAspectFill
 		animationView.loopMode = .playOnce
 		animationView.animationSpeed = 1.0
+
+		do {
+			audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_playground", ofType: "wav")!))
+			audioPlayer?.numberOfLoops = 10
+			audioPlayer?.prepareToPlay()
+		} catch {
+			print("no file)")
+		}
+
+		do {
+			buttonPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_firework", ofType: "wav")!))
+			buttonPlayer?.prepareToPlay()
+		} catch {
+			print("no file)")
+		}
 	}
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
+		audioPlayer?.play()
+	}
+
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+
+		audioPlayer?.stop()
 	}
 
 	func showPreview() {
 		guard let image = input.image?.resizeImageUsingVImage(previewView.frame.size) else { return }
 		previewView.image = image
 		previewView.alpha = 1
-
 	}
 
 	func showFirework(puzzle: UIView) {
+		animationView = AnimationView(name: fireworks.randomElement()!)
 		let puzzleFrame = puzzle.frame
-		animationView.frame.size = CGSize(width: puzzleFrame.width*2, height: puzzleFrame.height*2)
+		animationView.frame.size = CGSize(width: puzzleFrame.width*2.5, height: puzzleFrame.height*2.5)
 		animationView.center = puzzleFrame.center
 
 		view.bringSubviewToFront(animationView)
 		animationView.isHidden = false
+		playSounds(Sound.firework.url)
+
 		animationView.play { [weak animationView] finish in
 			animationView?.isHidden = true
 		}
@@ -186,6 +223,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 			view.addSubview(targetImg)
 			targetImg.translatesAutoresizingMaskIntoConstraints = true
 		}
+
 		if sender.state == UIGestureRecognizer.State.ended {
 			let answerView = answerAreaAray[targetImg.tag-1]
 
@@ -202,6 +240,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 			} else {
 				if previewView.frame.contains(center) {
 					freez()
+					playSounds(Sound.wrong.url)
 					targetImg.center = center
 				} else {
 					pieceStackView.insertArrangedSubview(targetImg, at: 0)
@@ -217,5 +256,14 @@ class PuzzlePlaygroundViewController: GameViewController {
 		let movedPoint: CGPoint = CGPoint(x: targetImg.center.x + point.x, y: targetImg.center.y + point.y)
 		targetImg.center = movedPoint
 		sender.setTranslation(CGPoint.zero, in: self.view)
+	}
+
+	private func playSounds(_ url: URL) {
+		do {
+			audioPlayer = try AVAudioPlayer(contentsOf: url)
+		} catch {
+			print("no file)")
+		}
+		audioPlayer?.play()
 	}
 }
