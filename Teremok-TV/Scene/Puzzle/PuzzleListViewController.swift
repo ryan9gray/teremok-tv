@@ -16,10 +16,12 @@ class PuzzleListViewController: GameViewController {
 		let difficulty: (PuzzleGameFlow.Game.Difficulty) -> Void
 		let start: (String) -> Void
 		let setSort: (Int) -> [String]
+		//let fetchPuzzle: (@escaping ([String]) -> Void) -> Void
 	}
 
 	struct Input {
 		var items: [String]
+		var allFetched: () -> Bool
 	}
 
 	var dones: Set<String> = []
@@ -54,13 +56,14 @@ class PuzzleListViewController: GameViewController {
         super.viewDidLoad()
 
         prepareUI()
+		items = input.items
     }
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
 		dones = Set(LocalStore.puzzlesDone)
-		items = input.items
+		collectionView.reloadData()
 	}
 
 	var items: [String] = [] {
@@ -111,7 +114,6 @@ extension PuzzleListViewController: UICollectionViewDataSource {
 extension PuzzleListViewController: UICollectionViewDelegate {
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		//let cell = collectionView.cellForItem(at: indexPath) as? PuzzleCollectionViewCell
 		output.start(items[indexPath.row])
 	}
 	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

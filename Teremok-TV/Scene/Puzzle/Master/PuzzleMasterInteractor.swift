@@ -13,7 +13,7 @@
 import UIKit
 
 protocol PuzzleMasterBusinessLogic {
-    
+
 }
 
 protocol PuzzleMasterDataStore {
@@ -25,4 +25,14 @@ class PuzzleMasterInteractor: PuzzleMasterBusinessLogic, PuzzleMasterDataStore {
 
     // MARK: Do something
 
+	private var bundleResourceRequestPuzzles: NSBundleResourceRequest?
+
+	init() {
+		OnDemandLoader.share.loadOnDemandPuzzleAssets(completion: {_ in})
+	}
+
+
+	deinit {
+		OnDemandLoader.share.bundleResourceRequestPuzzles.endAccessingResources()
+	}
 }

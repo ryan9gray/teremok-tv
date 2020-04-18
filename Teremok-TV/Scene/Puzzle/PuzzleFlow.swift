@@ -13,9 +13,12 @@ class PuzzleGameFlow  {
 
 	init(master: PuzzleMasterViewController) {
 		self.master = master
+		onDemand()
 	}
 
 	var game = Game(difficulty: .easy)
+	var puzzlesDone = LocalStore.puzzlesDone
+	var allPuzzles = PuzzleMaster.firstPack
 
 	func startFlow() {
 		openList()
@@ -23,7 +26,7 @@ class PuzzleGameFlow  {
 
 	func openList() {
 		let controller = PuzzleListViewController.instantiate(fromStoryboard: .puzzle)
-		controller.input = PuzzleListViewController.Input(items: allPuzzles)
+		controller.input = PuzzleListViewController.Input(items: allPuzzles, allFetched: { self.allFetched })
 		controller.output = PuzzleListViewController.Output(
 			difficulty: { [weak self] dif in
 				self?.game.difficulty = dif
@@ -33,9 +36,7 @@ class PuzzleGameFlow  {
 		)
 		master?.router?.pushChild(controller)//presentModalChild(viewController: controller)
 	}
-	var puzzlesDone = LocalStore.puzzlesDone
 
-	var allPuzzles = PuzzleMaster.firstPack + PuzzleMaster.secondPack
 
 	func getSort(_ index: Int) -> [String] {
 		switch index {
@@ -44,13 +45,6 @@ class PuzzleGameFlow  {
 			case 2:
 				return puzzlesDone
 			case 3:
-//				var all = allPuzzles
-//				puzzlesDone.forEach { name in
-//					if let index = all.firstIndex(of: name) {
-//						all.remove(at: index)
-//					}
-//				}
-//				return all
 				return allPuzzles.filter { puzzlesDone.contains($0) }
 			default:
 				return []
@@ -89,6 +83,15 @@ class PuzzleGameFlow  {
 
 	private func nextRound() {
 		master?.router?.popChild()
+	}
+
+	var allFetched: Bool = false
+
+	func onDemand() {
+		if UIImage(named: "puzzle_16") != nil {
+			self.allFetched = true
+			self.allPuzzles.append(contentsOf: PuzzleMaster.secondPack + PuzzleMaster.thirdPack)
+		}
 	}
 	
 	deinit {
