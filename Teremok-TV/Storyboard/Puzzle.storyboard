@@ -323,7 +323,7 @@
                                     <action selector="playTap:" destination="zi9-fE-Sob" eventType="touchUpInside" id="ziW-eY-1aV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СЫГРАЕМ ЕЩЕ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwh-nU-zfF" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СЫГРАЕМ ЕЩЕ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwh-nU-zfF" customClass="StrokeLabel" customModule="Teremok_TV" customModuleProvider="target">
                                 <rect key="frame" x="403" y="40" width="325" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="HMB-tu-XKR"/>
@@ -376,7 +376,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h60-zg-L1t">
-                                <rect key="frame" x="60" y="92" width="692" height="214"/>
+                                <rect key="frame" x="60" y="74" width="692" height="231"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XRM-Le-ddc">
                                     <size key="itemSize" width="50" height="50"/>
@@ -387,10 +387,10 @@
                                 <cells/>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wwt-Z0-wr8">
-                                <rect key="frame" x="276" y="314" width="260" height="40"/>
+                                <rect key="frame" x="276" y="313" width="260" height="41"/>
                                 <subviews>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeh-O0-g4b" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Hpq-xl-IGm"/>
                                         </constraints>
@@ -403,7 +403,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-0e-LL7" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="90" y="0.0" width="80" height="40"/>
+                                        <rect key="frame" x="90" y="0.0" width="80" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="6x6">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -413,7 +413,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxP-a5-aRr" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="0.0" width="80" height="40"/>
+                                        <rect key="frame" x="180" y="0.0" width="80" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
                                         <state key="normal" title="9x9">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -424,23 +424,88 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="bvi-zI-1hT">
+                                <rect key="frame" x="362" y="27" width="390" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Of-uh-Yl2" customClass="UIRoundedButtonWithGradientAndShadow" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="Ibl-44-JpL"/>
+                                            <constraint firstAttribute="height" constant="35" id="T0Z-Sb-0Fe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Все">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sortTap:" destination="Pv1-iC-ie6" eventType="touchUpInside" id="YTx-bp-FOx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgE-zh-0UP" customClass="UIRoundedButtonWithGradientAndShadow" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="92" y="0.0" width="132" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="FQW-W9-FVR"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="132" id="tfi-Sr-s3A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Собранные">
+                                            <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sortTap:" destination="Pv1-iC-ie6" eventType="touchUpInside" id="DN8-gc-oJS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGc-Wf-Y2B" customClass="UIRoundedButtonWithGradientAndShadow" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="233" y="0.0" width="157" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="AMH-qj-ELn"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="157" id="yCP-T8-FlJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Не собранные">
+                                            <color key="titleColor" red="0.2410995732" green="0.26391830519999998" blue="0.3665417433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sortTap:" destination="Pv1-iC-ie6" eventType="touchUpInside" id="qZw-oJ-U7I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Wwt-Z0-wr8" firstAttribute="centerX" secondItem="qXD-2F-13Y" secondAttribute="centerX" id="9LA-rh-b9C"/>
                             <constraint firstAttribute="bottom" secondItem="Wwt-Z0-wr8" secondAttribute="bottom" constant="21" id="Bac-5c-HLf"/>
-                            <constraint firstItem="h60-zg-L1t" firstAttribute="top" secondItem="qXD-2F-13Y" secondAttribute="top" constant="92" id="MKb-uY-p2j"/>
+                            <constraint firstItem="h60-zg-L1t" firstAttribute="top" secondItem="qXD-2F-13Y" secondAttribute="top" constant="74" id="MKb-uY-p2j"/>
                             <constraint firstItem="h60-zg-L1t" firstAttribute="leading" secondItem="qXD-2F-13Y" secondAttribute="leading" constant="16" id="VM9-Fi-Oiy"/>
                             <constraint firstItem="YLv-xJ-2lQ" firstAttribute="top" secondItem="qXD-2F-13Y" secondAttribute="top" id="d3d-tD-LGS"/>
                             <constraint firstAttribute="bottom" secondItem="YLv-xJ-2lQ" secondAttribute="bottom" id="e5L-a4-ucG"/>
                             <constraint firstItem="Wwt-Z0-wr8" firstAttribute="top" secondItem="h60-zg-L1t" secondAttribute="bottom" constant="8" id="ghg-gD-7fy"/>
                             <constraint firstItem="YLv-xJ-2lQ" firstAttribute="leading" secondItem="Aar-Od-jqq" secondAttribute="leading" id="l0B-4J-aoq"/>
+                            <constraint firstItem="h60-zg-L1t" firstAttribute="top" secondItem="bvi-zI-1hT" secondAttribute="bottom" constant="12" id="l7I-r0-6DS"/>
                             <constraint firstItem="qXD-2F-13Y" firstAttribute="trailing" secondItem="h60-zg-L1t" secondAttribute="trailing" constant="16" id="rHK-cs-PJG"/>
+                            <constraint firstItem="bvi-zI-1hT" firstAttribute="trailing" secondItem="h60-zg-L1t" secondAttribute="trailing" id="vw7-vm-4rn"/>
                             <constraint firstAttribute="trailing" secondItem="YLv-xJ-2lQ" secondAttribute="trailing" id="wyO-3k-DmC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qXD-2F-13Y"/>
                     </view>
                     <connections>
+                        <outlet property="allSortButton" destination="6Of-uh-Yl2" id="2qd-2I-ozN"/>
                         <outlet property="collectionView" destination="h60-zg-L1t" id="NI0-02-f6i"/>
                         <outlet property="startEasy" destination="Qeh-O0-g4b" id="qfU-fN-sGw"/>
                         <outlet property="startHard" destination="UxP-a5-aRr" id="hfG-wk-pTX"/>
@@ -448,6 +513,9 @@
                         <outletCollection property="diffButtons" destination="Qeh-O0-g4b" collectionClass="NSMutableArray" id="KTr-za-D09"/>
                         <outletCollection property="diffButtons" destination="VOd-0e-LL7" collectionClass="NSMutableArray" id="mp2-oI-XRm"/>
                         <outletCollection property="diffButtons" destination="UxP-a5-aRr" collectionClass="NSMutableArray" id="5z3-3C-cMt"/>
+                        <outletCollection property="sortButtons" destination="6Of-uh-Yl2" collectionClass="NSMutableArray" id="XhJ-hq-31R"/>
+                        <outletCollection property="sortButtons" destination="ZgE-zh-0UP" collectionClass="NSMutableArray" id="nkI-AE-k89"/>
+                        <outletCollection property="sortButtons" destination="cGc-Wf-Y2B" collectionClass="NSMutableArray" id="Dba-RT-647"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfM-2Y-Flx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

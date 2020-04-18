@@ -15,7 +15,7 @@ class PuzzleListViewController: GameViewController {
 	struct Output {
 		let difficulty: (PuzzleGameFlow.Game.Difficulty) -> Void
 		let start: (String) -> Void
-
+		let setSort: (Int) -> [String]
 	}
 
 	struct Input {
@@ -23,7 +23,21 @@ class PuzzleListViewController: GameViewController {
 	}
 
 	var dones: Set<String> = []
-	
+	@IBOutlet var sortButtons: [UIRoundedButtonWithGradientAndShadow]!
+
+	@IBOutlet var allSortButton: UIRoundedButtonWithGradientAndShadow!
+	@IBAction func sortTap(_ sender: UIRoundedButtonWithGradientAndShadow) {
+		sortButtons.forEach { button in
+			button.gradientColors = [ UIColor.white, UIColor.white ]
+			button.borderColor = UIColor.PuzzleGame.orangeTwo
+			button.setTitleColor(UIColor.PuzzleGame.orangeTwo, for: .normal)
+		}
+		sender.gradientColors = [ UIColor.PuzzleGame.orangeTwo, UIColor.PuzzleGame.orangeOne  ]
+		sender.borderColor = UIColor.clear
+		sender.setTitleColor(UIColor.white, for: .normal)
+		items = output.setSort(sender.tag)
+	}
+
 	@IBOutlet private var diffButtons: [KeyButton]!
 	@IBOutlet private var startEasy: KeyButton!
 	@IBOutlet private var startMedium: KeyButton!
@@ -46,33 +60,49 @@ class PuzzleListViewController: GameViewController {
 		super.viewDidAppear(animated)
 
 		dones = Set(LocalStore.puzzlesDone)
-		collectionView.reloadData()
+		items = input.items
+	}
+
+	var items: [String] = [] {
+		didSet {
+			collectionView.reloadData()
+		}
 	}
 
 	func prepareUI() {
 		startEasy.setTitleColor(UIColor.Label.darkBlue, for: .normal)
 		startEasy.gradientColors = [ UIColor.PuzzleGame.greenOne, UIColor.PuzzleGame.greenTwo ]
-		startMedium.gradientColors = [ UIColor.PuzzleGame.orangeOne, UIColor.PuzzleGame.orangeTwo ]
-		startHard.gradientColors = [ UIColor.PuzzleGame.redOne, UIColor.PuzzleGame.redTwo ]
+		startMedium.gradientColors = [ UIColor.PuzzleGame.orangeTwo, UIColor.PuzzleGame.orangeOne ]
+		startHard.gradientColors = [ UIColor.PuzzleGame.redTwo, UIColor.PuzzleGame.redOne ]
 		collectionView.delegate = self
 		collectionView.dataSource = self
 		let cells = [PuzzleCollectionViewCell.self, LoadingCollectionViewCell.self]
 		collectionView.register(cells: cells)
+		sortButtons.forEach { button in
+			button.gradientColors = [ UIColor.white, UIColor.white ]
+			button.borderColor = UIColor.PuzzleGame.orangeTwo
+			button.setTitleColor(UIColor.PuzzleGame.orangeTwo, for: .normal)
+			button.borderWidth = 2
+		}
+		allSortButton.gradientColors = [ UIColor.PuzzleGame.orangeOne, UIColor.PuzzleGame.orangeTwo ]
+		allSortButton.borderColor = .clear
+		allSortButton.setTitleColor(UIColor.white, for: .normal)
 	}
 }
 extension PuzzleListViewController: UICollectionViewDataSource {
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return input.items.count //+ (self.interactor!.hasMore ? 1 : 0)
+		return items.count //+ (self.interactor!.hasMore ? 1 : 0)
 	}
+
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		if indexPath.row == input.items.count {
+		if indexPath.row == items.count {
 			let cell = collectionView.dequeueReusableCell(withCell: LoadingCollectionViewCell.self, for: indexPath)
 			return cell
 		}
 		let cell = collectionView.dequeueReusableCell(withCell: PuzzleCollectionViewCell.self, for: indexPath)
 
-		let name = input.items[indexPath.row]
+		let name = items[indexPath.row]
 		cell.setImage(UIImage(named: name), done: dones.contains(name))
 		return cell
 	}
@@ -82,7 +112,7 @@ extension PuzzleListViewController: UICollectionViewDelegate {
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		//let cell = collectionView.cellForItem(at: indexPath) as? PuzzleCollectionViewCell
-		output.start(input.items[indexPath.row])
+		output.start(items[indexPath.row])
 	}
 	func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
 

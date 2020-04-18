@@ -56,7 +56,6 @@ class PuzzlePlaygroundViewController: GameViewController {
 
 	var correctCount = 0
 	var answerAreaAray: [UIView] = []
-	let fireworks: [String] = [ "puzzle_firework_1", "puzzle_firework_2", "puzzle_firework_3" ]
 
 
     override func viewDidLoad() {
@@ -68,7 +67,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 		previewBackView.layer.borderWidth = 4
 		previewBackView.layer.borderColor = UIColor.PuzzleGame.blueOne.cgColor
 		showPreview()
-		animationView = AnimationView(name: fireworks.randomElement()!)
+		animationView = AnimationView.init()
 		view.addSubview(animationView)
 		animationView.isHidden = true
 		animationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -103,6 +102,8 @@ class PuzzlePlaygroundViewController: GameViewController {
 
 		audioPlayer?.stop()
 	}
+	let fireworks = [ Animation.named("puzzle_firework_1"), Animation.named("puzzle_firework_2"), Animation.named("puzzle_firework_3") ]
+
 
 	func showPreview() {
 		guard let image = input.image?.resizeImageUsingVImage(previewView.frame.size) else { return }
@@ -111,11 +112,12 @@ class PuzzlePlaygroundViewController: GameViewController {
 	}
 
 	func showFirework(puzzle: UIView) {
-		animationView = AnimationView(name: fireworks.randomElement()!)
+		animationView.animation = fireworks.randomElement()!
+
 		let puzzleFrame = puzzle.frame
 		animationView.frame.size = CGSize(width: puzzleFrame.width*2.5, height: puzzleFrame.height*2.5)
 		animationView.center = puzzleFrame.center
-
+		animationView.clipsToBounds = false
 		view.bringSubviewToFront(animationView)
 		animationView.isHidden = false
 		playSounds(Sound.firework.url)
