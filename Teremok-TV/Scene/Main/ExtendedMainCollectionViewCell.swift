@@ -21,11 +21,10 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet private var collectionView: UICollectionView!
     
-    //TO DO: отрефакторить это
-    var serials: [MainContent] = []
-    var razdelNumber: Int = 0
+    private var serials: [MainContent] = []
+    private var razdelNumber: Int = 0
+    private var videosCell: Bool = false
     var delegate: DidSelectRazdelAt?
-    var videosCell: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,6 +34,19 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    func configureCell(content: [MainContent], razdelNumber: Int, videosCell: Bool) {
+        self.serials = content
+        self.razdelNumber = razdelNumber
+        self.videosCell = videosCell
+    }
+    
+    //TO DO: возможно не понадобиться из-за карусели
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        collectionView.reloadData()
+        collectionView.contentOffset = CGPoint(x: 0.0, y: 0.0)
     }
 }
 

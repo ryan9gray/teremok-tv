@@ -44,7 +44,6 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
         self.item = item
         self.titleLbl.text = item.name
         toLike(me: item.isLikeMe)
-        //TO DO: change color
         let image = item.isDownload ? UIImage(named:"icDownloadGray") : UIImage(named: "icDown")
         downloadBtn.setImage(image, for: .normal)
         toDownload(me: item.isDownload)

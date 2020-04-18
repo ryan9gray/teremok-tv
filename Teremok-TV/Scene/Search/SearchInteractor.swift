@@ -61,7 +61,6 @@ class SearchInteractor: SearchBusinessLogic, SearchDataStore {
         guard let id = searchItems[safe: idx]?.seriesId else {
             return
         }
-        //TO DO: поменять модель, чтобы получать имя персонажа Пузаков
         self.presenter?.presentSerial(id: id)
     }
     

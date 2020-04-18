@@ -186,12 +186,12 @@ extension MainViewController: UICollectionViewDataSource {
         let razdelItem = router?.dataStore?.mainRazdels[safe: indexPath.row]
         if extendedRazdels.keys.contains(indexPath) {
             let cell = collectionView.dequeueReusableCell(withCell: ExtendedMainCollectionViewCell.self, for: indexPath)
-            cell.serials = extendedRazdels[indexPath] ?? []
-            cell.razdelNumber = indexPath.row
-            cell.delegate = self
+            var videosCell: Bool = false
             if let type = razdelItem?.itemType, type == .videos {
-                cell.videosCell = true
+                videosCell = true
             }
+            cell.configureCell(content: extendedRazdels[indexPath] ?? [], razdelNumber: indexPath.row, videosCell: videosCell)
+            cell.delegate = self
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
@@ -199,8 +199,7 @@ extension MainViewController: UICollectionViewDataSource {
             if indexPath.section == 0 {
                 cell.gameRazdelConfigure()
             } else {
-                //TO DO:
-                cell.configure(title: razdels[indexPath.row].title, imagesURLs: razdels[indexPath.row].topImagesURLs)
+                cell.configure(title: razdels[indexPath.row].title, topVideos: razdels[indexPath.row].topVideos)
             }
 
             return cell
@@ -210,7 +209,11 @@ extension MainViewController: UICollectionViewDataSource {
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: cellWidth, height: collectionView.bounds.height)
+        if indexPath.section == 0 {
+            return CGSize(width: collectionView.bounds.height, height: collectionView.bounds.height)
+        } else {
+            return CGSize(width: cellWidth, height: collectionView.bounds.height)
+        }
     }
 }
 

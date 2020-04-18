@@ -26,20 +26,25 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
         secondImageView.image = nil
         mainImageView.image = #imageLiteral(resourceName: "icNowifi")
         mainImageView.contentMode = .scaleAspectFit
+        moreSerialImage.isHidden = false
     }
 
-    func configure(title: String, imagesURLs: [String]){
-        titleLabel.text = title
-        //TO DO:
-        if imagesURLs.count > 4 {
-            print(imagesURLs[0])
-            print(imagesURLs[1])
-            print(imagesURLs[2])
-            setImage(imageURL: imagesURLs[0], imageView: mainImageView)
-            setImage(imageURL: imagesURLs[1], imageView: secondImageView)
-            setImage(imageURL: imagesURLs[2], imageView: thirdImageView)
+    func configure(title: String, topVideos: [Main.RazdelItemTop]){
+        if topVideos.isEmpty {
+            titleLabel.text = title
+            return
+        } else {
+            titleLabel.text = topVideos[0].name
+            if topVideos.count >= 1 {
+                setImage(imageURL: topVideos[0].poster, imageView: mainImageView)
+            }
+            if topVideos.count >= 2 {
+                setImage(imageURL: topVideos[1].poster, imageView: secondImageView)
+            }
+            if topVideos.count >= 3 {
+                setImage(imageURL: topVideos[2].poster, imageView: thirdImageView)
+            }
         }
-        
     }
     
     //TO DO: заменить на нужные картинки
@@ -49,6 +54,7 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
         secondImageView.image = UIImage(named: "gameIcon")
         mainImageView.image = UIImage(named: "gameIcon")
         mainImageView.contentMode = .scaleAspectFill
+        moreSerialImage.isHidden = true
     }
     
     private func setImage(imageURL: String, imageView: UIImageView) {

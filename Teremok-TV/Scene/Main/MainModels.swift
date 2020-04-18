@@ -14,8 +14,12 @@ enum Main {
     struct RazdelItem {
         var title: String
         var link: String
-        //TO DO:
-        var topImagesURLs: [String]
+        var topVideos: [RazdelItemTop]
+    }
+    
+    struct RazdelItemTop {
+        var poster: String
+        var name: String
     }
 
     enum Messages {
@@ -30,4 +34,8 @@ enum Main {
 
 extension Main.RazdelItem: Hashable {
 
+}
+
+extension Main.RazdelItemTop: Hashable {
+    
 }

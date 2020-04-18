@@ -24,8 +24,8 @@ class MainCarouseLayout: UICollectionViewLayout {
     private var cachedItemsAttributes: [IndexPath: UICollectionViewLayoutAttributes] = [:]
     private var itemSize: CGSize {
         guard let collectionView = collectionView else { return CGSize(width: 0, height: 0) }
-
-        return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
+        // TO DO
+        return CGSize(width: collectionView.bounds.height/* * 1.75*/, height: collectionView.bounds.height)
     }
     let generator = UISelectionFeedbackGenerator()
     var audioPlayer: AVAudioPlayer?

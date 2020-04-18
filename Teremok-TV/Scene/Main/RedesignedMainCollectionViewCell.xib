@@ -95,14 +95,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tl5-yq-5q9" customClass="RoundedCorverView" customModule="Teremok_TV" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="142" width="340" height="48"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDj-th-R5i">
-                                        <rect key="frame" x="15" y="12.5" width="195" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDj-th-R5i">
+                                        <rect key="frame" x="15" y="0.0" width="225" height="48"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                         <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moreSerialsImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZNn-36-uFP">
-                                        <rect key="frame" x="225" y="-5" width="70" height="43"/>
+                                        <rect key="frame" x="255" y="-5" width="70" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZNn-36-uFP" secondAttribute="height" multiplier="78:48" id="n46-ak-0xF"/>
                                         </constraints>
@@ -111,11 +111,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ZNn-36-uFP" secondAttribute="bottom" constant="10" id="CdC-Bk-a8T"/>
+                                    <constraint firstAttribute="bottom" secondItem="kDj-th-R5i" secondAttribute="bottom" id="NK1-Gc-9I9"/>
                                     <constraint firstItem="kDj-th-R5i" firstAttribute="centerY" secondItem="Tl5-yq-5q9" secondAttribute="centerY" id="OIh-WP-Rid"/>
                                     <constraint firstItem="ZNn-36-uFP" firstAttribute="leading" secondItem="kDj-th-R5i" secondAttribute="trailing" constant="15" id="VQy-p8-03E"/>
                                     <constraint firstItem="kDj-th-R5i" firstAttribute="leading" secondItem="Tl5-yq-5q9" secondAttribute="leading" constant="15" id="b8W-ah-lDc"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZNn-36-uFP" secondAttribute="trailing" constant="45" id="kHQ-PU-pGs"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZNn-36-uFP" secondAttribute="trailing" constant="15" id="kHQ-PU-pGs"/>
                                     <constraint firstItem="ZNn-36-uFP" firstAttribute="top" secondItem="Tl5-yq-5q9" secondAttribute="top" constant="-5" id="yeC-fM-rPI"/>
+                                    <constraint firstItem="kDj-th-R5i" firstAttribute="top" secondItem="Tl5-yq-5q9" secondAttribute="top" id="yr5-4u-WTx"/>
                                 </constraints>
                             </view>
                         </subviews>
