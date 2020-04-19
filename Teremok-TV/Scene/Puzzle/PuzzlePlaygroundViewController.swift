@@ -27,7 +27,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 		case wrong = "puzzle_wrong"
 
 		var url: URL {
-			URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
+			URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "mp3")!)
 		}
 	}
 
@@ -76,16 +76,9 @@ class PuzzlePlaygroundViewController: GameViewController {
 		animationView.animationSpeed = 1.0
 
 		do {
-			audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_playground", ofType: "wav")!))
+			audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_playground", ofType: "mp3")!))
 			audioPlayer?.numberOfLoops = 10
 			audioPlayer?.prepareToPlay()
-		} catch {
-			print("no file)")
-		}
-
-		do {
-			buttonPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_firework", ofType: "wav")!))
-			buttonPlayer?.prepareToPlay()
 		} catch {
 			print("no file)")
 		}
@@ -262,10 +255,10 @@ class PuzzlePlaygroundViewController: GameViewController {
 
 	private func playSounds(_ url: URL) {
 		do {
-			audioPlayer = try AVAudioPlayer(contentsOf: url)
+			buttonPlayer = try AVAudioPlayer(contentsOf: url)
 		} catch {
 			print("no file)")
 		}
-		audioPlayer?.play()
+		buttonPlayer?.play()
 	}
 }

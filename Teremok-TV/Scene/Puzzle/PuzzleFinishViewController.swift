@@ -41,7 +41,7 @@ class PuzzleFinishViewController: GameViewController {
 		titleLabel.text = "Молодец! Выбери следующую картинку!"
 		playButton.gradientColors = [ UIColor.PuzzleGame.blueOne, UIColor.PuzzleGame.blueTwo ]
 		do {
-			audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_win", ofType: "wav")!))
+			audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_win", ofType: "mp3")!))
 			audioPlayer?.prepareToPlay()
 		} catch {
 			print("no file)")

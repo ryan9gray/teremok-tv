@@ -28,7 +28,7 @@ class PuzzleStartViewController: GameStartViewController {
 
 		startButton.gradientColors = [ UIColor.PuzzleGame.greenOne, UIColor.PuzzleGame.greenTwo ]
 		do {
-			audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_main", ofType: "wav")!))
+			audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_main", ofType: "mp3")!))
 			audioPlayer?.prepareToPlay()
 		} catch {
 			print("no file)")
