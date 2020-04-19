@@ -52,6 +52,10 @@ class PuzzleGameFlow  {
 	}
 
 	func startPlay(name: String) {
+		if !(Profile.current?.premiumGame ?? false), puzzlesDone.count >= 3 {
+			buyAlert()
+			return
+		}
 		let image = UIImage(named: name)
 		let controller = PuzzlePlaygroundViewController.instantiate(fromStoryboard: .puzzle)
 		controller.input = PuzzlePlaygroundViewController.Input(
@@ -91,6 +95,10 @@ class PuzzleGameFlow  {
 		if UIImage(named: "puzzle_16") != nil {
 			self.allFetched = true
 			self.allPuzzles.append(contentsOf: PuzzleMaster.secondPack + PuzzleMaster.thirdPack)
+		} else {
+			let alertController = UIAlertController(title: "Остальные картинки еще не загрузились", message: nil, preferredStyle: .alert)
+			alertController.addAction(UIAlertAction(title: "Ок", style: .default))
+			master?.present(alertController, animated: true, completion: nil)
 		}
 	}
 	
