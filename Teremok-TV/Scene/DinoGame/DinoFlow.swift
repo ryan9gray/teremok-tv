@@ -20,11 +20,12 @@ class DinoGameFlow {
     var checkIntro: Bool = true
 
     func startFlow(difficulty: Int) {
-        if checkIntro, !LocalStore.monsterIntroduce {
-            checkIntro = false
-            showIntroduce(difficulty: difficulty)
-            return
-        }
+        // вернуть после добавления нужного видео
+//        if checkIntro, !LocalStore.monsterIntroduce {
+//            checkIntro = false
+//            showIntroduce(difficulty: difficulty)
+//            return
+//        }
         
         game = Game(gameDifficulty: Game.Difficulty(rawValue: difficulty) ?? .easy)
         randomRound()
