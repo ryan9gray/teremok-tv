@@ -24,8 +24,8 @@ class CarouselLayout: UICollectionViewLayout {
     private var cachedItemsAttributes: [IndexPath: UICollectionViewLayoutAttributes] = [:]
     private var itemSize: CGSize {
         guard let collectionView = collectionView else { return CGSize(width: 0, height: 0) }
-//тут настраивается размер ячейки
-        return CGSize(width: collectionView.bounds.height * 1.5, height: collectionView.bounds.height)
+
+        return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
     }
     let generator = UISelectionFeedbackGenerator()
     var audioPlayer: AVAudioPlayer?

@@ -116,6 +116,7 @@
                                     <constraint firstItem="ZNn-36-uFP" firstAttribute="leading" secondItem="kDj-th-R5i" secondAttribute="trailing" constant="15" id="VQy-p8-03E"/>
                                     <constraint firstItem="kDj-th-R5i" firstAttribute="leading" secondItem="Tl5-yq-5q9" secondAttribute="leading" constant="15" id="b8W-ah-lDc"/>
                                     <constraint firstAttribute="trailing" secondItem="ZNn-36-uFP" secondAttribute="trailing" constant="15" id="kHQ-PU-pGs"/>
+                                    <constraint firstAttribute="trailing" secondItem="kDj-th-R5i" secondAttribute="trailing" priority="750" constant="15" id="p77-oD-URh"/>
                                     <constraint firstItem="ZNn-36-uFP" firstAttribute="top" secondItem="Tl5-yq-5q9" secondAttribute="top" constant="-5" id="yeC-fM-rPI"/>
                                     <constraint firstItem="kDj-th-R5i" firstAttribute="top" secondItem="Tl5-yq-5q9" secondAttribute="top" id="yr5-4u-WTx"/>
                                 </constraints>
@@ -157,6 +158,8 @@
                 <outlet property="secondImageView" destination="2nv-T4-1EO" id="SvV-q2-9M5"/>
                 <outlet property="thirdImageView" destination="cSZ-4a-ayR" id="D8S-Kf-29r"/>
                 <outlet property="titleLabel" destination="kDj-th-R5i" id="bFT-wp-IqU"/>
+                <outlet property="titleLabelTrailingConstratraintToMoreSerialImage" destination="VQy-p8-03E" id="M9O-SQ-rFx"/>
+                <outlet property="titleLabelTralingConstraintToSuperview" destination="p77-oD-URh" id="wZw-d3-oMf"/>
             </connections>
             <point key="canvasLocation" x="355.07246376811599" y="152.67857142857142"/>
         </collectionViewCell>

@@ -88,9 +88,6 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
         let cells = [RedesignedMainCollectionViewCell.self, ExtendedMainCollectionViewCell.self]
         collectionView.register(cells: cells)
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-        let leftInset = UIScreen.main.bounds.width/2 - collectionView.bounds.height * 1.335 / 2
-        let rightInset = UIScreen.main.bounds.width/2 - collectionView.bounds.height
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
 
         let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "swipe_card_sound", ofType: "wav")!)
         do {
@@ -197,7 +194,6 @@ extension MainViewController: UICollectionViewDataSource {
             } else {
                 cell.configure(title: razdels[indexPath.row].title, topVideos: razdels[indexPath.row].topVideos)
             }
-
             return cell
         }
     }
@@ -209,8 +205,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: collectionView.bounds.height * 1.335, height: collectionView.bounds.height)
         } else {
             if extendedRazdels.keys.contains(indexPath) {
-                //TO DO изменить формулу после получения о количестве элементов в массиве
-                return CGSize(width: collectionView.bounds.height * 1.75 * 3 + 80.0 + collectionView.bounds.height, height: collectionView.bounds.height)
+                return CGSize(width: collectionView.bounds.height * 1.75 * 10 + 220.0 + collectionView.bounds.height, height: collectionView.bounds.height)
             } else {
                 return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
             }
@@ -224,6 +219,18 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         updateMainTitleView()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        //TO DO
+        //collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
+        if section == 0 {
+            let left = UIScreen.main.bounds.center.x - collectionView.layer.frame.size.height * 1.335 / 2
+            return UIEdgeInsets(top: 0, left: left, bottom: 0, right: 20)
+        } else {
+            let right = UIScreen.main.bounds.center.x - collectionView.layer.frame.size.height * 1.75 / 2
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: right)
+        }
     }
 }
 

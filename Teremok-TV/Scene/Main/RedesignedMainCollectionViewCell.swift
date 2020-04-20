@@ -15,6 +15,8 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var moreSerialImage: UIImageView!
     
+    @IBOutlet weak var titleLabelTrailingConstratraintToMoreSerialImage: NSLayoutConstraint!
+    @IBOutlet weak var titleLabelTralingConstraintToSuperview: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,6 +29,8 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
         mainImageView.image = #imageLiteral(resourceName: "icNowifi")
         mainImageView.contentMode = .scaleAspectFit
         moreSerialImage.isHidden = false
+        titleLabelTrailingConstratraintToMoreSerialImage.priority = UILayoutPriority(rawValue: 1000)
+        titleLabelTralingConstraintToSuperview.priority = UILayoutPriority(rawValue: 750)
     }
 
     func configure(title: String, topVideos: [Main.RazdelItemTop]){
@@ -34,27 +38,27 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
             titleLabel.text = title
             return
         } else {
+            let topVideosCount = topVideos.count
             titleLabel.text = topVideos[0].name
-            if topVideos.count >= 1 {
-                setImage(imageURL: topVideos[0].poster, imageView: mainImageView)
-            }
-            if topVideos.count >= 2 {
+            setImage(imageURL: topVideos[0].poster, imageView: mainImageView)
+            if topVideosCount >= 2 {
                 setImage(imageURL: topVideos[1].poster, imageView: secondImageView)
             }
-            if topVideos.count >= 3 {
+            if topVideosCount >= 3 {
                 setImage(imageURL: topVideos[2].poster, imageView: thirdImageView)
             }
         }
     }
     
-    //TO DO: заменить на нужные картинки
     func gameRazdelConfigure() {
         titleLabel.text = "Алфавит, Мемориз и другие игры"
-        thirdImageView.image = UIImage(named: "gameIcon")
-        secondImageView.image = UIImage(named: "gameIcon")
+        thirdImageView.image = UIImage(named: "ic-alphaviteBack")
+        secondImageView.image = UIImage(named: "ic-monsterBack")
         mainImageView.image = UIImage(named: "gameIcon")
         mainImageView.contentMode = .scaleAspectFill
         moreSerialImage.isHidden = true
+        titleLabelTrailingConstratraintToMoreSerialImage.priority = UILayoutPriority(rawValue: 750)
+        titleLabelTralingConstraintToSuperview.priority = UILayoutPriority(rawValue: 1000)
     }
     
     private func setImage(imageURL: String, imageView: UIImageView) {

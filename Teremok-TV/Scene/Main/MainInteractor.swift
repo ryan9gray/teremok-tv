@@ -49,8 +49,8 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
     var razdeResponse: RazdelResponse?
     let service: RazdelProtocol = RazdelService()
     var items: [RazdelItemResponse] = []
-    //TO DO: Изменить количество подгружаемых разделов
-    let countSerials = 3
+    
+    let countSerials = 10
     
     func getSeriesRazdelContent(razdelId: Int, indexPath: IndexPath){
 
