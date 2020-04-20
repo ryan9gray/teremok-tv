@@ -23,14 +23,14 @@ class GameMasterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        do {
-            //Preparation to play
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
-        }
+//        do {
+//            //Preparation to play
+//            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .moviePlayback)
+//            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+//        }
+//        catch {
+//            // report for an error
+//        }
     }
 
     func openSettings() {
@@ -46,13 +46,13 @@ class GameMasterViewController: UIViewController {
     }
 
     deinit {
-        do {
-            //Preparation to play - Костыль
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .moviePlayback)
-            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-        }
-        catch {
-            // report for an error
-        }
+//        do {
+//            //Preparation to play - Костыль
+//            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient, mode: .moviePlayback)
+//            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+//        }
+//        catch {
+//            // report for an error
+//        }
     }
 }

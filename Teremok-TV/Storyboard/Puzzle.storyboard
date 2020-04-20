@@ -172,7 +172,7 @@
                             <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ava-yl-Krb">
                                 <rect key="frame" x="655" y="0.0" width="157" height="375"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-WS-mMB">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-WS-mMB">
                                         <rect key="frame" x="20" y="20" width="116" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lLY-Gy-d77">
@@ -387,15 +387,15 @@
                                 <cells/>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wwt-Z0-wr8">
-                                <rect key="frame" x="276" y="313" width="260" height="41"/>
+                                <rect key="frame" x="156" y="313" width="500" height="41"/>
                                 <subviews>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeh-O0-g4b" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="41"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="Hpq-xl-IGm"/>
+                                            <constraint firstAttribute="width" constant="160" id="Hpq-xl-IGm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
-                                        <state key="normal" title="3x3">
+                                        <state key="normal" title="Пазл 3x3">
                                             <color key="titleColor" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -403,9 +403,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-0e-LL7" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="90" y="0.0" width="80" height="41"/>
+                                        <rect key="frame" x="170" y="0.0" width="160" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
-                                        <state key="normal" title="6x6">
+                                        <state key="normal" title="Пазл 6x6">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -413,9 +413,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxP-a5-aRr" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="0.0" width="80" height="41"/>
+                                        <rect key="frame" x="340" y="0.0" width="160" height="41"/>
                                         <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
-                                        <state key="normal" title="9x9">
+                                        <state key="normal" title="Пазл 9x9">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
