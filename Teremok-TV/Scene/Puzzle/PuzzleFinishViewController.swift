@@ -32,13 +32,13 @@ class PuzzleFinishViewController: GameViewController {
 		let image: UIImage?
 	}
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		titleLabel.addTxtShadow()
 		imagewView.image = input.image
 		titleLabel.text = "Молодец! Выбери следующую картинку!"
+		titleLabel.textColor = .white
 		playButton.gradientColors = [ UIColor.PuzzleGame.blueOne, UIColor.PuzzleGame.blueTwo ]
 		do {
 			audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "puzzle_win", ofType: "mp3")!))
@@ -59,5 +59,4 @@ class PuzzleFinishViewController: GameViewController {
 
 		audioPlayer?.stop()
 	}
-
 }
