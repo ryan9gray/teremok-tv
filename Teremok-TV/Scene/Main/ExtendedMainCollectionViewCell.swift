@@ -42,7 +42,6 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
         self.videosCell = videosCell
     }
     
-    //TO DO: возможно не понадобиться из-за карусели
     override func prepareForReuse() {
         super.prepareForReuse()
         collectionView.reloadData()
@@ -126,5 +125,15 @@ extension ExtendedMainCollectionViewCell: SerialCellProtocol {
     
     func buttonClick(_ sender: Any) {
         
+    }
+}
+
+extension ExtendedMainCollectionViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 0 {
+            return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
+        } else {
+            return CGSize(width: collectionView.bounds.height, height: collectionView.bounds.height)
+        }
     }
 }

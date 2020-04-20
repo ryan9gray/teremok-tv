@@ -62,7 +62,6 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     var razdels: [Main.RazdelItem] = []
     var extendedRazdels: [IndexPath : [MainContent]] = [:]
     
-    var cellWidth: CGFloat = 0
     var audioPlayer: AVAudioPlayer?
     var buttonPlayer: AVAudioPlayer?
 
@@ -75,13 +74,6 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
         
         prepareUI()
         fetchRazdels()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-       if ServiceConfiguration.activeConfiguration() == .prod  {
-            audioPlayer?.play()
-        }
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -96,15 +88,15 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
         let cells = [RedesignedMainCollectionViewCell.self, ExtendedMainCollectionViewCell.self]
         collectionView.register(cells: cells)
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-        cellWidth = view.bounds.width/3.2
+        let leftInset = UIScreen.main.bounds.width/2 - collectionView.bounds.height * 1.335 / 2
+        let rightInset = UIScreen.main.bounds.width/2 - collectionView.bounds.height
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
 
-        let backSound = BackgroundMediaWorker.getSound()
-
+        let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "swipe_card_sound", ofType: "wav")!)
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: backSound)
-            audioPlayer?.numberOfLoops = 5
+            audioPlayer = try AVAudioPlayer(contentsOf: pianoSound)
         } catch {
-            print("no file \(backSound)")
+            print("no file \(pianoSound)")
         }
         let buttonSound = URL(fileURLWithPath: Bundle.main.path(forResource: "push_level_up", ofType: "mp3")!)
 
@@ -134,7 +126,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
         collectionView.reloadData()
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    private func updateMainTitleView() {
         var visibleRect = CGRect()
         
         visibleRect.origin = collectionView.contentOffset
@@ -192,6 +184,10 @@ extension MainViewController: UICollectionViewDataSource {
             }
             cell.configureCell(content: extendedRazdels[indexPath] ?? [], razdelNumber: indexPath.row, videosCell: videosCell)
             cell.delegate = self
+            let lastRow = collectionView.numberOfItems(inSection: 1)
+            if indexPath.row == lastRow - 1 {
+                collectionView.contentInset.right = 0
+            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
@@ -210,10 +206,24 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
-            return CGSize(width: collectionView.bounds.height, height: collectionView.bounds.height)
+            return CGSize(width: collectionView.bounds.height * 1.335, height: collectionView.bounds.height)
         } else {
-            return CGSize(width: cellWidth, height: collectionView.bounds.height)
+            if extendedRazdels.keys.contains(indexPath) {
+                //TO DO изменить формулу после получения о количестве элементов в массиве
+                return CGSize(width: collectionView.bounds.height * 1.75 * 3 + 80.0 + collectionView.bounds.height, height: collectionView.bounds.height)
+            } else {
+                return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
+            }
         }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        audioPlayer?.play()
+        updateMainTitleView()
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        updateMainTitleView()
     }
 }
 
