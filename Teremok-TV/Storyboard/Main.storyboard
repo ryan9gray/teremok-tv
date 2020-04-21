@@ -427,7 +427,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-ha-28h">
-                                <rect key="frame" x="0.0" y="150" width="812" height="164"/>
+                                <rect key="frame" x="0.0" y="150" width="812" height="180"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="jTh-6g-Rt6">
                                     <size key="itemSize" width="128" height="128"/>
@@ -448,7 +448,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MdH-rV-e46" firstAttribute="bottom" secondItem="MeA-ha-28h" secondAttribute="bottom" constant="40" id="7s7-ko-TUh"/>
+                            <constraint firstAttribute="bottom" secondItem="MeA-ha-28h" secondAttribute="bottom" constant="45" id="CdW-Rb-2aA"/>
                             <constraint firstItem="MeA-ha-28h" firstAttribute="leading" secondItem="prU-I2-KoJ" secondAttribute="leading" id="Cvh-UQ-nij"/>
                             <constraint firstAttribute="trailing" secondItem="MeA-ha-28h" secondAttribute="trailing" id="KRc-xE-Tfe"/>
                             <constraint firstItem="z2k-Jx-R8k" firstAttribute="top" secondItem="MdH-rV-e46" secondAttribute="top" constant="80" id="Vce-gB-6QD"/>
@@ -755,7 +755,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZTZ-Wr-oV0">
-                                <rect key="frame" x="44" y="150" width="724" height="164"/>
+                                <rect key="frame" x="44" y="150" width="724" height="134"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="okP-Ak-nsQ" customClass="CarouselLayout" customModule="Teremok_TV" customModuleProvider="target"/>
                                 <cells/>
@@ -771,7 +771,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="bottom" secondItem="AmA-Ej-tXs" secondAttribute="bottom" constant="-40" id="5Sj-UM-8pu"/>
+                            <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="bottom" secondItem="AmA-Ej-tXs" secondAttribute="bottom" constant="-70" id="5Sj-UM-8pu"/>
                             <constraint firstAttribute="trailing" secondItem="E7P-Tw-Nrc" secondAttribute="trailing" id="7VO-Lj-oOU"/>
                             <constraint firstItem="E7P-Tw-Nrc" firstAttribute="leading" secondItem="iO6-Yj-s6b" secondAttribute="leading" id="Ca3-sG-Uqz"/>
                             <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="leading" secondItem="AmA-Ej-tXs" secondAttribute="leading" id="Ina-8V-Mx4"/>
@@ -804,7 +804,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EED-H9-foi">
-                                <rect key="frame" x="44" y="150" width="724" height="164"/>
+                                <rect key="frame" x="44" y="150" width="724" height="134"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="Rjo-2t-Vhh" customClass="CarouselLayout" customModule="Teremok_TV" customModuleProvider="target"/>
                                 <cells/>
@@ -817,7 +817,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jUr-Xa-G8f" firstAttribute="leading" secondItem="4oG-I5-nID" secondAttribute="leading" id="1t3-Mw-aTp"/>
-                            <constraint firstItem="EED-H9-foi" firstAttribute="bottom" secondItem="TTT-AP-Tkb" secondAttribute="bottom" constant="-40" id="3eV-xJ-GPo"/>
+                            <constraint firstItem="EED-H9-foi" firstAttribute="bottom" secondItem="TTT-AP-Tkb" secondAttribute="bottom" constant="-70" id="3eV-xJ-GPo"/>
                             <constraint firstItem="TTT-AP-Tkb" firstAttribute="trailing" secondItem="EED-H9-foi" secondAttribute="trailing" id="AK4-O5-d5Z"/>
                             <constraint firstAttribute="trailing" secondItem="jUr-Xa-G8f" secondAttribute="trailing" id="VUI-fT-h67"/>
                             <constraint firstItem="EED-H9-foi" firstAttribute="leading" secondItem="TTT-AP-Tkb" secondAttribute="leading" id="Vmw-Oe-5dI"/>

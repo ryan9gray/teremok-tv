@@ -61,6 +61,8 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     
     var razdels: [Main.RazdelItem] = []
     var extendedRazdels: [IndexPath : [MainContent]] = [:]
+    private var collectionViewLeftInset: CGFloat?
+    private var collectionViewRightInset: CGFloat?
     
     var audioPlayer: AVAudioPlayer?
     var buttonPlayer: AVAudioPlayer?
@@ -183,7 +185,8 @@ extension MainViewController: UICollectionViewDataSource {
             cell.delegate = self
             let lastRow = collectionView.numberOfItems(inSection: 1)
             if indexPath.row == lastRow - 1 {
-                collectionView.contentInset.right = 0
+                collectionView.contentInset.right = 20
+                collectionViewRightInset = 20
             }
             return cell
         } else {
@@ -223,13 +226,23 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         //TO DO
-        //collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: true)
         if section == 0 {
-            let left = UIScreen.main.bounds.center.x - collectionView.layer.frame.size.height * 1.335 / 2
-            return UIEdgeInsets(top: 0, left: left, bottom: 0, right: 20)
+            if let left = collectionViewLeftInset {
+                return UIEdgeInsets(top: 0, left: left, bottom: 0, right: 20)
+            } else {
+                let inset = collectionView.bounds.center.x - collectionView.layer.frame.size.height * 1.335 / 2
+                collectionViewLeftInset = inset
+                return UIEdgeInsets(top: 0, left: inset, bottom: 0, right: 20)
+            }
         } else {
-            let right = UIScreen.main.bounds.center.x - collectionView.layer.frame.size.height * 1.75 / 2
-            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: right)
+            if let right = collectionViewRightInset {
+                return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: right)
+            } else {
+                let inset = collectionView.bounds.center.x - collectionView.layer.frame.size.height * 1.75 / 2
+                collectionViewRightInset = inset
+                return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: inset)
+            }
+            
         }
     }
 }
