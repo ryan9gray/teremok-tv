@@ -9,6 +9,7 @@
 import UIKit
 import Spring
 import AVKit
+import Lottie
 
 class PuzzleFinishViewController: GameViewController {
 	@IBOutlet private var playButton: KeyButton!
@@ -47,10 +48,39 @@ class PuzzleFinishViewController: GameViewController {
 			print("no file)")
 		}
     }
-	
+
+	func addFireworks() {
+		let animationView1 = AnimationView(animation: Animation.named("puzzle_firework_1"))
+		let animationView2 = AnimationView(animation: Animation.named("puzzle_firework_2"))
+		let animationView3 = AnimationView(animation: Animation.named("puzzle_firework_3"))
+		let animations = [animationView1, animationView2, animationView3]
+
+		let width = view.frame.width/3
+
+		animations.forEach { animationView in
+			animationView.isUserInteractionEnabled = false
+			animationView.clipsToBounds = false
+			animationView.frame.size = CGSize(width: width, height: width)
+			view.addSubview(animationView)
+		}
+		animationView1.center = CGPoint(x: view.frame.width/2, y: width/2)
+		animationView2.center = CGPoint(x: width, y: width)
+		animationView3.center = CGPoint(x: view.frame.width-width, y: view.frame.height/2)
+
+		animations.forEach { animationView in
+			animationView.loopMode = .playOnce
+			animationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+			animationView.contentMode = .scaleAspectFill
+			animationView.play { [weak animationView] finish in
+				animationView?.isHidden = true
+			}
+		}
+	}
+
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
+		addFireworks()
 		audioPlayer?.play()
 	}
 

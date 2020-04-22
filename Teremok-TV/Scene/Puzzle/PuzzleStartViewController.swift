@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class PuzzleStartViewController: GameStartViewController {
+class PuzzleStartViewController: GameViewController {
 	@IBOutlet private var startButton: KeyButton!
 	private var audioPlayer: AVAudioPlayer?
 	private var buttonPlayer: AVAudioPlayer?
@@ -17,10 +17,6 @@ class PuzzleStartViewController: GameStartViewController {
 	@IBAction private func startTap(_ sender: Any) {
 		buttonPlayer?.play()
 		masterRouter?.startFlow(0)
-	}
-	
-	@IBAction func avatarClick(_ sender: Any) {
-		masterRouter?.openStatistic()
 	}
 
     override func viewDidLoad() {
@@ -53,5 +49,4 @@ class PuzzleStartViewController: GameStartViewController {
 
 		audioPlayer?.stop()
 	}
-
 }

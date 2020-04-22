@@ -67,7 +67,7 @@ class PuzzleGameFlow  {
 				guard let self = self else { return }
 
 				self.finishRound(image: image)
-				if self.puzzlesDone.contains(name) {
+				if !self.puzzlesDone.contains(name) {
 					self.puzzlesDone.append(name)
 					LocalStore.puzzlesDone = self.puzzlesDone
 				}
