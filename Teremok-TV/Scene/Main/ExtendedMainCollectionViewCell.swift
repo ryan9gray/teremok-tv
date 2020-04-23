@@ -130,10 +130,15 @@ extension ExtendedMainCollectionViewCell: SerialCellProtocol {
 
 extension ExtendedMainCollectionViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.section == 0 {
-            return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
-        } else {
-            return CGSize(width: collectionView.bounds.height, height: collectionView.bounds.height)
-        }
+        
+        return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        if section == 0 {
+//            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20.0)
+//        } else {
+//            return .zero
+//        }
+//    }
 }

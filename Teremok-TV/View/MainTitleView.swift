@@ -14,6 +14,8 @@ class MainTitleView: NibLoadableView {
     @IBOutlet private var rightGarlandLeadingConstraint: NSLayoutConstraint!
     @IBOutlet private var titleLabel: UILabel!
     
+    private var title: String = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         leftGarlandTrailingConstraint.constant = garlandConstraintsCalculate()
@@ -25,6 +27,24 @@ class MainTitleView: NibLoadableView {
     }
     
     func configureTitle(title: String) {
-        titleLabel.text = title
+        if self.title != title {
+            titleLabel.text = title
+            configureAnimation()
+            self.title = title
+        }
+    }
+    
+    private func configureAnimation() {
+        
+        let keyTimes: [NSNumber] = [0.0, 0.25, 0.5]
+        let duration = 0.5
+        let repeatCount: Float = 2.0
+        
+        let transformAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
+        transformAnimation.values = [1.0, 0.95, 1.0]
+        transformAnimation.keyTimes = keyTimes
+        transformAnimation.duration = duration
+        transformAnimation.repeatCount = repeatCount
+        titleBackgroundImage.layer.add(transformAnimation, forKey: "transformAnimation")
     }
 }

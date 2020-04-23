@@ -11,6 +11,9 @@
         <array key="OpenSans-Bold.ttf">
             <string>OpenSans-Bold</string>
         </array>
+        <array key="OpenSans-ExtraBold.ttf">
+            <string>OpenSans-Extrabold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -101,23 +104,55 @@
                                         <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moreSerialsImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZNn-36-uFP">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOr-vq-bcm">
                                         <rect key="frame" x="255" y="-5" width="70" height="43"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moreSerialsImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZNn-36-uFP">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="43"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D2B-8u-pb5">
+                                                <rect key="frame" x="14" y="3" width="42" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="+100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aea-fc-h93">
+                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="18.5"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="сериалов" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opc-Cj-FYb">
+                                                        <rect key="frame" x="0.0" y="18.5" width="42" height="9.5"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="8"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="ZNn-36-uFP" secondAttribute="height" multiplier="78:48" id="n46-ak-0xF"/>
+                                            <constraint firstItem="ZNn-36-uFP" firstAttribute="leading" secondItem="nOr-vq-bcm" secondAttribute="leading" id="2T8-TV-OIh"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZNn-36-uFP" secondAttribute="trailing" id="DdC-Hh-Zgq"/>
+                                            <constraint firstItem="D2B-8u-pb5" firstAttribute="leading" secondItem="nOr-vq-bcm" secondAttribute="leading" constant="14" id="Fmk-Nf-WFT"/>
+                                            <constraint firstAttribute="bottom" secondItem="D2B-8u-pb5" secondAttribute="bottom" constant="12" id="GcC-Xb-FQW"/>
+                                            <constraint firstAttribute="trailing" secondItem="D2B-8u-pb5" secondAttribute="trailing" constant="14" id="dsp-dV-A0H"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZNn-36-uFP" secondAttribute="bottom" id="i88-sw-2DO"/>
+                                            <constraint firstItem="D2B-8u-pb5" firstAttribute="top" secondItem="nOr-vq-bcm" secondAttribute="top" constant="3" id="oRG-yy-K20"/>
+                                            <constraint firstAttribute="width" secondItem="nOr-vq-bcm" secondAttribute="height" multiplier="78:48" id="pyb-oN-5Jk"/>
+                                            <constraint firstItem="ZNn-36-uFP" firstAttribute="top" secondItem="nOr-vq-bcm" secondAttribute="top" id="qwZ-vQ-0C3"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ZNn-36-uFP" secondAttribute="bottom" constant="10" id="CdC-Bk-a8T"/>
+                                    <constraint firstItem="nOr-vq-bcm" firstAttribute="leading" secondItem="kDj-th-R5i" secondAttribute="trailing" constant="15" id="0Od-5M-xNZ"/>
                                     <constraint firstAttribute="bottom" secondItem="kDj-th-R5i" secondAttribute="bottom" id="NK1-Gc-9I9"/>
                                     <constraint firstItem="kDj-th-R5i" firstAttribute="centerY" secondItem="Tl5-yq-5q9" secondAttribute="centerY" id="OIh-WP-Rid"/>
-                                    <constraint firstItem="ZNn-36-uFP" firstAttribute="leading" secondItem="kDj-th-R5i" secondAttribute="trailing" constant="15" id="VQy-p8-03E"/>
                                     <constraint firstItem="kDj-th-R5i" firstAttribute="leading" secondItem="Tl5-yq-5q9" secondAttribute="leading" constant="15" id="b8W-ah-lDc"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZNn-36-uFP" secondAttribute="trailing" constant="15" id="kHQ-PU-pGs"/>
                                     <constraint firstAttribute="trailing" secondItem="kDj-th-R5i" secondAttribute="trailing" priority="750" constant="15" id="p77-oD-URh"/>
-                                    <constraint firstItem="ZNn-36-uFP" firstAttribute="top" secondItem="Tl5-yq-5q9" secondAttribute="top" constant="-5" id="yeC-fM-rPI"/>
+                                    <constraint firstAttribute="trailing" secondItem="nOr-vq-bcm" secondAttribute="trailing" constant="15" id="rId-7o-vNL"/>
+                                    <constraint firstAttribute="bottom" secondItem="nOr-vq-bcm" secondAttribute="bottom" constant="10" id="sbt-NJ-Aap"/>
+                                    <constraint firstItem="nOr-vq-bcm" firstAttribute="top" secondItem="Tl5-yq-5q9" secondAttribute="top" constant="-5" id="tnD-OZ-6ZE"/>
                                     <constraint firstItem="kDj-th-R5i" firstAttribute="top" secondItem="Tl5-yq-5q9" secondAttribute="top" id="yr5-4u-WTx"/>
                                 </constraints>
                             </view>
@@ -154,11 +189,13 @@
             <size key="customSize" width="350" height="200"/>
             <connections>
                 <outlet property="mainImageView" destination="s0P-r5-xqo" id="Qtn-gh-abV"/>
-                <outlet property="moreSerialImage" destination="ZNn-36-uFP" id="5no-Je-zrk"/>
+                <outlet property="moreSerialView" destination="nOr-vq-bcm" id="hES-8S-ajF"/>
                 <outlet property="secondImageView" destination="2nv-T4-1EO" id="SvV-q2-9M5"/>
+                <outlet property="serialLabel" destination="opc-Cj-FYb" id="o6l-EY-1g8"/>
+                <outlet property="serialNumberLabel" destination="aea-fc-h93" id="ngy-HN-AMx"/>
                 <outlet property="thirdImageView" destination="cSZ-4a-ayR" id="D8S-Kf-29r"/>
                 <outlet property="titleLabel" destination="kDj-th-R5i" id="bFT-wp-IqU"/>
-                <outlet property="titleLabelTrailingConstratraintToMoreSerialImage" destination="VQy-p8-03E" id="M9O-SQ-rFx"/>
+                <outlet property="titleLabelTrailingConstratraintToMoreSerialImage" destination="0Od-5M-xNZ" id="0SC-A9-HYf"/>
                 <outlet property="titleLabelTralingConstraintToSuperview" destination="p77-oD-URh" id="wZw-d3-oMf"/>
             </connections>
             <point key="canvasLocation" x="355.07246376811599" y="152.67857142857142"/>

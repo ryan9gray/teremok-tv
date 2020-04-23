@@ -63,6 +63,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     var extendedRazdels: [IndexPath : [MainContent]] = [:]
     private var collectionViewLeftInset: CGFloat?
     private var collectionViewRightInset: CGFloat?
+    private var indexOfCellBeforeDragging = 0
     
     var audioPlayer: AVAudioPlayer?
     var buttonPlayer: AVAudioPlayer?
@@ -135,7 +136,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
         
         guard let indexPath = collectionView.indexPathForItem(at: visiblePoint) else { return }
         if indexPath.section == 0 {
-            mainTitleView.configureTitle(title: "Развивающие игры")
+            mainTitleView.configureTitle(title: "Алфавит, Цвета, Пазлы и др.")
         } else {
             mainTitleView.configureTitle(title: razdels[indexPath.row].title)
         }
@@ -183,11 +184,6 @@ extension MainViewController: UICollectionViewDataSource {
             }
             cell.configureCell(content: extendedRazdels[indexPath] ?? [], razdelNumber: indexPath.row, videosCell: videosCell)
             cell.delegate = self
-            let lastRow = collectionView.numberOfItems(inSection: 1)
-            if indexPath.row == lastRow - 1 {
-                collectionView.contentInset.right = 20
-                collectionViewRightInset = 20
-            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
@@ -195,7 +191,7 @@ extension MainViewController: UICollectionViewDataSource {
             if indexPath.section == 0 {
                 cell.gameRazdelConfigure()
             } else {
-                cell.configure(title: razdels[indexPath.row].title, topVideos: razdels[indexPath.row].topVideos)
+                cell.configure(title: razdels[indexPath.row].title, serialCount: razdels[indexPath.row].countItems, topVideos: razdels[indexPath.row].topVideos)
             }
             return cell
         }
@@ -208,24 +204,33 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: collectionView.bounds.height * 1.335, height: collectionView.bounds.height)
         } else {
             if extendedRazdels.keys.contains(indexPath) {
-                return CGSize(width: collectionView.bounds.height * 1.75 * 10 + 220.0 + collectionView.bounds.height, height: collectionView.bounds.height)
+                return CGSize(width: collectionView.bounds.height * 1.75 * 11 + 200.0, height: collectionView.bounds.height)
             } else {
                 return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
             }
         }
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        audioPlayer?.play()
-        updateMainTitleView()
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        targetContentOffset.pointee = scrollView.contentOffset
+        let firstSectionCellWidht = collectionView.bounds.height * 1.33
+        let secondSectionCellWidth = collectionView.bounds.height * 1.75
+        let spacing: CGFloat = 20.0
+        if self.collectionView.contentOffset.x < (firstSectionCellWidht + spacing)/2 {
+            self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredHorizontally, animated: true)
+        } else {
+            let index = ((self.collectionView.contentOffset.x - firstSectionCellWidht - spacing)  / (secondSectionCellWidth + spacing)).rounded()
+            let contentOffset = (secondSectionCellWidth + spacing) * index + secondSectionCellWidth/2 + firstSectionCellWidht/2 + spacing
+            self.collectionView.setContentOffset(CGPoint(x: contentOffset,y: 0), animated: true)
+            audioPlayer?.play()
+        }
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         updateMainTitleView()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        //TO DO
         if section == 0 {
             if let left = collectionViewLeftInset {
                 return UIEdgeInsets(top: 0, left: left, bottom: 0, right: 20)

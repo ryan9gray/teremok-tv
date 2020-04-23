@@ -13,12 +13,16 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var secondImageView: PreviewImage!
     @IBOutlet private var mainImageView: PreviewImage!
     @IBOutlet private var titleLabel: UILabel!
-    @IBOutlet private var moreSerialImage: UIImageView!
+    @IBOutlet private var moreSerialView: UIView!
+    @IBOutlet private var serialLabel: UILabel!
+    @IBOutlet private var serialNumberLabel: UILabel!
+    @IBOutlet private var titleLabelTrailingConstratraintToMoreSerialImage: NSLayoutConstraint!
+    @IBOutlet private var titleLabelTralingConstraintToSuperview: NSLayoutConstraint!
     
-    @IBOutlet weak var titleLabelTrailingConstratraintToMoreSerialImage: NSLayoutConstraint!
-    @IBOutlet weak var titleLabelTralingConstraintToSuperview: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
+        serialLabel.textColor = .white
+        serialNumberLabel.textColor = .white
         // Initialization code
     }
     
@@ -28,12 +32,16 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
         secondImageView.image = nil
         mainImageView.image = #imageLiteral(resourceName: "icNowifi")
         mainImageView.contentMode = .scaleAspectFit
-        moreSerialImage.isHidden = false
+        moreSerialView.isHidden = false
+        serialLabel.text = "сериалов"
+        serialNumberLabel.text = "+ 100"
         titleLabelTrailingConstratraintToMoreSerialImage.priority = UILayoutPriority(rawValue: 1000)
         titleLabelTralingConstraintToSuperview.priority = UILayoutPriority(rawValue: 750)
     }
 
-    func configure(title: String, topVideos: [Main.RazdelItemTop]){
+    func configure(title: String, serialCount: Int,topVideos: [Main.RazdelItemTop]){
+        serialNumberLabel.text = "+ " + String(serialCount)
+        serialLabel.text = wordForCount(serialCount)
         if topVideos.isEmpty {
             titleLabel.text = title
             return
@@ -56,7 +64,7 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
         secondImageView.image = UIImage(named: "ic-monsterBack")
         mainImageView.image = UIImage(named: "gameIcon")
         mainImageView.contentMode = .scaleAspectFill
-        moreSerialImage.isHidden = true
+        moreSerialView.isHidden = true
         titleLabelTrailingConstratraintToMoreSerialImage.priority = UILayoutPriority(rawValue: 750)
         titleLabelTralingConstraintToSuperview.priority = UILayoutPriority(rawValue: 1000)
     }
@@ -69,5 +77,22 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
                               imageTransition: .crossDissolve(0.5),
                               completion: nil)
         imageView.contentMode = .scaleAspectFill
+    }
+    
+    private func wordForCount(_ numeral: Int) -> String {
+        let div100 = numeral % 100
+        
+        if div100 >= 11 && div100 <= 19 {
+            return "сериалов"
+        }
+        
+        let div10 = numeral % 10
+        
+        if div10 == 1 {
+            return "сериал"
+        } else if div10 >= 2 && div10 <= 4 {
+            return "сериала"
+        }
+        return "сериалов"
     }
 }

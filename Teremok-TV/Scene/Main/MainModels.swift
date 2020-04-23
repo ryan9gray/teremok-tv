@@ -14,6 +14,7 @@ enum Main {
     struct RazdelItem {
         var title: String
         var link: String
+        var countItems: Int
         var topVideos: [RazdelItemTop]
     }
     
