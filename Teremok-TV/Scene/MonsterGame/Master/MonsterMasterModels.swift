@@ -43,7 +43,7 @@ enum MonsterMaster {
         case closeCards = "monsterCloseCards"
         
         var url: URL {
-            return URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
+            return URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "mp3")!)
         }
         
     }

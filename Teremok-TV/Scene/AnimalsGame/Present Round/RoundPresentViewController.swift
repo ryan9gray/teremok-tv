@@ -36,7 +36,7 @@ class RoundPresentViewController: GameViewController, IntroduceViewController, A
     }
 
     func playSound(round: Int) {
-        guard let path = Bundle.main.path(forResource: sounds[round], ofType: "wav") else {
+        guard let path = Bundle.main.path(forResource: sounds[round], ofType: "mp3") else {
             dismiss(animated: true) {
                 self.action?(false)
             }

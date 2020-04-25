@@ -83,7 +83,7 @@ enum ColorsMaster {
         case sadFour = "ColorsGame_sad_4"
         
         var url: URL {
-            URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
+            URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "mp3")!)
         }
     }
     
@@ -96,7 +96,7 @@ enum ColorsMaster {
         case happySix = "ColorsGame_fun_6"
         
         var url: URL {
-            URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "wav")!)
+            URL(fileURLWithPath: Bundle.main.path(forResource: rawValue, ofType: "mp3")!)
         }
     }
     
