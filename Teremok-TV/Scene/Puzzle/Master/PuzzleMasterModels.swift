@@ -14,6 +14,7 @@ import UIKit
 
 enum PuzzleMaster {
 
+	static let funSounds = ["fun_4", "fun_5", "fun_6", "fun_7"]
 
 	static let firstPack: [String] = [
 		"puzzle_1",

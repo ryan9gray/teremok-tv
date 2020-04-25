@@ -83,6 +83,19 @@ class PuzzlePlaygroundViewController: GameViewController {
 			print("no file)")
 		}
 	}
+	private var funPlayer: AVAudioPlayer?
+
+	func funSoundPlayIfNeed() {
+		if (correctCount % 3) == 0 {
+			let url = URL(fileURLWithPath: Bundle.main.path(forResource: PuzzleMaster.funSounds.randomElement()!, ofType: "mp3")!)
+			do {
+				funPlayer = try AVAudioPlayer(contentsOf: url)
+				funPlayer?.play()
+			} catch {
+
+			}
+		}
+	}
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
@@ -228,6 +241,7 @@ class PuzzlePlaygroundViewController: GameViewController {
 				targetImg.isUserInteractionEnabled = false
 				correctCount += 1
 				print(Int(correctCount))
+				funSoundPlayIfNeed()
 				showFirework(puzzle: targetImg)
 				if correctCount == input.difficulty.fieldSize*input.difficulty.fieldSize {
 					output.finish()
