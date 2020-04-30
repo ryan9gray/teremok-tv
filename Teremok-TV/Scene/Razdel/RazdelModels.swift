@@ -20,6 +20,7 @@ enum RazdelVCModel {
         let name: String
         let imageUrl: String
         let description: String
+        let countItems: Int
     }
 
     enum Screen {

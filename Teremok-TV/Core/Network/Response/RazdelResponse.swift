@@ -41,6 +41,7 @@ final class RazdelItemResponse: Mappable {
     var description: String?
     var poster: String?
     var copyrighter: CopyrighterResponse?
+    var countItems: Int?
     
     // Mappable
     required init?(map: Map) {}
@@ -51,7 +52,7 @@ final class RazdelItemResponse: Mappable {
         description     <- map["description"]
         poster     <- map["poster"]
         copyrighter     <- map["copyrighter"]
-
+        countItems      <- map["countItems"]
     }
 }
 final class CopyrighterResponse: Mappable {

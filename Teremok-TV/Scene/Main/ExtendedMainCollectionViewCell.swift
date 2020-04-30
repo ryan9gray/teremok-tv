@@ -70,7 +70,7 @@ extension ExtendedMainCollectionViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return serials.count
+            return 10
         } else {
             return 1
         }
@@ -133,12 +133,4 @@ extension ExtendedMainCollectionViewCell: UICollectionViewDelegateFlowLayout {
         
         return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        if section == 0 {
-//            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20.0)
-//        } else {
-//            return .zero
-//        }
-//    }
 }
