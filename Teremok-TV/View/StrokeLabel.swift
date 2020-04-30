@@ -26,7 +26,7 @@ class StrokeLabel: UILabel {
     // MARK: - Accessors and Mutators
     
     open var letterSpacing: CGFloat     = 0.0
-    open var lineSpacing: CGFloat       = 0.0
+   	open var lineSpacing: CGFloat       = 0.0
     
     private var _shadowBlur: CGFloat    = 10.2
     open var shadowBlur: CGFloat {

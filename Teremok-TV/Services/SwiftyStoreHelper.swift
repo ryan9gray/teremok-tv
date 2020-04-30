@@ -105,7 +105,7 @@ class SwiftyStoreHelper: NSObject, SwiftyStorePorotocol {
                 case .purchased(let expiresDate, _):
                     print("Product is valid until \(expiresDate)")
                     self.premiumDate(dat: expiresDate)
-                case .expired(let expiresDate):
+                case .expired(let expiresDate, _):
                     print("Product is expired since \(expiresDate)")
                 case .notPurchased:
                     print("The user has never purchased this product")

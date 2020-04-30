@@ -20,7 +20,7 @@ struct ImageLoader {
         }
     }
     
-    func downloadFrom(url: URL, name: String){
+    func downloadFrom(url: URL, name: String) {
         Alamofire.request(url).responseImage { response in
             if let image = response.result.value {
                 //print("image downloaded: \(image)")

@@ -28,18 +28,48 @@ class OnDemandLoader {
             case monstersImage = "MonstersImage"
             case colorsGameImage = "ColorsGameImage"
             case colorsGameSounds = "ColorsGameSounds"
-
         }
+
+		enum Puzzle: String, CaseIterable {
+			case puzzleGameImages = "PuzzleGameImages"
+		}
 //        enum Initial: String, CaseIterable {
 //            case onBoarding = "OnBoarding"
 //        }
     }
 
-    lazy private var bundleResourceRequest = NSBundleResourceRequest(tags: Set(getTags + introducongGames))
+    lazy private var bundleResourceRequest = NSBundleResourceRequest(tags: Set(getTags + introducongGames + [Tags.Puzzle.puzzleGameImages.rawValue]))
 
     private var getTags: [String] {
         return Tags.Prefetch.allCases.map { $0.rawValue }
     }
+
+	var bundleResourceRequestPuzzles: NSBundleResourceRequest {
+		let bundleResourceRequestPuzzles = NSBundleResourceRequest(tags: Set([Tags.Puzzle.puzzleGameImages.rawValue]))
+		bundleResourceRequestPuzzles.loadingPriority = NSBundleResourceRequestLoadingPriorityUrgent
+		return bundleResourceRequestPuzzles
+	}
+
+	func loadOnDemandPuzzleAssets(completion: @escaping (Bool) -> Void) {
+		bundleResourceRequestPuzzles.conditionallyBeginAccessingResources { available in
+			if available {
+				completion(true)
+			}
+			else {
+				self.beginAccessingResourcesPuzzle(completion: completion)
+			}
+		}
+	}
+
+	func beginAccessingResourcesPuzzle(completion: @escaping (Bool) -> Void) {
+		self.bundleResourceRequestPuzzles.beginAccessingResources { error in
+			if error != nil  {
+				completion(false)
+			} else {
+				completion(true)
+			}
+		}
+	}
 
     func loadOnDemandAssets(completion: @escaping (Result<Bool>) -> Void) {
         bundleResourceRequest.endAccessingResources()
@@ -57,6 +87,7 @@ class OnDemandLoader {
             }
         }
     }
+
 
     func createRequest(tags: [String]) -> NSBundleResourceRequest {
         let bundleResourceRequest = NSBundleResourceRequest(tags: Set(tags))
