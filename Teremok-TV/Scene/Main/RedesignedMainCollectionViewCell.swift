@@ -8,7 +8,21 @@
 
 import UIKit
 
-class RedesignedMainCollectionViewCell: UICollectionViewCell {
+// TO DO
+import Lottie
+
+class RedesignedMainCollectionViewCell: UICollectionViewCell, RedesignedAnimateCellProtocol {
+    var animationView: AnimationView?
+    
+    var linktoLoad: String = ""
+    
+    var source: AnimaionSource = .link
+
+    enum AnimaionSource {
+        case link
+        case local
+    }
+    
     @IBOutlet private var thirdImageView: PreviewImage!
     @IBOutlet private var secondImageView: PreviewImage!
     @IBOutlet private var mainImageView: PreviewImage!
@@ -18,6 +32,8 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var serialNumberLabel: UILabel!
     @IBOutlet private var titleLabelTrailingConstratraintToMoreSerialImage: NSLayoutConstraint!
     @IBOutlet private var titleLabelTralingConstraintToSuperview: NSLayoutConstraint!
+    
+    @IBOutlet weak var containerAnimation: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
