@@ -85,6 +85,7 @@ enum StoryboardWorker: String {
     case animals =              "Animals"
     case alphavite =            "Alphavite"
     case monster =             	"Monster"
+    case dino =                 "Dino"
     case colors =             	"ColorsGame"
 	case puzzle =             	"Puzzle"
 

@@ -18,6 +18,7 @@ class GamesListViewController: AbstracViewController {
         var openAlphavite: () -> Void
         var openMonster: () -> Void
         var openColors: () -> Void
+        var openDino: () -> Void
 		var openPuzzle: () -> Void
 
     }
@@ -60,6 +61,11 @@ class GamesListViewController: AbstracViewController {
     @IBAction func colorsTap(_ sender: Any) {
         self.dismiss(animated: true) {
             self.output.openColors()
+        }
+    }
+    @IBAction func dinoTap(_ sender: Any) {
+        self.dismiss(animated: true) {
+            self.output.openDino()
         }
     }
     

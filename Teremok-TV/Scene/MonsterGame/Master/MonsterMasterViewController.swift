@@ -97,3 +97,4 @@ extension MonsterMasterViewController: EasyTipViewDelegate {
         tipView.dismiss()
     }
 }
+

@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uqq-Wf-7b4">
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Foo.ttf">
+            <string>Foo-Regular</string>
+        </array>
+        <array key="LapsusPro-Bold.otf">
+            <string>LapsusPro-Bold</string>
+        </array>
+        <array key="MontserratAlternates-ExtraBold.ttf">
+            <string>MontserratAlternates-ExtraBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Dino Start View Controller-->
+        <scene sceneID="F7Z-JZ-anV">
+            <objects>
+                <viewController storyboardIdentifier="DinoStartViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="acf-Iw-onH" customClass="DinoStartViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eKl-vP-Hld">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-dinoGamePreviewBack" translatesAutoresizingMaskIntoConstraints="NO" id="IpB-fd-Usu">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-dinoGameTitle" translatesAutoresizingMaskIntoConstraints="NO" id="yF5-Eg-NHN">
+                                <rect key="frame" x="214" y="98" width="384" height="158"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Uu-aj-Jud">
+                                <rect key="frame" x="184" y="232" width="444" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnZ-j2-3RP" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="55"/>
+                                        <fontDescription key="fontDescription" name="LapsusPro-Bold" family="Lapsus Pro" pointSize="24"/>
+                                        <state key="normal" title="1-2 года">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startGame:" destination="acf-Iw-onH" eventType="touchUpInside" id="ggn-55-5im"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nO-Pv-Co7" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="154.66666666666669" y="0.0" width="134.66666666666669" height="55"/>
+                                        <fontDescription key="fontDescription" name="LapsusPro-Bold" family="Lapsus Pro" pointSize="24"/>
+                                        <state key="normal" title="2-3 года">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startGame:" destination="acf-Iw-onH" eventType="touchUpInside" id="eWi-mK-znk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVa-Zu-gHs" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="309.33333333333331" y="0.0" width="134.66666666666669" height="55"/>
+                                        <fontDescription key="fontDescription" name="LapsusPro-Bold" family="Lapsus Pro" pointSize="24"/>
+                                        <state key="normal" title="3-5 лет">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startGame:" destination="acf-Iw-onH" eventType="touchUpInside" id="djV-vd-WwD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="1W2-K9-fVE"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQe-z5-6ns" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="732" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="pYV-gj-6Qo"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icUtka"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="avatarBorderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="avatarClick:" destination="acf-Iw-onH" eventType="touchUpInside" id="ymj-gb-wEa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dQe-z5-6ns" firstAttribute="top" secondItem="dAm-zr-cyt" secondAttribute="top" constant="20" id="07c-09-2sG"/>
+                            <constraint firstItem="IpB-fd-Usu" firstAttribute="top" secondItem="dAm-zr-cyt" secondAttribute="top" id="5Tp-rV-Ft9"/>
+                            <constraint firstItem="0Uu-aj-Jud" firstAttribute="leading" secondItem="dAm-zr-cyt" secondAttribute="leading" constant="140" id="5Vo-W5-RCy"/>
+                            <constraint firstAttribute="bottom" secondItem="IpB-fd-Usu" secondAttribute="bottom" id="Cpx-6v-l9L"/>
+                            <constraint firstAttribute="trailing" secondItem="dQe-z5-6ns" secondAttribute="trailing" constant="30" id="Da2-4J-483"/>
+                            <constraint firstItem="0Uu-aj-Jud" firstAttribute="centerX" secondItem="eKl-vP-Hld" secondAttribute="centerX" id="G6I-l6-AfI"/>
+                            <constraint firstItem="dAm-zr-cyt" firstAttribute="trailing" secondItem="0Uu-aj-Jud" secondAttribute="trailing" constant="140" id="L5m-zO-Hfx"/>
+                            <constraint firstItem="yF5-Eg-NHN" firstAttribute="centerX" secondItem="eKl-vP-Hld" secondAttribute="centerX" id="RPK-Xb-WL8"/>
+                            <constraint firstAttribute="trailing" secondItem="IpB-fd-Usu" secondAttribute="trailing" id="a6n-uH-IHY"/>
+                            <constraint firstItem="dAm-zr-cyt" firstAttribute="bottom" secondItem="0Uu-aj-Jud" secondAttribute="bottom" constant="67" id="aRx-YS-nog"/>
+                            <constraint firstItem="yF5-Eg-NHN" firstAttribute="centerY" secondItem="dAm-zr-cyt" secondAttribute="centerY" id="uiT-fI-NaZ"/>
+                            <constraint firstItem="IpB-fd-Usu" firstAttribute="leading" secondItem="eKl-vP-Hld" secondAttribute="leading" id="v6E-R4-JRL"/>
+                            <constraint firstItem="0Uu-aj-Jud" firstAttribute="top" secondItem="yF5-Eg-NHN" secondAttribute="bottom" constant="-24" id="ydS-7Z-D4R"/>
+                            <constraint firstItem="dQe-z5-6ns" firstAttribute="width" secondItem="dQe-z5-6ns" secondAttribute="height" multiplier="1:1" id="zbq-83-vC6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dAm-zr-cyt"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarButton" destination="dQe-z5-6ns" id="hpT-aV-vy5"/>
+                        <outlet property="startEasy" destination="BnZ-j2-3RP" id="BTR-EC-Cu0"/>
+                        <outlet property="startHard" destination="WVa-Zu-gHs" id="MYa-00-PfL"/>
+                        <outlet property="startMedium" destination="4nO-Pv-Co7" id="pph-bp-1gx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X7b-Ac-COu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="-307"/>
+        </scene>
+        <!--Dino Game View Controller-->
+        <scene sceneID="HsU-et-qnp">
+            <objects>
+                <viewController storyboardIdentifier="DinoGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Byr-uE-eNh" customClass="DinoGameViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aoy-be-qBT">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJi-rO-aQu" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="348.66666666666669" y="20" width="115" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="hjr-k5-x20"/>
+                                    <constraint firstAttribute="width" secondItem="zJi-rO-aQu" secondAttribute="height" multiplier="23:10" id="nbF-gy-hx9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LapsusPro-Bold" family="Lapsus Pro" pointSize="24"/>
+                                <state key="normal" title="00:00">
+                                    <color key="titleColor" red="1" green="0.72549019607843135" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xsT-MH-07t">
+                                <rect key="frame" x="0.0" y="55" width="812" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="y5c-PR-At1" customClass="MonsterGameCollectionViewLayout" customModule="Teremok_TV" customModuleProvider="target"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Byr-uE-eNh" id="QZa-kA-ZFR"/>
+                                    <outlet property="delegate" destination="Byr-uE-eNh" id="w3B-Ae-jJD"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xsT-MH-07t" secondAttribute="bottom" id="Sdq-cW-OyS"/>
+                            <constraint firstItem="xsT-MH-07t" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="55" id="YHX-ua-n2w"/>
+                            <constraint firstItem="zJi-rO-aQu" firstAttribute="top" secondItem="Hb2-pn-ILr" secondAttribute="top" constant="20" id="cL2-WK-Vrz"/>
+                            <constraint firstItem="xsT-MH-07t" firstAttribute="leading" secondItem="Aoy-be-qBT" secondAttribute="leading" id="dG3-t9-Ylr"/>
+                            <constraint firstAttribute="trailing" secondItem="xsT-MH-07t" secondAttribute="trailing" id="lYd-5V-E5c"/>
+                            <constraint firstItem="zJi-rO-aQu" firstAttribute="centerX" secondItem="Aoy-be-qBT" secondAttribute="centerX" id="ltX-qK-GoI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hb2-pn-ILr"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="xsT-MH-07t" id="auM-Co-fG7"/>
+                        <outlet property="timerBtn" destination="zJi-rO-aQu" id="hk4-HO-Zj7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YY9-A2-1f4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="545"/>
+        </scene>
+        <!--Dino Master View Controller-->
+        <scene sceneID="HgC-BW-Mti">
+            <objects>
+                <viewController storyboardIdentifier="DinoMasterViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uqq-Wf-7b4" customClass="DinoMasterViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="czV-1v-uky">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-DinoGameBack" translatesAutoresizingMaskIntoConstraints="NO" id="9W5-9i-4S5">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySG-71-GXL" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="30" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2dD-DY-kmT"/>
+                                    <constraint firstAttribute="height" constant="50" id="3fq-RD-o5R"/>
+                                </constraints>
+                                <state key="normal" image="icHomeShadow"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indent">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="homeClick:" destination="uqq-Wf-7b4" eventType="touchUpInside" id="rcU-44-YrN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9W5-9i-4S5" firstAttribute="leading" secondItem="czV-1v-uky" secondAttribute="leading" id="FKn-z9-oCx"/>
+                            <constraint firstItem="ySG-71-GXL" firstAttribute="leading" secondItem="czV-1v-uky" secondAttribute="leading" constant="30" id="JsG-d7-IQS"/>
+                            <constraint firstItem="9W5-9i-4S5" firstAttribute="top" secondItem="czV-1v-uky" secondAttribute="top" id="MMW-uL-fHr"/>
+                            <constraint firstAttribute="bottom" secondItem="9W5-9i-4S5" secondAttribute="bottom" id="RgF-mD-v9L"/>
+                            <constraint firstAttribute="trailing" secondItem="9W5-9i-4S5" secondAttribute="trailing" id="qBR-vp-jsl"/>
+                            <constraint firstItem="ySG-71-GXL" firstAttribute="top" secondItem="3hc-F9-1gZ" secondAttribute="top" constant="20" id="zuT-ij-1t1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3hc-F9-1gZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="9W5-9i-4S5" id="sC5-PC-oy3"/>
+                        <outlet property="homeBtn" destination="ySG-71-GXL" id="i4v-x4-Grh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztu-tc-lUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="-1124"/>
+        </scene>
+        <!--Dino Game Results View Controller-->
+        <scene sceneID="gF5-D2-do4">
+            <objects>
+                <viewController storyboardIdentifier="DinoGameResultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yTx-a0-M98" customClass="DinoGameResultsViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="05F-xK-YJJ">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-dinoGameWinBack" translatesAutoresizingMaskIntoConstraints="NO" id="UQ4-dH-5hM">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqH-ie-GhK" customClass="DesignableView" customModule="Spring">
+                                <rect key="frame" x="288.66666666666669" y="20" width="235.00000000000006" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="deF-1u-NDW">
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Твое время 00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNl-xJ-AO8">
+                                                <rect key="frame" x="0.0" y="10.666666666666668" width="235" height="29.000000000000004"/>
+                                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                                <color key="textColor" red="0.0" green="0.34509803921568627" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="deF-1u-NDW" secondAttribute="bottom" id="a9G-tc-wkT"/>
+                                    <constraint firstAttribute="height" constant="50" id="bLA-1n-vIe"/>
+                                    <constraint firstAttribute="trailing" secondItem="deF-1u-NDW" secondAttribute="trailing" id="jpY-B8-Rt6"/>
+                                    <constraint firstAttribute="width" constant="235" id="qVu-61-abA"/>
+                                    <constraint firstItem="deF-1u-NDW" firstAttribute="top" secondItem="pqH-ie-GhK" secondAttribute="top" id="ujb-Yf-Nbb"/>
+                                    <constraint firstItem="deF-1u-NDW" firstAttribute="leading" secondItem="pqH-ie-GhK" secondAttribute="leading" id="z5P-lk-aEo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dinoGameContinueGame" translatesAutoresizingMaskIntoConstraints="NO" id="0Ir-5m-boz">
+                                <rect key="frame" x="248.66666666666663" y="80" width="315" height="160"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbj-Zo-doR" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="358.66666666666669" y="240" width="95" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="8vJ-q5-u3P"/>
+                                    <constraint firstAttribute="width" constant="95" id="ZFT-tV-ZsN"/>
+                                    <constraint firstAttribute="width" secondItem="Mbj-Zo-doR" secondAttribute="height" multiplier="1:1" id="mdf-DE-hth"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Foo-Regular" family="Foo" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icPlayWhite">
+                                    <color key="titleColor" red="0.0" green="0.2156862745" blue="0.67843137249999996" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openNextVC:" destination="yTx-a0-M98" eventType="touchUpInside" id="sHZ-l0-Yyv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UQ4-dH-5hM" secondAttribute="trailing" id="Dde-hS-Sjt"/>
+                            <constraint firstItem="pqH-ie-GhK" firstAttribute="top" secondItem="kSq-H1-JTs" secondAttribute="top" constant="20" id="E4X-g4-HQX"/>
+                            <constraint firstAttribute="bottom" secondItem="Mbj-Zo-doR" secondAttribute="bottom" constant="40" id="GTI-fU-J4u"/>
+                            <constraint firstItem="pqH-ie-GhK" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="L49-zF-UNa"/>
+                            <constraint firstItem="UQ4-dH-5hM" firstAttribute="leading" secondItem="05F-xK-YJJ" secondAttribute="leading" id="LsZ-TO-Jsu"/>
+                            <constraint firstItem="UQ4-dH-5hM" firstAttribute="top" secondItem="05F-xK-YJJ" secondAttribute="top" id="SNc-s8-FW2"/>
+                            <constraint firstItem="Mbj-Zo-doR" firstAttribute="top" secondItem="0Ir-5m-boz" secondAttribute="bottom" id="WjR-u3-pzQ"/>
+                            <constraint firstItem="0Ir-5m-boz" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="a3M-sx-4ly"/>
+                            <constraint firstItem="0Ir-5m-boz" firstAttribute="top" secondItem="pqH-ie-GhK" secondAttribute="bottom" constant="10" id="aVA-IF-cGN"/>
+                            <constraint firstItem="Mbj-Zo-doR" firstAttribute="centerX" secondItem="05F-xK-YJJ" secondAttribute="centerX" id="rIJ-gn-sZM"/>
+                            <constraint firstAttribute="bottom" secondItem="UQ4-dH-5hM" secondAttribute="bottom" id="tod-ze-LRO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kSq-H1-JTs"/>
+                    </view>
+                    <connections>
+                        <outlet property="dinosView" destination="UQ4-dH-5hM" id="WMB-9u-OCw"/>
+                        <outlet property="nextBtn" destination="Mbj-Zo-doR" id="UTO-xN-iQS"/>
+                        <outlet property="timeLbl" destination="RNl-xJ-AO8" id="IPa-do-cNg"/>
+                        <outlet property="timeView" destination="pqH-ie-GhK" id="WZ0-E8-Pog"/>
+                        <outlet property="titleImageView" destination="0Ir-5m-boz" id="WRe-hT-A9n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTH-NR-CcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25.862068965517242" y="1325.5999999999999"/>
+        </scene>
+        <!--Dino Statistic View Controller-->
+        <scene sceneID="0fr-as-3QU">
+            <objects>
+                <viewController storyboardIdentifier="DinoStatisticViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jmp-jG-gMT" customClass="DinoStatisticViewController" customModule="Teremok_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TPf-3W-u8n">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-dinoGameStatistic2" translatesAutoresizingMaskIntoConstraints="NO" id="Z2D-KC-xQs">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Xd-uJ-CLo">
+                                <rect key="frame" x="242.66666666666663" y="291" width="327" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Stat status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXB-aY-INz">
+                                        <rect key="frame" x="2" y="8" width="323" height="21"/>
+                                        <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="wXB-aY-INz" firstAttribute="leading" secondItem="8Xd-uJ-CLo" secondAttribute="leading" constant="2" id="4qf-8a-HXv"/>
+                                    <constraint firstAttribute="trailing" secondItem="wXB-aY-INz" secondAttribute="trailing" constant="2" id="TOG-ql-Gyy"/>
+                                    <constraint firstAttribute="bottom" secondItem="wXB-aY-INz" secondAttribute="bottom" constant="8" id="irF-b7-cUJ"/>
+                                    <constraint firstItem="wXB-aY-INz" firstAttribute="top" secondItem="8Xd-uJ-CLo" secondAttribute="top" constant="8" id="uhd-zL-yWP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMa-lD-0jS">
+                                <rect key="frame" x="406" y="20" width="0.0" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="X46-Fj-2ES"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5D-4R-J5O" customClass="KeyButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="30" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bM3-l7-yN1"/>
+                                    <constraint firstAttribute="height" constant="50" id="jvH-Vh-Atx"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icHomeShadow"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indent">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeTap:" destination="Jmp-jG-gMT" eventType="touchUpInside" id="hW9-TM-vLc"/>
+                                    <action selector="homeClick:" destination="uqq-Wf-7b4" eventType="touchUpInside" id="0xZ-mX-Dmd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" tag="13" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoK-7e-Rlj" customClass="AvatarButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="732" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2eA-qu-uCt"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="icUtka"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="avatarBorderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-rd-j2j">
+                                <rect key="frame" x="233.66666666666663" y="156" width="345" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="Koi-F1-wyt"/>
+                                    <constraint firstAttribute="height" constant="2" id="edx-wt-aP0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgu-Mj-4te">
+                                <rect key="frame" x="233.66666666666663" y="278" width="345" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="6fV-Jj-BRB"/>
+                                    <constraint firstAttribute="width" constant="345" id="yJR-Dv-jIb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Среднее время:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cug-QC-6hB">
+                                <rect key="frame" x="275.33333333333326" y="94" width="261.66666666666674" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="bqZ-5L-f8T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="30"/>
+                                <color key="textColor" red="0.8901960784313725" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-lj-Gqy">
+                                <rect key="frame" x="233.66666666666663" y="158" width="345" height="120"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s7a-8C-0h7">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="120"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJM-ga-eEy">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="120"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="За прошлые 7 дней" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-Yc-xPz">
+                                                        <rect key="frame" x="12" y="10.000000000000004" width="124" height="53.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbU-Yk-329">
+                                                        <rect key="frame" x="28.333333333333343" y="73.333333333333343" width="91" height="36.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="30"/>
+                                                        <color key="textColor" red="0.51764705882352935" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="1aW-Yc-xPz" firstAttribute="centerX" secondItem="aJM-ga-eEy" secondAttribute="centerX" id="FiB-yY-YiJ"/>
+                                                    <constraint firstItem="jbU-Yk-329" firstAttribute="top" secondItem="1aW-Yc-xPz" secondAttribute="bottom" constant="10" id="R1Q-j8-Hfd"/>
+                                                    <constraint firstItem="1aW-Yc-xPz" firstAttribute="top" secondItem="aJM-ga-eEy" secondAttribute="top" constant="10" id="aMv-EA-OHX"/>
+                                                    <constraint firstItem="jbU-Yk-329" firstAttribute="centerX" secondItem="aJM-ga-eEy" secondAttribute="centerX" id="dlA-ED-9pY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jbU-Yk-329" secondAttribute="bottom" constant="10" id="nha-Zb-iAm"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="8k8-N7-7Yq">
+                                        <rect key="frame" x="197" y="0.0" width="148" height="120"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWU-qQ-hsG">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="120"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="За текущие 7 дней" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I5-3N-GTc">
+                                                        <rect key="frame" x="11" y="10.000000000000004" width="126" height="53.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omc-RE-G8Z">
+                                                        <rect key="frame" x="28.333333333333314" y="73.333333333333343" width="91" height="36.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="30"/>
+                                                        <color key="textColor" red="0.51764705882352935" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="3I5-3N-GTc" firstAttribute="centerX" secondItem="bWU-qQ-hsG" secondAttribute="centerX" id="9jz-nd-Gr1"/>
+                                                    <constraint firstItem="omc-RE-G8Z" firstAttribute="top" secondItem="3I5-3N-GTc" secondAttribute="bottom" constant="10" id="D0y-Xj-n1b"/>
+                                                    <constraint firstItem="3I5-3N-GTc" firstAttribute="top" secondItem="bWU-qQ-hsG" secondAttribute="top" constant="10" id="G4h-KE-WfN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="omc-RE-G8Z" secondAttribute="bottom" constant="10" id="LRM-fe-7vr"/>
+                                                    <constraint firstItem="omc-RE-G8Z" firstAttribute="centerX" secondItem="bWU-qQ-hsG" secondAttribute="centerX" id="WI5-ce-SiL"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="PJ8-ak-NKh"/>
+                                </constraints>
+                            </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCs-wC-CkN">
+                                <rect key="frame" x="233.66666666666663" y="135" width="345" height="140"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RM-1t-Anq">
+                                        <rect key="frame" x="0.0" y="79" width="345" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="345" id="1U4-50-RZv"/>
+                                            <constraint firstAttribute="height" constant="2" id="n3L-ki-2hz"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обновление вашей статистики будет через 4 дня " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNi-0K-6B0">
+                                        <rect key="frame" x="0.0" y="96" width="345" height="44"/>
+                                        <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статистика ведётся  по результатам 7-ми дней" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yca-qE-hyh">
+                                        <rect key="frame" x="0.0" y="20" width="345" height="44"/>
+                                        <fontDescription key="fontDescription" name="MontserratAlternates-ExtraBold" family="Montserrat Alternates" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1RM-1t-Anq" secondAttribute="trailing" id="Bp7-U9-Cdx"/>
+                                    <constraint firstItem="1RM-1t-Anq" firstAttribute="top" secondItem="yca-qE-hyh" secondAttribute="bottom" constant="15" id="C4p-9L-HXL"/>
+                                    <constraint firstAttribute="trailing" secondItem="hNi-0K-6B0" secondAttribute="trailing" id="D0c-oo-EJi"/>
+                                    <constraint firstItem="hNi-0K-6B0" firstAttribute="top" secondItem="1RM-1t-Anq" secondAttribute="bottom" constant="15" id="Riu-aq-g3Y"/>
+                                    <constraint firstItem="yca-qE-hyh" firstAttribute="leading" secondItem="XCs-wC-CkN" secondAttribute="leading" id="SQu-DR-jVu"/>
+                                    <constraint firstItem="yca-qE-hyh" firstAttribute="centerX" secondItem="XCs-wC-CkN" secondAttribute="centerX" id="YXl-2Y-rq9"/>
+                                    <constraint firstItem="hNi-0K-6B0" firstAttribute="leading" secondItem="XCs-wC-CkN" secondAttribute="leading" id="bZB-1B-dWB"/>
+                                    <constraint firstAttribute="bottom" secondItem="hNi-0K-6B0" secondAttribute="bottom" id="bfn-46-aoF"/>
+                                    <constraint firstItem="yca-qE-hyh" firstAttribute="top" secondItem="XCs-wC-CkN" secondAttribute="top" constant="20" symbolic="YES" id="fcs-qC-6JN"/>
+                                    <constraint firstItem="1RM-1t-Anq" firstAttribute="leading" secondItem="XCs-wC-CkN" secondAttribute="leading" id="qRp-Qi-f7H"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Z2D-KC-xQs" secondAttribute="bottom" id="2fN-HU-rpM"/>
+                            <constraint firstAttribute="trailing" secondItem="Z2D-KC-xQs" secondAttribute="trailing" id="6vD-F8-tJi"/>
+                            <constraint firstItem="zoK-7e-Rlj" firstAttribute="top" secondItem="luX-RK-3dX" secondAttribute="top" constant="20" id="7nB-UF-PW0"/>
+                            <constraint firstAttribute="trailing" secondItem="zoK-7e-Rlj" secondAttribute="trailing" constant="30" id="95e-F3-iel"/>
+                            <constraint firstItem="EYC-rd-j2j" firstAttribute="centerX" secondItem="TPf-3W-u8n" secondAttribute="centerX" id="CUd-Ov-NAz"/>
+                            <constraint firstItem="8Xd-uJ-CLo" firstAttribute="leading" secondItem="zgu-Mj-4te" secondAttribute="leading" constant="9" id="D20-K9-jaC"/>
+                            <constraint firstItem="EYC-rd-j2j" firstAttribute="top" secondItem="Cug-QC-6hB" secondAttribute="bottom" constant="25" id="FSl-b7-3kV"/>
+                            <constraint firstItem="RMa-lD-0jS" firstAttribute="centerX" secondItem="TPf-3W-u8n" secondAttribute="centerX" id="GBS-fs-xTx"/>
+                            <constraint firstItem="0gg-lj-Gqy" firstAttribute="trailing" secondItem="EYC-rd-j2j" secondAttribute="trailing" id="H2n-8o-SVQ"/>
+                            <constraint firstItem="zoK-7e-Rlj" firstAttribute="width" secondItem="zoK-7e-Rlj" secondAttribute="height" multiplier="1:1" id="Hga-gl-pu9"/>
+                            <constraint firstItem="8Xd-uJ-CLo" firstAttribute="top" secondItem="zgu-Mj-4te" secondAttribute="bottom" constant="11" id="I6d-1P-4g7"/>
+                            <constraint firstItem="Z2D-KC-xQs" firstAttribute="top" secondItem="TPf-3W-u8n" secondAttribute="top" id="SLI-fJ-Sf2"/>
+                            <constraint firstItem="Cug-QC-6hB" firstAttribute="top" secondItem="RMa-lD-0jS" secondAttribute="bottom" constant="30" id="WKB-Qp-3Ph"/>
+                            <constraint firstItem="0gg-lj-Gqy" firstAttribute="top" secondItem="EYC-rd-j2j" secondAttribute="bottom" id="XlK-aY-BCE"/>
+                            <constraint firstItem="zgu-Mj-4te" firstAttribute="top" secondItem="0gg-lj-Gqy" secondAttribute="bottom" id="a2B-me-hUm"/>
+                            <constraint firstItem="XCs-wC-CkN" firstAttribute="centerX" secondItem="TPf-3W-u8n" secondAttribute="centerX" id="eed-Yt-iYw"/>
+                            <constraint firstItem="Cug-QC-6hB" firstAttribute="centerX" secondItem="TPf-3W-u8n" secondAttribute="centerX" id="jQS-zf-7Y0"/>
+                            <constraint firstItem="0gg-lj-Gqy" firstAttribute="leading" secondItem="EYC-rd-j2j" secondAttribute="leading" id="jX2-A1-fpH"/>
+                            <constraint firstItem="r5D-4R-J5O" firstAttribute="leading" secondItem="TPf-3W-u8n" secondAttribute="leading" constant="30" id="mDd-RM-vfU"/>
+                            <constraint firstItem="8Xd-uJ-CLo" firstAttribute="trailing" secondItem="zgu-Mj-4te" secondAttribute="trailing" constant="-9" id="nvh-AH-dkZ"/>
+                            <constraint firstItem="zgu-Mj-4te" firstAttribute="trailing" secondItem="0gg-lj-Gqy" secondAttribute="trailing" id="oVP-wc-oHe"/>
+                            <constraint firstItem="Z2D-KC-xQs" firstAttribute="leading" secondItem="TPf-3W-u8n" secondAttribute="leading" id="pDw-KK-n5s"/>
+                            <constraint firstItem="RMa-lD-0jS" firstAttribute="top" secondItem="luX-RK-3dX" secondAttribute="top" constant="20" id="q7r-2a-qGT"/>
+                            <constraint firstItem="zgu-Mj-4te" firstAttribute="leading" secondItem="0gg-lj-Gqy" secondAttribute="leading" id="qPh-dg-ee4"/>
+                            <constraint firstItem="r5D-4R-J5O" firstAttribute="top" secondItem="luX-RK-3dX" secondAttribute="top" constant="20" id="s8a-PV-Ifu"/>
+                            <constraint firstAttribute="bottom" secondItem="8Xd-uJ-CLo" secondAttribute="bottom" priority="249" constant="29" id="scE-Gn-kkR"/>
+                            <constraint firstItem="XCs-wC-CkN" firstAttribute="top" secondItem="TPf-3W-u8n" secondAttribute="top" constant="135" id="y3C-eg-q5h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="luX-RK-3dX"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarBtn" destination="zoK-7e-Rlj" id="wt2-QJ-dU3"/>
+                        <outlet property="avgTimeLbl" destination="Cug-QC-6hB" id="N5v-BL-Oj5"/>
+                        <outlet property="backgroundImageView" destination="Z2D-KC-xQs" id="3WI-rs-hem"/>
+                        <outlet property="bottomSeparatorView" destination="zgu-Mj-4te" id="d2E-ek-t7y"/>
+                        <outlet property="homeBtn" destination="r5D-4R-J5O" id="8XY-IO-pcm"/>
+                        <outlet property="lastWeekLbl" destination="1aW-Yc-xPz" id="r7M-li-Sya"/>
+                        <outlet property="lastWeekTime" destination="jbU-Yk-329" id="zHG-hv-m0Y"/>
+                        <outlet property="nilStatisticLabel" destination="hNi-0K-6B0" id="ffy-an-HxF"/>
+                        <outlet property="nilStatisticView" destination="XCs-wC-CkN" id="QSq-RZ-3JL"/>
+                        <outlet property="statStatus" destination="wXB-aY-INz" id="hLH-kf-cCl"/>
+                        <outlet property="statStatusView" destination="8Xd-uJ-CLo" id="40E-fz-qtb"/>
+                        <outlet property="thisWeekLbl" destination="3I5-3N-GTc" id="VxT-YY-Xn5"/>
+                        <outlet property="thisWeekTime" destination="omc-RE-G8Z" id="ZDE-qZ-akn"/>
+                        <outlet property="titleClearStatisticLabel" destination="yca-qE-hyh" id="GKm-Mu-PZ1"/>
+                        <outlet property="topSeparatorView" destination="EYC-rd-j2j" id="qin-hu-4pc"/>
+                        <outlet property="userName" destination="RMa-lD-0jS" id="wY2-Pj-lhF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0J-ZW-C37" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863.79310344827593" y="-1125.5999999999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dinoGameContinueGame" width="315" height="125"/>
+        <image name="ic-DinoGameBack" width="667" height="375"/>
+        <image name="ic-dinoGamePreviewBack" width="667" height="375"/>
+        <image name="ic-dinoGameStatistic2" width="667" height="375"/>
+        <image name="ic-dinoGameTitle" width="384" height="158"/>
+        <image name="ic-dinoGameWinBack" width="667" height="375"/>
+        <image name="icHomeShadow" width="50" height="50"/>
+        <image name="icPlayWhite" width="61" height="65"/>
+        <image name="icUtka" width="29" height="35"/>
+    </resources>
+</document>
