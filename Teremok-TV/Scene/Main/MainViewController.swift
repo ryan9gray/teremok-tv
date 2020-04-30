@@ -63,6 +63,8 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     var extendedRazdels: [IndexPath : [MainContent]] = [:]
     private var collectionViewLeftInset: CGFloat?
     private var collectionViewRightInset: CGFloat?
+    private var collectionViewInitialXOffset: CGFloat?
+    private var collectionViewPreviosXOffset: CGFloat?
     private var indexOfCellBeforeDragging = 0
     
     var audioPlayer: AVAudioPlayer?
@@ -226,22 +228,34 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         }
     }
     
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        if collectionViewInitialXOffset == nil {
+            collectionViewInitialXOffset = scrollView.contentOffset.x
+            collectionViewPreviosXOffset = collectionViewInitialXOffset
+        }
+    }
+    
+    
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         targetContentOffset.pointee = scrollView.contentOffset
+        let initialXOffset = collectionViewInitialXOffset ?? 0.0
         let firstSectionCellWidht = collectionView.bounds.height * 1.33
         let secondSectionCellWidth = collectionView.bounds.height * 1.75
         let spacing: CGFloat = 20.0
-        if self.collectionView.contentOffset.x < (firstSectionCellWidht + spacing)/2 {
+        let firstSectionInset = firstSectionCellWidht/2 + spacing + initialXOffset
+        if scrollView.contentOffset.x < firstSectionInset {
             self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredHorizontally, animated: true)
         } else {
-            let index = ((self.collectionView.contentOffset.x - firstSectionCellWidht - spacing)  / (secondSectionCellWidth + spacing)).rounded()
-            let contentOffset = (secondSectionCellWidth + spacing) * index + secondSectionCellWidth/2 + firstSectionCellWidht/2 + spacing
+            let movingOrientation: CGFloat = collectionViewPreviosXOffset ?? 0.0 > scrollView.contentOffset.x ? -1 : 0
+            let index = ((scrollView.contentOffset.x - firstSectionInset)  / (secondSectionCellWidth + spacing)).rounded() + movingOrientation
+            let contentOffset = secondSectionCellWidth/2 + index * (secondSectionCellWidth + spacing) + firstSectionInset
             self.collectionView.setContentOffset(CGPoint(x: contentOffset,y: 0), animated: true)
             audioPlayer?.play()
         }
     }
     
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        collectionViewPreviosXOffset = scrollView.contentOffset.x
         updateMainTitleView()
     }
     
