@@ -126,11 +126,23 @@ final class MasterRouter: NSObject, MasterVCRoutingLogic, MasterDataPassing {
             openAlphavite: navigateToAlphavite,
             openMonster: navigateToMonster,
             openColors: navigateToColors,
-            openDino: navigateToDino
+            openDino: navigateToDino,
+			openPuzzle: navigateToPuzzle
         )
         vc.modalPresentationStyle = .fullScreen
         viewController?.present(vc, animated: true, completion: nil)
     }
+
+
+	func navigateToPuzzle() {
+		let vc = PuzzleMasterViewController.instantiate(fromStoryboard: .puzzle)
+		vc.output = AlphaviteMasterViewController.Output(
+			openSettings: navigateToSettings,
+			openAuthorization: navigateToReg
+		)
+		vc.modalPresentationStyle = .fullScreen
+		viewController?.present(vc, animated: true, completion: nil)
+	}
 
     func navigateToColors() {
         let vc = ColorsMasterViewController.instantiate(fromStoryboard: .colors)

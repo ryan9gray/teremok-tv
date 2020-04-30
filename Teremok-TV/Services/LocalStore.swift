@@ -56,6 +56,9 @@ struct LocalStore {
 	static var appOpenedCount: Int
 
 	// MARK: Games
+	@Storage(userDefaults: userDefaults, key: "puzzlesDone", defaultValue: [])
+	static var puzzlesDone: [String]
+
 	@Storage(userDefaults: userDefaults, key: "animalsDifficultyKey", defaultValue: false)
     static var animalsIsHard: Bool
 

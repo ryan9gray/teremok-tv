@@ -8,7 +8,23 @@ extension Collection {
         return array.count == count ? array : nil
     }
 }
-
+extension Sequence {
+	/// Returns an array with the contents of this sequence, shuffled.
+	func shuffled() -> [Element] {
+		var result = Array(self)
+		result.shuffle()
+		return result
+	}
+}
+extension Array {
+	func split() -> [[Element]] {
+		let ct = self.count
+		let half = ct / 2
+		let leftSplit = self[0 ..< half]
+		let rightSplit = self[half ..< ct]
+		return [Array(leftSplit), Array(rightSplit)]
+	}
+}
 extension Collection {
     /// Returns the element at the specified index iff it is within bounds, otherwise nil.
 //    subscript (safe index: Index) -> Iterator.Element? {

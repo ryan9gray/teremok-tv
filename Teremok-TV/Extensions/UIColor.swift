@@ -79,6 +79,20 @@ extension UIColor {
         static let brownTwo                         = UIColor(hex: "733B03")
     }
 
+	enum PuzzleGame {
+		static let orangeOne                    = UIColor(hex: "FFA800")
+		static let orangeTwo                    = UIColor(hex: "FFD074")
+
+		static let blueOne                      = UIColor(hex: "2BC1F0")
+		static let blueTwo                      = UIColor(hex: "77CEFF")
+
+		static let redOne                       = UIColor(hex: "ED5906")
+		static let redTwo                       = UIColor(hex: "FF7F3C")
+
+		static let greenOne                     = UIColor(hex: "4CD179")
+		static let greenTwo                     = UIColor(hex: "1F891D")
+	}
+
     enum Alphavite {
         static let orangeOne                    = UIColor(hex: "FFC327")
         static let orangeTwo                    = UIColor(hex: "F38928")
