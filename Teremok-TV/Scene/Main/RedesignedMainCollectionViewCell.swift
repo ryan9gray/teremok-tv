@@ -8,20 +8,7 @@
 
 import UIKit
 
-// TO DO
-import Lottie
-
-class RedesignedMainCollectionViewCell: UICollectionViewCell, RedesignedAnimateCellProtocol {
-    var animationView: AnimationView?
-    
-    var linktoLoad: String = ""
-    
-    var source: AnimaionSource = .link
-
-    enum AnimaionSource {
-        case link
-        case local
-    }
+class RedesignedMainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet private var thirdImageView: PreviewImage!
     @IBOutlet private var secondImageView: PreviewImage!

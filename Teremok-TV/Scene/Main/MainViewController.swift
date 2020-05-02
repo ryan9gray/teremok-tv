@@ -167,19 +167,6 @@ extension MainViewController: UICollectionViewDelegate {
             }
 		}
     }
-    
-    //TO DO
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
-        if let razdel = cell as? RedesignedMainCollectionViewCell {
-            razdel.playAnimation()
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if let razdel = cell as? RedesignedMainCollectionViewCell {
-            razdel.pauseAnimation()
-        }
-    }
 }
 
 extension MainViewController: UICollectionViewDataSource {
@@ -208,8 +195,6 @@ extension MainViewController: UICollectionViewDataSource {
             } else {
                 cell.configure(title: razdels[indexPath.row].title, serialCount: razdels[indexPath.row].countItems, topVideos: razdels[indexPath.row].topVideos)
             }
-            //TO DO
-            cell.setAnimation()
             return cell
         }
     }
