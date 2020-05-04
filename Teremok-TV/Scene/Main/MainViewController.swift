@@ -236,6 +236,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        audioPlayer?.play()
         targetContentOffset.pointee = scrollView.contentOffset
         let initialXOffset = collectionViewInitialXOffset ?? 0.0
         let firstSectionCellWidht = collectionView.bounds.height * 1.33
@@ -249,7 +250,6 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
             let index = ((scrollView.contentOffset.x - firstSectionInset)  / (secondSectionCellWidth + spacing)).rounded() + movingOrientation
             let contentOffset = secondSectionCellWidth/2 + index * (secondSectionCellWidth + spacing) + firstSectionInset
             self.collectionView.setContentOffset(CGPoint(x: contentOffset,y: 0), animated: true)
-            audioPlayer?.play()
         }
     }
     

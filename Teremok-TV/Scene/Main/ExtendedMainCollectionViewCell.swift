@@ -158,18 +158,3 @@ extension ExtendedMainCollectionViewCell: SerialCellProtocol {
         
     }
 }
-
-//extension ExtendedMainCollectionViewCell: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        if section == 0 {
-//            return -collectionView.bounds.height * 1.75 + 10
-//        } else {
-//            return 20.0
-//        }
-//    }
-//}
