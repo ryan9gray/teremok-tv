@@ -20,17 +20,21 @@ extension UIColor {
         static let lightGray                    = UIColor(hex: "E2E2E2")
 		static let redOne                    	= UIColor(hex: "FF5F7C")
 		static let redTwo                    	= UIColor(hex: "E33A3A")
+        static let orangeOne                    = UIColor(hex: "FF9457")
+        static let orangeTwo                    = UIColor(hex: "FFB927")
     }
     enum Label {
         static let titleText            =  UIColor(hex: "2E334D")
         static let orange               =  #colorLiteral(red: 0.9921568627, green: 0.431372549, blue: 0.2980392157, alpha: 1)   //FD6E4C
+        static let peach                = UIColor(hex: "E33A3A")
         static let darkBlue             = UIColor(hex: "0058BA")
         static let yellow               = UIColor(hex: "DDFF00")
         static let gray                 =  #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)   //999999
         static let grass                =  #colorLiteral(red: 0.1333333333, green: 0.6431372549, blue: 0.4, alpha: 1)   //22A466
         static let ocean                =  #colorLiteral(red: 0.1647058824, green: 0.8117647059, blue: 0.9960784314, alpha: 1)   //2ACFFE
-		static let red                	= UIColor(hex: "E74C1E")
-		static let redPromo             = UIColor(hex: "F15A48")
+        static let red                    = UIColor(hex: "E74C1E")
+        static let darkRed              = UIColor(hex: "841717")
+        static let redPromo             = UIColor(hex: "F15A48")
     }
 
     enum View {
@@ -75,6 +79,20 @@ extension UIColor {
         static let brownTwo                         = UIColor(hex: "733B03")
     }
 
+	enum PuzzleGame {
+		static let orangeOne                    = UIColor(hex: "FFA800")
+		static let orangeTwo                    = UIColor(hex: "FFD074")
+
+		static let blueOne                      = UIColor(hex: "2BC1F0")
+		static let blueTwo                      = UIColor(hex: "77CEFF")
+
+		static let redOne                       = UIColor(hex: "ED5906")
+		static let redTwo                       = UIColor(hex: "FF7F3C")
+
+		static let greenOne                     = UIColor(hex: "4CD179")
+		static let greenTwo                     = UIColor(hex: "1F891D")
+	}
+
     enum Alphavite {
         static let orangeOne                    = UIColor(hex: "FFC327")
         static let orangeTwo                    = UIColor(hex: "F38928")
@@ -109,6 +127,20 @@ extension UIColor {
 
         static let coralOne                        = UIColor(hex: "F45436")
         static let coralTwo                        = UIColor(hex: "FF8777")
+    }
+    
+    enum DinoGame {
+        static let darkGreenOne                     = UIColor(hex: "45988E")
+        static let darkGreenTwo                     = UIColor(hex: "274D5A")
+        
+        static let darkRedOne                       = UIColor(hex: "C93C43")
+        static let darkRedTwo                       = UIColor(hex: "841717")
+        
+        static let lightBlueOne                     = UIColor(hex: "009DB5")
+        static let lightBlueTwo                     = UIColor(hex: "00D2E8")
+        
+        static let lightOrangeOne                   = UIColor(hex: "FFB32F")
+        static let lightOrangeTwo                   = UIColor(hex: "FF9852")
     }
 }
 

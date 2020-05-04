@@ -178,7 +178,7 @@ class ChoiceAnimalViewController: GameViewController, AVAudioPlayerDelegate {
             let path = Bundle.main.path(forResource: ChoiceAnimal.funSounds.randomElement()!, ofType: "mp3")!
             url = URL(fileURLWithPath: path)
         } else {
-            let path = Bundle.main.path(forResource: ChoiceAnimal.sadSounds.randomElement()!, ofType: "wav")!
+            let path = Bundle.main.path(forResource: ChoiceAnimal.sadSounds.randomElement()!, ofType: "mp3")!
             url = URL(fileURLWithPath: path)
         }
         do {

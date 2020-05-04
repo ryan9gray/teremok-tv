@@ -56,6 +56,9 @@ struct LocalStore {
 	static var appOpenedCount: Int
 
 	// MARK: Games
+	@Storage(userDefaults: userDefaults, key: "puzzlesDone", defaultValue: [])
+	static var puzzlesDone: [String]
+
 	@Storage(userDefaults: userDefaults, key: "animalsDifficultyKey", defaultValue: false)
     static var animalsIsHard: Bool
 
@@ -67,6 +70,9 @@ struct LocalStore {
 
     @Storage(userDefaults: userDefaults, key: "monsterTip", defaultValue: 0)
     static var monsterTip: Int
+    
+    @Storage(userDefaults: userDefaults, key: "dinoTip", defaultValue: 0)
+    static var dinoTip: Int
 
     @Storage(userDefaults: userDefaults, key: "alphabetTip", defaultValue: 0)
     static var alphabetTip: Int
@@ -79,6 +85,9 @@ struct LocalStore {
 
     @Storage(userDefaults: userDefaults, key: "monsterFreeGames", defaultValue: 0)
     static var monsterFreeGames: Int
+    
+    @Storage(userDefaults: userDefaults, key: "dinoFreeGames", defaultValue: 0)
+    static var dinoFreeGames: Int
 
     // MARK: Introduce Video
     @Storage(userDefaults: userDefaults, key: "animalFirstIntroduce", defaultValue: false)

@@ -72,7 +72,7 @@ class SearchViewController: AbstracViewController, SearchDisplayLogic {
         interactor?.fetchSearchTags()
     }
 
-    func prepareUI(){
+    func prepareUI() {
         activityView = LottieHUD()
         collectionView.delegate = self
         seartchFld.textColor = UIColor.View.orange

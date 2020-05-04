@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -244,8 +244,8 @@
                                 <color key="shadowColor" red="0.18039215689999999" green="0.20000000000000001" blue="0.30196078430000001" alpha="0.31597970549999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="BlV-GB-GHh">
-                                <rect key="frame" x="217.66666666666666" y="78" width="376.66666666666674" height="287"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BlV-GB-GHh">
+                                <rect key="frame" x="155" y="78" width="502" height="287"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G6Z-Uf-GBl">
                                         <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="287"/>
@@ -299,8 +299,61 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jrm-h6-8c2">
+                                        <rect key="frame" x="167.33333333333331" y="0.0" width="167.33333333333331" height="287"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiO-7L-53P" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="143.66666666666666"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="FiO-7L-53P" secondAttribute="height" multiplier="7:6" id="Heo-hi-aFm"/>
+                                                </constraints>
+                                                <state key="normal" image="icPuzzleGame"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                        <real key="value" value="0.20000000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="puzzleTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="KS1-Xf-oJX"/>
+                                                    <action selector="touchDownGame:" destination="dlq-k2-hSp" eventType="touchDown" id="yAh-mU-VDf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RU0-fB-SK1" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="143.66666666666663" width="167.33333333333334" height="143.33333333333337"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="RU0-fB-SK1" secondAttribute="height" multiplier="7:6" id="GFE-EM-3Nt"/>
+                                                </constraints>
+                                                <state key="normal" image="ic-dinoGameIcon"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideUp"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                        <real key="value" value="0.20000000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dinoTap:" destination="dlq-k2-hSp" eventType="touchUpInside" id="pgs-Vx-Rd6"/>
+                                                    <action selector="touchDownGame:" destination="dlq-k2-hSp" eventType="touchDown" id="nfc-Qh-dLr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8U3-J0-FUn">
-                                        <rect key="frame" x="209.33333333333331" y="0.0" width="167.33333333333331" height="287"/>
+                                        <rect key="frame" x="334.66666666666669" y="0.0" width="167.33333333333331" height="287"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8b-ps-329" customClass="DesignableButton" customModule="Spring">
                                                 <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="143.66666666666666"/>
@@ -376,6 +429,8 @@
                         <outletCollection property="buttons" destination="X8b-ps-329" collectionClass="NSMutableArray" id="cfV-DA-SLc"/>
                         <outletCollection property="buttons" destination="6Lw-K8-tJz" collectionClass="NSMutableArray" id="wnf-z7-Lkd"/>
                         <outletCollection property="buttons" destination="L6d-07-4Xw" collectionClass="NSMutableArray" id="piM-VN-AX5"/>
+                        <outletCollection property="buttons" destination="FiO-7L-53P" collectionClass="NSMutableArray" id="3jf-gu-lKD"/>
+                        <outletCollection property="buttons" destination="RU0-fB-SK1" collectionClass="NSMutableArray" id="B3o-57-JCl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uk0-KN-ZMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,11 +442,13 @@
         <image name="ic-alphavite" width="164" height="144"/>
         <image name="ic-alphavitePlay" width="70" height="80"/>
         <image name="ic-animalgame" width="164" height="144"/>
+        <image name="ic-dinoGameIcon" width="148" height="128"/>
         <image name="ic-gamesBack" width="667" height="375"/>
         <image name="ic-monsterGame" width="164" height="144"/>
-        <image name="icColorsGame" width="140" height="120"/>
+        <image name="icColorsGame" width="148" height="128"/>
         <image name="icCross" width="20" height="20"/>
         <image name="icHomeShadow" width="50" height="50"/>
+        <image name="icPuzzleGame" width="164" height="144"/>
         <image name="icTree" width="142" height="176"/>
     </resources>
 </document>

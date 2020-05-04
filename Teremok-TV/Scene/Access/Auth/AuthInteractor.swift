@@ -39,7 +39,4 @@ class AuthInteractor: AuthBusinessLogic, AuthDataStore {
             }
         }
     }
-
-    // MARK: Do something
-
 }

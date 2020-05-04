@@ -51,10 +51,10 @@ struct BackgroundMediaWorker {
 
     static func getSound()-> URL {
         if 0...6 ~= hourLocal || hourLocal > 20 {
-            return URL(fileURLWithPath: Bundle.main.path(forResource: "snowstorm_blizzard_1", ofType: "wav")!)
+            return URL(fileURLWithPath: Bundle.main.path(forResource: "night_sound", ofType: "mp3")!)
         }
         else {
-            return URL(fileURLWithPath: Bundle.main.path(forResource: "steps-in-snow", ofType: "wav")!)
+            return URL(fileURLWithPath: Bundle.main.path(forResource: "day_sound", ofType: "mp3")!)
         }
     }
 
