@@ -57,10 +57,10 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
     private func configureLayout() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
-        layout.itemSize = CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
+        layout.itemSize = CGSize(width: self.frame.height * 1.75, height: self.frame.height)
         layout.minimumInteritemSpacing = 0.0
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
-        layout.minimumLineSpacing = -collectionView.bounds.height * 1.75 + 10
+        layout.minimumLineSpacing = -self.frame.height * 1.75 + 10
         collectionView.collectionViewLayout = layout
     }
     
@@ -68,7 +68,7 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         
-        layout.itemSize = CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
+        layout.itemSize = CGSize(width: self.frame.height * 1.75, height: self.frame.height)
         layout.minimumInteritemSpacing = 0.0
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         layout.minimumLineSpacing = 20.0
