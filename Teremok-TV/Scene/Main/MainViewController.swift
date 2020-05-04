@@ -61,6 +61,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     
     var razdels: [Main.RazdelItem] = []
     var extendedRazdels: [IndexPath : [MainContent]] = [:]
+    private var cellsWasAnimated: [IndexPath] = []
     private var collectionViewLeftInset: CGFloat?
     private var collectionViewRightInset: CGFloat?
     private var collectionViewInitialXOffset: CGFloat?
@@ -146,7 +147,16 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     
     func seriesDisplay(indexPath: IndexPath, show: [MainContent]) {
         extendedRazdels[indexPath] = show
-        collectionView.reloadItems(at: [indexPath])
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.collectionView.performBatchUpdates({
+                self?.collectionView.reloadItems(at: [indexPath])
+            }, completion: { [weak self] result in
+                if let cell = self?.collectionView.cellForItem(at: indexPath) as? ExtendedMainCollectionViewCell {
+                    cell.minimumSpacingAnimation(duration: 0.3)
+                    self?.cellsWasAnimated.append(indexPath)
+                }
+            })
+        }
     }
 }
 
@@ -184,7 +194,11 @@ extension MainViewController: UICollectionViewDataSource {
             if let type = razdelItem?.itemType, type == .videos {
                 videosCell = true
             }
-            cell.configureCell(content: extendedRazdels[indexPath] ?? [], razdelNumber: indexPath.row, videosCell: videosCell)
+            var cellWasAnimated: Bool = false
+            if cellsWasAnimated.contains(indexPath) {
+                cellWasAnimated = true
+            }
+            cell.configureCell(content: extendedRazdels[indexPath] ?? [], razdelNumber: indexPath.row, videosCell: videosCell, wasAnimated: cellWasAnimated)
             cell.delegate = self
             return cell
         } else {

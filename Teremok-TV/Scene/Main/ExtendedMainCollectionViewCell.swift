@@ -34,18 +34,49 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.isScrollEnabled = false
+        configureLayout()
     }
     
-    func configureCell(content: [MainContent], razdelNumber: Int, videosCell: Bool) {
+    func configureCell(content: [MainContent], razdelNumber: Int, videosCell: Bool, wasAnimated: Bool) {
         self.serials = content
         self.razdelNumber = razdelNumber
         self.videosCell = videosCell
+        if wasAnimated {
+            minimumSpacingAnimation()
+        }
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        configureLayout()
         collectionView.reloadData()
         collectionView.contentOffset = CGPoint(x: 0.0, y: 0.0)
+    }
+    
+    private func configureLayout() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+        layout.itemSize = CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
+        layout.minimumInteritemSpacing = 0.0
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        layout.minimumLineSpacing = -collectionView.bounds.height * 1.75 + 10
+        collectionView.collectionViewLayout = layout
+    }
+    
+    func minimumSpacingAnimation(duration: TimeInterval = 0.0) {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+        
+        layout.itemSize = CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
+        layout.minimumInteritemSpacing = 0.0
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        layout.minimumLineSpacing = 20.0
+        UIView.animate(withDuration: duration, animations: { [weak self] in
+            self?.collectionView.setCollectionViewLayout(layout, animated: true)
+        }) { [weak self] (result) in
+            self?.collectionView.contentOffset = CGPoint(x: 0.0, y: 0.0)
+        }
     }
 }
 
@@ -128,9 +159,17 @@ extension ExtendedMainCollectionViewCell: SerialCellProtocol {
     }
 }
 
-extension ExtendedMainCollectionViewCell: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
-    }
-}
+//extension ExtendedMainCollectionViewCell: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        if section == 0 {
+//            return -collectionView.bounds.height * 1.75 + 10
+//        } else {
+//            return 20.0
+//        }
+//    }
+//}

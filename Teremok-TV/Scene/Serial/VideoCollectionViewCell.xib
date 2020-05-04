@@ -69,6 +69,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="45" id="15X-Sr-nOR"/>
                             <constraint firstItem="zG5-jT-kgP" firstAttribute="centerY" secondItem="l5d-sj-fvb" secondAttribute="centerY" id="AMz-9r-6A7"/>
                             <constraint firstItem="jhY-28-fig" firstAttribute="leading" secondItem="zG5-jT-kgP" secondAttribute="trailing" constant="15" id="AmI-nA-CJt"/>
                             <constraint firstItem="zG5-jT-kgP" firstAttribute="leading" secondItem="l5d-sj-fvb" secondAttribute="leading" constant="15" id="Kf1-1H-6Pc"/>
@@ -86,7 +87,6 @@
                 <constraint firstItem="I3b-Fn-RGB" firstAttribute="bottom" secondItem="l5d-sj-fvb" secondAttribute="bottom" id="JmX-Qk-Dd0"/>
                 <constraint firstItem="T8L-7M-jtM" firstAttribute="top" secondItem="I3b-Fn-RGB" secondAttribute="top" id="Rst-ta-J9a"/>
                 <constraint firstItem="l5d-sj-fvb" firstAttribute="leading" secondItem="hau-7y-PbP" secondAttribute="leading" id="T3V-m6-QIb"/>
-                <constraint firstItem="l5d-sj-fvb" firstAttribute="top" secondItem="T8L-7M-jtM" secondAttribute="bottom" constant="-30" id="Zbq-nF-Glk"/>
                 <constraint firstItem="T8L-7M-jtM" firstAttribute="leading" secondItem="I3b-Fn-RGB" secondAttribute="leading" id="aiu-iP-W62"/>
                 <constraint firstAttribute="trailing" secondItem="l5d-sj-fvb" secondAttribute="trailing" id="kkT-EI-B8W"/>
             </constraints>
