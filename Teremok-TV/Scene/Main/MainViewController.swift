@@ -67,7 +67,6 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     private var collectionViewInitialXOffset: CGFloat?
     private var collectionViewPreviosXOffset: CGFloat?
     private var indexOfCellBeforeDragging = 0
-    private var collectionViewHeight: CGFloat?
     
     var audioPlayer: AVAudioPlayer?
     var buttonPlayer: AVAudioPlayer?
@@ -78,7 +77,6 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
         super.viewDidLoad()
        
         mainTitleViewTopConstraint.constant = titleTopConstaraintCalculate()
-        collectionViewHeight = collectionView.bounds.height
         prepareUI()
         fetchRazdels()
     }
@@ -217,14 +215,13 @@ extension MainViewController: UICollectionViewDataSource {
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let height = collectionViewHeight else { return CGSize(width: 0.0, height: 0.0) }
         if indexPath.section == 0 {
-            return CGSize(width: height * 1.335, height: height)
+            return CGSize(width: collectionView.bounds.height * 1.335, height: collectionView.bounds.height)
         } else {
             if extendedRazdels.keys.contains(indexPath) {
-                return CGSize(width: height * 1.75 * 11 + 200.0, height: height)
+                return CGSize(width: collectionView.bounds.height * 1.75 * 11 + 200.0, height: collectionView.bounds.height)
             } else {
-                return CGSize(width: height * 1.75, height: height)
+                return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
             }
         }
     }
@@ -239,11 +236,10 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         audioPlayer?.play()
-        guard let height = collectionViewHeight else { return }
         targetContentOffset.pointee = scrollView.contentOffset
         let initialXOffset = collectionViewInitialXOffset ?? 0.0
-        let firstSectionCellWidht = height * 1.33
-        let secondSectionCellWidth = height * 1.75
+        let firstSectionCellWidht = collectionView.bounds.height * 1.33
+        let secondSectionCellWidth = collectionView.bounds.height * 1.75
         let spacing: CGFloat = 20.0
         let firstSectionInset = firstSectionCellWidht/2 + spacing + initialXOffset
         if scrollView.contentOffset.x < firstSectionInset {
