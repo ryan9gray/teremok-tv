@@ -8,15 +8,6 @@
 
 import UIKit
 
-protocol DidSelectRazdelAt {
-    func goToRazdel(razdel: Int)
-    func goToSerial(razdel: Int, title: String)
-    func goToPreview(razdelId: Int, videoId: Int)
-    func addVideoToFavorite(videoId: Int)
-    func downloadVideo(video: Serial.Item, completion : @escaping (_ like : Bool) -> ())
-    func present(title: String, actions: [UIAlertAction])
-}
-
 class ExtendedMainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet private var collectionView: UICollectionView!
@@ -24,7 +15,12 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
     private var serials: [MainContent] = []
     private var razdelNumber: Int = 0
     private var videosCell: Bool = false
-    var delegate: DidSelectRazdelAt?
+    var goToRazdel: ((_ razdel: Int) -> ())?
+    var addVideoToFavorite: ((_ videoId: Int) -> ())?
+    var goToSerial: ((_ razdel: Int, _ title: String) -> ())?
+    var goToPreview: ((_ razdelId: Int, _ videoId: Int) -> ())?
+    var downloadVideo: ((_ video: Serial.Item, _ complition: @escaping (_ like : Bool) -> ())->())?
+    var downloadVideoActions: ((_ actions: [UIAlertAction]) -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -83,13 +79,13 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
 extension ExtendedMainCollectionViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            if let serials = serials[indexPath.row] as? RazdelVCModel.SerialItem {
-                delegate?.goToSerial(razdel: serials.id, title: serials.name)
+            if let serial = serials[indexPath.row] as? RazdelVCModel.SerialItem {
+                goToSerial?(serial.id, serial.name)
             } else if let video = serials[indexPath.row] as? Serial.Item {
-                delegate?.goToPreview(razdelId: razdelNumber, videoId: video.id)
+                goToPreview?(razdelNumber, video.id)
             }
         } else {
-            delegate?.goToRazdel(razdel: razdelNumber)
+            goToRazdel?(razdelNumber)
         }
     }
 }
@@ -134,7 +130,7 @@ extension ExtendedMainCollectionViewCell: SerialCellProtocol {
     func favClick(_ sender: Any) {
         if let cell = sender as? VideoCollectionViewCell, let idx = collectionView.indexPath(for: cell)?.row {
             guard let video = serials[idx] as? Serial.Item else { return }
-            delegate?.addVideoToFavorite(videoId: video.id)
+            addVideoToFavorite?(video.id)
         }
     }
     
@@ -145,12 +141,12 @@ extension ExtendedMainCollectionViewCell: SerialCellProtocol {
             guard !cell.downloadBtn.isSelected else { return }
             
             let yes = UIAlertAction(title: "Скачать", style: .default, handler: { [weak self] (_) in
-                self?.delegate?.downloadVideo(video: video) { action in
+                self?.downloadVideo?(video) { action in
                     cell.downloadBtn.isSelected = action
                 }
             })
             let no = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
-            delegate?.present(title: "Скачать серию?", actions: [yes, no])
+            downloadVideoActions?([yes,no])
         }
     }
     

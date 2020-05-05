@@ -198,7 +198,28 @@ extension MainViewController: UICollectionViewDataSource {
                 cellWasAnimated = true
             }
             cell.configureCell(content: extendedRazdels[indexPath] ?? [], razdelNumber: indexPath.row, videosCell: videosCell, wasAnimated: cellWasAnimated)
-            cell.delegate = self
+            cell.goToRazdel = { [weak self] number in
+                self?.router?.navigateToRazdel(number: number)
+            }
+            cell.addVideoToFavorite = { [weak self] videoId in
+                self?.interactor?.addToFav(videoId: videoId)
+            }
+            cell.goToSerial = {[weak self] razdel, title in
+                self?.router?.navigateToVideos(razdelId: razdel, title: title)
+            }
+            cell.goToPreview = {[weak self] razdelId, videoId in
+                if Profile.current?.premium ?? false {
+                    self?.router?.navigateToPreview(razdelId: razdelId, videoId: videoId)
+                } else {
+                    self?.router?.openPremiumAlert()
+                }
+            }
+            cell.downloadVideo = {[weak self] video, completion in
+                self?.interactor?.downloadVideo(video: video, completion: completion)
+            }
+            cell.downloadVideoActions = {[weak self] actions in
+                self?.present(title: "Скачать серию?", actions: actions, completion: nil)
+            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
@@ -275,36 +296,6 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
                 return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: inset)
             }
             
-        }
-    }
-}
-
-extension MainViewController: DidSelectRazdelAt {
-    func present(title: String, actions: [UIAlertAction]) {
-        present(title: title, actions: actions, completion: nil)
-    }
-    
-    func addVideoToFavorite(videoId: Int) {
-        self.interactor?.addToFav(videoId: videoId)
-    }
-    
-    func downloadVideo(video: Serial.Item, completion: @escaping (Bool) -> ()) {
-        self.interactor?.downloadVideo(video: video, completion: completion)
-    }
-    
-    func goToSerial(razdel: Int, title: String) {
-        self.router?.navigateToVideos(razdelId: razdel, title: title)
-    }
-    
-    func goToRazdel(razdel: Int) {
-        self.router?.navigateToRazdel(number: razdel)
-    }
-    
-    func goToPreview(razdelId: Int, videoId: Int) {
-        if Profile.current?.premium ?? false {
-            self.router?.navigateToPreview(razdelId: razdelId, videoId: videoId)
-        } else {
-            self.router?.openPremiumAlert()
         }
     }
 }

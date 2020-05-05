@@ -179,11 +179,6 @@
 		735F47BE243D8F2A00BD3788 /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47BD243D8F2A00BD3788 /* MainTitleView.swift */; };
 		735F47C0243D8F5800BD3788 /* MainTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735F47BF243D8F5800BD3788 /* MainTitleView.xib */; };
 		735F47C4243D9B2A00BD3788 /* AbstractMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47C3243D9B2A00BD3788 /* AbstractMainViewController.swift */; };
-		73964EDC2450544B0077C428 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73964EDB2450544A0077C428 /* OpenSans-ExtraBold.ttf */; };
-		73C7CE8824405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */; };
-		73C7CE8A24405DFD0006B9E0 /* ExtendedMainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */; };
-		73C7CE8E244078410006B9E0 /* MoreSerialsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */; };
-		73C7CE8F244078410006B9E0 /* MoreSerialsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */; };
 		73764F40243B0061007117D6 /* DinoMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F3F243B0061007117D6 /* DinoMasterViewController.swift */; };
 		73764F42243B0081007117D6 /* DinoMasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F41243B0081007117D6 /* DinoMasterRouter.swift */; };
 		73764F44243B00B9007117D6 /* DinoStatisticPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F43243B00B9007117D6 /* DinoStatisticPresenter.swift */; };
@@ -197,6 +192,7 @@
 		73764F55243B0646007117D6 /* DinoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F53243B0646007117D6 /* DinoCollectionViewCell.swift */; };
 		73764F56243B0646007117D6 /* DinoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73764F54243B0646007117D6 /* DinoCollectionViewCell.xib */; };
 		73764F58243B3B38007117D6 /* LapsusPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73764F57243B3B37007117D6 /* LapsusPro-Bold.otf */; };
+		73964EDC2450544B0077C428 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73964EDB2450544A0077C428 /* OpenSans-ExtraBold.ttf */; };
 		73B154012444952700FD4994 /* DinoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B154002444952700FD4994 /* DinoService.swift */; };
 		73B15403244495D600FD4994 /* DinoStatisticResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B15402244495D600FD4994 /* DinoStatisticResponse.swift */; };
 		73B154062444967700FD4994 /* DinoGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B154052444967700FD4994 /* DinoGetStatCommand.swift */; };
@@ -204,6 +200,10 @@
 		73C479E6243A6D73004F8802 /* DinoMasterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479E5243A6D73004F8802 /* DinoMasterModels.swift */; };
 		73C479E8243A6EC5004F8802 /* DinoMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479E7243A6EC5004F8802 /* DinoMasterPresenter.swift */; };
 		73C479EC243A7233004F8802 /* DinoMasterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479EB243A7233004F8802 /* DinoMasterInteractor.swift */; };
+		73C7CE8824405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */; };
+		73C7CE8A24405DFD0006B9E0 /* ExtendedMainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */; };
+		73C7CE8E244078410006B9E0 /* MoreSerialsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */; };
+		73C7CE8F244078410006B9E0 /* MoreSerialsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
 		CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */; };
@@ -1067,11 +1067,6 @@
 		735F47BD243D8F2A00BD3788 /* MainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleView.swift; sourceTree = "<group>"; };
 		735F47BF243D8F5800BD3788 /* MainTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTitleView.xib; sourceTree = "<group>"; };
 		735F47C3243D9B2A00BD3788 /* AbstractMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractMainViewController.swift; sourceTree = "<group>"; };
-		73964EDB2450544A0077C428 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedMainCollectionViewCell.swift; sourceTree = "<group>"; };
-		73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtendedMainCollectionViewCell.xib; sourceTree = "<group>"; };
-		73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSerialsCollectionViewCell.swift; sourceTree = "<group>"; };
-		73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreSerialsCollectionViewCell.xib; sourceTree = "<group>"; };
 		73764F3F243B0061007117D6 /* DinoMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterViewController.swift; sourceTree = "<group>"; };
 		73764F41243B0081007117D6 /* DinoMasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterRouter.swift; sourceTree = "<group>"; };
 		73764F43243B00B9007117D6 /* DinoStatisticPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoStatisticPresenter.swift; sourceTree = "<group>"; };
@@ -1085,6 +1080,7 @@
 		73764F53243B0646007117D6 /* DinoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoCollectionViewCell.swift; sourceTree = "<group>"; };
 		73764F54243B0646007117D6 /* DinoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DinoCollectionViewCell.xib; sourceTree = "<group>"; };
 		73764F57243B3B37007117D6 /* LapsusPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LapsusPro-Bold.otf"; sourceTree = "<group>"; };
+		73964EDB2450544A0077C428 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		73B154002444952700FD4994 /* DinoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoService.swift; sourceTree = "<group>"; };
 		73B15402244495D600FD4994 /* DinoStatisticResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoStatisticResponse.swift; sourceTree = "<group>"; };
 		73B154052444967700FD4994 /* DinoGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoGetStatCommand.swift; sourceTree = "<group>"; };
@@ -1092,6 +1088,10 @@
 		73C479E5243A6D73004F8802 /* DinoMasterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterModels.swift; sourceTree = "<group>"; };
 		73C479E7243A6EC5004F8802 /* DinoMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterPresenter.swift; sourceTree = "<group>"; };
 		73C479EB243A7233004F8802 /* DinoMasterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterInteractor.swift; sourceTree = "<group>"; };
+		73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedMainCollectionViewCell.swift; sourceTree = "<group>"; };
+		73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtendedMainCollectionViewCell.xib; sourceTree = "<group>"; };
+		73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSerialsCollectionViewCell.swift; sourceTree = "<group>"; };
+		73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreSerialsCollectionViewCell.xib; sourceTree = "<group>"; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
 		CA0053B7213AF3E600AA187F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardShowable.swift; path = "Teremok-TV/Extensions/KeyboardShowable.swift"; sourceTree = SOURCE_ROOT; };
@@ -3869,7 +3869,6 @@
 				CA5100BA22F6EACF00821C25 /* alphavite_13_word_1.wav in Resources */,
 				CAF961EE22995FF3006E3046 /* animal_7.mp3 in Resources */,
 				73964EDC2450544B0077C428 /* OpenSans-ExtraBold.ttf in Resources */,
-				CAC6F72522A81BC000756AE2 /* fun_2.wav in Resources */,
 				256F7AEA245ADCDB00A4D5BD /* PuzzleCollectionViewCell.xib in Resources */,
 				CA5100B122F6EACF00821C25 /* alphavite_31.wav in Resources */,
 				251E518E235A579000221BA2 /* ColorsGame_subject_5_2.wav in Resources */,
@@ -4197,7 +4196,6 @@
 				CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */,
 				CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */,
 				735F47C0243D8F5800BD3788 /* MainTitleView.xib in Resources */,
-				251E5197235A579100221BA2 /* ColorsGame_fun_5.wav in Resources */,
 				CA5100F522F6EACF00821C25 /* alphavite_5_word_1.wav in Resources */,
 				256F7B10245ADD3400A4D5BD /* ColorsGame_fun_3.mp3 in Resources */,
 				251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */,
@@ -4968,7 +4966,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -4998,7 +4996,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
@@ -5089,7 +5087,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
