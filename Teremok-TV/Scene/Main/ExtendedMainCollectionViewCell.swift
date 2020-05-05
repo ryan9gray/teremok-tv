@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ExtendedMainCollectionViewCell: UICollectionViewCell {
+class ExtendedMainCollectionViewCell: UICollectionViewCell, ExtendebleCollectionCell {
     
-    @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet var collectionView: UICollectionView!
     
-    private var serials: [MainContent] = []
-    private var razdelNumber: Int = 0
-    private var videosCell: Bool = false
+    var serials: [MainContent] = []
+    var razdelNumber: Int = 0
+    var videosCell: Bool = false
+    
     var goToRazdel: ((_ razdel: Int) -> ())?
     var addVideoToFavorite: ((_ videoId: Int) -> ())?
     var goToSerial: ((_ razdel: Int, _ title: String) -> ())?
@@ -48,31 +49,6 @@ class ExtendedMainCollectionViewCell: UICollectionViewCell {
         configureLayout()
         collectionView.reloadData()
         collectionView.contentOffset = CGPoint(x: 0.0, y: 0.0)
-    }
-    
-    private func configureLayout() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
-        layout.itemSize = CGSize(width: self.frame.height * 1.75, height: self.frame.height)
-        layout.minimumInteritemSpacing = 0.0
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
-        layout.minimumLineSpacing = -self.frame.height * 1.75 + 10
-        collectionView.collectionViewLayout = layout
-    }
-    
-    func minimumSpacingAnimation(duration: TimeInterval = 0.0) {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
-        
-        layout.itemSize = CGSize(width: self.frame.height * 1.75, height: self.frame.height)
-        layout.minimumInteritemSpacing = 0.0
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
-        layout.minimumLineSpacing = 20.0
-        UIView.animate(withDuration: duration, animations: { [weak self] in
-            self?.collectionView.setCollectionViewLayout(layout, animated: true)
-        }) { [weak self] (result) in
-            self?.collectionView.contentOffset = CGPoint(x: 0.0, y: 0.0)
-        }
     }
 }
 

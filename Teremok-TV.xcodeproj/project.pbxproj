@@ -197,6 +197,7 @@
 		73B15403244495D600FD4994 /* DinoStatisticResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B15402244495D600FD4994 /* DinoStatisticResponse.swift */; };
 		73B154062444967700FD4994 /* DinoGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B154052444967700FD4994 /* DinoGetStatCommand.swift */; };
 		73B154082444968700FD4994 /* DinoSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B154072444968700FD4994 /* DinoSendStatCommand.swift */; };
+		73C099222461CCF2005379D6 /* ExtendebleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C099212461CCF2005379D6 /* ExtendebleCollectionCell.swift */; };
 		73C479E6243A6D73004F8802 /* DinoMasterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479E5243A6D73004F8802 /* DinoMasterModels.swift */; };
 		73C479E8243A6EC5004F8802 /* DinoMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479E7243A6EC5004F8802 /* DinoMasterPresenter.swift */; };
 		73C479EC243A7233004F8802 /* DinoMasterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479EB243A7233004F8802 /* DinoMasterInteractor.swift */; };
@@ -1085,6 +1086,7 @@
 		73B15402244495D600FD4994 /* DinoStatisticResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoStatisticResponse.swift; sourceTree = "<group>"; };
 		73B154052444967700FD4994 /* DinoGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoGetStatCommand.swift; sourceTree = "<group>"; };
 		73B154072444968700FD4994 /* DinoSendStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoSendStatCommand.swift; sourceTree = "<group>"; };
+		73C099212461CCF2005379D6 /* ExtendebleCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendebleCollectionCell.swift; sourceTree = "<group>"; };
 		73C479E5243A6D73004F8802 /* DinoMasterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterModels.swift; sourceTree = "<group>"; };
 		73C479E7243A6EC5004F8802 /* DinoMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterPresenter.swift; sourceTree = "<group>"; };
 		73C479EB243A7233004F8802 /* DinoMasterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterInteractor.swift; sourceTree = "<group>"; };
@@ -3064,6 +3066,7 @@
 				CAE1C457211DC5BC0058C9C6 /* CommonPresentationLogic.swift */,
 				CAC2D5162115A68200945003 /* ModalPresentable.swift */,
 				CAE1C455211DC5BC0058C9C6 /* CommonRoutingLogic.swift */,
+				73C099212461CCF2005379D6 /* ExtendebleCollectionCell.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -4421,6 +4424,7 @@
 				CA70867D23082EA80015851C /* AlphaviteStatisticViewController.swift in Sources */,
 				CAA4455F2157BF4F0023E340 /* ErrorHandler.swift in Sources */,
 				CA1041522262A259005D62DE /* SearchMusicCollectionViewCell.swift in Sources */,
+				73C099222461CCF2005379D6 /* ExtendebleCollectionCell.swift in Sources */,
 				CA62A72023512B8F0083FD4F /* ColorsGameStatRouter.swift in Sources */,
 				CA80481C21416836000A3C5B /* SerialRouter.swift in Sources */,
 				CA763630226A63CD00168AB1 /* SubscriptionCollectionViewCell.swift in Sources */,
