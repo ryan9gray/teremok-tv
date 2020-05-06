@@ -29,26 +29,15 @@ final class RazdelCollectionViewCell: PreviewImageCollectionViewCell {
 
     func configure(item: RazdelVCModel.SerialItem){
         self.item = item
-        self.titleLbl.text = item.name + " (\(item.countItems) " +  wordForCount(item.countItems) + ")"
+        self.titleLbl.text = item.name + " (\(item.countItems) " +  serialsCountUniversal(item.countItems) + ")"
         self.linktoLoad = item.imageUrl
         let randomImageName = imagesNames.randomElement()
         secondImageView.image = UIImage(named: randomImageName ?? "AnimalsBack")
     }
     
-    private func wordForCount(_ numeral: Int) -> String {
-        let div100 = numeral % 100
-        
-        if div100 >= 11 && div100 <= 19 {
-            return "серий"
-        }
-        
-        let div10 = numeral % 10
-        
-        if div10 == 1 {
-            return "серия"
-        } else if div10 >= 2 && div10 <= 4 {
-            return "серии"
-        }
-        return "серий"
+    private func serialsCountUniversal(_ count: Int) -> String {
+        let formatString: String = NSLocalizedString("Serials count", comment: "")
+        let resultString: String = String.localizedStringWithFormat(formatString, count)
+        return resultString
     }
 }

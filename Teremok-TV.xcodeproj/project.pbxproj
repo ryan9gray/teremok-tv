@@ -175,6 +175,7 @@
 		7336D031243EF525005D688E /* RoundedCorverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7336D030243EF525005D688E /* RoundedCorverView.swift */; };
 		7336D034243F1956005D688E /* RedesignedMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */; };
 		7336D035243F1956005D688E /* RedesignedMainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */; };
+		7339F7932462964700D9CE21 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 7339F7922462964700D9CE21 /* Localizable.stringsdict */; };
 		735F47BC243D8DE900BD3788 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47BB243D8DE900BD3788 /* NibLoadable.swift */; };
 		735F47BE243D8F2A00BD3788 /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47BD243D8F2A00BD3788 /* MainTitleView.swift */; };
 		735F47C0243D8F5800BD3788 /* MainTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735F47BF243D8F5800BD3788 /* MainTitleView.xib */; };
@@ -1064,6 +1065,7 @@
 		7336D030243EF525005D688E /* RoundedCorverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorverView.swift; sourceTree = "<group>"; };
 		7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedesignedMainCollectionViewCell.swift; sourceTree = "<group>"; };
 		7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedesignedMainCollectionViewCell.xib; sourceTree = "<group>"; };
+		7339F7922462964700D9CE21 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		735F47BB243D8DE900BD3788 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		735F47BD243D8F2A00BD3788 /* MainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleView.swift; sourceTree = "<group>"; };
 		735F47BF243D8F5800BD3788 /* MainTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTitleView.xib; sourceTree = "<group>"; };
@@ -2800,6 +2802,7 @@
 		CAA884562139204100E27F7A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7339F7922462964700D9CE21 /* Localizable.stringsdict */,
 				2549737E23F2F6C400519288 /* AltAppIcons */,
 				CA573D4723367BB400241990 /* OnBoarding.mp4 */,
 				CAF9614F22995FAC006E3046 /* Game */,
@@ -4161,6 +4164,7 @@
 				2546D8E723E2254E0063EF0B /* ColorsGame_subject_10_4.wav in Resources */,
 				256F7B18245ADD3400A4D5BD /* ColorsGame_sad_2.mp3 in Resources */,
 				CA5100CB22F6EACF00821C25 /* alphavite_8.wav in Resources */,
+				7339F7932462964700D9CE21 /* Localizable.stringsdict in Resources */,
 				CA5100D822F6EACF00821C25 /* alphavite_2.wav in Resources */,
 				CA5100CD22F6EACF00821C25 /* alphavite_32_word_2.wav in Resources */,
 				CA71971B2340ECAB005A729A /* brushAnimation.json in Resources */,

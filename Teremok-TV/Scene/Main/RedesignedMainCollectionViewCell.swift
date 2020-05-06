@@ -44,7 +44,7 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
 
     func configure(title: String, serialCount: Int,topVideos: [Main.RazdelItemTop]){
         serialNumberLabel.text = "+ " + String(serialCount)
-        serialLabel.text = wordForCount(serialCount)
+        serialLabel.text = razdelsCountUniversal(serialCount)
         if topVideos.isEmpty {
             titleLabel.text = title
             return
@@ -82,20 +82,9 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
     }
     
-    private func wordForCount(_ numeral: Int) -> String {
-        let div100 = numeral % 100
-        
-        if div100 >= 11 && div100 <= 19 {
-            return "сериалов"
-        }
-        
-        let div10 = numeral % 10
-        
-        if div10 == 1 {
-            return "сериал"
-        } else if div10 >= 2 && div10 <= 4 {
-            return "сериала"
-        }
-        return "сериалов"
+    private func razdelsCountUniversal(_ count: Int) -> String {
+        let formatString: String = NSLocalizedString("Razdels count", comment: "")
+        let resultString: String = String.localizedStringWithFormat(formatString, count)
+        return resultString
     }
 }
