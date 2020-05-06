@@ -52,14 +52,11 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
             let topVideosCount = topVideos.count
             titleLabel.text = topVideos[0].name
             setImage(imageURL: topVideos[0].poster, imageView: mainImageView)
-            switch topVideosCount {
-             case 2:
+            if topVideosCount >= 2 {
                 setImage(imageURL: topVideos[1].poster, imageView: secondImageView)
-             case 3...:
-                setImage(imageURL: topVideos[1].poster, imageView: secondImageView)
+            }
+            if topVideosCount >= 3 {
                 setImage(imageURL: topVideos[2].poster, imageView: thirdImageView)
-             default:
-                break
             }
         }
     }
