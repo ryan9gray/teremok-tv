@@ -16,7 +16,7 @@ protocol ButtonCellProtocol: class {
 }
 
 
-protocol SerialCellProtocol: ButtonCellProtocol {
+protocol SerialCellProtocol {
     
     func favClick(_ sender: Any)
     func downloadClick(_ sender: Any)

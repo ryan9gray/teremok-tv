@@ -12,7 +12,7 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
 
     @IBOutlet private var titleLbl: UILabel!
     
-    weak var delegate: SerialCellProtocol?
+    var delegate: SerialCellProtocol?
     var item: Serial.Item?
     @IBOutlet var heartBtn: TTAbstractMainButton!
     
@@ -25,9 +25,6 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
     @IBAction func downClick(_ sender: UIButton) {
         //sender.isSelected.toggle()
         delegate?.downloadClick(self)
-    }
-    @IBAction func burgerClick(_ sender: UIButton) {
-        delegate?.buttonClick(self)
     }
     
     func toLike(me: Bool){

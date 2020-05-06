@@ -125,8 +125,4 @@ extension ExtendedMainCollectionViewCell: SerialCellProtocol {
             downloadVideoActions?([yes,no])
         }
     }
-    
-    func buttonClick(_ sender: Any) {
-        
-    }
 }
