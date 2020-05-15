@@ -2044,6 +2044,23 @@
 			path = Subscription;
 			sourceTree = "<group>";
 		};
+		73097DB3246F13750047A1B0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CA0053BF213BD46900AA187F /* MainlCollectionViewCell.swift */,
+				CA0053C0213BD46900AA187F /* MainlCollectionViewCell.xib */,
+				7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */,
+				7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */,
+				73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */,
+				73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */,
+				73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */,
+				73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */,
+				73097DAF246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift */,
+				73097DB0246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		73B154042444965E00FD4994 /* Dino */ = {
 			isa = PBXGroup;
 			children = (
@@ -2200,21 +2217,12 @@
 		CA49E492212D3D9500711324 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				73097DB3246F13750047A1B0 /* Cells */,
 				CA49E499212D5A9200711324 /* MainPresenter.swift */,
 				CA49E49B212D5A9200711324 /* MainRouter.swift */,
 				CA49E49C212D5A9200711324 /* MainModels.swift */,
 				CA49E49D212D5A9200711324 /* MainViewController.swift */,
 				CA49E49E212D5A9200711324 /* MainInteractor.swift */,
-				CA0053BF213BD46900AA187F /* MainlCollectionViewCell.swift */,
-				CA0053C0213BD46900AA187F /* MainlCollectionViewCell.xib */,
-				7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */,
-				7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */,
-				73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */,
-				73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */,
-				73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */,
-				73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */,
-				73097DAF246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift */,
-				73097DB0246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";

@@ -151,6 +151,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
                 self?.collectionView.reloadItems(at: [indexPath])
             }, completion: { [weak self] result in
                 if let cell = self?.collectionView.cellForItem(at: indexPath) as? ExtendedMainCollectionViewCell {
+                    self?.updateMainTitleView()
                     cell.minimumSpacingAnimation(duration: 0.3)
                     self?.cellsWasAnimated.append(indexPath)
                 }
