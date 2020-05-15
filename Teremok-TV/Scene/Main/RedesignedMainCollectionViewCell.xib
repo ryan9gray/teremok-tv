@@ -152,7 +152,6 @@
                                             <constraint firstAttribute="bottom" secondItem="kDj-th-R5i" secondAttribute="bottom" id="NK1-Gc-9I9"/>
                                             <constraint firstItem="kDj-th-R5i" firstAttribute="centerY" secondItem="Tl5-yq-5q9" secondAttribute="centerY" id="OIh-WP-Rid"/>
                                             <constraint firstItem="kDj-th-R5i" firstAttribute="leading" secondItem="Tl5-yq-5q9" secondAttribute="leading" constant="15" id="b8W-ah-lDc"/>
-                                            <constraint firstAttribute="trailing" secondItem="kDj-th-R5i" secondAttribute="trailing" priority="750" constant="15" id="p77-oD-URh"/>
                                             <constraint firstAttribute="trailing" secondItem="nOr-vq-bcm" secondAttribute="trailing" constant="15" id="rId-7o-vNL"/>
                                             <constraint firstAttribute="bottom" secondItem="nOr-vq-bcm" secondAttribute="bottom" constant="10" id="sbt-NJ-Aap"/>
                                             <constraint firstItem="nOr-vq-bcm" firstAttribute="top" secondItem="Tl5-yq-5q9" secondAttribute="top" constant="-5" id="tnD-OZ-6ZE"/>
@@ -208,8 +207,6 @@
                 <outlet property="serialNumberLabel" destination="aea-fc-h93" id="ngy-HN-AMx"/>
                 <outlet property="thirdImageView" destination="cSZ-4a-ayR" id="D8S-Kf-29r"/>
                 <outlet property="titleLabel" destination="kDj-th-R5i" id="bFT-wp-IqU"/>
-                <outlet property="titleLabelTrailingConstratraintToMoreSerialImage" destination="0Od-5M-xNZ" id="0SC-A9-HYf"/>
-                <outlet property="titleLabelTralingConstraintToSuperview" destination="p77-oD-URh" id="wZw-d3-oMf"/>
             </connections>
             <point key="canvasLocation" x="355.07246376811599" y="152.67857142857142"/>
         </collectionViewCell>

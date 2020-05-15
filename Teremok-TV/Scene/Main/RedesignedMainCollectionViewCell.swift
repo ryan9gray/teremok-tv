@@ -17,8 +17,6 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var moreSerialView: UIView!
     @IBOutlet private var serialLabel: UILabel!
     @IBOutlet private var serialNumberLabel: UILabel!
-    @IBOutlet private var titleLabelTrailingConstratraintToMoreSerialImage: NSLayoutConstraint!
-    @IBOutlet private var titleLabelTralingConstraintToSuperview: NSLayoutConstraint!
     
     @IBOutlet weak var containerAnimation: UIView!
     
@@ -38,8 +36,6 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
         moreSerialView.isHidden = false
         serialLabel.text = "сериалов"
         serialNumberLabel.text = "+ 100"
-        titleLabelTrailingConstratraintToMoreSerialImage.priority = UILayoutPriority(rawValue: 1000)
-        titleLabelTralingConstraintToSuperview.priority = UILayoutPriority(rawValue: 750)
     }
 
     func configure(title: String, serialCount: Int,topVideos: [Main.RazdelItemTop]){
@@ -59,17 +55,6 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
                 setImage(imageURL: topVideos[2].poster, imageView: thirdImageView)
             }
         }
-    }
-    
-    func gameRazdelConfigure() {
-        titleLabel.text = "Алфавит, Мемориз и другие игры"
-        thirdImageView.image = UIImage(named: "ic-alphaviteBack")
-        secondImageView.image = UIImage(named: "ic-monsterBack")
-        mainImageView.image = UIImage(named: "gameIcon")
-        mainImageView.contentMode = .scaleAspectFill
-        moreSerialView.isHidden = true
-        titleLabelTrailingConstratraintToMoreSerialImage.priority = UILayoutPriority(rawValue: 750)
-        titleLabelTralingConstraintToSuperview.priority = UILayoutPriority(rawValue: 1000)
     }
     
     private func setImage(imageURL: String, imageView: UIImageView) {
