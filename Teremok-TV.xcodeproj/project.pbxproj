@@ -172,6 +172,8 @@
 		25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9187236237B800D339C7 /* colorsGameMain.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		25DA918A236237B800D339C7 /* colorsGame_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceColorsGame, ); }; };
 		7302A88C2438A60800E942A6 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7302A88B2438A60800E942A6 /* OpenSans-Bold.ttf */; };
+		73097DB1246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73097DAF246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift */; };
+		73097DB2246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73097DB0246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib */; };
 		7336D031243EF525005D688E /* RoundedCorverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7336D030243EF525005D688E /* RoundedCorverView.swift */; };
 		7336D034243F1956005D688E /* RedesignedMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */; };
 		7336D035243F1956005D688E /* RedesignedMainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */; };
@@ -1062,6 +1064,8 @@
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
 		7302A88B2438A60800E942A6 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		73097DAF246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRazdelCollectionViewCell.swift; sourceTree = "<group>"; };
+		73097DB0246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameRazdelCollectionViewCell.xib; sourceTree = "<group>"; };
 		7336D030243EF525005D688E /* RoundedCorverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorverView.swift; sourceTree = "<group>"; };
 		7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedesignedMainCollectionViewCell.swift; sourceTree = "<group>"; };
 		7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedesignedMainCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -2040,6 +2044,23 @@
 			path = Subscription;
 			sourceTree = "<group>";
 		};
+		73097DB3246F13750047A1B0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CA0053BF213BD46900AA187F /* MainlCollectionViewCell.swift */,
+				CA0053C0213BD46900AA187F /* MainlCollectionViewCell.xib */,
+				7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */,
+				7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */,
+				73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */,
+				73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */,
+				73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */,
+				73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */,
+				73097DAF246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift */,
+				73097DB0246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		73B154042444965E00FD4994 /* Dino */ = {
 			isa = PBXGroup;
 			children = (
@@ -2196,19 +2217,12 @@
 		CA49E492212D3D9500711324 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				73097DB3246F13750047A1B0 /* Cells */,
 				CA49E499212D5A9200711324 /* MainPresenter.swift */,
 				CA49E49B212D5A9200711324 /* MainRouter.swift */,
 				CA49E49C212D5A9200711324 /* MainModels.swift */,
 				CA49E49D212D5A9200711324 /* MainViewController.swift */,
 				CA49E49E212D5A9200711324 /* MainInteractor.swift */,
-				CA0053BF213BD46900AA187F /* MainlCollectionViewCell.swift */,
-				CA0053C0213BD46900AA187F /* MainlCollectionViewCell.xib */,
-				7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */,
-				7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */,
-				73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */,
-				73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */,
-				73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */,
-				73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -4014,6 +4028,7 @@
 				251E5172235A579000221BA2 /* ColorsGame_color_5.wav in Resources */,
 				25C412E523B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib in Resources */,
 				CA4C28CE2147DFDB00CA264D /* box.json in Resources */,
+				73097DB2246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib in Resources */,
 				CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */,
 				CAF9620A22995FF3006E3046 /* animal_46.mp3 in Resources */,
 				251E5178235A579000221BA2 /* ColorsGame_subject_2_3.wav in Resources */,
@@ -4387,6 +4402,7 @@
 				111187EF231E82D700EBEFC0 /* MonsterStatisticPresenter.swift in Sources */,
 				CA70272021396F3100629260 /* RegService.swift in Sources */,
 				CAE3649C2291819D003E891D /* AnimalsRoundsRouter.swift in Sources */,
+				73097DB1246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift in Sources */,
 				CA49E481212D2ED300711324 /* SettingsViewController.swift in Sources */,
 				CA9A6747213C134000FCB400 /* RazdelViewController.swift in Sources */,
 				CAE09482214CF62C0052F283 /* ResetPassService.swift in Sources */,

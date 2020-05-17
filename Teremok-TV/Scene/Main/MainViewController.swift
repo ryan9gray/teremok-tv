@@ -90,7 +90,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
     private func prepareUI(){
         activityView = LottieHUD()
         collectionView.delegate = self
-        let cells = [RedesignedMainCollectionViewCell.self, ExtendedMainCollectionViewCell.self]
+        let cells = [RedesignedMainCollectionViewCell.self, ExtendedMainCollectionViewCell.self, GameRazdelCollectionViewCell.self]
         collectionView.register(cells: cells)
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
 
@@ -151,6 +151,7 @@ class MainViewController: AbstractMainViewController, MainDisplayLogic {
                 self?.collectionView.reloadItems(at: [indexPath])
             }, completion: { [weak self] result in
                 if let cell = self?.collectionView.cellForItem(at: indexPath) as? ExtendedMainCollectionViewCell {
+                    self?.updateMainTitleView()
                     cell.minimumSpacingAnimation(duration: 0.3)
                     self?.cellsWasAnimated.append(indexPath)
                 }
@@ -222,14 +223,14 @@ extension MainViewController: UICollectionViewDataSource {
             }
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
-                       
             if indexPath.section == 0 {
-                cell.gameRazdelConfigure()
+                let cell = collectionView.dequeueReusableCell(withCell: GameRazdelCollectionViewCell.self, for: indexPath)
+                return cell
             } else {
+                let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
                 cell.configure(title: razdels[indexPath.row].title, serialCount: razdels[indexPath.row].countItems, topVideos: razdels[indexPath.row].topVideos)
+                return cell
             }
-            return cell
         }
     }
 }
