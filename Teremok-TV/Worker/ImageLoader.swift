@@ -12,25 +12,35 @@ import AlamofireImage
 
 struct ImageLoader {
 
-    static func image(from url: String, complition: @escaping (UIImage) -> Void) {
-        Alamofire.request(url).responseImage { response in
-            if let image = response.result.value {
-                complition(image)
-            }
+    static func image(from url: String, complition: @escaping (UIImage?) -> Void) {
+        AF.request(url).responseImage { response in
+			switch response.result {
+				case .success(let image):
+					complition(image)
+				case .failure:
+					complition(nil)
+			}
         }
     }
     
     func downloadFrom(url: URL, name: String) {
-        Alamofire.request(url).responseImage { response in
-            if let image = response.result.value {
-                //print("image downloaded: \(image)")
-                self.saveImageToDocumentDirectory(image: image, name: name)
-            }
+        AF.request(url).responseImage { response in
+			switch response.result {
+				case .success(let image):
+					self.saveImageToDocumentDirectory(image: image, name: name)
+				case .failure:
+					return
+			}
         }
     }
     func dataFrom(url: URL, comletion: @escaping (Data?) -> Void) {
-        Alamofire.request(url).responseImage { response in
-            comletion(response.result.value?.pngData())
+        AF.request(url).responseImage { response in
+			switch response.result {
+				case .success(let image):
+					comletion(image.pngData())
+				case .failure:
+					return
+			}
         }
     }
     

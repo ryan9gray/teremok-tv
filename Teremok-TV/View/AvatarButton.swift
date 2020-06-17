@@ -43,12 +43,13 @@ class AvatarButton: RoundEdgeButton {
     }
 
     func getImage(_ url: String, handler: @escaping (UIImage?) -> Void) {
-        Alamofire.request(url, method: .get).responseImage { response in
-            if let data = response.result.value {
-                handler(data)
-            } else {
-                handler(nil)
-            }
+        AF.request(url, method: .get).responseImage { response in
+			switch response.result {
+				case .success(let image):
+					handler(image)
+				case .failure:
+					handler(nil)
+			}
         }
     }
 

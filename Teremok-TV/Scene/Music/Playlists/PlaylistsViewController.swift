@@ -107,7 +107,7 @@ class PlaylistsViewController: MusicViewController, PlaylistsDisplayLogic {
     func setImage(url: String) {
         guard let downloadURL = URL(string: url) else { return }
 
-        albumPoster.af_setImage(
+        albumPoster.af.setImage(
             withURL: downloadURL,
             placeholderImage: #imageLiteral(resourceName: "icNowifi"),
             filter: nil,

@@ -59,7 +59,7 @@ class RedesignedMainCollectionViewCell: UICollectionViewCell {
     
     private func setImage(imageURL: String, imageView: UIImageView) {
         let downloadURL = URL(string: imageURL)!
-        imageView.af_setImage(withURL: downloadURL,
+        imageView.af.setImage(withURL: downloadURL,
                               placeholderImage: #imageLiteral(resourceName: "icNowifi"),
                               filter: nil,
                               imageTransition: .crossDissolve(0.5),

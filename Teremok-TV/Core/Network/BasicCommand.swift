@@ -96,13 +96,15 @@ class BasicCommand {
             UIApplication.shared.isNetworkActivityIndicatorVisible = true
         }
         let request = getRequestWithParameters(parameters: parameters)
-        var loggingData: String
-        if let httpBody = request.request?.httpBody,
-            let formattedData = String(data: httpBody, encoding: .utf8) {
-            loggingData = formattedData
-        } else {
-            loggingData = String(describing: headers)
-        }
+		let loggingData: String =  "Params: \(parameters)"
+
+//        var loggingData: String
+//        if let httpBody = request.request?.httpBody,
+//            let formattedData = String(data: httpBody, encoding: .utf8) {
+//            loggingData = formattedData
+//        } else {
+//            loggingData = String(describing: headers)
+//        }
 
         if isLogging { print(fullRequestString, loggingData) }
         
@@ -167,14 +169,14 @@ class BasicCommand {
                                                                method: httpMethod,
                                                                parameters: mutableParameters,
                                                                encoding: parameterEncoding,
-                                                               headers: mutableHeaders)
+                                                               headers: HTTPHeaders(mutableHeaders))
         task = request.task
         return request
     }
     
     /// Формирование структуры ответа
     func responseForRequest(request: Alamofire.DataRequest, success: ApiCompletionBlock?, failure: ApiCompletionBlock?) {
-        let responseHandler = { (dataResponse: DefaultDataResponse) -> Void in
+		let responseHandler = { (dataResponse: AFDataResponse<Data?>) -> Void in
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
@@ -209,28 +211,32 @@ class BasicCommand {
             }
         }
         
-        if mocked {
-            let mockName = String(describing: self).components(separatedBy: ".").last?.replacingOccurrences(of: "Command", with: "")
-            if let url = Bundle.main.url(forResource: mockName, withExtension: "json"),
-                let jsonData = try? Data(contentsOf: url) {
-                
-                let mockedResponse = HTTPURLResponse(
-                    url: request.request!.url!,
-                    statusCode: 200,
-                    httpVersion: nil,
-                    headerFields: nil
-                    )!
-                let mockedDefaultResponseData = DefaultDataResponse(
-                    request: request.request,
-                    response: mockedResponse,
-                    data: jsonData,
-                    error: nil)
-                DispatchQueue.main.async {
-                    responseHandler(mockedDefaultResponseData)
-                }
-                return
-            }
-        }
+		if mocked {
+			let mockName = String(describing: self).components(separatedBy: ".").last?.replacingOccurrences(of: "Command", with: "")
+			if let url = Bundle.main.url(forResource: mockName, withExtension: "json"),
+				let jsonData = try? Data(contentsOf: url) {
+				let request = request.convertible.urlRequest!
+				let mockedResponse = HTTPURLResponse(
+					url: request.url!,
+					statusCode: 200,
+					httpVersion: nil,
+					headerFields: nil
+					)!
+
+				let mockedDefaultResponseData = AFDataResponse<Data?>(
+					request: request,
+					response: mockedResponse,
+					data: jsonData,
+					metrics: nil,
+					serializationDuration: 1.0,
+					result: .success(jsonData)
+				)
+				DispatchQueue.main.async {
+					responseHandler(mockedDefaultResponseData)
+				}
+				return
+			}
+		}
         
         request.response(queue: DispatchQueue.global(), completionHandler: responseHandler)
     }
@@ -274,11 +280,11 @@ class BasicCommand {
 
 }
 extension BasicCommand {
-	private static var alamoFireManager: SessionManager = {
+	private static var alamoFireManager: Session = {
 		let configuration = URLSessionConfiguration.default
 		configuration.timeoutIntervalForRequest = 10
 		configuration.timeoutIntervalForResource = 10
-		let alamoFireManager = Alamofire.SessionManager(configuration: configuration)
+		let alamoFireManager = Session(configuration: configuration)
 		return alamoFireManager
 	}()
 }

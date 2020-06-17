@@ -20,7 +20,7 @@ extension ImageCellProtocol where Self : PreviewImageCollectionViewCell {
     func setImage() {
         if linktoLoad != ""{
             let downloadURL = URL(string: linktoLoad)!
-            self.imageView.af_setImage(
+			self.imageView.af.setImage(
                 withURL: downloadURL,
                 placeholderImage: #imageLiteral(resourceName: "icNowifi"),
                 filter: nil,

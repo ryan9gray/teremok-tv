@@ -15,11 +15,11 @@ class NetworkManager {
     //shared instance
     static let shared = NetworkManager()
     
-    let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.google.com")
-    
+	let reachabilityManager = NetworkReachabilityManager(host: "www.google.com")
+
     func startNetworkReachabilityObserver() {
         
-        reachabilityManager?.listener = { status in
+		reachabilityManager?.startListening(onUpdatePerforming: { (status) in
             switch status {
                 
             case .notReachable:
@@ -36,15 +36,12 @@ class NetworkManager {
             case .reachable(.ethernetOrWiFi):
                 print("The network is reachable over the WiFi connection")
                 
-            case .reachable(.wwan):
+				case .reachable(.cellular):
                 print("The network is reachable over the WWAN connection")
                 
             }
             NotificationCenter.default.post(name: .Internet, object: false, userInfo: nil)
-        }
-        
-        // start listening
-        reachabilityManager?.startListening()
+        })
     }
     
     class var isConnectedToInternet: Bool {

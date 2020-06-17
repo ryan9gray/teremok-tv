@@ -230,7 +230,7 @@ class StrokeLabel: UILabel {
         var lineBreakMode = CTLineBreakModeFromUILineBreakMode(self.lineBreakMode)
         var lineSpacing = self.lineSpacing
         let paragraphStyleettings: [CTParagraphStyleSetting] = [
-            CTParagraphStyleSetting(spec: .alignment, valueSize: MemoryLayout.size(ofValue: alignment), value: &alignment),
+			CTParagraphStyleSetting(spec: .alignment, valueSize: MemoryLayout.size(ofValue: alignment), value: &alignment),
             CTParagraphStyleSetting(spec: .lineBreakMode, valueSize: MemoryLayout.size(ofValue: lineBreakMode), value: &lineBreakMode),
             CTParagraphStyleSetting(spec: .lineSpacingAdjustment, valueSize: MemoryLayout.size(ofValue: lineSpacing), value: &lineSpacing)
             ]
