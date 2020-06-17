@@ -16,9 +16,12 @@ struct ViewHierarchyWorker {
     
     static func setRootViewController(rootViewController: UIViewController, of window: UIWindow! = mainWindow) {
         guard let window = window else { print("window is nil"); return }
-        UIView.transition(with: window, duration: 1.0, options: [.transitionCrossDissolve, .allowAnimatedContent], animations: {
-            window.rootViewController = rootViewController
-        }, completion: nil)
+		UIView.transition(with: window, duration: 0.5, options: [.transitionCrossDissolve, .allowAnimatedContent], animations: {
+			let oldState = UIView.areAnimationsEnabled
+			UIView.setAnimationsEnabled(false)
+			window.rootViewController = rootViewController
+			UIView.setAnimationsEnabled(oldState)
+		}, completion: nil)
     }
     
     static func resetAppForAuthentication(showExpirationAlert: Bool = false) {
