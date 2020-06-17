@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFi-IU-E9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFi-IU-E9L">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -427,32 +427,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MeA-ha-28h">
-                                <rect key="frame" x="44" y="20" width="724" height="314"/>
+                                <rect key="frame" x="0.0" y="150" width="812" height="180"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewLayout key="collectionViewLayout" id="UKJ-dO-2kY" customClass="CarouselLayout" customModule="Teremok_TV" customModuleProvider="target"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="jTh-6g-Rt6">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="skH-zM-2VZ" id="dQ2-Pd-U0a"/>
                                     <outlet property="delegate" destination="skH-zM-2VZ" id="Y5x-Oh-1j8"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2k-Jx-R8k" customClass="MainTitleView" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="812" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MeA-ha-28h" firstAttribute="top" secondItem="MdH-rV-e46" secondAttribute="top" constant="20" id="8pA-jW-6kw"/>
-                            <constraint firstItem="MdH-rV-e46" firstAttribute="bottom" secondItem="MeA-ha-28h" secondAttribute="bottom" constant="20" id="CdW-Rb-2aA"/>
-                            <constraint firstItem="MeA-ha-28h" firstAttribute="leading" secondItem="MdH-rV-e46" secondAttribute="leading" id="Cvh-UQ-nij"/>
-                            <constraint firstItem="MdH-rV-e46" firstAttribute="trailing" secondItem="MeA-ha-28h" secondAttribute="trailing" id="KRc-xE-Tfe"/>
+                            <constraint firstAttribute="bottom" secondItem="MeA-ha-28h" secondAttribute="bottom" constant="45" id="CdW-Rb-2aA"/>
+                            <constraint firstItem="MeA-ha-28h" firstAttribute="leading" secondItem="prU-I2-KoJ" secondAttribute="leading" id="Cvh-UQ-nij"/>
+                            <constraint firstAttribute="trailing" secondItem="MeA-ha-28h" secondAttribute="trailing" id="KRc-xE-Tfe"/>
+                            <constraint firstItem="z2k-Jx-R8k" firstAttribute="top" secondItem="MdH-rV-e46" secondAttribute="top" constant="80" id="Vce-gB-6QD"/>
+                            <constraint firstItem="z2k-Jx-R8k" firstAttribute="height" secondItem="prU-I2-KoJ" secondAttribute="height" multiplier="0.1065" id="j06-IF-Thr"/>
+                            <constraint firstItem="z2k-Jx-R8k" firstAttribute="leading" secondItem="prU-I2-KoJ" secondAttribute="leading" id="myM-41-pqo"/>
+                            <constraint firstAttribute="trailing" secondItem="z2k-Jx-R8k" secondAttribute="trailing" id="x5l-cD-Llj"/>
+                            <constraint firstItem="MeA-ha-28h" firstAttribute="top" secondItem="z2k-Jx-R8k" secondAttribute="bottom" constant="30" id="xHi-3d-JhQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MdH-rV-e46"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="MeA-ha-28h" id="vNj-AT-jR7"/>
+                        <outlet property="mainTitleView" destination="z2k-Jx-R8k" id="OYe-sq-mvR"/>
+                        <outlet property="mainTitleViewTopConstraint" destination="Vce-gB-6QD" id="AKC-J9-Dfr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2f0-Ur-Lq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429.53523238380814" y="-1671.2"/>
+            <point key="canvasLocation" x="429.31034482758622" y="-1671.2"/>
         </scene>
         <!--Master View Controller-->
         <scene sceneID="43E-jT-7ID">
@@ -740,7 +755,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZTZ-Wr-oV0">
-                                <rect key="frame" x="44" y="20" width="724" height="334"/>
+                                <rect key="frame" x="44" y="150" width="724" height="134"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="okP-Ak-nsQ" customClass="CarouselLayout" customModule="Teremok_TV" customModuleProvider="target"/>
                                 <cells/>
@@ -749,23 +764,32 @@
                                     <outlet property="delegate" destination="WzM-g5-bZt" id="K8Q-9N-ehG"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7P-Tw-Nrc" customClass="MainTitleView" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="812" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="bottom" secondItem="AmA-Ej-tXs" secondAttribute="bottom" id="5Sj-UM-8pu"/>
-                            <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="top" secondItem="AmA-Ej-tXs" secondAttribute="top" constant="20" id="9En-gc-GKj"/>
+                            <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="bottom" secondItem="AmA-Ej-tXs" secondAttribute="bottom" constant="-70" id="5Sj-UM-8pu"/>
+                            <constraint firstAttribute="trailing" secondItem="E7P-Tw-Nrc" secondAttribute="trailing" id="7VO-Lj-oOU"/>
+                            <constraint firstItem="E7P-Tw-Nrc" firstAttribute="leading" secondItem="iO6-Yj-s6b" secondAttribute="leading" id="Ca3-sG-Uqz"/>
                             <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="leading" secondItem="AmA-Ej-tXs" secondAttribute="leading" id="Ina-8V-Mx4"/>
+                            <constraint firstItem="E7P-Tw-Nrc" firstAttribute="top" secondItem="AmA-Ej-tXs" secondAttribute="top" constant="80" id="NGE-9Z-wAb"/>
+                            <constraint firstItem="ZTZ-Wr-oV0" firstAttribute="top" secondItem="E7P-Tw-Nrc" secondAttribute="bottom" constant="30" id="TGa-Yv-99N"/>
+                            <constraint firstItem="E7P-Tw-Nrc" firstAttribute="height" secondItem="iO6-Yj-s6b" secondAttribute="height" multiplier="0.1065" id="eSr-Ua-SLM"/>
                             <constraint firstItem="AmA-Ej-tXs" firstAttribute="trailing" secondItem="ZTZ-Wr-oV0" secondAttribute="trailing" id="k8C-K4-VOp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AmA-Ej-tXs"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="ZTZ-Wr-oV0" id="g8U-aV-vsh"/>
+                        <outlet property="mainTitleView" destination="E7P-Tw-Nrc" id="twJ-Cu-yST"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRL-LJ-xgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="430" y="-927"/>
+            <point key="canvasLocation" x="429.31034482758622" y="-927.20000000000005"/>
         </scene>
         <!--Serial View Controller-->
         <scene sceneID="b8v-0s-ogP">
@@ -775,8 +799,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUr-Xa-G8f" customClass="MainTitleView" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="812" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EED-H9-foi">
-                                <rect key="frame" x="44" y="20" width="724" height="334"/>
+                                <rect key="frame" x="44" y="150" width="724" height="134"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="Rjo-2t-Vhh" customClass="CarouselLayout" customModule="Teremok_TV" customModuleProvider="target"/>
                                 <cells/>
@@ -788,20 +816,26 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="EED-H9-foi" firstAttribute="bottom" secondItem="TTT-AP-Tkb" secondAttribute="bottom" id="3eV-xJ-GPo"/>
+                            <constraint firstItem="jUr-Xa-G8f" firstAttribute="leading" secondItem="4oG-I5-nID" secondAttribute="leading" id="1t3-Mw-aTp"/>
+                            <constraint firstItem="EED-H9-foi" firstAttribute="bottom" secondItem="TTT-AP-Tkb" secondAttribute="bottom" constant="-70" id="3eV-xJ-GPo"/>
                             <constraint firstItem="TTT-AP-Tkb" firstAttribute="trailing" secondItem="EED-H9-foi" secondAttribute="trailing" id="AK4-O5-d5Z"/>
-                            <constraint firstItem="EED-H9-foi" firstAttribute="top" secondItem="TTT-AP-Tkb" secondAttribute="top" constant="20" id="CfS-5Z-JNr"/>
+                            <constraint firstAttribute="trailing" secondItem="jUr-Xa-G8f" secondAttribute="trailing" id="VUI-fT-h67"/>
                             <constraint firstItem="EED-H9-foi" firstAttribute="leading" secondItem="TTT-AP-Tkb" secondAttribute="leading" id="Vmw-Oe-5dI"/>
+                            <constraint firstItem="jUr-Xa-G8f" firstAttribute="top" secondItem="TTT-AP-Tkb" secondAttribute="top" constant="80" id="qHa-2T-RXW"/>
+                            <constraint firstItem="jUr-Xa-G8f" firstAttribute="height" secondItem="4oG-I5-nID" secondAttribute="height" multiplier="0.1065" id="qMl-FM-pFc"/>
+                            <constraint firstItem="EED-H9-foi" firstAttribute="top" secondItem="jUr-Xa-G8f" secondAttribute="bottom" constant="30" id="qj5-kB-dML"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TTT-AP-Tkb"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="EED-H9-foi" id="tZg-Lb-Q2W"/>
+                        <outlet property="mainTitleView" destination="jUr-Xa-G8f" id="DGC-VW-f4w"/>
+                        <outlet property="mainTitleViewTopConstraint" destination="qHa-2T-RXW" id="dzG-lZ-mAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9c1-WE-BLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="430" y="-174"/>
+            <point key="canvasLocation" x="429.31034482758622" y="-175.19999999999999"/>
         </scene>
         <!--Fav View Controller-->
         <scene sceneID="8fz-HK-31J">

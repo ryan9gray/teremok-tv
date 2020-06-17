@@ -26,6 +26,10 @@ class RazdCommand: CacheableCommand {
     func execute(success: ((RazdelResponse) -> Void)?, failure: ApiCompletionBlock?) {
         requestObject(success: success, failure: failure)
     }
+    
+    override var version: String {
+        return "1.1"
+    }
 
     override var method: String {
         return APIMethod.Content.razd.methodName

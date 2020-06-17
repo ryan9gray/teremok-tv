@@ -33,6 +33,7 @@ class SearchRouter: NSObject, SearchRoutingLogic, SearchDataPassing {
         let serials = SerialViewController.instantiate(fromStoryboard: .main)
         guard var dataStore = serials.router?.dataStore else { return }
         dataStore.screen = .razdel(id)
+        //dataStore.razdelTitle = title
         viewController?.masterRouter?.presentNextChild(viewController: serials)
     }
 
@@ -40,6 +41,7 @@ class SearchRouter: NSObject, SearchRoutingLogic, SearchDataPassing {
         let serials = SerialViewController.instantiate(fromStoryboard: .main)
         guard var dataStore = serials.router?.dataStore else { return }
         dataStore.screen = .search(search)
+        dataStore.razdelTitle = "Результаты поиска"
         viewController?.masterRouter?.presentNextChild(viewController: serials)
     }
 }

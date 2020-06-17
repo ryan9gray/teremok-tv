@@ -12,9 +12,7 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
 
     @IBOutlet private var titleLbl: UILabel!
     
-    @IBOutlet var cloudImageView: UIImageView!
-    
-    weak var delegate: SerialCellProtocol?
+    var delegate: SerialCellProtocol?
     var item: Serial.Item?
     @IBOutlet var heartBtn: TTAbstractMainButton!
     
@@ -28,9 +26,7 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
         //sender.isSelected.toggle()
         delegate?.downloadClick(self)
     }
-    @IBAction func burgerClick(_ sender: UIButton) {
-        delegate?.buttonClick(self)
-    }
+    
     func toLike(me: Bool){
         heartBtn.isSelected = me
     }
@@ -45,6 +41,8 @@ class VideoCollectionViewCell: PreviewImageCollectionViewCell {
         self.item = item
         self.titleLbl.text = item.name
         toLike(me: item.isLikeMe)
+        let image = item.isDownload ? UIImage(named:"icDownloadGray") : UIImage(named: "icDown")
+        downloadBtn.setImage(image, for: .normal)
         toDownload(me: item.isDownload)
         self.linktoLoad = item.imageUrl
     }

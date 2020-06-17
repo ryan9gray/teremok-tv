@@ -14,6 +14,10 @@ import UIKit
 
 protocol MainBusinessLogic {
     func getMainContent()
+    func getSeriesRazdelContent(razdelId: Int, indexPath: IndexPath)
+    func getVideoContent(id: Int, indexPath: IndexPath)
+    func addToFav(videoId: Int)
+    func downloadVideo(video: Serial.Item, completion : @escaping (_ like : Bool) -> ())
 }
 
 protocol MainDataStore {
@@ -39,4 +43,79 @@ class MainInteractor: MainBusinessLogic, MainDataStore {
             }
         }
     }
+    
+    
+    //MARK: Razdel
+    var razdeResponse: RazdelResponse?
+    let service: RazdelProtocol = RazdelService()
+    var items: [RazdelItemResponse] = []
+    
+    let countSerials = 10
+    
+    func getSeriesRazdelContent(razdelId: Int, indexPath: IndexPath){
+
+        service.getSerials(razdId: razdelId, itemsOnPage: countSerials, shiftItem: 0) {  [weak self] (result) in
+            switch result {
+            case .success(let razdelResponse):
+                self?.response(indexPath: indexPath, serials: razdelResponse)
+            case .failure(let error):
+                self?.presenter?.presentError(error: error)
+            }
+        }
+    }
+    
+    func response(indexPath: IndexPath, serials: RazdelResponse){
+        self.razdeResponse = serials
+        guard let items = serials.items else { return }
+        self.items.append(contentsOf: items)
+        self.presenter?.presentSeriesRazdel(indexPath: indexPath, items: items)
+    }
+    
+    //MARK: Video
+    var videoItems: [VideoModel] = []
+    
+    var imageLoader = ImageLoader()
+    let serialService: SerialsProtocol = SerialsService()
+    var videoService: VideoServiceProtocol = VideoService()
+
+
+    init() {
+         videoService.imageLoader = imageLoader
+     }
+
+    func getVideoContent(id: Int, indexPath: IndexPath) {
+
+        serialService.getVideos(itemsOnPage: countSerials, shiftItem: 0, seriesId: id) { [weak self] (result) in
+            switch result {
+            case .success(let videos):
+                self?.videoResponse(indexPath: indexPath, videos: videos)
+            case .failure(let error):
+                self?.presenter?.presentError(error: error)
+            }
+        }
+    }
+
+    func downloadVideo(video: Serial.Item, completion : @escaping (_ like : Bool) -> ()){
+        let id = video.id
+        let name = video.name
+        let imageLinkString = video.imageUrl
+        guard   let pictureURL = URL(string: imageLinkString),
+                let urlString = video.downloadLink,
+                let link =  URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) else { return }
+        imageLoader.dataFrom(url: pictureURL) { [weak self] art in
+            self?.videoService.hlsDownload(url: link, name: name, art: art, id: id)
+        }
+    }
+
+    func addToFav(videoId: Int){
+        videoService.addToFav(id: videoId) { _ in }
+    }
+    
+    func videoResponse(indexPath: IndexPath, videos: VideoResponse){
+        guard let items = videos.items else { return }
+        
+        videoItems.append(contentsOf: items)
+        presenter?.presentVideo(indexPath: indexPath, items: items)
+    }
+
 }

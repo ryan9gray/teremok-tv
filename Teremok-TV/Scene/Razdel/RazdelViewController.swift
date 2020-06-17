@@ -58,7 +58,7 @@ class RazdelViewController: AbstracViewController, RazdelDisplayLogic {
     var serials: [RazdelVCModel.SerialItem] = []
 
     @IBOutlet private var collectionView: UICollectionView!
-    
+    @IBOutlet private var mainTitleView: MainTitleView!
     var cellWidth: CGFloat = 0
     let startTime = Date()
 
@@ -72,6 +72,8 @@ class RazdelViewController: AbstracViewController, RazdelDisplayLogic {
         collectionView.register(cells: cells)
         prepareUI()
         setupTrackableChain(parent: analytics)
+        
+        mainTitleView.configureTitle(title: router?.dataStore?.razdelTitle ?? "")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -132,7 +134,6 @@ extension RazdelViewController: UICollectionViewDataSource {
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withCell: RazdelCollectionViewCell.self, for: indexPath)
-        cell.cloudImageView.image = Cloud.clouds.randomElement()
         let serial = serials[indexPath.row]
         cell.configure(item: serial)
         cell.delegate = self

@@ -11,12 +11,14 @@
 //
 
 enum Serial {
-    struct Item: Hashable {
+    struct Item: Hashable, MainContent {
+        let id: Int
         let name: String
         let imageUrl: String
         let description: String
         var isLikeMe: Bool = false
         var isDownload: Bool = false
+        var downloadLink: String?
     }
     
     enum Screen {

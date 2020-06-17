@@ -27,7 +27,8 @@ class RazdelPresenter: RazdelPresentationLogic {
         
         var serials: [RazdelVCModel.SerialItem] = []
         for item in items {
-            let serial = RazdelVCModel.SerialItem(name: item.name ?? "", imageUrl: item.poster ?? "", description: item.description ?? "")
+            guard let itemId = item.id else { return }
+            let serial = RazdelVCModel.SerialItem(id: itemId, name: item.name ?? "", imageUrl: item.poster ?? "", description: item.description ?? "", countItems: item.countItems ?? 0)
             serials.append(serial)
         }
         

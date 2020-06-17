@@ -29,7 +29,8 @@ class SerialPresenter: SerialPresentationLogic {
         var serials: [Serial.Item] = []
 
         for item in items {
-            let serial = Serial.Item(name: item.name ?? "", imageUrl: item.picture ?? "",description: item.description ?? "", isLikeMe: item.likedMe ?? false, isDownload: item.downloadMe ?? false)
+            guard let id = item.id else { return }
+            let serial = Serial.Item(id: id, name: item.name ?? "", imageUrl: item.picture ?? "",description: item.description ?? "", isLikeMe: item.likedMe ?? false, isDownload: item.downloadMe ?? false)
             serials.append(serial)
         }        
         viewController?.displaySerials(serials)

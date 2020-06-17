@@ -16,9 +16,10 @@ import AVFoundation
 
 protocol MainDisplayLogic: CommonDisplayLogic {
     func display(razdels: [Main.RazdelItem])
+    func seriesDisplay(indexPath: IndexPath, show: [MainContent])
 }
 
-class MainViewController: AbstracViewController, MainDisplayLogic {
+class MainViewController: AbstractMainViewController, MainDisplayLogic {
     var activityView: LottieHUD?
     
     var interactor: MainBusinessLogic?
@@ -54,11 +55,19 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
         router.dataStore = interactor
     }
 
+    @IBOutlet private var mainTitleViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet private var mainTitleView: MainTitleView!
     @IBOutlet private var collectionView: UICollectionView!
-
-    var razdels: [Main.RazdelItem] = []
     
-    var cellWidth: CGFloat = 0
+    var razdels: [Main.RazdelItem] = []
+    var extendedRazdels: [IndexPath : [MainContent]] = [:]
+    private var cellsWasAnimated: [IndexPath] = []
+    private var collectionViewLeftInset: CGFloat?
+    private var collectionViewRightInset: CGFloat?
+    private var collectionViewInitialXOffset: CGFloat?
+    private var collectionViewPreviosXOffset: CGFloat?
+    private var indexOfCellBeforeDragging = 0
+    
     var audioPlayer: AVAudioPlayer?
     var buttonPlayer: AVAudioPlayer?
 
@@ -67,15 +76,9 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        mainTitleViewTopConstraint.constant = titleTopConstaraintCalculate()
         prepareUI()
         fetchRazdels()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-       if ServiceConfiguration.activeConfiguration() == .prod  {
-            audioPlayer?.play()
-        }
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -87,17 +90,15 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
     private func prepareUI(){
         activityView = LottieHUD()
         collectionView.delegate = self
-        collectionView.register(cells: [MainlCollectionViewCell.self])
+        let cells = [RedesignedMainCollectionViewCell.self, ExtendedMainCollectionViewCell.self, GameRazdelCollectionViewCell.self]
+        collectionView.register(cells: cells)
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-        cellWidth = view.bounds.width/3.2
 
-        let backSound = BackgroundMediaWorker.getSound()
-
+        let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "swipe_card_sound", ofType: "wav")!)
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: backSound)
-            audioPlayer?.numberOfLoops = 5
+            audioPlayer = try AVAudioPlayer(contentsOf: pianoSound)
         } catch {
-            print("no file \(backSound)")
+            print("no file \(pianoSound)")
         }
         let buttonSound = URL(fileURLWithPath: Bundle.main.path(forResource: "push_level_up", ofType: "mp3")!)
 
@@ -127,7 +128,7 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
         collectionView.reloadData()
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    private func updateMainTitleView() {
         var visibleRect = CGRect()
         
         visibleRect.origin = collectionView.contentOffset
@@ -136,7 +137,26 @@ class MainViewController: AbstracViewController, MainDisplayLogic {
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         
         guard let indexPath = collectionView.indexPathForItem(at: visiblePoint) else { return }
-        (collectionView.cellForItem(at: indexPath) as? MainlCollectionViewCell)?.playRainbow()
+        if indexPath.section == 0 {
+            mainTitleView.configureTitle(title: "Алфавит, Цвета, Пазлы и др.")
+        } else {
+            mainTitleView.configureTitle(title: razdels[indexPath.row].title)
+        }
+    }
+    
+    func seriesDisplay(indexPath: IndexPath, show: [MainContent]) {
+        extendedRazdels[indexPath] = show
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.collectionView.performBatchUpdates({
+                self?.collectionView.reloadItems(at: [indexPath])
+            }, completion: { [weak self] result in
+                if let cell = self?.collectionView.cellForItem(at: indexPath) as? ExtendedMainCollectionViewCell {
+                    self?.updateMainTitleView()
+                    cell.minimumSpacingAnimation(duration: 0.3)
+                    self?.cellsWasAnimated.append(indexPath)
+                }
+            })
+        }
     }
 }
 
@@ -147,24 +167,15 @@ extension MainViewController: UICollectionViewDelegate {
 		if indexPath.section == 0 {
 			router?.navigateToGameList()
 		} else {
-        	router?.navigateToRazdel(number: indexPath.row)
+            if !extendedRazdels.keys.contains(indexPath) {
+                let razdelItem = router?.dataStore?.mainRazdels[safe: indexPath.row]
+                if let type = razdelItem?.itemType, type == .series {
+                    interactor?.getSeriesRazdelContent(razdelId: razdelItem?.razdId ?? 0, indexPath: indexPath)
+                } else {
+                    interactor?.getVideoContent(id: razdelItem?.razdId ?? 0, indexPath: indexPath)
+                }
+            }
 		}
-    }
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
-        
-        if let razdel = cell as? MainlCollectionViewCell {
-            razdel.playAnimation()
-        }
-        if let centerIdx = collectionView.centerCellIndexPath,
-            let centerCell = collectionView.cellForItem(at: centerIdx) as? MainlCollectionViewCell {
-         centerCell.playRainbow()
-        }
-
-    }
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if let razdel = cell as? MainlCollectionViewCell {
-            razdel.pauseAnimation()
-        }
     }
 }
 
@@ -173,25 +184,119 @@ extension MainViewController: UICollectionViewDataSource {
 		2
 	}
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		section == 0 ? 1 : razdels.count
+		return section == 0 ? 1 : razdels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withCell: MainlCollectionViewCell.self, for: indexPath)
-		if indexPath.section == 0 {
-			cell.configurate(title: "Алфавит, цвета, мемориз, животные", image: Cloud.clouds.randomElement(), animation: "ColorCube")
-		} else {
-			let razdel = razdels[indexPath.row]
-			cell.configurate(title: razdel.title, image: Cloud.clouds.randomElement(), link: razdel.link)
-		}
-
-        cell.setAnimation()
-        cell.addRainbow()
-        return cell
+        let razdelItem = router?.dataStore?.mainRazdels[safe: indexPath.row]
+        if extendedRazdels.keys.contains(indexPath) {
+            let cell = collectionView.dequeueReusableCell(withCell: ExtendedMainCollectionViewCell.self, for: indexPath)
+            var videosCell: Bool = false
+            if let type = razdelItem?.itemType, type == .videos {
+                videosCell = true
+            }
+            var cellWasAnimated: Bool = false
+            if cellsWasAnimated.contains(indexPath) {
+                cellWasAnimated = true
+            }
+            cell.configureCell(content: extendedRazdels[indexPath] ?? [], razdelNumber: indexPath.row, videosCell: videosCell, wasAnimated: cellWasAnimated)
+            cell.goToRazdel = { [weak self] number in
+                self?.router?.navigateToRazdel(number: number)
+            }
+            cell.addVideoToFavorite = { [weak self] videoId in
+                self?.interactor?.addToFav(videoId: videoId)
+            }
+            cell.goToSerial = {[weak self] razdel, title in
+                self?.router?.navigateToVideos(razdelId: razdel, title: title)
+            }
+            cell.goToPreview = {[weak self] razdelId, videoId in
+                if Profile.current?.premium ?? false {
+                    self?.router?.navigateToPreview(razdelId: razdelId, videoId: videoId)
+                } else {
+                    self?.router?.openPremiumAlert()
+                }
+            }
+            cell.downloadVideo = {[weak self] video, completion in
+                self?.interactor?.downloadVideo(video: video, completion: completion)
+            }
+            cell.downloadVideoActions = {[weak self] actions in
+                self?.present(title: "Скачать серию?", actions: actions, completion: nil)
+            }
+            return cell
+        } else {
+            if indexPath.section == 0 {
+                let cell = collectionView.dequeueReusableCell(withCell: GameRazdelCollectionViewCell.self, for: indexPath)
+                return cell
+            } else {
+                let cell = collectionView.dequeueReusableCell(withCell: RedesignedMainCollectionViewCell.self, for: indexPath)
+                cell.configure(title: razdels[indexPath.row].title, serialCount: razdels[indexPath.row].countItems, topVideos: razdels[indexPath.row].topVideos)
+                return cell
+            }
+        }
     }
 }
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: cellWidth, height: collectionView.bounds.height)
+        if indexPath.section == 0 {
+            return CGSize(width: collectionView.bounds.height * 1.335, height: collectionView.bounds.height)
+        } else {
+            if extendedRazdels.keys.contains(indexPath) {
+                return CGSize(width: collectionView.bounds.height * 1.75 * 11 + 200.0, height: collectionView.bounds.height)
+            } else {
+                return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
+            }
+        }
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        if collectionViewInitialXOffset == nil {
+            collectionViewInitialXOffset = scrollView.contentOffset.x
+            collectionViewPreviosXOffset = collectionViewInitialXOffset
+        }
+    }
+    
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        audioPlayer?.play()
+        targetContentOffset.pointee = scrollView.contentOffset
+        let initialXOffset = collectionViewInitialXOffset ?? 0.0
+        let firstSectionCellWidht = collectionView.bounds.height * 1.33
+        let secondSectionCellWidth = collectionView.bounds.height * 1.75
+        let spacing: CGFloat = 20.0
+        let firstSectionInset = firstSectionCellWidht/2 + spacing + initialXOffset
+        if scrollView.contentOffset.x < firstSectionInset {
+            self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .centeredHorizontally, animated: true)
+        } else {
+            let movingOrientation: CGFloat = collectionViewPreviosXOffset ?? 0.0 > scrollView.contentOffset.x ? -1 : 0
+            let index = ((scrollView.contentOffset.x - firstSectionInset)  / (secondSectionCellWidth + spacing)).rounded() + movingOrientation
+            let contentOffset = secondSectionCellWidth/2 + index * (secondSectionCellWidth + spacing) + firstSectionInset
+            self.collectionView.setContentOffset(CGPoint(x: contentOffset,y: 0), animated: true)
+        }
+    }
+    
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        collectionViewPreviosXOffset = scrollView.contentOffset.x
+        updateMainTitleView()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if section == 0 {
+            if let left = collectionViewLeftInset {
+                return UIEdgeInsets(top: 0, left: left, bottom: 0, right: 20)
+            } else {
+                let inset = collectionView.bounds.center.x - collectionView.layer.frame.size.height * 1.335 / 2
+                collectionViewLeftInset = inset
+                return UIEdgeInsets(top: 0, left: inset, bottom: 0, right: 20)
+            }
+        } else {
+            if let right = collectionViewRightInset {
+                return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: right)
+            } else {
+                let inset = collectionView.bounds.center.x - collectionView.layer.frame.size.height * 1.75 / 2
+                collectionViewRightInset = inset
+                return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: inset)
+            }
+            
+        }
     }
 }

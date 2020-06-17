@@ -17,7 +17,7 @@ protocol SerialDisplayLogic: CommonDisplayLogic {
 
 }
 
-class SerialViewController: AbstracViewController, SerialDisplayLogic {
+class SerialViewController: AbstractMainViewController, SerialDisplayLogic {
     var activityView: LottieHUD?
     
     
@@ -54,6 +54,8 @@ class SerialViewController: AbstracViewController, SerialDisplayLogic {
     }
     // MARK: View lifecycle
 
+    @IBOutlet private var mainTitleView: MainTitleView!
+    @IBOutlet private var mainTitleViewTopConstraint: NSLayoutConstraint!
     @IBOutlet private var collectionView: UICollectionView!
     
     var serials: [Serial.Item] = []
@@ -66,11 +68,12 @@ class SerialViewController: AbstracViewController, SerialDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainTitleViewTopConstraint.constant = titleTopConstaraintCalculate()
+        
         collectionView.delegate = self
         let cells = [VideoCollectionViewCell.self, LoadingCollectionViewCell.self]
         collectionView.register(cells: cells)
         prepareUI()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,7 +95,7 @@ class SerialViewController: AbstracViewController, SerialDisplayLogic {
         hidePreloader()
 
         self.serials.append(contentsOf: serials)
-        
+        mainTitleView.configureTitle(title: router?.dataStore?.razdelTitle ?? router?.dataStore?.videoItems[0].series?.name ?? "")
         guard !self.serials.isEmpty else {
             self.present(errorString: "К сожалению, по вашему запросу ничего не найдено.") {
                 self.masterRouter?.popChild()
@@ -135,7 +138,6 @@ extension SerialViewController: UICollectionViewDataSource {
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withCell: VideoCollectionViewCell.self, for: indexPath)
-        cell.cloudImageView.image = Cloud.clouds.randomElement()
         let serial = serials[indexPath.row]
         cell.configure(item: serial)
     

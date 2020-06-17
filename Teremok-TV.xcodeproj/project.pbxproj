@@ -171,6 +171,17 @@
 		25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFB2368E4A90033D9CA /* Subscriptions.swift */; };
 		25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9187236237B800D339C7 /* colorsGameMain.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		25DA918A236237B800D339C7 /* colorsGame_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceColorsGame, ); }; };
+		7302A88C2438A60800E942A6 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7302A88B2438A60800E942A6 /* OpenSans-Bold.ttf */; };
+		73097DB1246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73097DAF246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift */; };
+		73097DB2246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73097DB0246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib */; };
+		7336D031243EF525005D688E /* RoundedCorverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7336D030243EF525005D688E /* RoundedCorverView.swift */; };
+		7336D034243F1956005D688E /* RedesignedMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */; };
+		7336D035243F1956005D688E /* RedesignedMainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */; };
+		7339F7932462964700D9CE21 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 7339F7922462964700D9CE21 /* Localizable.stringsdict */; };
+		735F47BC243D8DE900BD3788 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47BB243D8DE900BD3788 /* NibLoadable.swift */; };
+		735F47BE243D8F2A00BD3788 /* MainTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47BD243D8F2A00BD3788 /* MainTitleView.swift */; };
+		735F47C0243D8F5800BD3788 /* MainTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735F47BF243D8F5800BD3788 /* MainTitleView.xib */; };
+		735F47C4243D9B2A00BD3788 /* AbstractMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F47C3243D9B2A00BD3788 /* AbstractMainViewController.swift */; };
 		73764F40243B0061007117D6 /* DinoMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F3F243B0061007117D6 /* DinoMasterViewController.swift */; };
 		73764F42243B0081007117D6 /* DinoMasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F41243B0081007117D6 /* DinoMasterRouter.swift */; };
 		73764F44243B00B9007117D6 /* DinoStatisticPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F43243B00B9007117D6 /* DinoStatisticPresenter.swift */; };
@@ -184,13 +195,19 @@
 		73764F55243B0646007117D6 /* DinoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73764F53243B0646007117D6 /* DinoCollectionViewCell.swift */; };
 		73764F56243B0646007117D6 /* DinoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73764F54243B0646007117D6 /* DinoCollectionViewCell.xib */; };
 		73764F58243B3B38007117D6 /* LapsusPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73764F57243B3B37007117D6 /* LapsusPro-Bold.otf */; };
+		73964EDC2450544B0077C428 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73964EDB2450544A0077C428 /* OpenSans-ExtraBold.ttf */; };
 		73B154012444952700FD4994 /* DinoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B154002444952700FD4994 /* DinoService.swift */; };
 		73B15403244495D600FD4994 /* DinoStatisticResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B15402244495D600FD4994 /* DinoStatisticResponse.swift */; };
 		73B154062444967700FD4994 /* DinoGetStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B154052444967700FD4994 /* DinoGetStatCommand.swift */; };
 		73B154082444968700FD4994 /* DinoSendStatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B154072444968700FD4994 /* DinoSendStatCommand.swift */; };
+		73C099222461CCF2005379D6 /* ExtendebleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C099212461CCF2005379D6 /* ExtendebleCollectionCell.swift */; };
 		73C479E6243A6D73004F8802 /* DinoMasterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479E5243A6D73004F8802 /* DinoMasterModels.swift */; };
 		73C479E8243A6EC5004F8802 /* DinoMasterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479E7243A6EC5004F8802 /* DinoMasterPresenter.swift */; };
 		73C479EC243A7233004F8802 /* DinoMasterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C479EB243A7233004F8802 /* DinoMasterInteractor.swift */; };
+		73C7CE8824405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */; };
+		73C7CE8A24405DFD0006B9E0 /* ExtendedMainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */; };
+		73C7CE8E244078410006B9E0 /* MoreSerialsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */; };
+		73C7CE8F244078410006B9E0 /* MoreSerialsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */; };
 		91E4579A7AA4BBEC0376A98F /* Pods_Teremok_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */; };
 		CA0053B8213AF3E600AA187F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B7213AF3E600AA187F /* Stack.swift */; };
 		CA0053BA213B24BB00AA187F /* KeyboardShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */; };
@@ -1046,6 +1063,17 @@
 		25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorsGame_introduce.mp4; sourceTree = "<group>"; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
+		7302A88B2438A60800E942A6 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		73097DAF246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRazdelCollectionViewCell.swift; sourceTree = "<group>"; };
+		73097DB0246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameRazdelCollectionViewCell.xib; sourceTree = "<group>"; };
+		7336D030243EF525005D688E /* RoundedCorverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorverView.swift; sourceTree = "<group>"; };
+		7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedesignedMainCollectionViewCell.swift; sourceTree = "<group>"; };
+		7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedesignedMainCollectionViewCell.xib; sourceTree = "<group>"; };
+		7339F7922462964700D9CE21 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
+		735F47BB243D8DE900BD3788 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		735F47BD243D8F2A00BD3788 /* MainTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTitleView.swift; sourceTree = "<group>"; };
+		735F47BF243D8F5800BD3788 /* MainTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTitleView.xib; sourceTree = "<group>"; };
+		735F47C3243D9B2A00BD3788 /* AbstractMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractMainViewController.swift; sourceTree = "<group>"; };
 		73764F3F243B0061007117D6 /* DinoMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterViewController.swift; sourceTree = "<group>"; };
 		73764F41243B0081007117D6 /* DinoMasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterRouter.swift; sourceTree = "<group>"; };
 		73764F43243B00B9007117D6 /* DinoStatisticPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoStatisticPresenter.swift; sourceTree = "<group>"; };
@@ -1059,13 +1087,19 @@
 		73764F53243B0646007117D6 /* DinoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoCollectionViewCell.swift; sourceTree = "<group>"; };
 		73764F54243B0646007117D6 /* DinoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DinoCollectionViewCell.xib; sourceTree = "<group>"; };
 		73764F57243B3B37007117D6 /* LapsusPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LapsusPro-Bold.otf"; sourceTree = "<group>"; };
+		73964EDB2450544A0077C428 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		73B154002444952700FD4994 /* DinoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoService.swift; sourceTree = "<group>"; };
 		73B15402244495D600FD4994 /* DinoStatisticResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoStatisticResponse.swift; sourceTree = "<group>"; };
 		73B154052444967700FD4994 /* DinoGetStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoGetStatCommand.swift; sourceTree = "<group>"; };
 		73B154072444968700FD4994 /* DinoSendStatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoSendStatCommand.swift; sourceTree = "<group>"; };
+		73C099212461CCF2005379D6 /* ExtendebleCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendebleCollectionCell.swift; sourceTree = "<group>"; };
 		73C479E5243A6D73004F8802 /* DinoMasterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterModels.swift; sourceTree = "<group>"; };
 		73C479E7243A6EC5004F8802 /* DinoMasterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterPresenter.swift; sourceTree = "<group>"; };
 		73C479EB243A7233004F8802 /* DinoMasterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoMasterInteractor.swift; sourceTree = "<group>"; };
+		73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedMainCollectionViewCell.swift; sourceTree = "<group>"; };
+		73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtendedMainCollectionViewCell.xib; sourceTree = "<group>"; };
+		73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSerialsCollectionViewCell.swift; sourceTree = "<group>"; };
+		73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreSerialsCollectionViewCell.xib; sourceTree = "<group>"; };
 		B856F35F57C988695F428B85 /* Pods-Teremok-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.release.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.release.xcconfig"; sourceTree = "<group>"; };
 		CA0053B7213AF3E600AA187F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		CA0053B9213B24BB00AA187F /* KeyboardShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardShowable.swift; path = "Teremok-TV/Extensions/KeyboardShowable.swift"; sourceTree = SOURCE_ROOT; };
@@ -2010,6 +2044,23 @@
 			path = Subscription;
 			sourceTree = "<group>";
 		};
+		73097DB3246F13750047A1B0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CA0053BF213BD46900AA187F /* MainlCollectionViewCell.swift */,
+				CA0053C0213BD46900AA187F /* MainlCollectionViewCell.xib */,
+				7336D032243F1956005D688E /* RedesignedMainCollectionViewCell.swift */,
+				7336D033243F1956005D688E /* RedesignedMainCollectionViewCell.xib */,
+				73C7CE8624405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift */,
+				73C7CE8724405C7B0006B9E0 /* ExtendedMainCollectionViewCell.xib */,
+				73C7CE8C244078410006B9E0 /* MoreSerialsCollectionViewCell.swift */,
+				73C7CE8D244078410006B9E0 /* MoreSerialsCollectionViewCell.xib */,
+				73097DAF246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift */,
+				73097DB0246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		73B154042444965E00FD4994 /* Dino */ = {
 			isa = PBXGroup;
 			children = (
@@ -2166,13 +2217,12 @@
 		CA49E492212D3D9500711324 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				73097DB3246F13750047A1B0 /* Cells */,
 				CA49E499212D5A9200711324 /* MainPresenter.swift */,
 				CA49E49B212D5A9200711324 /* MainRouter.swift */,
 				CA49E49C212D5A9200711324 /* MainModels.swift */,
 				CA49E49D212D5A9200711324 /* MainViewController.swift */,
 				CA49E49E212D5A9200711324 /* MainInteractor.swift */,
-				CA0053BF213BD46900AA187F /* MainlCollectionViewCell.swift */,
-				CA0053C0213BD46900AA187F /* MainlCollectionViewCell.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -2204,6 +2254,10 @@
 				CAE6792C23511A0B00CBCDB3 /* ColorsGameStatView.xib */,
 				CAC0989122FF47ED00EFB01E /* AlphaviteStatView.swift */,
 				CAC0989322FF47FD00EFB01E /* AlphaviteStatView.xib */,
+				735F47BB243D8DE900BD3788 /* NibLoadable.swift */,
+				735F47BF243D8F5800BD3788 /* MainTitleView.xib */,
+				735F47BD243D8F2A00BD3788 /* MainTitleView.swift */,
+				7336D030243EF525005D688E /* RoundedCorverView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2456,6 +2510,7 @@
 				CAD21036231700DC006F2F08 /* MontserratAlternates-Thin.ttf */,
 				CAD2103A231700DC006F2F08 /* MontserratAlternates-ThinItalic.ttf */,
 				CAD210282315BAD0006F2F08 /* IstokWeb-Bold.ttf */,
+				7302A88B2438A60800E942A6 /* OpenSans-Bold.ttf */,
 				CAD210262315BACF006F2F08 /* IstokWeb-BoldItalic.ttf */,
 				73764F57243B3B37007117D6 /* LapsusPro-Bold.otf */,
 				CAD210272315BACF006F2F08 /* IstokWeb-Italic.ttf */,
@@ -2463,6 +2518,7 @@
 				CAAD25EB22F5A464005CFCD2 /* Foo.ttf */,
 				251E51A1235A69DF00221BA2 /* neskid-comica-bd.ttf */,
 				CAAD25EA22F5A463005CFCD2 /* Glober Black.otf */,
+				73964EDB2450544A0077C428 /* OpenSans-ExtraBold.ttf */,
 				CA56D0C52302A424006298C5 /* ariblk.ttf */,
 				CA1AB64D22F1ABA6003A2584 /* Shnobel-Regular.otf */,
 				CA52DF212290683300458EE5 /* appetite.ttf */,
@@ -2760,6 +2816,7 @@
 		CAA884562139204100E27F7A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7339F7922462964700D9CE21 /* Localizable.stringsdict */,
 				2549737E23F2F6C400519288 /* AltAppIcons */,
 				CA573D4723367BB400241990 /* OnBoarding.mp4 */,
 				CAF9614F22995FAC006E3046 /* Game */,
@@ -3026,6 +3083,7 @@
 				CAE1C457211DC5BC0058C9C6 /* CommonPresentationLogic.swift */,
 				CAC2D5162115A68200945003 /* ModalPresentable.swift */,
 				CAE1C455211DC5BC0058C9C6 /* CommonRoutingLogic.swift */,
+				73C099212461CCF2005379D6 /* ExtendebleCollectionCell.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -3395,6 +3453,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE538F5212FFFED005F7463 /* AbstracViewController.swift */,
+				735F47C3243D9B2A00BD3788 /* AbstractMainViewController.swift */,
 			);
 			path = Abstraction;
 			sourceTree = "<group>";
@@ -3829,6 +3888,7 @@
 				CAF961F422995FF3006E3046 /* animal_24.mp3 in Resources */,
 				CA5100BA22F6EACF00821C25 /* alphavite_13_word_1.wav in Resources */,
 				CAF961EE22995FF3006E3046 /* animal_7.mp3 in Resources */,
+				73964EDC2450544B0077C428 /* OpenSans-ExtraBold.ttf in Resources */,
 				256F7AEA245ADCDB00A4D5BD /* PuzzleCollectionViewCell.xib in Resources */,
 				CA5100B122F6EACF00821C25 /* alphavite_31.wav in Resources */,
 				251E518E235A579000221BA2 /* ColorsGame_subject_5_2.wav in Resources */,
@@ -3877,6 +3937,7 @@
 				251E516F235A579000221BA2 /* ColorsGame_color_6.wav in Resources */,
 				256F7B0F245ADD3400A4D5BD /* ColorsGame_fun_5.mp3 in Resources */,
 				CADB3D7A21F7AD4D009467B8 /* day_sound.mp3 in Resources */,
+				7302A88C2438A60800E942A6 /* OpenSans-Bold.ttf in Resources */,
 				CAF961E422995FF3006E3046 /* animal_4.mp3 in Resources */,
 				251E519F235A624A00221BA2 /* ColorsGame_subject_9_1.wav in Resources */,
 				CA5100F222F6EACF00821C25 /* alphavite_10_word_2.wav in Resources */,
@@ -3951,12 +4012,14 @@
 				256F7B15245ADD3400A4D5BD /* ColorsGame_sad_3.mp3 in Resources */,
 				2546D8F023E225710063EF0B /* ColorsGame_subject_2_4.wav in Resources */,
 				CAF9620722995FF3006E3046 /* animal_36.mp3 in Resources */,
+				73C7CE8F244078410006B9E0 /* MoreSerialsCollectionViewCell.xib in Resources */,
 				CA5100E622F6EACF00821C25 /* alphavite_2_word_2.wav in Resources */,
 				CA04864422A845A60017B8A2 /* Round_3.json in Resources */,
 				256F7B42245ADDFD00A4D5BD /* ready_r_10.mp3 in Resources */,
 				CAF94CCF2160BECF000E8183 /* Welcome.storyboard in Resources */,
 				251E5188235A579000221BA2 /* ColorsGame_subject_3_2.wav in Resources */,
 				CAD16DE32147E23000A82DBB /* Numeral.json in Resources */,
+				73C7CE8A24405DFD0006B9E0 /* ExtendedMainCollectionViewCell.xib in Resources */,
 				2549738423F2F76E00519288 /* AppIconAltGreen@2x.png in Resources */,
 				CAC6F73322A81BC000756AE2 /* fun_6.mp3 in Resources */,
 				CAA7325F21315456006276B4 /* Alerts.storyboard in Resources */,
@@ -3965,6 +4028,7 @@
 				251E5172235A579000221BA2 /* ColorsGame_color_5.wav in Resources */,
 				25C412E523B5377000B0A9EA /* SubscriptionPromoCollectionViewCell.xib in Resources */,
 				CA4C28CE2147DFDB00CA264D /* box.json in Resources */,
+				73097DB2246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib in Resources */,
 				CA5100C722F6EACF00821C25 /* alphavite_14_word_1.wav in Resources */,
 				CAF9620A22995FF3006E3046 /* animal_46.mp3 in Resources */,
 				251E5178235A579000221BA2 /* ColorsGame_subject_2_3.wav in Resources */,
@@ -4048,6 +4112,7 @@
 				2549738523F2F76E00519288 /* AppIconAltGreen@3x.png in Resources */,
 				CAAF1F1121771E4300460F58 /* Shade_close.json in Resources */,
 				CA61D875229AD7E700E3D603 /* AnimalCollectionViewCell.xib in Resources */,
+				7336D035243F1956005D688E /* RedesignedMainCollectionViewCell.xib in Resources */,
 				CA5100E222F6EACF00821C25 /* alphavite_4.wav in Resources */,
 				CA5100AD22F6EACF00821C25 /* alphavite_3_word_2.wav in Resources */,
 				CA652CE62353510300291E4D /* happy_red_2.json in Resources */,
@@ -4114,6 +4179,7 @@
 				2546D8E723E2254E0063EF0B /* ColorsGame_subject_10_4.wav in Resources */,
 				256F7B18245ADD3400A4D5BD /* ColorsGame_sad_2.mp3 in Resources */,
 				CA5100CB22F6EACF00821C25 /* alphavite_8.wav in Resources */,
+				7339F7932462964700D9CE21 /* Localizable.stringsdict in Resources */,
 				CA5100D822F6EACF00821C25 /* alphavite_2.wav in Resources */,
 				CA5100CD22F6EACF00821C25 /* alphavite_32_word_2.wav in Resources */,
 				CA71971B2340ECAB005A729A /* brushAnimation.json in Resources */,
@@ -4151,6 +4217,7 @@
 				251E5183235A579000221BA2 /* ColorsGame_subject_1_2.wav in Resources */,
 				CAF961F222995FF3006E3046 /* animal_18.mp3 in Resources */,
 				CA76362B226A5FDF00168AB1 /* StoreCollectionViewCell.xib in Resources */,
+				735F47C0243D8F5800BD3788 /* MainTitleView.xib in Resources */,
 				CA5100F522F6EACF00821C25 /* alphavite_5_word_1.wav in Resources */,
 				256F7B10245ADD3400A4D5BD /* ColorsGame_fun_3.mp3 in Resources */,
 				251E516C235A579000221BA2 /* ColorsGame_subject_10_2.wav in Resources */,
@@ -4322,6 +4389,7 @@
 				CAC0988E22FF12A800EFB01E /* UIKitExtensions.swift in Sources */,
 				25C43EFC2368E4A90033D9CA /* Subscription.swift in Sources */,
 				CAE1C433211DACE10058C9C6 /* AppLaunchInfoDefaults.swift in Sources */,
+				735F47BC243D8DE900BD3788 /* NibLoadable.swift in Sources */,
 				CA49E491212D330900711324 /* DeviceInfo.swift in Sources */,
 				111187F6231E8D6E00EBEFC0 /* MonsterService.swift in Sources */,
 				254BAACD23D85C1900A6D50C /* ServiceResponse.swift in Sources */,
@@ -4334,6 +4402,7 @@
 				111187EF231E82D700EBEFC0 /* MonsterStatisticPresenter.swift in Sources */,
 				CA70272021396F3100629260 /* RegService.swift in Sources */,
 				CAE3649C2291819D003E891D /* AnimalsRoundsRouter.swift in Sources */,
+				73097DB1246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift in Sources */,
 				CA49E481212D2ED300711324 /* SettingsViewController.swift in Sources */,
 				CA9A6747213C134000FCB400 /* RazdelViewController.swift in Sources */,
 				CAE09482214CF62C0052F283 /* ResetPassService.swift in Sources */,
@@ -4375,6 +4444,7 @@
 				CA70867D23082EA80015851C /* AlphaviteStatisticViewController.swift in Sources */,
 				CAA4455F2157BF4F0023E340 /* ErrorHandler.swift in Sources */,
 				CA1041522262A259005D62DE /* SearchMusicCollectionViewCell.swift in Sources */,
+				73C099222461CCF2005379D6 /* ExtendebleCollectionCell.swift in Sources */,
 				CA62A72023512B8F0083FD4F /* ColorsGameStatRouter.swift in Sources */,
 				CA80481C21416836000A3C5B /* SerialRouter.swift in Sources */,
 				CA763630226A63CD00168AB1 /* SubscriptionCollectionViewCell.swift in Sources */,
@@ -4456,6 +4526,7 @@
 				CAB59FD122F315D800D7CA71 /* AlphaviteMasterModels.swift in Sources */,
 				CA52F354223D2DF40058194E /* MusicMasterInteractor.swift in Sources */,
 				11DD430023192EEE00E97352 /* MonsterGameResultsViewController.swift in Sources */,
+				73C7CE8824405C7B0006B9E0 /* ExtendedMainCollectionViewCell.swift in Sources */,
 				CAF94CC3215E80F0000E8183 /* CarouselCollectionViewLayout.swift in Sources */,
 				CAC2D5242115A68200945003 /* AppInfoWorker.swift in Sources */,
 				CAB59FCE22F315D800D7CA71 /* AlphaviteMasterPresenter.swift in Sources */,
@@ -4468,9 +4539,11 @@
 				CAE1C42C211DACE10058C9C6 /* LocationCacher.swift in Sources */,
 				CADE0E4221189BE800CC9871 /* SwiftyStoreHelper.swift in Sources */,
 				CA6CB8D72196F7C300429089 /* PurchaseService.swift in Sources */,
+				735F47BE243D8F2A00BD3788 /* MainTitleView.swift in Sources */,
 				11BA248E230551A700A9EA15 /* MonsterMasterInteractor.swift in Sources */,
 				CAE1C475211DC9F70058C9C6 /* Queue.swift in Sources */,
 				CA433FF6224F9EFA00B0788E /* MusicService.swift in Sources */,
+				73C7CE8E244078410006B9E0 /* MoreSerialsCollectionViewCell.swift in Sources */,
 				CAA8844D21381D9900E27F7A /* ChildProfileAddPresenter.swift in Sources */,
 				CAE1C42F211DACE10058C9C6 /* SqliteCacher+MappableCacherType.swift in Sources */,
 				CA10414822629A0B005D62DE /* SearchMusicPresenter.swift in Sources */,
@@ -4505,6 +4578,7 @@
 				73B154062444967700FD4994 /* DinoGetStatCommand.swift in Sources */,
 				CA61D87822A1C95D00E3D603 /* ListPacksCommand .swift in Sources */,
 				CA7AAF4B2170A25000747D4B /* ChildProfileInteractor.swift in Sources */,
+				7336D031243EF525005D688E /* RoundedCorverView.swift in Sources */,
 				CAEEF2302299C0F900AF5AF6 /* ChoiceAnimalViewController.swift in Sources */,
 				CA9A6758213C1E1900FCB400 /* MainContentCommand.swift in Sources */,
 				CA8EA719214145E700159451 /* PreviewModels.swift in Sources */,
@@ -4591,6 +4665,7 @@
 				256F7AE5245ADCDB00A4D5BD /* CubicBezierCurve.swift in Sources */,
 				CAFF985F2325342600003076 /* GameMasterViewController.swift in Sources */,
 				CAF4C106214AF31700954AA8 /* InputView.swift in Sources */,
+				7336D034243F1956005D688E /* RedesignedMainCollectionViewCell.swift in Sources */,
 				CAC9100A215D31FD00E62F01 /* AchievesPresenter.swift in Sources */,
 				CA1AB66522F30CE4003A2584 /* GamesListViewController.swift in Sources */,
 				25460FD523E5CA8E00284676 /* PromoCodeViewController.swift in Sources */,
@@ -4658,6 +4733,7 @@
 				CA433FF0224F900C00B0788E /* MusicPlaylistResponse.swift in Sources */,
 				CAE3649F2291819D003E891D /* AnimalsRoundsInteractor.swift in Sources */,
 				CA0053C8213BD9CE00AA187F /* URLServices.swift in Sources */,
+				735F47C4243D9B2A00BD3788 /* AbstractMainViewController.swift in Sources */,
 				CA9AA3CF218467CD00019CA7 /* ImageLoader.swift in Sources */,
 				CAE1C45A211DC5BC0058C9C6 /* CommonPresentationLogic.swift in Sources */,
 				CA9A6748213C134000FCB400 /* RazdelInteractor.swift in Sources */,
@@ -4914,7 +4990,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -4944,7 +5020,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
@@ -5035,7 +5111,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;

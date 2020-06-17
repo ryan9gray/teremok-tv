@@ -23,6 +23,10 @@ class MainContentCommand: CacheableCommand {
         requestObject(success: success, failure: failure)
     }
 
+    override var version: String {
+        return "1.1"
+    }
+
     override var method: String {
         return APIMethod.Content.main.methodName
     }

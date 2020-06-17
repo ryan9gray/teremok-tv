@@ -15,6 +15,9 @@ import UIKit
 protocol MainRoutingLogic: CommonRoutingLogic {
     func navigateToRazdel(number: Int)
 	func navigateToGameList()
+    func navigateToVideos(razdelId: Int, title: String)
+    func navigateToPreview(razdelId: Int, videoId: Int)
+    func openPremiumAlert()
 }
 
 protocol MainDataPassing {
@@ -32,25 +35,42 @@ class MainRouter: NSObject, MainRoutingLogic, MainDataPassing {
     func navigateToRazdel(number: Int){
         let razdel = viewController?.router?.dataStore?.mainRazdels[safe: number]
         guard let type = razdel?.itemType, type == .series else {
-            navigateToVideos(razdelId: razdel?.razdId ?? 0)
+            navigateToVideos(razdelId: razdel?.razdId ?? 0, title: razdel?.name ?? "")
             return
         }
         let serials = RazdelViewController.instantiate(fromStoryboard: .main)
         guard var dataStore = serials.router?.dataStore else { return }
         if let id = razdel?.razdId {
             dataStore.razdelId = razdel?.razdId
+            dataStore.razdelTitle = razdel?.name
             dataStore.screen = .razdel(id)
         }
         viewController?.masterRouter?.presentNextChild(viewController: serials)
     }
-    func navigateToVideos(razdelId: Int){
+    func navigateToVideos(razdelId: Int, title: String){
         let serials = SerialViewController.instantiate(fromStoryboard: .main)
         guard var dataStore = serials.router?.dataStore else { return }
         dataStore.razdelId = razdelId
         dataStore.screen = .razdel(razdelId)
+        dataStore.razdelTitle = title
         viewController?.masterRouter?.presentNextChild(viewController: serials)
     }
 	func navigateToGameList() {
 		viewController?.masterRouter?.navigateToGameList()
 	}
+    func navigateToPreview(razdelId: Int, videoId: Int){
+        let serials = PreviewViewController.instantiate(fromStoryboard: .play)
+        guard var dataStore = serials.router?.dataStore else { return }
+        dataStore.model = .online(id: videoId)
+        dataStore.razdId = razdelId
+        viewController?.masterRouter?.presentNextChild(viewController: serials)
+    }
+    func openPremiumAlert() {
+        let vc = PromoPremiumAlertViewController.instantiate(fromStoryboard: .alerts)
+        vc.modalTransitionStyle = .crossDissolve
+        vc.action = { [unowned self] in
+            self.viewController?.masterRouter?.navigateToStore()
+        }
+        viewController?.present(vc, animated: true, completion: nil)
+    }
 }

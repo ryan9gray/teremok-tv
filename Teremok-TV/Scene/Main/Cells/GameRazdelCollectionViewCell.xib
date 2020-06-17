@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameRazdelCollectionViewCell" id="ddb-L7-Z7W" customClass="GameRazdelCollectionViewCell" customModule="Teremok_TV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcu-E8-uFN">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4j-Ru-qtI">
+                                <rect key="frame" x="10" y="10" width="340" height="190"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-alphaviteBack" translatesAutoresizingMaskIntoConstraints="NO" id="bTY-89-rSu" customClass="PreviewImage" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="190"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundCoefficient">
+                                                <real key="value" value="0.059999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKy-cv-WKe" customClass="RoundedCorverView" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="142" width="340" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ZKy-cv-WKe" firstAttribute="top" secondItem="bTY-89-rSu" secondAttribute="bottom" constant="-48" id="7sY-SO-S37"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZKy-cv-WKe" secondAttribute="trailing" id="PbL-Vx-Yvo"/>
+                                    <constraint firstAttribute="bottom" secondItem="bTY-89-rSu" secondAttribute="bottom" id="PsJ-mC-3XM"/>
+                                    <constraint firstItem="ZKy-cv-WKe" firstAttribute="leading" secondItem="a4j-Ru-qtI" secondAttribute="leading" id="dei-oL-kd9"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZKy-cv-WKe" secondAttribute="bottom" id="eyx-wr-a6d"/>
+                                    <constraint firstItem="bTY-89-rSu" firstAttribute="leading" secondItem="a4j-Ru-qtI" secondAttribute="leading" id="qZQ-Fe-k84"/>
+                                    <constraint firstItem="bTY-89-rSu" firstAttribute="top" secondItem="a4j-Ru-qtI" secondAttribute="top" id="r7h-je-Vjp"/>
+                                    <constraint firstAttribute="trailing" secondItem="bTY-89-rSu" secondAttribute="trailing" id="rzC-vX-xEk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gT4-lN-uDb">
+                                <rect key="frame" x="5" y="5" width="340" height="190"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-monsterBack" translatesAutoresizingMaskIntoConstraints="NO" id="uY9-I5-mw6" customClass="PreviewImage" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="190"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundCoefficient">
+                                                <real key="value" value="0.059999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vco-04-2Mo" customClass="RoundedCorverView" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="142" width="340" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uY9-I5-mw6" firstAttribute="leading" secondItem="gT4-lN-uDb" secondAttribute="leading" id="15X-78-sZq"/>
+                                    <constraint firstAttribute="bottom" secondItem="uY9-I5-mw6" secondAttribute="bottom" id="2sF-Gd-YWc"/>
+                                    <constraint firstAttribute="trailing" secondItem="uY9-I5-mw6" secondAttribute="trailing" id="872-87-wgI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vco-04-2Mo" secondAttribute="bottom" id="iTz-LP-Qsc"/>
+                                    <constraint firstItem="Vco-04-2Mo" firstAttribute="leading" secondItem="gT4-lN-uDb" secondAttribute="leading" id="icR-Eg-Qg5"/>
+                                    <constraint firstItem="uY9-I5-mw6" firstAttribute="top" secondItem="gT4-lN-uDb" secondAttribute="top" id="mhE-M1-Re2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vco-04-2Mo" secondAttribute="trailing" id="rXx-mw-LW0"/>
+                                    <constraint firstItem="Vco-04-2Mo" firstAttribute="top" secondItem="uY9-I5-mw6" secondAttribute="bottom" constant="-48" id="tuf-hF-chF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-Hd-NYd">
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="190"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameIcon" translatesAutoresizingMaskIntoConstraints="NO" id="u4G-gB-F5V" customClass="PreviewImage" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="150"/>
+                                        <color key="backgroundColor" red="0.91912621260000005" green="0.95921593900000002" blue="0.99856835600000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="roundCoefficient">
+                                                <real key="value" value="0.059999999999999998"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qT2-K4-RTa" customClass="RoundedCorverView" customModule="Teremok_TV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="142" width="340" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Алфавит, Мемориз и другие игры" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-Ne-zGG">
+                                                <rect key="frame" x="15" y="0.0" width="310" height="48"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                                                <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="UcL-Ne-zGG" firstAttribute="leading" secondItem="qT2-K4-RTa" secondAttribute="leading" constant="15" id="boR-6u-FMG"/>
+                                            <constraint firstAttribute="bottom" secondItem="UcL-Ne-zGG" secondAttribute="bottom" id="dbm-rO-xCu"/>
+                                            <constraint firstItem="UcL-Ne-zGG" firstAttribute="centerY" secondItem="qT2-K4-RTa" secondAttribute="centerY" id="hGf-Ra-Y0L"/>
+                                            <constraint firstItem="UcL-Ne-zGG" firstAttribute="top" secondItem="qT2-K4-RTa" secondAttribute="top" id="xJs-yc-qYZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="UcL-Ne-zGG" secondAttribute="trailing" constant="15" id="xif-Hv-OgE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="u4G-gB-F5V" secondAttribute="trailing" id="0iN-uQ-4YH"/>
+                                    <constraint firstItem="u4G-gB-F5V" firstAttribute="leading" secondItem="g5o-Hd-NYd" secondAttribute="leading" id="EWa-g8-WTF"/>
+                                    <constraint firstAttribute="bottom" secondItem="qT2-K4-RTa" secondAttribute="bottom" id="Qog-YZ-kd6"/>
+                                    <constraint firstItem="qT2-K4-RTa" firstAttribute="leading" secondItem="g5o-Hd-NYd" secondAttribute="leading" id="dpz-y4-DId"/>
+                                    <constraint firstAttribute="trailing" secondItem="qT2-K4-RTa" secondAttribute="trailing" id="iki-3E-XN2"/>
+                                    <constraint firstItem="u4G-gB-F5V" firstAttribute="top" secondItem="g5o-Hd-NYd" secondAttribute="top" id="pLD-gS-ATZ"/>
+                                    <constraint firstItem="qT2-K4-RTa" firstAttribute="top" secondItem="u4G-gB-F5V" secondAttribute="bottom" constant="-8" id="rmB-Zl-LcJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="u4G-gB-F5V" secondAttribute="bottom" constant="40" id="znN-nr-6ZA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gT4-lN-uDb" secondAttribute="bottom" constant="5" id="Azz-1c-s4g"/>
+                            <constraint firstAttribute="trailing" secondItem="g5o-Hd-NYd" secondAttribute="trailing" constant="10" id="KlP-tr-XWJ"/>
+                            <constraint firstItem="a4j-Ru-qtI" firstAttribute="top" secondItem="mcu-E8-uFN" secondAttribute="top" constant="10" id="QFY-5k-9fF"/>
+                            <constraint firstAttribute="bottom" secondItem="g5o-Hd-NYd" secondAttribute="bottom" constant="10" id="QZG-YA-s3J"/>
+                            <constraint firstAttribute="bottom" secondItem="a4j-Ru-qtI" secondAttribute="bottom" id="S7O-nd-OtF"/>
+                            <constraint firstItem="g5o-Hd-NYd" firstAttribute="top" secondItem="mcu-E8-uFN" secondAttribute="top" id="Ukp-cK-vcM"/>
+                            <constraint firstItem="g5o-Hd-NYd" firstAttribute="leading" secondItem="mcu-E8-uFN" secondAttribute="leading" id="WbO-KY-gwm"/>
+                            <constraint firstItem="gT4-lN-uDb" firstAttribute="leading" secondItem="mcu-E8-uFN" secondAttribute="leading" constant="5" id="dTC-Pv-d54"/>
+                            <constraint firstItem="gT4-lN-uDb" firstAttribute="top" secondItem="mcu-E8-uFN" secondAttribute="top" constant="5" id="fh9-eX-i13"/>
+                            <constraint firstItem="a4j-Ru-qtI" firstAttribute="leading" secondItem="mcu-E8-uFN" secondAttribute="leading" constant="10" id="hAA-Pz-aad"/>
+                            <constraint firstAttribute="trailing" secondItem="a4j-Ru-qtI" secondAttribute="trailing" id="j9G-FO-u6J"/>
+                            <constraint firstAttribute="trailing" secondItem="gT4-lN-uDb" secondAttribute="trailing" constant="5" id="sBW-30-m3D"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mcu-E8-uFN" secondAttribute="trailing" id="1uB-At-P4j"/>
+                <constraint firstAttribute="bottom" secondItem="mcu-E8-uFN" secondAttribute="bottom" id="LYt-5H-Ya3"/>
+                <constraint firstItem="mcu-E8-uFN" firstAttribute="top" secondItem="ddb-L7-Z7W" secondAttribute="top" id="ifu-53-PG8"/>
+                <constraint firstItem="mcu-E8-uFN" firstAttribute="leading" secondItem="ddb-L7-Z7W" secondAttribute="leading" id="otM-29-ODT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="gvu-Ep-F9g"/>
+            <size key="customSize" width="350" height="200"/>
+            <point key="canvasLocation" x="355.07246376811599" y="152.67857142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="gameIcon" width="340" height="190"/>
+        <image name="ic-alphaviteBack" width="667" height="375"/>
+        <image name="ic-monsterBack" width="667" height="375"/>
+    </resources>
+</document>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainTitleView" customModule="Teremok_TV" customModuleProvider="target">
+            <connections>
+                <outlet property="leftGarlandTrailingConstraint" destination="RDr-o8-m2X" id="W99-7k-bMV"/>
+                <outlet property="nibContentView" destination="iN0-l3-epB" id="e7K-F8-zxt"/>
+                <outlet property="rightGarlandLeadingConstraint" destination="scu-cz-MhD" id="AEy-cp-iRt"/>
+                <outlet property="titleBackgroundImage" destination="eW9-Tl-DVN" id="tvx-Ki-OoD"/>
+                <outlet property="titleLabel" destination="SBE-Ys-m01" id="0Dg-N9-Hwz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="812" height="97"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftGarland" translatesAutoresizingMaskIntoConstraints="NO" id="qxf-cA-5AS">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="86.5"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightGarland" translatesAutoresizingMaskIntoConstraints="NO" id="Pw1-zC-Z2l">
+                    <rect key="frame" x="513" y="0.0" width="299" height="86.5"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="eW9-Tl-DVN">
+                    <rect key="frame" x="313" y="5" width="230" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="eW9-Tl-DVN" secondAttribute="height" multiplier="21:5" id="Lzf-sZ-nrF"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Алфавит, Цвета, Пазлы и др." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBE-Ys-m01">
+                    <rect key="frame" x="323" y="7" width="210" height="51"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Pw1-zC-Z2l" firstAttribute="height" secondItem="eW9-Tl-DVN" secondAttribute="height" multiplier="1.5777" id="2of-iX-ilL"/>
+                <constraint firstAttribute="trailing" secondItem="Pw1-zC-Z2l" secondAttribute="trailing" id="BZ1-ud-O6e"/>
+                <constraint firstItem="qxf-cA-5AS" firstAttribute="height" secondItem="eW9-Tl-DVN" secondAttribute="height" multiplier="1.5777" id="D3f-f9-7Ze"/>
+                <constraint firstItem="SBE-Ys-m01" firstAttribute="bottom" secondItem="eW9-Tl-DVN" secondAttribute="bottom" constant="-2" id="Ltu-mV-jCB"/>
+                <constraint firstItem="eW9-Tl-DVN" firstAttribute="leading" secondItem="qxf-cA-5AS" secondAttribute="trailing" constant="-30" id="RDr-o8-m2X"/>
+                <constraint firstItem="Pw1-zC-Z2l" firstAttribute="top" secondItem="eW9-Tl-DVN" secondAttribute="top" constant="-5" id="Z7k-l1-SDL"/>
+                <constraint firstItem="SBE-Ys-m01" firstAttribute="top" secondItem="eW9-Tl-DVN" secondAttribute="top" constant="2" id="a0n-QX-ILp"/>
+                <constraint firstItem="SBE-Ys-m01" firstAttribute="trailing" secondItem="eW9-Tl-DVN" secondAttribute="trailing" constant="-10" id="c7y-mu-QoQ"/>
+                <constraint firstItem="eW9-Tl-DVN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="dhs-ad-2RW"/>
+                <constraint firstItem="qxf-cA-5AS" firstAttribute="top" secondItem="eW9-Tl-DVN" secondAttribute="top" constant="-5" id="i4S-6q-bxF"/>
+                <constraint firstItem="eW9-Tl-DVN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.28335" id="l8K-r9-BvA"/>
+                <constraint firstItem="SBE-Ys-m01" firstAttribute="leading" secondItem="eW9-Tl-DVN" secondAttribute="leading" constant="10" id="oUm-nx-Pgc"/>
+                <constraint firstItem="qxf-cA-5AS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qMB-mF-MhY"/>
+                <constraint firstItem="eW9-Tl-DVN" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="rHl-Y4-PBz"/>
+                <constraint firstItem="Pw1-zC-Z2l" firstAttribute="leading" secondItem="eW9-Tl-DVN" secondAttribute="trailing" constant="-30" id="scu-cz-MhD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.61607142857142" y="-18.115942028985508"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="leftGarland" width="261" height="85"/>
+        <image name="rightGarland" width="258.5" height="90"/>
+        <image name="titleBackgroundImage" width="189" height="46"/>
+    </resources>
+</document>

@@ -14,6 +14,13 @@ enum Main {
     struct RazdelItem {
         var title: String
         var link: String
+        var countItems: Int
+        var topVideos: [RazdelItemTop]
+    }
+    
+    struct RazdelItemTop {
+        var poster: String
+        var name: String
     }
 
     enum Messages {
@@ -24,4 +31,12 @@ enum Main {
         static let auth = "Уважаемый пользователь, успеваемость в обучающих играх, скачивание музыки и мультфильмов возможно только после регистрации в приложении «Теремок-ТВ». Пройдите, пожалуйста, регистрацию (в разделе - «Настройки»)! Спасибо"
         static let buyGames = "Для полного доступа ко всем развивающим играм необходимо оформить подписку «Интеллектум». Кроме этого вы получите доступ к музыкальному сервису и возможность загружать мультфильмы для просмотра их без интернета."
     }
+}
+
+extension Main.RazdelItem: Hashable {
+
+}
+
+extension Main.RazdelItemTop: Hashable {
+    
 }

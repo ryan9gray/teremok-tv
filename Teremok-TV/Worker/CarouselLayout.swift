@@ -25,14 +25,14 @@ class CarouselLayout: UICollectionViewLayout {
     private var itemSize: CGSize {
         guard let collectionView = collectionView else { return CGSize(width: 0, height: 0) }
 
-        return CGSize(width: collectionView.bounds.width/3.2, height: collectionView.bounds.height)
+        return CGSize(width: collectionView.bounds.height * 1.75, height: collectionView.bounds.height)
     }
     let generator = UISelectionFeedbackGenerator()
     var audioPlayer: AVAudioPlayer?
     let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "swipe_card_sound", ofType: "wav")!)
 
-    private let spacing: CGFloat = 30
-	private let spacingWhenFocused: CGFloat = 60
+    private let spacing: CGFloat = 20
+	private let spacingWhenFocused: CGFloat = 20
 
 	private var continuousFocusedIndex: CGFloat {
 		guard let collectionView = collectionView else { return 0 }

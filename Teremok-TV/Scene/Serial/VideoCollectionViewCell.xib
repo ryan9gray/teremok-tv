@@ -1,123 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.30.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.19.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCollectionViewCell" id="hau-7y-PbP" customClass="VideoCollectionViewCell" customModule="Teremok_TV" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="284" height="396"/>
+            <rect key="frame" x="0.0" y="0.0" width="240" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="284" height="396"/>
+                <rect key="frame" x="0.0" y="0.0" width="240" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWX-bV-Ec9">
-                        <rect key="frame" x="141" y="0.0" width="2" height="197"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T8L-7M-jtM" customClass="PreviewImage" customModule="Teremok_TV" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="2" id="qKh-Qz-axH"/>
+                            <constraint firstAttribute="width" secondItem="T8L-7M-jtM" secondAttribute="height" multiplier="16:9" id="jnT-NM-3b3"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5d-sj-fvb">
-                        <rect key="frame" x="10" y="48" width="264" height="119"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="roundCoefficient">
+                                <real key="value" value="0.059999999999999998"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5d-sj-fvb" customClass="RoundedCorverView" customModule="Teremok_TV" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="105" width="240" height="45"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCloudOne" translatesAutoresizingMaskIntoConstraints="NO" id="K0z-hf-eUp">
-                                <rect key="frame" x="0.0" y="0.0" width="264" height="119"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zG5-jT-kgP">
-                                <rect key="frame" x="39.5" y="51" width="185" height="17"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zG5-jT-kgP">
+                                <rect key="frame" x="15" y="14.5" width="127" height="16.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
                                 <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knx-31-tZL" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
+                                <rect key="frame" x="195" y="7.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GC2-KS-owy"/>
+                                    <constraint firstAttribute="width" constant="30" id="MTf-LK-j1R"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="5" minY="6" maxX="4" maxY="5"/>
+                                <state key="normal" image="icHeart" backgroundImage="icCircle"/>
+                                <connections>
+                                    <action selector="heartClick:" destination="hau-7y-PbP" eventType="touchUpInside" id="ZM6-ov-e4m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-28-fig">
+                                <rect key="frame" x="157" y="7.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="0Rm-Me-CbG"/>
+                                    <constraint firstAttribute="height" constant="30" id="HAL-iJ-Lgq"/>
+                                </constraints>
+                                <state key="normal" image="icDown"/>
+                                <connections>
+                                    <action selector="downClick:" destination="hau-7y-PbP" eventType="touchUpInside" id="qAr-TS-eh9"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zG5-jT-kgP" firstAttribute="centerX" secondItem="l5d-sj-fvb" secondAttribute="centerX" id="23H-D9-7Z7"/>
-                            <constraint firstAttribute="bottom" secondItem="K0z-hf-eUp" secondAttribute="bottom" id="FtZ-KJ-kkN"/>
-                            <constraint firstItem="zG5-jT-kgP" firstAttribute="centerY" secondItem="l5d-sj-fvb" secondAttribute="centerY" id="Ht8-DC-3QC"/>
-                            <constraint firstAttribute="trailing" secondItem="K0z-hf-eUp" secondAttribute="trailing" id="QWT-re-d9n"/>
-                            <constraint firstItem="K0z-hf-eUp" firstAttribute="top" secondItem="l5d-sj-fvb" secondAttribute="top" id="Rbp-eN-nkF"/>
-                            <constraint firstItem="K0z-hf-eUp" firstAttribute="leading" secondItem="l5d-sj-fvb" secondAttribute="leading" id="Zad-vq-Yt4"/>
-                            <constraint firstItem="zG5-jT-kgP" firstAttribute="width" secondItem="K0z-hf-eUp" secondAttribute="width" multiplier="0.7" id="aZZ-3N-K97"/>
+                            <constraint firstAttribute="height" constant="45" id="15X-Sr-nOR"/>
+                            <constraint firstItem="zG5-jT-kgP" firstAttribute="centerY" secondItem="l5d-sj-fvb" secondAttribute="centerY" id="AMz-9r-6A7"/>
+                            <constraint firstItem="jhY-28-fig" firstAttribute="leading" secondItem="zG5-jT-kgP" secondAttribute="trailing" constant="15" id="AmI-nA-CJt"/>
+                            <constraint firstItem="zG5-jT-kgP" firstAttribute="leading" secondItem="l5d-sj-fvb" secondAttribute="leading" constant="15" id="Kf1-1H-6Pc"/>
+                            <constraint firstItem="Knx-31-tZL" firstAttribute="centerY" secondItem="zG5-jT-kgP" secondAttribute="centerY" id="km4-Lw-fxB"/>
+                            <constraint firstItem="jhY-28-fig" firstAttribute="centerY" secondItem="zG5-jT-kgP" secondAttribute="centerY" id="lgt-v9-7RD"/>
+                            <constraint firstAttribute="trailing" secondItem="Knx-31-tZL" secondAttribute="trailing" constant="15" id="tcg-tk-CwZ"/>
+                            <constraint firstItem="Knx-31-tZL" firstAttribute="leading" secondItem="jhY-28-fig" secondAttribute="trailing" constant="8" symbolic="YES" id="u7g-Hb-iek"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T8L-7M-jtM" customClass="PreviewImage" customModule="Teremok_TV" customModuleProvider="target">
-                        <rect key="frame" x="10" y="177" width="264" height="148.5"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="T8L-7M-jtM" secondAttribute="height" multiplier="16:9" id="Lhi-8i-eW4"/>
-                        </constraints>
-                    </imageView>
-                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-28-fig" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
-                        <rect key="frame" x="206" y="301" width="45" height="45"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="45" id="0Rm-Me-CbG"/>
-                            <constraint firstAttribute="height" constant="45" id="HAL-iJ-Lgq"/>
-                        </constraints>
-                        <state key="normal" image="icDown" backgroundImage="icCircle"/>
-                        <connections>
-                            <action selector="downClick:" destination="hau-7y-PbP" eventType="touchUpInside" id="qAr-TS-eh9"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knx-31-tZL" customClass="TTAbstractMainButton" customModule="Teremok_TV" customModuleProvider="target">
-                        <rect key="frame" x="31" y="301" width="45" height="45"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="45" id="GC2-KS-owy"/>
-                            <constraint firstAttribute="width" constant="45" id="MTf-LK-j1R"/>
-                        </constraints>
-                        <inset key="contentEdgeInsets" minX="1" minY="2" maxX="0.0" maxY="0.0"/>
-                        <state key="normal" image="icHeart" backgroundImage="icCircle"/>
-                        <connections>
-                            <action selector="heartClick:" destination="hau-7y-PbP" eventType="touchUpInside" id="ZM6-ov-e4m"/>
-                        </connections>
-                    </button>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="l5d-sj-fvb" firstAttribute="height" secondItem="hau-7y-PbP" secondAttribute="height" multiplier="0.3" id="3Rt-SO-tHg"/>
-                <constraint firstItem="l5d-sj-fvb" firstAttribute="top" secondItem="hau-7y-PbP" secondAttribute="top" constant="48" id="Ahx-hZ-Nxr"/>
-                <constraint firstItem="l5d-sj-fvb" firstAttribute="centerX" secondItem="hau-7y-PbP" secondAttribute="centerX" id="BBm-5q-xE1"/>
-                <constraint firstItem="tWX-bV-Ec9" firstAttribute="top" secondItem="hau-7y-PbP" secondAttribute="top" id="EjV-ON-joq"/>
-                <constraint firstItem="T8L-7M-jtM" firstAttribute="top" secondItem="tWX-bV-Ec9" secondAttribute="bottom" constant="-20" id="ExJ-c9-Q9V"/>
-                <constraint firstItem="T8L-7M-jtM" firstAttribute="top" secondItem="l5d-sj-fvb" secondAttribute="bottom" constant="10" id="Qsj-3M-T8d"/>
-                <constraint firstItem="l5d-sj-fvb" firstAttribute="leading" secondItem="hau-7y-PbP" secondAttribute="leading" constant="10" id="T3V-m6-QIb"/>
-                <constraint firstItem="T8L-7M-jtM" firstAttribute="leading" secondItem="Knx-31-tZL" secondAttribute="trailing" constant="-66" id="YdF-rC-9qX"/>
-                <constraint firstItem="Knx-31-tZL" firstAttribute="top" secondItem="T8L-7M-jtM" secondAttribute="bottom" constant="-24.5" id="evH-t8-lnD"/>
-                <constraint firstItem="tWX-bV-Ec9" firstAttribute="centerX" secondItem="hau-7y-PbP" secondAttribute="centerX" id="fVO-L6-4aK"/>
-                <constraint firstAttribute="trailing" secondItem="l5d-sj-fvb" secondAttribute="trailing" constant="10" id="kkT-EI-B8W"/>
-                <constraint firstAttribute="trailing" secondItem="T8L-7M-jtM" secondAttribute="trailing" constant="10" id="ll2-L3-3kq"/>
-                <constraint firstItem="jhY-28-fig" firstAttribute="bottom" secondItem="Knx-31-tZL" secondAttribute="bottom" id="n3W-pE-NyT"/>
-                <constraint firstItem="jhY-28-fig" firstAttribute="top" secondItem="Knx-31-tZL" secondAttribute="top" id="p2E-Ri-vdL"/>
-                <constraint firstItem="jhY-28-fig" firstAttribute="leading" secondItem="T8L-7M-jtM" secondAttribute="trailing" constant="-68" id="uRV-MM-4Fv"/>
-                <constraint firstItem="T8L-7M-jtM" firstAttribute="leading" secondItem="hau-7y-PbP" secondAttribute="leading" constant="10" id="w6X-ib-Izq"/>
+                <constraint firstItem="T8L-7M-jtM" firstAttribute="bottom" secondItem="I3b-Fn-RGB" secondAttribute="bottom" constant="-15" id="1ce-Nf-VZK"/>
+                <constraint firstItem="I3b-Fn-RGB" firstAttribute="trailing" secondItem="T8L-7M-jtM" secondAttribute="trailing" id="ACS-vK-L3e"/>
+                <constraint firstItem="I3b-Fn-RGB" firstAttribute="bottom" secondItem="l5d-sj-fvb" secondAttribute="bottom" id="JmX-Qk-Dd0"/>
+                <constraint firstItem="T8L-7M-jtM" firstAttribute="top" secondItem="I3b-Fn-RGB" secondAttribute="top" id="Rst-ta-J9a"/>
+                <constraint firstItem="l5d-sj-fvb" firstAttribute="leading" secondItem="hau-7y-PbP" secondAttribute="leading" id="T3V-m6-QIb"/>
+                <constraint firstItem="T8L-7M-jtM" firstAttribute="leading" secondItem="I3b-Fn-RGB" secondAttribute="leading" id="aiu-iP-W62"/>
+                <constraint firstAttribute="trailing" secondItem="l5d-sj-fvb" secondAttribute="trailing" id="kkT-EI-B8W"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="I3b-Fn-RGB"/>
-            <size key="customSize" width="284" height="396"/>
+            <size key="customSize" width="284" height="387"/>
             <connections>
-                <outlet property="cloudImageView" destination="K0z-hf-eUp" id="8nY-2k-c6k"/>
                 <outlet property="downloadBtn" destination="jhY-28-fig" id="p3T-Ex-hnV"/>
                 <outlet property="heartBtn" destination="Knx-31-tZL" id="e8h-nI-NpF"/>
                 <outlet property="imageView" destination="T8L-7M-jtM" id="VUb-Ka-JRJ"/>
                 <outlet property="titleLbl" destination="zG5-jT-kgP" id="Ajx-4m-jmX"/>
             </connections>
-            <point key="canvasLocation" x="435.19999999999999" y="271.664167916042"/>
+            <point key="canvasLocation" x="435.19999999999999" y="274.36281859070465"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="icCircle" width="47" height="47"/>
-        <image name="icCloudOne" width="147" height="67"/>
         <image name="icDown" width="20" height="25"/>
         <image name="icHeart" width="26" height="21"/>
     </resources>

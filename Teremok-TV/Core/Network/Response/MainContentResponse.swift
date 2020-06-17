@@ -32,6 +32,8 @@ final class RazdelModel: Mappable {
     var description: String?
     var animationLastUpdate: Date?
     var animationUrl: String?
+    var countItems: Int?
+    var top: [RazdelModelTop]?
     
     var itemType: ItemType?
     
@@ -50,5 +52,21 @@ final class RazdelModel: Mappable {
         animationUrl   <- map["animationUrl"]
         animationLastUpdate   <- (map["animationLastUpdate"], CustomDateFormatTransform(formatString: "yyyy-MM-dd hh:mm:ss"))
         itemType        <- map["itemType"]
+        countItems      <- map["countItems"]
+        top             <- map["top"]
+    }
+    
+    final class RazdelModelTop: Mappable {
+        var id: Int?
+        var poster: String?
+        var name: String?
+        
+        required init?(map: Map) {}
+        
+        func mapping(map: Map) {
+            id      <- map["id"]
+            poster  <- map["poster"]
+            name    <- map["name"]
+        }
     }
 }
