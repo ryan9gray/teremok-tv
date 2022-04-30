@@ -171,6 +171,7 @@
 		25C43EFE2368E4A90033D9CA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C43EFB2368E4A90033D9CA /* Subscriptions.swift */; };
 		25DA9189236237B800D339C7 /* colorsGameMain.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9187236237B800D339C7 /* colorsGameMain.wav */; settings = {ASSET_TAGS = (ColorsGameSounds, ); }; };
 		25DA918A236237B800D339C7 /* colorsGame_introduce.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */; settings = {ASSET_TAGS = (IntroduceColorsGame, ); }; };
+		25DF75A1281DCD6900A25853 /* CryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DF75A0281DCD6800A25853 /* CryptoManager.swift */; };
 		7302A88C2438A60800E942A6 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7302A88B2438A60800E942A6 /* OpenSans-Bold.ttf */; };
 		73097DB1246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73097DAF246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.swift */; };
 		73097DB2246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73097DB0246F0A6A0047A1B0 /* GameRazdelCollectionViewCell.xib */; };
@@ -631,7 +632,6 @@
 		CAC2D5232115A68200945003 /* BasicCommand+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5042115A68200945003 /* BasicCommand+Handler.swift */; };
 		CAC2D5242115A68200945003 /* AppInfoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5052115A68200945003 /* AppInfoWorker.swift */; };
 		CAC2D5252115A68200945003 /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5062115A68200945003 /* APIMethod.swift */; };
-		CAC2D5262115A68300945003 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5082115A68200945003 /* NetworkService.swift */; };
 		CAC2D5272115A68300945003 /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D5092115A68200945003 /* ServiceConfiguration.swift */; };
 		CAC2D5282115A68300945003 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D50B2115A68200945003 /* CALayer.swift */; };
 		CAC2D5292115A68300945003 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2D50C2115A68200945003 /* Collection.swift */; };
@@ -1061,6 +1061,7 @@
 		25C43EFB2368E4A90033D9CA /* Subscriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
 		25DA9187236237B800D339C7 /* colorsGameMain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = colorsGameMain.wav; sourceTree = "<group>"; };
 		25DA9188236237B800D339C7 /* colorsGame_introduce.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorsGame_introduce.mp4; sourceTree = "<group>"; };
+		25DF75A0281DCD6800A25853 /* CryptoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CryptoManager.swift; path = "Teremok-TV/Worker/CryptoManager.swift"; sourceTree = SOURCE_ROOT; };
 		4FADB33BAB485281CC10FE89 /* Pods_Teremok_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Teremok_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		561C4B6A2742224053205392 /* Pods-Teremok-TV.sandbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Teremok-TV.sandbox.xcconfig"; path = "Pods/Target Support Files/Pods-Teremok-TV/Pods-Teremok-TV.sandbox.xcconfig"; sourceTree = "<group>"; };
 		7302A88B2438A60800E942A6 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -1526,7 +1527,6 @@
 		CAC2D5042115A68200945003 /* BasicCommand+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BasicCommand+Handler.swift"; sourceTree = "<group>"; };
 		CAC2D5052115A68200945003 /* AppInfoWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoWorker.swift; sourceTree = "<group>"; };
 		CAC2D5062115A68200945003 /* APIMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethod.swift; sourceTree = "<group>"; };
-		CAC2D5082115A68200945003 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CAC2D5092115A68200945003 /* ServiceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
 		CAC2D50B2115A68200945003 /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		CAC2D50C2115A68200945003 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
@@ -1537,7 +1537,6 @@
 		CAC2D5112115A68200945003 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CAC2D5132115A68200945003 /* UIToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIToolbar.swift; sourceTree = "<group>"; };
 		CAC2D5162115A68200945003 /* ModalPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentable.swift; sourceTree = "<group>"; };
-		CAC2D5342115A7FB00945003 /* HeaderObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderObj.h; sourceTree = "<group>"; };
 		CAC6F70522A81BC000756AE2 /* click_button_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click_button_1.mp3; sourceTree = "<group>"; };
 		CAC6F70622A81BC000756AE2 /* click_button_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click_button_2.mp3; sourceTree = "<group>"; };
 		CAC6F71822A81BC000756AE2 /* fun_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fun_4.mp3; sourceTree = "<group>"; };
@@ -2781,6 +2780,7 @@
 		CAA4455A2157BF4F0023E340 /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				25DF75A0281DCD6800A25853 /* CryptoManager.swift */,
 				CAA4455B2157BF4F0023E340 /* DateError.swift */,
 				CAA4455C2157BF4F0023E340 /* ErrorHandler.swift */,
 				CAA4455D2157BF4F0023E340 /* CustomError.swift */,
@@ -2953,7 +2953,6 @@
 				CAA884562139204100E27F7A /* Resource */,
 				CAFF983C2323C1C700003076 /* Config */,
 				CAC2D4F02114D2E200945003 /* Info.plist */,
-				CAC2D5342115A7FB00945003 /* HeaderObj.h */,
 			);
 			path = "Teremok-TV";
 			sourceTree = "<group>";
@@ -3034,7 +3033,6 @@
 		CAC2D5072115A68200945003 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				CAC2D5082115A68200945003 /* NetworkService.swift */,
 				CAC2D5092115A68200945003 /* ServiceConfiguration.swift */,
 			);
 			path = Service;
@@ -4336,6 +4334,7 @@
 				CA4C28C021450D9300CA264D /* AnimateCellProtocol.swift in Sources */,
 				CAC2D52B2115A68300945003 /* UIDevice.swift in Sources */,
 				CAE1C445211DB6B80058C9C6 /* MainKeychainService.swift in Sources */,
+				25DF75A1281DCD6900A25853 /* CryptoManager.swift in Sources */,
 				CA61D87C22A1D2F200E3D603 /* AnimalsGetPackCommand.swift in Sources */,
 				CA6CB8D52196F6B700429089 /* SubscriptionCommand.swift in Sources */,
 				CAF96230229970F7006E3046 /* AnimalsStatisticViewController.swift in Sources */,
@@ -4531,7 +4530,6 @@
 				CAC2D5242115A68200945003 /* AppInfoWorker.swift in Sources */,
 				CAB59FCE22F315D800D7CA71 /* AlphaviteMasterPresenter.swift in Sources */,
 				256F7AE9245ADCDB00A4D5BD /* PuzzleCollectionViewCell.swift in Sources */,
-				CAC2D5262115A68300945003 /* NetworkService.swift in Sources */,
 				CAE1C45C211DC6550058C9C6 /* UIAlertController.swift in Sources */,
 				CA91027E22FF606A00140D5A /* AlphabetGetStatCommand.swift in Sources */,
 				CA9A6743213C134000FCB400 /* RazdelPresenter.swift in Sources */,
@@ -4990,22 +4988,23 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.11;
+				MARKETING_VERSION = 1.8.3;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds DinosImage";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Teremok-TV/HeaderObj.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -5020,21 +5019,22 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.11;
+				MARKETING_VERSION = 1.8.3;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds DinosImage";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Teremok-TV/HeaderObj.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -5111,22 +5111,23 @@
 				CODE_SIGN_ENTITLEMENTS = "Teremok-TV/Teremok-TV.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3DH3K6DUV8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "Teremok-TV/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.11;
+				MARKETING_VERSION = 1.8.3;
 				ON_DEMAND_RESOURCES_PREFETCH_ORDER = "ColorsGameImage ColorsGameSounds AnimalsSounds AlphabetImages AnimalsImage MonstersImage AlphabetSounds DinosImage";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.xmedia.teremoktv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Teremok-TV/HeaderObj.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

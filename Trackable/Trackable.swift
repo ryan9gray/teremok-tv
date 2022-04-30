@@ -28,7 +28,7 @@ public var trackEventToRemoteServiceClosure : ( (_ eventName: String, _ trackedP
 /**
     Conformance to this protocol allow a class to track events on *self*
 */
-public protocol TrackableClass : class {
+public protocol TrackableClass : AnyObject {
     var trackedProperties: Set<TrackedProperty> { get }
 }
 

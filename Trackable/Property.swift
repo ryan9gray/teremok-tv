@@ -8,8 +8,8 @@
 
 import Foundation
 /**
-    Struct which encapsulates property Key and its value. It can be created using ~>> operator. 
-    Example: let property = Key ~>> Value
+ Struct which encapsulates property Key and its value. It can be created using ~>> operator.
+ Example: let property = Key ~>> Value
  */
 public struct TrackedProperty {
     public let key: String
@@ -68,9 +68,7 @@ public func ==(l: TrackedProperty, r: TrackedProperty) -> Bool {
 }
 
 extension TrackedProperty : Hashable {
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(key)
-    }
+    public var hashValue: Int { return key.hash }
 }
 
 // Small "hack" how to constraint Set extension to a non-protocol type
@@ -78,27 +76,27 @@ public protocol TrackedPropertyProtocol { }
 extension TrackedProperty : TrackedPropertyProtocol { }
 
 public extension Set where Element : TrackedPropertyProtocol {
-    mutating func updateValuesFrom(_ properties: Set<TrackedProperty>) {
+    public mutating func updateValuesFrom(_ properties: Set<TrackedProperty>) {
         var mutableSelf = self
-        properties.compactMap { $0 as? Element}
-                  .forEach {
-                    mutableSelf.remove($0)
-                    mutableSelf.insert($0)
-                  }
+        properties.flatMap { $0 as? Element}
+            .forEach {
+                mutableSelf.remove($0)
+                mutableSelf.insert($0)
+            }
         self = mutableSelf
     }
-    
-    var dictionaryRepresentation: [String : AnyObject] {
+
+    public var dictionaryRepresentation: [String : AnyObject] {
         return self.flattenSet
-                   .reduce([String: AnyObject]()) { result, element in
-                        var updatedResult = result
-                        // we use flattenSet so we're sure that all values are AnyObject
-                        updatedResult[element.key] = (element.value as AnyObject)
-                        return updatedResult
-                    }
+            .reduce([String: AnyObject]()) { result, element in
+                var updatedResult = result
+                // we use flattenSet so we're sure that all values are AnyObject
+                updatedResult[element.key] = (element.value as AnyObject)
+                return updatedResult
+            }
     }
-    
-    var flattenSet: Set<TrackedProperty> {
+
+    public var flattenSet: Set<TrackedProperty> {
         return reduce(Set<TrackedProperty>()) { (result, property) -> Set<TrackedProperty> in
             let property = property as! TrackedProperty
             var mutableResult = result
