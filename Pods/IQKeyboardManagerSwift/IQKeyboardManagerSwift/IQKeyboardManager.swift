@@ -706,7 +706,7 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
     @objc public var layoutIfNeededOnUpdate = false
 
     ///------------------------------------
-    /// MARK: Class Level disabling methods
+    /// MARK :AnyObject Level disabling methods
     ///------------------------------------
     
     /**

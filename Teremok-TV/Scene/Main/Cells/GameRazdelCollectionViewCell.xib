@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -30,7 +31,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-alphaviteBack" translatesAutoresizingMaskIntoConstraints="NO" id="bTY-89-rSu" customClass="PreviewImage" customModule="Teremok_TV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="190"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="roundCoefficient">
                                                 <real key="value" value="0.059999999999999998"/>
@@ -146,20 +147,34 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="gvu-Ep-F9g"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="mcu-E8-uFN" secondAttribute="trailing" id="1uB-At-P4j"/>
                 <constraint firstAttribute="bottom" secondItem="mcu-E8-uFN" secondAttribute="bottom" id="LYt-5H-Ya3"/>
                 <constraint firstItem="mcu-E8-uFN" firstAttribute="top" secondItem="ddb-L7-Z7W" secondAttribute="top" id="ifu-53-PG8"/>
                 <constraint firstItem="mcu-E8-uFN" firstAttribute="leading" secondItem="ddb-L7-Z7W" secondAttribute="leading" id="otM-29-ODT"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="gvu-Ep-F9g"/>
             <size key="customSize" width="350" height="200"/>
             <point key="canvasLocation" x="355.07246376811599" y="152.67857142857142"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="bTY-89-rSu">
+            <size key="intrinsicContentSize" width="667" height="375"/>
+        </designable>
+        <designable name="u4G-gB-F5V">
+            <size key="intrinsicContentSize" width="340" height="190"/>
+        </designable>
+        <designable name="uY9-I5-mw6">
+            <size key="intrinsicContentSize" width="667" height="375"/>
+        </designable>
+    </designables>
     <resources>
         <image name="gameIcon" width="340" height="190"/>
         <image name="ic-alphaviteBack" width="667" height="375"/>
         <image name="ic-monsterBack" width="667" height="375"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

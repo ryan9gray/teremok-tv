@@ -58,7 +58,7 @@ class GameViewController: UIViewController {
     }
 }
 
-protocol IntroduceViewController: class {
+protocol IntroduceViewController: AnyObject {
     var action: ((Bool) -> Void)? { get set }
     func setAction(_ action: ((Bool) -> Void)?)
 }

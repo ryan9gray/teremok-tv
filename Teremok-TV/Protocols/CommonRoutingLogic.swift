@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol CommonRoutingLogic: class {
+protocol CommonRoutingLogic :AnyObject {
     var modalControllersQueue: Queue<UIViewController> { get set }
     func presentModallyNext(controller: UIViewController?, from viewController: UIViewController?)
 }

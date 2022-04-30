@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol KeyboardShowable: class {
+@objc protocol KeyboardShowable :AnyObject {
     func keyboardDidShow(_ notification: Notification)
     func keyboardDidHide(_ notification: Notification)
 }

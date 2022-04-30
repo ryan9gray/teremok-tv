@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ChildsStackProtocol: class {
+protocol ChildsStackProtocol :AnyObject {
     func plusKids()
     func childClick(_ child: Child)
 }

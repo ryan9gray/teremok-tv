@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,13 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7z-bh-E0j">
-                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VN8-5l-CDO">
+                                <rect key="frame" x="44" y="0.0" width="724" height="354"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="delegate" destination="7Uv-5N-2NK" id="qa3-ON-oDB"/>
-                                </connections>
-                            </webView>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYV-ht-ToR">
                                 <rect key="frame" x="703" y="20" width="45" height="45"/>
                                 <constraints>
@@ -40,19 +41,19 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="fgG-3N-ZgG"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="c7z-bh-E0j" secondAttribute="trailing" id="BCK-KC-kmy"/>
+                            <constraint firstItem="VN8-5l-CDO" firstAttribute="leading" secondItem="fgG-3N-ZgG" secondAttribute="leading" id="4DL-lQ-f3C"/>
                             <constraint firstItem="eYV-ht-ToR" firstAttribute="top" secondItem="fgG-3N-ZgG" secondAttribute="top" constant="20" id="Hvy-oE-5e8"/>
-                            <constraint firstAttribute="bottom" secondItem="c7z-bh-E0j" secondAttribute="bottom" id="Rbo-l8-kUD"/>
-                            <constraint firstItem="c7z-bh-E0j" firstAttribute="leading" secondItem="j5i-B1-8oY" secondAttribute="leading" id="cLb-eW-vR7"/>
-                            <constraint firstItem="c7z-bh-E0j" firstAttribute="top" secondItem="fgG-3N-ZgG" secondAttribute="top" id="mY9-0L-Dc2"/>
+                            <constraint firstItem="fgG-3N-ZgG" firstAttribute="bottom" secondItem="VN8-5l-CDO" secondAttribute="bottom" id="Z5v-kZ-dgX"/>
                             <constraint firstItem="fgG-3N-ZgG" firstAttribute="trailing" secondItem="eYV-ht-ToR" secondAttribute="trailing" constant="20" id="p0u-79-GPg"/>
+                            <constraint firstItem="fgG-3N-ZgG" firstAttribute="trailing" secondItem="VN8-5l-CDO" secondAttribute="trailing" id="p6y-WY-ZcG"/>
+                            <constraint firstItem="VN8-5l-CDO" firstAttribute="top" secondItem="fgG-3N-ZgG" secondAttribute="top" id="xb6-Wv-htG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fgG-3N-ZgG"/>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="c7z-bh-E0j" id="q0E-g3-9wW"/>
+                        <outlet property="webView" destination="VN8-5l-CDO" id="Qbv-om-qPN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ze4-da-CuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,7 +103,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Раздел доступен только для родителей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HJ-ra-8B2">
-                                <rect key="frame" x="209.66666666666663" y="93.666666666666671" width="393" height="24"/>
+                                <rect key="frame" x="211" y="93.666666666666671" width="390" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -113,7 +114,7 @@
                                 <color key="textColor" red="0.180392161" green="0.20000000300000001" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNc-w0-Kdq" customClass="OrangeButton" customModule="Teremok_TV" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNc-w0-Kdq" customClass="OrangeButton" customModule="Teremok_TV" customModuleProvider="target">
                                 <rect key="frame" x="336" y="224.66666666666666" width="140" height="34.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="hyk-pm-qnm"/>
@@ -134,6 +135,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dJA-or-4nN"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="S6g-na-gnl" firstAttribute="top" secondItem="7Ac-Ta-7r6" secondAttribute="bottom" constant="11" id="9Ai-uW-quM"/>
@@ -147,7 +149,6 @@
                             <constraint firstItem="S6g-na-gnl" firstAttribute="centerX" secondItem="ExN-7D-ARK" secondAttribute="centerX" id="ywA-rk-9aV"/>
                             <constraint firstItem="7Ac-Ta-7r6" firstAttribute="top" secondItem="5HJ-ra-8B2" secondAttribute="bottom" constant="25" id="zn4-bk-sd6"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dJA-or-4nN"/>
                     </view>
                     <connections>
                         <outlet property="codeTxtField" destination="Zx8-dn-4K1" id="Omb-Vc-52B"/>
@@ -188,6 +189,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="oa4-2R-DW8"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="VIV-hw-tfC" secondAttribute="bottom" id="3me-gO-iNL"/>
@@ -197,7 +199,6 @@
                             <constraint firstItem="VIV-hw-tfC" firstAttribute="leading" secondItem="Se6-gz-7P8" secondAttribute="leading" id="q4e-7N-uZZ"/>
                             <constraint firstItem="oa4-2R-DW8" firstAttribute="bottom" secondItem="jFc-Wu-RMO" secondAttribute="bottom" constant="10" id="rov-bB-V20"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="oa4-2R-DW8"/>
                     </view>
                     <connections>
                         <outlet property="playButton" destination="jFc-Wu-RMO" id="Sb0-GV-CVJ"/>
@@ -406,6 +407,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7MP-Ta-Cxx"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="BlV-GB-GHh" secondAttribute="bottom" constant="10" id="0ut-5q-9P9"/>
@@ -420,7 +422,6 @@
                             <constraint firstAttribute="bottom" secondItem="LFa-oO-QAy" secondAttribute="bottom" id="t11-8v-Y1r"/>
                             <constraint firstItem="BlV-GB-GHh" firstAttribute="top" secondItem="e87-rn-cs2" secondAttribute="bottom" constant="18" id="zXB-Mb-5eD"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="7MP-Ta-Cxx"/>
                     </view>
                     <connections>
                         <outlet property="homeBtn" destination="P5E-ex-N9F" id="4gs-qN-A6S"/>
@@ -438,6 +439,35 @@
             <point key="canvasLocation" x="519" y="932"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="6Lw-K8-tJz">
+            <size key="intrinsicContentSize" width="164" height="144"/>
+        </designable>
+        <designable name="FiO-7L-53P">
+            <size key="intrinsicContentSize" width="164" height="144"/>
+        </designable>
+        <designable name="GNc-w0-Kdq">
+            <size key="intrinsicContentSize" width="90" height="30"/>
+        </designable>
+        <designable name="Io8-Rk-iyX">
+            <size key="intrinsicContentSize" width="164" height="144"/>
+        </designable>
+        <designable name="L6d-07-4Xw">
+            <size key="intrinsicContentSize" width="148" height="128"/>
+        </designable>
+        <designable name="P5E-ex-N9F">
+            <size key="intrinsicContentSize" width="50" height="50"/>
+        </designable>
+        <designable name="RU0-fB-SK1">
+            <size key="intrinsicContentSize" width="148" height="128"/>
+        </designable>
+        <designable name="X8b-ps-329">
+            <size key="intrinsicContentSize" width="164" height="144"/>
+        </designable>
+        <designable name="jFc-Wu-RMO">
+            <size key="intrinsicContentSize" width="79" height="84"/>
+        </designable>
+    </designables>
     <resources>
         <image name="ic-alphavite" width="164" height="144"/>
         <image name="ic-alphavitePlay" width="70" height="80"/>

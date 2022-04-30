@@ -1,9 +1,10 @@
 
 import UIKit
+import WebKit
 
 class CommonWebViewController: AbstracViewController {
     
-    @IBOutlet private var webView: UIWebView!
+    @IBOutlet private var webView: WKWebView!
 
     var html: String?
     var url: URL?
@@ -19,7 +20,11 @@ class CommonWebViewController: AbstracViewController {
 
         webView.backgroundColor = .white
         webView.autoresizingMask = .flexibleHeight
-        webView.delegate = self
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
+        webView.configuration.dataDetectorTypes = .link
+        webView.configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
+        // webView.delegate = self
         if let url = url {
             loadURL(url)
             return
@@ -40,12 +45,15 @@ class CommonWebViewController: AbstracViewController {
     
     func loadURL(_ url: URL) {
         activityView?.showHUD()
-        webView.loadRequest(URLRequest(url: url))
+        webView.load(URLRequest(url: url))
     }
 }
-extension CommonWebViewController: UIWebViewDelegate {
+extension CommonWebViewController: WKNavigationDelegate, WKUIDelegate {
     
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        activityView?.stopHUD()
+    }
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         activityView?.stopHUD()
     }
 }

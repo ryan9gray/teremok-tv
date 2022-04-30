@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DescriptionVCProtocol: class {
+protocol DescriptionVCProtocol :AnyObject {
     func toWatch(_ sender: Any)
 }
 protocol DescriptionSerialVCProtocol: DescriptionVCProtocol {

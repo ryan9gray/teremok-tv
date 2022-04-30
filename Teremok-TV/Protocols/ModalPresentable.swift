@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-protocol ModalPresentable: class {
+protocol ModalPresentable :AnyObject {
     var modallyControllerRoutingLogic: CommonRoutingLogic? { get }
     func displayAlertMessage(withTitle title: String, message: String, actions: [UIAlertAction])
     func presentAlert(with title: String, message: String, actions: [UIAlertAction], completion: (() -> Void)?)

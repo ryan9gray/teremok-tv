@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ButtonCellProtocol: class {
+protocol ButtonCellProtocol :AnyObject {
     
     func buttonClick(_ sender: Any)
     

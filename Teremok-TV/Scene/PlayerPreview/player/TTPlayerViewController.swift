@@ -11,7 +11,7 @@ import AVFoundation
 import AVKit
 //import GoogleInteractiveMediaAds
 
-protocol AVPlayerOverlayVCDelegate: class {
+protocol AVPlayerOverlayVCDelegate :AnyObject {
     func avPlayerOverlay(_ vc: TTPlayerViewController, didFullScreen sender: Any?)
     func avPlayerOverlay(_ vc: TTPlayerViewController, didNormalScreen sender: Any?)
     func avPlayerOverlay(_ vc: TTPlayerViewController, periodicTimeObserver time: CMTime)
@@ -346,7 +346,7 @@ extension TTPlayerViewController {
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.loadedTimeRanges), options: options, context: &playerItemContext)
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackLikelyToKeepUp), options: options, context: &playerItemContext)
         playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackBufferFull), options: options, context: &playerItemContext)
-        playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.playbackBufferEmpty), options: options, context: &playerItemContext)
+        playerItem?.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackBufferEmpty), options: options, context: &playerItemContext)
     }
 
     internal func addPlayerNotifications() {
@@ -358,7 +358,7 @@ extension TTPlayerViewController {
     internal func removePlayerItemObservers() {
         playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.status))
         playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.loadedTimeRanges))
-        playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.playbackBufferEmpty))
+        playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackBufferEmpty))
         playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackLikelyToKeepUp))
         playerItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.isPlaybackBufferFull))
     }

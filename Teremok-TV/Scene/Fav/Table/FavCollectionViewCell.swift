@@ -9,7 +9,7 @@
 import UIKit
 
 
-protocol ButtonWithIndexPath: class {
+protocol ButtonWithIndexPath :AnyObject {
     func clickOn(indexPath: IndexPath)
 }
 

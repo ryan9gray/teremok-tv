@@ -15,7 +15,8 @@ import Foundation
     func saveToDefaults() {
         let className = String(describing: type(of: self))
         let defaults = UserDefaults.standard
-        let encodedObject = NSKeyedArchiver.archivedData(withRootObject: self)
+        let encodedObject = try? NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: false)
+
         defaults.set(encodedObject, forKey: className)
         defaults.synchronize()
         DefaultsObject.objectDictionary[className] = self
